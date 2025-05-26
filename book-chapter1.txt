@@ -1,0 +1,756 @@
+1.1 What is Chemistry?
+Chemistry is the branch of science which deals with the properties,
+composition and the structure of substances.
+It also deals with the physical and
+chemical changes in matter and the laws or principles which govern these
+changes.
+Determination of composition represents finding out percentages of
+elements and compounds in a sample of matter.
+Structure of matter means the
+arrangement of atoms in matter.
+Both physical and chemical changes may be
+brought about by absorption or evolution of energy.
+Branches of Chemistry
+To understand the widely spread complex subject of chemistry and to
+concentrate on its specific aspects, chemistry is divided into many distinct
+branches.
+These branches have distinct areas of study for the scientists to focus
+on and to achieve breakthroughs and advancements.
+1.Physical Chemistry
+This branch investigates how substances behave at atomic and molecular
+levels.
+It provides clear explanation as to how fundamental physical laws
+governing our world cause atoms and molecules to show specific characteristics
+and in turn react to give huge structures related to life.
+Physical chemistry is also
+used to predict and change the rates of reactions and thus optimize the
+conditions to carry out the reactions on industrial scale.
+2.
+Inorganic Chemistry
+It is the study of the synthesis, composition, properties and structure of
+elements and compounds that contain little or no carbon.
+An inorganic
+substance can be composed of metals, nonmetals or a mixture of these, salts,
+acids and bases.
+Inorganic compounds are used as fertilizers, medicines,
+catalysts, pigments, coatings and much more.
+3.
+Organic Chemistry
+It is the branch of chemistry that deals with the carbon compounds
+(hydrocarbons and their derivatives) other than its simple salts like carbonates,
+bicarbonates, oxides and carbides.
+In this branch, we study the structure,
+formation, properties, composition and reactions of carbon containing
+compounds.
+Organic compounds are found in all forms of life and are also
+essential for life.
+4.
+Environmental Chemistry
+It is the scientific study of the chemical and biochemical phenomena that
+occur in this planet.
+In this subject, we study the sources, reactions, effects and
+fates of chemical species in the air, soil and water environments.
+Without this, it
+would be impossible to study the effects that humans have on the environment
+through the release of chemicals.
+It helps in understanding the causes, effects
+and solutions of different types of pollution.
+5.
+Analytical Chemistry
+This branch of chemistry deals with the analysis of different substances.
+It
+involves separation, identification and determination of the concentration of the
+components present in material things.
+Nowadays the field of analytical
+chemistry generally involves the use of modern and sophisticated instruments to
+analyze the matter.
+6.
+Biochemistry
+It is the branch of chemistry in which we understand life through chemical
+processes.
+It is the study of chemical substances and vital processes occurring in
+living organisms.
+Biochemistry provides insights into the structure and function
+of molecules such as proteins, carbohydrates, lipids and nucleic acids.
+7.
+Nuclear Chemistry
+Nuclear chemistry deals with the reactions taking place in the nucleus of
+an atom.
+It deals with radioactivity, nuclear processes and transformation in the
+nuclei of atoms.
+Nuclear chemistry has many applications in agriculture,
+medicine, industry and research.
+8.
+Polymer Chemistry
+Polymers are large molecules made by linking together a series of
+building blocks.
+Polymer chemistry focuses on the properties, structure and
+synthesis of polymers and macromolecules.
+Many materials present in the living
+organisms including proteins, cellulose and nucleic acids are naturally occurring
+polymers.
+9.
+Geochemistry
+The study of chemical composition of Earth and its sources and minerals is
+called geochemistry.
+Apart from its use in minerals exploration, geochemical
+mapping today has applications in environmental monitoring, forestry and
+medical research.
+\ul
+yy,
+Geothermal heat pump uses a pump to transfer underground water into the
+buildings during the winter
+to heat them and in the summer to cool them.
+10.
+Medicinal Chemistry
+In this branch of chemistry, the chemist tries to design and synthesize
+medicines or drugs which are beneficial for mankind.
+It includes the discovery,
+delivery, absorption and metabolism of drugs in human body.
+11.
+Astrochemistry
+It is the study of molecules and ions recurring in space and interstellar
+space.
+In this discipline we study the abundance and reactions of atoms,
+molecules and ions in the universe and interaction of these species with radiation.
+A lunar mission has recently brought samples from the Moon.
+The following
+experiments were then carried out on it.
+Point out the branch of chemistry
+these experiments are related to.
+Experiment
+Branch of Chemistry
+Determining its composition
+Studying the physical properties
+of materials
+itcontains
+3.
+Carrying out chemical reactions
+with usual inorganic reagents
+1.2 States of Matter
+This world is made up of matter and energy.
+Energy is non-material in
+nature.
+Anything other than energy which carries weight and occupies volume is
+called matter.
+We encounter material things everywhere in all sorts of different
+and distinct forms.
+A state of matter is one of the many distinct forms in which matter can
+exist.
+We observe four states of matter in everyday life: solid, liquid, gas and
+plasma.
+Apart from these, there are more states of matter which we do not see in
+our everyday life.
+a
+The three primary states of matter are the solid, liquid and gaseous.
+They
+are different from each other due to different strength of intermolecular forces,
+the arrangement of particles and the distance between the particles .
+In
+gases, molecules are very widely apart with no order whatsoever and very weak
+intermolecular forces.
+All these features make gases easily compressible.
+Their
+densities are obviously very low.
+The liquids, on the other hand, have molecules which are closely attached
+but moving randomly.
+There exists significant intermolecular forces between
+their molecules.
+Liquids are therefore not easily compressible and their densities
+have higher values than those ofgases.
+Solids have a definite shape and a fixed volume.
+Particles in solids are
+closely packed and have very strong interatomic or intermolecular attractions.
+The particles in solids remain fixed at their positions where they can oscillate
+about their mean positions.
+Solids are relatively incompressible and rigid.
+The densities of solids are very high.
+Solids are the only state of matter
+which do not need any container to be stored.
+In crystalline solids, particles are
+perfectly arranged and strongly bonded.
+This makes them almost
+incompressible.
+They are the most dense substances.
+Plasma is not so generally seen form of matter.
+It is composed of particles
+with very high kinetic energy.
+It exists in fluorescent tubes, lightning and welding
+arcs.
+Plasma can be considered as a partially ionized gas containing electrons,
+ions, photons, etc.
+Matter also exits in intermediate states where liquid meets gas and liquid
+meets solid, for example supercritical fluids, liquid crystals and graphene.
+Supercritical fluids are highly compressed states which show both properties of
+gases and liquids.
+Chemical reactions which may not be carried out in
+conventional solvents, may possibly be carried out in supercritical carbon
+dioxide.
+So
+liquid
+States of Matter
+bad
+gas
+Liquid crystal is a state of matter whose properties are between those of
+conventional liquids and those of crystalline solids.
+Liquid crystals are used in
+display devices including computer monitors, clocks, watches and navigation
+systems.
+Graphene is an example of two-dimensional crystal, a single layer of
+carbon atoms arranged in a hexagonal pattern.
+Graphene is a tough, flexible and
+light material with a high resistance .
+States of matter that are not commonly encountered are called exotic
+states of matter.
+Examples are dark matter, Bose-Einstein condensate, nuclear
+matter, quantum spin liquid and many others.
+1.3 Element, Compound and Mixture
+Matter in this world exists in the form of elements, compounds and
+mixtures.
+Element is the simplest form of matter.
+It is a pure substance
+containing the same kind of atoms.
+It cannot be broken down into simpler
+substances by ordinary chemical reactions.
+Elements exist in all three forms;
+solid, liquid and gas.
+Most of the elements found in this world exist in solid form.
+Liquid and gaseous elements are very few in number as compared to solids, .
+Elements may be a metal, a non-metal, a metalloid and a noble gas.
+Elements can also exist in the form of atoms, molecules, ions and isotopes.
+Examples of important elements are sodium, potassium, magnesium, calcium,
+carbon, silicon, nitrogen, oxygen, chlorine, helium, copper, gold, zinc, silver,
+nickel, cobalt, mercury, bromine and iodine, etc.
+Compound is also a pure substance.
+It is made up of two or more different
+chemically elements combined in a fixed ratio.
+When elements come together,
+they react with each other and form chemical bonds that are not easy to break,
+Compounds may be molecular, ionic, intermetallic and coordination
+complexes.
+Compounds may also be inorganic and organic in nature.
+Examples
+of important compounds are water, anmonia, methane, carbon dioxide, sodium
+carbonate, potassium chloride, starch, proteins, carbohydrates, mineral acids,
+organic acids, etc.
+The composition and properties of an element or a compound are
+uniform throughout a given sample and from one sample to another.
+A mixture
+is formed when more than one types of elements or compounds are mixed
+together in any ratio.
+Air, soil, milk and tap water are everyday examples of
+mixtures.
+A mixture may be homogeneous or heterogeneous.
+A solution of salt
+and water is an example of homogeneous mixture because its concentration is
+uniform throughout.
+A sample of rock is an example of heterogeneous mixture
+because the concentration of its constituents is different in its different parts.
+Rocks are composed of different types of minerals such as granite, mica and
+limestone, .
+\\l
+~(_)
+Interesting Information! \
+Many elements are found in nature but some are artificial.
+Technetium was
+first element created by scientists in the laboratory.
+eee
+: Mixtures
+1.4 Allotropic Forms of Substances
+Elements may exist in more than one structural forms which can exhibit
+quite different physical and chemical properties.
+These forms are called
+allotropic forms and phenomenon is called allotropy.
+Element oxygen exists in
+two allotropic forms namely oxygen (O2) and ozone (Os).
+Similarly, carbon exists in three main allotropic forms, diamond, graphite
+and Buckminster fullerene.
+Diamond has a giant macromolecular structure
+whereas graphite has a layered structure of hexagonal rings of carbon.
+Buckminster fullerene (Ceo) consists of spheres made of atoms arranged in
+pentagons and hexagons.
+Fullerenes are stable at high temperatures and high
+pressures.
+Being covalent in nature, they are soluble in organic solvents.
+The
+fullerene structure is unique in that the molecule is not charged, has no
+boundaries and has no unpaired electrons.
+They have a cage like structure.
+Fullerene C,, has a low melting point.
+It is soft and cannot conduct electricity.
+Element sulphur also exists in two crystalline allotropic forms i.e. rhombic and
+monocline; the former is more stable than the latter, .
+Buckminsterfullerene
+Graphite
+Rhombic Sulphur
+Monoclimic Sulphur
+1.5 Differences between Elements, Compounds and Mixtures
+Compounds
+Elements
+Mixtures
+An element is the
+A compound is a pure
+Mixture is an impure
+simplest form of matter.
+substance.
+It is formed
+compound.
+A sample of
+It is a pure substance
+by the chemical
+matter having more
+containing the same
+combination of two or
+than one type of
+kind of atoms.
+more atoms of different
+elements or compounds
+elements.
+mixed together in any
+ratio, is called a mixture.
+It is not possible to
+In
+break down an element
+atoms of elements must
+mixture retains its
+into simpler particles by
+combine together by a
+identity and specific
+ordinary chemical
+fixed ratio by weight.
+For
+properties.
+reactions.
+example, in water (H20)
+a
+compound, the
+Each component of a
+hydrogen and oxygen
+are present in a fixed
+ratio of 1:8 by weight.
+When an element exists
+It is possible to break a
+A mixture may be
+in the form of atoms, it
+compound into its
+homogeneous or
+is represented by a
+constituent elements
+heterogeneous.
+For
+symbol.
+For example,
+by a chemical reaction.
+example, the solution of
+sodium and calcium are
+For example, ammonia
+common salt in water is
+represented by their
+can be converted back
+a homogeneous mixture
+symbols Na and Ca.
+to nitrogen and
+while a sample of rock is
+hydrogen by a suitable
+a heterogeneous
+chemical reaction.
+mixture.
+Gaseous elements exist
+The properties of a
+The components of a
+in the form of
+compound are always
+mixture are not
+independent molecules,
+different from the
+chemically bound
+for example, nitrogen
+elements from which it is together and they can
+(Nz), oxygen (Oz) and
+formed.
+For example, the be separated by
+chlorine (Cl2).
+Noble
+properties of water are
+gases, however, exist as
+different from those of
+mono atomic molecules. hydrogen and oxygen.
+physical methods.
+For example, helium
+Compounds existinthe | The properties of a
+(He) and argon (Ar).
+form of molecules, for
+mixture are the sum of
+example hydrogen
+those of its
+chloride (HCl), ammonia
+components.
+(NH3) and water (H20).
+Compounds may also
+exist as network
+arrangement oftheir
+atoms.
+For example, ionic
+compounds like NaCl
+and covalent compounds
+like sand (SiO2).
+| Exercise ] 1.
+Which elements are found in pure state on Earth?
+2.
+Which elements are present in very small amounts on Earth?
+1.6 Solution, Colloidal Solutionand Suspension
+A solution is such a mixture in which solute particles are completely
+homogenized in the solvent e.g. dissolution of sodium chloride or copper
+sulphate in water.
+The solute particles in such a solution cannot be seen by the
+naked eye.
+If solution is filtered, these particles pass through the pores of filter
+paper leaving no residue.
+Such a solution is called a true solution.
+A suspension,
+on the other hand, is a mixture in which solute particles do not dissolve in the
+solvent.
+We can actually see these particles.
+If a suspension is kept for some time,
+these particles settle down.
+Again, if this suspension is filtered, the particles in it
+cannot pass through the pores of filter paper and can be collected as a residue.
+A
+mixture of chalk in water is an example of suspension. .
+a
+————
+Solution
+Colloidal Solution
+Suspension
+Colloidal Solution and Suspension
+Besides a true solution and a suspension, there is a third form of solution
+called colloidal solution.
+In this type, the solute particles do not homogenize with
+solvent.
+These particles are a little bit bigger than the solute particles present in
+the true solution but not big enough to be seen with a naked eye like the particles
+present in a suspension.
+If kept for some time, the particles of a colloidal solution
+do not settle down.
+On filtration, these particles pass through the filter paper like
+the particles of a true solution.
+Starch solution and white of an egg are the
+common examples of colloidal solutions.
+1.7 Formation of Unsaturated and Saturated Solutions
+Take about 100 g of water in a beaker, add to it 5g of table sugar, and stir it.
+The sugar will dissolve in water.
+Then add another 5g of sugar and stir.
+This will
+also dissolve.
+This solution is called an unsaturated solution.
+A solution which can
+dissolve more amount of a solute at a particular temperature is called an
+unsaturated solution.
+Continue adding sugar in the above solution.
+As the
+quantity of sugar in water increases, its dissolution will become more difficult.
+A
+stage comes when no more sugar will dissolve in water at this temperature.
+Any
+more sugar added at this stage will settle down at the bottom of the beaker.
+This
+solution is called a saturated solution at a particular temperature of the process.
+A solution in which the maximum amount of the solute has been
+dissolved in a particular amount of a solvent at a particular temperature is called
+a saturated solution.
+Different solutes have different solubilities in a particular solvent.
+For
+example, if the solutions of table sugar and sodium chloride are prepared, it
+is found that 36 g of sodium chloride can dissolvein 100 g of water at 20 C to
+give a saturated solution.
+Against this 203.9 g of table sugar can dissolve in
+water at 20 C to give its saturated solution.
+In other words, the solubility of
+table sugarin water Is far greater than that of sodium chloride at 20 C.
+Thisis
+due to the fact that sugar molecules are larger than salt ions, so more water
+molecules can surround a single sugar molecule, causing it to dissolve in
+largeramounts.
+a
+I
+Mixtures are closely related to our everyday lives.
+The air we breathe, the
+foods we generally consume, the fluids in our body, the solids like steel we use, are all
+either homogeneous or heterogenous mixtures.
+1.8 Effect of Temperature on the Solubility of Solutes
+The solubility of a solute is the amount of solute which can dissolve in
+100g ofa solvent at a particular temperature.
+Change in temperature has different effects on the solubility of different
+compounds.
+Usually the solubility increases with the increase in temperature but
+it cannot be taken as a general rule.
+There are a large number of compounds
+whose solubility in water increases with the increase in temperature e.g.
+potassium nitrate (KNQs), silver nitrate (AgNO3) and potassium chloride (KCl) etc.
+The solubility of sodium chloride in water does not increase appreciably with the
+increase in temperature.
+The solubility of compounds like lithium carbonate
+(LixCO3) and calcium chromate (CaCrO,) decreases with the increase in
+temperature.
+The solubility of gases in water also decreases with the increase in
+temperature, .
+Similarly, the solubilities of copper sulphate and sodium nitrate also
+increase with increase in the temperature.
+However, the solubility of calcium
+hydroxide decreases with the increase in temperature.
+Solubility Curves
+Solubility Curve of KNO,; in H,O
+Oo 120
+A
+Tr 110
+225-
+& 100
+ra)
+6 200-
+5 175 =
+S
+iy)
+100 =
+75-4
+50-—
+25-4
+O
+Supersaturated
+Unsaturated
+10 20 30 40 50 60 70 80 90 100
+Temperature C
+Saturated
+150-
+T >
+Temperature ( C)
+Solubility Curves
+Activity
+Take 100 g of water in a beaker
+and prepare saturated solution of
+sugar at room temperature.
+Heat the
+beaker on a spirit lamp.
+Add a
+little
+more sugar in it and stir it.
+Will this
+Saturated
+solution of
+Sugar
+sugar be dissolved in it?
+You will
+notice that by heating the solution
+the quantity of sugar dissolved in
+water has increased i.e. the solubility
+of sugar has increased.
+How variation of solubility at different temperatures can be useful for us?
+Interesting Information! \
+1.
+Theincrease in the solubility of solidsin liquids tyneyae
+with increase in temperature may be used to
+purify them.
+Pure solids commonly appear as
+beautifully shaped crystals.
+Crystals of Potassium Nitrate
+Generally the solubility of gases decreases with increase in temperature.
+Carbon
+dioxide gas is more soluble in water at low temperature.
+Soda water bottles are
+thus stored in the refrigerator to keep carbon dioxide gas dissolved in water fora
+longer period of time.
+Chemistry is that branch of science which deals with the composition of matter,
+changes in matter and the laws which govern these changes.
+To understand the vast and complex subject of Chemistry, it is divided into many
+branches.
+Physical chemistry, inorganic chemistry and organic chemistry are its main
+branches among so many others.
+Matter exists mainly in three states: solid, liquid and gas.
+They are different from each
+other due to different distances between the particles which they contain.
+Plasma is regarded as the fourth state of matter which is not normally observed in this
+world.
+Most of the matter presentin the rest of the universe exists in this state.
+Matter also exists in the intermediete states which are at the borderline of its two
+principal states, between liquid and gas or between liquid and solid.
+Supercritical
+fluids and liquid crystals are some examples ofsuch states.
+Matter exists in the form of distinct entites called elements, compounds and mixtures.
+Elements, compounds and mixtures have distinct properties individually and they are
+very different form one another.
+Solutions, suspensions and colloidal solutions are different forms in which the
+mixtures usually exist.
+They have their own characteristic properties.
+Different solutes have different solubilities in a particular solvent.
+The solubility of a solute is the amount of solute which can dissolve in 100g of a
+solvent at a particular temperature.
+11.
+Change in temperature has different effects on the solubility of different compounds.
+‘Exercise Wap}
+off]
+‘Tick (v) the correct answer.
+(i)
+Matter is present in neon signs in the state of:
+(ii)
+(iii)
+(iv)
+(v)
+(a)
+Supercritical fluid
+(b)
+Plasma
+(c)
+Gas
+(d)
+Liquid crystal
+Hazardous effects of shopping bags are studied in:
+(a)
+Geochemistry
+(6b)
+Inorganic Chemistry
+(c)
+Analytical Chemistry
+(d)
+Environmental Chemistry
+| Theman-made polymer is:
+(a)
+Starch
+(b)
+Polystyrene
+(c)
+Protein
+(d)
+Cellulose
+| Thecrystals of which substance has rhombic shape?
+(a)
+Brass
+(6b) Sulphur
+(c)
+Graphite
+(d) Bronze
+= Which liquid amongthe following is a colloidal solution?
+(a)
+Milk
+(c) Vinegar solution
+(vi)
+(b)
+Slaked lime used for white wash
+(d)
+Mixture
+of AgCl in water
+| Which ofthe following is a heterogeneous mixture?
+(a) Asolution of calcium hydroxide in water
+(vii)
+(b)
+Asolution of potassium nitrate in water
+(c)
+Hotchocolate
+(d)
+Concrete mixture
+A state of matter whose properties are between those of liquids and
+crystalline solids:
+(vill)
+(a)
+Liquid crystal
+(b)
+Supercritical fluid
+(c)
+Plasma
+(d)
+Dark matter
+When the tiny visible particles of a substance are dispersed through a
+medium, the mixture is named as:
+(a)
+True solution
+(b) Colloid
+(c)
+Suspension
+(d) Saturated solution
+(ix)
+A solution of KCIO3 has a solubility of about 13.2g per 100 cm’ at 40 C.
+How its solubility will be affected, if you decrease the temperature?
+(a)
+The solubility willincrease
+(6)
+The solubility
+willdecrease
+(c)
+Thesolubility
+will remain the same
+(d)
+The solubility will first increase with temperature and then it will
+decrease
+(x)
+You are studying the rate of hydrolysis of starch under different
+conditions of temperature.
+In which branch of chemistry this topic will
+fall?
+(a) Organic Chemistry
+(b) Analytical Chemistry
+(c) Biochemistry
+(d) Physical Chemistry
+Questions for Short Answers
+Why is there a need to divide Chemistry into many branches?
+Give three
+reasons.
+Reactions may take place due to electrons present outside the nucleus or
+they may take place inside the nucleus.
+Which branches of Chemistry cover
+these two types of reactions?
+What types of problems are solved in analytical chemistry?
+Both graphite and graphene have hexagonal layered structures.
+What is the
+difference?
+Why are supercritical fluids important?
+Vi.
+In which state does matter exist in the Sun?
+Vil.
+What is the importance of graphene?
+Vill.
+Which form of matter do most ofthe material things in this world belong to?
+Constructed Response Questions
+How does a supercritical state look like?
+In what way is plasma created in a fluorescent tube?
+Most of the molecules we study in biochemistry are organic in nature.
+Where
+does the difference exist in organic and biochemistry branches of Chemistry?
+Give the reason of brilliance shown by diamond.
+Can you improve it?
+Explain the dissolution of sodium chloride in water.
+Vi.
+Why do different compounds have different solubilities in water at a
+particular temperature?
+Vil.
+Why NaCl can not be crystallized from water just like KNO3?
+vill.
+Why graphite is slippery to touch?
+Which property of graphite enables it to
+be used as lubricant?
+Descriptive Questions
+Mention the name ofthe branch of Chemistry in which you will study each of
+the following topics.
+(a) Rate of areaction
+(b) Digestion of food in human body
+(c) Properties of plasma
+(d) Ecosystem
+(e) Reactions taking place during fireworks
+(f) Measurement ofthe absorption of wavelength with the help of ultraviolet
+spectrometer
+What are allotropic forms?
+Explain the allotropic forms of carbon and
+sulphur.
+How does coal differ from diamond?
+What are supercritical fluids.
+How are they different from ordinary liquids?
+Define solubility of a solute.
+How does the solubility of solutes change with
+the increase in temperature?
+What types of movements are present in gaseous and liquid molecules?
+Differentiate between the areas which are studied under inorganic and
+organic chemistry.
+Investigative Questions
+Preparation of solutions leads to an important process in chemistry which
+enables us to purify a compound through crystallization.
+Describe a process
+in which potassium nitrate is purified by crystallizing it in water.
+Graphene is called a miracle material and it is the material of the future.
+Which of its many properties makes it very useful in electronics?

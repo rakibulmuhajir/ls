@@ -1,0 +1,45 @@
+.
+├── .expo/
+├── android/
+├── assets/
+├── node_modules/
+├── src/
+│   ├── components/
+│   │   ├── BottomNavigationBar.tsx
+│   │   ├── Loader.tsx
+│   │   └── SectionCard.js
+│   ├── data/
+│   │   └── books.ts
+│   ├── hooks/
+│   │   └── useFetch.ts
+│   ├── layouts/
+│   │   ├── AppNavigator.tsx
+│   │   └── RootNavigator.tsx
+│   ├── lib/
+│   ├── api/
+│   │   ├── getBooks.ts
+│   │   ├── getChapters.ts
+│   │   ├── getSectionsWithElements.ts
+│   │   ├── getTopics.ts
+│   │   └── supabase.ts
+│   │   └── designSystem.ts
+│   ├── screens/
+│   │   ├── BookListScreen.tsx
+│   │   ├── ChapterListScreen.tsx
+│   │   ├── ContentScreen.tsx
+│   │   └── TopicListScreen.tsx
+│   ├── styles/
+│   └── types/
+├── .gitignore
+├── app.json
+├── App.tsx
+├── chapter1.xml
+├── eas.json
+├── icon.png
+├── index.ts
+├── metro.config.js
+├── package-lock.json
+├── package.json
+├── project-directory-structure.txt
+├── supa_ingest.py
+└── tsconfig.json

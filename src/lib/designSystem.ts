@@ -100,7 +100,7 @@ export const createShadow = (elevation: number) => ({
 export const screenStyles = {
   // Common container for all screens
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: brandColors.background,
     paddingHorizontal: spacing.md,
     paddingTop: spacing.lg,

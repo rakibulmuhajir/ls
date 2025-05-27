@@ -15,6 +15,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { getSectionsWithElements } from '@/lib/api/getSectionsWithElements';
 import { useFetch } from '@/hooks/useFetch';
 import Loader from '@/components/Loader';
+import { ChemistryAnimation } from '@/data/animations';
 import BottomNavigationBar from '@/components/BottomNavigationBar';
 import {
   brandColors,

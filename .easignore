@@ -1,0 +1,62 @@
+# Dependencies - EAS will install these on the server
+node_modules/
+
+# Expo local development/build artifacts
+.expo/
+dist/
+web-build/
+# expo-env.d.ts # This is small; probably fine to let it upload, but can be ignored.
+
+# Native build artifacts & local state (EAS does clean builds)
+android/
+android/app/build/
+ios/
+ios/Pods/ # If you're using Cocoapods for iOS native modules
+.kotlin/
+*.orig.*
+
+# Metro Bundler cache/state
+.metro-health-check*
+*.js.map # Source maps are useful for debugging locally, but not usually needed for the build server upload
+*.bundle # Bundles generated locally
+
+# Debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS-specific files
+.DS_Store
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# IDE specific
+.idea/
+.vscode/
+
+# EAS Build outputs (if downloaded locally and you don't want to re-upload)
+*.apk
+*.aab
+*.ipa
+
+# Local environment files - MANAGE SENSITIVE DATA WITH EAS SECRETS
+# If these .env files contain secrets, DO NOT UPLOAD THEM.
+# Use `eas secrets:create MY_SECRET_KEY` and access them via process.env.MY_SECRET_KEY in your code.
+# If they contain non-sensitive build configuration that EAS needs, then DO NOT ignore them.
+# .env
+# .env.*.local
+# .env.local
+
+# Keystores and provisioning profiles
+# If EAS is managing your credentials (e.g., you ran `eas credentials` or let EAS create them),
+# then you don't need to worry about these being in your project locally for the build.
+# If you are managing them MANUALLY and need to upload them with specific build profiles
+# (less common with EAS), then you wouldn't ignore them here.
+# For most EAS users, these are not part of the source upload.
+# *.jks
+# *.p8
+# *.p12
+# *.key
+# *.mobileprovision
+# *.pem

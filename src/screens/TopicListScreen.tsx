@@ -18,7 +18,7 @@ export default function TopicListScreen() {
   const { chapterId, bookId } = route.params;
 
   // Debug logging
-  console.log('TopicListScreen params:', route.params);
+  //console.log('TopicListScreen params:', route.params);
 
   const fetcher = React.useCallback(() => getTopics(chapterId), [chapterId]);
   const { data: topics, loading, error, refetch } = useFetch(fetcher);

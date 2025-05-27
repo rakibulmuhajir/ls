@@ -236,7 +236,18 @@ const styles = StyleSheet.create({
     ...screenStyles.container,
     paddingBottom: spacing.xl,
   },
-
+navigationBar: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    borderTopWidth: 1,
+    borderColor: brandColors.neutral.lighter,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.sm,
+    backgroundColor: '#ffffff',
+    ...createShadow(4),
+  },
   centeredMessage: {
     ...screenStyles.centeredContainer,
   },

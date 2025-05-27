@@ -42,7 +42,7 @@ export default function BottomNavigationBar({ topicId, chapterId, bookId, topics
     });
   };
 
-  console.log('BottomNavigationBar rendered', { topicId, chapterId, bookId, topics });
+  //console.log('BottomNavigationBar rendered', { topicId, chapterId, bookId, topics });
 
   return (
     <View style={styles.navigationBar}>

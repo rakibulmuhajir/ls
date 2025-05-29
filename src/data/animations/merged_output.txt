@@ -1,0 +1,3543 @@
+
+=== File: AnimationFactory.ts ===
+Path: AnimationFactory.ts
+---- File Content Start ----
+// src/data/animations/AnimationFactory.ts
+import { ReactionAnimationTemplate } from './templates/ReactionTemplate';
+import { StateChangeAnimationTemplate } from './templates/StateChangeTemplate';
+import { DissolutionAnimationTemplate } from './templates/DissolutionTemplate';
+
+export type AnimationType =
+  | 'reaction'
+  | 'state-change'
+  | 'dissolution'
+  | 'bonding'
+  | 'equilibrium';
+
+export interface AnimationConfig {
+  type: AnimationType;
+  containerId: string;
+  params: any;
+}
+
+export class AnimationFactory {
+  static create(config: AnimationConfig): ChemistryAnimationEngine {
+    switch (config.type) {
+      case 'reaction':
+        return new ReactionAnimationTemplate(
+          config.containerId,
+          config.params
+        );
+
+      case 'state-change':
+        return new StateChangeAnimationTemplate(
+          config.containerId,
+          config.params.substance,
+          config.params.initialState
+        );
+
+      case 'dissolution':
+        return new DissolutionAnimationTemplate(
+          config.containerId,
+          config.params.solute,
+          config.params.solvent,
+          config.params.saturationPoint
+        );
+
+      default:
+        throw new Error(`Unknown animation type: ${config.type}`);
+    }
+  }
+}
+
+---- File Content End ----
+
+
+=== File: animationRegistry.ts ===
+Path: animationRegistry.ts
+---- File Content Start ----
+// src/data/animations/animationRegistry.ts
+import { AnimationType, AnimationConfig } from './types';
+import { baseAnimationTemplate } from './library/baseAnimationTemplate';
+import { chemistryDefinition } from './library/chapter1/chemistryDefinition';
+
+// Animation builders that create configs
+const animationBuilders: Record<AnimationType, () => AnimationConfig> = {
+  'hydrogen-oxygen-water': () => ({
+    height: 500,
+    autoPlay: false,
+    loop: false,
+    features: {
+      temperature: true,
+      beforeAfter: true,
+      speed: true
+    },
+    safety: {
+      maxTemperature: 100,
+      requiredEquipment: ['Safety Goggles', 'Gloves'],
+      hazardousReactions: ['explosive']
+    },
+    template: {
+      type: 'reaction',
+      config: {
+        reactants: [
+          { formula: 'H2', count: 2, position: { x: 150, y: 250 } },
+          { formula: 'O2', count: 1, position: { x: 500, y: 250 } }
+        ],
+        products: [
+          { formula: 'H2O', count: 2, position: { x: 300, y: 250 } }
+        ],
+        activationEnergy: 100,
+        reactionType: 'synthesis',
+        effects: ['explosion', 'flame']
+      }
+    },
+    html: baseAnimationTemplate + `
+      <script>
+        // Template will be injected here by the wrapper
+        const config = ${JSON.stringify({
+          reactants: [
+            { formula: 'H2', count: 2, position: { x: 150, y: 250 } },
+            { formula: 'O2', count: 1, position: { x: 500, y: 250 } }
+          ],
+          products: [
+            { formula: 'H2O', count: 2, position: { x: 300, y: 250 } }
+          ],
+          activationEnergy: 100,
+          reactionType: 'synthesis',
+          effects: ['explosion', 'flame']
+        })};
+
+        // Initialize animation with config
+        window.initAnimation = function() {
+          // This will be replaced by template injection
+          console.log('Animation initialized with config:', config);
+        };
+
+        // Start when ready
+        window.addEventListener('load', () => {
+          window.initAnimation();
+        });
+      </script>
+    `
+  }),
+
+  'states-of-matter': () => ({
+    height: 350,
+    autoPlay: true,
+    loop: true,
+    features: {
+      temperature: true,
+      zoom: true,
+      speed: true,
+      particleCount: true
+    },
+    safety: {
+      maxTemperature: 100,
+      requiredEquipment: ['Safety Goggles']
+    },
+    template: {
+      type: 'state-change',
+      config: {
+        substance: 'H2O',
+        initialState: 'solid',
+        particleCount: 50
+      }
+    },
+    html: baseAnimationTemplate + `
+      <script>
+        // Simplified - template config injected
+        const config = ${JSON.stringify({
+          substance: 'H2O',
+          initialState: 'solid',
+          particleCount: 50
+        })};
+
+        window.initAnimation = function() {
+          console.log('States of matter animation ready');
+        };
+
+        window.addEventListener('load', () => {
+          window.initAnimation();
+        });
+      </script>
+    `
+  }),
+  'chemistry-definition': () => chemistryDefinition,
+};
+
+export const getAnimation = (type: AnimationType): AnimationConfig => {
+  const builder = animationBuilders[type];
+  return builder ? builder() : {
+    html: '<div>Animation not found</div>',
+    height: 300,
+    autoPlay: true,
+    loop: false
+  };
+};
+
+---- File Content End ----
+
+
+=== File: ChemistryAnimation.tsx ===
+Path: ChemistryAnimation.tsx
+---- File Content Start ----
+// src/data/animations/ChemistryAnimation.tsx
+import React, { useRef, useState, useEffect } from 'react';
+import { View, StyleSheet, Dimensions, Text, TouchableOpacity } from 'react-native';
+import { WebView } from 'react-native-webview';
+import Slider from '@react-native-community/slider';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { getAnimation } from './animationRegistry';
+import { AnimationType } from './types';
+import { brandColors } from '@/lib/designSystem';
+import { SafetyService } from './services/SafetyService';
+import { SafetyStatus } from './types';
+import { TemplateLoader } from './core/TemplateLoader';
+
+interface ChemistryAnimationProps {
+  type: AnimationType;
+  height?: number;
+  style?: any;
+  onStateChange?: (state: any) => void;
+}
+
+const ChemistryAnimation: React.FC<ChemistryAnimationProps> = ({
+  type,
+  height,
+  style,
+  onStateChange
+}) => {
+  const webViewRef = useRef<WebView>(null);
+  const config = getAnimation(type);
+  const finalHeight = height || config.height;
+  const features = config.features || {};
+
+  // Control states
+  const [temperature, setTemperature] = useState(20);
+  const [zoom, setZoom] = useState(1);
+  const [speed, setSpeed] = useState(1);
+  const [showBefore, setShowBefore] = useState(true);
+  const [rotation3D, setRotation3D] = useState(true);
+  const [particleCount, setParticleCount] = useState(50);
+  const [pressure, setPressure] = useState(1);
+  const [concentration, setConcentration] = useState(0.5);
+  const [isPlaying, setIsPlaying] = useState(config.autoPlay);
+
+  // Send control updates to WebView
+  const sendControlUpdate = (controlType: string, value: any) => {
+    webViewRef.current?.postMessage(JSON.stringify({
+      type: 'controlUpdate',
+      control: controlType,
+      value: value
+    }));
+  };
+
+  // Safety checks
+ const [safetyStatus, setSafetyStatus] = useState<SafetyStatus>({
+  isSafe: true,
+  warnings: [],
+  requiredEquipment: []
+});
+
+// Add safety check function
+const checkSafety = () => {
+  const currentState = {
+    temperature,
+    pressure,
+    concentration,
+    reactionType: config.type
+  };
+
+  const status = SafetyService.checkSafety(config.safety, currentState);
+  setSafetyStatus(status);
+
+  // Post safety status to WebView
+  sendControlUpdate('safetyStatus', status);
+};
+
+// Add useEffect to run safety checks
+useEffect(() => {
+  checkSafety();
+}, [temperature, pressure, concentration, config.safety]);
+
+  // Handle temperature change
+  const handleTemperatureChange = (value: number) => {
+    setTemperature(value);
+    sendControlUpdate('temperature', value);
+  };
+
+  // Handle zoom change
+  const handleZoomChange = (value: number) => {
+    setZoom(value);
+    sendControlUpdate('zoom', value);
+  };
+
+  // Handle speed change
+  const handleSpeedChange = (value: number) => {
+    setSpeed(value);
+    sendControlUpdate('speed', value);
+  };
+
+  // Toggle before/after
+  const toggleBeforeAfter = () => {
+    setShowBefore(!showBefore);
+    sendControlUpdate('beforeAfter', !showBefore);
+  };
+
+  // Toggle 3D rotation
+  const toggle3DRotation = () => {
+    setRotation3D(!rotation3D);
+    sendControlUpdate('rotation3D', !rotation3D);
+  };
+
+  // Handle particle count
+  const handleParticleCountChange = (value: number) => {
+    setParticleCount(value);
+    sendControlUpdate('particleCount', value);
+  };
+
+  // Handle WebView messages
+  const handleMessage = (event: any) => {
+    const data = JSON.parse(event.nativeEvent.data);
+
+    if (data.type === 'animationComplete' && config.loop) {
+      webViewRef.current?.postMessage(JSON.stringify({ action: 'restart' }));
+    }
+
+    if (data.type === 'stateUpdate' && onStateChange) {
+      onStateChange(data.state);
+    }
+  };
+  // Play/Pause control
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+    sendControlUpdate('playPause', !isPlaying);
+  };
+
+
+  // Generate control panel HTML
+  const getControlPanelHTML = () => {
+    return `
+      <style>
+        .control-panel {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          right: 10px;
+          background: rgba(255, 255, 255, 0.95);
+          border-radius: 12px;
+          padding: 12px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .control-row {
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .control-label {
+          font-size: 12px;
+          color: #333;
+          font-weight: 500;
+          min-width: 80px;
+        }
+        .control-value {
+          font-size: 12px;
+          color: #666;
+          min-width: 40px;
+          text-align: right;
+        }
+      </style>
+    `;
+  };
+
+  return (
+    <View style={[styles.container, { height: finalHeight + (features.temperature || features.zoom || features.speed ? 120 : 0) }, style]}>
+       {!safetyStatus.isSafe && (
+      <View style={styles.safetyWarning}>
+        <MaterialCommunityIcons name="alert-circle" size={20} color="white" />
+        <Text style={styles.safetyWarningText}>
+          {safetyStatus.warnings.join(' • ')}
+        </Text>
+      </View>
+    )}
+
+    {/* Equipment Reminder */}
+    {safetyStatus.requiredEquipment.length > 0 && (
+      <View style={styles.equipmentWarning}>
+        <MaterialCommunityIcons name="shield-check" size={16} color={brandColors.warning.dark} />
+        <Text style={styles.equipmentWarningText}>
+          Safety equipment required: {safetyStatus.requiredEquipment.join(', ')}
+        </Text>
+      </View>
+    )}
+      <WebView
+        ref={webViewRef}
+        source={{ html: config.html + getControlPanelHTML() }}
+        style={styles.webview}
+        scrollEnabled={false}
+        onMessage={handleMessage}
+        javaScriptEnabled={true}
+        domStorageEnabled={true}
+        injectedJavaScript={`
+         // 1. First, inject template if specified
+    ${config.template ? TemplateLoader.getTemplateCode(config.template.type) : ''}
+
+    // 2. Set up animation features
+    window.animationFeatures = ${JSON.stringify(features)};
+    window.initialState = {
+      temperature: ${temperature},
+      zoom: ${zoom},
+      speed: ${speed},
+      showBefore: ${showBefore},
+      rotation3D: ${rotation3D},
+      particleCount: ${particleCount},
+      pressure: ${pressure},
+      concentration: ${concentration},
+      isPlaying: ${isPlaying}
+    };
+
+    // 3. Initialize with template if available
+    if (${!!config.template}) {
+      const templateConfig = ${JSON.stringify(config.template?.config || {})};
+
+      window.addEventListener('load', () => {
+        switch('${config.template?.type}') {
+          case 'reaction':
+            window.animation = new ReactionAnimation(templateConfig);
+            break;
+          case 'state-change':
+            window.animation = new StateChangeAnimation(templateConfig);
+            break;
+          case 'dissolution':
+            window.animation = new DissolutionAnimation(templateConfig);
+            break;
+          case 'definition': // <--- ADD THIS CASE
+            window.animation = new DefinitionAnimation(templateConfig);
+            break;
+        }
+
+        // Auto-play if configured
+        if (window.initialState.isPlaying && window.animation && window.animation.play) {
+          window.animation.play();
+        }
+      });
+    }
+
+    true;
+        `}
+      />
+
+      {/* Native Control Panel */}
+      {(features.temperature || features.zoom || features.speed || features.beforeAfter) && (
+        <View style={styles.controlPanel}>
+          {features.temperature && (
+            <View style={styles.controlRow}>
+              <Text style={styles.controlLabel}>Temperature</Text>
+              <Slider
+                style={styles.slider}
+                minimumValue={-100}
+                maximumValue={200}
+                value={temperature}
+                onValueChange={handleTemperatureChange}
+                minimumTrackTintColor={brandColors.primary.main}
+                maximumTrackTintColor={brandColors.neutral.light}
+              />
+              <Text style={styles.controlValue}>{Math.round(temperature)}°C</Text>
+            </View>
+          )}
+
+          {features.zoom && (
+            <View style={styles.controlRow}>
+              <Text style={styles.controlLabel}>Zoom</Text>
+              <Slider
+                style={styles.slider}
+                minimumValue={0.5}
+                maximumValue={3}
+                value={zoom}
+                onValueChange={handleZoomChange}
+                minimumTrackTintColor={brandColors.primary.main}
+                maximumTrackTintColor={brandColors.neutral.light}
+              />
+              <Text style={styles.controlValue}>{zoom.toFixed(1)}x</Text>
+            </View>
+          )}
+
+          {features.speed && (
+            <View style={styles.controlRow}>
+              <Text style={styles.controlLabel}>Speed</Text>
+              <Slider
+                style={styles.slider}
+                minimumValue={0.1}
+                maximumValue={3}
+                value={speed}
+                onValueChange={handleSpeedChange}
+                minimumTrackTintColor={brandColors.primary.main}
+                maximumTrackTintColor={brandColors.neutral.light}
+              />
+              <Text style={styles.controlValue}>{speed.toFixed(1)}x</Text>
+            </View>
+          )}
+
+          {features.particleCount && (
+            <View style={styles.controlRow}>
+              <Text style={styles.controlLabel}>Particles</Text>
+              <Slider
+                style={styles.slider}
+                minimumValue={10}
+                maximumValue={200}
+                value={particleCount}
+                onValueChange={handleParticleCountChange}
+                minimumTrackTintColor={brandColors.primary.main}
+                maximumTrackTintColor={brandColors.neutral.light}
+              />
+              <Text style={styles.controlValue}>{Math.round(particleCount)}</Text>
+            </View>
+          )}
+
+          <View style={styles.buttonRow}>
+            <TouchableOpacity style={styles.controlButton} onPress={togglePlayPause}>
+              <MaterialCommunityIcons
+                name={isPlaying ? "pause" : "play"}
+                size={24}
+                color={brandColors.primary.main}
+              />
+            </TouchableOpacity>
+
+            {features.beforeAfter && (
+              <TouchableOpacity style={styles.controlButton} onPress={toggleBeforeAfter}>
+                <Text style={styles.buttonText}>{showBefore ? 'Before' : 'After'}</Text>
+              </TouchableOpacity>
+            )}
+
+            {features.rotation3D && (
+              <TouchableOpacity style={styles.controlButton} onPress={toggle3DRotation}>
+                <MaterialCommunityIcons
+                  name="rotate-3d-variant"
+                  size={24}
+                  color={rotation3D ? brandColors.primary.main : brandColors.neutral.light}
+                />
+              </TouchableOpacity>
+            )}
+          </View>
+        </View>
+      )}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    marginVertical: 16,
+    borderRadius: 12,
+    overflow: 'hidden',
+    backgroundColor: '#f0f0f0',
+  },
+  webview: {
+    flex: 1,
+    backgroundColor: 'transparent',
+  },
+  controlPanel: {
+    backgroundColor: 'white',
+    padding: 16,
+    borderTopWidth: 1,
+    borderTopColor: brandColors.neutral.lighter,
+  },
+  controlRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  controlLabel: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: brandColors.neutral.dark,
+    width: 80,
+  },
+  slider: {
+    flex: 1,
+    height: 40,
+    marginHorizontal: 8,
+  },
+  controlValue: {
+    fontSize: 14,
+    color: brandColors.neutral.main,
+    width: 50,
+    textAlign: 'right',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 16,
+    marginTop: 8,
+  },
+  controlButton: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 20,
+    backgroundColor: brandColors.neutral.lightest,
+    borderWidth: 1,
+    borderColor: brandColors.neutral.lighter,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: brandColors.primary.main,
+  },
+  safetyWarning: {
+    backgroundColor: brandColors.danger.main,
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  safetyWarningText: {
+    color: 'white',
+    marginLeft: 5,
+    fontSize: 14,
+  },
+  equipmentWarning: {
+    backgroundColor: brandColors.warning.lightest,
+    padding: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: brandColors.warning.light,
+  },
+  equipmentWarningText: {
+    color: brandColors.warning.dark,
+    marginLeft: 5,
+    fontSize: 12,
+  },
+});
+
+export default ChemistryAnimation;
+
+---- File Content End ----
+
+
+=== File: indx.ts ===
+Path: indx.ts
+---- File Content Start ----
+// src/data/animations/index.ts
+export { default as ChemistryAnimation } from './ChemistryAnimation';
+export { getAnimation } from './animationRegistry';
+export type { AnimationType } from './types';
+
+---- File Content End ----
+
+
+=== File: types.ts ===
+Path: types.ts
+---- File Content Start ----
+// src/data/animations/types.ts
+export type AnimationTemplateType = 'reaction' | 'state-change' | 'dissolution' | 'bonding' | 'equilibrium' | 'definition';
+
+export type AnimationType =
+  | 'hydrogen-oxygen-water'
+  | 'states-of-matter'
+  | 'phase-changes'
+  | 'carbon-allotropes'
+  | 'solutions-colloids'
+  | 'temperature-solubility'
+  | 'chemistry-definition';
+export interface AnimationConfig {
+  html: string;
+  height: number;
+  autoPlay: boolean;
+  loop: boolean;
+  backgroundColor?: string;
+  features?: AnimationFeatures;
+  safety?: SafetyConstraints;
+   template?: {
+    type: AnimationTemplateType;
+    config: any;
+  };
+}
+
+export interface AnimationFeatures {
+  temperature?: boolean;      // Enable temperature slider
+  zoom?: boolean;             // Enable zoom controls
+  speed?: boolean;            // Enable speed controls
+  beforeAfter?: boolean;      // Enable before/after toggle
+  rotation3D?: boolean;       // Enable 3D rotation
+  particleCount?: boolean;    // Enable particle count control
+  pressure?: boolean;         // Enable pressure control
+  concentration?: boolean;    // Enable concentration slider
+}
+
+// src/data/animations/types.ts - ADD these new types
+export interface AnimationEngine {
+  play(): Promise<void>;
+  pause(): void;
+  reset(): void;
+  setSpeed(speed: number): void;
+  setTemperature?(temp: number): void;
+}
+
+export interface ChemicalEntity {
+  element: string;
+  position: { x: number; y: number; z?: number };
+  state?: 'solid' | 'liquid' | 'gas' | 'aqueous';
+}
+
+export interface ReactionConfig {
+  reactants: ChemicalEntity[];
+  products: ChemicalEntity[];
+  conditions?: {
+    temperature?: number;
+    pressure?: number;
+    catalyst?: string;
+  };
+}
+
+// Add to existing types
+export interface SafetyConstraints {
+  maxTemperature?: number;
+  maxPressure?: number;
+  maxConcentration?: number;
+  minDistance?: number;
+  requiredEquipment?: string[];
+  hazardousReactions?: string[];
+}
+
+export interface SafetyStatus {
+  isSafe: boolean;
+  warnings: string[];
+  requiredEquipment: string[];
+}
+
+
+---- File Content End ----
+
+
+=== File: AnimationEngine.ts ===
+Path: core\AnimationEngine.ts
+---- File Content Start ----
+// src/data/animations/core/AnimationEngine.ts
+export abstract class ChemistryAnimationEngine {
+  protected container: HTMLElement;
+  protected atoms: Map<string, HTMLElement> = new Map();
+  protected bonds: Map<string, HTMLElement> = new Map();
+  protected molecules: Map<string, HTMLElement> = new Map();
+  protected animationState: 'idle' | 'playing' | 'complete' = 'idle';
+
+  constructor(containerId: string) {
+    this.container = document.getElementById(containerId)!;
+  }
+
+  // Create atom with standardized styling
+  protected createAtom(
+    element: string,
+    x: number,
+    y: number,
+    id: string
+  ): HTMLElement {
+    const elementData = ChemicalElement.get(element);
+    const atom = document.createElement('div');
+
+    atom.className = 'atom';
+    atom.id = id;
+    atom.style.cssText = `
+      position: absolute;
+      width: ${elementData.size}px;
+      height: ${elementData.size}px;
+      left: ${x}px;
+      top: ${y}px;
+      background: radial-gradient(circle at 30% 30%,
+        ${this.lightenColor(elementData.color)},
+        ${elementData.color}
+      );
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: ${this.getTextColor(elementData.color)};
+      font-size: ${elementData.size * 0.4}px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    `;
+
+    atom.textContent = element;
+    atom.dataset.element = element;
+    atom.dataset.x = x.toString();
+    atom.dataset.y = y.toString();
+
+    this.atoms.set(id, atom);
+    this.container.appendChild(atom);
+
+    // Add interactions
+    this.addAtomInteractions(atom);
+
+    return atom;
+  }
+
+  // Create bond between atoms
+  protected createBond(
+    atom1Id: string,
+    atom2Id: string,
+    type: 'single' | 'double' | 'triple' | 'ionic',
+    id: string
+  ): HTMLElement {
+    const atom1 = this.atoms.get(atom1Id)!;
+    const atom2 = this.atoms.get(atom2Id)!;
+
+    const bond = document.createElement('div');
+    bond.className = `bond bond-${type}`;
+    bond.id = id;
+
+    const styles: Record<string, string> = {
+      single: 'height: 3px; background: #4ecdc4;',
+      double: 'height: 6px; background: #4ecdc4; box-shadow: 0 3px 0 #4ecdc4;',
+      triple: 'height: 9px; background: #4ecdc4; box-shadow: 0 3px 0 #4ecdc4, 0 6px 0 #4ecdc4;',
+      ionic: 'height: 3px; background: repeating-linear-gradient(90deg, #4ecdc4 0, #4ecdc4 5px, transparent 5px, transparent 10px);'
+    };
+
+    bond.style.cssText = `
+      position: absolute;
+      ${styles[type]}
+      transform-origin: left center;
+      transition: all 0.5s ease;
+    `;
+
+    this.updateBondPosition(bond, atom1, atom2);
+    this.bonds.set(id, bond);
+    this.container.appendChild(bond);
+
+    return bond;
+  }
+
+  // Update bond position based on atom positions
+  protected updateBondPosition(
+    bond: HTMLElement,
+    atom1: HTMLElement,
+    atom2: HTMLElement
+  ): void {
+    const rect1 = atom1.getBoundingClientRect();
+    const rect2 = atom2.getBoundingClientRect();
+    const containerRect = this.container.getBoundingClientRect();
+
+    const x1 = rect1.left - containerRect.left + rect1.width / 2;
+    const y1 = rect1.top - containerRect.top + rect1.height / 2;
+    const x2 = rect2.left - containerRect.left + rect2.width / 2;
+    const y2 = rect2.top - containerRect.top + rect2.height / 2;
+
+    const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+
+    bond.style.width = `${length}px`;
+    bond.style.left = `${x1}px`;
+    bond.style.top = `${y1}px`;
+    bond.style.transform = `rotate(${angle}deg)`;
+  }
+
+  // Create complete molecule from template
+  protected createMolecule(
+    formula: string,
+    x: number,
+    y: number,
+    id: string
+  ): HTMLElement {
+    const template = MoleculeTemplates.get(formula);
+    const molecule = document.createElement('div');
+    molecule.className = 'molecule';
+    molecule.id = id;
+    molecule.style.cssText = `
+      position: absolute;
+      left: ${x}px;
+      top: ${y}px;
+    `;
+
+    // Create atoms within molecule
+    template.atoms.forEach((atomData, index) => {
+      const atomId = `${id}-atom-${index}`;
+      const atom = this.createAtom(
+        atomData.element,
+        atomData.position.x,
+        atomData.position.y,
+        atomId
+      );
+      molecule.appendChild(atom);
+    });
+
+    // Create bonds
+    template.bonds.forEach((bondData, index) => {
+      const bondId = `${id}-bond-${index}`;
+      const atom1Id = `${id}-atom-${bondData.from}`;
+      const atom2Id = `${id}-atom-${bondData.to}`;
+
+      setTimeout(() => {
+        this.createBond(atom1Id, atom2Id, bondData.type, bondId);
+      }, 100);
+    });
+
+    this.molecules.set(id, molecule);
+    this.container.appendChild(molecule);
+
+    return molecule;
+  }
+
+  // Animation utilities
+  protected async animateMove(
+    element: HTMLElement,
+    x: number,
+    y: number,
+    duration: number = 1000
+  ): Promise<void> {
+    return new Promise(resolve => {
+      element.style.transition = `all ${duration}ms ease-in-out`;
+      element.style.left = `${x}px`;
+      element.style.top = `${y}px`;
+
+      setTimeout(resolve, duration);
+    });
+  }
+
+  protected async animateScale(
+    element: HTMLElement,
+    scale: number,
+    duration: number = 500
+  ): Promise<void> {
+    return new Promise(resolve => {
+      element.style.transition = `transform ${duration}ms ease-in-out`;
+      element.style.transform = `scale(${scale})`;
+
+      setTimeout(resolve, duration);
+    });
+  }
+
+  protected async animateFade(
+    element: HTMLElement,
+    opacity: number,
+    duration: number = 500
+  ): Promise<void> {
+    return new Promise(resolve => {
+      element.style.transition = `opacity ${duration}ms ease-in-out`;
+      element.style.opacity = opacity.toString();
+
+      setTimeout(resolve, duration);
+    });
+  }
+
+  // Helper methods
+  private lightenColor(color: string): string {
+    // Simple color lightening
+    const num = parseInt(color.slice(1), 16);
+    const amt = 40;
+    const R = (num >> 16) + amt;
+    const G = (num >> 8 & 0x00FF) + amt;
+    const B = (num & 0x0000FF) + amt;
+    return `#${(0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+      (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+      (B < 255 ? B < 1 ? 0 : B : 255))
+      .toString(16).slice(1)}`;
+  }
+
+  private getTextColor(bgColor: string): string {
+    // Determine if text should be light or dark
+    const color = bgColor.slice(1);
+    const r = parseInt(color.substr(0, 2), 16);
+    const g = parseInt(color.substr(2, 2), 16);
+    const b = parseInt(color.substr(4, 2), 16);
+    const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+    return brightness > 155 ? '#000000' : '#FFFFFF';
+  }
+
+  private addAtomInteractions(atom: HTMLElement): void {
+    atom.addEventListener('click', () => this.showAtomProperties(atom));
+    atom.addEventListener('mouseenter', () => {
+      if (this.animationState !== 'playing') {
+        atom.style.transform = 'scale(1.1)';
+        atom.style.zIndex = '10';
+      }
+    });
+    atom.addEventListener('mouseleave', () => {
+      if (this.animationState !== 'playing') {
+        atom.style.transform = 'scale(1)';
+        atom.style.zIndex = '1';
+      }
+    });
+  }
+
+  protected abstract showAtomProperties(atom: HTMLElement): void;
+  public abstract play(): Promise<void>;
+  public abstract reset(): void;
+}
+
+---- File Content End ----
+
+
+=== File: ChemicalElements.ts ===
+Path: core\ChemicalElements.ts
+---- File Content Start ----
+// src/data/animations/core/ChemicalElements.ts
+export class ChemicalElement {
+  static readonly ELEMENTS = {
+    H: {
+      name: 'Hydrogen',
+      symbol: 'H',
+      atomicNumber: 1,
+      color: '#FFFFFF',
+      size: 40,
+      mass: 1.008,
+      valence: 1,
+      properties: [
+        'Lightest element',
+        'Highly flammable',
+        'Colorless gas',
+        'Forms H₂ molecules',
+        'Explosive with oxygen'
+      ]
+    },
+    O: {
+      name: 'Oxygen',
+      symbol: 'O',
+      atomicNumber: 8,
+      color: '#FF6B6B',
+      size: 60,
+      mass: 15.999,
+      valence: 2,
+      properties: [
+        'Supports combustion',
+        'Colorless gas',
+        'Forms O₂ molecules',
+        '21% of air',
+        'Essential for life'
+      ]
+    },
+    C: {
+      name: 'Carbon',
+      symbol: 'C',
+      atomicNumber: 6,
+      color: '#333333',
+      size: 55,
+      mass: 12.011,
+      valence: 4,
+      properties: [
+        'Forms 4 bonds',
+        'Basis of organic chemistry',
+        'Multiple allotropes',
+        'Black solid (graphite)',
+        'Forms chains and rings'
+      ]
+    },
+    N: {
+      name: 'Nitrogen',
+      symbol: 'N',
+      atomicNumber: 7,
+      color: '#0066CC',
+      size: 52,
+      mass: 14.007,
+      valence: 3,
+      properties: [
+        'Inert gas',
+        '78% of air',
+        'Forms N₂ molecules',
+        'Triple bond in N₂',
+        'Essential for proteins'
+      ]
+    },
+    Na: {
+      name: 'Sodium',
+      symbol: 'Na',
+      atomicNumber: 11,
+      color: '#FFD700',
+      size: 65,
+      mass: 22.990,
+      valence: 1,
+      properties: [
+        'Soft metal',
+        'Highly reactive',
+        'Stored in oil',
+        'Forms Na+ ions',
+        'Explodes in water'
+      ]
+    },
+    Cl: {
+      name: 'Chlorine',
+      symbol: 'Cl',
+      atomicNumber: 17,
+      color: '#00FF00',
+      size: 62,
+      mass: 35.453,
+      valence: 1,
+      properties: [
+        'Toxic gas',
+        'Green-yellow color',
+        'Forms Cl₂ molecules',
+        'Strong oxidizer',
+        'Used in bleach'
+      ]
+    }
+  };
+
+  static get(symbol: string) {
+    return this.ELEMENTS[symbol];
+  }
+}
+
+---- File Content End ----
+
+
+=== File: MoleculeTemplates.ts ===
+Path: core\MoleculeTemplates.ts
+---- File Content Start ----
+// src/data/animations/core/MoleculeTemplates.ts
+export interface MoleculeStructure {
+  atoms: Array<{
+    element: string;
+    position: { x: number; y: number; z?: number };
+    id?: string;
+  }>;
+  bonds: Array<{
+    from: number;
+    to: number;
+    type: 'single' | 'double' | 'triple' | 'ionic';
+    angle?: number;
+  }>;
+  properties?: string[];
+  state?: 'solid' | 'liquid' | 'gas' | 'aqueous';
+}
+
+export class MoleculeTemplates {
+  static readonly MOLECULES: Record<string, MoleculeStructure> = {
+    'H2': {
+      atoms: [
+        { element: 'H', position: { x: -20, y: 0 } },
+        { element: 'H', position: { x: 20, y: 0 } }
+      ],
+      bonds: [{ from: 0, to: 1, type: 'single' }],
+      state: 'gas'
+    },
+    'O2': {
+      atoms: [
+        { element: 'O', position: { x: -30, y: 0 } },
+        { element: 'O', position: { x: 30, y: 0 } }
+      ],
+      bonds: [{ from: 0, to: 1, type: 'double' }],
+      state: 'gas'
+    },
+    'H2O': {
+      atoms: [
+        { element: 'O', position: { x: 0, y: 0 } },
+        { element: 'H', position: { x: -30, y: 25 }, id: 'H1' },
+        { element: 'H', position: { x: 30, y: 25 }, id: 'H2' }
+      ],
+      bonds: [
+        { from: 0, to: 1, type: 'single', angle: 104.5 },
+        { from: 0, to: 2, type: 'single', angle: 104.5 }
+      ],
+      properties: [
+        'Universal solvent',
+        'Bent shape (104.5°)',
+        'Polar molecule',
+        'High surface tension',
+        'Expands when frozen'
+      ],
+      state: 'liquid'
+    },
+    'NaCl': {
+      atoms: [
+        { element: 'Na', position: { x: -40, y: 0 } },
+        { element: 'Cl', position: { x: 40, y: 0 } }
+      ],
+      bonds: [{ from: 0, to: 1, type: 'ionic' }],
+      properties: [
+        'Table salt',
+        'Ionic compound',
+        'Crystal lattice',
+        'Soluble in water',
+        'High melting point'
+      ],
+      state: 'solid'
+    },
+    'CO2': {
+      atoms: [
+        { element: 'C', position: { x: 0, y: 0 } },
+        { element: 'O', position: { x: -50, y: 0 } },
+        { element: 'O', position: { x: 50, y: 0 } }
+      ],
+      bonds: [
+        { from: 0, to: 1, type: 'double' },
+        { from: 0, to: 2, type: 'double' }
+      ],
+      properties: [
+        'Linear molecule',
+        'Greenhouse gas',
+        'Dry ice when solid',
+        'Acidic in water',
+        'Fire extinguisher'
+      ],
+      state: 'gas'
+    }
+  };
+
+  static get(formula: string): MoleculeStructure {
+    return this.MOLECULES[formula];
+  }
+}
+
+---- File Content End ----
+
+
+=== File: TemplateLoader.ts ===
+Path: core\TemplateLoader.ts
+---- File Content Start ----
+// src/data/animations/core/TemplateLoader.ts
+import { AnimationTemplateType } from '../types';
+
+export class TemplateLoader {
+  static getTemplateCode(templateType: AnimationTemplateType): string {
+    switch (templateType) {
+      case 'reaction':
+        return `
+          class ReactionAnimation {
+            constructor(config) {
+              this.config = config;
+              this.container = document.getElementById('animation-container');
+              this.init();
+            }
+
+            init() {
+              const equation = document.createElement('div');
+              equation.className = 'equation-display';
+              equation.innerHTML = this.buildEquation();
+              this.container.appendChild(equation);
+              this.createReactants();
+            }
+
+            buildEquation() {
+              const reactants = this.config.reactants.map(r =>
+                r.count > 1 ? \`\${r.count}\${r.formula}\` : r.formula
+              ).join(' + ');
+
+              const products = this.config.products.map(p =>
+                p.count > 1 ? \`\${p.count}\${p.formula}\` : p.formula
+              ).join(' + ');
+
+              return \`\${reactants} → \${products}\`;
+            }
+
+            createReactants() {
+              console.log('Creating reactants:', this.config.reactants);
+            }
+
+            play() {
+              console.log('Playing reaction animation');
+            }
+          }
+        `;
+
+      case 'state-change':
+        return `
+          class StateChangeAnimation {
+            constructor(config) {
+              this.config = config;
+              this.container = document.getElementById('animation-container');
+              this.currentState = config.initialState;
+              this.init();
+            }
+
+            init() {
+              this.createParticles();
+              this.arrangeParticles(this.currentState);
+            }
+
+            createParticles() {
+              console.log('Creating particles for', this.config.substance);
+            }
+
+            arrangeParticles(state) {
+              console.log('Arranging particles in', state, 'state');
+            }
+
+            transitionTo(newState) {
+              this.currentState = newState;
+              this.arrangeParticles(newState);
+            }
+          }
+        `;
+
+      case 'definition':
+        return `
+          class DefinitionAnimation {
+            constructor() {
+              this.container = document.getElementById('animation-container');
+              this.init();
+            }
+
+            init() {
+              const keywords = ['Properties', 'Composition', 'Structure'];
+
+              keywords.forEach((keyword, index) => {
+                const card = document.createElement('div');
+                card.className = 'concept-card';
+                card.textContent = keyword;
+                card.style.cssText = \`
+                  width: 120px;
+                  height: 120px;
+                  margin: 10px;
+                  background: #4ecdc4;
+                  color: white;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: bold;
+                  font-size: 16px;
+                  border-radius: 12px;
+                  cursor: pointer;
+                  transition: transform 0.3s ease;
+                \`;
+
+                card.addEventListener('click', () => this.showDetail(keyword));
+                this.container.appendChild(card);
+              });
+            }
+
+            showDetail(keyword) {
+              const detail = document.createElement('div');
+              detail.className = 'concept-detail';
+              detail.style.cssText = \`
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                border-radius: 12px;
+                font-size: 16px;
+                text-align: center;
+                max-width: 300px;
+              \`;
+
+              if (keyword === 'Properties') {
+                detail.innerHTML = '<strong>Oxygen (O₂)</strong><br>• Supports combustion<br>• Colorless gas<br>• Essential for life';
+              } else if (keyword === 'Composition') {
+                detail.innerHTML = '<strong>Water (H₂O)</strong><br>• 2 Hydrogen + 1 Oxygen<br>• Forms by chemical reaction';
+              } else if (keyword === 'Structure') {
+                detail.innerHTML = '<strong>Carbon dioxide (CO₂)</strong><br>• Linear molecule<br>• Double bonds between C and O';
+              }
+
+              // Remove existing detail panels
+              const existing = this.container.querySelector('.concept-detail');
+              if (existing) existing.remove();
+
+              this.container.appendChild(detail);
+
+              setTimeout(() => {
+                detail.style.opacity = '0';
+                setTimeout(() => detail.remove(), 2000);
+              }, 3000);
+            }
+
+            play() {
+              console.log('Definition animation started');
+            }
+          }
+        `;
+
+      default:
+        return '';
+    }
+  }
+}
+
+---- File Content End ----
+
+
+=== File: baseAnimationTemplate.ts ===
+Path: library\baseAnimationTemplate.ts
+---- File Content Start ----
+export const baseAnimationTemplate = `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: box-shadow 0.3s ease;
+        }
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #safety-warning {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 59, 48, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            z-index: 100;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 90%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <script>
+        // Animation state
+        let animationState = {
+            temperature: 20,
+            zoom: 1,
+            speed: 1,
+            showBefore: true,
+            rotation3D: true,
+            particleCount: 50,
+            pressure: 1,
+            concentration: 0.5,
+            isPlaying: true,
+            safetyStatus: { isSafe: true, warnings: [] }
+        };
+
+        // Initialize with passed state
+        if (window.initialState) {
+            animationState = { ...animationState, ...window.initialState };
+        }
+
+        // Safety functions
+        function handleSafetyStatus(status) {
+            if (!status.isSafe) {
+                document.body.style.boxShadow = 'inset 0 0 0 3px #ff3b30';
+                showSafetyWarning(status.warnings);
+            } else {
+                document.body.style.boxShadow = 'none';
+                hideSafetyWarning();
+            }
+        }
+
+        function showSafetyWarning(warnings) {
+            let warningEl = document.getElementById('safety-warning');
+            if (!warningEl) {
+                warningEl = document.createElement('div');
+                warningEl.id = 'safety-warning';
+                document.body.appendChild(warningEl);
+            }
+
+            // Update content
+            warningEl.innerHTML = warnings.join(' ⚠️ ') +
+                '<br><small>Adjust parameters to safe levels</small>';
+        }
+
+        function hideSafetyWarning() {
+            const warningEl = document.getElementById('safety-warning');
+            if (warningEl) warningEl.remove();
+        }
+
+        // Handle control updates from React Native
+        window.addEventListener('message', (event) => {
+            try {
+                const data = JSON.parse(event.data);
+
+                if (data.type === 'controlUpdate') {
+                    animationState[data.control] = data.value;
+
+                    // Handle safety update
+                    if (data.control === 'safetyStatus') {
+                        handleSafetyStatus(data.value);
+                    }
+
+                    // Call animation-specific update handler
+                    if (window.handleControlUpdate) {
+                        window.handleControlUpdate(data.control, data.value);
+                    }
+                }
+
+                if (data.action === 'restart' && window.resetAnimation) {
+                    window.resetAnimation();
+                }
+            } catch (e) {
+                console.error('Message handling error:', e);
+            }
+        });
+
+        // Send state updates back to React Native
+        function sendStateUpdate(state) {
+            if (window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+                window.ReactNativeWebView.postMessage(JSON.stringify({
+                    type: 'stateUpdate',
+                    state: state
+                }));
+            }
+        }
+
+        // Common animation utilities
+        const AnimationUtils = {
+            // Temperature effects
+            getTemperatureColor: (temp) => {
+                if (temp < 0) return 0x87CEEB; // Ice blue
+                if (temp < 50) return 0x4169E1; // Royal blue
+                if (temp < 100) return 0xFF8C00; // Dark orange
+                return 0xFF4500; // Orange red
+            },
+
+            // Particle motion based on temperature
+            getParticleSpeed: (temp) => {
+                return 0.001 + (temp + 100) / 10000;
+            },
+
+            // Zoom handling
+            applyZoom: (camera, zoom) => {
+                camera.position.z = 15 / zoom;
+                camera.updateProjectionMatrix();
+            },
+
+            // Speed time scaling
+            getTimeScale: (speed) => {
+                return speed;
+            },
+
+            // Particle visibility
+            updateParticleCount: (particles, count) => {
+                particles.forEach((p, i) => {
+                    p.visible = i < count;
+                });
+            }
+        };
+
+        // Export for use in animations
+        window.AnimationUtils = AnimationUtils;
+        window.animationState = animationState;
+        window.sendStateUpdate = sendStateUpdate;
+
+        // Initialize safety status
+        handleSafetyStatus(animationState.safetyStatus);
+    </script>
+</body>
+</html>
+`;
+
+---- File Content End ----
+
+
+=== File: chemistryCoreConcepts.ts ===
+Path: library\chemistryCoreConcepts.ts
+---- File Content Start ----
+// In animationRegistry.ts or a new file like 'chemistryCoreConcepts.ts'
+export const chemistryCoreConcepts: AnimationConfig = {
+  height: 400, // Good height for visibility of details
+  autoPlay: true,
+  loop: false, // It's a narrative animation, so likely no loop or a very long one
+  backgroundColor: '#1f2937', // A dark, neutral background (e.g., dark slate gray)
+  features: {
+    temperature: true,    // For Scene 2 (Properties/Phase Changes) & Scene 5
+    zoom: true,           // Generally useful for all scenes
+    speed: true,          // For controlling animation rates in all scenes
+    beforeAfter: true,    // For Scene 5 (Chemical Change)
+    rotation3D: true,     // For Scene 3, 4, 6 (Composition, Structure, Conclusion)
+    particleCount: true,  // For Scene 2 (Properties) & Scene 3 (Composition)
+    // pressure: false,   // Less critical for this core overview
+    // concentration: false // Less critical for this core overview
+  },
+  html: `<!-- HTML structure will be baseAnimationTemplate + specific script -->`
+};
+
+---- File Content End ----
+
+
+=== File: hydrogenOxygenWater.ts ===
+Path: library\hydrogenOxygenWater.ts
+---- File Content Start ----
+// src/data/animations/library/hydrogenOxygenWater.ts
+import { AnimationConfig } from '../types';
+import { baseAnimationTemplate } from './baseAnimationTemplate';
+
+export const hydrogenOxygenWater: AnimationConfig = {
+  height: 500,
+  autoPlay: true,
+  loop: false,
+  features: {
+    speed: true,
+    beforeAfter: true,
+    rotation3D: true,
+    temperature: true,
+  },
+    safety: {
+        maxTemperature: 100,
+        maxPressure: 2,
+        maxConcentration: 1.0,
+        minDistance: 0.5,
+        requiredEquipment: ['Safety Goggles', 'Gloves'],
+        hazardousReactions: ['explosive', 'toxic']
+    },
+  html: baseAnimationTemplate + `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        /* Add your full animation styles here */
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <script>
+        // Your full Three.js animation code here
+        // Add message posting for communication with React Native
+
+        // When animation completes:
+        window.ReactNativeWebView.postMessage(JSON.stringify({
+            type: 'animationComplete'
+        }));
+
+        // Listen for control messages
+        window.addEventListener('message', (event) => {
+            const data = JSON.parse(event.data);
+            if (data.action === 'restart') {
+                resetAnimation();
+            }
+        });
+    </script>
+</body>
+</html>
+`
+};
+
+---- File Content End ----
+
+
+=== File: statesOfMatter.ts ===
+Path: library\statesOfMatter.ts
+---- File Content Start ----
+// src/data/animations/library/statesOfMatter.ts
+import { AnimationConfig } from '../types';
+import { baseAnimationTemplate } from './baseAnimationTemplate';
+
+export const statesOfMatter: AnimationConfig = {
+  height: 350,
+  autoPlay: true,
+  loop: true,
+  features: {
+    temperature: true,
+    zoom: true,
+    speed: true,
+    particleCount: true
+  },
+ safety: {
+    maxTemperature: 100,
+    maxPressure: 2,
+    maxConcentration: 1.0,
+    minDistance: 0.5,
+    requiredEquipment: ['Safety Goggles', 'Gloves'],
+    hazardousReactions: ['explosive', 'toxic']
+ },
+  html: baseAnimationTemplate + `
+    <script>
+        // States of Matter specific animation code
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 15;
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Create particles for each state
+        const particles = [];
+        const particleGeometry = new THREE.SphereGeometry(0.3, 16, 16);
+
+        // Create particle grid
+        for (let i = 0; i < 200; i++) {
+            const material = new THREE.MeshPhongMaterial({
+                color: 0x3498db,
+                emissive: 0x2980b9,
+                emissiveIntensity: 0.2
+            });
+            const particle = new THREE.Mesh(particleGeometry, material);
+            particle.userData.basePosition = new THREE.Vector3(
+                (i % 10 - 5) * 1.5,
+                (Math.floor(i / 10) % 10 - 5) * 1.5,
+                (Math.floor(i / 100) - 1) * 1.5
+            );
+            particle.position.copy(particle.userData.basePosition);
+            scene.add(particle);
+            particles.push(particle);
+        }
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(10, 10, 5);
+        scene.add(directionalLight);
+
+        // Handle control updates
+        window.handleControlUpdate = (control, value) => {
+            if (control === 'temperature') {
+                // Update particle colors based on temperature
+                particles.forEach(p => {
+                    p.material.color.setHex(AnimationUtils.getTemperatureColor(value));
+                });
+            }
+            if (control === 'zoom') {
+                AnimationUtils.applyZoom(camera, value);
+            }
+            if (control === 'particleCount') {
+                AnimationUtils.updateParticleCount(particles, value);
+            }
+        };
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if (animationState.isPlaying) {
+                const time = Date.now() * 0.001 * animationState.speed;
+                const temp = animationState.temperature;
+
+                particles.forEach((particle, i) => {
+                    if (!particle.visible) return;
+
+                    const basePos = particle.userData.basePosition;
+
+                    if (temp < 0) {
+                        // Solid state - vibrate in place
+                        particle.position.x = basePos.x + Math.sin(time * 2 + i) * 0.1;
+                        particle.position.y = basePos.y + Math.cos(time * 2 + i) * 0.1;
+                        particle.position.z = basePos.z;
+                    } else if (temp < 100) {
+                        // Liquid state - flow but stay close
+                        const flowSpeed = temp / 100;
+                        particle.position.x = basePos.x + Math.sin(time + i) * flowSpeed;
+                        particle.position.y = basePos.y + Math.cos(time + i) * flowSpeed;
+                        particle.position.z = basePos.z + Math.sin(time * 0.5 + i) * flowSpeed * 0.5;
+                    } else {
+                        // Gas state - random motion
+                        const speed = AnimationUtils.getParticleSpeed(temp);
+                        particle.position.x += (Math.random() - 0.5) * speed * 50;
+                        particle.position.y += (Math.random() - 0.5) * speed * 50;
+                        particle.position.z += (Math.random() - 0.5) * speed * 50;
+
+                        // Boundary check
+                        if (Math.abs(particle.position.x) > 20) particle.position.x *= -0.9;
+                        if (Math.abs(particle.position.y) > 20) particle.position.y *= -0.9;
+                        if (Math.abs(particle.position.z) > 20) particle.position.z *= -0.9;
+                    }
+                });
+
+                if (animationState.rotation3D) {
+                    scene.rotation.y += 0.005 * animationState.speed;
+                }
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        // Initialize controls
+        window.handleControlUpdate('temperature', animationState.temperature);
+        window.handleControlUpdate('zoom', animationState.zoom);
+        window.handleControlUpdate('particleCount', animationState.particleCount);
+
+        animate();
+    </script>
+  </body>
+  </html>
+`
+};
+
+---- File Content End ----
+
+
+=== File: chemistryDefinition.ts ===
+Path: library\chapter1\chemistryDefinition.ts
+---- File Content Start ----
+// src/data/animations/library/chapter1/chemistryDefinition.ts
+import { AnimationConfig } from '../../types';
+import { baseAnimationTemplate } from '../baseAnimationTemplate';
+
+export const chemistryDefinition: AnimationConfig = {
+  height: 600,
+  autoPlay: true,
+  loop: false,
+  features: {
+    speed: true,
+  },
+  html: baseAnimationTemplate + `
+    <style>
+      #animation-container {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Title Section */
+      .title-section {
+        text-align: center;
+        margin-bottom: 30px;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInDown 1s forwards;
+      }
+
+      .main-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      .definition-text {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.5;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .highlight {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .highlight:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+      }
+
+      /* Branch Cards */
+      .branches-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 40px;
+        opacity: 0;
+        animation: fadeIn 1s forwards 0.5s;
+      }
+
+      .branch-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        padding: 20px;
+        width: 160px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .branch-card:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .branch-card.active {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .branch-icon {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      .branch-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 5px;
+      }
+
+      .branch-subtitle {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Content Panels */
+      .content-panel {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 16px;
+        padding: 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
+      .content-panel.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .panel-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #4ecdc4;
+        margin-bottom: 10px;
+      }
+
+      .panel-content {
+        color: white;
+        line-height: 1.6;
+      }
+
+      /* Properties Panel */
+      .element-display {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      .element-box {
+        background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc0000);
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        animation: pulse 2s infinite;
+      }
+
+      .element-symbol {
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      .element-name {
+        font-size: 12px;
+      }
+
+      .properties-list {
+        flex: 1;
+      }
+
+      .property-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+        opacity: 0;
+        animation: slideInRight 0.5s forwards;
+      }
+
+      .property-item:nth-child(1) { animation-delay: 0.1s; }
+      .property-item:nth-child(2) { animation-delay: 0.2s; }
+      .property-item:nth-child(3) { animation-delay: 0.3s; }
+      .property-item:nth-child(4) { animation-delay: 0.4s; }
+
+      .property-icon {
+        font-size: 20px;
+      }
+
+      .property-text {
+        font-size: 14px;
+      }
+
+      /* Composition Panel */
+      .molecule-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .atom {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        animation: bounceIn 0.5s;
+      }
+
+      .atom-hydrogen {
+        background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+        color: #333;
+      }
+
+      .atom-oxygen {
+        background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc0000);
+      }
+
+      .bond {
+        width: 30px;
+        height: 3px;
+        background: #4ecdc4;
+        animation: expandWidth 0.5s;
+      }
+
+      .formula-display {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+      }
+
+      /* Structure Panel */
+      .structure-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        position: relative;
+        height: 120px;
+      }
+
+      .structure-molecule {
+        position: relative;
+        animation: rotate3d 10s linear infinite;
+        transform-style: preserve-3d;
+      }
+
+      .structure-atom {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        font-size: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .structure-bond {
+        position: absolute;
+        background: #4ecdc4;
+        height: 3px;
+        transform-origin: left center;
+      }
+
+      .angle-display {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #4ecdc4;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      /* Animations */
+      @keyframes fadeInDown {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes expandWidth {
+        from {
+          width: 0;
+        }
+        to {
+          width: 30px;
+        }
+      }
+
+      @keyframes rotate3d {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 600px) {
+        .branches-container {
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+        }
+
+        .branch-card {
+          width: 200px;
+        }
+
+        .main-title {
+          font-size: 24px;
+        }
+
+        .definition-text {
+          font-size: 14px;
+        }
+      }
+    </style>
+
+    <div id="animation-container">
+      <!-- Title Section -->
+      <div class="title-section">
+        <h1 class="main-title">What is Chemistry?</h1>
+        <p class="definition-text">
+          Chemistry is the branch of science that deals with the
+          <span class="highlight" data-branch="properties">properties</span>,
+          <span class="highlight" data-branch="composition">composition</span>, and
+          <span class="highlight" data-branch="structure">structure</span>
+          of substances, as well as the physical and chemical changes in matter.
+        </p>
+      </div>
+
+      <!-- Branch Cards -->
+      <div class="branches-container">
+        <div class="branch-card" data-branch="properties">
+          <div class="branch-icon">🔬</div>
+          <div class="branch-title">Properties</div>
+          <div class="branch-subtitle">What it's like</div>
+        </div>
+
+        <div class="branch-card" data-branch="composition">
+          <div class="branch-icon">⚛️</div>
+          <div class="branch-title">Composition</div>
+          <div class="branch-subtitle">What it's made of</div>
+        </div>
+
+        <div class="branch-card" data-branch="structure">
+          <div class="branch-icon">🧬</div>
+          <div class="branch-title">Structure</div>
+          <div class="branch-subtitle">How it's arranged</div>
+        </div>
+      </div>
+
+      <!-- Content Panels -->
+      <div class="content-panel" id="properties-panel">
+        <div class="panel-title">Properties of Matter</div>
+        <div class="panel-content">
+          <div class="element-display">
+            <div class="element-box">
+              <div class="element-symbol">O</div>
+              <div class="element-name">Oxygen</div>
+            </div>
+            <div class="properties-list">
+              <div class="property-item">
+                <span class="property-icon">🌡️</span>
+                <span class="property-text">Boiling point: -183°C</span>
+              </div>
+              <div class="property-item">
+                <span class="property-icon">💨</span>
+                <span class="property-text">Colorless gas</span>
+              </div>
+              <div class="property-item">
+                <span class="property-icon">🔥</span>
+                <span class="property-text">Supports combustion</span>
+              </div>
+              <div class="property-item">
+                <span class="property-icon">⚗️</span>
+                <span class="property-text">Highly reactive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-panel" id="composition-panel">
+        <div class="panel-title">Composition of Matter</div>
+        <div class="panel-content">
+          <div class="molecule-display">
+            <div class="atom atom-hydrogen">H</div>
+            <div class="bond"></div>
+            <div class="atom atom-oxygen">O</div>
+            <div class="bond"></div>
+            <div class="atom atom-hydrogen">H</div>
+          </div>
+          <div class="formula-display">H₂O = 2 Hydrogen + 1 Oxygen</div>
+          <p style="text-align: center; margin-top: 10px; font-size: 14px;">
+            Water is composed of hydrogen and oxygen atoms in a 2:1 ratio
+          </p>
+        </div>
+      </div>
+
+      <div class="content-panel" id="structure-panel">
+        <div class="panel-title">Structure of Matter</div>
+        <div class="panel-content">
+          <div class="structure-display">
+            <div class="structure-molecule">
+              <div class="structure-atom atom-oxygen" style="left: 50px; top: 40px;">O</div>
+              <div class="structure-atom atom-hydrogen" style="left: 20px; top: 80px;">H</div>
+              <div class="structure-atom atom-hydrogen" style="left: 80px; top: 80px;">H</div>
+              <div class="structure-bond" style="left: 50px; top: 50px; width: 40px; transform: rotate(140deg);"></div>
+              <div class="structure-bond" style="left: 70px; top: 50px; width: 40px; transform: rotate(40deg);"></div>
+            </div>
+            <div class="angle-display">Bond angle: 104.5°</div>
+          </div>
+          <p style="text-align: center; font-size: 14px;">
+            The bent shape of water gives it unique properties like polarity
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Initialize animation
+      let currentPanel = null;
+      // Local animationSpeed variable is removed, use window.animationState.speed
+
+      // Get all interactive elements
+      const highlights = document.querySelectorAll('.highlight');
+      const branchCards = document.querySelectorAll('.branch-card');
+      const contentPanels = document.querySelectorAll('.content-panel');
+
+      // Add click handlers to highlights
+      highlights.forEach(highlight => {
+        highlight.addEventListener('click', () => {
+          const branch = highlight.dataset.branch;
+          showPanel(branch);
+        });
+      });
+
+      // Add click handlers to branch cards
+      branchCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const branch = card.dataset.branch;
+          showPanel(branch);
+        });
+      });
+
+      // Show panel function
+      function showPanel(branch) {
+        branchCards.forEach(card => card.classList.remove('active'));
+        contentPanels.forEach(panel => panel.classList.remove('active'));
+
+        const panel = document.getElementById(branch + '-panel');
+        if (panel) {
+          const card = document.querySelector(`.branch-card[data-branch="${branch}"]`);
+          if (card) card.classList.add('active');
+          setTimeout(() => {
+            panel.classList.add('active');
+            if (branch === 'properties') {
+              resetPropertyAnimations(window.animationState.speed);
+            } else if (branch === 'composition') {
+              resetCompositionAnimations(window.animationState.speed);
+            }
+          }, 50); // Small delay for UI update
+          currentPanel = branch;
+        }
+      }
+
+      // Reset animations and apply current speed
+      function resetPropertyAnimations(currentSpeed) {
+        const items = document.querySelectorAll('#properties-panel .property-item');
+        items.forEach((item, index) => {
+          item.style.animation = 'none'; // Clear previous animation
+          // Force reflow to ensure animation restarts
+          // eslint-disable-next-line no-unused-expressions
+          item.offsetHeight;
+          const baseDuration = 0.5;
+          const baseDelay = index * 0.1;
+          item.style.animationName = 'slideInRight';
+          item.style.animationDuration = `${baseDuration / currentSpeed}s`;
+          item.style.animationDelay = `${baseDelay / currentSpeed}s`;
+          item.style.animationFillMode = 'forwards';
+          item.style.animationTimingFunction = 'ease'; // Assuming default, adjust if needed
+        });
+      }
+
+      function resetCompositionAnimations(currentSpeed) {
+        const atoms = document.querySelectorAll('#composition-panel .molecule-display .atom');
+        const bonds = document.querySelectorAll('#composition-panel .molecule-display .bond');
+        const baseDuration = 0.5;
+
+        atoms.forEach(atom => {
+          atom.style.animation = 'none';
+          // eslint-disable-next-line no-unused-expressions
+          atom.offsetHeight;
+          atom.style.animationName = 'bounceIn';
+          atom.style.animationDuration = `${baseDuration / currentSpeed}s`;
+          atom.style.animationFillMode = 'forwards';
+        });
+
+        bonds.forEach(bond => {
+          bond.style.animation = 'none';
+          // eslint-disable-next-line no-unused-expressions
+          bond.offsetHeight;
+          bond.style.animationName = 'expandWidth';
+          bond.style.animationDuration = `${baseDuration / currentSpeed}s`;
+          bond.style.animationFillMode = 'forwards';
+        });
+      }
+
+      // Function to adjust durations of CSS-defined animations
+      function updateStaticCssAnimationSpeeds(currentSpeed) {
+        const speedMultiplier = 1 / currentSpeed;
+
+        const titleSection = document.querySelector('.title-section');
+        if (titleSection) { // Base duration 1s
+          titleSection.style.animationDuration = `${1 * speedMultiplier}s`;
+        }
+
+        const branchesContainer = document.querySelector('.branches-container');
+        if (branchesContainer) { // Base duration 1s, base delay 0.5s
+          branchesContainer.style.animationDuration = `${1 * speedMultiplier}s`;
+          branchesContainer.style.animationDelay = `${0.5 * speedMultiplier}s`;
+        }
+
+        const elementBox = document.querySelector('#properties-panel .element-box');
+        if (elementBox) { // Base duration 2s for pulse
+            elementBox.style.animationDuration = `${2 * speedMultiplier}s`;
+        }
+
+        const structureMolecule = document.querySelector('#structure-panel .structure-molecule');
+        if (structureMolecule) { // Base duration 10s for rotate3d
+            structureMolecule.style.animationDuration = `${10 * speedMultiplier}s`;
+        }
+
+        // Add any other elements with CSS @keyframe animations here
+      }
+
+
+      // Auto-show first panel after intro, respecting initial speed
+      // This needs to wait for window.animationState to be potentially updated by initialState
+      window.addEventListener('load', () => {
+        // Initialize animations with the current speed
+        updateStaticCssAnimationSpeeds(window.animationState.speed);
+
+        // If properties panel is the first one, its animations will be set by showPanel
+        setTimeout(() => {
+          showPanel('properties');
+        }, 2000 / window.animationState.speed);
+
+
+        // Set up handler for future speed changes from React Native
+        window.handleControlUpdate = function(control, value) {
+          if (control === 'speed') {
+            updateStaticCssAnimationSpeeds(value);
+            // If a panel is active, re-apply its dynamic animations with new speed
+            if (currentPanel === 'properties') {
+              resetPropertyAnimations(value);
+            } else if (currentPanel === 'composition') {
+              resetCompositionAnimations(value);
+            }
+          }
+          // Handle other controls if necessary for this specific animation
+        };
+
+        // Send ready message
+        if (window.ReactNativeWebView) {
+          window.ReactNativeWebView.postMessage(JSON.stringify({
+            type: 'animationReady',
+            animation: 'chemistry-definition'
+          }));
+        }
+      });
+    </script>
+  </body>
+  </html>
+`
+};
+
+---- File Content End ----
+
+
+=== File: waterFormation.ts ===
+Path: library\chapter1\waterFormation.ts
+---- File Content Start ----
+import { AnimationConfig } from '../../types';
+import { AnimationFactory } from '../../core/AnimationFactory';
+import { baseStyles } from '../../styles/baseStyles';
+
+export const createHydrogenOxygenWater = (): AnimationConfig => {
+  return {
+    height: 500,
+    autoPlay: false,
+    loop: false,
+    features: {
+      temperature: true,
+      beforeAfter: true,
+      speed: true
+    },
+    html: `
+      ${baseStyles}
+      <div id="animation-container" class="chemistry-animation">
+        <!-- Container for dynamic content -->
+      </div>
+      <script>
+        // Initialize animation
+        const animation = new ReactionAnimation({
+          containerId: 'animation-container',
+          reaction: {
+            reactants: [
+              { formula: 'H2', count: 2, position: { x: 150, y: 250 } },
+              { formula: 'O2', count: 1, position: { x: 500, y: 250 } }
+            ],
+            products: [
+              { formula: 'H2O', count: 2, position: { x: 300, y: 250 } }
+            ],
+            activationEnergy: 100,
+            effects: ['explosion', 'flame']
+          }
+        });
+
+        // Handle controls from React Native
+        window.addEventListener('message', (event) => {
+          const data = JSON.parse(event.data);
+          if (data.type === 'controlUpdate') {
+            animation.handleControl(data.control, data.value);
+          }
+        });
+
+        // Auto-start if configured
+        if (window.animationState?.isPlaying) {
+          animation.play();
+        }
+      </script>
+    `
+  };
+};
+
+---- File Content End ----
+
+
+=== File: SafetyService.ts ===
+Path: services\SafetyService.ts
+---- File Content Start ----
+import { SafetyConstraints, SafetyStatus } from '../types';
+
+export class SafetyService {
+  static checkSafety(
+    constraints: SafetyConstraints | undefined,
+    currentState: Record<string, any>
+  ): SafetyStatus {
+    const result: SafetyStatus = {
+      isSafe: true,
+      warnings: [],
+      requiredEquipment: constraints?.requiredEquipment || []
+    };
+
+    if (!constraints) return result;
+
+    // Temperature checks
+    if (constraints.maxTemperature && currentState.temperature > constraints.maxTemperature) {
+      result.isSafe = false;
+      result.warnings.push(`Temperature exceeds safe limit (${constraints.maxTemperature}°C)`);
+    }
+
+    // Pressure checks
+    if (constraints.maxPressure && currentState.pressure > constraints.maxPressure) {
+      result.isSafe = false;
+      result.warnings.push(`Pressure exceeds safe limit (${constraints.maxPressure}atm)`);
+    }
+
+    // Concentration checks
+    if (constraints.maxConcentration && currentState.concentration > constraints.maxConcentration) {
+      result.isSafe = false;
+      result.warnings.push(`Concentration exceeds safe limit (${constraints.maxConcentration}M)`);
+    }
+
+    // Hazardous reaction checks
+    if (
+      constraints.hazardousReactions &&
+      constraints.hazardousReactions.includes(currentState.reactionType)
+    ) {
+      result.warnings.push(`Hazardous reaction: ${currentState.reactionType}`);
+    }
+
+    return result;
+  }
+}
+
+---- File Content End ----
+
+
+=== File: baseStyles.ts ===
+Path: styles\baseStyles.ts
+---- File Content Start ----
+export const baseStyles = `
+<style>
+  /* Base animation container */
+  .chemistry-animation {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0f0f23 0%, #1a1a3e 100%);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Atom styles */
+  .atom {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  }
+
+  .atom:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+
+  /* Bond styles */
+  .bond {
+    position: absolute;
+    background: #4ecdc4;
+    transform-origin: left center;
+    transition: all 0.5s ease;
+  }
+
+  .bond-single { height: 3px; }
+  .bond-double { height: 6px; box-shadow: 0 3px 0 #4ecdc4; }
+  .bond-triple { height: 9px; box-shadow: 0 3px 0 #4ecdc4, 0 6px 0 #4ecdc4; }
+  .bond-ionic {
+    height: 3px;
+    background: repeating-linear-gradient(
+      90deg,
+      #4ecdc4 0,
+      #4ecdc4 5px,
+      transparent 5px,
+      transparent 10px
+    );
+  }
+
+  /* Include other shared styles... */
+</style>
+`;
+
+---- File Content End ----
+
+
+=== File: DissolutionTemplate.ts ===
+Path: templates\DissolutionTemplate.ts
+---- File Content Start ----
+// src/data/animations/templates/DissolutionTemplate.ts
+export class DissolutionAnimationTemplate extends ChemistryAnimationEngine {
+  private soluteType: string;
+  private solventType: string;
+  private saturationPoint: number;
+  private currentAmount: number = 0;
+  private soluteParticles: HTMLElement[] = [];
+  private solventMolecules: HTMLElement[] = [];
+  private dissolvedParticles: HTMLElement[] = [];
+
+  constructor(
+    containerId: string,
+    soluteType: string = 'NaCl',
+    solventType: string = 'H2O',
+    saturationPoint: number = 36 // g per 100g water
+  ) {
+    super(containerId);
+    this.soluteType = soluteType;
+    this.solventType = solventType;
+    this.saturationPoint = saturationPoint;
+    this.setupContainer();
+    this.createSolvent();
+  }
+
+  private setupContainer(): void {
+    // Create beaker visual
+    const beaker = document.createElement('div');
+    beaker.className = 'beaker';
+    beaker.style.cssText = `
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 400px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-bottom: 5px solid rgba(255,255,255,0.4);
+      border-radius: 0 0 20px 20px;
+      background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(66, 165, 245, 0.1) 30%,
+        rgba(66, 165, 245, 0.2) 100%
+      );
+    `;
+    this.container.appendChild(beaker);
+
+    // Create measurement marks
+    for (let i = 1; i <= 4; i++) {
+      const mark = document.createElement('div');
+      mark.style.cssText = `
+        position: absolute;
+        left: -20px;
+        bottom: ${i * 80}px;
+        width: 10px;
+        height: 2px;
+        background: rgba(255,255,255,0.5);
+      `;
+      beaker.appendChild(mark);
+
+      const label = document.createElement('div');
+      label.textContent = `${i * 25}mL`;
+      label.style.cssText = `
+        position: absolute;
+        left: -60px;
+        bottom: ${i * 80 - 10}px;
+        color: rgba(255,255,255,0.7);
+        font-size: 12px;
+      `;
+      beaker.appendChild(label);
+    }
+
+    // Saturation indicator
+    const saturationIndicator = document.createElement('div');
+    saturationIndicator.className = 'saturation-indicator';
+    saturationIndicator.style.cssText = `
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.8);
+      padding: 15px;
+      border-radius: 10px;
+      color: white;
+    `;
+    saturationIndicator.innerHTML = `
+      <h4>Saturation Level</h4>
+      <div class="saturation-bar" style="
+        width: 200px;
+        height: 20px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 10px;
+      ">
+        <div class="saturation-fill" id="saturation-fill" style="
+          width: 0%;
+          height: 100%;
+          background: linear-gradient(90deg, #4CAF50, #FFC107, #F44336);
+          transition: width 0.5s ease;
+        "></div>
+      </div>
+      <p id="saturation-text" style="margin-top: 10px; font-size: 14px;">
+        0g / ${this.saturationPoint}g
+      </p>
+    `;
+    this.container.appendChild(saturationIndicator);
+  }
+
+  private createSolvent(): void {
+    // Create water molecules
+    const beakerBounds = {
+      left: this.container.offsetWidth / 2 - 150,
+      right: this.container.offsetWidth / 2 + 150,
+      top: this.container.offsetHeight - 350,
+      bottom: this.container.offsetHeight - 50
+    };
+
+    for (let i = 0; i < 30; i++) {
+      const water = this.createWaterMolecule(
+        Math.random() * (beakerBounds.right - beakerBounds.left) + beakerBounds.left,
+        Math.random() * (beakerBounds.bottom - beakerBounds.top) + beakerBounds.top
+      );
+      this.solventMolecules.push(water);
+      this.addWaterMotion(water, beakerBounds);
+    }
+  }
+
+  private createWaterMolecule(x: number, y: number): HTMLElement {
+    const water = document.createElement('div');
+    water.className = 'water-molecule';
+    water.style.cssText = `
+      position: absolute;
+      left: ${x}px;
+      top: ${y}px;
+      width: 40px;
+      height: 35px;
+      opacity: 0.7;
+    `;
+
+    water.innerHTML = `
+      <svg viewBox="0 0 40 35" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="15" r="8" fill="#FF6B6B" opacity="0.8"/>
+        <circle cx="12" cy="25" r="5" fill="#FFFFFF" opacity="0.8"/>
+        <circle cx="28" cy="25" r="5" fill="#FFFFFF" opacity="0.8"/>
+        <line x1="20" y1="15" x2="12" y2="25" stroke="#4ECDC4" stroke-width="2" opacity="0.6"/>
+        <line x1="20" y1="15" x2="28" y2="25" stroke="#4ECDC4" stroke-width="2" opacity="0.6"/>
+      </svg>
+    `;
+
+    this.container.appendChild(water);
+    return water;
+  }
+
+  private addWaterMotion(water: HTMLElement, bounds: any): void {
+    let angle = Math.random() * Math.PI * 2;
+    let speed = 0.5 + Math.random() * 0.5;
+
+    const animate = () => {
+      angle += 0.02;
+      const x = parseFloat(water.style.left) + Math.cos(angle) * speed;
+      const y = parseFloat(water.style.top) + Math.sin(angle) * speed * 0.5;
+
+      // Keep within bounds
+      if (x < bounds.left || x > bounds.right - 40) speed *= -1;
+      if (y < bounds.top || y > bounds.bottom - 35) speed *= -1;
+
+      water.style.left = `${x}px`;
+      water.style.top = `${y}px`;
+
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+  }
+
+  public async addSolute(amount: number = 5): Promise<void> {
+    if (this.currentAmount >= this.saturationPoint) {
+      await this.showSaturationMessage();
+      return;
+    }
+
+    const actualAmount = Math.min(amount, this.saturationPoint - this.currentAmount);
+    this.currentAmount += actualAmount;
+
+    // Update saturation indicator
+    this.updateSaturationIndicator();
+
+    // Create solute crystal
+    const crystal = this.createSoluteCrystal();
+    await this.dropCrystal(crystal);
+
+    // Dissolve or settle based on saturation
+    if (this.currentAmount <= this.saturationPoint) {
+      await this.dissolveCrystal(crystal);
+    } else {
+      await this.settleCrystal(crystal);
+    }
+  }
+
+  private createSoluteCrystal(): HTMLElement {
+    const crystal = document.createElement('div');
+    crystal.className = 'solute-crystal';
+
+    if (this.soluteType === 'NaCl') {
+      // Salt crystal - cubic structure
+      crystal.style.cssText = `
+        position: absolute;
+        left: ${this.container.offsetWidth / 2 - 20}px;
+        top: 50px;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(45deg, #FFFFFF 25%, #E0E0E0 50%, #FFFFFF 75%);
+        border: 1px solid #CCCCCC;
+        transform: rotate(45deg);
+      `;
+    } else if (this.soluteType === 'sugar') {
+      // Sugar crystal - more irregular
+      crystal.style.cssText = `
+        position: absolute;
+        left: ${this.container.offsetWidth / 2 - 20}px;
+        top: 50px;
+        width: 35px;
+        height: 35px;
+        background: radial-gradient(circle at 30% 30%, #FFFFFF, #F5F5DC);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      `;
+    }
+
+    this.container.appendChild(crystal);
+    return crystal;
+  }
+
+  private async dropCrystal(crystal: HTMLElement): Promise<void> {
+    const targetY = this.container.offsetHeight - 250;
+    await this.animateMove(crystal, parseFloat(crystal.style.left), targetY, 1000);
+  }
+
+  private async dissolveCrystal(crystal: HTMLElement): Promise<void> {
+    // Create ion/molecule particles
+    const particles = this.soluteType === 'NaCl' ?
+      await this.createIons(crystal) :
+      await this.createMolecules(crystal);
+
+    // Fade out crystal
+    await this.animateFade(crystal, 0, 500);
+    crystal.remove();
+
+    // Disperse particles
+    await this.disperseParticles(particles);
+  }
+
+  private async createIons(crystal: HTMLElement): Promise<HTMLElement[]> {
+    const ions: HTMLElement[] = [];
+    const x = parseFloat(crystal.style.left);
+    const y = parseFloat(crystal.style.top);
+
+    // Create Na+ and Cl- ions
+    for (let i = 0; i < 4; i++) {
+      const isNa = i % 2 === 0;
+      const ion = document.createElement('div');
+      ion.className = isNa ? 'na-ion' : 'cl-ion';
+      ion.style.cssText = `
+        position: absolute;
+        left: ${x + 20}px;
+        top: ${y + 20}px;
+        width: ${isNa ? 25 : 30}px;
+        height: ${isNa ? 25 : 30}px;
+        border-radius: 50%;
+        background: ${isNa ? '#FFD700' : '#00FF00'};
+        color: ${isNa ? '#000' : '#FFF'};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        opacity: 0;
+        transform: scale(0);
+      `;
+      ion.textContent = isNa ? 'Na+' : 'Cl-';
+
+      this.container.appendChild(ion);
+      ions.push(ion);
+      this.dissolvedParticles.push(ion);
+
+      // Animate appearance
+      setTimeout(() => {
+        ion.style.transition = 'all 0.5s ease';
+        ion.style.opacity = '1';
+        ion.style.transform = 'scale(1)';
+      }, i * 100);
+    }
+
+    return ions;
+  }
+
+  private async disperseParticles(particles: HTMLElement[]): Promise<void> {
+    const beakerBounds = {
+      left: this.container.offsetWidth / 2 - 130,
+      right: this.container.offsetWidth / 2 + 130,
+      top: this.container.offsetHeight - 350,
+      bottom: this.container.offsetHeight - 80
+    };
+
+    particles.forEach((particle, index) => {
+      setTimeout(() => {
+        const targetX = Math.random() * (beakerBounds.right - beakerBounds.left) + beakerBounds.left;
+        const targetY = Math.random() * (beakerBounds.bottom - beakerBounds.top) + beakerBounds.top;
+
+        this.animateMove(particle, targetX, targetY, 1500);
+
+        // Add floating motion
+        this.addParticleMotion(particle, beakerBounds);
+      }, index * 200);
+    });
+  }
+
+  private addParticleMotion(particle: HTMLElement, bounds: any): void {
+    let angle = Math.random() * Math.PI * 2;
+
+    const animate = () => {
+      angle += 0.03;
+      const baseX = parseFloat(particle.dataset.targetX || particle.style.left);
+      const baseY = parseFloat(particle.dataset.targetY || particle.style.top);
+
+      const offsetX = Math.sin(angle) * 15;
+      const offsetY = Math.cos(angle * 1.5) * 10;
+
+      particle.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(1)`;
+
+      requestAnimationFrame(animate);
+    };
+
+    setTimeout(animate, 2000);
+  }
+
+  private async settleCrystal(crystal: HTMLElement): Promise<void> {
+    // Crystal settles at bottom as undissolved
+    const bottomY = this.container.offsetHeight - 60;
+    await this.animateMove(
+      crystal,
+      parseFloat(crystal.style.left) + (Math.random() - 0.5) * 50,
+      bottomY,
+      1000
+    );
+
+    this.soluteParticles.push(crystal);
+  }
+
+  private updateSaturationIndicator(): void {
+    const percentage = (this.currentAmount / this.saturationPoint) * 100;
+    const fill = document.getElementById('saturation-fill');
+    const text = document.getElementById('saturation-text');
+
+    if (fill) fill.style.width = `${Math.min(percentage, 100)}%`;
+    if (text) text.textContent = `${this.currentAmount}g / ${this.saturationPoint}g`;
+  }
+
+  private async showSaturationMessage(): Promise<void> {
+    const message = document.createElement('div');
+    message.className = 'saturation-message';
+    message.textContent = 'Solution is saturated! No more solute can dissolve.';
+    message.style.cssText = `
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(244, 67, 54, 0.9);
+      color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    `;
+
+    this.container.appendChild(message);
+
+    setTimeout(() => message.style.opacity = '1', 100);
+    setTimeout(() => {
+      message.style.opacity = '0';
+      setTimeout(() => message.remove(), 500);
+    }, 3000);
+  }
+
+  public async play(): Promise<void> {
+    // Demonstrate dissolution process
+    for (let i = 0; i < 8; i++) {
+      await this.addSolute(5);
+      await new Promise(resolve => setTimeout(resolve, 2000));
+    }
+  }
+
+  public reset(): void {
+    // Clear all particles
+    this.dissolvedParticles.forEach(p => p.remove());
+    this.soluteParticles.forEach(p => p.remove());
+    this.dissolvedParticles = [];
+    this.soluteParticles = [];
+    this.currentAmount = 0;
+    this.updateSaturationIndicator();
+  }
+
+  protected showAtomProperties(atom: HTMLElement): void {
+    // Show properties of clicked particle
+  }
+}
+
+---- File Content End ----
+
+
+=== File: ReactionTemplate.ts ===
+Path: templates\ReactionTemplate.ts
+---- File Content Start ----
+// src/data/animations/templates/ReactionTemplate.ts
+export interface ReactionConfig {
+  reactants: Array<{
+    formula: string;
+    count: number;
+    position: { x: number; y: number };
+  }>;
+  products: Array<{
+    formula: string;
+    count: number;
+    position: { x: number; y: number };
+  }>;
+  activationEnergy?: number;
+  reactionType: 'combustion' | 'synthesis' | 'decomposition' | 'displacement';
+  effects?: Array<'flame' | 'explosion' | 'bubble' | 'spark'>;
+}
+
+export class ReactionAnimationTemplate extends ChemistryAnimationEngine {
+  private config: ReactionConfig;
+  private equationDisplay: HTMLElement;
+  private infoPanel: HTMLElement;
+
+  constructor(containerId: string, config: ReactionConfig) {
+    super(containerId);
+    this.config = config;
+    this.setupUI();
+    this.createInitialState();
+  }
+
+  private setupUI(): void {
+    // Create equation display
+    this.equationDisplay = document.createElement('div');
+    this.equationDisplay.className = 'equation-display';
+    this.equationDisplay.style.cssText = `
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.8);
+      padding: 15px 25px;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      font-family: 'Courier New', monospace;
+    `;
+
+    // Build equation string
+    const reactantStrings = this.config.reactants.map(r =>
+      r.count > 1 ? `${r.count}${r.formula}` : r.formula
+    );
+    const productStrings = this.config.products.map(p =>
+      p.count > 1 ? `${p.count}${p.formula}` : p.formula
+    );
+
+    this.equationDisplay.innerHTML = `
+      <span class="reactants">${reactantStrings.join(' + ')}</span>
+      <span class="arrow"> → </span>
+      <span class="products">${productStrings.join(' + ')}</span>
+    `;
+
+    this.container.appendChild(this.equationDisplay);
+
+    // Create info panel
+    this.infoPanel = document.createElement('div');
+    this.infoPanel.className = 'info-panel';
+    this.infoPanel.style.cssText = `
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      background: rgba(0,0,0,0.8);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      max-width: 250px;
+    `;
+    this.container.appendChild(this.infoPanel);
+  }
+
+  private createInitialState(): void {
+    // Create reactant molecules
+    this.config.reactants.forEach((reactant, index) => {
+      for (let i = 0; i < reactant.count; i++) {
+        const id = `reactant-${index}-${i}`;
+        const offsetX = i * 100;
+        const offsetY = index * 100;
+
+        this.createMolecule(
+          reactant.formula,
+          reactant.position.x + offsetX,
+          reactant.position.y + offsetY,
+          id
+        );
+      }
+    });
+  }
+
+  public async play(): Promise<void> {
+    this.animationState = 'playing';
+
+    // Show activation energy requirement
+    if (this.config.activationEnergy) {
+      await this.showActivationEnergy();
+    }
+
+    // Move reactants to center
+    await this.moveReactantsToCenter();
+
+    // Show reaction effects
+    if (this.config.effects) {
+      await this.showReactionEffects();
+    }
+
+    // Transform to products
+    await this.transformToProducts();
+
+    this.animationState = 'complete';
+  }
+
+  private async showActivationEnergy(): Promise<void> {
+    const button = document.createElement('button');
+    button.className = 'activation-button';
+    button.textContent = '🔥 Provide Activation Energy';
+    button.style.cssText = `
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+    `;
+
+    this.container.appendChild(button);
+
+    return new Promise(resolve => {
+      button.addEventListener('click', () => {
+        button.remove();
+        resolve();
+      });
+    });
+  }
+
+  private async moveReactantsToCenter(): Promise<void> {
+    const centerX = this.container.offsetWidth / 2;
+    const centerY = this.container.offsetHeight / 2;
+
+    const movePromises: Promise<void>[] = [];
+
+    this.molecules.forEach((molecule) => {
+      movePromises.push(
+        this.animateMove(molecule, centerX - 50, centerY - 50, 1500)
+      );
+    });
+
+    await Promise.all(movePromises);
+  }
+
+  private async showReactionEffects(): Promise<void> {
+    for (const effect of this.config.effects!) {
+      switch (effect) {
+        case 'explosion':
+          await this.showExplosion();
+          break;
+        case 'flame':
+          await this.showFlame();
+          break;
+        case 'spark':
+          await this.showSpark();
+          break;
+        case 'bubble':
+          await this.showBubbles();
+          break;
+      }
+    }
+  }
+
+  private async showExplosion(): Promise<void> {
+    const explosion = document.createElement('div');
+    explosion.className = 'explosion-effect';
+    explosion.style.cssText = `
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle,
+        rgba(255,255,0,0.8) 0%,
+        rgba(255,140,0,0.6) 40%,
+        transparent 70%
+      );
+      border-radius: 50%;
+      opacity: 0;
+    `;
+
+    this.container.appendChild(explosion);
+
+    // Animate explosion
+    await this.animateScale(explosion, 5, 600);
+    await this.animateFade(explosion, 0, 400);
+
+    explosion.remove();
+  }
+
+  private async transformToProducts(): Promise<void> {
+    // Fade out reactants
+    const fadePromises: Promise<void>[] = [];
+    this.molecules.forEach(molecule => {
+      fadePromises.push(this.animateFade(molecule, 0, 500));
+    });
+    await Promise.all(fadePromises);
+
+    // Remove reactant molecules
+    this.molecules.forEach(molecule => molecule.remove());
+    this.molecules.clear();
+
+    // Create product molecules
+    this.config.products.forEach((product, index) => {
+      for (let i = 0; i < product.count; i++) {
+        const id = `product-${index}-${i}`;
+        const offsetX = i * 120;
+        const offsetY = index * 100;
+
+        const molecule = this.createMolecule(
+          product.formula,
+          product.position.x + offsetX,
+          product.position.y + offsetY,
+          id
+        );
+
+        // Start invisible
+        molecule.style.opacity = '0';
+        molecule.style.transform = 'scale(0)';
+
+        // Animate in
+        setTimeout(() => {
+          this.animateScale(molecule, 1, 500);
+          this.animateFade(molecule, 1, 500);
+        }, i * 200);
+      }
+    });
+  }
+
+  public reset(): void {
+    // Clear all elements
+    this.atoms.forEach(atom => atom.remove());
+    this.bonds.forEach(bond => bond.remove());
+    this.molecules.forEach(molecule => molecule.remove());
+
+    this.atoms.clear();
+    this.bonds.clear();
+    this.molecules.clear();
+
+    // Reset state
+    this.animationState = 'idle';
+
+    // Recreate initial state
+    this.createInitialState();
+  }
+
+  protected showAtomProperties(atom: HTMLElement): void {
+    const element = atom.dataset.element!;
+    const elementData = ChemicalElement.get(element);
+
+    this.infoPanel.innerHTML = `
+      <h3>${elementData.name}</h3>
+      ${elementData.properties.map(prop => `<p>• ${prop}</p>`).join('')}
+    `;
+  }
+
+  // Additional effect methods
+  private async showFlame(): Promise<void> {
+    // Implementation for flame effect
+  }
+
+  private async showSpark(): Promise<void> {
+    // Implementation for spark effect
+  }
+
+  private async showBubbles(): Promise<void> {
+    // Implementation for bubble effect
+  }
+}
+
+---- File Content End ----
+
+
+=== File: StateChangeTemplate.ts ===
+Path: templates\StateChangeTemplate.ts
+---- File Content Start ----
+// src/data/animations/templates/StateChangeTemplate.ts
+export class StateChangeAnimationTemplate extends ChemistryAnimationEngine {
+  private particles: HTMLElement[] = [];
+  private currentState: 'solid' | 'liquid' | 'gas';
+  private substance: string;
+  private particleCount: number = 50;
+
+  constructor(
+    containerId: string,
+    substance: string,
+    initialState: 'solid' | 'liquid' | 'gas' = 'solid'
+  ) {
+    super(containerId);
+    this.substance = substance;
+    this.currentState = initialState;
+    this.createParticles();
+    this.arrangeParticles(initialState);
+  }
+
+  private createParticles(): void {
+    const element = this.substance; // Assuming single element for simplicity
+    const elementData = ChemicalElement.get(element);
+
+    for (let i = 0; i < this.particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'state-particle';
+      particle.style.cssText = `
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: radial-gradient(circle at 30% 30%,
+          ${this.lightenColor(elementData.color)},
+          ${elementData.color}
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: ${this.getTextColor(elementData.color)};
+        transition: all 0.5s ease;
+      `;
+      particle.textContent = element;
+
+      this.particles.push(particle);
+      this.container.appendChild(particle);
+    }
+  }
+
+  private arrangeParticles(state: 'solid' | 'liquid' | 'gas'): void {
+    const containerWidth = this.container.offsetWidth;
+    const containerHeight = this.container.offsetHeight;
+
+    this.particles.forEach((particle, index) => {
+      let x: number, y: number;
+
+      switch (state) {
+        case 'solid':
+          // Grid arrangement
+          const cols = Math.ceil(Math.sqrt(this.particleCount));
+          const row = Math.floor(index / cols);
+          const col = index % cols;
+          x = (containerWidth / cols) * col + 50;
+          y = (containerHeight / cols) * row + 50;
+
+          // Add small vibration
+          this.addVibration(particle, 2);
+          break;
+
+        case 'liquid':
+          // Loose arrangement with flow
+          x = Math.random() * (containerWidth - 100) + 50;
+          y = containerHeight - 100 - (Math.random() * 200);
+
+          // Add flowing motion
+          this.addFlowingMotion(particle);
+          break;
+
+        case 'gas':
+          // Random positions
+          x = Math.random() * (containerWidth - 50);
+          y = Math.random() * (containerHeight - 50);
+
+          // Add rapid random motion
+          this.addRandomMotion(particle);
+          break;
+      }
+
+      particle.style.left = `${x}px`;
+      particle.style.top = `${y}px`;
+    });
+  }
+
+  private addVibration(particle: HTMLElement, amplitude: number): void {
+    const baseX = parseFloat(particle.style.left);
+    const baseY = parseFloat(particle.style.top);
+
+    const animate = () => {
+      if (this.currentState === 'solid') {
+        const offsetX = (Math.random() - 0.5) * amplitude;
+        const offsetY = (Math.random() - 0.5) * amplitude;
+        particle.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        requestAnimationFrame(animate);
+      }
+    };
+
+    animate();
+  }
+
+  private addFlowingMotion(particle: HTMLElement): void {
+    let angle = Math.random() * Math.PI * 2;
+
+    const animate = () => {
+      if (this.currentState === 'liquid') {
+        angle += 0.02;
+        const offsetX = Math.sin(angle) * 20;
+        const offsetY = Math.cos(angle * 0.5) * 10;
+        particle.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        requestAnimationFrame(animate);
+      }
+    };
+
+    animate();
+  }
+
+  private addRandomMotion(particle: HTMLElement): void {
+    let velocityX = (Math.random() - 0.5) * 4;
+    let velocityY = (Math.random() - 0.5) * 4;
+
+    const animate = () => {
+      if (this.currentState === 'gas') {
+        let x = parseFloat(particle.style.left);
+        let y = parseFloat(particle.style.top);
+
+        x += velocityX;
+        y += velocityY;
+
+        // Bounce off walls
+        // Bounce off walls
+       if (x < 0 || x > this.container.offsetWidth - 30) {
+         velocityX *= -1;
+       }
+       if (y < 0 || y > this.container.offsetHeight - 30) {
+         velocityY *= -1;
+       }
+
+       particle.style.left = `${x}px`;
+       particle.style.top = `${y}px`;
+
+       requestAnimationFrame(animate);
+     }
+   };
+
+   animate();
+ }
+
+ public async transitionTo(newState: 'solid' | 'liquid' | 'gas'): Promise<void> {
+   this.animationState = 'playing';
+   this.currentState = newState;
+
+   // Show transition effects
+   await this.showTransitionEffect(this.currentState, newState);
+
+   // Rearrange particles
+   this.arrangeParticles(newState);
+
+   this.animationState = 'idle';
+ }
+
+ private async showTransitionEffect(
+   fromState: 'solid' | 'liquid' | 'gas',
+   toState: 'solid' | 'liquid' | 'gas'
+ ): Promise<void> {
+   const effectMap = {
+     'solid-liquid': 'melting',
+     'liquid-gas': 'boiling',
+     'gas-liquid': 'condensation',
+     'liquid-solid': 'freezing',
+     'solid-gas': 'sublimation',
+     'gas-solid': 'deposition'
+   };
+
+   const transitionKey = `${fromState}-${toState}`;
+   const effect = effectMap[transitionKey];
+
+   if (effect) {
+     await this.displayTransitionLabel(effect);
+   }
+ }
+
+ private async displayTransitionLabel(label: string): Promise<void> {
+   const labelElement = document.createElement('div');
+   labelElement.className = 'transition-label';
+   labelElement.textContent = label.charAt(0).toUpperCase() + label.slice(1);
+   labelElement.style.cssText = `
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background: rgba(0,0,0,0.8);
+     color: white;
+     padding: 20px 40px;
+     border-radius: 10px;
+     font-size: 24px;
+     font-weight: bold;
+     opacity: 0;
+     transition: opacity 0.5s ease;
+   `;
+
+   this.container.appendChild(labelElement);
+
+   // Animate in
+   setTimeout(() => labelElement.style.opacity = '1', 100);
+
+   // Hold
+   await new Promise(resolve => setTimeout(resolve, 2000));
+
+   // Animate out
+   labelElement.style.opacity = '0';
+   setTimeout(() => labelElement.remove(), 500);
+ }
+
+ public async play(): Promise<void> {
+   // Cycle through states
+   await this.transitionTo('liquid');
+   await new Promise(resolve => setTimeout(resolve, 3000));
+   await this.transitionTo('gas');
+   await new Promise(resolve => setTimeout(resolve, 3000));
+   await this.transitionTo('liquid');
+   await new Promise(resolve => setTimeout(resolve, 3000));
+   await this.transitionTo('solid');
+ }
+
+ public reset(): void {
+   this.currentState = 'solid';
+   this.arrangeParticles('solid');
+ }
+
+ protected showAtomProperties(atom: HTMLElement): void {
+   // Not implemented for state changes
+ }
+}
+
+---- File Content End ----
+

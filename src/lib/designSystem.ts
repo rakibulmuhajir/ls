@@ -32,8 +32,21 @@ export const brandColors = {
     lighter: '#f3f4f6',
     lightest: '#fafafa',
   },
+    danger: {
+    main: '#dc2626',     // Strong red for immediate attention
+    dark: '#b91c1c',     // Darker for pressed states
+    light: '#ef4444',    // Lighter for subtle indicators
+    lighter: '#fee2e2',  // Very light for backgrounds
+    lightest: '#fef2f2', // Lightest for subtle notifications
+  },
+  warning: {
+    main: '#f59e0b',     // Vibrant amber for warnings
+    dark: '#d97706',     // Darker for emphasis
+    light: '#fbbf24',    // Lighter for less critical warnings
+    lighter: '#fef3c7',  // Very light for backgrounds
+    lightest: '#fffbeb', // Lightest for subtle hints
+  },
   success: '#10b981',
-  warning: '#f59e0b',
   error: '#dc2626',
   background: '#f8fafc',
 } as const;

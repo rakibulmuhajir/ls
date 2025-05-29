@@ -1491,3 +1491,429 @@ Till it settles on the floor! 🎵</content>
                 </rank>
             </effectiveness_ranking>
         </section>
+<section type="MEMORY_TECHNIQUES" title="🧠 MEMORY TECHNIQUES">
+            <visual_mnemonics>
+                <mnemonic id="1.7.vm1">
+                    <concept>Saturated vs Unsaturated Solutions</concept>
+                    <visual_scene>🧳✈️ Picture two suitcases: Unsaturated = half-empty suitcase with room for more clothes, Saturated = completely full suitcase where zipper barely closes and nothing more fits</visual_scene>
+                    <memory_trigger>Suitcase capacity represents solvent's ability to hold solute</memory_trigger>
+                    <recall_cue>"Suitcase Full or Room for More?"</recall_cue>
+                </mnemonic>
+                <mnemonic id="1.7.vm2">
+                    <concept>Dynamic Equilibrium in Saturated Solutions</concept>
+                    <visual_scene>🚪🏃‍♂️🏃‍♀️ Visualize a revolving door at a busy building: people entering (dissolving) equals people leaving (crystallizing) - the building stays at maximum capacity</visual_scene>
+                    <memory_trigger>Revolving door represents continuous exchange at saturation</memory_trigger>
+                    <recall_cue>"Revolving Door Equilibrium"</recall_cue>
+                </mnemonic>
+                <mnemonic id="1.7.vm3">
+                    <concept>Different Solubilities</concept>
+                    <visual_scene>🏟️🎪 Stadium (water) with different capacity sections: Salt Section holds 36 people, Sugar Section holds 204 people per 100 seats</visual_scene>
+                    <memory_trigger>Stadium sections show different solute capacities</memory_trigger>
+                    <recall_cue>"Stadium Seating Capacity"</recall_cue>
+                </mnemonic>
+                <mnemonic id="1.7.vm4">
+                    <concept>Undissolved Solute in Saturated Solution</concept>
+                    <visual_scene>🎬🪑 Movie theater completely full with people waiting outside - no more seats (dissolved state) available, so they stay outside (undissolved)</visual_scene>
+                    <memory_trigger>Full theater = saturated; waiting outside = excess solute</memory_trigger>
+                    <recall_cue>"Full Theater, Line Outside"</recall_cue>
+                </mnemonic>
+            </visual_mnemonics>
+
+            <acronyms_acrostics>
+                <acronym id="1.7.aa1">
+                    <phrase>SATURATED = "Solvent Absolutely Totally Unable to Accept Any More Dissolved Stuff"</phrase>
+                    <breakdown>Each word emphasizes the complete fullness of saturated solutions</breakdown>
+                    <context_sentence>When SATURATED, the Solvent is Absolutely Totally Unable to Accept Any More Dissolved Stuff</context_sentence>
+                    <memory_tip>Long acronym emphasizes "can't take anymore"</memory_tip>
+                </acronym>
+                <acronym id="1.7.aa2">
+                    <phrase>FULL CUP</phrase>
+                    <breakdown>F - Full capacity, U - Unable to dissolve more, L - Limit reached, L - Leftover solute settles, C - Constant concentration, U - Unchanged by stirring, P - Particles in equilibrium</breakdown>
+                    <context_sentence>A saturated solution is like a FULL CUP - can't hold more</context_sentence>
+                    <memory_tip>Visual of full cup directly represents saturation</memory_tip>
+                </acronym>
+                <acronym id="1.7.aa3">
+                    <phrase>ROOM TO GROW</phrase>
+                    <breakdown>R - Ready for more, O - Open capacity, O - Ongoing dissolution, M - More can dissolve, T - Total not reached, O - Opportunities for adding, G - Gradual increase possible, R - Room remains, O - Open spaces, W - Willing to accept</breakdown>
+                    <context_sentence>Unsaturated solutions have ROOM TO GROW</context_sentence>
+                    <memory_tip>Growth metaphor for accepting more solute</memory_tip>
+                </acronym>
+            </acronyms_acrostics>
+
+            <story_method>
+                <story_title>🏨 The Solubility Hotel</story_title>
+                <narrative>Welcome to the Solubility Hotel, where Manager Maxwell runs a unique establishment with exactly 100 rooms (representing 100g of water at 20°C)!
+
+The Salt Family 🧂 arrives for their reunion. Manager Maxwell explains, "We can accommodate exactly 36 of you - that's our Salt Suite capacity!" When 36 Salt family members check in, the hotel reaches perfect capacity for their type. If more Salt relatives arrive, they must wait in the lobby (undissolved at the bottom) because all Salt rooms are occupied. Some checked-in guests occasionally check out while lobby guests check in, but the hotel always maintains exactly 36 Salt guests (dynamic equilibrium).
+
+Later, the Sugar Family 🍬 books the hotel. "Amazing!" exclaims Maxwell, "We can fit 203.9 Sugar family members!" The Sugar family members are more compact and sociable (forming more hydrogen bonds), so many more can fit comfortably. The hotel transforms to accommodate their different needs.
+
+Young Tommy Tourist asks, "Why can more Sugars stay than Salts?" Maxwell explains, "Sugar guests are like friendly dancers who link arms with many water molecules, creating more stable arrangements. Salt guests are like rigid soldiers who need more space between them."
+
+When the hotel is UNSATURATED, Maxwell puts up a "Vacancy" sign - more guests can check in. When SATURATED, the "No Vacancy" sign goes up, and new arrivals must wait in the lobby. The hotel ledger always shows: Salt capacity = 36, Sugar capacity = 203.9 at 20°C!</narrative>
+                <character_map>Manager Maxwell = solvent controller | Hotel = water solvent | Rooms = dissolution sites | Salt/Sugar families = different solutes | Lobby = container bottom | Check-in/out = dissolution/crystallization</character_map>
+                <plot_connection>Hotel capacity represents saturation limits; different guest types show varying solubilities; lobby represents undissolved excess</plot_connection>
+            </story_method>
+
+            <memory_palace>
+                <location_theme>🍳 Kitchen</location_theme>
+                <room_mapping>
+                    <location>
+                        <place>Sugar Bowl</place>
+                        <concept>Unsaturated Solution</concept>
+                        <pairing_reason>Can always add more sugar to your coffee</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Salt Shaker (Full)</place>
+                        <concept>Saturated Solution</concept>
+                        <pairing_reason>When full, no more salt fits; some spills out</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Tea Cup with Sugar at Bottom</place>
+                        <concept>Saturated with Excess</concept>
+                        <pairing_reason>Undissolved sugar crystals visible at bottom</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Measuring Cups</place>
+                        <concept>Fixed Ratios at Saturation</concept>
+                        <pairing_reason>Specific amounts create saturation (36g salt/100g water)</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Honey Jar</place>
+                        <concept>Temperature Dependence</concept>
+                        <pairing_reason>Honey crystallizes when cold, dissolves when warm</pairing_reason>
+                    </location>
+                </room_mapping>
+                <walking_route>Check sugar bowl → Fill salt shaker → Make tea → Use measuring cups → Warm honey</walking_route>
+                <sensory_details>Feel sugar granules, shake full salt shaker, see crystals in tea, measure precisely, feel honey consistency change</sensory_details>
+            </memory_palace>
+
+            <keyword_associations>
+                <association id="1.7.ka1">
+                    <scientific_term>Saturated</scientific_term>
+                    <keyword_link>Saturday Full</keyword_link>
+                    <visual_bridge>📅 Saturday mall so full no more shoppers can enter</visual_bridge>
+                    <memory_sentence>Saturated is like Saturday when stores are full</memory_sentence>
+                </association>
+                <association id="1.7.ka2">
+                    <scientific_term>Solubility</scientific_term>
+                    <keyword_link>Social Ability</keyword_link>
+                    <visual_bridge>🤝 How many friends (solute) can one person (solvent) handle?</visual_bridge>
+                    <memory_sentence>Solubility is like social ability - how many connections you can maintain</memory_sentence>
+                </association>
+                <association id="1.7.ka3">
+                    <scientific_term>Dynamic Equilibrium</scientific_term>
+                    <keyword_link>Dance Floor Balance</keyword_link>
+                    <visual_bridge>💃🕺 People joining and leaving dance floor at same rate</visual_bridge>
+                    <memory_sentence>Dynamic equilibrium is like a dance floor staying equally crowded</memory_sentence>
+                </association>
+            </keyword_associations>
+
+            <rhymes_rhythms>
+                <rhyme id="1.7.rr1">
+                    <content>🎵 Unsaturated means there's room,
+Add more solute, watch it zoom!
+Into solution, disappear,
+More can dissolve, crystal clear!
+
+Saturated? Can't take more!
+Extra solute hits the floor!
+36 grams of salt will do,
+In 100 grams of H₂O!
+
+Sugar's special, it can take
+203.9 - no mistake!
+Same amount of water holds
+Much more sugar, truth be told! 🎵</content>
+                    <concept_coverage>Saturation states and specific solubilities</concept_coverage>
+                    <rhythm_pattern>Bouncy rhythm like "Hickory Dickory Dock"</rhythm_pattern>
+                    <performance_tip>Hold up fingers for numbers, mime pouring</performance_tip>
+                </rhyme>
+                <rhyme id="1.7.rr2">
+                    <content>🎵 Stir, stir, stir the pot,
+Does it dissolve or not?
+If it does, add some more,
+Till it settles on the floor! 🎵</content>
+                    <concept_coverage>Testing for saturation</concept_coverage>
+                    <rhythm_pattern>To the tune of "Row, Row, Row Your Boat"</rhythm_pattern>
+                    <performance_tip>Stirring motion while singing</performance_tip>
+                </rhyme>
+            </rhymes_rhythms>
+
+            <number_shape_associations>
+                <association id="1.7.nsa1">
+                    <number_formula>36g NaCl per 100g H₂O</number_formula>
+                    <shape_visualization>🧂 Three rows of 12 salt shakers = 36 total</shape_visualization>
+                    <story_integration>Salt shaker army formation shows maximum salt capacity</story_integration>
+                    <recall_method>3 dozen salt shakers = 36g saturation point</recall_method>
+                </association>
+                <association id="1.7.nsa2">
+                    <number_formula>203.9g sugar per 100g H₂O</number_formula>
+                    <shape_visualization>🍬 2 century marks + 4 = 204 (approximately)</shape_visualization>
+                    <story_integration>Sugar is "twice a century" more soluble than salt</story_integration>
+                    <recall_method>2 centuries of sugar = massive solubility</recall_method>
+                </association>
+                <association id="1.7.nsa3">
+                    <number_formula>Ratio comparison: 204:36 ≈ 6:1</number_formula>
+                    <shape_visualization>🎲 Six sugar dice to one salt die</shape_visualization>
+                    <story_integration>Roll six times more sugar than salt into solution</story_integration>
+                    <recall_method>6-sided sugar advantage over salt</recall_method>
+                </association>
+            </number_shape_associations>
+
+            <practice_instructions>
+                <initial_practice>
+                    <step>1. 🥤 Make sugar water, adding sugar until no more dissolves</step>
+                    <step>2. 🧂 Repeat with salt water, compare amounts needed</step>
+                    <step>3. 🏨 Draw or act out the Solubility Hotel story</step>
+                    <step>4. 🎵 Sing the saturation song while cooking</step>
+                </initial_practice>
+                <spaced_repetition>
+                    <schedule>Hour 1: Understand concepts | Day 1: Test with different solutes | Day 3: Explain to someone | Week 1: Predict saturation points | Month 1: Apply to new substances</schedule>
+                </spaced_repetition>
+                <self_testing>
+                    <method>Kitchen chemistry: Predict how much solute will saturate a glass of water → Test it → Compare with known values → Explain differences</method>
+                </self_testing>
+                <troubleshooting>
+                    <issue>Forgetting which dissolves more? → Remember: Sugar is Sweet and Social (more bonds, more solubility)</issue>
+                    <issue>Confusing saturated/unsaturated? → Saturated = Saturday mall (full), Unsaturated = Under capacity</issue>
+                    <issue>Dynamic equilibrium confusion? → Think revolving door - constant exchange, same occupancy</issue>
+                </troubleshooting>
+            </practice_instructions>
+
+            <digital_integration>
+                <interactive_element>🎮 Virtual dissolving simulator with saturation indicator</interactive_element>
+                <gamification>🏆 "Saturation Master" levels for predicting exact saturation points</gamification>
+                <social_sharing>📸 Time-lapse videos of crystallization from saturated solutions</social_sharing>
+                <progress_tracking>📊 Graph personal experiments vs. standard solubility values</progress_tracking>
+            </digital_integration>
+
+            <effectiveness_ranking>
+                <rank order="1">
+                    <technique>Story Method (Solubility Hotel)</technique>
+                    <retention_rate>93%</retention_rate>
+                    <reason>Complete narrative with numbers integrated into plot</reason>
+                </rank>
+                <rank order="2">
+                    <technique>Visual Mnemonics (Suitcase/Theater)</technique>
+                    <retention_rate>88%</retention_rate>
+                    <reason>Familiar capacity concepts directly map to saturation</reason>
+                </rank>
+                <rank order="3">
+                    <technique>Number-Shape Associations</technique>
+                    <retention_rate>85%</retention_rate>
+                    <reason>Specific values linked to memorable visuals</reason>
+                </rank>
+                <rank order="4">
+                    <technique>Memory Palace (Kitchen)</technique>
+                    <retention_rate>81%</retention_rate>
+                    <reason>Practical location with daily reminders</reason>
+                </rank>
+                <rank order="5">
+                    <technique>Rhymes and Rhythms</technique>
+                    <retention_rate>77%</retention_rate>
+                    <reason>Includes specific numbers in musical format</reason>
+                </rank>
+            </effectiveness_ranking>
+        </section>
+        <section type="MEMORY_TECHNIQUES" title="🧠 MEMORY TECHNIQUES">
+            <visual_mnemonics>
+                <mnemonic id="1.8.vm1">
+                    <concept>Temperature Effects on Solid Solubility</concept>
+                    <visual_scene>🔥📈 Picture a thermometer next to an elevator: As temperature rises (thermometer up), the elevator carrying solid particles also goes up (more dissolve). Some rebellious solids like calcium hydroxide take the down elevator instead!</visual_scene>
+                    <memory_trigger>Elevator direction shows solubility change with temperature</memory_trigger>
+                    <recall_cue>"Temperature Elevator: Most Solids Go Up"</recall_cue>
+                </mnemonic>
+                <mnemonic id="1.8.vm2">
+                    <concept>Gas Solubility vs Temperature</concept>
+                    <visual_scene>🎈💨 Imagine heating a balloon filled with soda bubbles - as it gets warmer, bubbles escape faster and fly away. Cold balloon keeps bubbles trapped inside.</visual_scene>
+                    <memory_trigger>Escaping bubbles show gases leaving warm liquids</memory_trigger>
+                    <recall_cue>"Hot Balloon Loses Gas Bubbles"</recall_cue>
+                </mnemonic>
+                <mnemonic id="1.8.vm3">
+                    <concept>Endothermic vs Exothermic Dissolution</concept>
+                    <visual_scene>🧊🔥 Two characters: Endo Eddie (shivering, needs heat jacket to dissolve) loves warmth and dissolves more when hot. Exo Ellie (sweating, gives off heat) hates heat and dissolves less when hot.</visual_scene>
+                    <memory_trigger>Character's temperature preference shows dissolution behavior</memory_trigger>
+                    <recall_cue>"Cold Eddie vs Hot Ellie"</recall_cue>
+                </mnemonic>
+                <mnemonic id="1.8.vm4">
+                    <concept>Exceptional Compounds</concept>
+                    <visual_scene>🦄 Picture rare unicorns: Lithium Carbonate, Calcium Chromate, and Calcium Hydroxide are the "unicorn compounds" that behave opposite to normal - they become LESS soluble when heated!</visual_scene>
+                    <memory_trigger>Unicorns are exceptional like these compounds</memory_trigger>
+                    <recall_cue>"Unicorn Compounds Go Backwards"</recall_cue>
+                </mnemonic>
+            </visual_mnemonics>
+
+            <acronyms_acrostics>
+                <acronym id="1.8.aa1">
+                    <phrase>HEAT HELPS SOLIDS</phrase>
+                    <breakdown>H - Higher temp, E - Enhances, A - Absorption, T - Thus, H - Helping, E - Endothermic, L - Lattices, P - Part ways, S - Solubility, O - Optimizes, L - Liquefying, I - Increases, D - Dissolution, S - Significantly</breakdown>
+                    <context_sentence>For most solids, HEAT HELPS SOLIDS dissolve better</context_sentence>
+                    <memory_tip>Remember the general rule first</memory_tip>
+                </acronym>
+                <acronym id="1.8.aa2">
+                    <phrase>COOL KEEPS GASES</phrase>
+                    <breakdown>C - Cold, O - Optimizes, O - Oxygen and, L - Liquid bonding, K - Keeps, E - Everything, E - Enclosed, P - Preventing, S - Separation, G - Gas, A - Atoms, S - Stay, E - Engaged, S - Suspended</breakdown>
+                    <context_sentence>COOL KEEPS GASES dissolved in liquids</context_sentence>
+                    <memory_tip>Cold soda keeps its fizz</memory_tip>
+                </acronym>
+                <acronym id="1.8.aa3">
+                    <phrase>LiCC = "Lithium, Calcium Chromate, Calcium hydroxide"</phrase>
+                    <breakdown>The three exceptional compounds that decrease solubility with temperature</breakdown>
+                    <context_sentence>LiCC are the exceptions - they hate heat!</context_sentence>
+                    <memory_tip>Lick (LiCC) ice cream - these compounds prefer cold</memory_tip>
+                </acronym>
+            </acronyms_acrostics>
+
+            <story_method>
+                <story_title>🌡️ The Temperature Town Race</story_title>
+                <narrative>In Temperature Town, Mayor Thermometer announced the annual "Solubility Race" where substances compete to see who dissolves fastest at different temperatures!
+
+The SOLID ATHLETES lined up: Potassium Nitrate flexed his muscles, Silver Nitrate polished her medals, and Potassium Chloride stretched. "The hotter it gets, the faster we run!" they cheered. As Mayor Thermometer turned up the heat, these athletes sprinted into the solvent pool, dissolving more and more. They were endothermic athletes - they absorbed the heat energy to break free from their crystal formations.
+
+But wait! Three unusual competitors appeared: Lithium Carbonate, Calcium Chromate, and Calcium Hydroxide - the "Backwards Brigade!" 🦄 "We're different!" they announced. "Heat makes us tired!" As the temperature rose, they actually slowed down and fewer of them entered the pool. They were exothermic - giving off heat when dissolving, so extra heat made them uncomfortable.
+
+Sodium Chloride, the steady veteran, just shrugged. "Temperature doesn't affect me much. I'll dissolve the same whether it's hot or cold - about 36 grams per 100g water."
+
+Meanwhile, at the GAS GAMES, Carbon Dioxide and his fizzy friends were playing escape artist. "Watch this!" CO₂ bubbled. In the cold pool, they stayed dissolved, playing happily. But when Mayor Thermometer heated their pool, they couldn't wait to escape! "Too hot! We're outta here!" they shouted, fizzing away into the air.
+
+The Town Scientist explained: "Most solids have endothermic dissolution - they need heat to break apart, so they love warm water. Gases are different - they form exothermic bonds with water, so heat breaks those bonds and they escape!"
+
+The race ended with a lesson: Temperature is like a DJ at a party - most solid particles dance more when it's hot, but gas particles leave the dance floor when things heat up!</narrative>
+                <character_map>Mayor Thermometer = temperature controller | Solid Athletes = normal solids | Backwards Brigade = exceptional compounds | Gas competitors = dissolved gases | Town Scientist = explaining principles</character_map>
+                <plot_connection>Race performance represents solubility changes; athlete preferences show endo/exothermic nature; different events show solid vs gas behavior</plot_connection>
+            </story_method>
+
+            <memory_palace>
+                <location_theme>🏠 House with Temperature Zones</location_theme>
+                <room_mapping>
+                    <location>
+                        <place>Hot Attic Storage</place>
+                        <concept>Increased Solid Solubility</concept>
+                        <pairing_reason>Hot attic dissolves more sugar in grandma's tea</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Cold Basement</place>
+                        <concept>Gas Solubility</concept>
+                        <pairing_reason>Cold basement keeps soda fizzy</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Backwards Closet</place>
+                        <concept>Exceptional Compounds</concept>
+                        <pairing_reason>Everything backwards - Li₂CO₃, CaCrO₄, Ca(OH)₂</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Kitchen Stove</place>
+                        <concept>Crystallization by Cooling</concept>
+                        <pairing_reason>Hot sugar water crystallizes when cooled</pairing_reason>
+                    </location>
+                    <location>
+                        <place>Refrigerator</place>
+                        <concept>Keeping Gases Dissolved</concept>
+                        <pairing_reason>Cold keeps carbonation in drinks</pairing_reason>
+                    </location>
+                </room_mapping>
+                <walking_route>Start in hot attic → Down to kitchen → Check fridge → Visit backwards closet → End in cold basement</walking_route>
+                <sensory_details>Feel attic heat, see sugar dissolving, hear soda fizz, notice backwards items, feel basement cold</sensory_details>
+            </memory_palace>
+
+            <keyword_associations>
+                <association id="1.8.ka1">
+                    <scientific_term>Endothermic Dissolution</scientific_term>
+                    <keyword_link>End of Cold (needs heat)</keyword_link>
+                    <visual_bridge>🥶➡️🔥 Cold person needs heat to move (dissolve)</visual_bridge>
+                    <memory_sentence>Endothermic ends the cold by absorbing heat to dissolve</memory_sentence>
+                </association>
+                <association id="1.8.ka2">
+                    <scientific_term>Exothermic Dissolution</scientific_term>
+                    <keyword_link>Exit the Heat (releases heat)</keyword_link>
+                    <visual_bridge>🔥➡️❄️ Hot person exits heat by releasing it when dissolving</visual_bridge>
+                    <memory_sentence>Exothermic means exit the heat - gives off warmth when dissolving</memory_sentence>
+                </association>
+                <association id="1.8.ka3">
+                    <scientific_term>Thermal Pollution</scientific_term>
+                    <keyword_link>Fish Thermal Shock</keyword_link>
+                    <visual_bridge>🐠🌡️ Fish gasping because warm water holds less oxygen</visual_bridge>
+                    <memory_sentence>Thermal pollution shocks fish by reducing dissolved oxygen</memory_sentence>
+                </association>
+            </keyword_associations>
+
+            <rhymes_rhythms>
+                <rhyme id="1.8.rr1">
+                    <content>🎵 When you heat the water up,
+Most solids fill the cup!
+Sugar, salt nitrate, and more,
+Dissolve much better than before!
+
+But gases hate the heat, you see,
+They bubble up and want to flee!
+Keep your soda nice and cold,
+Or watch the bubbles lose their hold!
+
+Three weird ones go the other way,
+Lithium carbonate leads the way,
+With calcium chromate and hydroxide too,
+They dissolve LESS when heat comes through! 🎵</content>
+                    <concept_coverage>General rules and exceptions for temperature effects</concept_coverage>
+                    <rhythm_pattern>Upbeat marching rhythm</rhythm_pattern>
+                    <performance_tip>March in place, point up for solids, down for gases</performance_tip>
+                </rhyme>
+                <rhyme id="1.8.rr2">
+                    <content>🎵 Hot sugar water, cool it down,
+Watch the crystals form around!
+Potassium nitrate loves the heat,
+Less dissolves when it's not so sweet! 🎵</content>
+                    <concept_coverage>Crystallization by cooling</concept_coverage>
+                    <rhythm_pattern>Gentle lullaby rhythm</rhythm_pattern>
+                    <performance_tip>Slowly lower hands while singing</performance_tip>
+                </rhyme>
+            </rhymes_rhythms>
+
+            <number_shape_associations>
+                <association id="1.8.nsa1">
+                    <number_formula>3 exceptional compounds</number_formula>
+                    <shape_visualization>🔺 Upside-down triangle pointing down (opposite behavior)</shape_visualization>
+                    <story_integration>Three points of backwards triangle = three exceptional compounds</story_integration>
+                    <recall_method>Flip triangle = flipped behavior</recall_method>
+                </association>
+                <association id="1.8.nsa2">
+                    <number_formula>Most solids ↑ with heat, Gases ↓ with heat</number_formula>
+                    <shape_visualization>⬆️⬇️ Opposite arrows showing opposite behaviors</shape_visualization>
+                    <story_integration>Solids climb up, gases dive down with temperature</story_integration>
+                    <recall_method>Draw opposing arrows = opposing behaviors</recall_method>
+                </association>
+                <association id="1.8.nsa3">
+                    <number_formula>Room temp vs boiling (20°C vs 100°C)</number_formula>
+                    <shape_visualization>🌡️ Thermometer with two marks showing huge difference in solubility</shape_visualization>
+                    <story_integration>80-degree difference can double or triple solid solubility</story_integration>
+                    <recall_method>Big temperature jump = big solubility change</recall_method>
+                </association>
+            </number_shape_associations>
+
+            <practice_instructions>
+                <initial_practice>
+                    <step>1. 🧪 Dissolve sugar in cold vs hot water - time the difference</step>
+                    <step>2. 🥤 Compare fizz in cold vs warm soda</step>
+                    <step>3. 🎭 Act out Temperature Town Race with friends</step>
+                    <step>4. 🏠 Tour your house finding hot/cold dissolution examples</step>
+                </initial_practice>
+                <spaced_repetition>
+                    <schedule>Hour 1: Learn rules and exceptions | Day 1: Test with kitchen examples | Day 3: Draw temperature-solubility graphs | Week 1: Predict crystallization | Week 2: Explain to others</schedule>
+                </spaced_repetition>
+                <self_testing>
+                    <method>Temperature prediction game: Substance + temperature change = predict solubility change → Test if possible → Explain using endo/exothermic reasoning</method>
+                </self_testing>
+                <troubleshooting>
+                    <issue>Forgetting which direction? → Solids need heat to break apart (up), gases escape heat (down)</issue>
+                    <issue>Exceptional compounds? → LiCC lick ice cream (prefer cold)</issue>
+                    <issue>Endo vs exo confusion? → Endo needs heat (cold person), Exo releases heat (hot person)</issue>
+                </troubleshooting>
+            </practice_instructions>
+
+            <digital_integration>
+                <interactive_element>🎮 Temperature slider showing real-time solubility changes</interactive_element>
+                <gamification>🏆 "Temperature Master" - predict solubility at different temperatures</gamification>
+                <social_sharing>🌡️ Share experiments showing temperature effects on common substances</social_sharing>
+                <progress_tracking>📊 Plot personal solubility curves vs standard data</progress_tracking>
+            </digital_integration>
+        </section>

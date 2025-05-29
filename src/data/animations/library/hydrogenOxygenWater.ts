@@ -1,11 +1,26 @@
 // src/data/animations/library/hydrogenOxygenWater.ts
 import { AnimationConfig } from '../types';
+import { baseAnimationTemplate } from './baseAnimationTemplate';
 
 export const hydrogenOxygenWater: AnimationConfig = {
-  height: 300,
+  height: 500,
   autoPlay: true,
   loop: false,
-  html: `
+  features: {
+    speed: true,
+    beforeAfter: true,
+    rotation3D: true,
+    temperature: true,
+  },
+    safety: {
+        maxTemperature: 100,
+        maxPressure: 2,
+        maxConcentration: 1.0,
+        minDistance: 0.5,
+        requiredEquipment: ['Safety Goggles', 'Gloves'],
+        hazardousReactions: ['explosive', 'toxic']
+    },
+  html: baseAnimationTemplate + `
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,29 +56,6 @@ export const hydrogenOxygenWater: AnimationConfig = {
             }
         });
     </script>
-</body>
-</html>
-`
-};
-
-// src/data/animations/library/statesOfMatter.ts
-import { AnimationConfig } from '../types';
-
-export const statesOfMatter: AnimationConfig = {
-  height: 250,
-  autoPlay: true,
-  loop: true,
-  html: `
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* States of matter animation styles */
-    </style>
-</head>
-<body>
-    <!-- States of matter animation HTML -->
 </body>
 </html>
 `

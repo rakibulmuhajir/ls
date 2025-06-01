@@ -1,4 +1,4 @@
-// src/data/animations/types.ts
+// src/data/animations/types.ts - Updated
 export type AnimationTemplateType = 'reaction' | 'state-change' | 'dissolution' | 'bonding' | 'equilibrium' | 'definition';
 
 export type AnimationType =
@@ -8,7 +8,9 @@ export type AnimationType =
   | 'carbon-allotropes'
   | 'solutions-colloids'
   | 'temperature-solubility'
-  | 'chemistry-definition';
+  | 'chemistry-definition'
+  | 'chemistry-definition-interactive'; // NEW
+
 export interface AnimationConfig {
   html: string;
   height: number;
@@ -17,7 +19,7 @@ export interface AnimationConfig {
   backgroundColor?: string;
   features?: AnimationFeatures;
   safety?: SafetyConstraints;
-   template?: {
+  template?: {
     type: AnimationTemplateType;
     config: any;
   };
@@ -34,7 +36,6 @@ export interface AnimationFeatures {
   concentration?: boolean;    // Enable concentration slider
 }
 
-// src/data/animations/types.ts - ADD these new types
 export interface AnimationEngine {
   play(): Promise<void>;
   pause(): void;
@@ -59,7 +60,6 @@ export interface ReactionConfig {
   };
 }
 
-// Add to existing types
 export interface SafetyConstraints {
   maxTemperature?: number;
   maxPressure?: number;
@@ -74,4 +74,3 @@ export interface SafetyStatus {
   warnings: string[];
   requiredEquipment: string[];
 }
-

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-XML Educational Content Word Extractor
-Extracts words from XML topics and generates meanings using local Ollama models
-Creates CSV output with words, meanings, and source topics
+XML Educational Content Word Extractor with Urdu Support
+Extracts words from XML topics and generates bilingual meanings using local Ollama models
+Creates CSV output with words, meanings in English and Urdu, and source topics
 """
 
 import xml.etree.ElementTree as ET
@@ -19,14 +19,12 @@ from nltk.corpus import stopwords, wordnet
 from nltk.tag import pos_tag
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-from nltk.collocations import BigramCollocationFinder, BigramAssocMeasures, TrigramCollocationFinder, TrigramAssocMeasures
 import argparse
 import logging
 from pathlib import Path
 import time
 from tqdm import tqdm
 import os
-import concurrent.futures
 import sys
 
 # Download required NLTK data
@@ -178,7 +176,7 @@ class XMLWordExtractor:
 
                 # Build hierarchical path
                 element_id = element.get('id', element.get('name', f"topic_{topic_counter}"))
-                element_title = element.get('type', element.get('name', element_id))
+                element_title = element.get('title', element.get('name', element_id))
                 full_path = f"{current_path}/{element_id}" if current_path else element_id
                 hierarchical_title = f"{current_path}/{element_title}" if current_path else element_title
 
@@ -245,34 +243,6 @@ class XMLWordExtractor:
             self.logger.error(f"Error parsing XML file {xml_file}: {e}")
             return {}
 
-    def extract_phrases(self, text: str, min_freq: int = 2) -> List[str]:
-        """Extract meaningful phrases (bigrams and trigrams) from text"""
-        tokens = word_tokenize(text)
-
-        # Find significant bigrams
-        bigram_measures = BigramAssocMeasures()
-        bigram_finder = BigramCollocationFinder.from_words(tokens)
-        bigram_finder.apply_freq_filter(min_freq)
-        bigrams = bigram_finder.nbest(bigram_measures.pmi, 10)
-
-        # Find significant trigrams
-        trigram_measures = TrigramAssocMeasures()
-        trigram_finder = TrigramCollocationFinder.from_words(tokens)
-        trigram_finder.apply_freq_filter(min_freq)
-        trigrams = trigram_finder.nbest(trigram_measures.pmi, 5)
-
-        # Convert to phrase strings
-        phrases = set()
-        for bigram in bigrams:
-            phrase = "_".join(bigram)
-            phrases.add(phrase)
-
-        for trigram in trigrams:
-            phrase = "_".join(trigram)
-            phrases.add(phrase)
-
-        return list(phrases)
-
     def extract_meaningful_words(self, text: str) -> List[str]:
         """Extract meaningful words from text content"""
         # Clean text
@@ -280,17 +250,12 @@ class XMLWordExtractor:
         text = re.sub(r'[^\w\s-]', ' ', text)  # Keep only words, spaces, hyphens
         text = re.sub(r'\s+', ' ', text).strip().lower()
 
-        # Extract phrases if enabled
-        phrases = []
-        if self.use_phrases:
-            phrases = self.extract_phrases(text)
-
         # Tokenize
         tokens = word_tokenize(text)
 
         # If spaCy is available, use it for more accurate processing
         if self.nlp:
-            return self._extract_with_spacy(text, phrases)
+            return self._extract_with_spacy(text)
 
         # Fallback to NLTK processing
         meaningful_words = []
@@ -315,12 +280,9 @@ class XMLWordExtractor:
             if self._is_educational_word(token):
                 meaningful_words.append(token)
 
-        # Add phrases
-        meaningful_words.extend(phrases)
-
         return list(set(meaningful_words))  # Remove duplicates
 
-    def _extract_with_spacy(self, text: str, phrases: List[str]) -> List[str]:
+    def _extract_with_spacy(self, text: str) -> List[str]:
         """Extract meaningful words using spaCy for more accurate processing"""
         try:
             doc = self.nlp(text)
@@ -347,9 +309,6 @@ class XMLWordExtractor:
                 # Check if it's educationally relevant
                 if self._is_educational_word(token.text):
                     meaningful_words.append(token.lemma_.lower())
-
-            # Add phrases
-            meaningful_words.extend(phrases)
 
             return list(set(meaningful_words))
         except Exception as e:
@@ -384,16 +343,11 @@ class XMLWordExtractor:
         return len(word) >= 4  # Basic length filter
 
     async def get_word_meaning(self, word: str, context: str = "") -> Optional[Dict[str, str]]:
-        """Get word meaning from Ollama model with retry logic"""
+        """Get word meaning from Ollama model with retry logic and Urdu support"""
         # Check cache first
         if word in self.cache:
             if self.verbose:
-                print(f"\n🔍 [CACHED] Word: {word}")
-                meaning = self.cache[word]
-                print(f"   Type: {meaning.get('type', 'unknown')}")
-                print(f"   Definition: {meaning.get('definition', '')}")
-                print(f"   Example: {meaning.get('example', '')}")
-                print(f"   Difficulty: {meaning.get('difficulty', 2)}")
+                self._display_word_details(self.cache[word], cached=True)
             return self.cache[word]
 
         if self.verbose:
@@ -415,12 +369,13 @@ class XMLWordExtractor:
 
         prompt = f"""
 Define the word "{word}" ({readable_pos}) in simple, clear language suitable for students.
-
-Provide ONLY a JSON response with these fields:
+Provide the following in a JSON response:
 - "word": the word being defined
 - "type": part of speech (noun, verb, adjective, adverb, etc.)
-- "definition": clear, simple definition (under 50 words)
-- "example": one sentence showing the word in use
+- "definition": clear, simple definition in English
+- "urdu_meaning": meaning in Urdu (اردو میں معنی)
+- "example": one sentence showing the word in use in English
+- "urdu_example": example sentence in Urdu (اردو میں مثال)
 - "difficulty": number from 1-5 (1=basic, 5=advanced)
 
 Context: This word appears in educational content about: {context}
@@ -430,7 +385,9 @@ Example response:
     "word": "hypothesis",
     "type": "noun",
     "definition": "An educated guess or prediction that can be tested through experiments",
+    "urdu_meaning": "ایک تعلیم یافتہ اندازہ یا پیشین گوئی جسے تجربات کے ذریعے جانچا جا سکتا ہے۔",
     "example": "The scientist formed a hypothesis about why plants grow faster in sunlight.",
+    "urdu_example": "سائنسدان نے ایک مفروضہ بنایا کہ پودے سورج کی روشنی میں کیوں تیزی سے بڑھتے ہیں۔",
     "difficulty": 3
 }}
 
@@ -450,10 +407,10 @@ Respond ONLY with valid JSON:"""
                             "options": {
                                 "temperature": 0.2,
                                 "top_p": 0.8,
-                                "num_predict": 150
+                                "num_predict": 250  # Increase for Urdu content
                             }
                         },
-                        timeout=aiohttp.ClientTimeout(total=30)
+                        timeout=aiohttp.ClientTimeout(total=60)
                     ) as response:
                         if response.status == 200:
                             result = await response.json()
@@ -466,17 +423,14 @@ Respond ONLY with valid JSON:"""
                                 if json_match:
                                     json_data = json.loads(json_match.group())
                                     # Validate required fields
-                                    required_fields = ['word', 'type', 'definition', 'example', 'difficulty']
+                                    required_fields = ['word', 'type', 'definition', 'urdu_meaning',
+                                                      'example', 'urdu_example', 'difficulty']
                                     if all(field in json_data for field in required_fields):
                                         # Cache and return
                                         self.cache[word] = json_data
 
                                         if self.verbose:
-                                            print(f"✅ Processed: {word}")
-                                            print(f"   Type: {json_data.get('type', 'unknown')}")
-                                            print(f"   Definition: {json_data.get('definition', '')}")
-                                            print(f"   Example: {json_data.get('example', '')}")
-                                            print(f"   Difficulty: {json_data.get('difficulty', 2)}")
+                                            self._display_word_details(json_data)
 
                                         return json_data
                             except json.JSONDecodeError:
@@ -487,14 +441,16 @@ Respond ONLY with valid JSON:"""
                                 "word": word,
                                 "type": readable_pos,
                                 "definition": f"Educational term related to {word}",
+                                "urdu_meaning": f"{word} سے متعلق تعلیمی اصطلاح",
                                 "example": f"The concept of {word} is important in this subject.",
+                                "urdu_example": f"{word} کا تصور اس مضمون میں اہم ہے۔",
                                 "difficulty": 2
                             }
                             self.cache[word] = fallback
 
                             if self.verbose:
                                 print(f"⚠️  Fallback definition for: {word}")
-                                print(f"   Definition: {fallback['definition']}")
+                                self._display_word_details(fallback)
 
                             return fallback
             except (aiohttp.ClientError, asyncio.TimeoutError) as e:
@@ -514,6 +470,19 @@ Respond ONLY with valid JSON:"""
             print(f"❌ Failed to process '{word}' after {max_retries} attempts")
         return None
 
+    def _display_word_details(self, meaning_data: dict, cached: bool = False):
+        """Display word details in a structured format"""
+        prefix = "🔍 [CACHED] " if cached else "✅ "
+        print(f"\n{prefix}Word: {meaning_data['word']}")
+        print(f"   Type: {meaning_data.get('type', 'unknown')}")
+        print(f"   Difficulty: {meaning_data.get('difficulty', 2)}")
+        print(f"   Definition: {meaning_data.get('definition', '')}")
+        print(f"   Urdu Meaning: {meaning_data.get('urdu_meaning', '')}")
+        print(f"   Example: {meaning_data.get('example', '')}")
+        print(f"   Urdu Example: {meaning_data.get('urdu_example', '')}")
+        if cached:
+            print("   Source: Cache")
+
     async def process_topics(self, topics_content: Dict[str, Dict], batch_size: int = 5) -> List[Dict]:
         """Process all topics and extract word meanings with progress tracking"""
         all_word_data = []
@@ -523,7 +492,7 @@ Respond ONLY with valid JSON:"""
         self.logger.info("Extracting words from topics...")
         topics = list(topics_content.items())
 
-        # Process topics sequentially to avoid multiprocessing issues
+        # Process topics sequentially
         for topic_id, topic_info in tqdm(topics, desc="Processing Topics"):
             try:
                 words = self.extract_meaningful_words(topic_info['content'])
@@ -575,7 +544,9 @@ Respond ONLY with valid JSON:"""
                         'topic_title': t_title,
                         'type': meaning_data.get('type', 'unknown'),
                         'definition': meaning_data.get('definition', ''),
+                        'urdu_meaning': meaning_data.get('urdu_meaning', ''),
                         'example': meaning_data.get('example', ''),
+                        'urdu_example': meaning_data.get('urdu_example', ''),
                         'difficulty': meaning_data.get('difficulty', 2)
                     }
                     all_word_data.append(word_entry)
@@ -583,17 +554,18 @@ Respond ONLY with valid JSON:"""
                     pbar.update(1)
 
                 # Small delay to prevent overwhelming Ollama
-                await asyncio.sleep(0.2)
+                await asyncio.sleep(0.5)
 
             # Longer delay between batches
-            await asyncio.sleep(1)
+            await asyncio.sleep(2)
 
         pbar.close()
         return all_word_data
 
     def create_csv_output(self, word_data: List[Dict], output_file: str):
-        """Create CSV file with word meanings"""
-        fieldnames = ['word', 'topic_id', 'topic_title', 'type', 'definition', 'example', 'difficulty']
+        """Create CSV file with word meanings including Urdu"""
+        fieldnames = ['word', 'topic_id', 'topic_title', 'type', 'definition',
+                      'urdu_meaning', 'example', 'urdu_example', 'difficulty']
         output_path = Path(output_file).absolute()
 
         with open(output_path, 'w', newline='', encoding='utf-8') as csvfile:
@@ -608,20 +580,21 @@ Respond ONLY with valid JSON:"""
         if self.verbose:
             print(f"\n💾 CSV output saved to {output_path}")
             print("Sample output:")
-            for i, row in enumerate(sorted_data[:5], 1):
-                print(f"  {i}. {row['word']} ({row['type']}): {row['definition'][:60]}...")
+            for i, row in enumerate(sorted_data[:3], 1):
+                print(f"  {i}. {row['word']} ({row['type']})")
+                print(f"     Definition: {row['definition'][:80]}...")
+                print(f"     Urdu: {row['urdu_meaning'][:80]}...")
+                print(f"     Example: {row['example'][:80]}...")
+                print(f"     Urdu Example: {row['urdu_example'][:80]}...")
 
 async def main():
-    parser = argparse.ArgumentParser(description='Extract words and meanings from educational XML content')
+    parser = argparse.ArgumentParser(description='Extract words and meanings from educational XML content with Urdu support')
     parser.add_argument('xml_file', help='Path to XML file')
     parser.add_argument('--output', '-o', default='word_meanings.csv', help='Output CSV file')
     parser.add_argument('--skip', nargs='*', default=[], help='Section IDs or titles to skip')
-    parser.add_argument('--batch-size', '-b', type=int, default=5, help='Batch size for processing')
+    parser.add_argument('--batch-size', '-b', type=int, default=3, help='Batch size for processing (smaller for Urdu)')
     parser.add_argument('--ollama-host', default='http://localhost:11434', help='Ollama host URL')
-    parser.add_argument('--model', '-m', default='llama3.2:latest', help='Ollama model name')
-    parser.add_argument('--summary', '-s', help='Generate summary report file')
-    parser.add_argument('--phrases', action='store_true', help='Enable phrase detection (bigrams/trigrams)')
-    parser.add_argument('--spacy-model', help='spaCy model for enhanced NLP processing')
+    parser.add_argument('--model', '-m', default='deepseek-r1:14b', help='Ollama model name')
     parser.add_argument('--verbose', '-v', action='store_true', help='Enable verbose output with word-by-word details')
 
     args = parser.parse_args()
@@ -636,8 +609,6 @@ async def main():
     extractor = XMLWordExtractor(
         ollama_host=args.ollama_host,
         model_name=args.model,
-        use_phrases=args.phrases,
-        spacy_model=args.spacy_model,
         verbose=args.verbose
     )
 
@@ -645,10 +616,6 @@ async def main():
     print(f"📋 Skip sections: {args.skip if args.skip else 'None'}")
     print(f"🤖 Using model: {args.model}")
     print(f"📝 Output file: {args.output}")
-    if args.phrases:
-        print("🔤 Phrase detection: Enabled")
-    if args.spacy_model:
-        print(f"🧠 Using spaCy model: {args.spacy_model}")
     if args.verbose:
         print("🔊 Verbose mode: Enabled")
         print(f"💾 Cache location: {extractor.cache_path}")
@@ -686,15 +653,9 @@ async def main():
         # Save cache at end of processing
         extractor.save_cache()
 
-        # Create summary report if requested
-        if args.summary:
-            extractor.create_summary_report(topics_content, word_data, args.summary)
-
         print(f"\n✅ Processing complete!")
         print(f"📊 Processed {len(word_data)} words from {len(topics_content)} topics")
         print(f"💾 Results saved to: {args.output}")
-        if args.summary:
-            print(f"📋 Summary saved to: {args.summary}")
         print(f"💾 Cache saved to: {extractor.cache_path}")
 
     except KeyboardInterrupt:

@@ -6,6 +6,7 @@ import { useFetch } from '@/hooks/useFetch';
 import Loader from '@/components/Loader';
 import BottomNavigationBar from '@/components/BottomNavigationBar';
 import { ChemistryAnimation, AnimationType } from '@/data/animations';
+import AnimationDebugTool from '@/data/animations/AnimationDebugTool';
 import {
   brandColors,
   typography,
@@ -51,7 +52,12 @@ const ContentElement = ({ element }: { element: any }) => {
           />
         );
       }
-
+  //     if (animationMatch) {
+  // const [, animationType, height] = animationMatch;
+  // return (
+  //   <AnimationDebugTool key={index} />
+  // );
+// }
       if (placeholderMatch) {
         const [, animationRef, height] = placeholderMatch;
         return (

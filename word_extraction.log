@@ -495,3 +495,40 @@
 2025-05-30 04:38:05,880 - DEBUG - Processing batch 1 with 5 words
 2025-05-30 04:38:28,192 - DEBUG - Processing batch 2 with 5 words
 2025-05-30 04:38:50,092 - DEBUG - Processing batch 3 with 5 words
+2025-05-30 04:40:44,581 - INFO - Logging initialized
+2025-05-30 04:40:44,584 - WARNING - spaCy not installed. Falling back to NLTK.
+2025-05-30 04:40:46,610 - INFO - Skipping section: 1/1.1/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,611 - INFO - Skipping section: 1/1.2/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,612 - INFO - Skipping section: 1/1.3/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,613 - INFO - Skipping section: 1/1.4/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,613 - INFO - Skipping section: 1/1.5/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,613 - INFO - Skipping section: 1/1.6/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,613 - INFO - Skipping section: 1/1.7/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,613 - INFO - Skipping section: 1/1.8/MEMORY_TECHNIQUES
+2025-05-30 04:40:46,613 - INFO - Extracted 81 topics from XML
+2025-05-30 04:40:46,613 - INFO - Extracting words from topics...
+2025-05-30 04:40:50,547 - INFO - Processing 562 unique words...
+2025-05-30 04:40:50,548 - DEBUG - Processing batch 1 with 5 words
+2025-05-30 04:41:13,007 - DEBUG - Processing batch 2 with 5 words
+2025-05-30 04:41:39,961 - DEBUG - Processing batch 3 with 5 words
+2025-05-30 04:42:02,481 - DEBUG - Processing batch 4 with 5 words
+2025-05-30 04:42:22,750 - DEBUG - Processing batch 5 with 5 words
+2025-05-30 04:42:45,702 - DEBUG - Processing batch 6 with 5 words
+2025-05-30 04:43:09,191 - DEBUG - Processing batch 7 with 5 words
+2025-05-30 04:43:27,106 - DEBUG - Processing batch 8 with 5 words
+2025-05-30 04:43:52,562 - DEBUG - Processing batch 9 with 5 words
+2025-05-30 04:44:17,635 - DEBUG - Processing batch 10 with 5 words
+2025-05-30 04:44:46,941 - DEBUG - Processing batch 11 with 5 words
+2025-05-30 04:45:08,629 - DEBUG - Processing batch 12 with 5 words
+2025-05-30 04:45:42,587 - DEBUG - Processing batch 13 with 5 words
+2025-05-30 04:46:26,718 - DEBUG - Processing batch 14 with 5 words
+2025-05-30 04:47:13,771 - DEBUG - Processing batch 15 with 5 words
+2025-05-30 04:47:38,027 - DEBUG - Processing batch 16 with 5 words
+2025-05-30 04:48:55,258 - DEBUG - Processing batch 17 with 5 words
+2025-05-30 05:00:41,265 - INFO - Logging initialized
+2025-05-30 05:01:26,110 - INFO - Logging initialized
+2025-05-30 05:01:28,164 - INFO - Extracted 89 topics from XML
+2025-05-30 05:01:28,164 - INFO - Extracting words from topics...
+2025-05-30 05:01:32,743 - INFO - Processing 30 unique words...
+2025-05-30 05:02:33,726 - WARNING - Attempt 1 failed for 'hip-hop': . Retrying in 1s
+2025-05-30 05:03:35,736 - WARNING - Attempt 2 failed for 'hip-hop': . Retrying in 2s

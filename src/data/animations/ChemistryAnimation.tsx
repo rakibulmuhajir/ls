@@ -234,35 +234,35 @@ useEffect(() => {
       isPlaying: ${isPlaying}
     };
 
-    // 3. Initialize with template if available
-    if (${!!config.template}) {
-      const templateConfig = ${JSON.stringify(config.template?.config || {})};
+  // 3. Initialize with template if available
+  if (${!!config.template}) {
+    const templateConfig = ${JSON.stringify(config.template?.config || {})};
 
-      window.addEventListener('load', () => {
-        switch('${config.template?.type}') {
-          case 'reaction':
-            window.animation = new ReactionAnimation(templateConfig);
-            break;
-          case 'state-change':
-            window.animation = new StateChangeAnimation(templateConfig);
-            break;
-          case 'dissolution':
-            window.animation = new DissolutionAnimation(templateConfig);
-            break;
-          case 'definition': // <--- ADD THIS CASE
-            window.animation = new DefinitionAnimation(templateConfig);
-            break;
-        }
+    window.addEventListener('load', () => {
+      switch('${config.template?.type}') {
+        case 'reaction':
+          window.animation = new ReactionAnimation(templateConfig);
+          break;
+        case 'state-change':
+          window.animation = new StateChangeAnimation(templateConfig);
+          break;
+        case 'dissolution':
+          window.animation = new DissolutionAnimation(templateConfig);
+          break;
+        case 'definition': // ADD THIS CASE
+          window.animation = new DefinitionAnimation(templateConfig);
+          break;
+      }
 
-        // Auto-play if configured
-        if (window.initialState.isPlaying && window.animation && window.animation.play) {
-          window.animation.play();
-        }
-      });
-    }
+      // Auto-play if configured
+      if (window.initialState.isPlaying && window.animation && window.animation.play) {
+        window.animation.play();
+      }
+    });
+  }
 
-    true;
-        `}
+  true;
+`}
       />
 
       {/* Native Control Panel */}

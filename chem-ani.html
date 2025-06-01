@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Chemistry? - Interactive Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            color: white;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #ui-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            overflow-y: auto; /* Allow scrolling if content overflows on small screens */
+            padding: 1rem; /* Add some padding for scrollable content */
+        }
+
+        .scene-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .section-title {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: #FFD700;
+            width: 90%; /* Ensure it doesn't overflow excessively */
+        }
+
+        .definition-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            padding: 1.875rem 2.5rem; /* 30px 40px */
+            border-radius: 1.25rem; /* 20px */
+            font-size: 1.4rem;
+            max-width: 80%;
+            text-align: center;
+            opacity: 0;
+            line-height: 1.8;
+            border: 2px solid #FFD700;
+        }
+
+        /* Science Tree */
+        .science-tree {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        .science-center {
+            width: 7.5rem; /* 120px */
+            height: 7.5rem; /* 120px */
+            background: radial-gradient(circle at 30% 30%, #FFD700, #FFA000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0 auto 2.5rem; /* 40px */
+            box-shadow: 0 0 1.875rem rgba(255, 215, 0, 0.5); /* 30px */
+            animation: centerPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes centerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .branches-container {
+            display: flex;
+            justify-content: center;
+            gap: 6.25rem; /* 100px */
+            position: relative;
+        }
+
+        .branch-card {
+            background: rgba(255,255,255,0.15);
+            padding: 1.875rem 1.25rem; /* 30px 20px */
+            border-radius: 1.25rem; /* 20px */
+            text-align: center;
+            min-width: 9.375rem; /* 150px */
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.5s ease, transform 0.3s ease-out, background 0.3s ease-out, box-shadow 0.3s ease-out;
+            position: relative;
+        }
+
+        .branch-card:hover {
+            transform: scale(1.05) translateY(-5px);
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.25); /* 8px 25px */
+        }
+
+        .branch-card.highlight {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+            box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.3); /* 10px 30px */
+        }
+        .branch-card.highlight:hover {
+            transform: scale(1.15) translateY(-5px);
+        }
+
+
+        .branch-line {
+            position: absolute;
+            width: 3px;
+            height: 3.75rem; /* 60px */
+            background: #4ECDC4;
+            top: -3.75rem; /* -60px */
+            left: 50%;
+            transform: translateX(-50%);
+            animation: lineGrow 1s ease-out forwards;
+            box-shadow: 0 0 0.625rem rgba(78, 205, 196, 0.5); /* 10px */
+        }
+
+        @keyframes lineGrow {
+            from { height: 0; }
+            to { height: 3.75rem; } /* 60px */
+        }
+
+        .center-line {
+            position: absolute;
+            width: 3px;
+            height: 2.5rem; /* 40px */
+            background: #4ECDC4;
+            top: 7.5rem; /* 120px */
+            left: 50%;
+            transform: translateX(-50%);
+            animation: lineGrow 1s ease-out forwards 0.5s;
+            box-shadow: 0 0 0.625rem rgba(78, 205, 196, 0.5);
+        }
+
+        .branch-icon {
+            font-size: 3rem;
+            margin-bottom: 0.625rem; /* 10px */
+        }
+
+        .branch-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        /* Substance Properties */
+        .substance-showcase {
+            position: absolute;
+            top: 25%; /* Adjusted for potentially more content */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            width: 90%;
+            max-width: 50rem; /* 800px */
+        }
+
+        .substance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem; /* 20px */
+            margin-top: 1.25rem; /* 20px */
+        }
+
+        .substance-row { /* Using grid for overall layout, rows are for semantic grouping */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); /* 160px */
+            gap: 1rem; /* 15px */
+            margin-bottom: 1rem;
+        }
+
+        .substance-item {
+            text-align: center;
+            opacity: 0;
+            transform: translateY(1.875rem); /* 30px */
+            background: rgba(255,255,255,0.1);
+            padding: 1rem; /* 15px */
+            border-radius: 0.75rem; /* 12px */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .substance-item:hover {
+            transform: translateY(1.25rem) scale(1.03); /* 20px from original animated spot -5px */
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+        }
+
+
+        .substance-visual {
+            width: 5rem; /* 80px */
+            height: 5rem; /* 80px */
+            margin: 0 auto 0.625rem; /* 10px */
+            border-radius: 0.75rem; /* 12px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .liquid { background: linear-gradient(180deg, #4FC3F7 0%, #29B6F6 100%); animation: liquidWave 2s ease-in-out infinite; }
+        .solid { background: linear-gradient(45deg, #90A4AE 0%, #607D8B 100%); }
+        .gas { background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%); animation: gasFloat 3s ease-in-out infinite; }
+        .metal { background: linear-gradient(45deg, #FFD700 0%, #FFA000 100%); animation: metalShine 3s ease-in-out infinite; }
+        .crystal { background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%); }
+        .powder { background: linear-gradient(135deg, #FFECB3 0%, #FFE082 100%); }
+
+        @keyframes metalShine {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); box-shadow: 0 0 1.25rem rgba(255, 215, 0, 0.5); } /* 20px */
+        }
+
+        .property-label {
+            margin-top: 0.5rem; /* 8px */
+            background: rgba(255,193,7,0.9);
+            color: #333;
+            padding: 0.375rem 0.625rem; /* 6px 10px */
+            border-radius: 0.5rem; /* 8px */
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        /* Composition & Structure Grid */
+        .composition-container {
+            position: absolute;
+            top: 20%; /* Adjusted */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            width: 90%;
+            max-width: 43.75rem; /* 700px */
+        }
+
+        .composition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); /* 200px */
+            gap: 1.25rem; /* 20px */
+            margin-top: 1.25rem; /* 20px */
+        }
+
+        .composition-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 0.75rem; /* 12px */
+            padding: 1rem; /* 15px */
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease-out, box-shadow 0.3s ease-out;
+            height: auto;
+            min-height: 12.5rem; /* 200px */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .composition-item:hover {
+            transform: scale(1.03) translateY(-5px); /* From final scale(1) state */
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+        }
+
+        .composition-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem; /* 8px */
+        }
+
+        .composition-name {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.625rem; /* 10px */
+        }
+
+        .molecule-structure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.625rem 0; /* 10px */
+            flex-wrap: wrap;
+            gap: 3px;
+            min-height: 3.125rem; /* 50px */
+            flex-grow: 1; /* Allow it to take space */
+        }
+        .molecule-structure .info-text {
+            font-size: 0.8rem;
+            margin-top: 0.3125rem; /* 5px */
+            width: 100%;
+            text-align: center;
+            align-self: flex-end; /* Push to bottom of flex container */
+        }
+
+
+        .atom {
+            width: 2.2rem; /* 35px */
+            height: 2.2rem; /* 35px */
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 1px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            position: relative;
+            animation: atomPulse 2s ease-in-out infinite;
+            font-size: 0.8rem;
+        }
+
+        .sodium { background: radial-gradient(circle at 30% 30%, #FFD700, #FFA000); }
+        .chlorine { background: radial-gradient(circle at 30% 30%, #4CAF50, #388E3C); }
+        .hydrogen { background: radial-gradient(circle at 30% 30%, #FFFFFF, #E0E0E0); color: #333; }
+        .oxygen { background: radial-gradient(circle at 30% 30%, #F44336, #C62828); }
+        .carbon { background: radial-gradient(circle at 30% 30%, #333333, #000000); }
+
+        @keyframes atomPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .bond {
+            width: 1.25rem; /* 20px */
+            height: 3px;
+            background: #4ECDC4;
+            animation: bondGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes bondGlow {
+            0%, 100% { box-shadow: 0 0 5px #4ECDC4; }
+            50% { box-shadow: 0 0 10px #4ECDC4; }
+        }
+
+        /* Physical Changes */
+        .phase-change {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.875rem; /* 30px */
+            opacity: 0;
+        }
+
+        .phase-row {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem; /* 40px */
+        }
+
+        .phase-item {
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease-out, box-shadow 0.3s ease-out; /* for hover */
+            padding: 0.5rem; /* Add some padding for hover effects to look better */
+            border-radius: 0.75rem; /* Match other cards */
+        }
+        .phase-item:hover {
+            transform: scale(1.03) translateY(-5px); /* From final scale(1) state */
+            background: rgba(255,255,255,0.1); /* Subtle background on hover */
+            box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+        }
+
+        .phase-visual {
+            width: 6.25rem; /* 100px */
+            height: 6.25rem; /* 100px */
+            border-radius: 0.9375rem; /* 15px */
+            margin-bottom: 0.9375rem; /* 15px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .ice { background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); }
+        .water { background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%); }
+        .vapor { background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%); }
+
+        .arrow-down {
+            font-size: 2rem;
+            color: #FFD700;
+            animation: arrowPulse 1s ease-in-out infinite;
+            transform: rotate(90deg);
+        }
+
+        @keyframes arrowPulse {
+            0%, 100% { transform: rotate(90deg) scale(1); }
+            50% { transform: rotate(90deg) scale(1.2); }
+        }
+
+        /* Chemical Changes */
+        .reaction-demo {
+            position: absolute;
+            top: 20%; /* Adjusted for more content */
+            left: 50%;
+            transform: translate(-50%, 0%); /* Adjusted for centering when content might grow */
+            opacity: 0;
+            text-align: center;
+            width: 95%;
+            max-width: 60rem; /* 960px, increased for more molecules */
+        }
+
+        .reaction-equation {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1.5rem; /* 25px */
+            font-family: 'Courier New', monospace;
+            color: #FFD700;
+        }
+
+        .reaction-visual {
+            display: flex;
+            align-items: center; /* Align items to center of cross axis */
+            justify-content: center;
+            gap: 1rem; /* 15px reduced for more content */
+            margin-bottom: 1.25rem; /* 20px */
+            flex-wrap: wrap;
+        }
+
+        .reactant-group, .product-group {
+            display: flex;
+            gap: 0.5rem; /* 8px between same molecules */
+            align-items: stretch; /* Make cards in group same height */
+        }
+
+        .reactant, .product {
+            padding: 1rem; /* 15px */
+            background: rgba(255,255,255,0.1);
+            border-radius: 0.75rem; /* 12px */
+            text-align: center;
+            backdrop-filter: blur(10px);
+            min-width: 7.5rem; /* 120px */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center;
+        }
+
+        .molecule-representation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.3125rem; /* 5px */
+            min-height: 2.5rem; /* 40px, to align with water structure height if possible */
+        }
+
+        .diatomic-bond {
+            width: 1rem; /* 15px */
+            height: 3px;
+            background-color: #bdc3c7; /* Neutral bond color */
+            margin: 0 2px;
+            border-radius: 2px;
+        }
+
+        .plus, .arrow-reaction {
+            font-size: 1.8rem;
+            color: #FFD700;
+            align-self: center; /* Vertically center with molecule groups */
+        }
+
+        .water-structure {
+            position: relative;
+            width: 8.75rem; /* 140px */
+            height: 6.25rem; /* 100px */
+            margin: 0 auto;
+        }
+
+        .water-oxygen {
+            position: absolute;
+            top: 1.875rem; /* 30px */
+            left: 3.125rem; /* 50px */
+            width: 2.5rem; /* 40px */
+            height: 2.5rem; /* 40px */
+        }
+
+        .water-hydrogen1 {
+            position: absolute;
+            top: 3.75rem; /* 60px */
+            left: 0.9375rem; /* 15px */
+            width: 2.2rem; /* 35px */
+            height: 2.2rem; /* 35px */
+        }
+
+        .water-hydrogen2 {
+            position: absolute;
+            top: 3.75rem; /* 60px */
+            left: 5.625rem; /* 90px */
+            width: 2.2rem; /* 35px */
+            height: 2.2rem; /* 35px */
+        }
+
+        .water-bond1, .water-bond2 {
+            position: absolute;
+            width: 2.5rem; /* 40px */
+            height: 4px;
+            background: #4ECDC4;
+            transform-origin: left center;
+            box-shadow: 0 0 8px rgba(78, 205, 196, 0.5);
+        }
+
+        .water-bond1 { /* Connects oxygen to hydrogen1 (left) */
+            top: 2.9375rem; /* 47px */
+            left: 2.375rem; /* 38px, approx center of O, adjusted */
+            transform: rotate(-45deg) translateX(-50%);
+            transform-origin: 0% 50%; /* Rotate from start of bond */
+            width: 2.1875rem; /* 35px */
+        }
+
+        .water-bond2 { /* Connects oxygen to hydrogen2 (right) */
+            top: 2.9375rem; /* 47px */
+            left: 4.375rem; /* 70px, approx center of O */
+            transform: rotate(45deg) translateX(0%);
+            transform-origin: 0% 50%; /* Rotate from start of bond */
+            width: 2.1875rem; /* 35px */
+        }
+        /* Re-evaluating water bonds based on atom positions.
+           Oxygen center (50+20=70, 30+20=50) -> (70,50) assuming atom centers
+           H1 center (15+17.5=32.5, 60+17.5=77.5) -> (32.5, 77.5)
+           H2 center (90+17.5=107.5, 60+17.5=77.5) -> (107.5, 77.5)
+        */
+       .water-bond1 { /* O to H1 */
+            top: 2.9375rem; /* 47px */
+            left: 3.125rem; /* 50px */
+            width: 2.5rem; /* 40px */
+            transform: rotate(135deg); /* Original values likely trial and error for visual */
+            transform-origin: 1.25rem 2px; /* Half width, half height of bond */
+        }
+
+        .water-bond2 { /* O to H2 */
+            top: 2.9375rem; /* 47px */
+            left: 3.125rem; /* 50px */
+            width: 2.5rem; /* 40px */
+            transform: rotate(45deg);
+            transform-origin: 1.25rem 2px;
+        }
+        /* The original bond positioning seems to be for a different origin.
+           Let's stick to the original logic for bonds if it looked okay.
+           Original: left: 70px (4.375rem) and transform-origin: left center.
+        */
+        .water-bond1 {
+            top: 2.9375rem; /* 47px */
+            left: 4.375rem; /* 70px */
+            transform: rotate(135deg);
+            transform-origin: left center; /* Original */
+        }
+
+        .water-bond2 {
+            top: 2.9375rem; /* 47px */
+            left: 4.375rem; /* 70px */
+            transform: rotate(45deg);
+            transform-origin: left center; /* Original */
+        }
+
+
+        .angle-label {
+            position: absolute;
+            bottom: -0.3125rem; /* -5px */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        /* Laws Display */
+        .laws-container {
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            width: 95%;
+            max-width: 62.5rem; /* 1000px */
+        }
+
+        .laws-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px */
+            gap: 1.25rem; /* 20px */
+            margin-top: 1.5rem; /* 25px */
+        }
+
+        .law-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 0.75rem; /* 12px */
+            padding: 1rem; /* 15px */
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            opacity: 0;
+            transform: translateY(1.25rem); /* 20px */
+            transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease-out, box-shadow 0.3s ease-out;
+            height: auto;
+            min-height: 12.5rem; /* 200px, was 180px */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .law-card:hover {
+            transform: translateY(0.625rem) scale(1.03); /* 10px from original anim spot -5px */
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+        }
+
+        .law-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem; /* 8px */
+        }
+
+        .law-title {
+            font-size: 1.1rem; /* Increased slightly */
+            font-weight: bold;
+            margin-bottom: 0.5rem; /* 8px */
+            color: #FFD700;
+        }
+
+        .law-demo {
+            margin: 0.75rem 0; /* 12px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem; /* 12px */
+            flex-wrap: wrap;
+        }
+
+        .scale {
+            width: 3.125rem; /* 50px */
+            height: 3.125rem; /* 50px */
+            background: #FFD700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .equilibrium-demo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* 8px */
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .equilibrium-arrow {
+            font-size: 1.3rem;
+            animation: equilibriumShift 3s ease-in-out infinite;
+        }
+
+        @keyframes equilibriumShift {
+            0%, 100% { color: #4ECDC4; transform: scale(1); }
+            50% { color: #FFD700; transform: scale(1.2); }
+        }
+
+        .proportion-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem; /* 8px */
+        }
+
+        .ratio-display {
+            background: rgba(255,255,255,0.2);
+            padding: 0.375rem; /* 6px */
+            border-radius: 0.375rem; /* 6px */
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+        }
+
+        .law-description {
+            font-size: 0.9rem; /* Slightly increased */
+            line-height: 1.4; /* Increased */
+            margin-top: 0.5rem; /* 8px */
+            flex-grow: 1; /* Allow to take space */
+            padding: 0 0.5rem; /* Add some horizontal padding */
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 1.25rem; /* 20px */
+            right: 1.25rem; /* 20px */
+            display: flex;
+            gap: 0.625rem; /* 10px */
+            z-index: 20;
+            pointer-events: auto;
+        }
+
+        .control-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.75rem 1.25rem; /* 12px 20px */
+            border-radius: 1.5625rem; /* 25px */
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: #FFD700;
+            transition: width 0.5s ease;
+            z-index: 20;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .scene-title { font-size: 2.5rem; }
+            .section-title { font-size: 1.8rem; top: 5%;}
+            .definition-text { font-size: 1.1rem; max-width: 95%; padding: 1.25rem 1.5rem; } /* 20px 25px */
+
+            .branches-container { gap: 1.5rem; flex-wrap: wrap; } /* 25px */
+            .branch-card { min-width: 7.5rem; padding: 1rem 0.8rem; } /* 120px, 15px 12px */
+
+            .substance-showcase { top: 18%; }
+            .substance-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .substance-row { grid-template-columns: 1fr 1fr; } /* Keep two items per row if possible */
+
+            .composition-container { top: 18%; }
+            .composition-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .composition-item { min-height: 10rem; } /* 160px */
+
+            .laws-container { top: 15%; }
+            .laws-grid { grid-template-columns: 1fr; }
+            .law-card { min-height: 10rem; }
+
+            .phase-change { top: 30%; gap: 1rem; }
+            .phase-row { flex-direction: column; gap: 1rem; }
+            .arrow-down { transform: rotate(90deg) scale(0.8); animation: none; } /* Simpler on mobile */
+
+            .reaction-demo { top: 15%; }
+            .reaction-visual { flex-direction: column; gap: 0.8rem; } /* 15px */
+            .reactant-group, .product-group { flex-direction: column; }
+
+            .atom { width: 1.8rem; height: 1.8rem; font-size: 0.7rem;}
+            .water-structure { transform: scale(0.8); margin: -1rem auto; } /* Scale down complex visuals */
+        }
+         @media (max-width: 480px) {
+            .section-title { font-size: 1.5rem; }
+            .substance-row { grid-template-columns: 1fr; } /* Single column for very small screens */
+            .water-structure { transform: scale(0.7); margin: -1.5rem auto; }
+            .reaction-equation { font-size: 1.2rem; }
+            .control-btn { padding: 0.5rem 1rem; font-size: 0.8rem; }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="canvas-container"></div>
+        <div id="ui-overlay">
+            <!-- Scene 1: Opening -->
+            <div class="scene-title" id="title">Chemistry</div>
+
+            <!-- Scene 2: Branch of Science -->
+            <div class="section-title" id="branch-title">Branch of Science</div>
+            <div class="science-tree" id="science-tree">
+                <div class="science-center">SCIENCE</div>
+                <div class="center-line"></div>
+                <div class="branches-container">
+                    <div class="branch-card" id="chemistry-branch">
+                        <div class="branch-line"></div>
+                        <div class="branch-icon" aria-hidden="true">🧪</div>
+                        <div class="branch-title">Chemistry</div>
+                    </div>
+                    <div class="branch-card">
+                        <div class="branch-line"></div>
+                        <div class="branch-icon" aria-hidden="true">🔬</div>
+                        <div class="branch-title">Biology</div>
+                    </div>
+                    <div class="branch-card">
+                        <div class="branch-line"></div>
+                        <div class="branch-icon" aria-hidden="true">📐</div>
+                        <div class="branch-title">Physics</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene 3: Substance Properties -->
+            <div class="section-title" id="properties-title">Substance Properties</div>
+            <div class="substance-showcase" id="substances">
+                 <div class="substance-row">
+                    <div class="substance-item">
+                        <div class="substance-visual liquid" aria-hidden="true">💧</div>
+                        <div class="property-label">Density: 1.0 g/mL</div>
+                    </div>
+                    <div class="substance-item">
+                        <div class="substance-visual solid" aria-hidden="true">⚫</div>
+                        <div class="property-label">Color: Black</div>
+                    </div>
+                </div>
+                <div class="substance-row">
+                    <div class="substance-item">
+                        <div class="substance-visual gas" aria-hidden="true">💨</div>
+                        <div class="property-label">Boiling Pt: -196°C</div>
+                    </div>
+                    <div class="substance-item">
+                        <div class="substance-visual metal" aria-hidden="true">🔩</div>
+                        <div class="property-label">Hardness: 9 Mohs</div>
+                    </div>
+                </div>
+                <div class="substance-row">
+                    <div class="substance-item">
+                        <div class="substance-visual crystal" aria-hidden="true">💎</div>
+                        <div class="property-label">Melting Pt: 1538°C</div>
+                    </div>
+                    <div class="substance-item">
+                        <div class="substance-visual powder" aria-hidden="true">🟡</div>
+                        <div class="property-label">Solubility: 36g/100mL</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene 4: Composition & Structure -->
+            <div class="section-title" id="composition-title">Composition & Structure</div>
+            <div class="composition-container" id="composition">
+                <div class="composition-grid">
+                    <div class="composition-item">
+                        <div class="composition-icon" aria-hidden="true">🧂</div>
+                        <div class="composition-name">Salt (NaCl)</div>
+                        <div class="molecule-structure">
+                            <div class="atom sodium">Na</div>
+                            <div class="bond"></div>
+                            <div class="atom chlorine">Cl</div>
+                        </div>
+                        <div class="info-text">Ionic Compound Crystal Lattice</div>
+                    </div>
+                    <div class="composition-item">
+                        <div class="composition-icon" aria-hidden="true">💧</div>
+                        <div class="composition-name">Water (H₂O)</div>
+                        <div class="molecule-structure">
+                            <div class="atom hydrogen">H</div>
+                            <div class="bond"></div>
+                            <div class="atom oxygen">O</div>
+                            <div class="bond"></div>
+                            <div class="atom hydrogen">H</div>
+                        </div>
+                        <div class="info-text">Covalent Molecular Compound</div>
+                    </div>
+                    <div class="composition-item">
+                        <div class="composition-icon" aria-hidden="true">🍯</div>
+                        <div class="composition-name">Sugar (C₆H₁₂O₆)</div>
+                        <div class="molecule-structure">
+                            <div class="atom carbon">C</div>
+                            <div class="atom hydrogen">H</div>
+                            <div class="atom oxygen">O</div>
+                            <div class="atom carbon">C</div>
+                            <div class="atom hydrogen">H</div>
+                            <div class="atom oxygen">O</div>
+                        </div>
+                         <div class="info-text">Complex Ring Structure</div>
+                    </div>
+                    <div class="composition-item">
+                        <div class="composition-icon" aria-hidden="true">🥤</div>
+                        <div class="composition-name">Baking Soda (NaHCO₃)</div>
+                        <div class="molecule-structure">
+                            <div class="atom sodium">Na</div>
+                            <div class="atom hydrogen">H</div>
+                            <div class="atom carbon">C</div>
+                            <div class="atom oxygen">O₃</div>
+                        </div>
+                        <div class="info-text">Ionic Compound (Na⁺ HCO₃⁻)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene 5: Physical Changes -->
+            <div class="section-title" id="physical-title">Physical Changes</div>
+            <div class="phase-change" id="physical-changes">
+                <div class="phase-item">
+                    <div class="phase-visual ice" aria-hidden="true">🧊</div>
+                    <div>Ice (Solid)</div>
+                </div>
+                <div class="arrow-down">→</div>
+                <div class="phase-item">
+                    <div class="phase-visual water" aria-hidden="true">💧</div>
+                    <div>Water (Liquid)</div>
+                </div>
+                <div class="arrow-down">→</div>
+                <div class="phase-item">
+                    <div class="phase-visual vapor" aria-hidden="true">☁️</div>
+                    <div>Steam (Gas)</div>
+                </div>
+            </div>
+
+            <!-- Scene 6: Chemical Changes -->
+            <div class="section-title" id="chemical-title">Chemical Changes</div>
+            <div class="reaction-demo" id="chemical-changes">
+                <div class="reaction-equation">2H₂ + O₂ → 2H₂O</div>
+                <div class="reaction-visual">
+                    <div class="reactant-group">
+                        <div class="reactant">
+                            <div class="molecule-representation">
+                                <div class="atom hydrogen">H</div>
+                                <div class="diatomic-bond"></div>
+                                <div class="atom hydrogen">H</div>
+                            </div>
+                            <div>Hydrogen (H₂)</div>
+                        </div>
+                        <div class="reactant">
+                            <div class="molecule-representation">
+                                <div class="atom hydrogen">H</div>
+                                <div class="diatomic-bond"></div>
+                                <div class="atom hydrogen">H</div>
+                            </div>
+                            <div>Hydrogen (H₂)</div>
+                        </div>
+                    </div>
+                    <div class="plus">+</div>
+                    <div class="reactant">
+                        <div class="molecule-representation">
+                            <div class="atom oxygen">O</div>
+                            <div class="diatomic-bond"></div>
+                            <div class="atom oxygen">O</div>
+                        </div>
+                        <div>Oxygen (O₂)</div>
+                    </div>
+                    <div class="arrow-reaction">→</div>
+                    <div class="product-group">
+                        <div class="product">
+                            <div class="water-structure">
+                                <div class="atom oxygen water-oxygen">O</div>
+                                <div class="atom hydrogen water-hydrogen1">H</div>
+                                <div class="atom hydrogen water-hydrogen2">H</div>
+                                <div class="water-bond1"></div>
+                                <div class="water-bond2"></div>
+                                <div class="angle-label">104.5°</div>
+                            </div>
+                            <div>Water (H₂O)</div>
+                        </div>
+                        <div class="product">
+                           <div class="water-structure">
+                                <div class="atom oxygen water-oxygen">O</div>
+                                <div class="atom hydrogen water-hydrogen1">H</div>
+                                <div class="atom hydrogen water-hydrogen2">H</div>
+                                <div class="water-bond1"></div>
+                                <div class="water-bond2"></div>
+                                <div class="angle-label">104.5°</div>
+                            </div>
+                            <div>Water (H₂O)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene 7: Laws and Principles -->
+            <div class="section-title" id="laws-title">Study of Laws</div>
+            <div class="laws-container" id="laws">
+                <div class="laws-grid">
+                    <div class="law-card">
+                        <div class="law-icon" aria-hidden="true">⚖️</div>
+                        <div class="law-title">Conservation of Mass</div>
+                        <div class="law-demo">
+                            <div class="scale">100g</div>
+                            <div>=</div>
+                            <div class="scale">100g</div>
+                        </div>
+                        <div class="law-description">Mass is neither created nor destroyed; Mass before reaction = Mass after reaction.</div>
+                    </div>
+                    <div class="law-card">
+                        <div class="law-icon" aria-hidden="true">⚡</div>
+                        <div class="law-title">Conservation of Energy</div>
+                        <div class="law-demo">
+                            <div class="scale">E₁</div>
+                            <div>=</div>
+                            <div class="scale">E₂</div>
+                        </div>
+                        <div class="law-description">Energy cannot be created or destroyed, only transformed from one form to another.</div>
+                    </div>
+                    <div class="law-card">
+                        <div class="law-icon" aria-hidden="true">⇌</div>
+                        <div class="law-title">Le Chatelier's Principle</div>
+                        <div class="law-demo">
+                             <div class="equilibrium-demo">
+                                <div>A + B</div>
+                                <div class="equilibrium-arrow">⇌</div>
+                                <div>C + D</div>
+                            </div>
+                        </div>
+                        <div class="law-description">If a change is applied to a system at equilibrium, the system shifts to counteract the change and re-establish equilibrium.</div>
+                    </div>
+                    <div class="law-card">
+                        <div class="law-icon" aria-hidden="true">📊</div>
+                        <div class="law-title">Law of Definite Proportions</div>
+                        <div class="law-demo">
+                            <div class="proportion-demo">
+                                <div class="ratio-display">H₂O Atom Ratio (count): H:O = 2:1</div>
+                                <div class="ratio-display">H₂O Mass Ratio: H:O ≈ 1:8</div>
+                            </div>
+                        </div>
+                        <div class="law-description">Elements combine in fixed whole-number ratios by atoms, resulting in fixed mass ratios in compounds.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scene 8: Final definition -->
+            <div class="definition-text" id="definition">
+                <strong>Chemistry</strong> is the branch of science that deals with the <em>properties</em>, <em>composition</em>, and <em>structure</em> of substances, as well as the <em>physical and chemical changes</em> in matter and the <em>laws or principles</em> that govern these changes.
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="control-btn" onclick="restartAnimation()" title="Restart Animation (R)">🔄 Restart</button>
+            <button class="control-btn" onclick="togglePause()" id="pauseBtn" title="Pause/Play Animation (Spacebar)">⏸️ Pause</button>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <script>
+        // Animation state
+        let currentScene = 0;
+        let isPlaying = true;
+        let animationProgress = 0;
+        let scene, camera, renderer;
+        let particles = [];
+
+        // Scene timings (in seconds) - extended for more content
+        const sceneDurations = [3, 4, 6, 7, 5, 7, 9, 4]; // Adjusted timings for new content
+        const totalDuration = sceneDurations.reduce((a, b) => a + b, 0);
+
+        // Initialize Three.js scene for particle effects
+        function initThreeJS() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer({ alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x000000, 0);
+
+            document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+            createParticles();
+
+            camera.position.z = 5;
+            animate3D();
+        }
+
+        function createParticles() {
+            const geometry = new THREE.SphereGeometry(0.02, 8, 8);
+            const material = new THREE.MeshBasicMaterial({ color: 0xffffff, opacity: 0.8, transparent: true });
+
+            for (let i = 0; i < 50; i++) {
+                const particle = new THREE.Mesh(geometry, material);
+                particle.position.set(
+                    (Math.random() - 0.5) * 10,
+                    (Math.random() - 0.5) * 10,
+                    (Math.random() - 0.5) * 10
+                );
+                particle.userData = {
+                    velocity: new THREE.Vector3(
+                        (Math.random() - 0.5) * 0.02,
+                        (Math.random() - 0.5) * 0.02,
+                        (Math.random() - 0.5) * 0.02
+                    ),
+                    originalPosition: particle.position.clone()
+                };
+                scene.add(particle);
+                particles.push(particle);
+            }
+        }
+
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+
+            particles.forEach(particle => {
+                if (currentScene === 0) {
+                    const time = Date.now() * 0.001;
+                    const radius = 2 + Math.sin(time * 0.5 + particle.userData.originalPosition.x) * 0.5;
+                    particle.position.x = Math.cos(time + particle.userData.originalPosition.x) * radius;
+                    particle.position.y = Math.sin(time + particle.userData.originalPosition.y) * radius;
+                    particle.position.z = Math.sin(time * 0.7 + particle.userData.originalPosition.z) * radius * 0.3;
+                } else {
+                    particle.position.add(particle.userData.velocity);
+                    if (Math.abs(particle.position.x) > 5) particle.userData.velocity.x *= -1;
+                    if (Math.abs(particle.position.y) > 5) particle.userData.velocity.y *= -1;
+                    if (Math.abs(particle.position.z) > 5) particle.userData.velocity.z *= -1;
+                }
+            });
+
+            renderer.render(scene, camera);
+        }
+
+        function showElement(elementId, delay = 0) {
+            setTimeout(() => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.style.transition = 'all 0.8s ease';
+                    element.style.opacity = '1';
+                    // Reset transform if it was used for hiding, for elements not handled by specific animators
+                    if (element.style.transform.includes('translateY') || element.style.transform.includes('scale')) {
+                         // Check if it's a specific element that needs a specific transform reset
+                        if (elementId === 'title' || elementId.includes('-title') || elementId === 'definition') {
+                           element.style.transform = element.style.transform.replace(/translateY\([^)]+\)/, 'translateY(0)').replace(/scale\([^)]+\)/, 'scale(1)');
+                        }
+                    }
+                }
+            }, delay);
+        }
+
+        function hideElement(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.style.transition = 'all 0.5s ease';
+                element.style.opacity = '0';
+                 // Add a transform to move it out if it's a major scene block
+                if (elementId.includes('-tree') || elementId.includes('-showcase') || elementId.includes('-container') || elementId.includes('-change') || elementId.includes('-demo')) {
+                    //element.style.transform = 'translateY(50px)'; // Example hide transform
+                }
+            }
+        }
+
+        function resetAllAnimatedItemsAndHighlights() {
+            document.querySelectorAll('.substance-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(1.875rem)'; // 30px
+            });
+            document.querySelectorAll('.composition-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+            });
+            document.querySelectorAll('.phase-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+            });
+            document.querySelectorAll('.law-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(1.25rem)'; // 20px (matching its CSS default for animation start)
+            });
+
+            const chemistryBranch = document.getElementById('chemistry-branch');
+            if (chemistryBranch) chemistryBranch.classList.remove('highlight');
+        }
+
+        function animateSubstanceItems() {
+            const rows = document.querySelectorAll('.substance-row');
+            rows.forEach((row, rowIndex) => {
+                const items = row.querySelectorAll('.substance-item');
+                items.forEach((item, itemIndex) => {
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, (rowIndex * items.length + itemIndex) * 200); // Stagger animation
+                });
+            });
+        }
+
+        function animateCompositionItems() {
+            const items = document.querySelectorAll('.composition-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, index * 300); // Stagger
+            });
+        }
+
+        function animatePhaseItems() {
+            const items = document.querySelectorAll('.phase-item');
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, index * 600); // Stagger
+            });
+        }
+
+        function animateLawCards() {
+            const cards = document.querySelectorAll('.law-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 300); // Stagger
+            });
+        }
+
+        function runScene(sceneNumber) {
+            const allSceneElements = ['title', 'branch-title', 'science-tree', 'properties-title', 'substances',
+                             'composition-title', 'composition', 'physical-title', 'physical-changes',
+                             'chemical-title', 'chemical-changes', 'laws-title', 'laws', 'definition'];
+            allSceneElements.forEach(hideElement);
+
+            resetAllAnimatedItemsAndHighlights();
+
+            switch(sceneNumber) {
+                case 0: showElement('title'); break;
+                case 1:
+                    showElement('branch-title');
+                    showElement('science-tree', 500);
+                    setTimeout(() => {
+                        const chemBranch = document.getElementById('chemistry-branch');
+                        if (chemBranch) chemBranch.classList.add('highlight');
+                    }, 1500); // Reduced delay
+                    break;
+                case 2:
+                    showElement('properties-title');
+                    showElement('substances', 500);
+                    setTimeout(animateSubstanceItems, 600);
+                    break;
+                case 3:
+                    showElement('composition-title');
+                    showElement('composition', 500);
+                    setTimeout(animateCompositionItems, 600);
+                    break;
+                case 4:
+                    showElement('physical-title');
+                    showElement('physical-changes', 500);
+                    setTimeout(animatePhaseItems, 600);
+                    break;
+                case 5:
+                    showElement('chemical-title');
+                    showElement('chemical-changes', 500);
+                    break;
+                case 6:
+                    showElement('laws-title');
+                    showElement('laws', 500);
+                    setTimeout(animateLawCards, 600);
+                    break;
+                case 7: showElement('definition', 200); break; // Small delay for final definition
+            }
+        }
+
+        function updateProgress() {
+            if (!isPlaying) return;
+
+            animationProgress += 1/60;
+            const progressPercentage = (animationProgress / totalDuration) * 100;
+            document.getElementById('progress').style.width = progressPercentage + '%';
+
+            let timeAccumulator = 0;
+            let newScene = 0;
+            for (let i = 0; i < sceneDurations.length; i++) {
+                if (animationProgress <= timeAccumulator + sceneDurations[i]) {
+                    newScene = i;
+                    break;
+                }
+                timeAccumulator += sceneDurations[i];
+            }
+
+            if (newScene !== currentScene) {
+                currentScene = newScene;
+                runScene(currentScene);
+            }
+
+            if (animationProgress >= totalDuration) {
+                animationProgress = totalDuration; // Cap progress
+                setTimeout(restartAnimation, 3000); // Longer pause before restart
+            }
+        }
+
+        function restartAnimation() {
+            animationProgress = 0;
+            isPlaying = true;
+            document.getElementById('pauseBtn').innerHTML = '⏸️ Pause';
+            document.getElementById('pauseBtn').title = 'Pause Animation (Spacebar)';
+            document.getElementById('progress').style.width = '0%';
+            currentScene = -1; // Force scene 0 to run even if it was the last one
+            updateProgress(); // This will detect currentScene as 0 and run it
+        }
+
+        function togglePause() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('pauseBtn');
+            btn.innerHTML = isPlaying ? '⏸️ Pause' : '▶️ Play';
+            btn.title = isPlaying ? 'Pause Animation (Spacebar)' : 'Play Animation (Spacebar)';
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        window.addEventListener('load', () => {
+            initThreeJS();
+            runScene(0);
+            setInterval(updateProgress, 1000/60);
+            window.addEventListener('resize', onWindowResize);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === ' ' || event.code === 'Space') {
+                event.preventDefault(); togglePause();
+            } else if (event.key === 'r' || event.key === 'R') {
+                restartAnimation();
+            } else if (event.key === 'ArrowLeft') {
+                if (currentScene > 0) {
+                    animationProgress = sceneDurations.slice(0, currentScene - 1).reduce((a, b) => a + b, 0);
+                    updateProgress(); // Will trigger previous scene
+                } else if (currentScene === 0 && animationProgress > 0) { // Allow restart to very beginning of scene 0
+                    animationProgress = 0;
+                    updateProgress();
+                }
+            } else if (event.key === 'ArrowRight') {
+                if (currentScene < sceneDurations.length - 1) {
+                    animationProgress = sceneDurations.slice(0, currentScene + 1).reduce((a, b) => a + b, 0);
+                     // If current animationProgress is already past the start of next scene, this might skip.
+                    // Better: Set progress to the exact start of the next scene.
+                    let nextSceneStartTime = 0;
+                    for(let i=0; i <= currentScene; i++) {
+                        nextSceneStartTime += sceneDurations[i];
+                    }
+                    animationProgress = nextSceneStartTime + 0.01; // Just past the boundary
+                    updateProgress(); // Will trigger next scene
+                }
+            }
+        });
+    </script>
+</body>
+</html>

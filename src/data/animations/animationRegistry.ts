@@ -1,7 +1,8 @@
-// src/data/animations/animationRegistry.ts
+// src/data/animations/animationRegistry.ts - Updated
 import { AnimationType, AnimationConfig } from './types';
 import { baseAnimationTemplate } from './library/baseAnimationTemplate';
 import { chemistryDefinition } from './library/chapter1/chemistryDefinition';
+import { chemistryDefinitionInteractive } from './library/chapter1/chemistryDefinitionInteractive';
 
 // Animation builders that create configs
 const animationBuilders: Record<AnimationType, () => AnimationConfig> = {
@@ -36,7 +37,6 @@ const animationBuilders: Record<AnimationType, () => AnimationConfig> = {
     },
     html: baseAnimationTemplate + `
       <script>
-        // Template will be injected here by the wrapper
         const config = ${JSON.stringify({
           reactants: [
             { formula: 'H2', count: 2, position: { x: 150, y: 250 } },
@@ -50,13 +50,10 @@ const animationBuilders: Record<AnimationType, () => AnimationConfig> = {
           effects: ['explosion', 'flame']
         })};
 
-        // Initialize animation with config
         window.initAnimation = function() {
-          // This will be replaced by template injection
           console.log('Animation initialized with config:', config);
         };
 
-        // Start when ready
         window.addEventListener('load', () => {
           window.initAnimation();
         });
@@ -88,7 +85,6 @@ const animationBuilders: Record<AnimationType, () => AnimationConfig> = {
     },
     html: baseAnimationTemplate + `
       <script>
-        // Simplified - template config injected
         const config = ${JSON.stringify({
           substance: 'H2O',
           initialState: 'solid',
@@ -105,6 +101,11 @@ const animationBuilders: Record<AnimationType, () => AnimationConfig> = {
       </script>
     `
   }),
+
+  // NEW: Interactive Chemistry Definition Animation
+  'chemistry-definition-interactive': () => chemistryDefinitionInteractive,
+
+  // Keep the original static version
   'chemistry-definition': () => chemistryDefinition,
 };
 

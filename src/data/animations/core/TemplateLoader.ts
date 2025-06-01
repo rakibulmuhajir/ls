@@ -74,83 +74,32 @@ export class TemplateLoader {
         `;
 
       case 'definition':
-        return `
-          class DefinitionAnimation {
-            constructor() {
-              this.container = document.getElementById('animation-container');
-              this.init();
-            }
+  return `
+    class DefinitionAnimation {
+      constructor(config) {
+        this.config = config;
+        this.container = document.getElementById('animation-container');
+        console.log('Definition animation initialized with config:', config);
+      }
 
-            init() {
-              const keywords = ['Properties', 'Composition', 'Structure'];
+      play() {
+        console.log('Definition animation playing');
+        return Promise.resolve();
+      }
 
-              keywords.forEach((keyword, index) => {
-                const card = document.createElement('div');
-                card.className = 'concept-card';
-                card.textContent = keyword;
-                card.style.cssText = \`
-                  width: 120px;
-                  height: 120px;
-                  margin: 10px;
-                  background: #4ecdc4;
-                  color: white;
-                  display: inline-flex;
-                  align-items: center;
-                  justify-content: center;
-                  font-weight: bold;
-                  font-size: 16px;
-                  border-radius: 12px;
-                  cursor: pointer;
-                  transition: transform 0.3s ease;
-                \`;
+      pause() {
+        console.log('Definition animation paused');
+      }
 
-                card.addEventListener('click', () => this.showDetail(keyword));
-                this.container.appendChild(card);
-              });
-            }
+      reset() {
+        console.log('Definition animation reset');
+      }
 
-            showDetail(keyword) {
-              const detail = document.createElement('div');
-              detail.className = 'concept-detail';
-              detail.style.cssText = \`
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 20px;
-                background: rgba(0, 0, 0, 0.8);
-                color: white;
-                border-radius: 12px;
-                font-size: 16px;
-                text-align: center;
-                max-width: 300px;
-              \`;
-
-              if (keyword === 'Properties') {
-                detail.innerHTML = '<strong>Oxygen (O₂)</strong><br>• Supports combustion<br>• Colorless gas<br>• Essential for life';
-              } else if (keyword === 'Composition') {
-                detail.innerHTML = '<strong>Water (H₂O)</strong><br>• 2 Hydrogen + 1 Oxygen<br>• Forms by chemical reaction';
-              } else if (keyword === 'Structure') {
-                detail.innerHTML = '<strong>Carbon dioxide (CO₂)</strong><br>• Linear molecule<br>• Double bonds between C and O';
-              }
-
-              // Remove existing detail panels
-              const existing = this.container.querySelector('.concept-detail');
-              if (existing) existing.remove();
-
-              this.container.appendChild(detail);
-
-              setTimeout(() => {
-                detail.style.opacity = '0';
-                setTimeout(() => detail.remove(), 2000);
-              }, 3000);
-            }
-
-            play() {
-              console.log('Definition animation started');
-            }
-          }
-        `;
+      setSpeed(speed) {
+        console.log('Definition animation speed set to:', speed);
+      }
+    }
+  `;
 
       default:
         return '';

@@ -1,3 +1,4 @@
+##extract specialized chemistry terms from an XML book using DeepSeek API
 #!/usr/bin/env python3
 """
 XML Book Processor with DeepSeek API
@@ -17,7 +18,7 @@ DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 # IMPORTANT: Replace with your actual API key or use an environment variable
 # It's best to set this as an environment variable: DEEPSEEK_API_KEY
 # DEEPSEEK_API_KEY = "sk-your-api-key-here" # Loaded from args or env
-OUTPUT_FILE = "extracted_chemistry_terms.txt"
+OUTPUT_FILE = "extracted_chemistry_terms2.txt"
 
 # --- Comprehensive Exclusion List ---
 # This list is used for POST-PROCESSING after LLM extraction.
@@ -316,3 +317,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# This script is designed to be run from the command line.
+# Usage: python wordex.py remains.xml --apikey=sk-319bb9cebbfc4aa180463bf7d6bacce5

@@ -1,0 +1,20 @@
+2025-06-02 11:42:33,458 - INFO - --- Starting Word Definition Ingestion Script ---
+2025-06-02 11:42:33,459 - INFO - Starting word definition ingestion from: enriched_sample.csv
+2025-06-02 11:42:35,976 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.1&chapter_number_display=eq.1 "HTTP/2 200 OK"
+2025-06-02 11:42:36,931 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.1&topic_xml_id=eq.1.1 "HTTP/2 200 OK"
+2025-06-02 11:42:37,832 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.1&chapter_number_display=eq.1 "HTTP/2 200 OK"
+2025-06-02 11:42:38,178 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.1&topic_xml_id=eq.1.5 "HTTP/2 200 OK"
+2025-06-02 11:42:39,146 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/words?on_conflict=word_text&columns=%22explanation%22%2C%22word_text%22%2C%22book_fk%22%2C%22term_type%22%2C%22properties%22%2C%22meaning%22%2C%22urdu_meaning%22 "HTTP/2 201 Created"
+2025-06-02 11:42:39,149 - INFO - Upserted 5 records into 'words' table.
+2025-06-02 11:42:39,493 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/words?select=word_text%2Cword_pk&word_text=in.%28compounds%2Ccontaminants%2Cwater%2Ctissues%2Ctransformation%29 "HTTP/2 200 OK"
+2025-06-02 11:42:39,843 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topic_words?on_conflict=topic_fk%2Cword_fk&columns=%22word_fk%22%2C%22topic_fk%22 "HTTP/2 201 Created"
+2025-06-02 11:42:39,844 - INFO - Processed 6 links for 'topic_words' table.
+2025-06-02 11:42:39,845 - INFO - Processed final batch of 6 rows.
+2025-06-02 11:42:39,845 - INFO - === Word Definition Ingestion Summary ===
+2025-06-02 11:42:39,846 - INFO - CSV Rows Processed: 6
+2025-06-02 11:42:39,846 - INFO - Words Upserted (to 'words' table): 5
+2025-06-02 11:42:39,846 - INFO - Topic-Word Links Processed (for 'topic_words'): 6
+2025-06-02 11:42:39,847 - INFO - Skipped Rows (Missing Data): 0
+2025-06-02 11:42:39,847 - INFO - Errors: 0
+2025-06-02 11:42:39,847 - INFO - ==========================================
+2025-06-02 11:42:39,847 - INFO - --- Word Definition Ingestion Script Finished ---

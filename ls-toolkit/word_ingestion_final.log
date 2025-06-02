@@ -1,0 +1,42 @@
+2025-06-02 16:56:10,709 - INFO - --- Starting Word Definition Ingestion Script ---
+2025-06-02 16:56:10,709 - INFO - Starting word definition ingestion from: enriched_sample.csv
+2025-06-02 16:56:12,831 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.1&chapter_number_display=eq.1 "HTTP/2 200 OK"
+2025-06-02 16:56:13,795 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.1&topic_xml_id=eq.1.1 "HTTP/2 200 OK"
+2025-06-02 16:56:14,784 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.1&chapter_number_display=eq.1 "HTTP/2 200 OK"
+2025-06-02 16:56:15,124 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.1&topic_xml_id=eq.1.5 "HTTP/2 200 OK"
+2025-06-02 16:56:16,056 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/words?on_conflict=word_text&columns=%22explanation%22%2C%22word_text%22%2C%22properties%22%2C%22term_type%22%2C%22urdu_meaning%22%2C%22book_fk%22%2C%22meaning%22 "HTTP/2 201 Created"
+2025-06-02 16:56:16,060 - INFO - Upserted 5 records into 'words' table.
+2025-06-02 16:56:16,409 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/words?select=word_text%2Cword_pk&word_text=in.%28compounds%2Ccontaminants%2Cwater%2Ctissues%2Ctransformation%29 "HTTP/2 200 OK"
+2025-06-02 16:56:16,756 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topic_words?select=topic_fk%2Cword_fk&topic_fk=in.%281%2C5%29&word_fk=in.%286%2C7%2C8%2C9%2C10%29 "HTTP/2 200 OK"
+2025-06-02 16:56:17,141 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topic_words?columns=%22topic_fk%22%2C%22word_fk%22 "HTTP/2 201 Created"
+2025-06-02 16:56:17,142 - INFO - Inserted 6 new links into 'topic_words' table.
+2025-06-02 16:56:17,142 - INFO - Processed final batch of 6 rows.
+2025-06-02 16:56:17,143 - INFO - === Word Definition Ingestion Summary ===
+2025-06-02 16:56:17,143 - INFO - CSV Rows Processed: 6
+2025-06-02 16:56:17,143 - INFO - Words Upserted (to 'words' table): 5
+2025-06-02 16:56:17,144 - INFO - Topic-Word Links Created (in 'topic_words'): 6
+2025-06-02 16:56:17,144 - INFO - Skipped Rows (Missing Data): 0
+2025-06-02 16:56:17,144 - INFO - Errors: 0
+2025-06-02 16:56:17,145 - INFO - ==========================================
+2025-06-02 16:56:17,145 - INFO - --- Word Definition Ingestion Script Finished ---
+2025-06-02 19:30:14,806 - INFO - --- Starting Word Definition Ingestion Script ---
+2025-06-02 19:30:14,806 - INFO - Starting word definition ingestion from: enriched_sample.csv
+2025-06-02 19:30:16,651 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.1&chapter_number_display=eq.1 "HTTP/2 200 OK"
+2025-06-02 19:30:17,059 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.1&topic_xml_id=eq.1.1 "HTTP/2 200 OK"
+2025-06-02 19:30:17,977 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.1&chapter_number_display=eq.1 "HTTP/2 200 OK"
+2025-06-02 19:30:18,390 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.1&topic_xml_id=eq.1.5 "HTTP/2 200 OK"
+2025-06-02 19:30:18,804 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/words?on_conflict=word_text&columns=%22urdu_meaning%22%2C%22properties%22%2C%22meaning%22%2C%22book_fk%22%2C%22word_text%22%2C%22explanation%22%2C%22term_type%22 "HTTP/2 201 Created"
+2025-06-02 19:30:18,812 - INFO - Upserted 5 records into 'words' table.
+2025-06-02 19:30:19,160 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/words?select=word_text%2Cword_pk&word_text=in.%28compounds%2Ccontaminants%2Cwater%2Ctissues%2Ctransformation%29 "HTTP/2 200 OK"
+2025-06-02 19:30:19,509 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topic_words?select=topic_fk%2Cword_fk&topic_fk=in.%281%2C5%29&word_fk=in.%2811%2C12%2C13%2C14%2C15%29 "HTTP/2 200 OK"
+2025-06-02 19:30:20,538 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topic_words?columns=%22word_fk%22%2C%22topic_fk%22 "HTTP/2 201 Created"
+2025-06-02 19:30:20,538 - INFO - Inserted 6 new links into 'topic_words' table.
+2025-06-02 19:30:20,538 - INFO - Processed final batch of 6 rows.
+2025-06-02 19:30:20,538 - INFO - === Word Definition Ingestion Summary ===
+2025-06-02 19:30:20,538 - INFO - CSV Rows Processed: 6
+2025-06-02 19:30:20,545 - INFO - Words Upserted (to 'words' table): 5
+2025-06-02 19:30:20,545 - INFO - Topic-Word Links Created (in 'topic_words'): 6
+2025-06-02 19:30:20,546 - INFO - Skipped Rows (Missing Data): 0
+2025-06-02 19:30:20,546 - INFO - Errors: 0
+2025-06-02 19:30:20,546 - INFO - ==========================================
+2025-06-02 19:30:20,546 - INFO - --- Word Definition Ingestion Script Finished ---

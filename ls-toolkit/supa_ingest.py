@@ -27,27 +27,6 @@ if SUPABASE_KEY == "YOUR_SUPABASE_SERVICE_ROLE_OR_ANON_KEY" or not SUPABASE_KEY:
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 logger.info(f"Connected to Supabase URL: {SUPABASE_URL}")
 
-# --- Animation Registry ---
-# This maps animation names to their types for validation
-ANIMATION_REGISTRY = {
-    'hydrogen-oxygen-water': 'hydrogen-oxygen-water',
-    'states-of-matter': 'states-of-matter',
-    'phase-changes': 'phase-changes',
-    'carbon-allotropes': 'carbon-allotropes',
-    'solutions-colloids': 'solutions-colloids',
-    'temperature-solubility': 'temperature-solubility',
-    'water-formation': 'hydrogen-oxygen-water',  # Alias
-    'matter-states': 'states-of-matter',  # Alias
-    'allotropes-carbon': 'carbon-allotropes',  # Alias
-}
-
-def validate_animation_reference(animation_ref):
-    """Validate if animation reference exists in registry"""
-    if animation_ref in ANIMATION_REGISTRY:
-        return ANIMATION_REGISTRY[animation_ref]
-    logger.warning(f"Animation reference '{animation_ref}' not found in registry")
-    return None
-
 # --- Helper Functions ---
 def insert_and_return_pk(table_name, data, pk_column_name):
     try:

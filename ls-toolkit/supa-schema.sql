@@ -106,3 +106,29 @@ CREATE TABLE IF NOT EXISTS Table_Data (
     created_at TIMESTAMP DEFAULT now(),
     updated_at TIMESTAMP DEFAULT now()
 );
+
+CREATE TABLE words (
+    word_pk SERIAL PRIMARY KEY,
+    word_text TEXT NOT NULL UNIQUE,       -- The normalized word/term (e.g., lowercase)
+    meaning TEXT,                         -- Primary English explanation (maps to JSON "explanation")
+    explanation TEXT,                     -- Could be a more detailed explanation or an example (maps to JSON "example_sentence")
+    urdu_meaning TEXT,                    -- Dedicated column for Urdu meaning
+    term_type VARCHAR(50),                -- e.g., "compound", "element", "concept"
+    book_fk INTEGER NOT NULL REFERENCES books(book_pk) DEFAULT 1,
+    properties JSONB,          -- To store the dynamic "properties" object and other less critical fields from the root of the JSON
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()   -- Good practice to track updates
+);
+
+-- Optional: Indexes for frequently queried columns
+CREATE INDEX idx_words_term_type ON words(term_type);
+CREATE INDEX idx_words_book_fk ON words(book_fk);
+CREATE INDEX idx_words_properties_gin ON words USING GIN (properties);
+
+CREATE TABLE topic_words (
+    topic_word_pk SERIAL PRIMARY KEY,
+       topic_fk INTEGER NOT NULL REFERENCES topics(topic_pk),
+       word_fk INTEGER NOT NULL REFERENCES words(word_pk),
+       created_at TIMESTAMPTZ DEFAULT NOW(),
+       CONSTRAINT topic_words_topic_fk_word_fk_key UNIQUE (topic_fk, word_fk) -- Prevents duplicate links
+     );

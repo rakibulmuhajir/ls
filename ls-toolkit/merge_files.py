@@ -1,3 +1,4 @@
+## merge any project files in a directory into a single output file
 import os
 
 def merge_files_from_directory(target_path, output_filename="merged_output.txt"):

@@ -320,7 +320,7 @@ if __name__ == "__main__":
     # physics_ingester.ingest_from_csv('physics_words.csv')
 
     ingester = WordDefinitionIngester(supabase_client=supabase, book_pk=1)
-    csv_file_path = 'enriched_chemistry_terms.csv' # <--- !!! UPDATE THIS PATH !!!
+    csv_file_path = 'enriched_CHEM_IX_chapter1.csv' # <--- !!! UPDATE THIS PATH !!!
 
     if os.path.exists(csv_file_path):
         ingester.ingest_from_csv(csv_file_path, batch_size=50)

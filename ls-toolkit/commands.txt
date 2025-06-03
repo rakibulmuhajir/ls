@@ -1,2 +1,3 @@
 eas build --platform android --profile preview //build over cloud
 npx expo run:android //run test server
+eas update --channel preview --message "any message"

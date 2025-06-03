@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { getChapters } from '@/lib/api/getChapters';
 import { useFetch } from '@/hooks/useFetch';
@@ -11,14 +11,48 @@ import {
   screenStyles,
   createShadow
 } from '@/lib/designSystem';
+import { useTheme, useThemedStyles } from '@/lib/ThemeContext';
 
 export default function ChapterListScreen() {
   const route = useRoute<any>();
   const navigation = useNavigation<any>();
   const { bookId } = route.params;
+  const { theme } = useTheme();
 
   const fetcher = React.useCallback(() => getChapters(bookId), [bookId]);
   const { data: chapters, loading, error, refetch } = useFetch(fetcher);
+
+  const styles = useThemedStyles((theme) => ({
+    container: {
+      flexGrow: 1,
+      backgroundColor: theme.colors.background,
+      paddingHorizontal: spacing.md,
+      paddingTop: spacing.lg,
+    },
+    heading: {
+      fontSize: typography.fontSize['2xl'],
+      fontWeight: typography.fontWeight.bold,
+      color: theme.colors.secondary,
+      textAlign: 'center',
+      marginBottom: spacing.lg,
+    },
+    card: {
+      backgroundColor: theme.colors.secondaryContainer,
+      paddingHorizontal: spacing.lg,
+      paddingVertical: spacing.md,
+      marginBottom: spacing.sm,
+      borderRadius: theme.borderRadius.lg,
+      borderLeftWidth: 4,
+      borderLeftColor: theme.colors.secondary,
+      ...createShadow(2),
+    },
+    title: {
+      fontSize: typography.fontSize.lg,
+      fontWeight: typography.fontWeight.medium,
+      color: theme.colors.onSecondaryContainer,
+      lineHeight: typography.lineHeight.normal * typography.fontSize.lg,
+    },
+  }));
 
   return (
     <View style={styles.container}>
@@ -53,22 +87,3 @@ export default function ChapterListScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    ...screenStyles.container,
-  },
-  heading: {
-    ...screenStyles.screenHeader,
-    color: brandColors.secondary.main,
-  },
-  card: {
-    ...screenStyles.listItem,
-    backgroundColor: brandColors.secondary.lightest,
-    borderLeftColor: brandColors.secondary.main,
-  },
-  title: {
-    ...screenStyles.listItemText,
-    color: brandColors.secondary.dark,
-  },
-});

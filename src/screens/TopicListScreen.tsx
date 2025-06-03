@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { getTopics } from '@/lib/api/getTopics';
 import { useFetch } from '@/hooks/useFetch';
@@ -11,11 +11,13 @@ import {
   screenStyles,
   createShadow
 } from '@/lib/designSystem';
+import { useTheme, useThemedStyles } from '@/lib/ThemeContext';
 
 export default function TopicListScreen() {
   const route = useRoute<any>();
   const navigation = useNavigation<any>();
   const { chapterId, bookId } = route.params;
+  const { theme } = useTheme();
 
   // Debug logging
   //console.log('TopicListScreen params:', route.params);
@@ -38,6 +40,38 @@ export default function TopicListScreen() {
       topics: topics || []
     });
   };
+
+  const styles = useThemedStyles((theme) => ({
+    container: {
+      flexGrow: 1,
+      backgroundColor: theme.colors.background,
+      paddingHorizontal: spacing.md,
+      paddingTop: spacing.lg,
+    },
+    heading: {
+      fontSize: typography.fontSize['2xl'],
+      fontWeight: typography.fontWeight.bold,
+      color: theme.colors.accent,
+      textAlign: 'center',
+      marginBottom: spacing.lg,
+    },
+    card: {
+      backgroundColor: theme.colors.accentContainer,
+      paddingHorizontal: spacing.lg,
+      paddingVertical: spacing.md,
+      marginBottom: spacing.sm,
+      borderRadius: theme.borderRadius.lg,
+      borderLeftWidth: 4,
+      borderLeftColor: theme.colors.accent,
+      ...createShadow(2),
+    },
+    title: {
+      fontSize: typography.fontSize.lg,
+      fontWeight: typography.fontWeight.medium,
+      color: theme.colors.onAccentContainer,
+      lineHeight: typography.lineHeight.normal * typography.fontSize.lg,
+    },
+  }));
 
   return (
     <View style={styles.container}>
@@ -65,22 +99,3 @@ export default function TopicListScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    ...screenStyles.container,
-  },
-  heading: {
-    ...screenStyles.screenHeader,
-    color: brandColors.accent.main,
-  },
-  card: {
-    ...screenStyles.listItem,
-    backgroundColor: brandColors.accent.lightest,
-    borderLeftColor: brandColors.accent.main,
-  },
-  title: {
-    ...screenStyles.listItemText,
-    color: brandColors.accent.dark,
-  },
-});

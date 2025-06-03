@@ -1,0 +1,100 @@
+{
+  "live": [
+    {
+      "title": "Modular Learning",
+      "description": "Lessons organized into focused modules for better understanding and step-by-step progression",
+      "icon": "puzzle"
+    },
+    {
+      "title": "Dual Module Types",
+      "description": "Concept modules (definitions, explanations, summaries) and practice modules (exercises, examples, analogies) for comprehensive learning",
+      "icon": "layers-triple"
+    },
+    {
+      "title": "Word Meanings",
+      "description": "Instant popup definitions for complex terms and vocabulary to enhance comprehension",
+      "icon": "tooltip-text"
+    }
+  ],
+  "planned": [
+    {
+      "title": "Question Bank",
+      "description": "Practice with MCQs, fill-in-blanks, and short answer questions for each topic and chapter",
+      "icon": "help-circle"
+    },
+    {
+      "title": "Interactive Animations",
+      "description": "Visual animations and diagrams to explain complex concepts and scientific processes",
+      "icon": "animation-play"
+    },
+    {
+      "title": "Smart Search",
+      "description": "Find definitions, summaries, examples, and concepts across all books instantly with advanced filtering",
+      "icon": "magnify"
+    },
+    {
+      "title": "Custom Exams",
+      "description": "Generate personalized tests for any topic, chapter, or complete book with time tracking and scoring",
+      "icon": "clipboard-check"
+    },
+    {
+      "title": "Institutional Support",
+      "description": "Multi-user access and management tools for schools and educational institutions",
+      "icon": "school"
+    },
+    {
+      "title": "Teacher Dashboard",
+      "description": "Comprehensive analytics to track student progress, results, study time, and performance insights",
+      "icon": "chart-line"
+    },
+    {
+      "title": "Voice Learning",
+      "description": "Audio narration of content and voice-controlled navigation for hands-free learning",
+      "icon": "microphone"
+    }
+  ],
+  "experimental": [
+    {
+      "title": "AI Study Assistant",
+      "description": "Personalized AI tutor providing explanations, study recommendations, and doubt-clearing support",
+      "icon": "robot"
+    },
+    {
+      "title": "Multi-language Support",
+      "description": "Content translation and localization for regional language learners across Pakistan",
+      "icon": "translate"
+    },
+    {
+      "title": "Adaptive Learning",
+      "description": "AI-powered personalized learning paths that adapt based on individual performance and learning style",
+      "icon": "brain"
+    }
+  ],
+  "vision": [
+    {
+      "title": "AR/VR Integration",
+      "description": "Immersive 3D models and virtual reality experiences for complex scientific and mathematical concepts",
+      "icon": "virtual-reality"
+    },
+    {
+      "title": "Live Tutoring",
+      "description": "One-on-one and group tutoring sessions with qualified teachers integrated within the app",
+      "icon": "video"
+    },
+    {
+      "title": "Peer Learning Network",
+      "description": "Student community features including study groups, peer discussions, and collaborative problem-solving",
+      "icon": "account-group"
+    },
+    {
+      "title": "Gamification System",
+      "description": "Achievement badges, learning streaks, leaderboards, and rewards to make studying engaging and fun",
+      "icon": "trophy"
+    },
+    {
+      "title": "Offline Mode",
+      "description": "Complete offline access to downloaded books and content for uninterrupted learning without internet",
+      "icon": "download"
+    }
+  ]
+}

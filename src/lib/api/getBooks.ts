@@ -4,7 +4,7 @@ import { supabase } from './supabase';
 export async function getBooks() {
   const { data, error } = await supabase
     .from('books')
-    .select('book_pk, title')
+    .select('book_pk, title, cover_image')
     .order('book_pk');
 
   if (error) throw new Error(error.message);

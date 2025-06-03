@@ -1,14 +1,13 @@
+// ============================================
+// UPDATED BOTTOM NAVIGATION WITH THEME SUPPORT
+// ============================================
+
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import {
-  brandColors,
-  typography,
-  spacing,
-  layout,
-  createShadow
-} from '@/lib/designSystem';
+import { useTheme, useThemedStyles } from '@/lib/ThemeContext';
+import { createShadow } from '@/lib/designSystem';
 
 interface Topic {
   topic_pk: number;
@@ -24,6 +23,52 @@ interface Props {
 
 export default function BottomNavigationBar({ topicId, chapterId, bookId, topics }: Props) {
   const navigation = useNavigation<any>();
+  const { theme } = useTheme();
+
+  const styles = useThemedStyles((theme) => ({
+    navigationBar: {
+      borderTopWidth: 1,
+      borderColor: theme.colors.outlineVariant,
+      paddingVertical: theme.spacing.sm,
+      paddingHorizontal: theme.spacing.sm,
+      backgroundColor: theme.colors.navigationBackground,
+      ...createShadow(4),
+    },
+    scrollContent: {
+      flexDirection: 'row' as const,
+      alignItems: 'center' as const,
+      gap: theme.spacing.xs,
+    },
+    navButton: {
+      flexDirection: 'row' as const,
+      alignItems: 'center' as const,
+      paddingHorizontal: theme.spacing.sm,
+      paddingVertical: theme.spacing.xs,
+      marginHorizontal: theme.spacing.xs / 2,
+      borderRadius: theme.borderRadius.lg,
+      minHeight: 36,
+    },
+    enabledButton: {
+      backgroundColor: theme.colors.surfaceVariant,
+      borderWidth: 1,
+      borderColor: theme.colors.outlineVariant,
+    },
+    disabledButton: {
+      backgroundColor: theme.colors.surfaceVariant,
+      opacity: 0.5,
+    },
+    navText: {
+      fontSize: theme.typography.fontSize.sm,
+      fontWeight: theme.typography.fontWeight.medium,
+      marginHorizontal: theme.spacing.xs / 2,
+    },
+    enabledText: {
+      color: theme.colors.onSurface,
+    },
+    disabledText: {
+      color: theme.colors.onSurfaceVariant,
+    },
+  }));
 
   if (!topics || topics.length === 0) {
     return null;
@@ -41,8 +86,6 @@ export default function BottomNavigationBar({ topicId, chapterId, bookId, topics
       topics,
     });
   };
-
-  //console.log('BottomNavigationBar rendered', { topicId, chapterId, bookId, topics });
 
   return (
     <View style={styles.navigationBar}>
@@ -65,7 +108,7 @@ export default function BottomNavigationBar({ topicId, chapterId, bookId, topics
           <MaterialCommunityIcons
             name="arrow-left"
             size={18}
-            color={!previousTopic ? brandColors.neutral.light : brandColors.primary.main}
+            color={!previousTopic ? theme.colors.onSurfaceVariant : theme.colors.primary}
           />
           <Text style={[
             styles.navText,
@@ -97,7 +140,7 @@ export default function BottomNavigationBar({ topicId, chapterId, bookId, topics
           <MaterialCommunityIcons
             name="arrow-right"
             size={18}
-            color={!nextTopic ? brandColors.neutral.light : brandColors.primary.main}
+            color={!nextTopic ? theme.colors.onSurfaceVariant : theme.colors.primary}
           />
         </TouchableOpacity>
 
@@ -110,9 +153,9 @@ export default function BottomNavigationBar({ topicId, chapterId, bookId, topics
           <MaterialCommunityIcons
             name="format-list-bulleted"
             size={18}
-            color={brandColors.accent.main}
+            color={theme.colors.accent}
           />
-          <Text style={[styles.navText, { color: brandColors.accent.main }]}>Topics</Text>
+          <Text style={[styles.navText, { color: theme.colors.accent }]}>Topics</Text>
         </TouchableOpacity>
 
         {/* Chapters Button */}
@@ -124,9 +167,9 @@ export default function BottomNavigationBar({ topicId, chapterId, bookId, topics
           <MaterialCommunityIcons
             name="view-list"
             size={18}
-            color={brandColors.secondary.main}
+            color={theme.colors.secondary}
           />
-          <Text style={[styles.navText, { color: brandColors.secondary.main }]}>Chapters</Text>
+          <Text style={[styles.navText, { color: theme.colors.secondary }]}>Chapters</Text>
         </TouchableOpacity>
 
         {/* Books Button */}
@@ -138,56 +181,11 @@ export default function BottomNavigationBar({ topicId, chapterId, bookId, topics
           <MaterialCommunityIcons
             name="book-open-page-variant"
             size={18}
-            color={brandColors.primary.main}
+            color={theme.colors.primary}
           />
-          <Text style={[styles.navText, { color: brandColors.primary.main }]}>Books</Text>
+          <Text style={[styles.navText, { color: theme.colors.primary }]}>Books</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  navigationBar: {
-    borderTopWidth: 1,
-    borderColor: brandColors.neutral.lighter,
-    paddingVertical: spacing.sm,
-    paddingHorizontal: spacing.sm,
-    backgroundColor: '#ffffff',
-    ...createShadow(4),
-  },
-  scrollContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.xs,
-  },
-  navButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: spacing.sm,
-    paddingVertical: spacing.xs,
-    marginHorizontal: spacing.xs / 2,
-    borderRadius: layout.borderRadius.lg,
-    minHeight: 36,
-  },
-  enabledButton: {
-    backgroundColor: brandColors.neutral.lightest,
-    borderWidth: 1,
-    borderColor: brandColors.neutral.lighter,
-  },
-  disabledButton: {
-    backgroundColor: brandColors.neutral.lighter,
-    opacity: 0.5,
-  },
-  navText: {
-    fontSize: typography.fontSize.sm,
-    fontWeight: typography.fontWeight.medium,
-    marginHorizontal: spacing.xs / 2,
-  },
-  enabledText: {
-    color: brandColors.neutral.dark,
-  },
-  disabledText: {
-    color: brandColors.neutral.light,
-  },
-});

@@ -1,54 +1,54 @@
 // ============================================
-// ENHANCED DESIGN SYSTEM WITH THEME SUPPORT
+// IMPROVED DESIGN SYSTEM WITH BETTER CONTRAST
 // ============================================
 
 import { useColorScheme } from 'react-native';
 
-// Base color definitions
+// Base color definitions - Enhanced for better contrast
 const baseColors = {
-  // Trust Blue (Claude AI inspired)
+  // Trust Blue (Claude AI inspired) - Made more vibrant
   trustBlue: {
     50: '#eff6ff',
     100: '#dbeafe',
     200: '#bfdbfe',
     300: '#93c5fd',
     400: '#60a5fa',
-    500: '#4A90E2', // Primary trust blue
-    600: '#2563eb',
-    700: '#1d4ed8',
-    800: '#1e40af',
-    900: '#1e3a8a',
+    500: '#2563eb', // Darker, more vibrant primary
+    600: '#1d4ed8',
+    700: '#1e40af',
+    800: '#1e3a8a',
+    900: '#1e293b',
   },
 
-  // Growth Green
+  // Growth Green - Enhanced contrast
   growthGreen: {
     50: '#ecfdf5',
     100: '#d1fae5',
     200: '#a7f3d0',
     300: '#6ee7b7',
     400: '#34d399',
-    500: '#7ED321', // Primary growth green
-    600: '#059669',
-    700: '#047857',
-    800: '#065f46',
-    900: '#064e3b',
+    500: '#059669', // Darker, more visible
+    600: '#047857',
+    700: '#065f46',
+    800: '#064e3b',
+    900: '#022c22',
   },
 
-  // Warm Terra Cotta (Accent)
+  // Warm Terra Cotta - More vibrant
   terraCotta: {
     50: '#fef7ed',
     100: '#fef3c7',
     200: '#fde68a',
     300: '#fcd34d',
-    400: '#F4A460', // Primary terra cotta
-    500: '#f59e0b',
-    600: '#d97706',
-    700: '#b45309',
-    800: '#92400e',
-    900: '#78350f',
+    400: '#d97706', // Much more vibrant
+    500: '#b45309',
+    600: '#92400e',
+    700: '#78350f',
+    800: '#5d2a0a',
+    900: '#451a03',
   },
 
-  // Neutrals (Gray scale)
+  // Neutrals with better contrast
   neutral: {
     50: '#fafafa',
     100: '#f4f4f5',
@@ -58,34 +58,34 @@ const baseColors = {
     500: '#71717a',
     600: '#52525b',
     700: '#3f3f46',
-    800: '#27272a',
-    900: '#18181b',
+    800: '#18181b', // Much darker for better contrast
+    900: '#0f0f0f',
   },
 
-  // Semantic colors
-  success: '#10b981',
-  warning: '#f59e0b',
-  error: '#ef4444',
-  info: '#3b82f6',
+  // Semantic colors - Enhanced
+  success: '#16a34a',
+  warning: '#d97706',
+  error: '#dc2626',
+  info: '#2563eb',
 };
 
-// Book page colors
+// Book page colors - Better contrast
 const bookPageColors = {
-  parchment: '#F0E68C',
-  antiquePaper: '#CCC0B2',
-  agedPaper: '#E0D3AF',
-  vintageCream: '#EBD5B3',
-  sepiaText: '#5F5F54',
-  sepiaBackground: '#F1E7D0',
+  parchment: '#F5F1E8',
+  antiquePaper: '#E8E0D0',
+  agedPaper: '#F0E8D4',
+  vintageCream: '#F7F3E9',
+  sepiaText: '#3D3B36', // Much darker for readability
+  sepiaBackground: '#FAF7F0', // Lighter background
   nightModeWarm: '#E8E3D3',
 };
 
-// Dracula colors
+// Dracula colors - Enhanced contrast
 const draculaColors = {
-  background: '#282a36',
-  currentLine: '#44475a',
-  foreground: '#f8f8f2',
-  comment: '#6272a4',
+  background: '#1a1a2e', // Slightly lighter
+  currentLine: '#16213e',
+  foreground: '#ffffff', // Pure white for better contrast
+  comment: '#8b94b8', // Lighter purple-gray
   cyan: '#8be9fd',
   green: '#50fa7b',
   orange: '#ffb86c',
@@ -95,56 +95,73 @@ const draculaColors = {
   yellow: '#f1fa8c',
 };
 
-// Theme definitions
+// Typography system - Enhanced for readability
+export const typography = {
+  fontSize: {
+    xs: 12,
+    sm: 14,
+    base: 16,
+    lg: 18,
+    xl: 22, // Increased
+    '2xl': 26, // Increased
+    '3xl': 32, // Increased
+    '4xl': 40, // Increased
+  },
+  fontWeight: {
+    normal: '400' as const,
+    medium: '600' as const, // Increased from 500
+    semibold: '700' as const, // Increased from 600
+    bold: '800' as const, // Increased from 700
+  },
+  lineHeight: {
+    tight: 1.3, // Slightly increased
+    normal: 1.5, // Increased
+    relaxed: 1.7, // Increased
+  },
+} as const;
+
+// Rest of the interfaces remain the same...
 export type ThemeMode = 'light' | 'dark' | 'sepia' | 'highContrast' | 'system';
 
 export interface Theme {
   mode: ThemeMode;
   colors: {
-    // Background colors
     background: string;
     surface: string;
     surfaceVariant: string;
 
-    // Text colors
     onBackground: string;
     onSurface: string;
     onSurfaceVariant: string;
 
-    // Primary colors
     primary: string;
     onPrimary: string;
     primaryContainer: string;
     onPrimaryContainer: string;
 
-    // Secondary colors
     secondary: string;
     onSecondary: string;
     secondaryContainer: string;
     onSecondaryContainer: string;
 
-    // Accent colors
     accent: string;
     onAccent: string;
     accentContainer: string;
     onAccentContainer: string;
 
-    // Section group colors (3 main categories)
+    // Enhanced section group colors with better contrast
     coreLearning: string;
     enhancedLearning: string;
     supplementary: string;
 
-    // Semantic colors
     success: string;
     warning: string;
     error: string;
     info: string;
 
-    // Border and divider
     outline: string;
     outlineVariant: string;
 
-    // Navigation
     navigationBackground: string;
     navigationSurface: string;
   };
@@ -153,32 +170,7 @@ export interface Theme {
   borderRadius: typeof borderRadius;
 }
 
-// Typography system
-export const typography = {
-  fontSize: {
-    xs: 12,
-    sm: 14,
-    base: 16,
-    lg: 18,
-    xl: 20,
-    '2xl': 24,
-    '3xl': 30,
-    '4xl': 36,
-  },
-  fontWeight: {
-    normal: '400' as const,
-    medium: '500' as const,
-    semibold: '600' as const,
-    bold: '700' as const,
-  },
-  lineHeight: {
-    tight: 1.2,
-    normal: 1.4,
-    relaxed: 1.6,
-  },
-} as const;
-
-// Spacing system
+// Spacing and border radius remain the same
 export const spacing = {
   xs: 4,
   sm: 8,
@@ -189,7 +181,6 @@ export const spacing = {
   '3xl': 48,
 } as const;
 
-// Border radius
 export const borderRadius = {
   sm: 4,
   md: 8,
@@ -198,7 +189,6 @@ export const borderRadius = {
   '2xl': 24,
 } as const;
 
-// Shadow utility
 export const createShadow = (elevation: number) => ({
   shadowColor: '#000000',
   shadowOffset: {
@@ -210,7 +200,8 @@ export const createShadow = (elevation: number) => ({
   elevation: elevation * 2,
 });
 
-// Theme definitions
+// IMPROVED THEMES WITH BETTER CONTRAST
+
 const lightTheme: Theme = {
   mode: 'light',
   colors: {
@@ -218,37 +209,37 @@ const lightTheme: Theme = {
     surface: '#f8fafc',
     surfaceVariant: '#f1f5f9',
 
-    onBackground: baseColors.neutral[900],
-    onSurface: baseColors.neutral[800],
-    onSurfaceVariant: baseColors.neutral[600],
+    onBackground: baseColors.neutral[900], // Very dark
+    onSurface: baseColors.neutral[800], // Dark
+    onSurfaceVariant: baseColors.neutral[700], // Medium-dark
 
     primary: baseColors.trustBlue[500],
     onPrimary: '#ffffff',
-    primaryContainer: baseColors.trustBlue[100],
-    onPrimaryContainer: baseColors.trustBlue[900],
+    primaryContainer: baseColors.trustBlue[50],
+    onPrimaryContainer: baseColors.trustBlue[800],
 
     secondary: baseColors.growthGreen[500],
     onSecondary: '#ffffff',
-    secondaryContainer: baseColors.growthGreen[100],
-    onSecondaryContainer: baseColors.growthGreen[900],
+    secondaryContainer: baseColors.growthGreen[50],
+    onSecondaryContainer: baseColors.growthGreen[800],
 
     accent: baseColors.terraCotta[400],
     onAccent: '#ffffff',
-    accentContainer: baseColors.terraCotta[100],
-    onAccentContainer: baseColors.terraCotta[900],
+    accentContainer: baseColors.terraCotta[50],
+    onAccentContainer: baseColors.terraCotta[800],
 
-    // Section groups - subtle but distinct
-    coreLearning: '#f0f9ff', // Light blue
-    enhancedLearning: '#f0fdf4', // Light green
-    supplementary: '#fefce8', // Light yellow
+    // Much more distinct section colors
+    coreLearning: '#e0f2fe', // Strong blue tint
+    enhancedLearning: '#dcfce7', // Strong green tint
+    supplementary: '#fef3c7', // Strong yellow tint
 
     success: baseColors.success,
     warning: baseColors.warning,
     error: baseColors.error,
     info: baseColors.info,
 
-    outline: baseColors.neutral[300],
-    outlineVariant: baseColors.neutral[200],
+    outline: baseColors.neutral[400],
+    outlineVariant: baseColors.neutral[300],
 
     navigationBackground: '#ffffff',
     navigationSurface: '#f8fafc',
@@ -263,39 +254,39 @@ const darkTheme: Theme = {
   colors: {
     background: draculaColors.background,
     surface: draculaColors.currentLine,
-    surfaceVariant: '#3b3e56',
+    surfaceVariant: '#1f2937',
 
-    onBackground: draculaColors.foreground,
-    onSurface: draculaColors.foreground,
-    onSurfaceVariant: '#a6accd',
+    onBackground: draculaColors.foreground, // Pure white
+    onSurface: '#f1f5f9', // Very light gray
+    onSurfaceVariant: '#d1d5db', // Light gray
 
     primary: draculaColors.purple,
     onPrimary: draculaColors.background,
-    primaryContainer: '#8b5fb94d',
+    primaryContainer: '#4c1d95',
     onPrimaryContainer: draculaColors.purple,
 
     secondary: draculaColors.green,
     onSecondary: draculaColors.background,
-    secondaryContainer: '#50fa7b4d',
+    secondaryContainer: '#14532d',
     onSecondaryContainer: draculaColors.green,
 
     accent: draculaColors.pink,
     onAccent: draculaColors.background,
-    accentContainer: '#ff79c64d',
+    accentContainer: '#831843',
     onAccentContainer: draculaColors.pink,
 
-    // Section groups - darker themed
-    coreLearning: '#1e293b', // Dark blue
-    enhancedLearning: '#14532d', // Dark green
-    supplementary: '#451a03', // Dark amber
+    // Much more distinct dark section colors
+    coreLearning: '#1e3a8a', // Strong dark blue
+    enhancedLearning: '#166534', // Strong dark green
+    supplementary: '#92400e', // Strong dark orange
 
     success: draculaColors.green,
     warning: draculaColors.orange,
     error: draculaColors.red,
     info: draculaColors.cyan,
 
-    outline: '#52525b',
-    outlineVariant: '#3f3f46',
+    outline: '#4b5563',
+    outlineVariant: '#374151',
 
     navigationBackground: draculaColors.background,
     navigationSurface: draculaColors.currentLine,
@@ -312,37 +303,37 @@ const sepiaTheme: Theme = {
     surface: bookPageColors.vintageCream,
     surfaceVariant: bookPageColors.agedPaper,
 
-    onBackground: bookPageColors.sepiaText,
-    onSurface: '#4a4a42',
-    onSurfaceVariant: '#6b6b5f',
+    onBackground: bookPageColors.sepiaText, // Much darker
+    onSurface: '#2d2a24', // Very dark brown
+    onSurfaceVariant: '#4a453e', // Medium-dark brown
 
-    primary: '#8b7355',
+    primary: '#8b4513', // Saddle brown - much darker
     onPrimary: bookPageColors.sepiaBackground,
-    primaryContainer: '#d4c5a9',
-    onPrimaryContainer: '#5d4e3a',
+    primaryContainer: '#d2b48c',
+    onPrimaryContainer: '#3e2723',
 
-    secondary: '#7a8471',
+    secondary: '#556b2f', // Dark olive green
     onSecondary: bookPageColors.sepiaBackground,
-    secondaryContainer: '#c8d0bf',
-    onSecondaryContainer: '#404740',
+    secondaryContainer: '#d7ccc8',
+    onSecondaryContainer: '#2e3c1a',
 
-    accent: '#a67c52',
+    accent: '#a0522d', // Sienna - darker
     onAccent: bookPageColors.sepiaBackground,
-    accentContainer: '#e8d5c4',
-    onAccentContainer: '#5d3e26',
+    accentContainer: '#efebe9',
+    onAccentContainer: '#4e2a1a',
 
-    // Section groups - warm paper tones
-    coreLearning: '#f4eed7', // Warm cream
-    enhancedLearning: '#ede5d3', // Aged paper
-    supplementary: '#f0e3c7', // Light parchment
+    // Warmer, more distinct paper tones
+    coreLearning: '#f3e5f5', // Light lavender
+    enhancedLearning: '#e8f5e8', // Light mint
+    supplementary: '#fff8e1', // Light cream
 
-    success: '#7a8471',
-    warning: '#b8860b',
-    error: '#a0522d',
-    info: '#4682b4',
+    success: '#558b2f',
+    warning: '#f57f17',
+    error: '#d84315',
+    info: '#1976d2',
 
-    outline: '#c4b5a0',
-    outlineVariant: '#d4c5a9',
+    outline: '#8d6e63',
+    outlineVariant: '#a1887f',
 
     navigationBackground: bookPageColors.sepiaBackground,
     navigationSurface: bookPageColors.vintageCream,
@@ -356,53 +347,53 @@ const highContrastTheme: Theme = {
   mode: 'highContrast',
   colors: {
     background: '#ffffff',
-    surface: '#f8f9fa',
-    surfaceVariant: '#e9ecef',
+    surface: '#f5f5f5',
+    surfaceVariant: '#eeeeee',
 
-    onBackground: '#000000',
-    onSurface: '#000000',
-    onSurfaceVariant: '#212529',
+    onBackground: '#000000', // Pure black
+    onSurface: '#000000', // Pure black
+    onSurfaceVariant: '#212121', // Very dark gray
 
-    primary: '#0d47a1',
+    primary: '#0d47a1', // Very dark blue
     onPrimary: '#ffffff',
-    primaryContainer: '#bbdefb',
+    primaryContainer: '#e3f2fd',
     onPrimaryContainer: '#0d47a1',
 
-    secondary: '#1b5e20',
+    secondary: '#1b5e20', // Very dark green
     onSecondary: '#ffffff',
-    secondaryContainer: '#c8e6c9',
+    secondaryContainer: '#e8f5e8',
     onSecondaryContainer: '#1b5e20',
 
-    accent: '#e65100',
+    accent: '#e65100', // Strong orange
     onAccent: '#ffffff',
-    accentContainer: '#ffccbc',
+    accentContainer: '#fff3e0',
     onAccentContainer: '#e65100',
 
-    // Section groups - high contrast
-    coreLearning: '#e3f2fd', // Light blue
-    enhancedLearning: '#e8f5e8', // Light green
-    supplementary: '#fff3e0', // Light orange
+    // High contrast section colors
+    coreLearning: '#e1f5fe', // Strong blue
+    enhancedLearning: '#e0f2f1', // Strong green
+    supplementary: '#fff8e1', // Strong yellow
 
-    success: '#2e7d32',
-    warning: '#f57f17',
-    error: '#d32f2f',
-    info: '#1976d2',
+    success: '#1b5e20',
+    warning: '#ef6c00',
+    error: '#c62828',
+    info: '#0d47a1',
 
-    outline: '#424242',
-    outlineVariant: '#757575',
+    outline: '#000000',
+    outlineVariant: '#424242',
 
     navigationBackground: '#ffffff',
-    navigationSurface: '#f5f5f5',
+    navigationSurface: '#f0f0f0',
   },
   typography,
   spacing,
   borderRadius,
 };
 
-// Auto theme (follows system)
+// Auto theme remains the same
 const autoTheme: Theme = {
   mode: 'system',
-  colors: lightTheme.colors, // Default to light, will be overridden
+  colors: lightTheme.colors,
   typography,
   spacing,
   borderRadius,
@@ -417,7 +408,7 @@ export const themes: Record<ThemeMode, Theme> = {
   system: autoTheme,
 };
 
-// Section group configuration for ContentScreen
+// Section group configuration - unchanged
 export const sectionGroups = {
   coreLearning: {
     title: 'Core Learning',
@@ -436,7 +427,7 @@ export const sectionGroups = {
   }
 };
 
-// Helper function to get section group
+// Helper function remains the same
 export const getSectionGroup = (sectionType: string): keyof typeof sectionGroups | null => {
   const normalizedType = sectionType?.replace(/[^A-Z_]/g, '') || '';
 
@@ -448,69 +439,13 @@ export const getSectionGroup = (sectionType: string): keyof typeof sectionGroups
   return null;
 };
 
-// Backwards compatibility - keep existing exports
+// Backwards compatibility
 export const brandColors = lightTheme.colors;
 export { createShadow };
 
-// Legacy exports for backward compatibility
 export const layout = {
   borderRadius: borderRadius,
   containerPadding: spacing.md,
 } as const;
 
-// Legacy screen styles - will be updated to use themes
-export const screenStyles = {
-  container: {
-    flexGrow: 1,
-    backgroundColor: lightTheme.colors.background,
-    paddingHorizontal: spacing.md,
-    paddingTop: spacing.lg,
-  },
-
-  screenHeader: {
-    fontSize: typography.fontSize['2xl'],
-    fontWeight: typography.fontWeight.bold,
-    color: lightTheme.colors.onBackground,
-    marginBottom: spacing.lg,
-    textAlign: 'center' as const,
-  },
-
-  listItem: {
-    backgroundColor: lightTheme.colors.surface,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-    marginBottom: spacing.sm,
-    borderRadius: borderRadius.lg,
-    borderLeftWidth: 4,
-    ...createShadow(2),
-  },
-
-  listItemText: {
-    fontSize: typography.fontSize.lg,
-    fontWeight: typography.fontWeight.medium,
-    color: lightTheme.colors.onSurface,
-    lineHeight: typography.lineHeight.normal * typography.fontSize.lg,
-  },
-
-  centeredContainer: {
-    flex: 1,
-    justifyContent: 'center' as const,
-    alignItems: 'center' as const,
-    backgroundColor: lightTheme.colors.background,
-    paddingHorizontal: spacing.lg,
-  },
-
-  errorText: {
-    fontSize: typography.fontSize.lg,
-    color: lightTheme.colors.error,
-    textAlign: 'center' as const,
-    fontWeight: typography.fontWeight.medium,
-  },
-
-  emptyText: {
-    fontSize: typography.fontSize.lg,
-    color: lightTheme.colors.onSurfaceVariant,
-    textAlign: 'center' as const,
-    fontWeight: typography.fontWeight.medium,
-  },
-} as const;
+export { typography, spacing, borderRadius };

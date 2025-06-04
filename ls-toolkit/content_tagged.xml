@@ -204,31 +204,6 @@
                     <memory_sentence>Chemical &lt;dict_word data-word="properties" data-term-type="concept" data-urdu="خصوصیات - مادے کی وہ پیمائشی خصوصیات جو اس کی جسمانی حالت یا کیمیائی رویے کو بیان کرتی ہیں۔" data-short-meaning="Properties are measurable characteristics of matter that describe its physical state or chemical behavior, including attributes like density, melting point, and reactivity."&gt;properties&lt;/dict_word&gt; are like house &lt;dict_word data-word="properties" data-term-type="concept" data-urdu="خصوصیات - مادے کی وہ پیمائشی خصوصیات جو اس کی جسمانی حالت یا کیمیائی رویے کو بیان کرتی ہیں۔" data-short-meaning="Properties are measurable characteristics of matter that describe its physical state or chemical behavior, including attributes like density, melting point, and reactivity."&gt;properties&lt;/dict_word&gt;  describing features and behaviors</memory_sentence>
                 </association>
             </keyword_associations>
-
-            <rhymes_rhythms>
-                <rhyme id="1.1.rr1">
-                    <content>🎵 Chemistry, chemistry, what do you see?
-                        &lt;dict_word data-word="properties" data-term-type="concept" data-urdu="خصوصیات - مادے کی وہ پیمائشی خصوصیات جو اس کی جسمانی حالت یا کیمیائی رویے کو بیان کرتی ہیں۔" data-short-meaning="Properties are measurable characteristics of matter that describe its physical state or chemical behavior, including attributes like density, melting point, and reactivity."&gt;Properties&lt;/dict_word&gt;, composition, and &lt;dict_word data-word="structure" data-term-type="concept" data-urdu="ساخت - کسی کیمیائی شے میں ایٹموں، آئنوں یا سالمات کی ترتیب" data-short-meaning="Structure in chemistry refers to the arrangement of atoms, ions, or molecules in a substance, which determines its physical and chemical properties."&gt;structure&lt;/dict_word&gt; make three!
-                        Changes absorb or release &lt;dict_word data-word="energy" data-term-type="concept" data-urdu="توانائی - کام کرنے یا حرارت منتقل کرنے کی صلاحیت" data-short-meaning="Energy is the capacity to do work or transfer heat, existing in forms like kinetic, potential, chemical, and thermal energy."&gt;energy&lt;/dict_word&gt; free,
-                        That&amp;#x27;s what makes chemistry!</content>
-                                <concept_coverage>Definition of chemistry and &lt;dict_word data-word="energy" data-term-type="concept" data-urdu="توانائی - کام کرنے یا حرارت منتقل کرنے کی صلاحیت" data-short-meaning="Energy is the capacity to do work or transfer heat, existing in forms like kinetic, potential, chemical, and thermal energy."&gt;energy&lt;/dict_word&gt; changes</concept_coverage>
-                                <rhythm_pattern>Sing to &amp;quot;B-I-N-G-O&amp;quot; tune</rhythm_pattern>
-                                <performance_tip>Clap on &amp;quot;&lt;dict_word data-word="properties" data-term-type="concept" data-urdu="خصوصیات - مادے کی وہ پیمائشی خصوصیات جو اس کی جسمانی حالت یا کیمیائی رویے کو بیان کرتی ہیں۔" data-short-meaning="Properties are measurable characteristics of matter that describe its physical state or chemical behavior, including attributes like density, melting point, and reactivity."&gt;properties&lt;/dict_word&gt;,&amp;quot; &amp;quot;composition,&amp;quot; and &amp;quot;&lt;dict_word data-word="structure" data-term-type="concept" data-urdu="ساخت - کسی کیمیائی شے میں ایٹموں، آئنوں یا سالمات کی ترتیب" data-short-meaning="Structure in chemistry refers to the arrangement of atoms, ions, or molecules in a substance, which determines its physical and chemical properties."&gt;structure&lt;/dict_word&gt;&amp;quot;</performance_tip>
-                            </rhyme>
-                            <rhyme id="1.1.rr2">
-                                <content>🎵 PIANO BE, PIANO BE,
-                        Seven branches on chem&amp;#x27;s tree!
-                        Physical and Inorganic too,
-                        Analytical knows what to do!
-                        Nuclear power, Organic life,
-                        Bio-chem cuts like a knife,
-                        Environmental keeps Earth free!</content>
-                    <concept_coverage>All seven branches of chemistry</concept_coverage>
-                    <rhythm_pattern>Rap beat with emphasis on branch names</rhythm_pattern>
-                    <performance_tip>Point to different directions for each branch</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 🎯 Start with the visual mnemonics  spend 2 minutes visualizing each scene</step>
@@ -247,41 +222,6 @@
                     <issue>Mixing up definition parts? → Visualize the LEGO® scientist&amp;#x27;s C-P-S lab coat</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 Drag-and-drop game matching branches to their symbols from the tree</interactive_element>
-                <gamification>🏆 Earn &amp;quot;Chemistry Crystals&amp;quot; for each concept mastered (Composition, &lt;dict_word data-word="properties" data-term-type="concept" data-urdu="خصوصیات - مادے کی وہ پیمائشی خصوصیات جو اس کی جسمانی حالت یا کیمیائی رویے کو بیان کرتی ہیں۔" data-short-meaning="Properties are measurable characteristics of matter that describe its physical state or chemical behavior, including attributes like density, melting point, and reactivity."&gt;Properties&lt;/dict_word&gt;, &lt;dict_word data-word="structure" data-term-type="concept" data-urdu="ساخت - کسی کیمیائی شے میں ایٹموں، آئنوں یا سالمات کی ترتیب" data-short-meaning="Structure in chemistry refers to the arrangement of atoms, ions, or molecules in a substance, which determines its physical and chemical properties."&gt;Structure&lt;/dict_word&gt;)</gamification>
-                <social_sharing>🤝 Share your own branch memory drawings with study group</social_sharing>
-                <progress_tracking>📊 Track which memory technique works best for you with success rates</progress_tracking>
-            </digital_integration>
-
-            <effectiveness_ranking>
-                <rank order="1">
-                    <technique>Story Method (Kingdom of Chemistria)</technique>
-                    <retention_rate>85-90%</retention_rate>
-                    <reason>Narrative &lt;dict_word data-word="structure" data-term-type="concept" data-urdu="ساخت - کسی کیمیائی شے میں ایٹموں، آئنوں یا سالمات کی ترتیب" data-short-meaning="Structure in chemistry refers to the arrangement of atoms, ions, or molecules in a substance, which determines its physical and chemical properties."&gt;structure&lt;/dict_word&gt; connects all concepts in memorable sequence</reason>
-                </rank>
-                <rank order="2">
-                    <technique>Acronyms (COPS and PIANO BE)</technique>
-                    <retention_rate>80-85%</retention_rate>
-                    <reason>Short, catchy, and directly map to key concepts</reason>
-                </rank>
-                <rank order="3">
-                    <technique>Visual Mnemonics</technique>
-                    <retention_rate>75-80%</retention_rate>
-                    <reason>Strong imagery but requires active visualization practice</reason>
-                </rank>
-                <rank order="4">
-                    <technique>Rhymes and Rhythms</technique>
-                    <retention_rate>70-75%</retention_rate>
-                    <reason>Musical memory is strong but needs repetition</reason>
-                </rank>
-                <rank order="5">
-                    <technique>Memory Palace</technique>
-                    <retention_rate>65-70%</retention_rate>
-                    <reason>Effective but requires familiarity with chosen location</reason>
-                </rank>
-            </effectiveness_ranking>
         </section>
     </topic>
 
@@ -542,44 +482,6 @@
                 </association>
             </keyword_associations>
 
-            <rhymes_rhythms>
-                <rhyme id="1.2.rr1">
-                    <content>🎵 &lt;dict_word data-word="solid" data-term-type="concept" data-urdu="ٹھوس - مادّے کی وہ حالت جس کی مخصوص شکل اور حجم ہو" data-short-meaning="State of matter with fixed shape/volume due to strong intermolecular forces and restricted particle motion."&gt;Solid&lt;/dict_word&gt;, liquid, &lt;dict_word data-word="gas" data-term-type="concept" data-urdu="گیس - مادّے کی وہ حالت جہاں سالمات کے درمیان کشش نہ ہونے کے برابر ہو" data-short-meaning="State of matter with negligible intermolecular forces, filling containers completely with compressible volume and rapid diffusion."&gt;gas&lt;/dict_word&gt;, hooray!
-                        &lt;dict_word data-word="particles" data-term-type="concept" data-urdu="ذرّات - مادّے کے بنیادی اجزاء" data-short-meaning="Fundamental constituents of matter including atoms, molecules, ions, and subatomic particles."&gt;Particles&lt;/dict_word&gt; dance in their own way!
-                        Solids vibrate, stay in place,
-                        Liquids flow at medium pace,
-                        Gases zoom through all the space!
-                        Add more heat? Here comes plasma&amp;#x27;s face! ⚡</content>
-                    <concept_coverage>All states and particle motion</concept_coverage>
-                    <rhythm_pattern>Sing to &amp;quot;London Bridge&amp;quot; tune</rhythm_pattern>
-                    <performance_tip>Speed up tempo for each state to match particle &lt;dict_word data-word="energy" data-term-type="concept" data-urdu="توانائی - کام کرنے یا حرارت پیدا کرنے کی صلاحیت" data-short-meaning="Capacity to do work or produce heat, conserved in chemical systems through enthalpy changes."&gt;energy&lt;/dict_word&gt;</performance_tip>
-                </rhyme>
-                <rhyme id="1.2.rr2">
-                    <content>🎵 Ice cube → water → steam so hot,
-                        Fixed shape → flows a lot → fills the pot!
-                        Can&amp;#x27;t squeeze → bit tight → squish with might!
-                        That&amp;#x27;s how &lt;dict_word data-word="particles" data-term-type="concept" data-urdu="ذرّات - مادّے کے بنیادی اجزاء" data-short-meaning="Fundamental constituents of matter including atoms, molecules, ions, and subatomic particles."&gt;particles&lt;/dict_word&gt; sit just right!</content>
-                    <concept_coverage>State transitions and properties</concept_coverage>
-                    <rhythm_pattern>Hip-hop beat with hand gestures</rhythm_pattern>
-                    <performance_tip>Use hand shapes: fist (&lt;dict_word data-word="solid" data-term-type="concept" data-urdu="ٹھوس - مادّے کی وہ حالت جس کی مخصوص شکل اور حجم ہو" data-short-meaning="State of matter with fixed shape/volume due to strong intermolecular forces and restricted particle motion."&gt;solid&lt;/dict_word&gt;) → flowing motion (liquid) → spread fingers (&lt;dict_word data-word="gas" data-term-type="concept" data-urdu="گیس - مادّے کی وہ حالت جہاں سالمات کے درمیان کشش نہ ہونے کے برابر ہو" data-short-meaning="State of matter with negligible intermolecular forces, filling containers completely with compressible volume and rapid diffusion."&gt;gas&lt;/dict_word&gt;)</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
-            <number_shape_associations>
-                <association id="1.2.nsa1">
-                    <number_formula>3 common states + 1 &lt;dict_word data-word="plasma" data-term-type="concept" data-urdu="پلازما - مادّے کی چوتھی حالت جس میں گیس آئنائزڈ ہوتی ہے" data-short-meaning="Fourth state of matter consisting of ionized gas with quasineutral mixtures of electrons, ions, and neutrals."&gt;plasma&lt;/dict_word&gt; = 4 total</number_formula>
-                    <shape_visualization>🔺 Triangle for 3 common states with ⭐ star on top for &lt;dict_word data-word="plasma" data-term-type="concept" data-urdu="پلازما - مادّے کی چوتھی حالت جس میں گیس آئنائزڈ ہوتی ہے" data-short-meaning="Fourth state of matter consisting of ionized gas with quasineutral mixtures of electrons, ions, and neutrals."&gt;plasma&lt;/dict_word&gt;</shape_visualization>
-                    <story_integration>The triangle is stable (like common states) while the star sparkles with &lt;dict_word data-word="energy" data-term-type="concept" data-urdu="توانائی - کام کرنے یا حرارت پیدا کرنے کی صلاحیت" data-short-meaning="Capacity to do work or produce heat, conserved in chemical systems through enthalpy changes."&gt;energy&lt;/dict_word&gt; above</story_integration>
-                    <recall_method>Draw triangle, add star = remember 3+1 states</recall_method>
-                </association>
-                <association id="1.2.nsa2">
-                    <number_formula>&lt;dict_word data-word="density" data-term-type="property" data-urdu="کثافت - کمیت فی اکائی حجم" data-short-meaning="Mass per unit volume (ρ=m/V), an intensive property determining buoyancy and material purity."&gt;Density&lt;/dict_word&gt;: &lt;dict_word data-word="solid" data-term-type="concept" data-urdu="ٹھوس - مادّے کی وہ حالت جس کی مخصوص شکل اور حجم ہو" data-short-meaning="State of matter with fixed shape/volume due to strong intermolecular forces and restricted particle motion."&gt;Solid&lt;/dict_word&gt; &amp;gt; Liquid &amp;gt; &lt;dict_word data-word="gas" data-term-type="concept" data-urdu="گیس - مادّے کی وہ حالت جہاں سالمات کے درمیان کشش نہ ہونے کے برابر ہو" data-short-meaning="State of matter with negligible intermolecular forces, filling containers completely with compressible volume and rapid diffusion."&gt;Gas&lt;/dict_word&gt;</number_formula>
-                    <shape_visualization>📊 Staircase going down from left to right</shape_visualization>
-                    <story_integration>&lt;dict_word data-word="particles" data-term-type="concept" data-urdu="ذرّات - مادّے کے بنیادی اجزاء" data-short-meaning="Fundamental constituents of matter including atoms, molecules, ions, and subatomic particles."&gt;Particles&lt;/dict_word&gt; &amp;quot;fall down&amp;quot; the &lt;dict_word data-word="density" data-term-type="property" data-urdu="کثافت - کمیت فی اکائی حجم" data-short-meaning="Mass per unit volume (ρ=m/V), an intensive property determining buoyancy and material purity."&gt;density&lt;/dict_word&gt; stairs as they gain &lt;dict_word data-word="energy" data-term-type="concept" data-urdu="توانائی - کام کرنے یا حرارت پیدا کرنے کی صلاحیت" data-short-meaning="Capacity to do work or produce heat, conserved in chemical systems through enthalpy changes."&gt;energy&lt;/dict_word&gt;</story_integration>
-                    <recall_method>Draw descending stairs = &lt;dict_word data-word="density" data-term-type="property" data-urdu="کثافت - کمیت فی اکائی حجم" data-short-meaning="Mass per unit volume (ρ=m/V), an intensive property determining buoyancy and material purity."&gt;density&lt;/dict_word&gt; decreases</recall_method>
-                </association>
-            </number_shape_associations>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 🏃 Act out the &lt;dict_word data-word="matter" data-term-type="concept" data-urdu="مادّہ - وہ شے جو جگہ گھیرے اور کمیت رکھتی ہو" data-short-meaning="Anything occupying space and having mass, existing in classical states (solid/liquid/gas) or exotic quantum phases."&gt;Matter&lt;/dict_word&gt; Circus story with body movements</step>
@@ -598,41 +500,6 @@
                     <issue>Forgetting &lt;dict_word data-word="plasma" data-term-type="concept" data-urdu="پلازما - مادّے کی چوتھی حالت جس میں گیس آئنائزڈ ہوتی ہے" data-short-meaning="Fourth state of matter consisting of ionized gas with quasineutral mixtures of electrons, ions, and neutrals."&gt;plasma&lt;/dict_word&gt;? → Remember &lt;dict_word data-word="lightning" data-term-type="other" data-urdu="بجلی کا کڑکنا - فضا میں قدرتی برقی تخلیہ" data-short-meaning="Natural electrical discharge through ionized air channels, generating plasma with temperatures exceeding 30,000K."&gt;Lightning&lt;/dict_word&gt; Superhero and the star above triangle</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 Particle simulator where students control &lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - اوسط حرکی توانائی کی پیمائش" data-short-meaning="Measure of average kinetic energy per particle, governing reaction rates and phase equilibria."&gt;temperature&lt;/dict_word&gt; and watch state changes</interactive_element>
-                <gamification>🏆 &amp;quot;State Master&amp;quot; badges for correctly predicting particle behavior</gamification>
-                <social_sharing>📸 Share drawings of your &lt;dict_word data-word="matter" data-term-type="concept" data-urdu="مادّہ - وہ شے جو جگہ گھیرے اور کمیت رکھتی ہو" data-short-meaning="Anything occupying space and having mass, existing in classical states (solid/liquid/gas) or exotic quantum phases."&gt;matter&lt;/dict_word&gt; neighborhoods or circus acts</social_sharing>
-                <progress_tracking>📊 Track which states you identify fastest in timed challenges</progress_tracking>
-            </digital_integration>
-
-            <effectiveness_ranking>
-                <rank order="1">
-                    <technique>Story Method (&lt;dict_word data-word="matter" data-term-type="concept" data-urdu="مادّہ - وہ شے جو جگہ گھیرے اور کمیت رکھتی ہو" data-short-meaning="Anything occupying space and having mass, existing in classical states (solid/liquid/gas) or exotic quantum phases."&gt;Matter&lt;/dict_word&gt; Circus)</technique>
-                    <retention_rate>90%</retention_rate>
-                    <reason>Vivid characters and actions create strong associations with particle behavior</reason>
-                </rank>
-                <rank order="2">
-                    <technique>Visual Mnemonics (Triplets and Neighborhoods)</technique>
-                    <retention_rate>85%</retention_rate>
-                    <reason>Concrete imagery directly maps to abstract concepts</reason>
-                </rank>
-                <rank order="3">
-                    <technique>Memory Palace (House Tour)</technique>
-                    <retention_rate>80%</retention_rate>
-                    <reason>Familiar locations create strong spatial memory</reason>
-                </rank>
-                <rank order="4">
-                    <technique>Rhymes and Movement</technique>
-                    <retention_rate>75%</retention_rate>
-                    <reason>Musical and kinesthetic elements enhance recall</reason>
-                </rank>
-                <rank order="5">
-                    <technique>Acronyms (SLiP into &lt;dict_word data-word="gas" data-term-type="concept" data-urdu="گیس - مادّے کی وہ حالت جہاں سالمات کے درمیان کشش نہ ہونے کے برابر ہو" data-short-meaning="State of matter with negligible intermolecular forces, filling containers completely with compressible volume and rapid diffusion."&gt;Gas&lt;/dict_word&gt;)</technique>
-                    <retention_rate>70%</retention_rate>
-                    <reason>Quick reference but less detailed than other methods</reason>
-                </rank>
-            </effectiveness_ranking>
         </section>
     </topic>
 
@@ -889,46 +756,6 @@
                 </association>
             </keyword_associations>
 
-            <rhymes_rhythms>
-                <rhyme id="1.3.rr1">
-                    <content>🎵 &lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادے جو صرف ایک قسم کے ایٹم پر مشتمل ہوں" data-short-meaning="Elements are pure substances consisting of only one type of atom, distinguished by its atomic number (number of protons). They cannot be broken down into simpler substances by ordinary chemical means and are the fundamental building blocks of matter."&gt;Elements&lt;/dict_word&gt; are simple, just one kind,
-                        &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکبات - خالص مادے جو دو یا زیادہ مختلف عناصر کے ایٹموں کے کیمیائی طور پر مقررہ تناسب میں جڑنے سے بنتے ہیں" data-short-meaning="Compounds are pure substances formed when atoms of two or more different elements are chemically bonded together in fixed ratios. Compounds can only be separated into their constituent elements by chemical means."&gt;Compounds&lt;/dict_word&gt; are bonded, chemically combined!
-                        &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="آمیزے - دو یا زیادہ خالص مادوں کا طبعی امتزاج جس میں ہر مادہ اپنی شناخت برقرار رکھتا ہے" data-short-meaning="Mixtures are physical combinations of two or more pure substances (elements or compounds) in which each substance retains its own chemical identity and properties. Mixtures can be homogeneous or heterogeneous and can be separated by physical means."&gt;Mixtures&lt;/dict_word&gt; are mingled, but not attached,
-                        Physical methods get them unmatched!
-                        Fixed ratio? That&amp;#x27;s compound&amp;#x27;s way,
-                        Variable amounts? &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="آمیزے - دو یا زیادہ خالص مادوں کا طبعی امتزاج جس میں ہر مادہ اپنی شناخت برقرار رکھتا ہے" data-short-meaning="Mixtures are physical combinations of two or more pure substances (elements or compounds) in which each substance retains its own chemical identity and properties. Mixtures can be homogeneous or heterogeneous and can be separated by physical means."&gt;Mixtures&lt;/dict_word&gt; say &amp;quot;okay!&amp;quot; 🎵</content>
-                    <concept_coverage>All three types and their key differences</concept_coverage>
-                    <rhythm_pattern>Rap to a steady beat, emphasize rhyming words</rhythm_pattern>
-                    <performance_tip>Use hand gestures: single fist (element), clasped hands (compound), loose fingers (mixture)</performance_tip>
-                </rhyme>
-                <rhyme id="1.3.rr2">
-                    <content>🎵 H-2-O, always the same,
-                        That&amp;#x27;s how &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکبات - خالص مادے جو دو یا زیادہ مختلف عناصر کے ایٹموں کے کیمیائی طور پر مقررہ تناسب میں جڑنے سے بنتے ہیں" data-short-meaning="Compounds are pure substances formed when atoms of two or more different elements are chemically bonded together in fixed ratios. Compounds can only be separated into their constituent elements by chemical means."&gt;compounds&lt;/dict_word&gt; play the game!
-                        Salt and &lt;dict_word data-word="water" data-term-type="compound" data-urdu="پانی - دو ہائیڈروجن اور ایک آکسیجن ایٹم پر مشتمل کیمیائی مرکب، ایک خالص مادہ" data-short-meaning="Water (H₂O) is a chemical compound consisting of two hydrogen atoms and one oxygen atom. It is a pure substance essential for all known forms of life and is a universal solvent."&gt;water&lt;/dict_word&gt;, any amount,
-                        That&amp;#x27;s what &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="آمیزے - دو یا زیادہ خالص مادوں کا طبعی امتزاج جس میں ہر مادہ اپنی شناخت برقرار رکھتا ہے" data-short-meaning="Mixtures are physical combinations of two or more pure substances (elements or compounds) in which each substance retains its own chemical identity and properties. Mixtures can be homogeneous or heterogeneous and can be separated by physical means."&gt;mixtures&lt;/dict_word&gt; are about!
-                        Can&amp;#x27;t break &lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادے جو صرف ایک قسم کے ایٹم پر مشتمل ہوں" data-short-meaning="Elements are pure substances consisting of only one type of atom, distinguished by its atomic number (number of protons). They cannot be broken down into simpler substances by ordinary chemical means and are the fundamental building blocks of matter."&gt;elements&lt;/dict_word&gt; anymore,
-                        They&amp;#x27;re as simple as the core! 🎵</content>
-                    <concept_coverage>Fixed ratios and breakdown limits</concept_coverage>
-                    <rhythm_pattern>Sing to &amp;quot;Row, Row, Row Your Boat&amp;quot;</rhythm_pattern>
-                    <performance_tip>Hold up fingers for H-2-O, spread arms wide for &amp;quot;any amount&amp;quot;</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
-            <number_shape_associations>
-                <association id="1.3.nsa1">
-                    <number_formula>1:8 (hydrogen to &lt;dict_word data-word="oxygen" data-term-type="element" data-urdu="آکسیجن - ایک انتہائی تعامل پذیر غیر دھاتی عنصر، جو سانس لینے اور جلنے کے لیے ضروری ہے" data-short-meaning="Oxygen (O) is a highly reactive nonmetallic chemical element, essential for respiration in most living organisms and for combustion processes. It commonly exists as a diatomic molecule (O₂)."&gt;oxygen&lt;/dict_word&gt; mass ratio in &lt;dict_word data-word="water" data-term-type="compound" data-urdu="پانی - دو ہائیڈروجن اور ایک آکسیجن ایٹم پر مشتمل کیمیائی مرکب، ایک خالص مادہ" data-short-meaning="Water (H₂O) is a chemical compound consisting of two hydrogen atoms and one oxygen atom. It is a pure substance essential for all known forms of life and is a universal solvent."&gt;water&lt;/dict_word&gt;)</number_formula>
-                    <shape_visualization>⚖️ A seesaw with 1 small ball on left, 8 large balls on right, perfectly balanced</shape_visualization>
-                    <story_integration>The seesaw only balances with exactly this ratio  showing fixed compound proportions</story_integration>
-                    <recall_method>Draw seesaw with 1:8 ratio = remember compound fixed ratios</recall_method>
-                </association>
-                <association id="1.3.nsa2">
-                    <number_formula>3 types of &lt;dict_word data-word="matter" data-term-type="concept" data-urdu="مادہ - ہر وہ چیز جو کمیت رکھتی ہو اور جگہ گھیرتی ہو" data-short-meaning="Matter is anything that has mass and takes up space (volume). It exists in various states (solid, liquid, gas, plasma) and is composed of atoms. Matter can be classified as pure substances (elements and compounds) or mixtures."&gt;matter&lt;/dict_word&gt; (E-C-M)</number_formula>
-                    <shape_visualization>🔺 Triangle with E at top (simplest), C and M at bottom corners</shape_visualization>
-                    <story_integration>&lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادے جو صرف ایک قسم کے ایٹم پر مشتمل ہوں" data-short-meaning="Elements are pure substances consisting of only one type of atom, distinguished by its atomic number (number of protons). They cannot be broken down into simpler substances by ordinary chemical means and are the fundamental building blocks of matter."&gt;Elements&lt;/dict_word&gt; at peak (purest), &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکبات - خالص مادے جو دو یا زیادہ مختلف عناصر کے ایٹموں کے کیمیائی طور پر مقررہ تناسب میں جڑنے سے بنتے ہیں" data-short-meaning="Compounds are pure substances formed when atoms of two or more different elements are chemically bonded together in fixed ratios. Compounds can only be separated into their constituent elements by chemical means."&gt;compounds&lt;/dict_word&gt; and &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="آمیزے - دو یا زیادہ خالص مادوں کا طبعی امتزاج جس میں ہر مادہ اپنی شناخت برقرار رکھتا ہے" data-short-meaning="Mixtures are physical combinations of two or more pure substances (elements or compounds) in which each substance retains its own chemical identity and properties. Mixtures can be homogeneous or heterogeneous and can be separated by physical means."&gt;mixtures&lt;/dict_word&gt; form the base</story_integration>
-                    <recall_method>Triangle point = pure element, base = combinations</recall_method>
-                </association>
-            </number_shape_associations>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 🏪 Take an actual or mental walk through a grocery store identifying examples</step>
@@ -947,41 +774,6 @@
                     <issue>Forgetting &lt;dict_word data-word="homogeneous" data-term-type="property" data-urdu="یکساں / ہوموجینیئس - ایسا آمیزہ یا نظام جس کی ترکیب ہر جگہ یکساں ہو" data-short-meaning="Homogeneous refers to a mixture or system that has a uniform composition and properties throughout. Individual components are not visually distinguishable. Solutions and alloys are examples."&gt;homogeneous&lt;/dict_word&gt; vs &lt;dict_word data-word="heterogeneous" data-term-type="property" data-urdu="غیر یکساں / ہیٹروجینیئس - ایسا آمیزہ یا نظام جس کی ترکیب ہر جگہ یکساں نہ ہو" data-short-meaning="Heterogeneous refers to a mixture or system that is not uniform in composition throughout; its components are visually distinguishable or exist in different phases. Examples include sand and water, or colloids like milk."&gt;heterogeneous&lt;/dict_word&gt;? → HO-HE: can you see the parts (HE) or not (HO)?</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 Virtual factory game where students sort &lt;dict_word data-word="matter" data-term-type="concept" data-urdu="مادہ - ہر وہ چیز جو کمیت رکھتی ہو اور جگہ گھیرتی ہو" data-short-meaning="Matter is anything that has mass and takes up space (volume). It exists in various states (solid, liquid, gas, plasma) and is composed of atoms. Matter can be classified as pure substances (elements and compounds) or mixtures."&gt;matter&lt;/dict_word&gt; into correct production lines</interactive_element>
-                <gamification>🏆 &amp;quot;&lt;dict_word data-word="matter" data-term-type="concept" data-urdu="مادہ - ہر وہ چیز جو کمیت رکھتی ہو اور جگہ گھیرتی ہو" data-short-meaning="Matter is anything that has mass and takes up space (volume). It exists in various states (solid, liquid, gas, plasma) and is composed of atoms. Matter can be classified as pure substances (elements and compounds) or mixtures."&gt;Matter&lt;/dict_word&gt; Master&amp;quot; levels: Sorter → Separator → Chemist</gamification>
-                <social_sharing>📷 Photo challenge: find and label 5 examples of each type in your home</social_sharing>
-                <progress_tracking>📊 Speed trials: how fast can you classify 20 substances correctly?</progress_tracking>
-            </digital_integration>
-
-            <effectiveness_ranking>
-                <rank order="1">
-                    <technique>Visual Mnemonics (LEGO® analogy)</technique>
-                    <retention_rate>90%</retention_rate>
-                    <reason>Concrete, familiar objects directly map to abstract concepts</reason>
-                </rank>
-                <rank order="2">
-                    <technique>Story Method (&lt;dict_word data-word="matter" data-term-type="concept" data-urdu="مادہ - ہر وہ چیز جو کمیت رکھتی ہو اور جگہ گھیرتی ہو" data-short-meaning="Matter is anything that has mass and takes up space (volume). It exists in various states (solid, liquid, gas, plasma) and is composed of atoms. Matter can be classified as pure substances (elements and compounds) or mixtures."&gt;Matter&lt;/dict_word&gt; Factory)</technique>
-                    <retention_rate>85%</retention_rate>
-                    <reason>Narrative structure links all concepts with clear characters and actions</reason>
-                </rank>
-                <rank order="3">
-                    <technique>Memory Palace (Grocery Store)</technique>
-                    <retention_rate>80%</retention_rate>
-                    <reason>Familiar location with logical connections to concepts</reason>
-                </rank>
-                <rank order="4">
-                    <technique>Rhymes and Rhythms</technique>
-                    <retention_rate>75%</retention_rate>
-                    <reason>Musical memory aids recall of key differences</reason>
-                </rank>
-                <rank order="5">
-                    <technique>Acronyms (&lt;dict_word data-word="ecm" data-term-type="mixture" data-urdu="ای سی ایم (خارجی خلیاتی میٹرکس) - خلیوں کو ساختی اور حیاتی کیمیائی مدد فراہم کرنے والا پروٹین اور پولی سیکرائیڈ کا نیٹ ورک" data-short-meaning="ECM (Extracellular Matrix) is a complex network of proteins and polysaccharides secreted by cells that provides structural and biochemical support to surrounding cells. It&amp;#x27;s a biological example of a complex, often heterogeneous, mixture or composite material."&gt;ECM&lt;/dict_word&gt;, &lt;dict_word data-word="fvsc" data-term-type="other" data-urdu="ایف وی ایس سی (فکسڈ والیوم سیمپل کنسنٹریٹر) - نمونوں کو مرتکز کرنے والا لیبارٹری آلہ" data-short-meaning="FVSC (Fixed Volume Sample Concentrator) is a laboratory device used to concentrate samples by evaporating solvent under controlled conditions, often for analytical chemistry techniques. It helps in preparing dilute solutions for analysis."&gt;FVSC&lt;/dict_word&gt;)</technique>
-                    <retention_rate>70%</retention_rate>
-                    <reason>Quick reference tools but less detailed than other methods</reason>
-                </rank>
-            </effectiveness_ranking>
         </section>
     </topic>
 
@@ -1204,54 +996,6 @@
                 </association>
             </keyword_associations>
 
-            <rhymes_rhythms>
-                <rhyme id="1.4.rr1">
-                    <content>🎵 &lt;dict_word data-word="diamond" data-term-type="concept" data-urdu="ہیرا - کاربن کی ٹھوس شکل جو سب سے سخت قدرتی مادّہ ہے" data-short-meaning="Carbon allotrope with tetrahedral sp³ hybridization forming 3D covalent network, the hardest natural material."&gt;Diamond&lt;/dict_word&gt; hard and crystal clear,
-                        &lt;dict_word data-word="graphite" data-term-type="concept" data-urdu="گرافائٹ - کاربن کی پرتوں والی ساختیں" data-short-meaning="Carbon allotrope with layered sp²-hybridized sheets bonded by van der Waals forces."&gt;Graphite&lt;/dict_word&gt; soft and dark as night,
-                        Bucky ball rolls everywhere,
-                        Same &lt;dict_word data-word="carbon" data-term-type="element" data-urdu="کاربن - ایٹمی نمبر 6 والا عنصر" data-short-meaning="Element with atomic number 6 exhibiting diverse allotropes through sp³/sp²/sp hybridization and catenation."&gt;carbon&lt;/dict_word&gt;, different sight!
-
-                        O-2 helps us breathe with ease,
-                        O-3 shields us from the sun,
-                        &lt;dict_word data-word="sulfur" data-term-type="element" data-urdu="گندھک - ایٹمی نمبر 16 والا عنصر" data-short-meaning="Element with atomic number 16 exhibiting multiple allotropes including rhombic and monoclinic forms."&gt;Sulfur&lt;/dict_word&gt; changes as it please,
-                        When &lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - ساختی پائیداری کو کنٹرول کرنے والا عنصر" data-short-meaning="Factor controlling allotrope stability; monoclinic sulfur forms above 95.6°C."&gt;temperature&lt;/dict_word&gt; makes it run! 🎵
-                    </content>
-                    <concept_coverage>All major &lt;dict_word data-word="allotropes" data-term-type="concept" data-urdu="مختلف ساختی اشکال - ایک ہی عنصر کی مختلف ساختیں" data-short-meaning="Different structural forms of the same element with distinct physical/chemical properties due to atomic arrangement variations."&gt;allotropes&lt;/dict_word&gt; and their properties</concept_coverage>
-                    <rhythm_pattern>Sing to &amp;quot;Twinkle, Twinkle, Little Star&amp;quot;</rhythm_pattern>
-                    <performance_tip>Make hand shapes: fist (&lt;dict_word data-word="diamond" data-term-type="concept" data-urdu="ہیرا - کاربن کی ٹھوس شکل جو سب سے سخت قدرتی مادّہ ہے" data-short-meaning="Carbon allotrope with tetrahedral sp³ hybridization forming 3D covalent network, the hardest natural material."&gt;diamond&lt;/dict_word&gt;), flat hand (&lt;dict_word data-word="graphite" data-term-type="concept" data-urdu="گرافائٹ - کاربن کی پرتوں والی ساختیں" data-short-meaning="Carbon allotrope with layered sp²-hybridized sheets bonded by van der Waals forces."&gt;graphite&lt;/dict_word&gt;), ball (fullerene)</performance_tip>
-                </rhyme>
-                <rhyme id="1.4.rr2">
-                    <content>🎵 A-L-L-O-T-R-O-P-E!
-                        Same atoms arranged differently!
-                        &lt;dict_word data-word="diamond" data-term-type="concept" data-urdu="ہیرا - کاربن کی ٹھوس شکل جو سب سے سخت قدرتی مادّہ ہے" data-short-meaning="Carbon allotrope with tetrahedral sp³ hybridization forming 3D covalent network, the hardest natural material."&gt;Diamond&lt;/dict_word&gt;, &lt;dict_word data-word="graphite" data-term-type="concept" data-urdu="گرافائٹ - کاربن کی پرتوں والی ساختیں" data-short-meaning="Carbon allotrope with layered sp²-hybridized sheets bonded by van der Waals forces."&gt;graphite&lt;/dict_word&gt;, C-60,
-                        &lt;dict_word data-word="carbon" data-term-type="element" data-urdu="کاربن - ایٹمی نمبر 6 والا عنصر" data-short-meaning="Element with atomic number 6 exhibiting diverse allotropes through sp³/sp²/sp hybridization and catenation."&gt;Carbon&lt;/dict_word&gt; shows variety! 🎵</content>
-                    <concept_coverage>&lt;dict_word data-word="allotropy" data-term-type="concept" data-urdu="مختلف ساختی اشکال کی خصوصیت" data-short-meaning="The property of certain elements to exist in multiple structural forms with different atomic arrangements."&gt;Allotropy&lt;/dict_word&gt; definition and &lt;dict_word data-word="carbon" data-term-type="element" data-urdu="کاربن - ایٹمی نمبر 6 والا عنصر" data-short-meaning="Element with atomic number 6 exhibiting diverse allotropes through sp³/sp²/sp hybridization and catenation."&gt;carbon&lt;/dict_word&gt; examples</concept_coverage>
-                    <rhythm_pattern>Cheerleader chant rhythm</rhythm_pattern>
-                    <performance_tip>Spell out with arm movements, jump on &amp;quot;variety&amp;quot;</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
-            <number_shape_associations>
-                <association id="1.4.nsa1">
-                    <number_formula>₆₀ (60 &lt;dict_word data-word="carbon" data-term-type="element" data-urdu="کاربن - ایٹمی نمبر 6 والا عنصر" data-short-meaning="Element with atomic number 6 exhibiting diverse allotropes through sp³/sp²/sp hybridization and catenation."&gt;carbon&lt;/dict_word&gt; atoms)</number_formula>
-                    <shape_visualization>⚽ Soccer ball with 12 pentagons and 20 hexagons = 60 vertices</shape_visualization>
-                    <story_integration>Each vertex is a &lt;dict_word data-word="carbon" data-term-type="element" data-urdu="کاربن - ایٹمی نمبر 6 والا عنصر" data-short-meaning="Element with atomic number 6 exhibiting diverse allotropes through sp³/sp²/sp hybridization and catenation."&gt;carbon&lt;/dict_word&gt; atom, creating a perfect sphere</story_integration>
-                    <recall_method>Count soccer ball panels → remember 60 carbons</recall_method>
-                </association>
-                <association id="1.4.nsa2">
-                    <number_formula>₂ vs ₃</number_formula>
-                    <shape_visualization>✌️ Two fingers (₂) vs 👌 Three fingers (₃)</shape_visualization>
-                    <story_integration>Peace sign for friendly &lt;dict_word data-word="oxygen" data-term-type="element" data-urdu="آکسیجن - ایٹمی نمبر 8 والا عنصر" data-short-meaning="Element with atomic number 8 exhibiting O₂ (dioxygen) and O₃ (ozone) allotropes."&gt;oxygen&lt;/dict_word&gt;, OK sign for protective &lt;dict_word data-word="ozone" data-term-type="compound" data-urdu="اوزون - آکسیجن کی تین ایٹموں والی شکل" data-short-meaning="Triatomic oxygen allotrope (O₃) with bent structure and resonance stabilization, absorbing UV radiation."&gt;ozone&lt;/dict_word&gt;</story_integration>
-                    <recall_method>Hand signs show atom count</recall_method>
-                </association>
-                <association id="1.4.nsa3">
-                    <number_formula>95.5°C (&lt;dict_word data-word="sulfur" data-term-type="element" data-urdu="گندھک - ایٹمی نمبر 16 والا عنصر" data-short-meaning="Element with atomic number 16 exhibiting multiple allotropes including rhombic and monoclinic forms."&gt;sulfur&lt;/dict_word&gt; transition)</number_formula>
-                    <shape_visualization>🌡️ Thermometer almost at boiling (100°C)</shape_visualization>
-                    <story_integration>Just below water&amp;#x27;s boiling point, &lt;dict_word data-word="sulfur" data-term-type="element" data-urdu="گندھک - ایٹمی نمبر 16 والا عنصر" data-short-meaning="Element with atomic number 16 exhibiting multiple allotropes including rhombic and monoclinic forms."&gt;sulfur&lt;/dict_word&gt; transforms</story_integration>
-                    <recall_method>Almost boiling = &lt;dict_word data-word="sulfur" data-term-type="element" data-urdu="گندھک - ایٹمی نمبر 16 والا عنصر" data-short-meaning="Element with atomic number 16 exhibiting multiple allotropes including rhombic and monoclinic forms."&gt;sulfur&lt;/dict_word&gt; changes form</recall_method>
-                </association>
-            </number_shape_associations>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 💎 Handle real examples: pencil (&lt;dict_word data-word="graphite" data-term-type="concept" data-urdu="گرافائٹ - کاربن کی پرتوں والی ساختیں" data-short-meaning="Carbon allotrope with layered sp²-hybridized sheets bonded by van der Waals forces."&gt;graphite&lt;/dict_word&gt;), &lt;dict_word data-word="diamond" data-term-type="concept" data-urdu="ہیرا - کاربن کی ٹھوس شکل جو سب سے سخت قدرتی مادّہ ہے" data-short-meaning="Carbon allotrope with tetrahedral sp³ hybridization forming 3D covalent network, the hardest natural material."&gt;diamond&lt;/dict_word&gt; ring/picture, soccer ball</step>
@@ -1270,41 +1014,6 @@
                     <issue>Forgetting properties? → Link to structure: tight bonds = hard, loose layers = soft</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 3D molecule builder where students construct each allotrope</interactive_element>
-                <gamification>🏆 &amp;quot;Allotrope Architect&amp;quot; badges for correctly building structures</gamification>
-                <social_sharing>📸 Share creative photos showing allotrope shapes in everyday objects</social_sharing>
-                <progress_tracking>📊 Track structure-to-property prediction accuracy</progress_tracking>
-            </digital_integration>
-
-            <effectiveness_ranking>
-                <rank order="1">
-                    <technique>Story Method (&lt;dict_word data-word="carbon" data-term-type="element" data-urdu="کاربن - ایٹمی نمبر 6 والا عنصر" data-short-meaning="Element with atomic number 6 exhibiting diverse allotropes through sp³/sp²/sp hybridization and catenation."&gt;Carbon&lt;/dict_word&gt; Family Reunion)</technique>
-                    <retention_rate>88%</retention_rate>
-                    <reason>Characters with personalities matching properties create strong associations</reason>
-                </rank>
-                <rank order="2">
-                    <technique>Visual Mnemonics (Actor/Structure scenes)</technique>
-                    <retention_rate>85%</retention_rate>
-                    <reason>Concrete visual metaphors directly link to abstract structures</reason>
-                </rank>
-                <rank order="3">
-                    <technique>Number-Shape Associations</technique>
-                    <retention_rate>82%</retention_rate>
-                    <reason>Specific numbers linked to memorable shapes aid recall</reason>
-                </rank>
-                <rank order="4">
-                    <technique>Memory Palace (Office Building)</technique>
-                    <retention_rate>78%</retention_rate>
-                    <reason>Spatial memory reinforces conceptual differences</reason>
-                </rank>
-                <rank order="5">
-                    <technique>Acronyms (DIG-B, SHAPE)</technique>
-                    <retention_rate>72%</retention_rate>
-                    <reason>Quick reference but less detailed than narrative methods</reason>
-                </rank>
-            </effectiveness_ranking>
         </section>
     </topic>
 
@@ -1519,55 +1228,6 @@
                 </association>
             </keyword_associations>
 
-            <rhymes_rhythms>
-                <rhyme id="1.5.rr1">
-                    <content>🎵 &lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادّے جنہیں مزید تحلیل نہ کیا جاسکے" data-short-meaning="Pure substances with identical atoms that cannot be decomposed by chemical means."&gt;Elements&lt;/dict_word&gt; are pure and single-minded,
-                        &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکّبات - عناصر کے کیمیائی اتحاد سے بننے والے مادّے" data-short-meaning="Substances formed by chemical bonding of elements in fixed proportions with new properties."&gt;Compounds&lt;/dict_word&gt; are chemically bonded!
-                        &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="مرکّبات - مادّوں کا جسمانی مرکّب" data-short-meaning="Physical combinations of substances without chemical bonding, separable by physical means."&gt;Mixtures&lt;/dict_word&gt; just hang out together,
-                        Physical methods pull them apart forever!
-
-                        Fixed ratios? That&amp;#x27;s a compound trait,
-                        Variable amounts? &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="مرکّبات - مادّوں کا جسمانی مرکّب" data-short-meaning="Physical combinations of substances without chemical bonding, separable by physical means."&gt;Mixtures&lt;/dict_word&gt; are great!
-                        Need chemistry to break apart?
-                        Compound! Physical? Mixture from the start! 🎵
-                    </content>
-                    <concept_coverage>All key differences between the three types</concept_coverage>
-                    <rhythm_pattern>Rap battle rhythm  &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکّبات - عناصر کے کیمیائی اتحاد سے بننے والے مادّے" data-short-meaning="Substances formed by chemical bonding of elements in fixed proportions with new properties."&gt;compounds&lt;/dict_word&gt; vs &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="مرکّبات - مادّوں کا جسمانی مرکّب" data-short-meaning="Physical combinations of substances without chemical bonding, separable by physical means."&gt;mixtures&lt;/dict_word&gt;</rhythm_pattern>
-                    <performance_tip>Point left for &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکّبات - عناصر کے کیمیائی اتحاد سے بننے والے مادّے" data-short-meaning="Substances formed by chemical bonding of elements in fixed proportions with new properties."&gt;compounds&lt;/dict_word&gt;, right for &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="مرکّبات - مادّوں کا جسمانی مرکّب" data-short-meaning="Physical combinations of substances without chemical bonding, separable by physical means."&gt;mixtures&lt;/dict_word&gt;, up for &lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادّے جنہیں مزید تحلیل نہ کیا جاسکے" data-short-meaning="Pure substances with identical atoms that cannot be decomposed by chemical means."&gt;elements&lt;/dict_word&gt;</performance_tip>
-                </rhyme>
-                <rhyme id="1.5.rr2">
-                    <content>🎵 E-C-M, 1-2-3,
-                        &lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادّے جنہیں مزید تحلیل نہ کیا جاسکے" data-short-meaning="Pure substances with identical atoms that cannot be decomposed by chemical means."&gt;Elements&lt;/dict_word&gt;, &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکّبات - عناصر کے کیمیائی اتحاد سے بننے والے مادّے" data-short-meaning="Substances formed by chemical bonding of elements in fixed proportions with new properties."&gt;Compounds&lt;/dict_word&gt;, &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="مرکّبات - مادّوں کا جسمانی مرکّب" data-short-meaning="Physical combinations of substances without chemical bonding, separable by physical means."&gt;Mixtures&lt;/dict_word&gt; we see!
-                        First can&amp;#x27;t break down anymore,
-                        Second needs reactions to restore,
-                        Third just needs a filter or more! 🎵</content>
-                    <concept_coverage>Classification and separation methods</concept_coverage>
-                    <rhythm_pattern>Sing to &amp;quot;ABC&amp;quot; tune</rhythm_pattern>
-                    <performance_tip>Hold up 1, 2, 3 fingers for each type</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
-            <number_shape_associations>
-                <association id="1.5.nsa1">
-                    <number_formula>₂ (2:1 ratio)</number_formula>
-                    <shape_visualization>⚖️ Mickey Mouse head  big circle (O) with two small circles (H) as ears</shape_visualization>
-                    <story_integration>Mickey&amp;#x27;s head shape shows water&amp;#x27;s fixed molecular structure</story_integration>
-                    <recall_method>Draw Mickey = remember ₂ structure</recall_method>
-                </association>
-                <association id="1.5.nsa2">
-                    <number_formula>3 types classification</number_formula>
-                    <shape_visualization>🔼 Triangle: peak (&lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادّے جنہیں مزید تحلیل نہ کیا جاسکے" data-short-meaning="Pure substances with identical atoms that cannot be decomposed by chemical means."&gt;elements&lt;/dict_word&gt;), left corner (&lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکّبات - عناصر کے کیمیائی اتحاد سے بننے والے مادّے" data-short-meaning="Substances formed by chemical bonding of elements in fixed proportions with new properties."&gt;compounds&lt;/dict_word&gt;), right corner (&lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="مرکّبات - مادّوں کا جسمانی مرکّب" data-short-meaning="Physical combinations of substances without chemical bonding, separable by physical means."&gt;mixtures&lt;/dict_word&gt;)</shape_visualization>
-                    <story_integration>Peak is purest (&lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادّے جنہیں مزید تحلیل نہ کیا جاسکے" data-short-meaning="Pure substances with identical atoms that cannot be decomposed by chemical means."&gt;elements&lt;/dict_word&gt;), corners are combinations</story_integration>
-                    <recall_method>Triangle points = ECM classification</recall_method>
-                </association>
-                <association id="1.5.nsa3">
-                    <number_formula>1:8 (H:O mass ratio)</number_formula>
-                    <shape_visualization>🎱 Pool balls  1 cue ball to 8 ball represents mass ratio</shape_visualization>
-                    <story_integration>&lt;dict_word data-word="hydrogen" data-term-type="element" data-urdu="ہائیڈروجن - سب سے ہلکا عنصر" data-short-meaning="Lightest element forming diatomic molecules and diverse compounds."&gt;Hydrogen&lt;/dict_word&gt; is light like cue ball, &lt;dict_word data-word="oxygen" data-term-type="element" data-urdu="آکسیجن - سانس لینے کے لیے ضروری گیس" data-short-meaning="Diatomic gas essential for respiration and combustion processes."&gt;oxygen&lt;/dict_word&gt; heavy like 8 ball</story_integration>
-                    <recall_method>Pool game = water&amp;#x27;s mass ratio</recall_method>
-                </association>
-            </number_shape_associations>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 🏠 Kitchen tour  identify &lt;dict_word data-word="elements" data-term-type="concept" data-urdu="عناصر - خالص مادّے جنہیں مزید تحلیل نہ کیا جاسکے" data-short-meaning="Pure substances with identical atoms that cannot be decomposed by chemical means."&gt;elements&lt;/dict_word&gt; (salt), &lt;dict_word data-word="compounds" data-term-type="concept" data-urdu="مرکّبات - عناصر کے کیمیائی اتحاد سے بننے والے مادّے" data-short-meaning="Substances formed by chemical bonding of elements in fixed proportions with new properties."&gt;compounds&lt;/dict_word&gt; (sugar), &lt;dict_word data-word="mixtures" data-term-type="concept" data-urdu="مرکّبات - مادّوں کا جسمانی مرکّب" data-short-meaning="Physical combinations of substances without chemical bonding, separable by physical means."&gt;mixtures&lt;/dict_word&gt; (soup)</step>
@@ -1586,41 +1246,6 @@
                     <issue>Unsure about &lt;dict_word data-word="homogeneous" data-term-type="property" data-urdu="متجانس - یکساں مرکّب" data-short-meaning="Uniform mixtures where components are indistinguishable at molecular level."&gt;homogeneous&lt;/dict_word&gt;/&lt;dict_word data-word="heterogeneous" data-term-type="property" data-urdu="غیر متجانس - غیر یکساں مرکّب" data-short-meaning="Mixtures with non-uniform composition where components remain distinct."&gt;heterogeneous&lt;/dict_word&gt;? → Can you see different parts? Yes = &lt;dict_word data-word="heterogeneous" data-term-type="property" data-urdu="غیر متجانس - غیر یکساں مرکّب" data-short-meaning="Mixtures with non-uniform composition where components remain distinct."&gt;heterogeneous&lt;/dict_word&gt;</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 Sorting game: Drag substances to correct category bins</interactive_element>
-                <gamification>🏆 &amp;quot;Matter Master&amp;quot; levels: Apprentice → Journeyman → Master Chemist</gamification>
-                <social_sharing>🤳 Challenge friends to identify ECM in their lunch photos</social_sharing>
-                <progress_tracking>📊 Speed sorting leaderboard and accuracy stats</progress_tracking>
-            </digital_integration>
-
-            <effectiveness_ranking>
-                <rank order="1">
-                    <technique>Story Method (Kingdom of Matterland)</technique>
-                    <retention_rate>92%</retention_rate>
-                    <reason>Complete narrative integrates all concepts with memorable characters</reason>
-                </rank>
-                <rank order="2">
-                    <technique>Visual Mnemonics (People Pyramid)</technique>
-                    <retention_rate>87%</retention_rate>
-                    <reason>Clear visual hierarchy matches conceptual relationships</reason>
-                </rank>
-                <rank order="3">
-                    <technique>Acronyms (SIMPLE-FIXED-VARY)</technique>
-                    <retention_rate>83%</retention_rate>
-                    <reason>Directly encode key characteristics in memorable words</reason>
-                </rank>
-                <rank order="4">
-                    <technique>Memory Palace (Kitchen)</technique>
-                    <retention_rate>80%</retention_rate>
-                    <reason>Familiar location with logical concept mappings</reason>
-                </rank>
-                <rank order="5">
-                    <technique>Rhymes and Rhythms</technique>
-                    <retention_rate>76%</retention_rate>
-                    <reason>Musical encoding helps but requires active practice</reason>
-                </rank>
-            </effectiveness_ranking>
         </section>
     </topic>
 
@@ -1839,48 +1464,6 @@
                 </association>
             </keyword_associations>
 
-            <rhymes_rhythms>
-                <rhyme id="1.6.rr1">
-                    <content>🎵 Solution, colloid, suspension too,
-                      Let me tell you what they do!
-                      Smallest &lt;dict_word data-word="particles" data-term-type="concept" data-urdu="ذرّات - مادّے کے منفرد ذرّات" data-short-meaning="Discrete units of matter ranging from atoms to macroscopic grains in mixtures."&gt;particles&lt;/dict_word&gt; dissolve away,
-                      In &lt;dict_word data-word="solutions" data-term-type="concept" data-urdu="محلول - سالمہ کا محلل میں سالماتی سطح پر گھلنا" data-short-meaning="Homogeneous mixtures where solute is molecularly dispersed in solvent."&gt;solutions&lt;/dict_word&gt; clear as day!
-
-                      &lt;dict_word data-word="colloids" data-term-type="concept" data-urdu="کولائیڈز - درمیانے سائز کے ذرّات" data-short-meaning="Intermediate-sized particles (1-1000 nm) dispersed in medium, classified as aerosols, gels, or emulsions."&gt;Colloids&lt;/dict_word&gt; scatter light around,
-                      Tyndall effect can be found!
-                      &lt;dict_word data-word="suspensions" data-term-type="concept" data-urdu="معلق - بڑے ذرّات والے غیر متجانس مرکّبات" data-short-meaning="Heterogeneous mixtures with &amp;gt;1000nm particles settling over time unless agitated."&gt;Suspensions&lt;/dict_word&gt; settle to the ground,
-                      Biggest &lt;dict_word data-word="particles" data-term-type="concept" data-urdu="ذرّات - مادّے کے منفرد ذرّات" data-short-meaning="Discrete units of matter ranging from atoms to macroscopic grains in mixtures."&gt;particles&lt;/dict_word&gt; are bound! 🎵
-                    </content>
-                    <concept_coverage>All three types and their key properties</concept_coverage>
-                    <rhythm_pattern>Sing to &amp;quot;Mary Had a Little Lamb&amp;quot;</rhythm_pattern>
-                    <performance_tip>Use hand gestures: tiny (solution), medium (colloid), large (suspension)</performance_tip>
-                </rhyme>
-                <rhyme id="1.6.rr2">
-                    <content>🎵 Filter paper, here we go!
-&lt;dict_word data-word="solutions" data-term-type="concept" data-urdu="محلول - سالمہ کا محلل میں سالماتی سطح پر گھلنا" data-short-meaning="Homogeneous mixtures where solute is molecularly dispersed in solvent."&gt;Solutions&lt;/dict_word&gt; pass right through the flow,
-&lt;dict_word data-word="colloids" data-term-type="concept" data-urdu="کولائیڈز - درمیانے سائز کے ذرّات" data-short-meaning="Intermediate-sized particles (1-1000 nm) dispersed in medium, classified as aerosols, gels, or emulsions."&gt;Colloids&lt;/dict_word&gt; mostly make it through,
-&lt;dict_word data-word="suspensions" data-term-type="concept" data-urdu="معلق - بڑے ذرّات والے غیر متجانس مرکّبات" data-short-meaning="Heterogeneous mixtures with &amp;gt;1000nm particles settling over time unless agitated."&gt;Suspensions&lt;/dict_word&gt; stop  they&amp;#x27;re stuck like glue! 🎵</content>
-                    <concept_coverage>&lt;dict_word data-word="filtration" data-term-type="process" data-urdu="چھاننا - مسام دار رکاوٹ کے ذریعے علیحدگی" data-short-meaning="Separation process using porous barrier to retain particles while allowing fluid passage."&gt;Filtration&lt;/dict_word&gt; behavior</concept_coverage>
-                    <rhythm_pattern>Clapping rhythm, increasing speed</rhythm_pattern>
-                    <performance_tip>Act out pouring through filter</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
-            <number_shape_associations>
-                <association id="1.6.nsa1">
-                    <number_formula>&amp;lt;1nm, 1-1000nm, &amp;gt;1000nm</number_formula>
-                    <shape_visualization>📏 Ruler with three sections: dot (solution), coin (colloid), ball (suspension)</shape_visualization>
-                    <story_integration>Size progression from invisible dot to visible ball</story_integration>
-                    <recall_method>Draw size comparison = remember particle ranges</recall_method>
-                </association>
-                <association id="1.6.nsa2">
-                    <number_formula>3 types, 2 pass filter, 1 shows Tyndall</number_formula>
-                    <shape_visualization>🔺 Triangle: 3 corners (types), 2 sides pass through (filter), 1 side glows (Tyndall)</shape_visualization>
-                    <story_integration>Triangle geometry represents mixture properties</story_integration>
-                    <recall_method>Triangle features = mixture behaviors</recall_method>
-                </association>
-            </number_shape_associations>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 🔦 Shine flashlight through different liquids at home (water, &lt;dict_word data-word="milk" data-term-type="other" data-urdu="دودھ - قدرتی ایملشن" data-short-meaning="Natural emulsion with fat globules dispersed in aqueous phase, stabilized by proteins."&gt;milk&lt;/dict_word&gt;, juice)</step>
@@ -1900,41 +1483,6 @@
                     <issue>Mixing up particle sizes? → Think: invisible &amp;lt; microscopic &amp;lt; visible</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 Virtual lab: Mix substances and test with light beam and filters</interactive_element>
-                <gamification>🏆 &amp;quot;Mixture Detective&amp;quot; badges for correctly identifying types using tests</gamification>
-                <social_sharing>📸 Share photos of Tyndall effect in everyday life (sunbeams, fog)</social_sharing>
-                <progress_tracking>📊 Track identification accuracy and test selection skills</progress_tracking>
-            </digital_integration>
-
-            <effectiveness_ranking>
-                <rank order="1">
-                    <technique>Story Method (Pool Party Sisters)</technique>
-                    <retention_rate>91%</retention_rate>
-                    <reason>Vivid narrative with characters matching particle behaviors perfectly</reason>
-                </rank>
-                <rank order="2">
-                    <technique>Visual Mnemonics (Swimmers, Gymnasts, Skydivers)</technique>
-                    <retention_rate>87%</retention_rate>
-                    <reason>Active imagery directly represents settling behavior</reason>
-                </rank>
-                <rank order="3">
-                    <technique>Memory Palace (Shopping Mall)</technique>
-                    <retention_rate>82%</retention_rate>
-                    <reason>Familiar locations with logical connections to concepts</reason>
-                </rank>
-                <rank order="4">
-                    <technique>Acronyms (SCS, PASS THE FILTER)</technique>
-                    <retention_rate>78%</retention_rate>
-                    <reason>Simple phrases encoding key distinctions</reason>
-                </rank>
-                <rank order="5">
-                    <technique>Rhymes and Rhythms</technique>
-                    <retention_rate>74%</retention_rate>
-                    <reason>Musical patterns aid recall but need practice</reason>
-                </rank>
-            </effectiveness_ranking>
         </section>
     </topic>
 
@@ -2149,58 +1697,6 @@ When the hotel is UNSATURATED, Maxwell puts up a &amp;quot;Vacancy&amp;quot; sig
                 </association>
             </keyword_associations>
 
-            <rhymes_rhythms>
-                <rhyme id="1.7.rr1">
-                    <content>🎵 Unsaturated means there&amp;#x27;s room,
-Add more &lt;dict_word data-word="solute" data-term-type="concept" data-urdu="سالمہ - محلول میں گھلنے والا مادّہ" data-short-meaning="Substance dissolved in solvent, present in lesser quantity in solutions."&gt;solute&lt;/dict_word&gt;, watch it zoom!
-Into solution, disappear,
-More can &lt;dict_word data-word="dissolve" data-term-type="process" data-urdu="گھلنا - سالماتی سطح پر یکساں مرکّب بننا" data-short-meaning="To form homogeneous mixture at molecular level through solvent interactions."&gt;dissolve&lt;/dict_word&gt;, crystal clear!
-
-Saturated? Can&amp;#x27;t take more!
-Extra &lt;dict_word data-word="solute" data-term-type="concept" data-urdu="سالمہ - محلول میں گھلنے والا مادّہ" data-short-meaning="Substance dissolved in solvent, present in lesser quantity in solutions."&gt;solute&lt;/dict_word&gt; hits the floor!
-36 grams of salt will do,
-In 100 grams of ₂!
-
-Sugar&amp;#x27;s special, it can take
-203.9  no mistake!
-Same amount of water holds
-Much more sugar, truth be told! 🎵</content>
-                    <concept_coverage>Saturation states and specific &lt;dict_word data-word="solubilities" data-term-type="property" data-urdu="حل پذیری کی مقدار - محلول میں گھلنے کی زیادہ سے زیادہ مقدار" data-short-meaning="Maximum solute amounts dissolving in solvents, quantified in g/100mL or mol/L."&gt;solubilities&lt;/dict_word&gt;</concept_coverage>
-                    <rhythm_pattern>Bouncy rhythm like &amp;quot;Hickory Dickory Dock&amp;quot;</rhythm_pattern>
-                    <performance_tip>Hold up fingers for numbers, mime pouring</performance_tip>
-                </rhyme>
-                <rhyme id="1.7.rr2">
-                    <content>🎵 Stir, stir, stir the pot,
-Does it &lt;dict_word data-word="dissolve" data-term-type="process" data-urdu="گھلنا - سالماتی سطح پر یکساں مرکّب بننا" data-short-meaning="To form homogeneous mixture at molecular level through solvent interactions."&gt;dissolve&lt;/dict_word&gt; or not?
-If it does, add some more,
-Till it settles on the floor! 🎵</content>
-                    <concept_coverage>Testing for saturation</concept_coverage>
-                    <rhythm_pattern>To the tune of &amp;quot;Row, Row, Row Your Boat&amp;quot;</rhythm_pattern>
-                    <performance_tip>Stirring motion while singing</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
-            <number_shape_associations>
-                <association id="1.7.nsa1">
-                    <number_formula>36g NaCl per 100g ₂</number_formula>
-                    <shape_visualization>🧂 Three rows of 12 salt shakers = 36 total</shape_visualization>
-                    <story_integration>Salt shaker army formation shows maximum salt capacity</story_integration>
-                    <recall_method>3 dozen salt shakers = 36g saturation point</recall_method>
-                </association>
-                <association id="1.7.nsa2">
-                    <number_formula>203.9g sugar per 100g ₂</number_formula>
-                    <shape_visualization>🍬 2 century marks + 4 = 204 (approximately)</shape_visualization>
-                    <story_integration>Sugar is &amp;quot;twice a century&amp;quot; more soluble than salt</story_integration>
-                    <recall_method>2 centuries of sugar = massive &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent property defining maximum solute dissolved per solvent amount at equilibrium."&gt;solubility&lt;/dict_word&gt;</recall_method>
-                </association>
-                <association id="1.7.nsa3">
-                    <number_formula>Ratio comparison: 204:36 ≈ 6:1</number_formula>
-                    <shape_visualization>🎲 Six sugar dice to one salt die</shape_visualization>
-                    <story_integration>Roll six times more sugar than salt into solution</story_integration>
-                    <recall_method>6-sided sugar advantage over salt</recall_method>
-                </association>
-            </number_shape_associations>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 🥤 Make sugar water, adding sugar until no more dissolves</step>
@@ -2220,41 +1716,6 @@ Till it settles on the floor! 🎵</content>
                     <issue>Dynamic equilibrium confusion? → Think revolving door  constant exchange, same occupancy</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 Virtual dissolving simulator with saturation indicator</interactive_element>
-                <gamification>🏆 &amp;quot;Saturation Master&amp;quot; levels for predicting exact saturation points</gamification>
-                <social_sharing>📸 Time-lapse videos of &lt;dict_word data-word="crystallization" data-term-type="process" data-urdu="قلم بننا - محلول سے قلمی ٹھوس کا بننا" data-short-meaning="Separation process where dissolved solute forms crystals upon supersaturation."&gt;crystallization&lt;/dict_word&gt; from saturated solutions</social_sharing>
-                <progress_tracking>📊 Graph personal experiments vs. standard &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent property defining maximum solute dissolved per solvent amount at equilibrium."&gt;solubility&lt;/dict_word&gt; values</progress_tracking>
-            </digital_integration>
-
-            <effectiveness_ranking>
-                <rank order="1">
-                    <technique>Story Method (&lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent property defining maximum solute dissolved per solvent amount at equilibrium."&gt;Solubility&lt;/dict_word&gt; Hotel)</technique>
-                    <retention_rate>93%</retention_rate>
-                    <reason>Complete narrative with numbers integrated into plot</reason>
-                </rank>
-                <rank order="2">
-                    <technique>Visual Mnemonics (Suitcase/Theater)</technique>
-                    <retention_rate>88%</retention_rate>
-                    <reason>Familiar capacity concepts directly map to saturation</reason>
-                </rank>
-                <rank order="3">
-                    <technique>Number-Shape Associations</technique>
-                    <retention_rate>85%</retention_rate>
-                    <reason>Specific values linked to memorable visuals</reason>
-                </rank>
-                <rank order="4">
-                    <technique>Memory Palace (Kitchen)</technique>
-                    <retention_rate>81%</retention_rate>
-                    <reason>Practical location with daily reminders</reason>
-                </rank>
-                <rank order="5">
-                    <technique>Rhymes and Rhythms</technique>
-                    <retention_rate>77%</retention_rate>
-                    <reason>Includes specific numbers in musical format</reason>
-                </rank>
-            </effectiveness_ranking>
         </section>
     </topic>
 
@@ -2476,58 +1937,6 @@ The race ended with a lesson: &lt;dict_word data-word="temperature" data-term-ty
                 </association>
             </keyword_associations>
 
-            <rhymes_rhythms>
-                <rhyme id="1.8.rr1">
-                    <content>🎵 When you heat the water up,
-Most solids fill the cup!
-Sugar, salt nitrate, and more,
-Dissolve much better than before!
-
-But gases hate the heat, you see,
-They bubble up and want to flee!
-Keep your soda nice and cold,
-Or watch the bubbles lose their hold!
-
-Three weird ones go the other way,
-Lithium carbonate leads the way,
-With calcium chromate and hydroxide too,
-They dissolve LESS when heat comes through! 🎵</content>
-                    <concept_coverage>General rules and exceptions for &lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - حل پذیری پر اثر انداز ہونے والا اہم عنصر" data-short-meaning="Critical factor affecting solubility: most solids increase, gases decrease with rising temperature."&gt;temperature&lt;/dict_word&gt; effects</concept_coverage>
-                    <rhythm_pattern>Upbeat marching rhythm</rhythm_pattern>
-                    <performance_tip>March in place, point up for solids, down for gases</performance_tip>
-                </rhyme>
-                <rhyme id="1.8.rr2">
-                    <content>🎵 Hot sugar water, cool it down,
-Watch the crystals form around!
-Potassium nitrate loves the heat,
-Less dissolves when it&amp;#x27;s not so sweet! 🎵</content>
-                    <concept_coverage>&lt;dict_word data-word="crystallization" data-term-type="process" data-urdu="قلم بننا - محلول سے قلمی ٹھوس کا بننا" data-short-meaning="Phase transition where dissolved solute forms ordered solid crystals from supersaturated solution."&gt;Crystallization&lt;/dict_word&gt; by cooling</concept_coverage>
-                    <rhythm_pattern>Gentle lullaby rhythm</rhythm_pattern>
-                    <performance_tip>Slowly lower hands while singing</performance_tip>
-                </rhyme>
-            </rhymes_rhythms>
-
-            <number_shape_associations>
-                <association id="1.8.nsa1">
-                    <number_formula>3 exceptional compounds</number_formula>
-                    <shape_visualization>🔺 Upside-down triangle pointing down (opposite behavior)</shape_visualization>
-                    <story_integration>Three points of backwards triangle = three exceptional compounds</story_integration>
-                    <recall_method>Flip triangle = flipped behavior</recall_method>
-                </association>
-                <association id="1.8.nsa2">
-                    <number_formula>Most solids ↑ with heat, Gases ↓ with heat</number_formula>
-                    <shape_visualization>⬆️⬇️ Opposite arrows showing opposite behaviors</shape_visualization>
-                    <story_integration>Solids climb up, gases dive down with &lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - حل پذیری پر اثر انداز ہونے والا اہم عنصر" data-short-meaning="Critical factor affecting solubility: most solids increase, gases decrease with rising temperature."&gt;temperature&lt;/dict_word&gt;</story_integration>
-                    <recall_method>Draw opposing arrows = opposing behaviors</recall_method>
-                </association>
-                <association id="1.8.nsa3">
-                    <number_formula>Room temp vs boiling (20°C vs 100°C)</number_formula>
-                    <shape_visualization>🌡️ Thermometer with two marks showing huge difference in &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent equilibrium concentration defining maximum solute dissolved per solvent."&gt;solubility&lt;/dict_word&gt;</shape_visualization>
-                    <story_integration>80-degree difference can double or triple solid &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent equilibrium concentration defining maximum solute dissolved per solvent."&gt;solubility&lt;/dict_word&gt;</story_integration>
-                    <recall_method>Big &lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - حل پذیری پر اثر انداز ہونے والا اہم عنصر" data-short-meaning="Critical factor affecting solubility: most solids increase, gases decrease with rising temperature."&gt;temperature&lt;/dict_word&gt; jump = big &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent equilibrium concentration defining maximum solute dissolved per solvent."&gt;solubility&lt;/dict_word&gt; change</recall_method>
-                </association>
-            </number_shape_associations>
-
             <practice_instructions>
                 <initial_practice>
                     <step>1. 🧪 Dissolve sugar in cold vs hot water  time the difference</step>
@@ -2547,13 +1956,6 @@ Less dissolves when it&amp;#x27;s not so sweet! 🎵</content>
                     <issue>Endo vs exo confusion? → Endo needs heat (cold person), Exo releases heat (hot person)</issue>
                 </troubleshooting>
             </practice_instructions>
-
-            <digital_integration>
-                <interactive_element>🎮 &lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - حل پذیری پر اثر انداز ہونے والا اہم عنصر" data-short-meaning="Critical factor affecting solubility: most solids increase, gases decrease with rising temperature."&gt;Temperature&lt;/dict_word&gt; slider showing real-time &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent equilibrium concentration defining maximum solute dissolved per solvent."&gt;solubility&lt;/dict_word&gt; changes</interactive_element>
-                <gamification>🏆 &amp;quot;&lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - حل پذیری پر اثر انداز ہونے والا اہم عنصر" data-short-meaning="Critical factor affecting solubility: most solids increase, gases decrease with rising temperature."&gt;Temperature&lt;/dict_word&gt; Master&amp;quot;  predict &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent equilibrium concentration defining maximum solute dissolved per solvent."&gt;solubility&lt;/dict_word&gt; at different temperatures</gamification>
-                <social_sharing>🌡️ Share experiments showing &lt;dict_word data-word="temperature" data-term-type="property" data-urdu="درجہ حرارت - حل پذیری پر اثر انداز ہونے والا اہم عنصر" data-short-meaning="Critical factor affecting solubility: most solids increase, gases decrease with rising temperature."&gt;temperature&lt;/dict_word&gt; effects on common substances</social_sharing>
-                <progress_tracking>📊 Plot personal &lt;dict_word data-word="solubility" data-term-type="property" data-urdu="حل پذیری - درجہ حرارت پر منحصر خاصیت" data-short-meaning="Temperature-dependent equilibrium concentration defining maximum solute dissolved per solvent."&gt;solubility&lt;/dict_word&gt; curves vs standard data</progress_tracking>
-            </digital_integration>
         </section>
     </topic>
   </chapter>

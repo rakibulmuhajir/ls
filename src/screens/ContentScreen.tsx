@@ -1,5 +1,5 @@
 // ============================================
-// UPDATED CONTENT SCREEN WITH THEME INTEGRATION
+// UPDATED CONTENT SCREEN WITH CLEAN BORDERLESS DESIGN
 // ============================================
 
 import React, { useState, useMemo } from 'react';
@@ -11,9 +11,9 @@ import { useFetch } from '@/hooks/useFetch';
 import Loader from '@/components/Loader';
 import BottomNavigationBar from '@/components/BottomNavigationBar';
 import WordPopup from '@/components/WordPopup';
-import { ChemistryAnimation, AnimationType } from '@/data/animations';
+import AnimationPlayer from '@/data/animations/AnimationPlayer';
 import { useTheme, useThemedStyles } from '@/lib/ThemeContext';
-import { getSectionGroup, sectionGroups, createShadow } from '@/lib/designSystem';
+import { getSectionGroup, sectionGroups } from '@/lib/designSystem';
 
 // Memory techniques configuration (unchanged)
 const MEMORY_TECHNIQUES_CONFIG = {
@@ -35,7 +35,7 @@ interface WordData {
   termType: string;
 }
 
-// Section group component with theme support
+// Clean section group component without borders
 const SectionGroup: React.FC<{
   groupKey: keyof typeof sectionGroups;
   sections: any[];
@@ -46,11 +46,7 @@ const SectionGroup: React.FC<{
 
   const styles = useThemedStyles((theme) => ({
     groupContainer: {
-      marginBottom: theme.spacing.lg,
-      borderRadius: theme.borderRadius.xl,
-      backgroundColor: theme.colors.surface,
-      overflow: 'hidden',
-      ...createShadow(3),
+      marginBottom: theme.spacing.xl,
     },
     groupHeader: {
       backgroundColor: theme.colors[groupKey as keyof typeof theme.colors] || theme.colors.primary,
@@ -59,9 +55,11 @@ const SectionGroup: React.FC<{
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
+      borderRadius: theme.borderRadius.md,
+      marginBottom: theme.spacing.sm,
     },
     groupHeaderPressed: {
-      opacity: 0.8,
+      opacity: 0.9,
     },
     groupTitle: {
       fontSize: theme.typography.fontSize.xl,
@@ -70,32 +68,40 @@ const SectionGroup: React.FC<{
       flex: 1,
       marginLeft: theme.spacing.sm,
     },
-    groupContent: {
-      backgroundColor: theme.colors[groupKey as keyof typeof theme.colors] || theme.colors.surfaceVariant,
+    expandIcon: {
+      marginLeft: theme.spacing.sm,
     },
-    sectionCard: {
-      backgroundColor: theme.colors.surface,
-      marginHorizontal: theme.spacing.md,
-      marginVertical: theme.spacing.sm,
-      borderRadius: theme.borderRadius.lg,
-      overflow: 'hidden',
-      ...createShadow(2),
+    groupContent: {
+      paddingLeft: theme.spacing.sm,
+    },
+    sectionContainer: {
+      marginBottom: theme.spacing.lg,
     },
     sectionHeader: {
-      backgroundColor: theme.colors.surfaceVariant,
-      paddingHorizontal: theme.spacing.md,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
       paddingVertical: theme.spacing.sm,
-      borderBottomWidth: 1,
-      borderBottomColor: theme.colors.outlineVariant,
+      paddingHorizontal: theme.spacing.md,
+      backgroundColor: theme.colors.surfaceVariant,
+      borderRadius: theme.borderRadius.sm,
+      marginBottom: theme.spacing.sm,
     },
     sectionTitle: {
       fontSize: theme.typography.fontSize.lg,
       fontWeight: theme.typography.fontWeight.semibold,
       color: theme.colors.onSurface,
+      flex: 1,
     },
     sectionContent: {
-      paddingHorizontal: theme.spacing.lg,
-      paddingVertical: theme.spacing.md,
+      paddingHorizontal: theme.spacing.md,
+      paddingBottom: theme.spacing.sm,
+    },
+    sectionDivider: {
+      height: 1,
+      backgroundColor: theme.colors.outlineVariant,
+      marginVertical: theme.spacing.md,
+      marginHorizontal: theme.spacing.md,
     },
   }));
 
@@ -109,7 +115,7 @@ const SectionGroup: React.FC<{
       <TouchableOpacity
         style={styles.groupHeader}
         onPress={() => setIsExpanded(!isExpanded)}
-        activeOpacity={0.8}
+        activeOpacity={0.9}
         accessibilityRole="button"
         accessibilityLabel={`${group.title} section`}
         accessibilityHint={isExpanded ? 'Collapse section' : 'Expand section'}
@@ -118,33 +124,25 @@ const SectionGroup: React.FC<{
         <Text style={styles.groupTitle}>
           {group.emoji} {group.title}
         </Text>
-        <MaterialCommunityIcons
-          name={isExpanded ? 'chevron-up' : 'chevron-down'}
-          size={24}
-          color={theme.colors.onPrimary}
-        />
+        <View style={styles.expandIcon}>
+          <MaterialCommunityIcons
+            name={isExpanded ? 'minus' : 'plus'}
+            size={24}
+            color={theme.colors.onPrimary}
+          />
+        </View>
       </TouchableOpacity>
 
       {/* Group Content */}
       {isExpanded && (
         <View style={styles.groupContent}>
-          {sections.map((section: any) => (
-            <View key={section.section_pk} style={styles.sectionCard}>
-              <View style={styles.sectionHeader}>
-                <Text style={styles.sectionTitle}>{section.title}</Text>
-              </View>
-              <View style={styles.sectionContent}>
-                {section.content_elements
-                  ?.sort((a: any, b: any) => a.order_in_section - b.order_in_section)
-                  .map((element: any) => (
-                    <ContentElement
-                      key={element.element_pk}
-                      element={element}
-                      onWordPress={onWordPress}
-                    />
-                  ))}
-              </View>
-            </View>
+          {sections.map((section: any, index: number) => (
+            <SectionItem
+              key={section.section_pk}
+              section={section}
+              onWordPress={onWordPress}
+              isLast={index === sections.length - 1}
+            />
           ))}
         </View>
       )}
@@ -152,7 +150,89 @@ const SectionGroup: React.FC<{
   );
 };
 
-// Enhanced content element renderer with theme support
+// Individual section component with expand/collapse
+const SectionItem: React.FC<{
+  section: any;
+  onWordPress: (wordData: WordData) => void;
+  isLast: boolean;
+}> = ({ section, onWordPress, isLast }) => {
+  const { theme } = useTheme();
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  const styles = useThemedStyles((theme) => ({
+    sectionContainer: {
+      marginBottom: isLast ? 0 : theme.spacing.lg,
+    },
+    sectionHeader: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingVertical: theme.spacing.sm,
+      paddingHorizontal: theme.spacing.md,
+      backgroundColor: theme.colors.surfaceVariant,
+      borderRadius: theme.borderRadius.sm,
+      marginBottom: theme.spacing.sm,
+    },
+    sectionTitle: {
+      fontSize: theme.typography.fontSize.lg,
+      fontWeight: theme.typography.fontWeight.semibold,
+      color: theme.colors.onSurface,
+      flex: 1,
+    },
+    sectionContent: {
+      paddingHorizontal: theme.spacing.md,
+      paddingBottom: theme.spacing.sm,
+    },
+    sectionDivider: {
+      height: 1,
+      backgroundColor: theme.colors.outlineVariant,
+      marginVertical: theme.spacing.md,
+      marginHorizontal: theme.spacing.md,
+    },
+  }));
+
+  return (
+    <View style={styles.sectionContainer}>
+      {/* Section Header with +/- */}
+      <TouchableOpacity
+        style={styles.sectionHeader}
+        onPress={() => setIsExpanded(!isExpanded)}
+        activeOpacity={0.8}
+        accessibilityRole="button"
+        accessibilityLabel={`${section.title} section`}
+        accessibilityHint={isExpanded ? 'Collapse section' : 'Expand section'}
+        accessibilityState={{ expanded: isExpanded }}
+      >
+        <Text style={styles.sectionTitle}>{section.title}</Text>
+        <MaterialCommunityIcons
+          name={isExpanded ? 'minus' : 'plus'}
+          size={20}
+          color={theme.colors.onSurface}
+        />
+      </TouchableOpacity>
+
+      {/* Section Content */}
+      {isExpanded && (
+        <View style={styles.sectionContent}>
+          {section.content_elements
+            ?.sort((a: any, b: any) => a.order_in_section - b.order_in_section)
+            .map((element: any) => (
+              <ContentElement
+                key={element.element_pk}
+                element={element}
+                onWordPress={onWordPress}
+              />
+            ))}
+        </View>
+      )}
+
+      {/* Subtle divider between sections (except last) */}
+      {!isLast && <View style={styles.sectionDivider} />}
+    </View>
+  );
+};
+
+// Enhanced content element renderer with clean styling
 const ContentElement: React.FC<{
   element: any;
   onWordPress: (wordData: WordData) => void;
@@ -160,7 +240,7 @@ const ContentElement: React.FC<{
   const { theme } = useTheme();
 
   const styles = useThemedStyles((theme) => ({
-    // Content element styles with theme support
+    // Clean content element styles
     paragraphContainer: {
       marginBottom: theme.spacing.md,
     },
@@ -174,20 +254,22 @@ const ContentElement: React.FC<{
       color: theme.colors.primary,
       fontWeight: theme.typography.fontWeight.medium,
       backgroundColor: theme.colors.primaryContainer,
-      paddingHorizontal: 3,
-      paddingVertical: 1,
-      borderRadius: 3,
+      paddingHorizontal: 4,
+      paddingVertical: 2,
+      borderRadius: 4,
     },
     listItem: {
       flexDirection: 'row',
       alignItems: 'flex-start',
       marginBottom: theme.spacing.sm,
+      paddingLeft: theme.spacing.sm,
     },
     listBullet: {
       fontSize: theme.typography.fontSize.base,
-      color: theme.colors.onSurfaceVariant,
+      color: theme.colors.primary,
       marginRight: theme.spacing.sm,
       marginTop: 2,
+      fontWeight: theme.typography.fontWeight.bold,
     },
     listText: {
       fontSize: theme.typography.fontSize.base,
@@ -200,7 +282,7 @@ const ContentElement: React.FC<{
       borderRadius: theme.borderRadius.md,
       padding: theme.spacing.md,
       marginBottom: theme.spacing.md,
-      borderLeftWidth: 3,
+      borderLeftWidth: 4,
       borderLeftColor: theme.colors.accent,
     },
     specialContentTitle: {
@@ -209,13 +291,13 @@ const ContentElement: React.FC<{
       color: theme.colors.onSurface,
       marginBottom: theme.spacing.sm,
     },
-    // Memory technique styles with theme support
+    // Clean memory technique styles
     memoryContainer: {
+      backgroundColor: theme.colors.surfaceVariant,
       borderRadius: theme.borderRadius.md,
       padding: theme.spacing.md,
       marginBottom: theme.spacing.sm,
-      borderLeftWidth: 3,
-      backgroundColor: theme.colors.surfaceVariant,
+      borderLeftWidth: 4,
     },
     memoryTitle: {
       fontSize: theme.typography.fontSize.lg,
@@ -228,10 +310,8 @@ const ContentElement: React.FC<{
       borderRadius: theme.borderRadius.sm,
       padding: theme.spacing.sm,
       marginBottom: theme.spacing.xs,
-      borderWidth: 1,
-      borderColor: theme.colors.outlineVariant,
     },
-    // Animation placeholder
+    // Clean animation placeholder
     animationPlaceholder: {
       backgroundColor: theme.colors.surfaceVariant,
       borderRadius: theme.borderRadius.md,
@@ -241,6 +321,7 @@ const ContentElement: React.FC<{
       borderWidth: 2,
       borderColor: theme.colors.outline,
       borderStyle: 'dashed',
+      paddingVertical: theme.spacing.lg,
     },
     placeholderText: {
       fontSize: theme.typography.fontSize.base,
@@ -255,7 +336,7 @@ const ContentElement: React.FC<{
     },
   }));
 
-  // Helper functions (mostly unchanged but using themed styles)
+  // Helper functions (mostly unchanged but using cleaner styles)
   const decodeHtmlEntities = (text: string) => {
     if (!text) return text;
     return text
@@ -306,69 +387,80 @@ const ContentElement: React.FC<{
     }).filter(part => part.content);
   };
 
-  const renderTextWithAnimations = (text: string) => {
-    if (!text) return null;
+// Fix for ContentScreen.tsx - Replace the renderTextWithAnimations function
 
-    const animationParts = text.split(/(\[ANIMATION(?:_PLACEHOLDER)?:[^:]+:[^:]+\])/g);
+// Update your ContentScreen.tsx renderTextWithAnimations function
 
-    return animationParts.map((part, animIndex) => {
-      const animationMatch = part.match(/\[ANIMATION:([^:]+):([^:]+)\]/);
-      const placeholderMatch = part.match(/\[ANIMATION_PLACEHOLDER:([^:]+):([^:]+)\]/);
+const renderTextWithAnimations = (text: string) => {
+  if (!text) return null;
 
-      if (animationMatch) {
-        const [, animationType, height] = animationMatch;
-        return (
-          <ChemistryAnimation
-            key={`anim-${animIndex}`}
-            type={animationType as AnimationType}
-            height={parseInt(height)}
-          />
-        );
-      }
+  const animationParts = text.split(/(\[ANIMATION(?:_PLACEHOLDER)?:[^:]+:[^:]+\])/g);
 
-      if (placeholderMatch) {
-        const [, animationRef, height] = placeholderMatch;
-        return (
-          <View key={`placeholder-${animIndex}`} style={[styles.animationPlaceholder, { height: parseInt(height) }]}>
-            <Text style={styles.placeholderText}>
-              🎬 Animation: "{animationRef}"
-            </Text>
-            <Text style={styles.placeholderSubtext}>
-              (Coming Soon)
-            </Text>
-          </View>
-        );
-      }
+  return animationParts.map((part, animIndex) => {
+    const animationMatch = part.match(/\[ANIMATION:([^:]+):([^:]+)\]/);
+    const placeholderMatch = part.match(/\[ANIMATION_PLACEHOLDER:([^:]+):([^:]+)\]/);
 
-      const textParts = parseWordTags(part);
+    if (animationMatch) {
+      const [, animationType, height] = animationMatch;
 
       return (
-        <Text key={`text-container-${animIndex}`} style={styles.contentText}>
-          {textParts.map((textPart) => {
-            if (textPart.type === 'word') {
-              return (
-                <TouchableOpacity
-                  key={textPart.key}
-                  onPress={() => onWordPress(textPart.wordData)}
-                  activeOpacity={0.7}
-                >
-                  <Text style={styles.dictionaryWord}>
-                    {formatText(textPart.content)}
-                  </Text>
-                </TouchableOpacity>
-              );
-            }
-
-            return (
-              <Text key={textPart.key}>
-                {formatText(textPart.content)}
-              </Text>
-            );
-          })}
-        </Text>
+        <AnimationPlayer  // ✅ Changed from ChemistryAnimation
+          key={`animation-${animationType}-${animIndex}`}
+          animationId={animationType}
+          height={parseInt(height)}
+          onError={(error) => console.error('Animation error:', error)}
+        />
       );
-    });
-  };
+    }
+
+    if (placeholderMatch) {
+      const [, animationRef, height] = placeholderMatch;
+      return (
+        <View key={`placeholder-${animationRef}-${animIndex}`} style={[styles.animationPlaceholder, { height: parseInt(height) }]}>
+          <Text style={styles.placeholderText}>
+            🎬 Animation: "{animationRef}"
+          </Text>
+          <Text style={styles.placeholderSubtext}>
+            (Coming Soon)
+          </Text>
+        </View>
+      );
+    }
+
+    // Handle text parts
+    if (!part.trim()) return null;
+
+    const textParts = parseWordTags(part);
+
+    return (
+      <Text key={`text-block-${animIndex}`} style={styles.contentText}>
+        {textParts.map((textPart, textPartIndex) => {
+          const uniqueKey = `${textPart.type}-${animIndex}-${textPartIndex}`;
+
+          if (textPart.type === 'word') {
+            return (
+              <TouchableOpacity
+                key={uniqueKey}
+                onPress={() => onWordPress(textPart.wordData)}
+                activeOpacity={0.7}
+              >
+                <Text style={styles.dictionaryWord}>
+                  {formatText(textPart.content)}
+                </Text>
+              </TouchableOpacity>
+            );
+          }
+
+          return (
+            <Text key={uniqueKey}>
+              {formatText(textPart.content)}
+            </Text>
+          );
+        })}
+      </Text>
+    );
+  }).filter(Boolean);
+};
 
   const formatText = (text: string) => {
     const decodedText = decodeHtmlEntities(text);
@@ -396,7 +488,7 @@ const ContentElement: React.FC<{
       ));
   };
 
-  // Memory technique rendering (with theme support)
+  // Clean memory technique rendering
   const renderMemoryTechniques = () => {
     const { element_type, text_content, title_attribute } = element;
 
@@ -421,8 +513,6 @@ const ContentElement: React.FC<{
           </View>
         );
 
-      // ... other memory technique cases (similar pattern)
-
       default:
         return null;
     }
@@ -436,7 +526,7 @@ const ContentElement: React.FC<{
     return renderMemoryTechniques();
   }
 
-  // Handle regular content elements
+  // Handle regular content elements with clean styling
   switch (element.element_type) {
     case 'PARAGRAPH':
       return (
@@ -485,7 +575,7 @@ const ContentElement: React.FC<{
   }
 };
 
-// Main ContentScreen component with theme integration
+// Main ContentScreen component with clean theme integration
 export default function ContentScreen() {
   const route = useRoute<any>();
   const { topicId, chapterId, bookId, topics } = route.params;
@@ -543,6 +633,7 @@ export default function ContentScreen() {
       textAlign: 'center',
       marginBottom: theme.spacing.xl,
       lineHeight: theme.typography.lineHeight.tight * theme.typography.fontSize['3xl'],
+      paddingHorizontal: theme.spacing.md,
     },
   }));
 
@@ -570,7 +661,7 @@ export default function ContentScreen() {
             {/* Topic Header */}
             <Text style={styles.topicTitle}>{currentTopic?.title}</Text>
 
-            {/* Grouped Sections */}
+            {/* Grouped Sections - Clean Layout */}
             {Object.entries(groupedSections).map(([groupKey, groupSections]) => (
               <SectionGroup
                 key={groupKey}

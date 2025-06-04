@@ -1,76 +1,29 @@
-// src/data/animations/types.ts - Updated
-export type AnimationTemplateType = 'reaction' | 'state-change' | 'dissolution' | 'bonding' | 'equilibrium' | 'definition';
+// ADD these new interfaces alongside existing ones
+export interface AnimationPlugin { /* from new system */ }
+export interface AnimationDefinition { /* from new system */ }
+export interface TemplateConfig { /* from new system */ }
 
+// KEEP existing AnimationType for backward compatibility
 export type AnimationType =
   | 'hydrogen-oxygen-water'
   | 'states-of-matter'
-  | 'phase-changes'
-  | 'carbon-allotropes'
-  | 'solutions-colloids'
-  | 'temperature-solubility'
   | 'chemistry-definition'
-  | 'chemistry-definition-interactive'; // NEW
+  | 'chemistry-definition-interactive';
 
+// UPDATE AnimationConfig to include new fields
 export interface AnimationConfig {
   html: string;
   height: number;
   autoPlay: boolean;
   loop: boolean;
-  backgroundColor?: string;
   features?: AnimationFeatures;
   safety?: SafetyConstraints;
   template?: {
     type: AnimationTemplateType;
     config: any;
   };
-}
-
-export interface AnimationFeatures {
-  temperature?: boolean;      // Enable temperature slider
-  zoom?: boolean;             // Enable zoom controls
-  speed?: boolean;            // Enable speed controls
-  beforeAfter?: boolean;      // Enable before/after toggle
-  rotation3D?: boolean;       // Enable 3D rotation
-  particleCount?: boolean;    // Enable particle count control
-  pressure?: boolean;         // Enable pressure control
-  concentration?: boolean;    // Enable concentration slider
-}
-
-export interface AnimationEngine {
-  play(): Promise<void>;
-  pause(): void;
-  reset(): void;
-  setSpeed(speed: number): void;
-  setTemperature?(temp: number): void;
-}
-
-export interface ChemicalEntity {
-  element: string;
-  position: { x: number; y: number; z?: number };
-  state?: 'solid' | 'liquid' | 'gas' | 'aqueous';
-}
-
-export interface ReactionConfig {
-  reactants: ChemicalEntity[];
-  products: ChemicalEntity[];
-  conditions?: {
-    temperature?: number;
-    pressure?: number;
-    catalyst?: string;
-  };
-}
-
-export interface SafetyConstraints {
-  maxTemperature?: number;
-  maxPressure?: number;
-  maxConcentration?: number;
-  minDistance?: number;
-  requiredEquipment?: string[];
-  hazardousReactions?: string[];
-}
-
-export interface SafetyStatus {
-  isSafe: boolean;
-  warnings: string[];
-  requiredEquipment: string[];
+  // ADD new fields
+  category?: string;
+  tags?: string[];
+  metadata?: any;
 }

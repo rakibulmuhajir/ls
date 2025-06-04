@@ -24,6 +24,8 @@ interface TeamMember {
   role: string;
   icon: string;
   description: string;
+  avatar: any;
+  emoji: string;
 }
 
 interface AppStat {
@@ -32,6 +34,41 @@ interface AppStat {
   icon: string;
   color: string;
 }
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "Banna",
+    role: "Chief Vision Architect",
+    description: "Always dreaming up the next big feature (sometimes too big).",
+    icon: "lightbulb-on-outline",
+    avatar: require("../../assets/images/avatars/avatar_young.png"), // Replace with actual path
+    emoji: "🤔",
+  },
+  {
+    name: "T2",
+    role: "The Nitpick Knight",
+    description: "Zoomed in to 500% just to fix a one-pixel misalignment. Worth it?",
+    icon: "magnify-scan",
+    avatar: require("../../assets/images/avatars/avatar_funny.png"), // Replace with actual path
+    emoji: "🧐",
+  },
+  {
+    name: "Bantoo",
+    role: "Chief Overthinker & Button Color Strategist",
+    description: "Spent 3 days picking the perfect shade of blue. Still not happy.",
+    icon: "palette-outline",
+    avatar: require("../../assets/images/avatars/avatar_angry.png"), // Replace with actual path
+    emoji: "🎨",
+  },
+  {
+    name: "Jawwi",
+    role: "QA Department",
+    description: "Randomly taps until something breaks. Legendary bug finder.",
+    icon: "baby-face-outline",
+    avatar: require("../../assets/images/avatars/avatar_kid.png"), // Replace or skip if none
+    emoji: "🧪",
+  },
+];
 
 export default function AboutScreen() {
   const { theme } = useTheme();
@@ -54,27 +91,6 @@ export default function AboutScreen() {
     { label: "Chapters", value: "13+", icon: "view-list", color: theme.colors.secondary },
     { label: "Topics", value: "80+", icon: "format-list-bulleted", color: theme.colors.accent },
     { label: "Students", value: "Growing", icon: "account-group", color: brandColors.warning.main }
-  ];
-
-  const teamMembers: TeamMember[] = [
-    {
-      name: "Development Team",
-      role: "Building the Future",
-      icon: "code-tags",
-      description: "Passionate developers creating innovative learning experiences"
-    },
-    {
-      name: "Content Team",
-      role: "Knowledge Curators",
-      icon: "book-edit",
-      description: "Expert educators crafting comprehensive study materials"
-    },
-    {
-      name: "Design Team",
-      role: "User Experience",
-      icon: "palette",
-      description: "Creative minds designing intuitive and beautiful interfaces"
-    }
   ];
 
   const styles = useThemedStyles((theme) => ({
@@ -221,14 +237,37 @@ export default function AboutScreen() {
       alignItems: 'center',
       marginBottom: spacing.sm,
     },
-    teamIconContainer: {
+    teamAvatarContainer: {
       width: 56,
       height: 56,
-      borderRadius: theme.borderRadius.lg,
+      borderRadius: 28,
       backgroundColor: `${theme.colors.primary}10`,
       justifyContent: 'center',
       alignItems: 'center',
       marginRight: spacing.sm,
+      overflow: 'hidden',
+      position: 'relative',
+    },
+    teamAvatar: {
+      width: 52,
+      height: 52,
+      borderRadius: 26,
+    },
+    teamEmoji: {
+      position: 'absolute',
+      bottom: -2,
+      right: -2,
+      backgroundColor: theme.colors.surface,
+      borderRadius: 10,
+      width: 20,
+      height: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderWidth: 2,
+      borderColor: theme.colors.outline,
+    },
+    teamEmojiText: {
+      fontSize: 10,
     },
     teamInfo: {
       flex: 1,
@@ -399,8 +438,11 @@ export default function AboutScreen() {
         ]}
       >
         <View style={styles.teamHeader}>
-          <View style={styles.teamIconContainer}>
-            <MaterialCommunityIcons name={member.icon as any} size={28} color={theme.colors.primary} />
+          <View style={styles.teamAvatarContainer}>
+            <Image source={member.avatar} style={styles.teamAvatar} />
+            <View style={styles.teamEmoji}>
+              <Text style={styles.teamEmojiText}>{member.emoji}</Text>
+            </View>
           </View>
           <View style={styles.teamInfo}>
             <Text style={styles.teamName}>{member.name}</Text>
@@ -447,7 +489,7 @@ export default function AboutScreen() {
 
         <Text style={styles.appName}>LearnSpark</Text>
         <Text style={styles.appTagline}>The Future of Learning is Here.</Text>
-        <Text style={styles.version}>Version 1.5.5</Text>
+        <Text style={styles.version}>Version 2.1.5</Text>
       </View>
 
       {/* Quote Section */}

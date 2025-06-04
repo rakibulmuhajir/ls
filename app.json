@@ -2,7 +2,9 @@
   "expo": {
     "name": "LearnSpark",
     "slug": "learnspark",
-    "version": "1.5.5",
+    "version": "2.1.5",
+    "runtimeVersion": "1.0.0",
+    "description": "LearnSpark is an educational app designed to help users learn and practice various skills through interactive content and quizzes.",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -34,9 +36,9 @@
         "projectId": "cd06e254-0ca6-408e-bd65-fac5526b342b"
       }
     },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    // "runtimeVersion": {
+    //   "policy": "1.0.0"
+    // },
     "updates": {
       "url": "https://u.expo.dev/cd06e254-0ca6-408e-bd65-fac5526b342b"
     }

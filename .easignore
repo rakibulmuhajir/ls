@@ -61,3 +61,4 @@ yarn-error.*
 # *.mobileprovision
 # *.pem
 ls-toolikit/
+src/data/animation copy/

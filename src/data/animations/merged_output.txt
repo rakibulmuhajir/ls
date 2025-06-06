@@ -1,0 +1,1653 @@
+
+=== File: AnimationProvider.tsx ===
+Path: 2d\AnimationProvider.tsx
+---- File Content Start ----
+// src/data/animations/2d/AnimationProvider.tsx
+
+import React, { createContext, useContext, useState, useEffect, useRef, useCallback, ReactNode } from 'react';
+import { PhysicsEngine } from '../core/Physics';
+import { PerformanceManager } from '../core/Performance';
+import { SceneBuilder } from '../core/SceneBuilder'; // Import SceneBuilder
+import type { Particle, Bond, PhysicsState, AnimationContextAPI, AnimationConfig } from '../core/types';
+import { UniqueID } from '@/utils/UniqueID'; // Ensure this path is correct
+
+const AnimationContext = createContext<AnimationContextAPI | undefined>(undefined);
+
+export const AnimationProvider: React.FC<{ children: ReactNode, initialConfig?: AnimationConfig }> = ({ children, initialConfig }) => {
+  const performanceManagerRef = useRef(
+    new PerformanceManager(initialConfig?.performanceMode || 'low')
+  );
+
+  const physicsEngineRef = useRef(
+    new PhysicsEngine(
+      performanceManagerRef.current.getPerformanceSettings().level,
+      initialConfig?.width || 300, // Default width
+      initialConfig?.height || 300 // Default height
+    )
+  );
+
+  const sceneBuilderRef = useRef(new SceneBuilder(physicsEngineRef.current));
+
+  const [tick, setTick] = useState(0); // Renamed for clarity
+  const animationFrameIdRef = useRef<number | null>(null);
+  const lastTimestampRef = useRef<number>(performance.now());
+
+  // Initial setup based on initialConfig
+  useEffect(() => {
+    if (initialConfig) {
+      sceneBuilderRef.current.buildFromConfig(initialConfig);
+      if (initialConfig.initialTemperature !== undefined) {
+        physicsEngineRef.current.setTemperature(initialConfig.initialTemperature);
+      }
+      // Ensure an initial tick to render the first state
+      setTick(t => t + 1);
+    }
+  }, [initialConfig]); // Run only if initialConfig changes (typically once on mount)
+
+
+  // Main animation loop
+  useEffect(() => {
+    const engine = physicsEngineRef.current;
+    const perfManager = performanceManagerRef.current;
+
+    let animationRunning = true;
+
+    const animate = (currentTime: number) => {
+      if (!animationRunning) return;
+
+      const deltaTime = currentTime - lastTimestampRef.current;
+      const targetInterval = 1000 / perfManager.getPerformanceSettings().frameRate;
+
+      // Only update if enough time has passed, or if deltaTime is very large (tab was backgrounded)
+      if (deltaTime >= targetInterval * 0.9 || deltaTime > 250) {
+        engine.update(Math.min(deltaTime, 250), currentTime); // Cap deltaTime
+        lastTimestampRef.current = currentTime;
+        setTick(t => t + 1);
+      }
+      animationFrameIdRef.current = requestAnimationFrame(animate);
+    };
+
+    animationFrameIdRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      animationRunning = false; // Stop the loop
+      if (animationFrameIdRef.current) {
+        cancelAnimationFrame(animationFrameIdRef.current);
+      }
+    };
+  }, []); // Engine and PerfManager instances are stable
+
+  const getPhysicsState = useCallback((): PhysicsState => {
+    return physicsEngineRef.current.getState(lastTimestampRef.current);
+  }, []);
+
+  const setTemperature = useCallback((temp: number) => {
+    physicsEngineRef.current.setTemperature(temp);
+    setTick(t => t + 1); // Ensure UI updates if visual properties depend on temp
+  }, []);
+
+  const addParticle = useCallback((particleData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color' | 'id'> & Partial<Particle>): string => {
+    const id = particleData.id || UniqueID.generate('p_');
+    const finalParticleData = { ...particleData, id };
+    physicsEngineRef.current.addParticle(finalParticleData);
+    setTick(t => t + 1);
+    return id;
+  }, []);
+
+  const addBond = useCallback((bondData: { p1Id: string, p2Id: string, restLength?: number, type?: Bond['type'], id?: string }) : string | null => {
+    const id = bondData.id || UniqueID.generate('b_');
+    const finalBondData = { ...bondData, id };
+    const resultId = physicsEngineRef.current.addBond(finalBondData);
+    if (resultId) setTick(t => t + 1);
+    return resultId;
+  }, []);
+
+  const removeParticle = useCallback((particleId: string) => {
+    physicsEngineRef.current.removeParticle(particleId);
+    setTick(t => t + 1);
+  }, []);
+
+  const removeBond = useCallback((bondId: string) => {
+    physicsEngineRef.current.removeBond(bondId);
+    setTick(t => t + 1);
+  }, []);
+
+  const resetSimulation = useCallback((config?: AnimationConfig) => {
+    const engine = physicsEngineRef.current;
+    const perfManager = performanceManagerRef.current;
+    const sceneBuilder = sceneBuilderRef.current;
+
+    // Stop current animation loop briefly to avoid issues during reset
+    if (animationFrameIdRef.current) cancelAnimationFrame(animationFrameIdRef.current);
+
+    engine.reset(config?.width, config?.height); // Resets particles, bonds, temp
+
+    if (config) {
+      if (config.performanceMode) {
+        perfManager.setPerformanceLevel(config.performanceMode);
+        engine.setPerformanceMode(perfManager.getPerformanceSettings().level);
+      }
+      sceneBuilder.buildFromConfig(config); // SceneBuilder uses the (now possibly updated) engine
+      // buildFromConfig might set initial temperature or particles
+    } else {
+      // Default reset behavior if no config is passed (e.g. just clear)
+      // PhysicsEngine.reset() already handles basic clearing.
+    }
+
+    lastTimestampRef.current = performance.now();
+    setTick(0); // Force an update to render the new (possibly empty) state
+
+    // Restart animation loop
+    animationFrameIdRef.current = requestAnimationFrame((currentTime) => {
+        lastTimestampRef.current = currentTime; // Reset lastTimestamp before first animate call
+        // Re-call animate, but need to ensure the animate function in the main useEffect is used
+        // This part is tricky. The main useEffect should just run.
+        // The key is that setTick(0) will cause a re-render and the loop will continue.
+    });
+  }, []);
+
+
+  const contextValue: AnimationContextAPI = useMemo(() => ({
+    physicsEngine: physicsEngineRef.current,
+    performanceManager: performanceManagerRef.current,
+    getPhysicsState,
+    setTemperature,
+    addParticle,
+    addBond,
+    removeParticle,
+    removeBond,
+    resetSimulation,
+  }), [getPhysicsState, setTemperature, addParticle, addBond, removeParticle, removeBond, resetSimulation]);
+
+  return (
+    <AnimationContext.Provider value={contextValue}>
+      {children}
+    </AnimationContext.Provider>
+  );
+};
+
+// Renamed hook to avoid conflict with a potential component named useAnimation
+export const useAnimationAPI = (): AnimationContextAPI => {
+  const context = useContext(AnimationContext);
+  if (!context) {
+    throw new Error('useAnimationAPI must be used within an AnimationProvider');
+  }
+  return context;
+};
+
+export type { Particle as AnimationParticle, Bond as AnimationBond, PhysicsState, AnimationConfig } from '../core/types'; // Aliased exports
+
+---- File Content End ----
+
+
+=== File: AnimationCanvas.tsx.tsx ===
+Path: components\AnimationCanvas.tsx.tsx
+---- File Content Start ----
+// src/data/animations/components/AnimationCanvas.tsx (renamed from Container.tsx for clarity)
+
+import React from 'react';
+import { View } from 'react-native'; // Import View for layout
+import { Canvas, runTiming, useValue, Easing } from "@shopify/react-native-skia";
+import { useAnimationAPI } from '../2d/AnimationProvider'; // Adjusted path
+import { AnimationRenderer } from '../core/Renderer'; // Renderer instance, not a component
+
+interface AnimationCanvasProps {
+  width: number;
+  height: number;
+  style?: object;
+  children?: React.ReactNode; // For overlaying UI elements on top of Skia canvas
+}
+
+const rendererInstance = new AnimationRenderer(); // Create one instance
+
+export const AnimationCanvas: React.FC<AnimationCanvasProps> = ({
+  width,
+  height,
+  style,
+  children
+}) => {
+  const { getPhysicsState, performanceManager } = useAnimationAPI();
+
+  // getPhysicsState() returns a new object each time, which would cause
+  // the <Canvas> children to re-evaluate constantly if used directly as a dep.
+  // The `tick` from AnimationProvider serves as the trigger for re-rendering the Canvas content.
+  // However, Skia's <Canvas> typically redraws when its child elements change.
+  // We need to ensure the elements array passed to <Canvas> is a new array on each tick.
+
+  const physicsState = getPhysicsState(); // Get the latest state
+  const perfSettings = performanceManager.getPerformanceSettings();
+
+  // The renderer.renderFrame will produce a new array of JSX elements
+  // which Skia will use to redraw.
+  const skiaElements = rendererInstance.renderFrame(physicsState, perfSettings.enableParticleTrails);
+
+  return (
+    <View style={[{ width, height }, style]}>
+      <Canvas style={{ flex: 1 }}>
+        {/* Render Skia elements generated by the renderer */}
+        {skiaElements}
+      </Canvas>
+      {/* Optional: Render children (React Native components) on top of the Canvas */}
+      {children && (
+        <View style={{ position: 'absolute', top: 0, left: 0, width, height }}>
+          {children}
+        </View>
+      )}
+    </View>
+  );
+};
+
+---- File Content End ----
+
+
+=== File: Bond.tsx ===
+Path: components\Bond.tsx
+---- File Content Start ----
+// src/data/animations/components/Bond.tsx
+
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
+// No direct Skia import
+import { useAnimationAPI, AnimationBond } from '../2d/AnimationProvider'; // Adjusted path
+import { UniqueID } from '@/utils/UniqueID';
+
+interface BondComponentProps {
+  id?: string; // Optional ID
+  p1Id: string; // ID of the first particle
+  p2Id: string; // ID of the second particle
+  type?: AnimationBond['type'];
+  restLength?: number; // Optional: if not provided, calculated from initial positions
+  stiffness?: number;
+  stability?: number;
+  color?: string;
+}
+
+export const Bond: React.FC<BondComponentProps> = ({
+  id: propId,
+  p1Id,
+  p2Id,
+  type = 'single',
+  restLength,
+  stiffness,
+  stability,
+  color,
+}) => {
+  const { addBond, removeBond, getPhysicsState } = useAnimationAPI();
+  const bondIdRef = useRef(propId || UniqueID.generate('b_'));
+
+  useLayoutEffect(() => {
+    const bondId = bondIdRef.current;
+
+    let calculatedRestLength = restLength;
+    // Calculate restLength if not provided, based on current particle positions
+    if (calculatedRestLength === undefined) {
+      const state = getPhysicsState(); // Get current state to find particles
+      const particle1 = state.particles.find(p => p.id === p1Id);
+      const particle2 = state.particles.find(p => p.id === p2Id);
+
+      if (particle1 && particle2) {
+        const dx = particle2.x - particle1.x;
+        const dy = particle2.y - particle1.y;
+        calculatedRestLength = Math.sqrt(dx * dx + dy * dy);
+      } else {
+        console.warn(`Bond: Could not find particles ${p1Id} or ${p2Id} to calculate rest length.`);
+        // Don't add bond if particles are missing for restLength calculation
+        return;
+      }
+    }
+
+    if (calculatedRestLength === undefined) return; // Still undefined, something went wrong
+
+    const bondData = {
+      id: bondId,
+      p1Id,
+      p2Id,
+      type,
+      restLength: calculatedRestLength,
+      stiffness,
+      stability,
+      color,
+    };
+
+    const addedBondId = addBond(bondData);
+
+    return () => {
+      if (addedBondId) { // Only try to remove if it was successfully added
+        removeBond(addedBondId);
+      }
+    };
+    // Add all props that define the bond to the dependency array
+  }, [addBond, removeBond, getPhysicsState, p1Id, p2Id, type, restLength, stiffness, stability, color /*propId*/]);
+
+  return null; // Logical component
+};
+
+---- File Content End ----
+
+
+=== File: MolecularView.tsx ===
+Path: components\MolecularView.tsx
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: Particle.tsx ===
+Path: components\Particle.tsx
+---- File Content Start ----
+// src/data/animations/components/Particle.tsx
+
+import React, { useEffect, useLayoutEffect } from 'react';
+// No direct Skia import needed, it's a "logical" component
+import { useAnimationAPI, AnimationParticle } from '../2d/AnimationProvider'; // Adjusted path
+import { ColorSystem } from '../core/Colors'; // For default/element color logic
+
+// Props for the declarative Particle component
+// Most physics properties (vx, vy, maxSpeed etc.) are managed by the engine.
+// We define the initial setup.
+export interface ParticleComponentProps {
+  id?: string; // Optional: if not provided, one will be generated
+  x: number;
+  y: number;
+  z?: number;
+  radius: number;
+  mass?: number;
+  boundaryWidth: number; // The boundaries this particle adheres to
+  boundaryHeight: number;
+  initialColor?: string; // Override default color logic
+  elementType?: string; // e.g., 'H', 'O' for specific element coloring
+  isFixed?: boolean;
+  data?: Record<string, any>;
+}
+
+export const Particle: React.FC<ParticleComponentProps> = ({
+  id: propId,
+  x,
+  y,
+  z,
+  radius,
+  mass,
+  boundaryWidth,
+  boundaryHeight,
+  initialColor,
+  elementType,
+  isFixed,
+  data
+}) => {
+  const { addParticle, removeParticle } = useAnimationAPI();
+
+  // useLayoutEffect to ensure particle is added before first paint if possible,
+  // and to get a stable ID for the effect's dependency array.
+  const particleIdRef = React.useRef(propId || UniqueID.generate('p_')); // Generate ID if not provided
+
+  useLayoutEffect(() => {
+    const particleId = particleIdRef.current;
+
+    let determinedColor = initialColor;
+    if (!determinedColor) {
+      if (elementType) {
+        determinedColor = ColorSystem.getElementColor(elementType);
+      } else {
+        determinedColor = RenderConfig.Particle.DefaultColor; // Fallback if no element type
+      }
+    }
+
+    // Construct the particle data for the engine
+    // Engine will set vx, vy, maxSpeed, vibrationIntensity etc.
+    const particleData: Omit<AnimationParticle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity'> & Partial<AnimationParticle> = {
+      id: particleId,
+      x,
+      y,
+      z,
+      radius,
+      mass: mass || radius, // Default mass proportional to radius
+      color: determinedColor,
+      boundaryWidth,
+      boundaryHeight,
+      isFixed,
+      data
+    };
+
+    addParticle(particleData);
+
+    return () => {
+      removeParticle(particleId);
+    };
+    // Dependencies: include all props that define the particle's initial state
+    // Note: If x, y, etc., are dynamic props that can change, this effect will
+    // re-add/remove the particle. For dynamic updates to existing particles,
+    // you'd need a different mechanism (e.g., physicsEngine.updateParticle(id, newProps)).
+    // For now, this assumes initial setup.
+  }, [
+    addParticle, removeParticle, x, y, z, radius, mass,
+    boundaryWidth, boundaryHeight, initialColor, elementType, isFixed, data
+    // propId is not in deps because particleIdRef.current is used, which is stable
+  ]);
+
+  return null; // This component doesn't render anything itself
+};
+
+---- File Content End ----
+
+
+=== File: StateTransition.tsx ===
+Path: components\StateTransition.tsx
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: AnimationContext.tsx ===
+Path: contexts\AnimationContext.tsx
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: Colors.ts ===
+Path: core\Colors.ts
+---- File Content Start ----
+// src/data/animations/core/Colors.ts
+import { RenderConfig } from './RenderConfig'; // For temperature colors
+
+// Scientific color palettes for educational animations
+const elementColors: Record<string, string> = {
+  H: '#FFFFFF',  // White (often rendered smaller)
+  He: '#DBFFD4', // Light cyan/green
+  Li: '#CC80FF', // Purple
+  Be: '#C2FF00', // Light green
+  B:  '#FFB5B5', // Salmon pink
+  C:  '#909090', // Grey (Graphite) / Black (Diamond) - often just grey
+  N:  '#3050F8', // Dark blue
+  O:  '#FF0D0D', // Red
+  F:  '#90E050', // Pale green
+  Ne: '#B3E3F5', // Light blue
+  Na: '#AB5CF2', // Violet
+  Mg: '#8AFF00', // Bright green
+  Al: '#BFA6A6', // Greyish pink
+  Si: '#F0C8A0', // Light brown/orange
+  P:  '#FF8000', // Orange
+  S:  '#FFFF30', // Yellow
+  Cl: '#1FF01F', // Bright green (different from F)
+  Ar: '#80D1F5', // Sky blue
+  K:  '#8F40D4', // Dark purple
+  Ca: '#3DFF00', // Green
+  // Add more as needed, these are CPK coloring inspired
+  // Default for unknown elements
+  DEFAULT: '#CCCCCC', // A neutral grey
+};
+
+
+export class ColorSystem {
+  static getElementColor(elementSymbol: string): string {
+    return elementColors[elementSymbol.toUpperCase()] || elementColors.DEFAULT;
+  }
+
+  static getStateColor(state: 'solid' | 'liquid' | 'gas', temperature?: number): string {
+    // Temperature influences gas color more directly, others are more fixed representations
+    if (state === 'solid') return RenderConfig.TemperatureColors.Cool;
+    if (state === 'liquid') return RenderConfig.TemperatureColors.Medium;
+    if (state === 'gas') {
+      if (temperature === undefined) return RenderConfig.TemperatureColors.Warm;
+      return temperature > 75 ? RenderConfig.TemperatureColors.Hot :
+             temperature > 50 ? RenderConfig.TemperatureColors.Warm :
+             RenderConfig.TemperatureColors.Medium; // Gas can also be "medium" temp
+    }
+    return elementColors.DEFAULT;
+  }
+
+  // Temperature gradient for visualization, not direct particle color
+  static getTemperatureGradientColors(): string[] {
+    return [
+      RenderConfig.TemperatureColors.Cool,
+      RenderConfig.TemperatureColors.Medium,
+      RenderConfig.TemperatureColors.Warm,
+      RenderConfig.TemperatureColors.Hot,
+    ];
+  }
+
+  static getBondColor(type?: Bond['type']): string {
+    // Use RenderConfig for base, but allow specific types if needed
+    switch (type) {
+      case 'double': return '#2d3748'; // Darker than single
+      case 'triple': return '#1a202c'; // Darkest
+      case 'hydrogen': return RenderConfig.TemperatureColors.Cool + '80'; // Semi-transparent blue
+      case 'ionic': return RenderConfig.Bond.DefaultColor + '50'; // Semi-transparent default (visual cue)
+      case 'single':
+      default:
+        return RenderConfig.Bond.DefaultColor;
+    }
+  }
+
+  // Reaction colors (could be used for energy change indicators)
+  static getReactionIndicatorColor(type: 'exothermic' | 'endothermic'): string {
+    return type === 'exothermic' ? RenderConfig.TemperatureColors.Hot : RenderConfig.TemperatureColors.Cool;
+  }
+
+  // Get a color based on a normalized value (0-1) across the temp gradient
+  static getColorFromNormalizedTemperature(value: number): string {
+    const gradient = ColorSystem.getTemperatureGradientColors();
+    if (value <= 0) return gradient[0];
+    if (value >= 1) return gradient[gradient.length - 1];
+
+    const scaledValue = value * (gradient.length - 1);
+    const index = Math.floor(scaledValue);
+    const t = scaledValue - index; // Interpolation factor
+
+    const color1 = Skia.Color(gradient[index]); // Assuming Skia is available or use a hex-to-rgba helper
+    const color2 = Skia.Color(gradient[index + 1]);
+
+    const r = Math.round(Skia.Color.r(color1) * (1 - t) + Skia.Color.r(color2) * t);
+    const g = Math.round(Skia.Color.g(color1) * (1 - t) + Skia.Color.g(color2) * t);
+    const b = Math.round(Skia.Color.b(color1) * (1 - t) + Skia.Color.b(color2) * t);
+    // const a = Math.round(Skia.Color.a(color1) * (1 - t) + Skia.Color.a(color2) * t); // if alpha is needed
+
+    return `rgb(${r}, ${g}, ${b})`; // Or use Skia.Color.toHex(Skia.Color.make...)
+  }
+}
+// Note: For getColorFromNormalizedTemperature, if Skia is not directly available here,
+// you'd need a utility to parse hex colors and interpolate their RGB components.
+// For simplicity, the particle color update in PhysicsEngine is currently simpler.
+
+---- File Content End ----
+
+
+=== File: Performance.ts ===
+Path: core\Performance.ts
+---- File Content Start ----
+// src/data/animations/core/Performance.ts
+import type { PhysicsEngine, PerformanceSettings } from './types'; // Ensure correct import path
+
+export class PerformanceManager {
+  private currentSettings: PerformanceSettings;
+
+  constructor(initialLevel: 'low' | 'medium' | 'high' = 'low') {
+    // Initial detection is a placeholder - in a real app, this would be more sophisticated
+    // or could be set based on user preference or device capabilities.
+    this.currentSettings = this.getSettingsForLevel(initialLevel);
+    this.detectDevicePerformance(); // Simulate detection on init
+  }
+
+  private getSettingsForLevel(level: 'low' | 'medium' | 'high'): PerformanceSettings {
+    switch (level) {
+      case 'high':
+        return {
+          level: 'high',
+          frameRate: 60,
+          maxParticles: 200, // Example
+          physicsQuality: 'advanced',
+          enableParticleTrails: true,
+          enableComplexCollisions: true,
+        };
+      case 'medium':
+        return {
+          level: 'medium',
+          frameRate: 45,
+          maxParticles: 100,
+          physicsQuality: 'standard',
+          enableParticleTrails: false,
+          enableComplexCollisions: true,
+        };
+      case 'low':
+      default:
+        return {
+          level: 'low',
+          frameRate: 30,
+          maxParticles: 50,
+          physicsQuality: 'basic',
+          enableParticleTrails: false,
+          enableComplexCollisions: false,
+        };
+    }
+  }
+
+  // Simulate device performance detection
+  private detectDevicePerformance() {
+    // Placeholder: In a real app, use libraries like react-native-device-info
+    // to get device RAM, CPU cores, etc., and make an educated guess.
+    // For now, we'll default to 'low' or allow it to be set externally.
+    // Example:
+    // const deviceInfo = getDeviceInfo();
+    // if (deviceInfo.totalMemory > 4 * 1024 * 1024 * 1024 && deviceInfo.cpuCores > 4) {
+    //   this.setPerformanceLevel('medium');
+    // }
+    console.log("PerformanceManager: Defaulting to initial or 'low' performance settings. Implement actual device detection.");
+    // The constructor already sets initialLevel. This method could refine it.
+  }
+
+  getPerformanceSettings(): Readonly<PerformanceSettings> {
+    return Object.freeze({ ...this.currentSettings }); // Return a copy
+  }
+
+  setPerformanceLevel(level: 'low' | 'medium' | 'high') {
+    console.log(`PerformanceManager: Setting performance level to ${level}`);
+    this.currentSettings = this.getSettingsForLevel(level);
+    // Notify subscribers or engine if settings change dynamically during an animation
+  }
+
+  // These methods are more conceptual for now; actual optimization logic lives in PhysicsEngine/Renderer
+  // based on the settings provided by this manager.
+  // This manager's role is to DETERMINE the settings.
+  shouldEnableComplexCollisions(): boolean {
+    return this.currentSettings.enableComplexCollisions;
+  }
+
+  shouldEnableParticleTrails(): boolean {
+    return this.currentSettings.enableParticleTrails;
+  }
+
+  getTargetFrameRate(): number {
+    return this.currentSettings.frameRate;
+  }
+}
+
+---- File Content End ----
+
+
+=== File: Physics.ts ===
+Path: core\Physics.ts
+---- File Content Start ----
+// src/data/animations/core/Physics.ts
+import type { Particle, Bond, PhysicsState } from './types'; // Use 'type' import for interfaces
+import { RenderConfig } from './RenderConfig';
+import {UniqueID} from '@/utils/UniqueID'; // Assuming you have a unique ID generator
+
+export class PhysicsEngine {
+  private particles: Map<string, Particle> = new Map(); // Use Map for easier ID-based access/removal
+  private bonds: Map<string, Bond> = new Map();     // Use Map for bonds too
+  private _temperature: number = 25; // Ambient temperature (e.g., 0-100 scale)
+  private performanceMode: 'low' | 'medium' | 'high' = 'low';
+  private lastTimestamp: number = 0; // For consistent timing in vibration
+
+  // Simulation boundary (assuming it's fixed for now, or passed in)
+  public boundaryWidth: number = 300;
+  public boundaryHeight: number = 300;
+
+
+  constructor(performanceMode: 'low' | 'medium' | 'high' = 'low', width: number = 300, height: number = 300) {
+    this.performanceMode = performanceMode;
+    this.boundaryWidth = width;
+    this.boundaryHeight = height;
+    this.lastTimestamp = performance.now();
+  }
+
+  // --- Particle Management ---
+  addParticle(particleData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle>): string {
+    const id = particleData.id || UniqueID.generate();
+    const newParticle: Particle = {
+      vx: 0,
+      vy: 0,
+      maxSpeed: 1, // Default, will be updated by temperature
+      vibrationIntensity: 0.1, // Default
+      vibrationFrequency: 200 + Math.random() * 50, // Add some randomness to vibration
+      color: RenderConfig.Particle.DefaultColor, // Default, updated by temp/type
+      mass: particleData.radius || RenderConfig.Particle.DefaultRadius, // Simple mass = radius
+      boundaryWidth: this.boundaryWidth, // Use engine's boundary
+      boundaryHeight: this.boundaryHeight,
+      ...particleData,
+      id, // Ensure ID is set
+      z: particleData.z || 0,
+    };
+    this.particles.set(id, newParticle);
+    this.updateParticleBehavior(newParticle); // Apply initial temp effects
+    return id;
+  }
+
+  removeParticle(particleId: string): void {
+    this.particles.delete(particleId);
+    // Also remove any bonds connected to this particle
+    const bondsToRemove: string[] = [];
+    this.bonds.forEach(bond => {
+      if (bond.particle1.id === particleId || bond.particle2.id === particleId) {
+        bondsToRemove.push(bond.id);
+      }
+    });
+    bondsToRemove.forEach(bondId => this.bonds.delete(bondId));
+  }
+
+  // --- Bond Management ---
+  addBond(bondData: {p1Id: string, p2Id: string, restLength?: number, type?: Bond['type'], stiffness?: number, stability?: number}): string | null {
+    const p1 = this.particles.get(bondData.p1Id);
+    const p2 = this.particles.get(bondData.p2Id);
+
+    if (!p1 || !p2) {
+      console.warn("Cannot create bond: one or both particles not found.", bondData.p1Id, bondData.p2Id);
+      return null;
+    }
+    const id = UniqueID.generate(); // Generate unique ID for the bond
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+
+    const newBond: Bond = {
+      id,
+      particle1: p1,
+      particle2: p2,
+      restLength: bondData.restLength ?? Math.sqrt(dx * dx + dy * dy),
+      stability: bondData.stability ?? 1.0,
+      stiffness: bondData.stiffness ?? 0.5, // Default stiffness
+      type: bondData.type ?? 'single',
+    };
+    this.bonds.set(id, newBond);
+    return id;
+  }
+
+  removeBond(bondId: string): void {
+    this.bonds.delete(bondId);
+  }
+
+  // --- Simulation Control ---
+  setTemperature(temp: number) { // Temp likely 0-100 scale
+    this._temperature = Math.max(0, Math.min(100, temp)); // Clamp temperature
+    this.particles.forEach(p => this.updateParticleBehavior(p));
+    this.bonds.forEach(b => this.updateBondBehavior(b));
+  }
+
+  get temperature(): number {
+    return this._temperature;
+  }
+
+  setPerformanceMode(mode: 'low' | 'medium' | 'high') {
+    this.performanceMode = mode;
+    // Potentially re-evaluate particle behaviors or other settings
+  }
+
+  reset(newWidth?: number, newHeight?: number) {
+    this.particles.clear();
+    this.bonds.clear();
+    this._temperature = 25; // Reset to ambient
+    if (newWidth) this.boundaryWidth = newWidth;
+    if (newHeight) this.boundaryHeight = newHeight;
+    this.lastTimestamp = performance.now();
+  }
+
+  // --- Behavior Updates ---
+  private updateParticleBehavior(particle: Particle) {
+    const intensity = this._temperature / 100; // Normalized temperature (0 to 1)
+
+    // Adjust movement parameters based on temperature
+    // More energy means higher potential speed
+    particle.maxSpeed = 0.2 + intensity * (this.performanceMode === 'low' ? 1.5 : 2.5);
+    // Vibration intensity increases with temperature, especially for "solids" (low temp)
+    particle.vibrationIntensity = (0.05 + intensity * 0.5) * (1 - intensity) * particle.radius * 0.1;
+
+
+    // Adjust color based on temperature (simplified from friend's suggestion)
+    // This could use ColorSystem.getColorFromNormalizedTemperature if a Skia-like color lib is available
+    if (this._temperature < 33) particle.color = RenderConfig.TemperatureColors.Cool;
+    else if (this._temperature < 66) particle.color = RenderConfig.TemperatureColors.Medium;
+    else particle.color = RenderConfig.TemperatureColors.Hot;
+
+    // If particle has an element type, that color might override temperature color
+    // This logic would be in SceneBuilder or Particle component when setting initial color
+  }
+
+  private updateBondBehavior(bond: Bond) {
+    const intensity = this._temperature / 100;
+    bond.stability = Math.max(RenderConfig.Bond.MinVisibleStability, 1 - intensity * 0.9); // Bonds weaken significantly at high temps
+  }
+
+
+  // --- Main Simulation Update ---
+  update(deltaTimeMs: number, currentTimeMs: number) {
+    if (deltaTimeMs <= 0) return;
+    const timeStep = Math.min(deltaTimeMs / 1000, 0.033); // Cap timestep to avoid instability (e.g., max 30fps equivalent physics step)
+    this.lastTimestamp = currentTimeMs;
+
+    // Create mutable copies for this update cycle if direct mutation is complex
+    // Or iterate and update directly if careful
+    const currentParticles = Array.from(this.particles.values());
+    const currentBonds = Array.from(this.bonds.values());
+
+    for (const particle of currentParticles) {
+      if (particle.isFixed) continue;
+      this.applyTemperatureEffects(particle, timeStep, currentTimeMs);
+    }
+
+    // Apply bond constraints (multiple iterations for stability if needed, esp. in medium/high)
+    const iterations = this.performanceMode === 'low' ? 1 : 2;
+    for (let i = 0; i < iterations; i++) {
+        for (const bond of currentBonds) {
+            this.applyBondConstraint(bond, timeStep);
+        }
+    }
+
+    for (const particle of currentParticles) {
+        if (particle.isFixed) continue;
+        this.applyFriction(particle); // Apply some damping/friction
+        this.updatePosition(particle, timeStep);
+        this.applyBoundaryConstraints(particle);
+    }
+
+    if (this.performanceMode !== 'low') {
+      this.detectCollisions(currentParticles);
+    }
+  }
+
+  // --- Physics Sub-Steps ---
+  private applyTemperatureEffects(particle: Particle, timeStep: number, currentTimeMs: number) {
+    const tempFactor = this._temperature / 50; // Normalized intensity for movement
+
+    // Random brownian-like motion based on temperature
+    // Adjust strength based on performance mode
+    const randomForceScale = this.performanceMode === 'high' ? 0.5 : 0.2;
+    particle.vx += (Math.random() - 0.5) * tempFactor * randomForceScale * particle.mass * timeStep;
+    particle.vy += (Math.random() - 0.5) * tempFactor * randomForceScale * particle.mass * timeStep;
+
+    // Apply vibration for "solids" (low temperature state)
+    // Using currentTimeMs for more consistent vibration phase across calls
+    if (this._temperature < 35 && particle.vibrationIntensity > 0) { // Arbitrary "solid" threshold
+      const angle = (currentTimeMs / (particle.vibrationFrequency ?? 200)) * Math.PI * 2;
+      particle.x += Math.sin(angle) * particle.vibrationIntensity * timeStep * 50; // scale vibration with timestep
+      particle.y += Math.cos(angle) * particle.vibrationIntensity * timeStep * 50;
+    }
+  }
+
+  private applyFriction(particle: Particle) {
+    const friction = 0.98; // Simulate some energy loss / damping
+    particle.vx *= friction;
+    particle.vy *= friction;
+  }
+
+  private updatePosition(particle: Particle, timeStep: number) {
+     // Limit speed
+     const speed = Math.sqrt(particle.vx ** 2 + particle.vy ** 2);
+     if (speed > particle.maxSpeed && particle.maxSpeed > 0) {
+       particle.vx = (particle.vx / speed) * particle.maxSpeed;
+       particle.vy = (particle.vy / speed) * particle.maxSpeed;
+     }
+     // Update position
+     particle.x += particle.vx * timeStep * 50; // Multiplier to make movement more visible
+     particle.y += particle.vy * timeStep * 50;
+  }
+
+
+  private applyBondConstraint(bond: Bond, timeStep: number) {
+    // Verlet integration style for bond constraints can be more stable
+    const p1 = bond.particle1;
+    const p2 = bond.particle2;
+    if (p1.isFixed && p2.isFixed) return;
+
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+    const distance = Math.max(1, Math.sqrt(dx * dx + dy * dy)); // Prevent division by zero
+    const diffRatio = (bond.restLength - distance) / distance;
+
+    // Displace each particle proportionally to its "freedom" (inverse of mass, or 0.5 if masses are equal)
+    // For simplicity, using 0.5, or you could use 1/mass if mass is defined
+    const p1Share = p1.isFixed ? 0 : (p2.isFixed ? 1 : 0.5);
+    const p2Share = p2.isFixed ? 0 : (p1.isFixed ? 1 : 0.5);
+
+
+    const springForce = diffRatio * (bond.stiffness ?? 0.5) * bond.stability;
+
+    const moveX = dx * springForce;
+    const moveY = dy * springForce;
+
+    if (!p1.isFixed) {
+        p1.vx -= moveX * p1Share * timeStep ;
+        p1.vy -= moveY * p1Share * timeStep ;
+    }
+    if (!p2.isFixed) {
+        p2.vx += moveX * p2Share * timeStep ;
+        p2.vy += moveY * p2Share * timeStep ;
+    }
+  }
+
+  private applyBoundaryConstraints(particle: Particle) {
+    const restitution = 0.5; // How much velocity is kept after collision with boundary
+
+    if (particle.x < particle.radius) {
+      particle.x = particle.radius;
+      particle.vx *= -restitution;
+    } else if (particle.x > this.boundaryWidth - particle.radius) {
+      particle.x = this.boundaryWidth - particle.radius;
+      particle.vx *= -restitution;
+    }
+
+    if (particle.y < particle.radius) {
+      particle.y = particle.radius;
+      particle.vy *= -restitution;
+    } else if (particle.y > this.boundaryHeight - particle.radius) {
+      particle.y = this.boundaryHeight - particle.radius;
+      particle.vy *= -restitution;
+    }
+  }
+
+  private detectCollisions(particles: Particle[]) {
+    // Simple O(n^2) collision detection - consider optimizations for many particles
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const p1 = particles[i];
+        const p2 = particles[j];
+        if (p1.isFixed && p2.isFixed) continue;
+
+        const dx = p2.x - p1.x;
+        const dy = p2.y - p1.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const minDistance = p1.radius + p2.radius;
+
+        if (distance < minDistance && distance > 0) { // Check distance > 0 to avoid self-collision issues
+          // Resolve overlap
+          const overlap = (minDistance - distance) / distance;
+          const offsetX = dx * overlap * 0.5;
+          const offsetY = dy * overlap * 0.5;
+
+          if(!p1.isFixed) {
+            p1.x -= offsetX;
+            p1.y -= offsetY;
+          }
+          if(!p2.isFixed) {
+            p2.x += offsetX;
+            p2.y += offsetY;
+          }
+
+          // Simple elastic collision response (simplified)
+          // For more accurate collisions, conserve momentum and kinetic energy
+          const angle = Math.atan2(dy, dx);
+          const sin = Math.sin(angle);
+          const cos = Math.cos(angle);
+
+          // Rotate velocities to collision axis
+          const v1 = { x: p1.vx * cos + p1.vy * sin, y: p1.vy * cos - p1.vx * sin };
+          const v2 = { x: p2.vx * cos + p2.vy * sin, y: p2.vy * cos - p2.vx * sin };
+
+          // Swap velocities along collision axis (for equal mass)
+          // More complex if masses differ: (v1Final = (v1*(m1-m2) + 2*m2*v2) / (m1+m2))
+          const v1xFinal = p2.isFixed ? -v1.x : v2.x; // If p2 is fixed, p1 bounces off
+          const v2xFinal = p1.isFixed ? -v2.x : v1.x; // If p1 is fixed, p2 bounces off
+
+          // Rotate back
+          const p1vx = v1xFinal * cos - v1.y * sin;
+          const p1vy = v1.y * cos + v1xFinal * sin;
+          const p2vx = v2xFinal * cos - v2.y * sin;
+          const p2vy = v2.y * cos + v2xFinal * sin;
+
+          const restitution = 0.8; // Bounciness
+
+          if(!p1.isFixed) {
+            p1.vx = p1vx * restitution;
+            p1.vy = p1vy * restitution;
+          }
+          if(!p2.isFixed) {
+            p2.vx = p2vx * restitution;
+            p2.vy = p2vy * restitution;
+          }
+        }
+      }
+    }
+  }
+
+  // --- Get State ---
+  getState(currentTimeMs: number): PhysicsState {
+    return {
+      particles: Object.freeze(Array.from(this.particles.values()).map(p => ({ ...p }))), // Deep clone for safety
+      bonds: Object.freeze(Array.from(this.bonds.values()).map(b => ({ ...b }))),       // Deep clone
+      timestamp: currentTimeMs,
+    };
+  }
+}
+
+---- File Content End ----
+
+
+=== File: RenderConfig.ts ===
+Path: core\RenderConfig.ts
+---- File Content Start ----
+// src/data/animations/core/RenderConfig.ts
+
+export const RenderConfig = {
+  Bond: {
+    DefaultColor: '#4a5568', // Default color for single bonds
+    StrokeWidthMultiplier: 1.5, // Multiplied by bond.stability
+    MinVisibleStability: 0.1,
+  },
+  Particle: {
+    DefaultRadius: 10,
+    DefaultColor: '#94a3b8', // Slate 400/500
+  },
+  Trail: {
+    OpacityHex: '80', // Appended to color string for 50% opacity
+    LengthMultiplier: 3, // Multiplied by velocity vector for trail length
+    StrokeWidth: 1,
+    MinSpeedThreshold: 0.5, // Only show trails for particles faster than this
+  },
+  TemperatureColors: { // Aligned with your theme's interactive colors
+    Cool: '#4299e1',    // theme.colors.interactive.cold
+    Medium: '#48bb78',  // theme.colors.interactive.medium
+    Warm: '#f6ad55',    // A warm orange
+    Hot: '#f56565',     // theme.colors.interactive.hot
+  }
+};
+
+---- File Content End ----
+
+
+=== File: Renderer.tsx ===
+Path: core\Renderer.tsx
+---- File Content Start ----
+// src/data/animations/core/Renderer.ts
+import { Skia, Canvas, Group, Path, Circle, vec, SkPath } from "@shopify/react-native-skia";
+import type { PhysicsState, Particle, Bond } from "./types"; // Use 'type' import
+import { RenderConfig } from "./RenderConfig";
+import { ColorSystem } from "./Colors";
+
+
+// --- Reusable Skia Functional Components (Friend's Suggestion) ---
+
+interface BondLineProps {
+  bond: Bond;
+  // Consider passing a unique key if bonds are dynamic and rerendered
+}
+const BondLine: React.FC<BondLineProps> = React.memo(({ bond }) => {
+  if (bond.stability < RenderConfig.Bond.MinVisibleStability) return null;
+
+  const path = Skia.Path.Make();
+  path.moveTo(bond.particle1.x, bond.particle1.y);
+  path.lineTo(bond.particle2.x, bond.particle2.y);
+
+  return (
+    <Path
+      path={path}
+      style="stroke"
+      strokeWidth={Math.max(1, RenderConfig.Bond.StrokeWidthMultiplier * bond.stability)}
+      color={bond.color || ColorSystem.getBondColor(bond.type)} // Use bond's own color if defined
+      antiAlias // Smooth lines
+    />
+  );
+});
+
+interface ParticleCircleProps {
+  particle: Particle;
+}
+const ParticleCircle: React.FC<ParticleCircleProps> = React.memo(({ particle }) => {
+  return (
+    <Circle
+      cx={particle.x}
+      cy={particle.y}
+      r={particle.radius}
+      color={particle.color} // Color is now set by PhysicsEngine or SceneBuilder
+      antiAlias
+    />
+  );
+});
+
+interface ParticleTrailProps {
+    particle: Particle;
+}
+const ParticleTrail: React.FC<ParticleTrailProps> = React.memo(({ particle }) => {
+    const speed = Math.sqrt(particle.vx ** 2 + particle.vy ** 2);
+    if (speed < RenderConfig.Trail.MinSpeedThreshold) return null;
+
+    const path = Skia.Path.Make();
+    path.moveTo(particle.x, particle.y);
+    // Trail length proportional to velocity and config multiplier
+    path.lineTo(
+        particle.x - particle.vx * RenderConfig.Trail.LengthMultiplier,
+        particle.y - particle.vy * RenderConfig.Trail.LengthMultiplier
+    );
+
+    return (
+        <Path
+            path={path}
+            style="stroke"
+            strokeWidth={RenderConfig.Trail.StrokeWidth}
+            color={`${particle.color}${RenderConfig.Trail.OpacityHex}`}
+            antiAlias
+        />
+    );
+});
+
+
+// Renderer for physics-based animations
+export class AnimationRenderer {
+  // No longer needs physics engine directly, just the state
+  // private physics: PhysicsEngine;
+
+  constructor() {
+    // No setup needed if just receiving state
+  }
+
+  // Render particles and bonds based on the current physics state
+  renderFrame(state: PhysicsState, showTrails: boolean): JSX.Element[] {
+    const { particles, bonds } = state;
+    const elements: JSX.Element[] = [];
+
+    // Render bonds first (as they are "behind" particles)
+    for (const bond of bonds) {
+      elements.push(
+        <BondLine key={bond.id} bond={bond} />
+      );
+    }
+
+    // Render particles
+    for (const particle of particles) {
+      elements.push(
+        <ParticleCircle key={particle.id} particle={particle} />
+      );
+      if (showTrails) {
+        elements.push(
+            <ParticleTrail key={`trail-${particle.id}`} particle={particle} />
+        )
+      }
+    }
+    return elements;
+  }
+
+  // renderTrails is now integrated into renderFrame based on a flag
+}
+
+---- File Content End ----
+
+
+=== File: SceneBuilder.ts ===
+Path: core\SceneBuilder.ts
+---- File Content Start ----
+// src/data/animations/core/SceneBuilder.ts
+
+import { PhysicsEngine } from './Physics';
+import type { Particle, Bond } from './types'; // Use 'type' import
+import { ColorSystem } from './Colors';
+import { UniqueID } from '@/utils/UniqueID'; // Adjust path as needed
+import { RenderConfig } from './RenderConfig';
+
+export class SceneBuilder {
+  private physics: PhysicsEngine;
+
+  constructor(physicsEngine: PhysicsEngine) {
+    this.physics = physicsEngine;
+  }
+
+  // Method to clear existing scene elements before building a new one
+  public clearScene(): void {
+    // This assumes PhysicsEngine has a reset or clearAll method
+    this.physics.reset(); // PhysicsEngine.reset() now clears particles and bonds
+  }
+
+  public createWaterMolecule(
+    baseId: string, // e.g., "water1"
+    x: number,
+    y: number,
+    scale: number = 1,
+    boundaryWidth: number,
+    boundaryHeight: number
+  ): { oxygenId: string; hydrogen1Id: string; hydrogen2Id: string } {
+
+    const oxygenData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_O`,
+      x,
+      y,
+      radius: 12 * scale,
+      mass: 16, // Approx atomic mass
+      boundaryWidth,
+      boundaryHeight,
+      data: { elementType: 'O' }, // Store element type for other logic if needed
+    };
+    const oxygenId = this.physics.addParticle(oxygenData);
+    // Manually set color after adding, or let PhysicsEngine handle initial color based on elementType if implemented
+    const oxygenParticle = this.physics.particles.get(oxygenId);
+    if (oxygenParticle) oxygenParticle.color = ColorSystem.getElementColor('O');
+
+
+    const h1Data: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_H1`,
+      x: x - 20 * scale, // Approximate position
+      y: y + 15 * scale,
+      radius: 8 * scale,
+      mass: 1,
+      boundaryWidth,
+      boundaryHeight,
+      data: { elementType: 'H' },
+    };
+    const hydrogen1Id = this.physics.addParticle(h1Data);
+    const h1Particle = this.physics.particles.get(hydrogen1Id);
+    if (h1Particle) h1Particle.color = ColorSystem.getElementColor('H');
+
+
+    const h2Data: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_H2`,
+      x: x + 20 * scale, // Approximate position
+      y: y + 15 * scale,
+      radius: 8 * scale,
+      mass: 1,
+      boundaryWidth,
+      boundaryHeight,
+      data: { elementType: 'H' },
+    };
+    const hydrogen2Id = this.physics.addParticle(h2Data);
+    const h2Particle = this.physics.particles.get(hydrogen2Id);
+    if (h2Particle) h2Particle.color = ColorSystem.getElementColor('H');
+
+
+    // Add bonds using the IDs returned by addParticle
+    this.physics.addBond({ p1Id: oxygenId, p2Id: hydrogen1Id, type: 'single', restLength: 22 * scale, stiffness: 0.8 });
+    this.physics.addBond({ p1Id: oxygenId, p2Id: hydrogen2Id, type: 'single', restLength: 22 * scale, stiffness: 0.8 });
+
+    return { oxygenId, hydrogen1Id, hydrogen2Id };
+  }
+
+  public createNaClUnit(
+    baseId: string,
+    x: number,
+    y: number,
+    scale: number = 1,
+    boundaryWidth: number,
+    boundaryHeight: number
+  ): { naId: string, clId: string } {
+    const naData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_Na`, x, y, radius: 15 * scale, mass: 23, boundaryWidth, boundaryHeight, data: { elementType: 'Na' }
+    };
+    const naId = this.physics.addParticle(naData);
+    const naParticle = this.physics.particles.get(naId);
+    if (naParticle) naParticle.color = ColorSystem.getElementColor('Na');
+
+    const clData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_Cl`, x: x + 35 * scale, y, radius: 18 * scale, mass: 35.5, boundaryWidth, boundaryHeight, data: { elementType: 'Cl' }
+    };
+    const clId = this.physics.addParticle(clData);
+    const clParticle = this.physics.particles.get(clId);
+    if (clParticle) clParticle.color = ColorSystem.getElementColor('Cl');
+
+    // Ionic bonds are primarily electrostatic attraction, represented here as a fairly stable bond
+    this.physics.addBond({ p1Id: naId, p2Id: clId, type: 'ionic', restLength: 35 * scale, stability: 0.9, stiffness: 0.6 });
+    return { naId, clId };
+  }
+
+  public createCO2Molecule(
+    baseId: string,
+    x: number,
+    y: number,
+    scale: number = 1,
+    boundaryWidth: number,
+    boundaryHeight: number
+  ): { cId: string, o1Id: string, o2Id: string} {
+    const carbonData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_C`, x, y, radius: 12 * scale, mass: 12, boundaryWidth, boundaryHeight, data: { elementType: 'C' }
+    };
+    const cId = this.physics.addParticle(carbonData);
+    const cParticle = this.physics.particles.get(cId);
+    if (cParticle) cParticle.color = ColorSystem.getElementColor('C');
+
+    const oxygen1Data: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_O1`, x: x - 25 * scale, y, radius: 11 * scale, mass: 16, boundaryWidth, boundaryHeight, data: { elementType: 'O' }
+    };
+    const o1Id = this.physics.addParticle(oxygen1Data);
+    const o1Particle = this.physics.particles.get(o1Id);
+    if (o1Particle) o1Particle.color = ColorSystem.getElementColor('O');
+
+    const oxygen2Data: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+      id: `${baseId}_O2`, x: x + 25 * scale, y, radius: 11 * scale, mass: 16, boundaryWidth, boundaryHeight, data: { elementType: 'O' }
+    };
+    const o2Id = this.physics.addParticle(oxygen2Data);
+    const o2Particle = this.physics.particles.get(o2Id);
+    if (o2Particle) o2Particle.color = ColorSystem.getElementColor('O');
+
+    // CO2 has double bonds
+    this.physics.addBond({ p1Id: cId, p2Id: o1Id, type: 'double', restLength: 25 * scale, stiffness: 0.9 });
+    this.physics.addBond({ p1Id: cId, p2Id: o2Id, type: 'double', restLength: 25 * scale, stiffness: 0.9 });
+    return { cId, o1Id, o2Id };
+  }
+
+  public createStatesOfMatter(
+    count: number,
+    state: 'solid' | 'liquid' | 'gas',
+    width: number, // This is the boundary width for the particles
+    height: number, // This is the boundary height for the particles
+    elementSymbol: string = 'Ar' // Default to Argon for generic particles
+  ): string[] { // Returns array of particle IDs
+    const particleIds: string[] = [];
+    const baseRadius = state === 'gas' ? 6 : (state === 'liquid' ? 8 : 10);
+    const particleColor = ColorSystem.getElementColor(elementSymbol); // Get color once
+
+    for (let i = 0; i < count; i++) {
+      const particleId = UniqueID.generate(`particle_${state}_${i}_`);
+      const particleData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle> = {
+        id: particleId,
+        x: Math.random() * (width - baseRadius * 2) + baseRadius,   // Ensure within bounds
+        y: Math.random() * (height - baseRadius * 2) + baseRadius, // Ensure within bounds
+        radius: baseRadius + (Math.random() - 0.5) * 2, // Slight size variation
+        mass: baseRadius, // Simple mass
+        boundaryWidth: width,  // Pass the boundary to each particle
+        boundaryHeight: height,
+        data: { elementType: elementSymbol, initialState: state },
+        // PhysicsEngine will set initial color based on temperature,
+        // but we can set a base color here.
+        // color: ColorSystem.getStateColor(state) // This will be overridden by temp in PhysicsEngine
+      };
+      const addedId = this.physics.addParticle(particleData);
+      const p = this.physics.particles.get(addedId);
+      if(p) p.color = particleColor; // Set the base element color
+      particleIds.push(addedId);
+    }
+
+    // For 'solid' state, you might want to arrange particles in a lattice and add bonds
+    if (state === 'solid' && count > 1) {
+      // Simple grid arrangement for solids for demonstration
+      const cols = Math.ceil(Math.sqrt(count));
+      const rows = Math.ceil(count / cols);
+      const spacingX = (width - 2 * baseRadius) / Math.max(1, cols -1);
+      const spacingY = (height - 2 * baseRadius) / Math.max(1, rows-1);
+
+      for(let i=0; i < particleIds.length; i++) {
+        const p = this.physics.particles.get(particleIds[i]);
+        if(!p) continue;
+
+        const r = Math.floor(i / cols);
+        const c = i % cols;
+
+        p.x = baseRadius + c * spacingX;
+        p.y = baseRadius + r * spacingY;
+        p.isFixed = false; // Solids vibrate but aren't entirely fixed unless specified
+
+        // Add bonds to neighbors in a simple solid structure
+        // (This is a basic example, real crystal structures are more complex)
+        // Bond with particle to the right
+        if (c < cols - 1 && i + 1 < particleIds.length) {
+          this.physics.addBond({ p1Id: particleIds[i], p2Id: particleIds[i+1], type: 'single', restLength: spacingX * 0.8, stiffness: 0.7 });
+        }
+        // Bond with particle below
+        if (r < rows - 1 && i + cols < particleIds.length) {
+          this.physics.addBond({ p1Id: particleIds[i], p2Id: particleIds[i+cols], type: 'single', restLength: spacingY * 0.8, stiffness: 0.7 });
+        }
+      }
+    }
+    return particleIds;
+  }
+
+  // Example: Build a scene from a configuration object
+  public buildFromConfig(config: AnimationConfig): void {
+    this.clearScene(); // Start fresh
+    this.physics.boundaryWidth = config.width;
+    this.physics.boundaryHeight = config.height;
+
+    if (config.initialTemperature !== undefined) {
+        this.physics.setTemperature(config.initialTemperature);
+    }
+    if(config.performanceMode) {
+        // Note: PerformanceManager should be the one calling setPerformanceMode on PhysicsEngine
+        // this.physics.setPerformanceMode(config.performanceMode);
+    }
+
+
+    switch (config.type) {
+      case 'molecule':
+        const moleculeId = UniqueID.generate('mol_');
+        if (config.moleculeType === 'water') {
+          this.createWaterMolecule(moleculeId, config.width / 2, config.height / 2, 1, config.width, config.height);
+        } else if (config.moleculeType === 'co2') {
+          this.createCO2Molecule(moleculeId, config.width / 2, config.height / 2, 1, config.width, config.height);
+        } else if (config.moleculeType === 'nacl') {
+            this.createNaClUnit(moleculeId, config.width / 2, config.height / 2, 1, config.width, config.height);
+        }
+        // Add more molecule types
+        break;
+      case 'states':
+        if (config.stateType && config.particleCount) {
+          this.createStatesOfMatter(config.particleCount, config.stateType, config.width, config.height);
+        }
+        break;
+      // Add 'reaction' or 'custom' cases
+    }
+  }
+}
+
+---- File Content End ----
+
+
+=== File: types.ts ===
+Path: core\types.ts
+---- File Content Start ----
+// src/data/animations/core/types.ts
+
+// Forward declaration for PhysicsEngine and PerformanceManager if needed by other types before their full definition
+// class PhysicsEngine {} // Not strictly needed if not cross-referencing in complex ways here
+// class PerformanceManager {}
+
+// Particle definition
+export interface Particle {
+  id: string;
+  x: number;
+  y: number;
+  z?: number; // For layering or future 3D effects
+  vx: number;
+  vy: number;
+  radius: number;
+  mass?: number; // Mass can affect physics interactions
+  color: string;
+  maxSpeed: number;
+  vibrationIntensity: number; // Amplitude of vibration
+  vibrationFrequency?: number; // Speed of vibration
+  boundaryWidth: number;
+  boundaryHeight: number;
+  // Optional properties for specific behaviors
+  isFixed?: boolean; // If the particle cannot be moved by physics
+  data?: Record<string, any>; // For custom data
+}
+
+// Bond definition
+export interface Bond {
+  id: string; // Add an ID for easier management
+  particle1: Particle;
+  particle2: Particle;
+  restLength: number;
+  stability: number; // Affects strength and rendering
+  stiffness?: number; // Spring constant for the bond
+  color?: string; // Optional: bond-specific color
+  type?: 'single' | 'double' | 'triple' | 'hydrogen' | 'ionic'; // For rendering/behavior
+}
+
+// State of the physics simulation (for decoupling renderer)
+export interface PhysicsState {
+  particles: ReadonlyArray<Particle>; // Use ReadonlyArray for immutability from renderer's perspective
+  bonds: ReadonlyArray<Bond>;
+  timestamp: number; // Current simulation time
+}
+
+// Animation configuration
+export interface AnimationConfig {
+  type: 'states' | 'molecule' | 'reaction' | 'custom';
+  width: number;
+  height: number;
+  particleCount?: number;
+  moleculeType?: string; // e.g., 'water', 'co2', 'nacl' - handled by SceneBuilder
+  stateType?: 'solid' | 'liquid' | 'gas';
+  initialTemperature?: number;
+  performanceMode?: 'low' | 'medium' | 'high';
+}
+
+// Performance settings (as defined in PerformanceManager)
+export interface PerformanceSettings {
+  level: 'low' | 'medium' | 'high';
+  frameRate: number; // Target frame rate
+  maxParticles: number;
+  physicsQuality: 'basic' | 'standard' | 'advanced'; // Detail of physics calculations
+  enableShadows?: boolean; // For UI elements, not directly for Skia particles unless implemented
+  enableParticleTrails: boolean;
+  enableComplexCollisions: boolean;
+}
+
+// Forward declare for AnimationContextProps
+export class PhysicsEngine {}
+export class PerformanceManager {}
+
+// Animation context (used by AnimationProvider)
+export interface AnimationContextAPI {
+  physicsEngine: PhysicsEngine; // Direct access if needed for advanced control
+  performanceManager: PerformanceManager;
+  getPhysicsState: () => PhysicsState; // Main way for renderer to get data
+  setTemperature: (temp: number) => void;
+  addParticle: (particleData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle>) => string; // Returns ID
+  addBond: (bondData: { p1Id: string, p2Id: string, restLength?: number, type?: Bond['type'] }) => string | null; // Returns ID or null
+  removeParticle: (particleId: string) => void;
+  removeBond: (bondId: string) => void;
+  resetSimulation: (config?: AnimationConfig) => void; // Optionally reconfigure on reset
+  // Consider adding methods to update individual particle properties if needed
+}
+
+---- File Content End ----
+
+
+=== File: useAnimationSystem.ts ===
+Path: hooks\useAnimationSystem.ts
+---- File Content Start ----
+// src/data/animations/hooks/useAnimationSystem.ts
+// This hook provides the AnimationContextAPI and adds convenient preset functions.
+
+import { useAnimationAPI, AnimationConfig } from '../2d/AnimationProvider'; // Adjusted path
+import { SceneBuilder } from '../core/SceneBuilder'; // For more complex setups
+import { UniqueID } from '@/utils/UniqueID';
+
+export const useAnimationSystem = () => {
+  const animationAPI = useAnimationAPI();
+  // SceneBuilder instance is now managed within AnimationProvider,
+  // but if you need to call its methods directly here, you might need access to it
+  // or replicate simpler preset logic here using animationAPI methods.
+
+  // For more complex scene setups that might not be covered by a single AnimationConfig,
+  // you can define functions here that use the animationAPI.
+
+  const createWaterPreset = (config: {
+    baseId?: string;
+    x: number;
+    y: number;
+    scale?: number;
+    boundaryWidth: number;
+    boundaryHeight: number;
+  }) => {
+    const baseId = config.baseId || UniqueID.generate('water_');
+    // This now directly uses addParticle and addBond from the API
+    // which are already tied to the engine instance from the provider.
+    const oxygenId = animationAPI.addParticle({
+        id: `${baseId}_O`, x: config.x, y: config.y, radius: 12 * (config.scale || 1),
+        mass: 16, boundaryWidth: config.boundaryWidth, boundaryHeight: config.boundaryHeight,
+        elementType: 'O'
+    });
+    const h1Id = animationAPI.addParticle({
+        id: `${baseId}_H1`, x: config.x - 20 * (config.scale || 1), y: config.y + 15 * (config.scale || 1),
+        radius: 8 * (config.scale || 1), mass: 1, boundaryWidth: config.boundaryWidth,
+        boundaryHeight: config.boundaryHeight, elementType: 'H'
+    });
+    const h2Id = animationAPI.addParticle({
+        id: `${baseId}_H2`, x: config.x + 20 * (config.scale || 1), y: config.y + 15 * (config.scale || 1),
+        radius: 8 * (config.scale || 1), mass: 1, boundaryWidth: config.boundaryWidth,
+        boundaryHeight: config.boundaryHeight, elementType: 'H'
+    });
+
+    animationAPI.addBond({ p1Id: oxygenId, p2Id: h1Id, type: 'single', restLength: 22 * (config.scale || 1) });
+    animationAPI.addBond({ p1Id: oxygenId, p2Id: h2Id, type: 'single', restLength: 22 * (config.scale || 1) });
+  };
+
+
+  const createStatesOfMatterPreset = (config: {
+    count: number;
+    state: 'solid' | 'liquid' | 'gas';
+    width: number;
+    height: number;
+    elementSymbol?: string;
+  }) => {
+    const particleIds: string[] = [];
+    const baseRadius = config.state === 'gas' ? 6 : (config.state === 'liquid' ? 8 : 10);
+    const element = config.elementSymbol || 'Ar';
+
+    for (let i = 0; i < config.count; i++) {
+      const id = animationAPI.addParticle({
+        // id will be generated by addParticle if not provided
+        x: Math.random() * (config.width - baseRadius * 2) + baseRadius,
+        y: Math.random() * (config.height - baseRadius * 2) + baseRadius,
+        radius: baseRadius + (Math.random() - 0.5) * 2,
+        mass: baseRadius,
+        boundaryWidth: config.width,
+        boundaryHeight: config.height,
+        elementType: element,
+        data: { initialState: config.state }
+      });
+      particleIds.push(id);
+    }
+    // Note: The SceneBuilder's version of createStatesOfMatter also added bonds for solids.
+    // You might want to replicate that logic here or ensure SceneBuilder is used if that's desired.
+    if (config.state === 'solid' && particleIds.length > 1) {
+        // Add simple bonding logic for solids here if not using SceneBuilder directly
+        // For simplicity, this example doesn't add bonds like SceneBuilder did.
+    }
+  };
+
+  return {
+    ...animationAPI, // Spread all methods from useAnimationAPI
+    // Add specific preset functions
+    createWaterPreset,
+    createStatesOfMatterPreset,
+    // You can also expose a way to get the sceneBuilder instance if needed
+    // sceneBuilder: sceneBuilderRef.current, // (If sceneBuilderRef was accessible here)
+  };
+};
+
+---- File Content End ----
+
+
+=== File: usePerformance.ts ===
+Path: hooks\usePerformance.ts
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: usePhysics.ts ===
+Path: hooks\usePhysics.ts
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: ChemistryPresets.ts ===
+Path: presets\ChemistryPresets.ts
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: PhysicsPresets.ts ===
+Path: presets\PhysicsPresets.ts
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: ReactionPresets.ts ===
+Path: presets\ReactionPresets.ts
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: animationUtils.ts ===
+Path: utils\animationUtils.ts
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: layoutCalculators.ts ===
+Path: utils\layoutCalculators.ts
+---- File Content Start ----
+
+---- File Content End ----
+
+
+=== File: UniqueID.ts ===
+Path: utils\UniqueID.ts
+---- File Content Start ----
+// src/utils/UniqueID.ts
+
+let counter = 0;
+
+export class UniqueID {
+  public static generate(prefix: string = 'id_'): string {
+    counter++;
+    return `${prefix}${Date.now()}_${counter}`;
+  }
+
+  public static resetCounter(): void { // Optional: for testing or specific reset scenarios
+    counter = 0;
+  }
+}
+
+---- File Content End ----
+

@@ -10,6 +10,7 @@ import { useTheme, useThemedStyles } from '@/lib/ThemeContext';
 import { ThemePicker } from '@/lib/ThemePicker';
 import { createShadow } from '@/lib/designSystem';
 
+
 interface Props {
   hasUpdates?: boolean; // Badge indicator for available updates
 }
@@ -132,6 +133,14 @@ export default function MainMenuBottomNavigation({ hasUpdates = false }: Props) 
       icon: 'checklist',
       color: theme.colors.accent,
       onPress: () => navigation.navigate('Features'),
+      showBadge: false,
+    },
+    {
+      id: 'lab',
+      label: 'Lab',
+      icon: 'flask',                           // 🧪 Flask icon for chemistry lab
+      color: theme.colors.accent,              // Uses your theme accent color
+      onPress: () => navigation.navigate('LabExperiment'),  // Navigates to lab screen
       showBadge: false,
     },
     {

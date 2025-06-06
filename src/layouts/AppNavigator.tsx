@@ -9,6 +9,7 @@ import TopicListScreen from '@/screens/TopicListScreen';
 import ContentScreen from '@/screens/ContentScreen';
 import FeaturesScreen from '@/screens/FeaturesScreen';
 import AboutScreen from '@/screens/AboutScreen';
+import LabExperimentScreen from '@/screens/LabExperimentScreen';
 
 export type RootStackParamList = {
   Books: undefined;
@@ -33,6 +34,8 @@ const AppNavigator = () => (
       {/* TODO: Create these screens */}
       {/* <Stack.Screen name="Updates" component={UpdatesScreen} options={{ title: 'Updates' }} /> */}
       <Stack.Screen name="About" component={AboutScreen} options={{ title: 'About LearnSpark' }} />
+      <Stack.Screen name="LabExperiment" component={LabExperimentScreen} options={{ title: 'Chemistry Lab' }}
+/>
     </Stack.Navigator>
   </NavigationContainer>
 );

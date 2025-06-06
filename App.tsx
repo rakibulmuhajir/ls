@@ -5,9 +5,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import AppNavigator from '@/layouts/AppNavigator';
-import { ThemeProvider, useTheme } from '@/lib/ThemeContext';
-import { animationSystem } from '@/data/animations/AnimationSystem';
-import { useEffect } from 'react';
+import { AppThemeProvider, useTheme } from '@/lib/ThemeContext';
 // ============================================
 
 // Component that handles StatusBar based on theme
@@ -46,18 +44,9 @@ const AppContent: React.FC = () => {
 
 // Root App component
 export default function App() {
-  useEffect(() => {
-    // Initialize animation system on app start
-    try {
-      animationSystem.initialize();
-      console.log('🎬 Animation system ready!');
-    } catch (error) {
-      console.error('❌ Failed to initialize animation system:', error);
-    }
-  }, []);
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <AppThemeProvider>
+        <AppContent />
+    </AppThemeProvider>
   );
 }

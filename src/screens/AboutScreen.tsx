@@ -322,6 +322,7 @@ export default function AboutScreen() {
     footerSubtext: {
       fontSize: typography.fontSize.sm,
       color: theme.colors.onSurfaceVariant,
+      textAlign: 'center',
     },
   }));
 

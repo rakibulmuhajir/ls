@@ -15,6 +15,7 @@ Laboratory and Practical Skills
 Glossary
 Index
 Bibliography
+[Chapter 1]
 Student Learning Outcomes
 r After studying this chapter, students will be able to:
 Define chemistry as the study of matter, its properties, composition, and interactions
@@ -803,6 +804,7 @@ in which potassium nitrate is purified by crystallizing it in water.
 Graphene is called a miracle material and it is the material of the future.
 Which of its many properties makes it very useful in electronics?
 ——————
+[Chapter 2]
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Explain the structure of the atom as a central nucleus containing neutrons and
@@ -1513,6 +1515,7 @@ Chapter
 "aS,
 Ghemnical!
 Bondingiaaaaeeas
+[Chapter 3]
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Describe that noble gas electronic configuration, octet and duplet rules help predict
@@ -2531,6 +2534,8 @@ The formula of AICI; in vapour phase is AlzCle which means it exists as a
 dimer.
 Explain the bonding between its two molecules?
 Explain the structure of sand (SiOz).
+
+[Chapter 4]
 After studying this chapter, students will be able to:
 State the formulae of common elements and compounds.
 Define molecular formula of a compound as the number and type of different atoms
@@ -3272,6 +3277,9 @@ The chemical formula for sand is SiOz but the sand does not exist in the form
 of discrete molecules like H20.
 How has its formula been determined
 keeping in view its structure?
+
+[Chapter 5]
+
 After studying this chapter, students will be able to:
 Explain the idea of a chemical system and its connection with its surroundings
 influences energy transfer during a chemical reaction.
@@ -3950,6 +3958,9 @@ without cooking?
 Why does fireworks look spectacular?
 What type of chemical compounds
 undergo chemical reactions during this activity?
+
+[Chapter 6]
+
 After studying this chapter, students will be able to:
 Recognize that reversible reactions are shown by symbol and may not go to
 completion
@@ -4376,6 +4387,9 @@ the preparation of urea fertilizer.
 Explain the conditions you will use to get
 the maximum yield of ammonia.
 i
+
+[Chapter 7]
+
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Define Bronsted-Lowry acids as proton donors and Bronsted -Lowry bases as proton
@@ -4907,6 +4921,9 @@ Lanthanides
 fe [se]
 il = [rafzetk
 Tine
+
+[Chapter 8]
+
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Define the periodic table as an arrangement of elements in periods and groups, in
@@ -5563,7 +5580,9 @@ for this difference?
 Modern periodic table is the amended formof the earlier table developed by
 Mandeleev.
 Elaborate how these two tables are different from each other.
-Chapter
+
+[Chapter 9]
+
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Define group 1 Alkali metals as relatively soft metals with general trends down the
@@ -6069,6 +6088,9 @@ Chapter
 hg
 Senvironmenta! _
 (Chemistry,
+
+[Chapter 10]
+
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 State that composition of clean, dry air is approximately 78% nitrogen, Nz, 21%
@@ -6818,6 +6840,9 @@ Point out some of the major
 causes of high AQI in these cities.
 Why does AQI not rise in Pakistan in hot days of summer?
 How has climate change affected Pakistan during the last five years?
+
+[Chapter 11]
+
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Describe the properties of alkanes as being generally unreactive, except in terms of
@@ -7291,6 +7316,9 @@ explosion and how can you avoid it?
 Comment on the
 medicinal benefits of this tree.
 Namea few popular medicines which are, in fact, organic compounds?
+
+[Chapter 12]
+
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Explain that units are standardized for better communication and collaboration.
@@ -7708,6 +7736,9 @@ ARM
 “srrosive
 Laboratony,and'Pr
 Practical:Skills:
+
+[Chapter 13]
+
 Student Learning Outcomes
 After studying this chapter, students will be able to:
 Explain, with examples, the types of chemical hazards in the lab and suggest safety

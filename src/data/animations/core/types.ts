@@ -25,3 +25,31 @@ export interface AnimationContextAPI {
   removeBond: (bondId: string) => void;
   resetSimulation: (config?: AnimationConfig) => void;
 }
+
+// ===== SKIA RENDERING TYPES =====
+export interface SkiaRenderElements {
+  particles: JSX.Element[];
+  bonds: JSX.Element[];
+  effects: JSX.Element[];
+  heatFields: JSX.Element[];
+}
+
+// ===== EQUIPMENT INTERACTION TYPES =====
+export interface EquipmentInteraction {
+  type: 'heating' | 'stirring' | 'pouring' | 'measuring';
+  targetId: string;
+  value: number;
+  duration?: number;
+}
+
+export interface LabExperimentState {
+  isRunning: boolean;
+  currentStep: number;
+  totalSteps: number;
+  measurements: Record<string, number>;
+  observations: string[];
+}
+
+// ===== ANIMATION ALIASES FOR COMPATIBILITY =====
+export type AnimationParticle = Particle;
+export type AnimationBond = Bond;

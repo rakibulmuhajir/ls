@@ -1,7 +1,7 @@
 // src/data/animations/2d/AnimationProvider.tsx
 
 import React, { createContext, useContext, useState, useEffect, useRef, useCallback, ReactNode } from 'react';
-import { PhysicsEngine } from '../core/Physics';
+import { PhysicsEngine } from '../core/UnifiedPhysicsEngine';
 import { PerformanceManager } from '../core/Performance';
 import { SceneBuilder } from '../core/SceneBuilder';
 import type { Particle, Bond, PhysicsState, AnimationContextAPI, AnimationConfig } from '../core/types';

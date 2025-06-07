@@ -1,9 +1,11 @@
 // src/data/animations/components/Particle.tsx
 
 import React, { useEffect, useLayoutEffect } from 'react';
-// No direct Skia import needed, it's a "logical" component
-import { useAnimationAPI, AnimationParticle } from '../2d/AnimationProvider'; // Adjusted path
-import { ColorSystem } from '../core/Colors'; // For default/element color logic
+import { useAnimationSystem } from '../hooks/useAnimationSystem';
+import type { AnimationParticle } from '../core/types';
+import { ColorSystem } from '../core/Colors';
+import { UniqueID } from '../utils/UniqueID';
+import { RenderConfig } from '../core/RenderConfig';
 
 // Props for the declarative Particle component
 // Most physics properties (vx, vy, maxSpeed etc.) are managed by the engine.
@@ -37,7 +39,7 @@ export const Particle: React.FC<ParticleComponentProps> = ({
   isFixed,
   data
 }) => {
-  const { addParticle, removeParticle } = useAnimationAPI();
+  const { addParticle, removeParticle } = useAnimationSystem();
 
   // useLayoutEffect to ensure particle is added before first paint if possible,
   // and to get a stable ID for the effect's dependency array.

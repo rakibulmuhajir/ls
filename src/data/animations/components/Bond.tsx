@@ -2,8 +2,9 @@
 
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 // No direct Skia import
-import { useAnimationAPI, AnimationBond } from '../2d/AnimationProvider'; // Adjusted path
-import { UniqueID } from '@/utils/UniqueID';
+import { useAnimationSystem } from '../hooks/useAnimationSystem';
+import type { AnimationBond, Particle } from '../core/types';
+import { UniqueID } from '../utils/UniqueID';
 
 interface BondComponentProps {
   id?: string; // Optional ID
@@ -26,7 +27,7 @@ export const Bond: React.FC<BondComponentProps> = ({
   stability,
   color,
 }) => {
-  const { addBond, removeBond, getPhysicsState } = useAnimationAPI();
+  const { addBond, removeBond, getPhysicsState } = useAnimationSystem();
   const bondIdRef = useRef(propId || UniqueID.generate('b_'));
 
   useLayoutEffect(() => {
@@ -36,8 +37,8 @@ export const Bond: React.FC<BondComponentProps> = ({
     // Calculate restLength if not provided, based on current particle positions
     if (calculatedRestLength === undefined) {
       const state = getPhysicsState(); // Get current state to find particles
-      const particle1 = state.particles.find(p => p.id === p1Id);
-      const particle2 = state.particles.find(p => p.id === p2Id);
+      const particle1 = state.particles.find((p: Particle) => p.id === p1Id);
+      const particle2 = state.particles.find((p: Particle) => p.id === p2Id);
 
       if (particle1 && particle2) {
         const dx = particle2.x - particle1.x;

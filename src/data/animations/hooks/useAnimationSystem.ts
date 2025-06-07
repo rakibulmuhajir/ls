@@ -2,13 +2,13 @@
 // This hook provides the AnimationContextAPI and can be a place for complex, multi-step animation sequences.
 // Simple presets are now better handled by the SceneBuilder.
 
-import { useAnimationAPI } from '../2d/AnimationProvider';
+import { useAnimation } from '../UnifiedAnimationProvider';
 import type { AnimationConfig } from '../core/types';
 
 // This hook now primarily serves as a convenient re-export of the main API.
 // For building scenes, you should now use the `sceneBuilder` from the context.
 export const useAnimationSystem = () => {
-  const animationAPI = useAnimationAPI();
+  const animationAPI = useAnimation();
 
   // Presets are now better handled by `sceneBuilder.buildFromConfig(config)`
   // or by calling `sceneBuilder.createWaterMolecule(...)` directly.

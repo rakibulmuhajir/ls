@@ -3,7 +3,7 @@
 import { UnifiedPhysicsEngine } from './UnifiedPhysicsEngine';
 import type { Particle, Bond, AnimationConfig } from './types';
 import { ColorSystem } from './Colors';
-import { UniqueID } from '@/utils/UniqueID';
+import { UniqueID } from '../utils/UniqueID';
 import { RenderConfig } from './RenderConfig';
 
 export class SceneBuilder {
@@ -36,6 +36,8 @@ export class SceneBuilder {
       radius: 12 * scale,
       mass: 16,
       color: ColorSystem.getElementColor('O'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'O' },
     });
 
@@ -47,6 +49,8 @@ export class SceneBuilder {
       radius: 8 * scale,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'H' },
     });
 
@@ -57,6 +61,8 @@ export class SceneBuilder {
       radius: 8 * scale,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'H' },
     });
 
@@ -84,7 +90,9 @@ export class SceneBuilder {
     baseId: string,
     x: number,
     y: number,
-    scale: number = 1
+    scale: number = 1,
+    boundaryWidth?: number,
+    boundaryHeight?: number
   ): { cId: string; o1Id: string; o2Id: string } {
 
     const cId = this.physics.addParticle({
@@ -94,6 +102,8 @@ export class SceneBuilder {
       radius: 12 * scale,
       mass: 12,
       color: ColorSystem.getElementColor('C'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'C' },
     });
 
@@ -104,6 +114,8 @@ export class SceneBuilder {
       radius: 11 * scale,
       mass: 16,
       color: ColorSystem.getElementColor('O'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'O' },
     });
 
@@ -114,6 +126,8 @@ export class SceneBuilder {
       radius: 11 * scale,
       mass: 16,
       color: ColorSystem.getElementColor('O'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'O' },
     });
 
@@ -141,7 +155,9 @@ export class SceneBuilder {
     baseId: string,
     x: number,
     y: number,
-    scale: number = 1
+    scale: number = 1,
+    boundaryWidth?: number,
+    boundaryHeight?: number
   ): { naId: string; clId: string } {
 
     const naId = this.physics.addParticle({
@@ -151,6 +167,8 @@ export class SceneBuilder {
       radius: 15 * scale,
       mass: 23,
       color: ColorSystem.getElementColor('Na'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'Na' },
     });
 
@@ -161,6 +179,8 @@ export class SceneBuilder {
       radius: 18 * scale,
       mass: 35.5,
       color: ColorSystem.getElementColor('Cl'),
+      boundaryWidth: boundaryWidth || 0,
+      boundaryHeight: boundaryHeight || 0,
       data: { elementType: 'Cl' },
     });
 
@@ -197,6 +217,8 @@ export class SceneBuilder {
         radius: baseRadius + (Math.random() - 0.5) * 2,
         mass: baseRadius,
         color: particleColor,
+        boundaryWidth: width,
+        boundaryHeight: height,
         data: { elementType: elementSymbol, initialState: state },
       });
 
@@ -297,9 +319,10 @@ export class SceneBuilder {
         radius: 2 + Math.random() * 2,
         mass: 1,
         color,
+        boundaryWidth: containerWidth,
+        boundaryHeight: containerHeight,
         maxSpeed: 1,
         vibrationIntensity: 0.1,
-        temperature: 25,
         data: { liquidType, elementType: liquidType === 'water' ? 'H2O' : liquidType }
       });
 
@@ -370,10 +393,10 @@ export class SceneBuilder {
         this.createWaterMolecule('water_main', centerX, centerY, 1, width, height);
         break;
       case 'co2':
-        this.createCO2Molecule('co2_main', centerX, centerY, 1);
+        this.createCO2Molecule('co2_main', centerX, centerY, 1, width, height);
         break;
       case 'nacl':
-        this.createNaClUnit('nacl_main', centerX, centerY, 1);
+        this.createNaClUnit('nacl_main', centerX, centerY, 1, width, height);
         break;
       default:
         // Create a generic molecule
@@ -411,8 +434,8 @@ export class SceneBuilder {
     const { width, height } = config;
 
     // Example: H2 + Cl2 -> 2HCl reaction
-    const h2Id = this.createH2Molecule('h2_1', width * 0.3, height * 0.5);
-    const cl2Id = this.createCl2Molecule('cl2_1', width * 0.7, height * 0.5);
+    const h2Id = this.createH2Molecule('h2_1', width * 0.3, height * 0.5, width, height);
+    const cl2Id = this.createCl2Molecule('cl2_1', width * 0.7, height * 0.5, width, height);
 
     // Set initial velocities for collision
     const h2Particles = this.physics.getParticles().filter(p => p.id.startsWith('h2_1'));
@@ -466,6 +489,8 @@ export class SceneBuilder {
           radius: 2,
           mass: 1,
           color: '#4ECDC4', // Base color
+          boundaryWidth: width,
+          boundaryHeight: height,
           data: { liquidType: 'base' }
         });
       }, i * 1000);
@@ -479,7 +504,13 @@ export class SceneBuilder {
   }
 
   // ===== HELPER MOLECULE CREATORS =====
-  private createH2Molecule(baseId: string, x: number, y: number): { h1Id: string; h2Id: string } {
+  private createH2Molecule(
+    baseId: string,
+    x: number,
+    y: number,
+    boundaryWidth: number,
+    boundaryHeight: number
+  ): { h1Id: string; h2Id: string } {
     const h1Id = this.physics.addParticle({
       id: `${baseId}_H1`,
       x: x - 10,
@@ -487,6 +518,8 @@ export class SceneBuilder {
       radius: 8,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
+      boundaryWidth,
+      boundaryHeight,
       data: { elementType: 'H' }
     });
 
@@ -497,6 +530,8 @@ export class SceneBuilder {
       radius: 8,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
+      boundaryWidth,
+      boundaryHeight,
       data: { elementType: 'H' }
     });
 
@@ -511,7 +546,13 @@ export class SceneBuilder {
     return { h1Id, h2Id };
   }
 
-  private createCl2Molecule(baseId: string, x: number, y: number): { cl1Id: string; cl2Id: string } {
+  private createCl2Molecule(
+    baseId: string,
+    x: number,
+    y: number,
+    boundaryWidth: number,
+    boundaryHeight: number
+  ): { cl1Id: string; cl2Id: string } {
     const cl1Id = this.physics.addParticle({
       id: `${baseId}_Cl1`,
       x: x - 15,
@@ -519,6 +560,8 @@ export class SceneBuilder {
       radius: 12,
       mass: 35.5,
       color: ColorSystem.getElementColor('Cl'),
+      boundaryWidth,
+      boundaryHeight,
       data: { elementType: 'Cl' }
     });
 
@@ -529,6 +572,8 @@ export class SceneBuilder {
       radius: 12,
       mass: 35.5,
       color: ColorSystem.getElementColor('Cl'),
+      boundaryWidth,
+      boundaryHeight,
       data: { elementType: 'Cl' }
     });
 
@@ -547,7 +592,9 @@ export class SceneBuilder {
   public createCustomMolecule(
     atoms: Array<{ element: string; x: number; y: number; radius?: number }>,
     bonds: Array<{ atom1Index: number; atom2Index: number; type?: Bond['type'] }>,
-    baseId: string = 'custom'
+    baseId: string = 'custom',
+    boundaryWidth: number,
+    boundaryHeight: number
   ): string[] {
     const atomIds: string[] = [];
 
@@ -560,6 +607,8 @@ export class SceneBuilder {
         radius: atom.radius || 10,
         mass: atom.radius || 10,
         color: ColorSystem.getElementColor(atom.element),
+        boundaryWidth,
+        boundaryHeight,
         data: { elementType: atom.element }
       });
       atomIds.push(atomId);

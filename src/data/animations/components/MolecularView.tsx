@@ -4,7 +4,8 @@ import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Slider from '@react-native-community/slider'; // You might need to install this: npx expo install @react-native-community/slider
 import { AnimationCanvas } from './AnimationCanvas'; // The Skia canvas
-import { AnimationProvider, useAnimationAPI } from '../2d/AnimationProvider';
+import { UnifiedAnimationProvider } from '../UnifiedAnimationProvider';
+import { useAnimationSystem } from '../hooks/useAnimationSystem';
 import type { AnimationConfig } from '../core/types';
 import { useThemedStyles, useTheme } from '@/lib/ThemeContext'; // Your app's theme
 import { Theme } from '@/lib/designSystem';
@@ -18,7 +19,7 @@ interface MolecularViewProps {
 
 // Inner component that consumes the animation context
 const MoleculeScene: React.FC<MolecularViewProps> = ({ moleculeType, width, height, initialTemperature }) => {
-  const { setTemperature } = useAnimationAPI();
+  const { setTemperature } = useAnimationSystem();
   const { theme } = useTheme();
 
   const styles = useThemedStyles((theme: Theme) => ({
@@ -85,8 +86,8 @@ export const MolecularView: React.FC<MolecularViewProps> = (props) => {
   };
 
   return (
-    <AnimationProvider initialConfig={animationConfig}>
+    <UnifiedAnimationProvider initialConfig={animationConfig}>
       <MoleculeScene {...props} />
-    </AnimationProvider>
+    </UnifiedAnimationProvider>
   );
 };

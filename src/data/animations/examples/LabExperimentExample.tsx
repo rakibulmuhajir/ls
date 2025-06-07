@@ -166,6 +166,7 @@ const LabExperimentInner: React.FC<LabExperimentProps> = ({
     if (!particlesAdded) {
       for (let i = 0; i < 25; i++) {
         addParticle({
+          id: `water_${i}`,
           x: width * 0.25 + 15 + Math.random() * (width * 0.4 - 30),
           y: height * 0.3 + height * 0.5 * 0.4 + Math.random() * (height * 0.5 * 0.4),
           vx: (Math.random() - 0.5) * 0.3,
@@ -173,9 +174,10 @@ const LabExperimentInner: React.FC<LabExperimentProps> = ({
           radius: 2 + Math.random() * 1.5,
           mass: 1,
           color: '#4A90E2',
+          boundaryWidth: width * 0.4,
+          boundaryHeight: height * 0.5,
           maxSpeed: 1,
           vibrationIntensity: 0.1,
-          temperature: 25,
           data: { elementType: 'H2O', liquidType: 'water' }
         });
       }
@@ -199,6 +201,7 @@ const LabExperimentInner: React.FC<LabExperimentProps> = ({
   const addMoreWater = () => {
     for (let i = 0; i < 5; i++) {
       addParticle({
+        id: `water_new_${i}`,
         x: width * 0.25 + 20 + Math.random() * (width * 0.4 - 40),
         y: height * 0.3 + 10,
         vx: (Math.random() - 0.5) * 0.2,
@@ -206,9 +209,10 @@ const LabExperimentInner: React.FC<LabExperimentProps> = ({
         radius: 2 + Math.random() * 1.5,
         mass: 1,
         color: '#4A90E2',
+        boundaryWidth: width * 0.4,
+        boundaryHeight: height * 0.5,
         maxSpeed: 1,
         vibrationIntensity: 0.1,
-        temperature: 25,
         data: { elementType: 'H2O', liquidType: 'water' }
       });
     }

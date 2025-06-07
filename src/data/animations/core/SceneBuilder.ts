@@ -3,7 +3,7 @@
 import { UnifiedPhysicsEngine } from './UnifiedPhysicsEngine';
 import type { Particle, Bond, AnimationConfig } from './types';
 import { ColorSystem } from './Colors';
-import { UniqueID } from '../utils/UniqueID';
+import { UniqueID } from '@/data/animations/utils/UniqueID';
 import { RenderConfig } from './RenderConfig';
 
 export class SceneBuilder {

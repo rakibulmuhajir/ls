@@ -1,4 +1,4 @@
-// src/utils/UniqueID.ts
+// src/data/animations/utils/UniqueID.ts
 
 let counter = 0;
 
@@ -8,7 +8,7 @@ export class UniqueID {
     return `${prefix}${Date.now()}_${counter}`;
   }
 
-  public static resetCounter(): void { // Optional: for testing or specific reset scenarios
+  public static resetCounter(): void {
     counter = 0;
   }
 }

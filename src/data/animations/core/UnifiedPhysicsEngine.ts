@@ -9,7 +9,7 @@ import type {
 } from './types';
 import { RenderConfig } from './RenderConfig';
 import { ColorSystem } from './Colors';
-import { UniqueID } from '@/utils/UniqueID';
+import { UniqueID } from '@/data/animations/utils/UniqueID';
 
 export class UnifiedPhysicsEngine {
   private particles: Map<string, Particle> = new Map();

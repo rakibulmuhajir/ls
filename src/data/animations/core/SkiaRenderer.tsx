@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Canvas, Group, Circle, Path, Skia, vec } from "@shopify/react-native-skia";
-import type { PhysicsState, Particle, Bond, PerformanceSettings } from "./types";
+import type { PhysicsState, Particle, Bond, PerformanceSettings, HeatSource } from "./types";
 import { RenderConfig } from "./RenderConfig";
 import { ColorSystem } from "./Colors";
 
@@ -115,15 +115,7 @@ const SkiaHeatField: React.FC<SkiaHeatFieldProps> = React.memo(({
 interface SkiaRendererProps {
   physicsState: PhysicsState;
   performanceSettings: PerformanceSettings;
-  heatSources?: Array<{
-    id: string;
-    x: number;
-    y: number;
-    radius: number;
-    intensity: number;
-    temperature: number;
-    isActive: boolean;
-  }>;
+  heatSources?: HeatSource[];
   showTrails?: boolean;
   showHeatFields?: boolean;
   width: number;
@@ -189,71 +181,6 @@ export const SkiaRenderer: React.FC<SkiaRendererProps> = ({
         ))}
       </Group>
     </Canvas>
-  );
-};
-
-// ===== ANIMATION CANVAS COMPONENT =====
-interface AnimationCanvasProps {
-  width: number;
-  height: number;
-  showTrails?: boolean;
-  showHeatFields?: boolean;
-  style?: object;
-  children?: React.ReactNode; // For SVG overlays
-}
-
-export const AnimationCanvas: React.FC<AnimationCanvasProps> = ({
-  width,
-  height,
-  showTrails = false,
-  showHeatFields = false,
-  style,
-  children
-}) => {
-  // This will be connected to the UnifiedAnimationProvider
-  // For now, return a placeholder that shows the structure
-
-  return (
-    <div style={[{ width, height, position: 'relative' }, style]}>
-      {/* Skia Canvas Layer */}
-      <div style={{ position: 'absolute', top: 0, left: 0, width, height }}>
-        {/* SkiaRenderer will be rendered here when connected to provider */}
-        <div style={{
-          width,
-          height,
-          backgroundColor: 'rgba(240, 248, 255, 0.1)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: 8,
-          border: '1px dashed #ccc'
-        }}>
-          <span style={{ color: '#666', fontSize: 12 }}>
-            Skia Physics Canvas ({width}×{height})
-          </span>
-        </div>
-      </div>
-
-      {/* SVG Overlay Layer */}
-      {children && (
-        <div style={{ position: 'absolute', top: 0, left: 0, width, height, pointerEvents: 'none' }}>
-          {children}
-        </div>
-      )}
-    </div>
-  );
-};
-
-// ===== CONNECTED CANVAS COMPONENT =====
-// This will be created separately to connect with the provider
-export const ConnectedAnimationCanvas: React.FC<AnimationCanvasProps> = (props) => {
-  // This component will use useAnimation() hook to get physics state
-  // and render the SkiaRenderer with live data
-
-  return (
-    <AnimationCanvas {...props}>
-      {/* Connected SkiaRenderer will be rendered here */}
-    </AnimationCanvas>
   );
 };
 

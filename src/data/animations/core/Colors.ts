@@ -1,7 +1,7 @@
 // src/data/animations/core/Colors.ts
 import { RenderConfig } from './RenderConfig';
 import type { Bond } from './types';
-import { lerpColor } from '@/utils/animationUtils'; // Import the new utility
+import { lerpColor } from '@/data/animations/utils/animationUtils';
 
 // ... (elementColors object remains the same) ...
 const elementColors: Record<string, string> = { H: '#FFFFFF', He: '#DBFFD4', Li: '#CC80FF', Be: '#C2FF00', B: '#FFB5B5', C: '#909090', N: '#3050F8', O: '#FF0D0D', F: '#90E050', Ne: '#B3E3F5', Na: '#AB5CF2', Mg: '#8AFF00', Al: '#BFA6A6', Si: '#F0C8A0', P: '#FF8000', S: '#FFFF30', Cl: '#1FF01F', Ar: '#80D1F5', K: '#8F40D4', Ca: '#3DFF00', DEFAULT: '#CCCCCC' };

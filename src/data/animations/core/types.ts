@@ -1,37 +1,160 @@
 // src/data/animations/core/types.ts
 
-// ... (Particle, Bond, PhysicsState, AnimationConfig, PerformanceSettings interfaces remain the same) ...
-export interface Particle { id: string; x: number; y: number; z?: number; vx: number; vy: number; radius: number; mass?: number; color: string; maxSpeed: number; vibrationIntensity: number; vibrationFrequency?: number; boundaryWidth: number; boundaryHeight: number; isFixed?: boolean; data?: Record<string, any>; }
-export interface Bond { id: string; particle1: Particle; particle2: Particle; restLength: number; stability: number; stiffness?: number; color?: string; type?: 'single' | 'double' | 'triple' | 'hydrogen' | 'ionic'; }
-export interface PhysicsState { particles: ReadonlyArray<Particle>; bonds: ReadonlyArray<Bond>; timestamp: number; }
-export interface AnimationConfig { type: 'states' | 'molecule' | 'reaction' | 'custom'; width: number; height: number; particleCount?: number; moleculeType?: string; stateType?: 'solid' | 'liquid' | 'gas'; initialTemperature?: number; performanceMode?: 'low' | 'medium' | 'high'; }
-export interface PerformanceSettings { level: 'low' | 'medium' | 'high'; frameRate: number; maxParticles: number; physicsQuality: 'basic' | 'standard' | 'advanced'; enableShadows?: boolean; enableParticleTrails: boolean; enableComplexCollisions: boolean; }
+// ===== PARTICLE TYPES =====
+export interface Particle {
+  id: string;
+  x: number;
+  y: number;
+  z?: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  mass: number;
+  color: string;
+  maxSpeed: number;
+  vibrationIntensity: number;
+  vibrationFrequency?: number;
+  boundaryWidth: number;
+  boundaryHeight: number;
+  isFixed?: boolean;
+  temperature?: number;
+  elementType?: string;
+  data?: Record<string, any>;
+}
 
-// Forward declare for context API
-export class PhysicsEngine {}
-export class PerformanceManager {}
-export class SceneBuilder {} // Add SceneBuilder forward declaration
+// ===== BOND TYPES =====
+export interface Bond {
+  id: string;
+  particle1: Particle;
+  particle2: Particle;
+  restLength: number;
+  stability: number;
+  stiffness?: number;
+  color?: string;
+  type?: 'single' | 'double' | 'triple' | 'hydrogen' | 'ionic';
+}
 
-// Animation context
+// ===== LAB EQUIPMENT TYPES =====
+export type LabBoundary = {
+  id: string;
+  type: 'container' | 'heater' | 'solid';
+  shape: 'rectangle';
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  restitution: number;
+  friction: number;
+} | {
+  id: string;
+  type: 'container' | 'heater' | 'solid';
+  shape: 'circle';
+  x: number;
+  y: number;
+  radius: number;
+  restitution: number;
+  friction: number;
+};
+
+export interface HeatSource {
+  id: string;
+  x: number;
+  y: number;
+  radius: number;
+  intensity: number;
+  temperature: number;
+  isActive: boolean;
+}
+
+// ===== PHYSICS STATE =====
+export interface PhysicsState {
+  particles: ReadonlyArray<Particle>;
+  bonds: ReadonlyArray<Bond>;
+  timestamp: number;
+}
+
+// ===== PERFORMANCE SETTINGS =====
+export interface PerformanceSettings {
+  level: 'low' | 'medium' | 'high';
+  frameRate: number;
+  maxParticles: number;
+  physicsQuality: 'basic' | 'standard' | 'advanced';
+  enableShadows?: boolean;
+  enableParticleTrails: boolean;
+  enableComplexCollisions: boolean;
+}
+
+// ===== ANIMATION CONFIG =====
+export interface PhysicsConfig {
+  gravity: { x: number; y: number };
+  globalDamping: number;
+  collisionRestitution: number;
+  forceFields?: Array<{
+    type: 'magnetic' | 'electric' | 'gravitational';
+    x: number;
+    y: number;
+    strength: number;
+    radius: number;
+  }>;
+  centralForce?: {
+    x: number;
+    y: number;
+    strength: number;
+  };
+}
+
+export interface AnimationConfig {
+  type: 'states' | 'molecule' | 'reaction' | 'lab' | 'custom';
+  width: number;
+  height: number;
+  particleCount?: number;
+  moleculeType?: string;
+  stateType?: 'solid' | 'liquid' | 'gas';
+  experimentType?: string;
+  initialTemperature?: number;
+  performanceMode?: 'low' | 'medium' | 'high';
+  enablePhysics?: boolean;
+  enableLabEquipment?: boolean;
+  physicsConfig?: PhysicsConfig;
+  reactionType?: 'acid-base' | 'precipitation' | 'redox' | 'combustion' | 'custom';
+  reactants?: string[];
+  products?: string[];
+}
+
+// ===== ANIMATION CONTEXT API =====
 export interface AnimationContextAPI {
-  physicsEngine: PhysicsEngine;
-  performanceManager: PerformanceManager;
-  sceneBuilder: SceneBuilder; // CHANGE: Add sceneBuilder instance to the API
+  physicsEngine: any; // Will be properly typed after engine is fixed
+  performanceManager: any;
+  sceneBuilder: any;
   getPhysicsState: () => PhysicsState;
   setTemperature: (temp: number) => void;
-  addParticle: (particleData: Omit<Particle, 'vx' | 'vy' | 'maxSpeed' | 'vibrationIntensity' | 'color'> & Partial<Particle>) => string;
-  addBond: (bondData: { p1Id: string, p2Id: string, restLength?: number, type?: Bond['type'] }) => string | null;
+  getTemperatureAt: (x: number, y: number) => number;
+  addParticle: (particleData: Omit<Particle, 'id'> & { id?: string }) => string;
   removeParticle: (particleId: string) => void;
+  addBond: (bondData: { p1Id: string; p2Id: string; restLength?: number; type?: Bond['type']; id?: string }) => string | null;
   removeBond: (bondId: string) => void;
+  addBoundary: (boundary: Omit<LabBoundary, 'id'>) => string;
+  addHeatSource: (heatSource: Omit<HeatSource, 'id'>) => string;
+  updateHeatSource: (id: string, updates: Partial<HeatSource>) => void;
   resetSimulation: (config?: AnimationConfig) => void;
+  pauseAnimation: () => void;
+  resumeAnimation: () => void;
+  toggleAnimation: () => void;
+  isRunning: boolean;
 }
+
+// ===== ALIASES FOR COMPATIBILITY =====
+export type AnimationParticle = Particle;
+export type AnimationBond = Bond;
+
+import React from 'react';
 
 // ===== SKIA RENDERING TYPES =====
 export interface SkiaRenderElements {
-  particles: JSX.Element[];
-  bonds: JSX.Element[];
-  effects: JSX.Element[];
-  heatFields: JSX.Element[];
+  particles: React.JSX.Element[];
+  bonds: React.JSX.Element[];
+  effects: React.JSX.Element[];
+  heatFields: React.JSX.Element[];
 }
 
 // ===== EQUIPMENT INTERACTION TYPES =====
@@ -49,7 +172,3 @@ export interface LabExperimentState {
   measurements: Record<string, number>;
   observations: string[];
 }
-
-// ===== ANIMATION ALIASES FOR COMPATIBILITY =====
-export type AnimationParticle = Particle;
-export type AnimationBond = Bond;

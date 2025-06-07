@@ -1,117 +1,11 @@
-// src/data/animations/core/SkiaRenderer.tsx
-
-import React from 'react';
-import { Canvas, Group, Circle, Path, Skia, vec } from "@shopify/react-native-skia";
+import React, { useEffect, useState } from 'react';
+import { View, Platform } from 'react-native';
+import { Canvas, Path, Skia } from '@shopify/react-native-skia';
 import type { PhysicsState, Particle, Bond, PerformanceSettings, HeatSource } from "./types";
 import { RenderConfig } from "./RenderConfig";
 import { ColorSystem } from "./Colors";
+import { FallbackRenderer } from './FallbackRenderer';
 
-// ===== PARTICLE COMPONENT =====
-interface SkiaParticleProps {
-  particle: Particle;
-}
-
-const SkiaParticle: React.FC<SkiaParticleProps> = React.memo(({ particle }) => {
-  return (
-    <Circle
-      cx={particle.x}
-      cy={particle.y}
-      r={particle.radius}
-      color={particle.color}
-      opacity={0.9}
-    />
-  );
-});
-
-// ===== BOND COMPONENT =====
-interface SkiaBondProps {
-  bond: Bond;
-}
-
-const SkiaBond: React.FC<SkiaBondProps> = React.memo(({ bond }) => {
-  if (bond.stability < RenderConfig.Bond.MinVisibleStability) return null;
-
-  const path = Skia.Path.Make();
-  path.moveTo(bond.particle1.x, bond.particle1.y);
-  path.lineTo(bond.particle2.x, bond.particle2.y);
-
-  const strokeWidth = Math.max(1, RenderConfig.Bond.StrokeWidthMultiplier * bond.stability);
-
-  return (
-    <Path
-      path={path}
-      style="stroke"
-      strokeWidth={strokeWidth}
-      color={bond.color || ColorSystem.getBondColor(bond.type)}
-      strokeCap="round"
-    />
-  );
-});
-
-// ===== PARTICLE TRAIL COMPONENT =====
-interface SkiaParticleTrailProps {
-  particle: Particle;
-}
-
-const SkiaParticleTrail: React.FC<SkiaParticleTrailProps> = React.memo(({ particle }) => {
-  const speed = Math.sqrt(particle.vx ** 2 + particle.vy ** 2);
-  if (speed < RenderConfig.Trail.MinSpeedThreshold) return null;
-
-  const path = Skia.Path.Make();
-  path.moveTo(particle.x, particle.y);
-
-  // Trail length proportional to velocity
-  const trailLength = speed * RenderConfig.Trail.LengthMultiplier;
-  const trailEndX = particle.x - (particle.vx / speed) * trailLength;
-  const trailEndY = particle.y - (particle.vy / speed) * trailLength;
-
-  path.lineTo(trailEndX, trailEndY);
-
-  // Create gradient effect using opacity
-  const trailColor = particle.color + RenderConfig.Trail.OpacityHex;
-
-  return (
-    <Path
-      path={path}
-      style="stroke"
-      strokeWidth={RenderConfig.Trail.StrokeWidth}
-      color={trailColor}
-      strokeCap="round"
-    />
-  );
-});
-
-// ===== HEAT FIELD COMPONENT =====
-interface SkiaHeatFieldProps {
-  x: number;
-  y: number;
-  radius: number;
-  intensity: number;
-  temperature: number;
-}
-
-const SkiaHeatField: React.FC<SkiaHeatFieldProps> = React.memo(({
-  x,
-  y,
-  radius,
-  intensity,
-  temperature
-}) => {
-  const color = ColorSystem.getColorFromNormalizedTemperature(temperature / 100);
-  const opacity = Math.min(0.3, intensity * 0.4);
-
-  return (
-    <Circle
-      cx={x}
-      cy={y}
-      r={radius}
-      color={color}
-      opacity={opacity}
-    />
-  );
-});
-
-// ===== MAIN SKIA RENDERER =====
 interface SkiaRendererProps {
   physicsState: PhysicsState;
   performanceSettings: PerformanceSettings;
@@ -132,145 +26,156 @@ export const SkiaRenderer: React.FC<SkiaRendererProps> = ({
   height
 }) => {
   const { particles, bonds } = physicsState;
-
-  // Filter active heat sources
   const activeHeatSources = heatSources.filter(source => source.isActive);
 
-  // Performance optimizations
-  const shouldShowTrails = showTrails && performanceSettings.enableParticleTrails;
-  const maxParticles = performanceSettings.maxParticles;
-  const visibleParticles = particles.slice(0, maxParticles);
+  const [skiaError, setSkiaError] = useState<string | null>(null);
 
-  return (
-    <Canvas style={{ width, height }}>
-      <Group>
-        {/* Heat fields (render first, behind everything) */}
-        {showHeatFields && activeHeatSources.map(source => (
-          <SkiaHeatField
-            key={`heat-${source.id}`}
-            x={source.x}
-            y={source.y}
-            radius={source.radius}
-            intensity={source.intensity}
-            temperature={source.temperature}
-          />
-        ))}
-
-        {/* Particle trails (render before particles) */}
-        {shouldShowTrails && visibleParticles.map(particle => (
-          <SkiaParticleTrail
-            key={`trail-${particle.id}`}
-            particle={particle}
-          />
-        ))}
-
-        {/* Bonds (render before particles so particles appear on top) */}
-        {bonds.map(bond => (
-          <SkiaBond
-            key={bond.id}
-            bond={bond}
-          />
-        ))}
-
-        {/* Particles (render on top) */}
-        {visibleParticles.map(particle => (
-          <SkiaParticle
-            key={particle.id}
-            particle={particle}
-          />
-        ))}
-      </Group>
-    </Canvas>
-  );
-};
-
-// ===== UTILITY FUNCTIONS =====
-
-/**
- * Creates a Skia path for complex molecular bonds
- */
-export const createBondPath = (
-  p1: { x: number; y: number },
-  p2: { x: number; y: number },
-  bondType: Bond['type'] = 'single'
-): ReturnType<typeof Skia.Path.Make> => {
-  const path = Skia.Path.Make();
-
-  switch (bondType) {
-    case 'single':
-      path.moveTo(p1.x, p1.y);
-      path.lineTo(p2.x, p2.y);
-      break;
-
-    case 'double':
-      // Create two parallel lines
-      const dx = p2.x - p1.x;
-      const dy = p2.y - p1.y;
-      const length = Math.sqrt(dx * dx + dy * dy);
-      const offsetX = (-dy / length) * 2; // Perpendicular offset
-      const offsetY = (dx / length) * 2;
-
-      // First line
-      path.moveTo(p1.x + offsetX, p1.y + offsetY);
-      path.lineTo(p2.x + offsetX, p2.y + offsetY);
-
-      // Second line
-      path.moveTo(p1.x - offsetX, p1.y - offsetY);
-      path.lineTo(p2.x - offsetX, p2.y - offsetY);
-      break;
-
-    case 'triple':
-      // Create three parallel lines
-      const dx3 = p2.x - p1.x;
-      const dy3 = p2.y - p1.y;
-      const length3 = Math.sqrt(dx3 * dx3 + dy3 * dy3);
-      const offsetX3 = (-dy3 / length3) * 3;
-      const offsetY3 = (dx3 / length3) * 3;
-
-      // Center line
-      path.moveTo(p1.x, p1.y);
-      path.lineTo(p2.x, p2.y);
-
-      // Side lines
-      path.moveTo(p1.x + offsetX3, p1.y + offsetY3);
-      path.lineTo(p2.x + offsetX3, p2.y + offsetY3);
-      path.moveTo(p1.x - offsetX3, p1.y - offsetY3);
-      path.lineTo(p2.x - offsetX3, p2.y - offsetY3);
-      break;
-
-    default:
-      path.moveTo(p1.x, p1.y);
-      path.lineTo(p2.x, p2.y);
-  }
-
-  return path;
-};
-
-/**
- * Performance monitoring for Skia rendering
- */
-export const useSkiaPerformance = () => {
-  const [fps, setFps] = React.useState(60);
-  const frameCountRef = React.useRef(0);
-  const lastTimeRef = React.useRef(performance.now());
-
-  React.useEffect(() => {
-    const updateFPS = () => {
-      frameCountRef.current++;
-      const now = performance.now();
-      const elapsed = now - lastTimeRef.current;
-
-      if (elapsed >= 1000) {
-        setFps(Math.round((frameCountRef.current * 1000) / elapsed));
-        frameCountRef.current = 0;
-        lastTimeRef.current = now;
+  // Initialize Skia and check if it's available
+  useEffect(() => {
+    try {
+      if (Platform.OS === 'web') {
+        console.warn('Skia may have limited support in web environment');
       }
 
-      requestAnimationFrame(updateFPS);
-    };
+      if (typeof Skia === 'undefined') {
+        throw new Error('Skia module not found');
+      }
 
-    requestAnimationFrame(updateFPS);
+      if (typeof Skia.Path === 'undefined' || typeof Skia.Path.Make !== 'function') {
+        throw new Error('Skia.Path.Make is not a function');
+      }
+
+      // Test creating a simple path
+      const testPath = Skia.Path.Make();
+      if (!testPath) {
+        throw new Error('Skia.Path.Make returned null');
+      }
+    } catch (error) {
+      let errorMessage = 'Unknown Skia initialization error';
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      } else if (typeof error === 'string') {
+        errorMessage = error;
+      }
+
+      const errMsg = `Skia initialization failed: ${errorMessage}`;
+      console.error(errMsg);
+      setSkiaError(errMsg);
+    }
   }, []);
 
-  return { fps };
+  // If Skia fails to initialize, use fallback canvas renderer
+  if (skiaError) {
+    console.warn('Falling back to canvas renderer due to Skia initialization error');
+    return (
+      <FallbackRenderer
+        physicsState={physicsState}
+        performanceSettings={performanceSettings}
+        heatSources={heatSources}
+        showTrails={showTrails}
+        showHeatFields={showHeatFields}
+        width={width}
+        height={height}
+      />
+    );
+  }
+
+  // Create paths for all renderable elements
+  const particlePaths = particles.map(particle => {
+    const path = Skia.Path.Make();
+    path.addCircle(particle.x, particle.y, particle.radius);
+    return path;
+  });
+
+  const bondPaths = bonds
+    .filter(bond => bond.stability >= RenderConfig.Bond.MinVisibleStability)
+    .map(bond => {
+      const path = Skia.Path.Make();
+      path.moveTo(bond.particle1.x, bond.particle1.y);
+      path.lineTo(bond.particle2.x, bond.particle2.y);
+      return path;
+    });
+
+  const heatFieldPaths = showHeatFields
+    ? activeHeatSources.map(source => {
+        const path = Skia.Path.Make();
+        path.addCircle(source.x, source.y, source.radius);
+        return path;
+      })
+    : [];
+
+  const trailPaths = showTrails && performanceSettings.enableParticleTrails
+    ? particles.map(particle => {
+        const speed = Math.sqrt(particle.vx ** 2 + particle.vy ** 2);
+        if (speed < RenderConfig.Trail.MinSpeedThreshold) return null;
+
+        const trailLength = speed * RenderConfig.Trail.LengthMultiplier;
+        const trailEndX = particle.x - (particle.vx / speed) * trailLength;
+        const trailEndY = particle.y - (particle.vy / speed) * trailLength;
+
+        const path = Skia.Path.Make();
+        path.moveTo(particle.x, particle.y);
+        path.lineTo(trailEndX, trailEndY);
+        return path;
+      }).filter(Boolean)
+    : [];
+
+  return (
+    <View style={{ width, height }}>
+      <Canvas style={{ width, height }}>
+        {/* Background */}
+        <Path
+          path={Skia.Path.Make().addRect(Skia.XYWHRect(0, 0, width, height))}
+          color="#f8f9fa"
+        />
+
+        {/* Heat Fields */}
+        {showHeatFields && heatFieldPaths.map((path, i) => (
+          <Path
+            key={`heat-${i}`}
+            path={path}
+            color={ColorSystem.getColorFromNormalizedTemperature(
+              activeHeatSources[i].temperature / 100
+            ) + "40"}
+            style="fill"
+          />
+        ))}
+
+        {/* Particle Trails */}
+        {showTrails && trailPaths.map((path, i) => (
+          <Path
+            key={`trail-${i}`}
+            path={path!}
+            color={particles[i].color + RenderConfig.Trail.OpacityHex}
+            style="stroke"
+            strokeWidth={RenderConfig.Trail.StrokeWidth}
+          />
+        ))}
+
+        {/* Bonds */}
+        {bondPaths.map((path, i) => {
+          const bond = bonds[i];
+          return (
+            <Path
+              key={`bond-${i}`}
+              path={path}
+              color={bond.color || ColorSystem.getBondColor(bond.type)}
+              style="stroke"
+              strokeWidth={Math.max(1, RenderConfig.Bond.StrokeWidthMultiplier * bond.stability)}
+            />
+          );
+        })}
+
+        {/* Particles */}
+        {particlePaths.map((path, i) => (
+          <Path
+            key={`particle-${i}`}
+            path={path}
+            color={particles[i].color}
+            style="fill"
+          />
+        ))}
+      </Canvas>
+    </View>
+  );
 };

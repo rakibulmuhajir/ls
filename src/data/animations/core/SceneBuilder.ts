@@ -197,6 +197,12 @@ export class SceneBuilder {
     return { naId, clId };
   }
 
+private buildCustomScene(config: AnimationConfig): void {
+    // Custom scene - start with empty scene, user can add particles manually
+    // This is for test scenarios and custom setups
+    console.log('Custom scene initialized - add particles manually');
+  }
+
   // ===== STATES OF MATTER =====
   public createStatesOfMatter(
     count: number,
@@ -365,6 +371,9 @@ export class SceneBuilder {
           break;
         case 'reaction':
           this.buildReactionScene(config);
+          break;
+        case 'custom':
+          this.buildCustomScene(config);
           break;
         default:
           console.warn(`Unknown animation type: ${config.type}`);

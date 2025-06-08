@@ -34,8 +34,7 @@ const AppNavigator = () => (
       {/* TODO: Create these screens */}
       {/* <Stack.Screen name="Updates" component={UpdatesScreen} options={{ title: 'Updates' }} /> */}
       <Stack.Screen name="About" component={AboutScreen} options={{ title: 'About LearnSpark' }} />
-      <Stack.Screen name="LabExperiment" component={LabExperimentScreen} options={{ title: 'Chemistry Lab' }}
-/>
+      <Stack.Screen name="LabExperiment" component={LabExperimentScreen} options={{ title: 'Chemistry Lab' }} />
     </Stack.Navigator>
   </NavigationContainer>
 );

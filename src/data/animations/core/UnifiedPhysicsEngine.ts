@@ -276,21 +276,22 @@ export class UnifiedPhysicsEngine {
   }
 
   private applyFriction(particle: Particle): void {
-    const friction = 0.98;
-    particle.vx *= friction;
-    particle.vy *= friction;
+    // const friction = 0.995;
+    // particle.vx *= friction;
+    // particle.vy *= friction;
   }
 
-  private updatePosition(particle: Particle, timeStep: number): void {
-    const speed = Math.sqrt(particle.vx ** 2 + particle.vy ** 2);
-    if (speed > particle.maxSpeed && particle.maxSpeed > 0) {
-      particle.vx = (particle.vx / speed) * particle.maxSpeed;
-      particle.vy = (particle.vy / speed) * particle.maxSpeed;
-    }
-
-    particle.x += particle.vx * timeStep * 50;
-    particle.y += particle.vy * timeStep * 50;
+// In UnifiedPhysicsEngine.ts, line ~254
+private updatePosition(particle: Particle, timeStep: number): void {
+  const speed = Math.sqrt(particle.vx ** 2 + particle.vy ** 2);
+  if (speed > particle.maxSpeed && particle.maxSpeed > 0) {
+    particle.vx = (particle.vx / speed) * particle.maxSpeed;
+    particle.vy = (particle.vy / speed) * particle.maxSpeed;
   }
+
+  particle.x += particle.vx * timeStep * 100; // Change from 50 to 100
+  particle.y += particle.vy * timeStep * 100; // Change from 50 to 100
+}
 
   private applyBondConstraint(bond: Bond, timeStep: number): void {
     const p1 = bond.particle1;

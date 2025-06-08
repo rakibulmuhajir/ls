@@ -130,7 +130,7 @@ export default function MainMenuBottomNavigation({ hasUpdates = false }: Props) 
     {
       id: 'features',
       label: 'Features',
-      icon: 'checklist',
+      icon: 'clipboard-list', // 📋 Clipboard list icon for features
       color: theme.colors.accent,
       onPress: () => navigation.navigate('Features'),
       showBadge: false,

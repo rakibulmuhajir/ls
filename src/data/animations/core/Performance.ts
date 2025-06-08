@@ -54,7 +54,7 @@ export class PerformanceManager {
     // if (deviceInfo.totalMemory > 4 * 1024 * 1024 * 1024 && deviceInfo.cpuCores > 4) {
     //   this.setPerformanceLevel('medium');
     // }
-    console.log("PerformanceManager: Defaulting to initial or 'low' performance settings. Implement actual device detection.");
+    //console.log("PerformanceManager: Defaulting to initial or 'low' performance settings. Implement actual device detection.");
     // The constructor already sets initialLevel. This method could refine it.
   }
 

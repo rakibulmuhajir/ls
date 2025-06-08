@@ -32,25 +32,33 @@ export const SkiaRenderer: React.FC<SkiaRendererProps> = ({
 
   // Initialize Skia and check if it's available
   useEffect(() => {
-    try {
-      if (Platform.OS === 'web') {
-        console.warn('Skia may have limited support in web environment');
+      try {
+    if (Platform.OS === 'web') {
+      // For web, we need to wait for CanvasKit to load
+      if (typeof window !== 'undefined' && !window.CanvasKit) {
+        console.warn('CanvasKit not loaded yet, using fallback');
+        setSkiaError('CanvasKit not loaded');
+        return;
       }
+    }
 
-      if (typeof Skia === 'undefined') {
-        throw new Error('Skia module not found');
-      }
+    // Check if Skia and required methods exist
+    const canUseSkia =
+  Skia?.Path?.Make &&
+  typeof Skia.Path.Make === "function" &&
+  (Platform.OS !== "web" || typeof window.CanvasKit !== "undefined");
 
-      if (typeof Skia.Path === 'undefined' || typeof Skia.Path.Make !== 'function') {
-        throw new Error('Skia.Path.Make is not a function');
-      }
+if (!canUseSkia) {
+  throw new Error("Skia or CanvasKit not available");
+}
 
-      // Test creating a simple path
-      const testPath = Skia.Path.Make();
-      if (!testPath) {
-        throw new Error('Skia.Path.Make returned null');
-      }
-    } catch (error) {
+
+    // Test path creation
+    const testPath = Skia.Path.Make();
+    if (!testPath) {
+      throw new Error('Failed to create Skia path');
+    }
+  } catch (error) {
       let errorMessage = 'Unknown Skia initialization error';
       if (error instanceof Error) {
         errorMessage = error.message;

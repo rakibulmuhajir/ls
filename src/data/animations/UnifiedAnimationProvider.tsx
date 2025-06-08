@@ -22,7 +22,7 @@ import type {
   LabBoundary,
   HeatSource
 } from './core/types';
-import { UniqueID } from '@/utils/UniqueID';
+import { UniqueID } from './utils/UniqueID';
 
 // ===== CONTEXT =====
 const UnifiedAnimationContext = createContext<AnimationContextAPI | undefined>(undefined);
@@ -87,26 +87,32 @@ export const UnifiedAnimationProvider: React.FC<UnifiedAnimationProviderProps> =
     const engine = physicsEngineRef.current;
     const perfManager = performanceManagerRef.current;
 
-    const animate = (currentTime: number) => {
-      if (!isRunning) return;
+  const animate = (currentTime: number) => {
+    if (!isRunning) return;
 
-      try {
-        const deltaTime = currentTime - lastTimestampRef.current;
-        const targetInterval = 1000 / perfManager.getPerformanceSettings().frameRate;
+    try {
+      const deltaTime = currentTime - lastTimestampRef.current;
+      const targetInterval = 1000 / perfManager.getPerformanceSettings().frameRate;
 
-        if (deltaTime >= targetInterval * 0.9 || deltaTime > 250) {
-          engine.update(Math.min(deltaTime, 250), currentTime);
-          lastTimestampRef.current = currentTime;
-          setTick(t => t + 1);
-        }
-
-        animationFrameIdRef.current = requestAnimationFrame(animate);
-      } catch (error) {
-        console.error('Animation loop error:', error);
-        // Continue animation despite errors
-        animationFrameIdRef.current = requestAnimationFrame(animate);
+      if (deltaTime >= targetInterval * 0.9 || deltaTime > 250) {
+        engine.update(Math.min(deltaTime, 250), currentTime);
+        lastTimestampRef.current = currentTime;
+        // Force new state object creation and tick update
+        setTick(t => {
+          const newTick = t + 1;
+          // Create new physics state to ensure re-render
+          getPhysicsState();
+          return newTick;
+        });
       }
-    };
+
+      animationFrameIdRef.current = requestAnimationFrame(animate);
+    } catch (error) {
+      console.error('Animation loop error:', error);
+      // Continue animation despite errors
+      animationFrameIdRef.current = requestAnimationFrame(animate);
+    }
+  };
 
     animationFrameIdRef.current = requestAnimationFrame(animate);
 
@@ -119,7 +125,13 @@ export const UnifiedAnimationProvider: React.FC<UnifiedAnimationProviderProps> =
 
   // ===== API METHODS =====
   const getPhysicsState = useCallback((): PhysicsState => {
-    return physicsEngineRef.current.getState(lastTimestampRef.current);
+    // Create fresh state object each call
+    const state = physicsEngineRef.current.getState(lastTimestampRef.current);
+    return {
+      ...state,
+      particles: [...state.particles],
+      bonds: [...state.bonds]
+    };
   }, []);
 
   const setTemperature = useCallback((temp: number) => {

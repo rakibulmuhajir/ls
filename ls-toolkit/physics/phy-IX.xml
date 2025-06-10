@@ -8376,5 +8376,1773 @@
             </numerical_problems_content>
         </section>
     </topic>
+    <topic id="4.2" title="Addition of Forces ➕">
 
+    <section type="CORE_DEFINITION" title="CORE DEFINITION">
+        <definition_content>
+            <paragraph><emphasis type="bold">Addition of Forces</emphasis> is the process of combining two or more force vectors to find their resultant using vector addition methods.</paragraph>
+            <paragraph><emphasis type="bold">Resultant Force</emphasis> is a single force that produces the same effect as all the individual forces acting together.</paragraph>
+            <paragraph>Since forces are vectors, they can be added using the <emphasis type="bold">head-to-tail rule</emphasis>. The resultant is the same regardless of the order of addition of vectors.</paragraph>
+            <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing head-to-tail rule for vector addition" -->
+        </definition_content>
+    </section>
+
+    <section type="EXPLANATION" title="EXPLANATION">
+        <explanation_content>
+            <paragraph>From our study of vectors in Chapter 2, we learned about vector representation and addition. Since forces are vector quantities, they follow the same rules of vector addition. This means we can combine multiple forces to find a single equivalent force called the resultant.</paragraph>
+
+            <paragraph>The key principle in force addition is that <emphasis type="italic">the resultant is the same for any order of addition of vectors</emphasis>. This property makes vector addition very flexible and practical for solving physics problems.</paragraph>
+
+            <paragraph>To determine the resultant of two or more forces acting in a plane, we use the head-to-tail rule. This method involves:</paragraph>
+            <list type="ordered">
+                <item>Drawing all force vectors to scale</item>
+                <item>Placing the tail of the second vector at the head of the first vector</item>
+                <item>Continuing this process for all vectors</item>
+                <item>Drawing the resultant from the tail of the first vector to the head of the last vector</item>
+            </list>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Step-by-step diagram showing head-to-tail rule application" -->
+
+            <paragraph>When working with force addition, it's essential to choose an appropriate scale for drawing. For example, if we choose a scale where 100 N = 1 cm, then a 300 N force would be represented by a 3 cm long vector.</paragraph>
+
+            <table id="4.2.table1">
+                <title>Methods of Vector Addition</title>
+                <table_data>
+                    <row header="true">
+                        <cell>Method</cell>
+                        <cell>Best Used For</cell>
+                        <cell>Accuracy</cell>
+                        <cell>Requirements</cell>
+                    </row>
+                    <row>
+                        <cell>Graphical (Head-to-Tail)</cell>
+                        <cell>Visualization and estimation</cell>
+                        <cell>Moderate</cell>
+                        <cell>Scale, protractor, ruler</cell>
+                    </row>
+                    <row>
+                        <cell>Component Method</cell>
+                        <cell>Precise calculations</cell>
+                        <cell>High</cell>
+                        <cell>Trigonometry knowledge</cell>
+                    </row>
+                    <row>
+                        <cell>Parallelogram Law</cell>
+                        <cell>Two vectors only</cell>
+                        <cell>Moderate</cell>
+                        <cell>Geometric construction</cell>
+                    </row>
+                </table_data>
+            </table>
+
+            <paragraph>The graphical method using head-to-tail rule is particularly useful for understanding the concept of vector addition, even though analytical methods (like component addition) provide more precise results.</paragraph>
+
+            <paragraph>An important characteristic of the resultant force is that it can replace all the individual forces without changing the overall effect on the object. This means that instead of analyzing multiple forces separately, we can work with just the single resultant force.</paragraph>
+        </explanation_content>
+    </section>
+
+    <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+        <key_concepts_content>
+            <concept id="4.2.kc1">
+                <title>Vector Nature of Forces</title>
+                <description>Forces are vectors with both magnitude and direction, making vector addition rules applicable to force combinations.</description>
+            </concept>
+            <concept id="4.2.kc2">
+                <title>Commutative Property</title>
+                <description>The order of adding force vectors does not affect the final resultant force (A + B = B + A).</description>
+            </concept>
+            <concept id="4.2.kc3">
+                <title>Scale Representation</title>
+                <description>Forces must be drawn to scale for accurate graphical addition, with consistent units throughout the problem.</description>
+            </concept>
+            <concept id="4.2.kc4">
+                <title>Resultant Significance</title>
+                <description>The resultant force represents the net effect of all individual forces acting on an object.</description>
+            </concept>
+            <!-- HIDDEN_TAG: graph_required, necessity_score=8, description="Vector diagram showing multiple force addition with resultant" -->
+        </key_concepts_content>
+    </section>
+
+    <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+        <worked_examples_content>
+            <example id="4.2.ex1" level="intermediate">
+                <title>Addition of Three Force Vectors</title>
+                <problem>
+                    <paragraph>Add three force vectors F₁, F₂, and F₃ having magnitudes of 200 N, 300 N, and 250 N acting at angles of 30°, 45°, and 60° respectively with the x-axis. Use a scale of 100 N = 1 cm.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>F₁ = 200 N at 30° with x-axis</item>
+                        <item>F₂ = 300 N at 45° with x-axis</item>
+                        <item>F₃ = 250 N at 60° with x-axis</item>
+                        <item>Scale: 100 N = 1 cm</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution using Head-to-Tail Rule:</emphasis></paragraph>
+                    <paragraph>1. Draw F₁ as a 2 cm vector at 30° with x-axis</paragraph>
+                    <paragraph>2. From the head of F₁, draw F₂ as a 3 cm vector at 45° with x-axis</paragraph>
+                    <paragraph>3. From the head of F₂, draw F₃ as a 2.5 cm vector at 60° with x-axis</paragraph>
+                    <paragraph>4. Draw the resultant from the tail of F₁ to the head of F₃</paragraph>
+                    <paragraph><emphasis type="bold">Result:</emphasis> Measured length = 7.1 cm</paragraph>
+                    <paragraph>Therefore: Resultant magnitude = 7.1 × 100 = 710 N</paragraph>
+                    <paragraph>Resultant direction = 43° with x-axis</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Complete vector addition diagram showing all three forces and resultant" -->
+            </example>
+
+            <example id="4.2.ex2" level="basic">
+                <title>Addition of Two Perpendicular Forces</title>
+                <problem>
+                    <paragraph>Two forces of 40 N and 30 N act on an object at right angles to each other. Find the magnitude and direction of the resultant force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>F₁ = 40 N (horizontal)</item>
+                        <item>F₂ = 30 N (vertical)</item>
+                        <item>Angle between forces = 90°</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Using Pythagorean theorem:</emphasis></paragraph>
+                    <paragraph>Resultant magnitude = √(F₁² + F₂²)</paragraph>
+                    <paragraph>R = √(40² + 30²) = √(1600 + 900) = √2500 = 50 N</paragraph>
+                    <paragraph><emphasis type="bold">Direction:</emphasis></paragraph>
+                    <paragraph>tan θ = F₂/F₁ = 30/40 = 0.75</paragraph>
+                    <paragraph>θ = tan⁻¹(0.75) = 36.87° above horizontal</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.2.ex3" level="basic">
+                <title>Addition of Parallel Forces</title>
+                <problem>
+                    <paragraph>Three parallel forces of 25 N, 40 N, and 15 N act in the same direction on an object. Find the resultant force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>F₁ = 25 N</item>
+                        <item>F₂ = 40 N</item>
+                        <item>F₃ = 15 N</item>
+                        <item>All forces in same direction</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>For parallel forces in the same direction:</paragraph>
+                    <paragraph>Resultant = F₁ + F₂ + F₃ = 25 + 40 + 15 = 80 N</paragraph>
+                    <paragraph>Direction: Same as the individual forces</paragraph>
+                </solution>
+            </example>
+        </worked_examples_content>
+    </section>
+
+    <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+        <applications_content>
+            <application id="4.2.app1">
+                <title>Aircraft Design and Navigation</title>
+                <description>In aviation, pilots must consider multiple forces: thrust from engines, weight of aircraft, lift from wings, and drag from air resistance. The resultant of these forces determines the aircraft's motion. Flight computers continuously calculate these vector additions to maintain stable flight paths.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Aircraft with force vectors showing thrust, weight, lift, and drag" -->
+            </application>
+            <application id="4.2.app2">
+                <title>Bridge Engineering</title>
+                <description>Engineers must add multiple force vectors when designing bridges: dead loads (weight of structure), live loads (traffic), wind forces, and seismic forces. The resultant forces help determine the required strength of support structures and materials needed.</description>
+            </application>
+            <application id="4.2.app3">
+                <title>Ship Navigation</title>
+                <description>Ships encounter multiple forces: engine thrust, water current forces, and wind forces. Navigation systems use vector addition to calculate the resultant force and determine the actual course and speed of the vessel through water.</description>
+            </application>
+            <application id="4.2.app4">
+                <title>Crane Operations</title>
+                <description>Construction cranes must handle multiple cable tensions and load forces acting in different directions. Operators use force addition principles to ensure safe lifting operations and prevent tipping by calculating the resultant of all forces acting on the crane structure.</description>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=7, description="Crane with multiple cable tensions showing vector addition" -->
+            </application>
+            <application id="4.2.app5">
+                <title>Sports Biomechanics</title>
+                <description>In sports like javelin throwing or golf, athletes apply forces in multiple directions. Sports scientists analyze the vector addition of these forces to optimize technique and improve performance by maximizing the resultant force in the desired direction.</description>
+            </application>
+        </applications_content>
+    </section>
+
+    <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+        <numerical_problems_content>
+            <problem id="4.2.np1" level="basic">
+                <statement>Two forces of 60 N and 80 N act at right angles to each other. Calculate the magnitude of the resultant force.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>For perpendicular forces: R = √(F₁² + F₂²)</paragraph>
+                    <paragraph>R = √(60² + 80²) = √(3600 + 6400) = √10000 = 100 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.2.np2" level="basic">
+                <statement>Four parallel forces of 20 N, 35 N, 15 N, and 25 N act in the same direction. Find the resultant force.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>For parallel forces in same direction:</paragraph>
+                    <paragraph>Resultant = 20 + 35 + 15 + 25 = 95 N</paragraph>
+                    <paragraph>Direction: Same as individual forces</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.2.np3" level="intermediate">
+                <statement>Two forces of 50 N and 70 N act at an angle of 60° to each other. Find the magnitude of the resultant force.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Using cosine rule: R² = F₁² + F₂² + 2F₁F₂cos(θ)</paragraph>
+                    <paragraph>R² = 50² + 70² + 2(50)(70)cos(60°)</paragraph>
+                    <paragraph>R² = 2500 + 4900 + 7000(0.5) = 2500 + 4900 + 3500 = 10900</paragraph>
+                    <paragraph>R = √10900 = 104.4 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.2.np4" level="intermediate">
+                <statement>Three forces act on an object: 100 N horizontally to the right, 80 N vertically upward, and 60 N at 30° above the horizontal. Find the resultant force using component method.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">X-components:</emphasis></paragraph>
+                    <paragraph>F₁ₓ = 100 N, F₂ₓ = 0, F₃ₓ = 60cos(30°) = 60 × 0.866 = 52 N</paragraph>
+                    <paragraph>ΣFₓ = 100 + 0 + 52 = 152 N</paragraph>
+                    <paragraph><emphasis type="bold">Y-components:</emphasis></paragraph>
+                    <paragraph>F₁ᵧ = 0, F₂ᵧ = 80 N, F₃ᵧ = 60sin(30°) = 60 × 0.5 = 30 N</paragraph>
+                    <paragraph>ΣFᵧ = 0 + 80 + 30 = 110 N</paragraph>
+                    <paragraph><emphasis type="bold">Resultant:</emphasis></paragraph>
+                    <paragraph>R = √(152² + 110²) = √(23104 + 12100) = √35204 = 187.6 N</paragraph>
+                    <paragraph>θ = tan⁻¹(110/152) = tan⁻¹(0.724) = 35.9° above horizontal</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.2.np5" level="advanced">
+                <statement>A force of 150 N acts at 25° above horizontal, another force of 120 N acts at 40° below horizontal, and a third force of 90 N acts vertically downward. Find the resultant force.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution using component method:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">X-components:</emphasis></paragraph>
+                    <paragraph>F₁ₓ = 150cos(25°) = 150 × 0.906 = 135.9 N</paragraph>
+                    <paragraph>F₂ₓ = 120cos(-40°) = 120 × 0.766 = 91.9 N</paragraph>
+                    <paragraph>F₃ₓ = 0</paragraph>
+                    <paragraph>ΣFₓ = 135.9 + 91.9 + 0 = 227.8 N</paragraph>
+                    <paragraph><emphasis type="bold">Y-components:</emphasis></paragraph>
+                    <paragraph>F₁ᵧ = 150sin(25°) = 150 × 0.423 = 63.5 N</paragraph>
+                    <paragraph>F₂ᵧ = 120sin(-40°) = 120 × (-0.643) = -77.2 N</paragraph>
+                    <paragraph>F₃ᵧ = -90 N</paragraph>
+                    <paragraph>ΣFᵧ = 63.5 - 77.2 - 90 = -103.7 N</paragraph>
+                    <paragraph><emphasis type="bold">Resultant:</emphasis></paragraph>
+                    <paragraph>R = √(227.8² + (-103.7)²) = √(51892.84 + 10753.69) = √62646.53 = 250.3 N</paragraph>
+                    <paragraph>θ = tan⁻¹(-103.7/227.8) = tan⁻¹(-0.455) = -24.5° (below horizontal)</paragraph>
+                </solution>
+            </problem>
+        </numerical_problems_content>
+    </section>
+
+</topic>
+<topic id="4.3" title="Turning Effect of a Force 🔄">
+
+    <section type="CORE_DEFINITION" title="CORE DEFINITION">
+        <definition_content>
+            <paragraph><emphasis type="bold">Turning Effect of a Force</emphasis> is the ability of a force to cause rotation of an object about an axis or pivot point.</paragraph>
+            <paragraph><emphasis type="bold">Moment of Force (Torque)</emphasis> is defined as the product of the force and the moment arm: <formula type="physics">τ = F × r</formula></paragraph>
+            <paragraph><emphasis type="bold">Moment Arm</emphasis> is the perpendicular distance of the line of action of a force from the axis of rotation.</paragraph>
+            <paragraph><emphasis type="bold">Line of Action</emphasis> is the imaginary line along which the force acts.</paragraph>
+            <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing door opening with force applied at different distances from hinge" -->
+        </definition_content>
+    </section>
+
+    <section type="EXPLANATION" title="EXPLANATION">
+        <explanation_content>
+            <paragraph>We have learned that a net force affects the linear motion of an object by causing it to accelerate. Since rigid objects can also rotate, we need to extend our understanding to include the turning effect of forces. When we open or close a door, we apply force that rotates the door about its hinge. Similarly, when we use a water tap or turn a steering wheel, we utilize the turning effect of force.</paragraph>
+
+            <paragraph>A <emphasis type="italic">rigid body</emphasis> is one where the distance between any two points remains constant under the action of a force. During rotation, all particles of a rigid body rotate along fixed circles, and the straight line joining the centers of these circles is called the <emphasis type="italic">axis of rotation</emphasis>.</paragraph>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Diagram showing rigid body rotation with particles moving in circles around axis" -->
+
+            <paragraph>The turning effect of a force depends on two factors:</paragraph>
+            <list type="ordered">
+                <item>The magnitude of the applied force</item>
+                <item>The perpendicular distance from the axis of rotation (moment arm)</item>
+            </list>
+
+            <paragraph>This is why door handles are installed far from hinges, and why it's easier to open a nut with a longer spanner. The greater the moment arm, the greater the turning effect for the same applied force.</paragraph>
+
+            <table id="4.3.table1">
+                <title>Factors Affecting Turning Effect</title>
+                <table_data>
+                    <row header="true">
+                        <cell>Factor</cell>
+                        <cell>Effect on Torque</cell>
+                        <cell>Practical Example</cell>
+                    </row>
+                    <row>
+                        <cell>Increase Force</cell>
+                        <cell>Torque increases proportionally</cell>
+                        <cell>Pushing door harder</cell>
+                    </row>
+                    <row>
+                        <cell>Increase Moment Arm</cell>
+                        <cell>Torque increases proportionally</cell>
+                        <cell>Using longer spanner</cell>
+                    </row>
+                    <row>
+                        <cell>Force parallel to moment arm</cell>
+                        <cell>Zero torque</cell>
+                        <cell>Pushing door toward hinge</cell>
+                    </row>
+                    <row>
+                        <cell>Force perpendicular to moment arm</cell>
+                        <cell>Maximum torque</cell>
+                        <cell>Pushing door at right angles</cell>
+                    </row>
+                </table_data>
+            </table>
+
+            <paragraph>The torque is considered positive if the force tends to produce anticlockwise rotation and negative if it produces clockwise rotation. The SI unit of torque is newton-meter (N⋅m).</paragraph>
+
+            <paragraph>When the line of action of a force passes through the axis of rotation, the moment arm becomes zero, and therefore the torque is zero. This is why pushing a door directly toward its hinge produces no turning effect.</paragraph>
+
+            <paragraph>For cases where the force is not perpendicular to the line from the axis to the point of application, we must use trigonometry to find either the perpendicular component of the force or the perpendicular component of the distance.</paragraph>
+            <!-- HIDDEN_TAG: graph_required, necessity_score=8, description="Diagram showing force at angle with perpendicular components" -->
+        </explanation_content>
+    </section>
+
+    <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+        <key_concepts_content>
+            <concept id="4.3.kc1">
+                <title>Rigid Body Rotation</title>
+                <description>All particles of a rigid body rotate in fixed circles around a common axis of rotation.</description>
+            </concept>
+            <concept id="4.3.kc2">
+                <title>Moment Arm Significance</title>
+                <description>The moment arm is always the perpendicular distance from the axis to the line of action of the force.</description>
+            </concept>
+            <concept id="4.3.kc3">
+                <title>Direction Convention</title>
+                <description>Anticlockwise torque is positive, clockwise torque is negative (or vice versa, depending on chosen convention).</description>
+            </concept>
+            <concept id="4.3.kc4">
+                <title>Zero Torque Condition</title>
+                <description>When the line of action passes through the axis of rotation, the moment arm is zero and torque is zero.</description>
+            </concept>
+            <concept id="4.3.kc5">
+                <title>Couple</title>
+                <description>Two equal and opposite parallel forces acting at different points produce pure rotation without translation.</description>
+            </concept>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Examples of couple forces: steering wheel, water tap, jar lid" -->
+        </key_concepts_content>
+    </section>
+
+    <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+        <worked_examples_content>
+            <example id="4.3.ex1" level="basic">
+                <title>Spanner Torque Calculation</title>
+                <problem>
+                    <paragraph>A spanner 25 cm long is used to open a nut. If a force of 400 N is applied at the end of the spanner perpendicular to its length, what is the torque acting on the nut?</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Length of spanner = 25 cm = 0.25 m</item>
+                        <item>Applied force = 400 N</item>
+                        <item>Force is perpendicular to spanner</item>
+                    </list>
+                    <paragraph><emphasis type="bold">To find:</emphasis> Torque (τ)</paragraph>
+                    <paragraph><emphasis type="bold">Formula:</emphasis> τ = F × r</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Since the force is perpendicular to the spanner, the moment arm equals the length of the spanner.</paragraph>
+                    <paragraph>τ = 400 N × 0.25 m = 100 N⋅m</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Spanner with force applied perpendicular to length" -->
+            </example>
+
+            <example id="4.3.ex2" level="intermediate">
+                <title>Door Handle Torque</title>
+                <problem>
+                    <paragraph>A force of 300 N is applied perpendicularly at a door knob that is 1.2 m away from the hinge. What is the torque applied? Is it positive or negative if it opens the door anticlockwise?</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Force = 300 N (perpendicular)</item>
+                        <item>Distance from hinge = 1.2 m</item>
+                        <item>Direction: anticlockwise</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>τ = F × r = 300 N × 1.2 m = 360 N⋅m</paragraph>
+                    <paragraph>Since the rotation is anticlockwise, the torque is positive: +360 N⋅m</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.3.ex3" level="intermediate">
+                <title>Force at an Angle</title>
+                <problem>
+                    <paragraph>A force of 50 N is applied to a lever arm of length 0.8 m at an angle of 60° to the lever. Calculate the torque produced.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Force = 50 N</item>
+                        <item>Lever arm length = 0.8 m</item>
+                        <item>Angle = 60°</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>When force is at an angle, we need the perpendicular component:</paragraph>
+                    <paragraph>Perpendicular component of force = F sin θ = 50 × sin(60°) = 50 × 0.866 = 43.3 N</paragraph>
+                    <paragraph>τ = F⊥ × r = 43.3 N × 0.8 m = 34.6 N⋅m</paragraph>
+                    <paragraph>Alternatively: τ = F × r⊥ = 50 × (0.8 × sin 60°) = 50 × 0.693 = 34.6 N⋅m</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.3.ex4" level="advanced">
+                <title>Principle of Moments</title>
+                <problem>
+                    <paragraph>A meter rule is balanced with weights of 4 N at 40 cm from the center and an unknown weight at 30 cm on the opposite side of the center. Find the unknown weight.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Weight 1: w₁ = 4 N at distance d₁ = 40 cm</item>
+                        <item>Weight 2: w₂ = ? at distance d₂ = 30 cm</item>
+                        <item>The rule is balanced (in equilibrium)</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Using Principle of Moments:</emphasis></paragraph>
+                    <paragraph>Sum of clockwise moments = Sum of anticlockwise moments</paragraph>
+                    <paragraph>w₁ × d₁ = w₂ × d₂</paragraph>
+                    <paragraph>4 N × 40 cm = w₂ × 30 cm</paragraph>
+                    <paragraph>160 = w₂ × 30</paragraph>
+                    <paragraph>w₂ = 160/30 = 5.33 N</paragraph>
+                </solution>
+            </example>
+        </worked_examples_content>
+    </section>
+
+    <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+        <applications_content>
+            <application id="4.3.app1">
+                <title>Construction Tools</title>
+                <description>Crowbars, wrenches, and spanners all utilize the principle of torque. Construction workers use longer tools to generate greater torque with less force, making it easier to remove stubborn bolts or lift heavy objects. The mechanical advantage comes from increasing the moment arm.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Construction worker using crowbar with force and moment arm labeled" -->
+            </application>
+            <application id="4.3.app2">
+                <title>Automotive Engineering</title>
+                <description>Car steering systems are designed based on torque principles. Power steering systems use hydraulic assistance to reduce the force needed at the steering wheel. Wheel nuts require specific torque values during installation to ensure proper tightening without damage.</description>
+            </application>
+            <application id="4.3.app3">
+                <title>Playground Equipment</title>
+                <description>Seesaws demonstrate the principle of moments in action. Children of different weights can balance by adjusting their distances from the pivot point. The lighter child sits farther from the pivot to create equal and opposite moments.</description>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Seesaw with children of different weights showing moment balance" -->
+            </application>
+            <application id="4.3.app4">
+                <title>Kitchen Appliances</title>
+                <description>Bottle openers, can openers, and nutcrackers all use the principle of torque to amplify the force applied by hand. The design maximizes the moment arm to make opening containers easier and more efficient.</description>
+            </application>
+            <application id="4.3.app5">
+                <title>Wind Turbines</title>
+                <description>Wind turbine blades are designed to maximize torque from wind forces. The shape and angle of the blades, combined with their length (moment arm), determine how effectively wind energy is converted to rotational motion for electricity generation.</description>
+            </application>
+            <application id="4.3.app6">
+                <title>Sports Equipment</title>
+                <description>Golf clubs, tennis rackets, and baseball bats are designed with specific lengths and weight distributions to optimize torque. Athletes use the turning effect to generate powerful shots by maximizing both force and moment arm.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Golf swing showing torque generation" -->
+            </application>
+        </applications_content>
+    </section>
+
+    <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+        <numerical_problems_content>
+            <problem id="4.3.np1" level="basic">
+                <statement>Calculate the torque produced by a force of 150 N applied perpendicular to a lever arm of length 0.4 m.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>τ = F × r = 150 N × 0.4 m = 60 N⋅m</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.3.np2" level="basic">
+                <statement>A 30 cm spanner is used to apply a torque of 150 N⋅m to open a nut. Calculate the force required.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis> τ = 150 N⋅m, r = 30 cm = 0.3 m</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>τ = F × r</paragraph>
+                    <paragraph>F = τ/r = 150 N⋅m / 0.3 m = 500 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.3.np3" level="intermediate">
+                <statement>A force of 80 N is applied to a wrench at an angle of 45° to the handle. If the wrench is 25 cm long, calculate the torque produced.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis> F = 80 N, θ = 45°, r = 25 cm = 0.25 m</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>τ = F × r × sin θ</paragraph>
+                    <paragraph>τ = 80 N × 0.25 m × sin(45°)</paragraph>
+                    <paragraph>τ = 80 × 0.25 × 0.707 = 14.14 N⋅m</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.3.np4" level="intermediate">
+                <statement>A seesaw is balanced with a 30 kg child sitting 2 m from the pivot and a 40 kg child sitting on the opposite side. At what distance from the pivot should the 40 kg child sit?</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <paragraph>m₁ = 30 kg, d₁ = 2 m, m₂ = 40 kg, d₂ = ?</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>For balance: m₁g × d₁ = m₂g × d₂</paragraph>
+                    <paragraph>Since g cancels out: m₁ × d₁ = m₂ × d₂</paragraph>
+                    <paragraph>30 × 2 = 40 × d₂</paragraph>
+                    <paragraph>60 = 40 × d₂</paragraph>
+                    <paragraph>d₂ = 60/40 = 1.5 m</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.3.np5" level="advanced">
+                <statement>A meter stick is pinned at one end. A force of 18 N is applied perpendicular to the stick at the free end. Another force of 60 N acts at 30° to the stick. At what distance from the pinned end should the 60 N force be applied so the stick doesn't rotate?</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <paragraph>F₁ = 18 N (perpendicular, at 1 m from pivot)</paragraph>
+                    <paragraph>F₂ = 60 N (at 30° to stick), distance d = ?</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>For equilibrium: Clockwise moment = Anticlockwise moment</paragraph>
+                    <paragraph>Moment by F₁ = 18 N × 1 m = 18 N⋅m (clockwise)</paragraph>
+                    <paragraph>Moment by F₂ = 60 N × sin(30°) × d = 60 × 0.5 × d = 30d N⋅m</paragraph>
+                    <paragraph>For balance: 30d = 18</paragraph>
+                    <paragraph>d = 18/30 = 0.6 m</paragraph>
+                    <paragraph>The 60 N force should be applied 0.6 m from the pinned end.</paragraph>
+                </solution>
+            </problem>
+        </numerical_problems_content>
+    </section>
+
+</topic>
+<topic id="4.4" title="Resolution of Vectors 📐">
+
+    <section type="CORE_DEFINITION" title="CORE DEFINITION">
+        <definition_content>
+            <paragraph><emphasis type="bold">Resolution of Vectors</emphasis> is the reverse process of vector addition, where a given vector is divided into two or more parts called components.</paragraph>
+            <paragraph><emphasis type="bold">Components of a Vector</emphasis> are the parts into which a vector is resolved. When these components are added up, their resultant equals the original vector.</paragraph>
+            <paragraph><emphasis type="bold">Rectangular Components</emphasis> are two perpendicular components of a vector, usually along x and y axes.</paragraph>
+            <paragraph>For a vector F at angle θ with x-axis: <formula type="physics">Fx = F cos θ</formula> and <formula type="physics">Fy = F sin θ</formula></paragraph>
+            <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing vector being resolved into x and y components with shadow analogy" -->
+        </definition_content>
+    </section>
+
+    <section type="EXPLANATION" title="EXPLANATION">
+        <explanation_content>
+            <paragraph>We have learned that two or more vectors can be added using the head-to-tail rule to give a resultant vector. The reverse process is also possible: a given vector can be divided into two or more parts. This process is called resolution of vectors, and it's particularly useful when dealing with forces acting at angles.</paragraph>
+
+            <paragraph>To understand vector resolution, imagine a beam of light placed above a vector F. When light falls perpendicularly to the x-axis, it casts a shadow of the vector onto the x-axis. This shadow represents the x-component of the vector. Similarly, when light falls perpendicularly to the y-axis, it creates the y-component.</paragraph>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Diagram showing beam of light creating shadows to illustrate vector components" -->
+
+            <paragraph>A component of a vector is its <emphasis type="italic">effective value in a given direction</emphasis>. Usually, a force is resolved into two components that are perpendicular to each other, called perpendicular or rectangular components.</paragraph>
+
+            <paragraph>The x and y components can be practically drawn by dropping perpendiculars from the tip of vector F onto the x and y axes respectively. From the geometry, it's evident that F is the resultant vector of its components Fx and Fy, and these components are perpendicular to each other.</paragraph>
+
+            <table id="4.4.table1">
+                <title>Trigonometric Relationships in Vector Resolution</title>
+                <table_data>
+                    <row header="true">
+                        <cell>Angle (θ)</cell>
+                        <cell>sin θ</cell>
+                        <cell>cos θ</cell>
+                        <cell>tan θ</cell>
+                    </row>
+                    <row>
+                        <cell>0°</cell>
+                        <cell>0</cell>
+                        <cell>1.0</cell>
+                        <cell>0</cell>
+                    </row>
+                    <row>
+                        <cell>30°</cell>
+                        <cell>0.5</cell>
+                        <cell>0.866</cell>
+                        <cell>0.577</cell>
+                    </row>
+                    <row>
+                        <cell>45°</cell>
+                        <cell>0.707</cell>
+                        <cell>0.707</cell>
+                        <cell>1.0</cell>
+                    </row>
+                    <row>
+                        <cell>60°</cell>
+                        <cell>0.866</cell>
+                        <cell>0.5</cell>
+                        <cell>1.732</cell>
+                    </row>
+                    <row>
+                        <cell>90°</cell>
+                        <cell>1.0</cell>
+                        <cell>0</cell>
+                        <cell>∞</cell>
+                    </row>
+                </table_data>
+            </table>
+
+            <paragraph>The magnitudes of perpendicular components can be found using trigonometry from the right-angled triangle formed. Using the relationships from trigonometry:</paragraph>
+            <list type="unordered">
+                <item>x-component: Fx = F cos θ</item>
+                <item>y-component: Fy = F sin θ</item>
+            </list>
+
+            <paragraph>Once we know the components, we can also work backwards to find the original vector's magnitude and direction using:</paragraph>
+            <list type="unordered">
+                <item>Magnitude: <formula type="physics">F = √(Fx² + Fy²)</formula></item>
+                <item>Direction: <formula type="physics">θ = tan⁻¹(Fy/Fx)</formula></item>
+            </list>
+            <!-- HIDDEN_TAG: graph_required, necessity_score=8, description="Right triangle showing vector components with trigonometric labels" -->
+        </explanation_content>
+    </section>
+
+    <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+        <key_concepts_content>
+            <concept id="4.4.kc1">
+                <title>Component Independence</title>
+                <description>Components of a vector act independently of each other. The x-component only affects motion in the x-direction, and the y-component only affects motion in the y-direction.</description>
+            </concept>
+            <concept id="4.4.kc2">
+                <title>Shadow Analogy</title>
+                <description>Vector components can be visualized as shadows cast by the vector when light shines perpendicular to each axis.</description>
+            </concept>
+            <concept id="4.4.kc3">
+                <title>Trigonometric Relations</title>
+                <description>The components depend on trigonometric functions: cosine for adjacent side (x-component) and sine for opposite side (y-component).</description>
+            </concept>
+            <concept id="4.4.kc4">
+                <title>Pythagorean Theorem</title>
+                <description>The magnitude of a vector equals the square root of the sum of squares of its components.</description>
+            </concept>
+            <concept id="4.4.kc5">
+                <title>Resolution Applications</title>
+                <description>Vector resolution is essential for analyzing forces on inclined planes, projectile motion, and equilibrium problems.</description>
+            </concept>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Examples of vector resolution in different scenarios" -->
+        </key_concepts_content>
+    </section>
+
+    <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+        <worked_examples_content>
+            <example id="4.4.ex1" level="basic">
+                <title>Force Resolution at 60°</title>
+                <problem>
+                    <paragraph>A force of 160 N is acting on a wooden box at an angle of 60° with the horizontal direction. Determine the values of its x and y components.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Magnitude of force: F = 160 N</item>
+                        <item>Angle with horizontal: θ = 60°</item>
+                    </list>
+                    <paragraph><emphasis type="bold">To find:</emphasis> Fx and Fy</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Using trigonometric values: sin 60° = 0.866, cos 60° = 0.5</paragraph>
+                    <paragraph><emphasis type="bold">x-component:</emphasis></paragraph>
+                    <paragraph>Fx = F cos θ = 160 N × 0.5 = 80 N</paragraph>
+                    <paragraph><emphasis type="bold">y-component:</emphasis></paragraph>
+                    <paragraph>Fy = F sin θ = 160 N × 0.866 = 138.6 N</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Force vector at 60° with horizontal showing x and y components" -->
+            </example>
+
+            <example id="4.4.ex2" level="basic">
+                <title>Cart Force Components</title>
+                <problem>
+                    <paragraph>A force of 200 N is acting on a cart at an angle of 30° with the horizontal direction. Find the x and y components of the force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Force: F = 200 N</item>
+                        <item>Angle: θ = 30°</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Using sin 30° = 0.5 and cos 30° = 0.866:</paragraph>
+                    <paragraph>Fx = F cos 30° = 200 × 0.866 = 173.2 N</paragraph>
+                    <paragraph>Fy = F sin 30° = 200 × 0.5 = 100 N</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.4.ex3" level="intermediate">
+                <title>Finding Resultant from Components</title>
+                <problem>
+                    <paragraph>A vector has components Fx = 40 N and Fy = 30 N. Find the magnitude and direction of the resultant vector.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Fx = 40 N</item>
+                        <item>Fy = 30 N</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Magnitude:</emphasis></paragraph>
+                    <paragraph>F = √(Fx² + Fy²) = √(40² + 30²) = √(1600 + 900) = √2500 = 50 N</paragraph>
+                    <paragraph><emphasis type="bold">Direction:</emphasis></paragraph>
+                    <paragraph>tan θ = Fy/Fx = 30/40 = 0.75</paragraph>
+                    <paragraph>θ = tan⁻¹(0.75) = 36.87° with x-axis</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.4.ex4" level="intermediate">
+                <title>Force on Inclined Plane</title>
+                <problem>
+                    <paragraph>A 100 N force acts on an object placed on a 30° inclined plane. Find the components of this force parallel and perpendicular to the inclined surface.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Force: F = 100 N (vertically downward)</item>
+                        <item>Incline angle: 30°</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Component parallel to incline (down the slope):</paragraph>
+                    <paragraph>F‖ = F sin 30° = 100 × 0.5 = 50 N</paragraph>
+                    <paragraph>Component perpendicular to incline (into the surface):</paragraph>
+                    <paragraph>F⊥ = F cos 30° = 100 × 0.866 = 86.6 N</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Object on inclined plane showing force components" -->
+            </example>
+
+            <example id="4.4.ex5" level="advanced">
+                <title>Multiple Force Resolution</title>
+                <problem>
+                    <paragraph>Three forces act on an object: 50 N at 0°, 40 N at 90°, and 60 N at 45° (all angles measured from positive x-axis). Find the resultant force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution using component method:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Force 1:</emphasis> F₁ = 50 N at 0°</paragraph>
+                    <paragraph>F₁ₓ = 50 cos 0° = 50 N, F₁ᵧ = 50 sin 0° = 0 N</paragraph>
+                    <paragraph><emphasis type="bold">Force 2:</emphasis> F₂ = 40 N at 90°</paragraph>
+                    <paragraph>F₂ₓ = 40 cos 90° = 0 N, F₂ᵧ = 40 sin 90° = 40 N</paragraph>
+                    <paragraph><emphasis type="bold">Force 3:</emphasis> F₃ = 60 N at 45°</paragraph>
+                    <paragraph>F₃ₓ = 60 cos 45° = 60 × 0.707 = 42.4 N</paragraph>
+                    <paragraph>F₃ᵧ = 60 sin 45° = 60 × 0.707 = 42.4 N</paragraph>
+                    <paragraph><emphasis type="bold">Total components:</emphasis></paragraph>
+                    <paragraph>ΣFₓ = 50 + 0 + 42.4 = 92.4 N</paragraph>
+                    <paragraph>ΣFᵧ = 0 + 40 + 42.4 = 82.4 N</paragraph>
+                    <paragraph><emphasis type="bold">Resultant:</emphasis></paragraph>
+                    <paragraph>F = √(92.4² + 82.4²) = √(8537.76 + 6789.76) = √15327.52 = 123.8 N</paragraph>
+                    <paragraph>θ = tan⁻¹(82.4/92.4) = tan⁻¹(0.892) = 41.7°</paragraph>
+                </solution>
+            </example>
+        </worked_examples_content>
+    </section>
+
+    <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+        <applications_content>
+            <application id="4.4.app1">
+                <title>Inclined Plane Problems</title>
+                <description>When objects rest on slopes, their weight must be resolved into components parallel and perpendicular to the surface. The parallel component determines if the object will slide down, while the perpendicular component affects the normal force and friction.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Car on hill showing weight components" -->
+            </application>
+            <application id="4.4.app2">
+                <title>Cable-Stayed Bridges</title>
+                <description>In bridge engineering, cable tensions are resolved into horizontal and vertical components. The vertical components support the bridge deck weight, while horizontal components must be balanced by the bridge towers and anchorages.</description>
+            </application>
+            <application id="4.4.app3">
+                <title>Aircraft Wing Forces</title>
+                <description>The lift force generated by aircraft wings acts perpendicular to the wing surface. When the aircraft is banked during turns, this lift force is resolved into vertical (supporting weight) and horizontal (providing centripetal force) components.</description>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Banked aircraft showing lift force components" -->
+            </application>
+            <application id="4.4.app4">
+                <title>Sailing and Wind Forces</title>
+                <description>Sailors must understand how wind forces on sails are resolved. The component parallel to the boat's direction provides forward thrust, while the perpendicular component creates sideways drift that must be countered by the keel or centerboard.</description>
+            </application>
+            <application id="4.4.app5">
+                <title>Construction and Scaffolding</title>
+                <description>Construction workers analyze forces in scaffolding systems by resolving member forces into horizontal and vertical components. This ensures structural stability and helps determine required support capacities.</description>
+            </application>
+            <application id="4.4.app6">
+                <title>Sports Biomechanics</title>
+                <description>In athletics, forces applied by athletes are often at angles to the desired motion. Shot put throwers, for example, must optimize the angle of release by understanding how the applied force resolves into horizontal (distance) and vertical (flight time) components.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Shot put trajectory showing force components" -->
+            </application>
+        </applications_content>
+    </section>
+
+    <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+        <numerical_problems_content>
+            <problem id="4.4.np1" level="basic">
+                <statement>A force of 120 N acts at an angle of 45° with the horizontal. Find its horizontal and vertical components.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Horizontal component: Fx = 120 cos 45° = 120 × 0.707 = 84.8 N</paragraph>
+                    <paragraph>Vertical component: Fy = 120 sin 45° = 120 × 0.707 = 84.8 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.4.np2" level="basic">
+                <statement>A vector has horizontal component 60 N and vertical component 80 N. Find the magnitude and direction of the vector.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Magnitude: F = √(60² + 80²) = √(3600 + 6400) = √10000 = 100 N</paragraph>
+                    <paragraph>Direction: θ = tan⁻¹(80/60) = tan⁻¹(1.33) = 53.1° with horizontal</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.4.np3" level="intermediate">
+                <statement>A 200 N force acts on a block resting on a 40° inclined plane. Calculate the components of this force parallel and perpendicular to the inclined surface.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis> F = 200 N (weight, vertically downward), θ = 40°</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Component parallel to incline: F‖ = F sin 40° = 200 × 0.643 = 128.6 N</paragraph>
+                    <paragraph>Component perpendicular to incline: F⊥ = F cos 40° = 200 × 0.766 = 153.2 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.4.np4" level="intermediate">
+                <statement>Two forces act on an object: 150 N at 30° above horizontal and 100 N horizontally to the right. Find the resultant force.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Force 1 components:</emphasis></paragraph>
+                    <paragraph>F₁ₓ = 150 cos 30° = 150 × 0.866 = 129.9 N</paragraph>
+                    <paragraph>F₁ᵧ = 150 sin 30° = 150 × 0.5 = 75 N</paragraph>
+                    <paragraph><emphasis type="bold">Force 2 components:</emphasis></paragraph>
+                    <paragraph>F₂ₓ = 100 N, F₂ᵧ = 0 N</paragraph>
+                    <paragraph><emphasis type="bold">Resultant components:</emphasis></paragraph>
+                    <paragraph>Fₓ = 129.9 + 100 = 229.9 N</paragraph>
+                    <paragraph>Fᵧ = 75 + 0 = 75 N</paragraph>
+                    <paragraph><emphasis type="bold">Resultant:</emphasis></paragraph>
+                    <paragraph>F = √(229.9² + 75²) = √(52,854 + 5,625) = √58,479 = 241.8 N</paragraph>
+                    <paragraph>θ = tan⁻¹(75/229.9) = tan⁻¹(0.326) = 18.1° above horizontal</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.4.np5" level="advanced">
+                <statement>A force F = 500 N acts at an unknown angle θ with the horizontal. If its vertical component is 300 N, find: (a) the angle θ, (b) the horizontal component, (c) verify using Pythagorean theorem.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis> F = 500 N, Fy = 300 N</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">(a) Finding angle θ:</emphasis></paragraph>
+                    <paragraph>sin θ = Fy/F = 300/500 = 0.6</paragraph>
+                    <paragraph>θ = sin⁻¹(0.6) = 36.87°</paragraph>
+                    <paragraph><emphasis type="bold">(b) Horizontal component:</emphasis></paragraph>
+                    <paragraph>Fx = F cos θ = 500 × cos(36.87°) = 500 × 0.8 = 400 N</paragraph>
+                    <paragraph><emphasis type="bold">(c) Verification:</emphasis></paragraph>
+                    <paragraph>F = √(Fx² + Fy²) = √(400² + 300²) = √(160,000 + 90,000) = √250,000 = 500 N ✓</paragraph>
+                </solution>
+            </problem>
+        </numerical_problems_content>
+    </section>
+
+</topic>
+<topic id="4.5" title="Determination of a Force from its Perpendicular Components ↗️">
+
+    <section type="CORE_DEFINITION" title="CORE DEFINITION">
+        <definition_content>
+            <paragraph><emphasis type="bold">Determination of Force from Components</emphasis> is the reverse process of vector resolution, where the magnitude and direction of a force are calculated when its perpendicular components are known.</paragraph>
+            <paragraph>The magnitude is found using the <emphasis type="bold">Pythagorean theorem</emphasis>: <formula type="physics">F = √(Fx² + Fy²)</formula></paragraph>
+            <paragraph>The direction is found using the <emphasis type="bold">inverse tangent function</emphasis>: <formula type="physics">θ = tan⁻¹(Fy/Fx)</formula></paragraph>
+            <paragraph>This process allows us to reconstruct the original vector from its rectangular components.</paragraph>
+            <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing components being combined to form resultant vector" -->
+        </definition_content>
+    </section>
+
+    <section type="EXPLANATION" title="EXPLANATION">
+        <explanation_content>
+            <paragraph>In many physics problems, we know the individual effects of a force in different directions (its components) but need to find the overall force itself. This is the reverse process of vector resolution - instead of breaking down a vector into parts, we're building it up from its parts.</paragraph>
+
+            <paragraph>Consider a right-angled triangle where the two perpendicular sides represent the force components Fx and Fy, and the hypotenuse represents the resultant force F. Using the fundamental geometric relationships, we can determine both the magnitude and direction of the resultant force.</paragraph>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Right triangle showing force components as sides and resultant as hypotenuse" -->
+
+            <paragraph>The mathematical foundation comes from the Pythagorean theorem applied to the right-angled triangle OAC:</paragraph>
+            <list type="unordered">
+                <item>(OC)² = (OA)² + (AC)²</item>
+                <item>F² = Fx² + Fy²</item>
+                <item>Therefore: F = √(Fx² + Fy²)</item>
+            </list>
+
+            <paragraph>For the direction, we use the tangent ratio from trigonometry. The angle θ that the resultant force makes with the x-axis is given by:</paragraph>
+            <paragraph>tan θ = (opposite side)/(adjacent side) = Fy/Fx</paragraph>
+            <paragraph>Therefore: θ = tan⁻¹(Fy/Fx)</paragraph>
+
+            <table id="4.5.table1">
+                <title>Steps for Determining Force from Components</title>
+                <table_data>
+                    <row header="true">
+                        <cell>Step</cell>
+                        <cell>Formula</cell>
+                        <cell>Purpose</cell>
+                        <cell>Units</cell>
+                    </row>
+                    <row>
+                        <cell>1. Find Magnitude</cell>
+                        <cell>F = √(Fx² + Fy²)</cell>
+                        <cell>Calculate overall force strength</cell>
+                        <cell>Same as components (N)</cell>
+                    </row>
+                    <row>
+                        <cell>2. Find Direction</cell>
+                        <cell>θ = tan⁻¹(Fy/Fx)</cell>
+                        <cell>Determine angle with x-axis</cell>
+                        <cell>Degrees (°) or radians</cell>
+                    </row>
+                    <row>
+                        <cell>3. Verify Result</cell>
+                        <cell>Check: Fx = F cos θ, Fy = F sin θ</cell>
+                        <cell>Confirm calculations</cell>
+                        <cell>Components should match</cell>
+                    </row>
+                </table_data>
+            </table>
+
+            <paragraph>This method is particularly useful in engineering and physics when analyzing complex force systems where individual effects are easier to measure or calculate than the overall resultant.</paragraph>
+
+            <paragraph>It's important to note that when using the inverse tangent function, we should be careful about the quadrant in which our angle lies, as tan⁻¹ only gives values between -90° and +90°. The signs of the components help determine the correct quadrant.</paragraph>
+            <!-- HIDDEN_TAG: graph_required, necessity_score=8, description="Coordinate system showing all four quadrants with component directions" -->
+        </explanation_content>
+    </section>
+
+    <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+        <key_concepts_content>
+            <concept id="4.5.kc1">
+                <title>Pythagorean Relationship</title>
+                <description>The magnitude of a resultant vector is always the square root of the sum of squares of its perpendicular components.</description>
+            </concept>
+            <concept id="4.5.kc2">
+                <title>Inverse Trigonometry</title>
+                <description>The inverse tangent function (tan⁻¹) is used to find the angle when the ratio of opposite to adjacent sides is known.</description>
+            </concept>
+            <concept id="4.5.kc3">
+                <title>Quadrant Consideration</title>
+                <description>The signs of the components determine which quadrant the resultant vector lies in, affecting the final angle measurement.</description>
+            </concept>
+            <concept id="4.5.kc4">
+                <title>Verification Process</title>
+                <description>Always verify results by checking that the calculated magnitude and direction produce the original components.</description>
+            </concept>
+            <concept id="4.5.kc5">
+                <title>Unique Reconstruction</title>
+                <description>Given two perpendicular components, there is only one possible resultant vector - the process has a unique solution.</description>
+            </concept>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Examples showing verification by reverse calculation" -->
+        </key_concepts_content>
+    </section>
+
+    <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+        <worked_examples_content>
+            <example id="4.5.ex1" level="basic">
+                <title>Finding Force from Simple Components</title>
+                <problem>
+                    <paragraph>A force has horizontal component Fx = 60 N and vertical component Fy = 80 N. Find the magnitude and direction of the resultant force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Fx = 60 N (horizontal component)</item>
+                        <item>Fy = 80 N (vertical component)</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Step 1: Find magnitude</emphasis></paragraph>
+                    <paragraph>F = √(Fx² + Fy²) = √(60² + 80²) = √(3600 + 6400) = √10000 = 100 N</paragraph>
+                    <paragraph><emphasis type="bold">Step 2: Find direction</emphasis></paragraph>
+                    <paragraph>tan θ = Fy/Fx = 80/60 = 1.333</paragraph>
+                    <paragraph>θ = tan⁻¹(1.333) = 53.1° above horizontal</paragraph>
+                    <paragraph><emphasis type="bold">Step 3: Verification</emphasis></paragraph>
+                    <paragraph>Check: Fx = 100 cos(53.1°) = 100 × 0.6 = 60 N ✓</paragraph>
+                    <paragraph>Check: Fy = 100 sin(53.1°) = 100 × 0.8 = 80 N ✓</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Vector diagram showing 60N and 80N components forming 100N resultant at 53.1°" -->
+            </example>
+
+            <example id="4.5.ex2" level="basic">
+                <title>Force with Equal Components</title>
+                <problem>
+                    <paragraph>A force has components Fx = 50 N and Fy = 50 N. Determine the magnitude and direction of the resultant force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Magnitude:</emphasis></paragraph>
+                    <paragraph>F = √(50² + 50²) = √(2500 + 2500) = √5000 = 70.7 N</paragraph>
+                    <paragraph><emphasis type="bold">Direction:</emphasis></paragraph>
+                    <paragraph>tan θ = 50/50 = 1</paragraph>
+                    <paragraph>θ = tan⁻¹(1) = 45° above horizontal</paragraph>
+                    <paragraph>This makes sense because equal components always produce a 45° resultant.</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.5.ex3" level="intermediate">
+                <title>Force in Different Quadrant</title>
+                <problem>
+                    <paragraph>A force has components Fx = -40 N and Fy = 30 N. Find the magnitude and direction of the resultant force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Fx = -40 N (negative x-direction)</item>
+                        <item>Fy = 30 N (positive y-direction)</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Magnitude:</emphasis></paragraph>
+                    <paragraph>F = √((-40)² + 30²) = √(1600 + 900) = √2500 = 50 N</paragraph>
+                    <paragraph><emphasis type="bold">Direction:</emphasis></paragraph>
+                    <paragraph>tan θ = 30/(-40) = -0.75</paragraph>
+                    <paragraph>θ = tan⁻¹(-0.75) = -36.9°</paragraph>
+                    <paragraph>Since Fx is negative and Fy is positive, the vector is in the second quadrant.</paragraph>
+                    <paragraph>Actual angle = 180° - 36.9° = 143.1° from positive x-axis</paragraph>
+                    <paragraph>Or we can say: 36.9° above the negative x-axis</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Vector in second quadrant showing negative x-component and positive y-component" -->
+            </example>
+
+            <example id="4.5.ex4" level="intermediate">
+                <title>Engineering Application</title>
+                <problem>
+                    <paragraph>A structural beam experiences forces with components: horizontal force = 150 N (rightward), vertical force = 200 N (downward). Calculate the resultant force on the beam.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Fx = +150 N (rightward)</item>
+                        <item>Fy = -200 N (downward, negative)</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Magnitude:</emphasis></paragraph>
+                    <paragraph>F = √(150² + (-200)²) = √(22500 + 40000) = √62500 = 250 N</paragraph>
+                    <paragraph><emphasis type="bold">Direction:</emphasis></paragraph>
+                    <paragraph>tan θ = (-200)/150 = -1.333</paragraph>
+                    <paragraph>θ = tan⁻¹(-1.333) = -53.1°</paragraph>
+                    <paragraph>The resultant force is 250 N at 53.1° below the horizontal (fourth quadrant).</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.5.ex5" level="advanced">
+                <title>Multiple Force System</title>
+                <problem>
+                    <paragraph>Three forces act on an object with the following components: Force 1: (30N, 40N), Force 2: (-20N, 10N), Force 3: (10N, -25N). Find the resultant force.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Step 1: Sum the components</emphasis></paragraph>
+                    <paragraph>ΣFx = 30 + (-20) + 10 = 20 N</paragraph>
+                    <paragraph>ΣFy = 40 + 10 + (-25) = 25 N</paragraph>
+                    <paragraph><emphasis type="bold">Step 2: Find resultant magnitude</emphasis></paragraph>
+                    <paragraph>F = √(20² + 25²) = √(400 + 625) = √1025 = 32.0 N</paragraph>
+                    <paragraph><emphasis type="bold">Step 3: Find direction</emphasis></paragraph>
+                    <paragraph>tan θ = 25/20 = 1.25</paragraph>
+                    <paragraph>θ = tan⁻¹(1.25) = 51.3° above horizontal</paragraph>
+                    <paragraph><emphasis type="bold">Result:</emphasis> The net force is 32.0 N at 51.3° above the horizontal.</paragraph>
+                </solution>
+            </example>
+        </worked_examples_content>
+    </section>
+
+    <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+        <applications_content>
+            <application id="4.5.app1">
+                <title>Structural Engineering</title>
+                <description>Engineers analyze building structures by determining resultant forces from individual load components. For example, wind loads create horizontal forces while building weight creates vertical forces. The resultant helps determine if structural supports can handle the combined loading.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Building structure showing wind and gravity forces combining into resultant" -->
+            </application>
+            <application id="4.5.app2">
+                <title>Navigation and GPS</title>
+                <description>GPS systems calculate your direction and speed by analyzing movement components in east-west and north-south directions. The resultant vector gives your actual direction of travel and ground speed, essential for accurate navigation.</description>
+            </application>
+            <application id="4.5.app3">
+                <title>Aircraft Flight Dynamics</title>
+                <description>Pilots must consider how wind components affect their aircraft. With headwind/tailwind components and crosswind components known, pilots calculate the resultant ground track and speed to plan accurate flight paths and fuel consumption.</description>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Aircraft flight path showing wind components and resultant ground track" -->
+            </application>
+            <application id="4.5.app4">
+                <title>Medical Biomechanics</title>
+                <description>Physical therapists analyze joint forces by measuring force components in different directions. This helps determine the total stress on joints during rehabilitation exercises and daily activities, guiding treatment plans.</description>
+            </application>
+            <application id="4.5.app5">
+                <title>Sports Performance</title>
+                <description>Sports scientists use force component analysis to optimize athletic performance. For example, in shot put, they measure horizontal and vertical force components during release to calculate the optimal resultant force angle for maximum distance.</description>
+            </application>
+            <application id="4.5.app6">
+                <title>Mechanical Design</title>
+                <description>Mechanical engineers design machines by analyzing forces in different directions. Knowing component forces on gears, bearings, and shafts allows them to calculate resultant forces and select appropriate materials and safety factors.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Mechanical system showing various force components and resultants" -->
+            </application>
+        </applications_content>
+    </section>
+
+    <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+        <numerical_problems_content>
+            <problem id="4.5.np1" level="basic">
+                <statement>A force has components Fx = 30 N and Fy = 40 N. Calculate the magnitude of the resultant force.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>F = √(Fx² + Fy²) = √(30² + 40²) = √(900 + 1600) = √2500 = 50 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.5.np2" level="basic">
+                <statement>A vector has components of 120 N horizontally and 160 N vertically. Find its direction.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>tan θ = Fy/Fx = 160/120 = 1.333</paragraph>
+                    <paragraph>θ = tan⁻¹(1.333) = 53.1° above horizontal</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.5.np3" level="intermediate">
+                <statement>A force has components Fx = -60 N and Fy = -80 N. Find the magnitude and direction of the resultant force.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Magnitude:</emphasis></paragraph>
+                    <paragraph>F = √((-60)² + (-80)²) = √(3600 + 6400) = √10000 = 100 N</paragraph>
+                    <paragraph><emphasis type="bold">Direction:</emphasis></paragraph>
+                    <paragraph>Both components are negative, so the vector is in the third quadrant.</paragraph>
+                    <paragraph>tan θ = (-80)/(-60) = 1.333</paragraph>
+                    <paragraph>Reference angle = tan⁻¹(1.333) = 53.1°</paragraph>
+                    <paragraph>Actual angle = 180° + 53.1° = 233.1° from positive x-axis</paragraph>
+                    <paragraph>Or: 53.1° below the negative x-axis</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.5.np4" level="intermediate">
+                <statement>Two perpendicular forces act on an object: 200 N eastward and 150 N northward. Calculate the resultant force's magnitude and direction (measured from east).</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis> Fx = 200 N (east), Fy = 150 N (north)</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Magnitude:</emphasis></paragraph>
+                    <paragraph>F = √(200² + 150²) = √(40000 + 22500) = √62500 = 250 N</paragraph>
+                    <paragraph><emphasis type="bold">Direction:</emphasis></paragraph>
+                    <paragraph>θ = tan⁻¹(150/200) = tan⁻¹(0.75) = 36.9° north of east</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.5.np5" level="advanced">
+                <statement>A force F has a magnitude of 500 N. Its x-component is 300 N. Find: (a) the y-component, (b) the angle the force makes with the x-axis, (c) verify your answers.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis> F = 500 N, Fx = 300 N</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">(a) Finding y-component:</emphasis></paragraph>
+                    <paragraph>F² = Fx² + Fy²</paragraph>
+                    <paragraph>500² = 300² + Fy²</paragraph>
+                    <paragraph>250000 = 90000 + Fy²</paragraph>
+                    <paragraph>Fy² = 160000</paragraph>
+                    <paragraph>Fy = ±400 N (could be positive or negative)</paragraph>
+                    <paragraph><emphasis type="bold">(b) Finding angle (assuming positive Fy):</emphasis></paragraph>
+                    <paragraph>tan θ = 400/300 = 1.333</paragraph>
+                    <paragraph>θ = tan⁻¹(1.333) = 53.1° above horizontal</paragraph>
+                    <paragraph><emphasis type="bold">(c) Verification:</emphasis></paragraph>
+                    <paragraph>Check magnitude: √(300² + 400²) = √250000 = 500 N ✓</paragraph>
+                    <paragraph>Check components: Fx = 500 cos(53.1°) = 500 × 0.6 = 300 N ✓</paragraph>
+                    <paragraph>Fy = 500 sin(53.1°) = 500 × 0.8 = 400 N ✓</paragraph>
+                </solution>
+            </problem>
+        </numerical_problems_content>
+    </section>
+
+</topic>
+<topic id="4.6" title="Principle of Moments ⚖️">
+
+    <section type="CORE_DEFINITION" title="CORE DEFINITION">
+        <definition_content>
+            <paragraph>The <emphasis type="bold">Principle of Moments</emphasis> states that when a body is in balanced position, the sum of clockwise moments about any point equals the sum of anticlockwise moments about that point.</paragraph>
+            <paragraph>Mathematically: <formula type="physics">Σ Clockwise moments = Σ Anticlockwise moments</formula></paragraph>
+            <paragraph>For equilibrium: <formula type="physics">w₁ × d₁ + w₂ × d₂ = w₃ × d₃</formula> (for forces on opposite sides of pivot)</paragraph>
+            <paragraph>This principle is fundamental for understanding balance and equilibrium in mechanical systems.</paragraph>
+            <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing balanced meter rule with weights demonstrating principle of moments" -->
+        </definition_content>
+    </section>
+
+    <section type="EXPLANATION" title="EXPLANATION">
+        <explanation_content>
+            <paragraph>The principle of moments is a fundamental concept that explains how objects remain in rotational equilibrium. It builds upon our understanding of torque and moment of force, providing a practical rule for analyzing balanced systems.</paragraph>
+
+            <paragraph>To understand this principle, consider Activity 4.2: Balance a meter rule on a wedge at its center of gravity so that the rule stays horizontal. Suspend two weights w₁ and w₂ on one side of the meter rule at distances d₁ and d₂ from the center, and a third weight w₃ on the other side at distance d₃ until the rule is again balanced.</paragraph>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Detailed diagram of meter rule balanced on wedge with three weights at different distances" -->
+
+            <paragraph>In this balanced configuration:</paragraph>
+            <list type="unordered">
+                <item>Weights w₁ and w₂ tend to rotate the rod anticlockwise about the center of gravity</item>
+                <item>Weight w₃ tends to rotate it clockwise</item>
+                <item>The moments are: w₁ × d₁, w₂ × d₂, and w₃ × d₃</item>
+            </list>
+
+            <paragraph>When the meter rule is balanced, the total anticlockwise moments equal the total clockwise moments: w₁ × d₁ + w₂ × d₂ = w₃ × d₃</paragraph>
+
+            <table id="4.6.table1">
+                <title>Applications of Principle of Moments</title>
+                <table_data>
+                    <row header="true">
+                        <cell>System</cell>
+                        <cell>Pivot Point</cell>
+                        <cell>Forces/Weights</cell>
+                        <cell>Application</cell>
+                    </row>
+                    <row>
+                        <cell>Seesaw</cell>
+                        <cell>Center support</cell>
+                        <cell>Children's weights</cell>
+                        <cell>Balancing different masses</cell>
+                    </row>
+                    <row>
+                        <cell>Physical Balance</cell>
+                        <cell>Center fulcrum</cell>
+                        <cell>Object and standard weights</cell>
+                        <cell>Measuring mass accurately</cell>
+                    </row>
+                    <row>
+                        <cell>Lever</cell>
+                        <cell>Fulcrum position</cell>
+                        <cell>Applied force and load</cell>
+                        <cell>Mechanical advantage</cell>
+                    </row>
+                    <row>
+                        <cell>Beam Structure</cell>
+                        <cell>Support points</cell>
+                        <cell>Distributed loads</cell>
+                        <cell>Structural stability</cell>
+                    </row>
+                    <row>
+                        <cell>Wrench/Spanner</cell>
+                        <cell>Bolt center</cell>
+                        <cell>Applied forces</cell>
+                        <cell>Torque calculation</cell>
+                    </row>
+                </table_data>
+            </table>
+
+            <paragraph>The principle of moments is particularly powerful because it provides a simple method to solve complex equilibrium problems without needing to know all the forces involved. As long as we can identify the pivot point and the moments acting about it, we can determine unknown forces or distances.</paragraph>
+
+            <paragraph>This principle is the foundation for many mechanical devices and measuring instruments. The physical balance used in laboratories operates on this principle, allowing us to measure mass by comparing unknown objects with standard weights.</paragraph>
+
+            <paragraph>It's important to note that the principle applies to any point chosen as the reference, not just the center of gravity. However, choosing the center of gravity or a support point often simplifies calculations by eliminating some unknown forces from the equation.</paragraph>
+            <!-- HIDDEN_TAG: graph_required, necessity_score=8, description="Free body diagram showing forces and distances from pivot point" -->
+        </explanation_content>
+    </section>
+
+    <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+        <key_concepts_content>
+            <concept id="4.6.kc1">
+                <title>Rotational Equilibrium</title>
+                <description>An object is in rotational equilibrium when the net torque about any point is zero, meaning clockwise and anticlockwise moments balance.</description>
+            </concept>
+            <concept id="4.6.kc2">
+                <title>Reference Point Independence</title>
+                <description>The principle of moments applies about any chosen point, though strategic choice of reference point can simplify calculations.</description>
+            </concept>
+            <concept id="4.6.kc3">
+                <title>Sign Convention</title>
+                <description>Consistent sign convention is crucial - typically clockwise moments are negative and anticlockwise moments are positive (or vice versa).</description>
+            </concept>
+            <concept id="4.6.kc4">
+                <title>Mechanical Advantage</title>
+                <description>The principle explains how levers and other simple machines provide mechanical advantage by utilizing different moment arms.</description>
+            </concept>
+            <concept id="4.6.kc5">
+                <title>Static Equilibrium</title>
+                <description>For complete static equilibrium, both force balance (ΣF = 0) and moment balance (Στ = 0) must be satisfied.</description>
+            </concept>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Examples of lever systems showing mechanical advantage" -->
+        </key_concepts_content>
+    </section>
+
+    <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+        <worked_examples_content>
+            <example id="4.6.ex1" level="intermediate">
+                <title>Meter Stick Equilibrium Problem</title>
+                <problem>
+                    <paragraph>A meter stick is pinned at one end O on a table so that it can rotate freely. One force of magnitude 18 N is applied perpendicular to the length of the stick at its free end. Another force of magnitude 60 N is acting at an angle of 30° with the stick. At what distance from the pinned end should the second force act so that the stick does not rotate?</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Force 1: F₁ = 18 N (perpendicular, at free end = 1.0 m from O)</item>
+                        <item>Force 2: F₂ = 60 N at 30° with stick</item>
+                        <item>Distance of F₂ from O: d = ?</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Step 1: Resolve the 60 N force</emphasis></paragraph>
+                    <paragraph>Fx = 60 cos(30°) = 60 × 0.866 = 51.96 N (parallel to stick)</paragraph>
+                    <paragraph>Fy = 60 sin(30°) = 60 × 0.5 = 30 N (perpendicular to stick)</paragraph>
+                    <paragraph><emphasis type="bold">Step 2: Identify effective forces</emphasis></paragraph>
+                    <paragraph>Since Fx passes through the axis of rotation, its torque is zero.</paragraph>
+                    <paragraph>Only Fy = 30 N creates a moment about O.</paragraph>
+                    <paragraph><emphasis type="bold">Step 3: Apply principle of moments</emphasis></paragraph>
+                    <paragraph>For equilibrium: Clockwise moment = Anticlockwise moment</paragraph>
+                    <paragraph>30 N × d = 18 N × 1.0 m</paragraph>
+                    <paragraph>d = (18 × 1.0)/30 = 0.6 m</paragraph>
+                    <paragraph>The 60 N force should be applied 0.6 m from the pinned end.</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Meter stick with forces showing component resolution and moment arms" -->
+            </example>
+
+            <example id="4.6.ex2" level="basic">
+                <title>Balanced Weights on Meter Rule</title>
+                <problem>
+                    <paragraph>Two weights are hanging from a meter rule at positions shown: an unknown weight w at 40 cm from the center, and a 4 N weight at 30 cm on the opposite side from the center. If the rule is balanced at its center of gravity, find the unknown weight w.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Weight 1: w (unknown) at distance d₁ = 40 cm from center</item>
+                        <item>Weight 2: 4 N at distance d₂ = 30 cm from center (opposite side)</item>
+                        <item>System is balanced</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Using principle of moments about the center:</paragraph>
+                    <paragraph>Clockwise moment = Anticlockwise moment</paragraph>
+                    <paragraph>w × 40 cm = 4 N × 30 cm</paragraph>
+                    <paragraph>w × 40 = 120</paragraph>
+                    <paragraph>w = 120/40 = 3 N</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.6.ex3" level="intermediate">
+                <title>Seesaw Balance Problem</title>
+                <problem>
+                    <paragraph>A seesaw is balanced with two children sitting near either end. Child A weighs 30 kg and sits 2 meters away from the pivot, while child B weighs 40 kg and sits 1.5 meters from the pivot. Calculate the total moment on each side and determine if the seesaw is in equilibrium.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Child A: mass = 30 kg, distance = 2 m</item>
+                        <item>Child B: mass = 40 kg, distance = 1.5 m</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>First, convert masses to weights (assuming g = 10 m/s²):</paragraph>
+                    <paragraph>Weight A = 30 kg × 10 m/s² = 300 N</paragraph>
+                    <paragraph>Weight B = 40 kg × 10 m/s² = 400 N</paragraph>
+                    <paragraph><emphasis type="bold">Calculate moments:</emphasis></paragraph>
+                    <paragraph>Moment by child A = 300 N × 2 m = 600 N⋅m</paragraph>
+                    <paragraph>Moment by child B = 400 N × 1.5 m = 600 N⋅m</paragraph>
+                    <paragraph><emphasis type="bold">Conclusion:</emphasis> Since both moments are equal (600 N⋅m), the seesaw is in equilibrium.</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.6.ex4" level="advanced">
+                <title>Crowbar Leverage Problem</title>
+                <problem>
+                    <paragraph>A crowbar is used to lift a box. If a downward force of 250 N is applied at the end of the bar (30 cm from fulcrum), how much weight can the other end bear? The fulcrum is 5 cm from the load end, and the crowbar itself has negligible weight.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Applied force: F = 250 N at distance d₁ = 30 cm from fulcrum</item>
+                        <item>Load distance from fulcrum: d₂ = 5 cm</item>
+                        <item>Load weight: W = ?</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Using principle of moments about the fulcrum:</paragraph>
+                    <paragraph>Clockwise moment = Anticlockwise moment</paragraph>
+                    <paragraph>F × d₁ = W × d₂</paragraph>
+                    <paragraph>250 N × 30 cm = W × 5 cm</paragraph>
+                    <paragraph>7500 = W × 5</paragraph>
+                    <paragraph>W = 7500/5 = 1500 N</paragraph>
+                    <paragraph>The crowbar can lift a weight of 1500 N (or about 150 kg mass).</paragraph>
+                    <paragraph><emphasis type="bold">Mechanical Advantage:</emphasis> 30 cm ÷ 5 cm = 6:1</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Crowbar diagram showing fulcrum, applied force, and load with distances" -->
+            </example>
+
+            <example id="4.6.ex5" level="advanced">
+                <title>Multiple Forces on Beam</title>
+                <problem>
+                    <paragraph>A 4-meter horizontal beam is supported at its center. Three forces act on it: 100 N downward at 1 m from the left end, 150 N downward at 3 m from the left end, and an upward force F at the right end. Find F for equilibrium.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Beam length: 4 m, supported at center (2 m from each end)</item>
+                        <item>Force 1: 100 N downward at 1 m from left (1 m from center)</item>
+                        <item>Force 2: 150 N downward at 3 m from left (1 m from center, right side)</item>
+                        <item>Force 3: F upward at right end (2 m from center)</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution using moments about center:</emphasis></paragraph>
+                    <paragraph>Taking anticlockwise as positive:</paragraph>
+                    <paragraph>Moment by 100 N: -100 N × 1 m = -100 N⋅m (clockwise)</paragraph>
+                    <paragraph>Moment by 150 N: +150 N × 1 m = +150 N⋅m (anticlockwise)</paragraph>
+                    <paragraph>Moment by F: +F × 2 m = +2F N⋅m (anticlockwise)</paragraph>
+                    <paragraph><emphasis type="bold">For equilibrium:</emphasis></paragraph>
+                    <paragraph>Sum of moments = 0</paragraph>
+                    <paragraph>-100 + 150 + 2F = 0</paragraph>
+                    <paragraph>50 + 2F = 0</paragraph>
+                    <paragraph>F = -25 N</paragraph>
+                    <paragraph>The negative sign indicates F should be 25 N downward, not upward as assumed.</paragraph>
+                </solution>
+            </example>
+        </worked_examples_content>
+    </section>
+
+    <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+        <applications_content>
+            <application id="4.6.app1">
+                <title>Laboratory Balances</title>
+                <description>Physical balances in chemistry and physics laboratories use the principle of moments to measure mass accurately. By comparing unknown masses with standard weights on opposite sides of a fulcrum, scientists can determine precise measurements without electronic sensors.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Laboratory balance showing principle of moments in action" -->
+            </application>
+            <application id="4.6.app2">
+                <title>Construction and Engineering</title>
+                <description>Engineers use the principle of moments to design stable structures. When analyzing beams, bridges, and building frameworks, they ensure that moments about support points are balanced to prevent rotation and structural failure.</description>
+            </application>
+            <application id="4.6.app3">
+                <title>Playground Equipment</title>
+                <description>Seesaws in playgrounds are practical demonstrations of the principle of moments. Children of different weights can balance by adjusting their positions, with lighter children sitting farther from the pivot to create equal moments.</description>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Playground seesaw showing children balancing at different distances" -->
+            </application>
+            <application id="4.6.app4">
+                <title>Tools and Machinery</title>
+                <description>Many hand tools like crowbars, wrenches, and pliers apply the principle of moments to provide mechanical advantage. The longer the handle relative to the load distance, the greater the mechanical advantage and the easier the task becomes.</description>
+            </application>
+            <application id="4.6.app5">
+                <title>Vehicle Design</title>
+                <description>Automotive engineers consider the principle of moments when designing vehicle stability. The distribution of weight (engine, passengers, cargo) affects the vehicle's center of gravity and its tendency to tip over during turns or on slopes.</description>
+            </application>
+            <application id="4.6.app6">
+                <title>Medical Equipment</title>
+                <description>Medical devices like examination tables and surgical equipment often use balanced arm systems based on the principle of moments. This allows heavy equipment to be easily positioned and held in place with minimal force from medical staff.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Medical equipment showing balanced arm mechanism" -->
+            </application>
+        </applications_content>
+    </section>
+
+    <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+        <numerical_problems_content>
+            <problem id="4.6.np1" level="basic">
+                <statement>A meter rule is balanced with a 5 N weight at 20 cm from the fulcrum. What weight is needed at 25 cm on the opposite side to maintain balance?</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Using principle of moments:</paragraph>
+                    <paragraph>5 N × 20 cm = W × 25 cm</paragraph>
+                    <paragraph>100 = W × 25</paragraph>
+                    <paragraph>W = 100/25 = 4 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.6.np2" level="basic">
+                <statement>A seesaw has children of 25 kg and 35 kg. If the lighter child sits 3 m from the pivot, where should the heavier child sit for balance?</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Using weights: 25 kg gives 250 N, 35 kg gives 350 N</paragraph>
+                    <paragraph>250 N × 3 m = 350 N × d</paragraph>
+                    <paragraph>750 = 350d</paragraph>
+                    <paragraph>d = 750/350 = 2.14 m</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.6.np3" level="intermediate">
+                <statement>A 30 cm spanner is used to open a car nut. If the required torque is 150 N⋅m, how much force should be applied at the end of the spanner?</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis> Length = 30 cm = 0.3 m, Required torque = 150 N⋅m</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Torque = Force × Distance</paragraph>
+                    <paragraph>150 N⋅m = F × 0.3 m</paragraph>
+                    <paragraph>F = 150/0.3 = 500 N</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.6.np4" level="intermediate">
+                <statement>A uniform beam of length 4 m and weight 200 N is supported at its center. A load of 300 N is placed 1 m from the left end. What upward force is needed at the right end to maintain equilibrium?</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <paragraph>Beam: 4 m long, 200 N weight at center (2 m from each end)</paragraph>
+                    <paragraph>Load: 300 N at 1 m from left end (1 m from center)</paragraph>
+                    <paragraph><emphasis type="bold">Solution (moments about center):</emphasis></paragraph>
+                    <paragraph>Clockwise moments: 300 N × 1 m = 300 N⋅m</paragraph>
+                    <paragraph>Anticlockwise moments: F × 2 m</paragraph>
+                    <paragraph>For equilibrium: F × 2 = 300</paragraph>
+                    <paragraph>F = 150 N upward at right end</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.6.np5" level="advanced">
+                <statement>A girl of 30 kg sits 1.6 m from the axis of a seesaw. Another girl of 40 kg wants to sit on the other side so that the seesaw remains in equilibrium. How far from the axis should the second girl sit? If a third child of 20 kg joins the first girl, where should the second girl move to maintain balance?</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Part 1 - Two girls:</emphasis></paragraph>
+                    <paragraph>Girl 1: 30 kg (300 N) at 1.6 m</paragraph>
+                    <paragraph>Girl 2: 40 kg (400 N) at distance d</paragraph>
+                    <paragraph>300 N × 1.6 m = 400 N × d</paragraph>
+                    <paragraph>480 = 400d</paragraph>
+                    <paragraph>d = 1.2 m</paragraph>
+                    <paragraph><emphasis type="bold">Part 2 - Three children:</emphasis></paragraph>
+                    <paragraph>Side 1: (300 N + 200 N) × 1.6 m = 500 N × 1.6 m = 800 N⋅m</paragraph>
+                    <paragraph>Side 2: 400 N × d = 800 N⋅m</paragraph>
+                    <paragraph>d = 800/400 = 2.0 m</paragraph>
+                    <paragraph>The second girl should move to 2.0 m from the axis.</paragraph>
+                </solution>
+            </problem>
+        </numerical_problems_content>
+    </section>
+
+</topic>
+<topic id="4.7" title="Centre of Gravity and Centre of Mass 🎯">
+
+    <section type="CORE_DEFINITION" title="CORE DEFINITION">
+        <definition_content>
+            <paragraph><emphasis type="bold">Centre of Gravity</emphasis> is that point where the total weight of the body appears to be acting. It is the point where the entire gravitational force on an object can be considered to act.</paragraph>
+            <paragraph><emphasis type="bold">Centre of Mass</emphasis> is that point where the whole mass of the body is assumed to be concentrated. It behaves as if all the mass of the body or system is lying at that point.</paragraph>
+            <paragraph>On the surface of the Earth, where g is almost uniform, the centre of mass of an object coincides with its centre of gravity.</paragraph>
+            <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing gravitational forces on particles combining at center of gravity" -->
+        </definition_content>
+    </section>
+
+    <section type="EXPLANATION" title="EXPLANATION">
+        <explanation_content>
+            <paragraph>Every object is composed of a large number of small particles. Each particle experiences gravitational force directed towards the center of the Earth. Since objects are small compared to Earth, the value of g can be taken as uniform over all particles, meaning each particle experiences the same gravitational acceleration.</paragraph>
+
+            <paragraph>Since all these gravitational forces are parallel and act in the same direction, their resultant equals the sum of all individual forces. This total gravitational force is equal to the total weight of the object: w = Mg, where M is the total mass of the object.</paragraph>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Object showing individual gravitational forces on particles and their resultant" -->
+
+            <paragraph>If a body is supported at its center of gravity, it stays there without rotation. This is because the gravitational force acts through this point, creating no net torque about the support point.</paragraph>
+
+            <table id="4.7.table1">
+                <title>Centre of Gravity for Regular Shapes</title>
+                <table_data>
+                    <row header="true">
+                        <cell>Object</cell>
+                        <cell>Centre of Gravity Location</cell>
+                        <cell>Description</cell>
+                    </row>
+                    <row>
+                        <cell>Square, Rectangle</cell>
+                        <cell>Point of intersection of diagonals</cell>
+                        <cell>Geometric center</cell>
+                    </row>
+                    <row>
+                        <cell>Triangle</cell>
+                        <cell>Point of intersection of medians</cell>
+                        <cell>Centroid of triangle</cell>
+                    </row>
+                    <row>
+                        <cell>Round plate</cell>
+                        <cell>Centre of the plate</cell>
+                        <cell>Geometric center</cell>
+                    </row>
+                    <row>
+                        <cell>Sphere</cell>
+                        <cell>Centre of the sphere</cell>
+                        <cell>Geometric center</cell>
+                    </row>
+                    <row>
+                        <cell>Cylinder</cell>
+                        <cell>Centre of the axis</cell>
+                        <cell>Midpoint of central axis</cell>
+                    </row>
+                    <row>
+                        <cell>Meter rule</cell>
+                        <cell>Centre of the rod</cell>
+                        <cell>Midpoint of length</cell>
+                    </row>
+                </table_data>
+            </table>
+
+            <paragraph><emphasis type="bold">Centre of Gravity of Irregular Plane Lamina:</emphasis></paragraph>
+            <paragraph>For irregular shaped objects, the center of gravity can be found experimentally by suspending the object freely through different points. Each time the object is suspended, its center of gravity lies on the vertical line drawn from the point of suspension with the help of a plumb line.</paragraph>
+
+            <paragraph>The exact position of the center of gravity is at the point where two such vertical lines cross each other. This method works because when suspended, the object will always orient itself so that its center of gravity is directly below the suspension point.</paragraph>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Irregular lamina suspended at different points showing plumb lines intersecting at center of gravity" -->
+
+            <paragraph><emphasis type="bold">Centre of Mass vs Centre of Gravity:</emphasis></paragraph>
+            <paragraph>While often used interchangeably, center of mass and center of gravity are conceptually different. Center of mass is a purely geometric property based on mass distribution, while center of gravity depends on the gravitational field. However, in uniform gravitational fields (like near Earth's surface), these two points coincide.</paragraph>
+
+            <paragraph>The center of mass is particularly important in analyzing motion. For example, when a rotating wrench slides along a frictionless floor with no resultant force, its center of mass follows a linear path with constant speed, even though the wrench itself is rotating.</paragraph>
+            <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Rotating wrench sliding with center of mass following straight path" -->
+        </explanation_content>
+    </section>
+
+    <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+        <key_concepts_content>
+            <concept id="4.7.kc1">
+                <title>Gravitational Force Distribution</title>
+                <description>Every particle of an object experiences gravitational force, and the center of gravity represents the single point where this distributed force can be considered to act.</description>
+            </concept>
+            <concept id="4.7.kc2">
+                <title>Uniform Gravitational Field</title>
+                <description>Near Earth's surface, gravitational field strength g is approximately constant, making center of mass and center of gravity coincide.</description>
+            </concept>
+            <concept id="4.7.kc3">
+                <title>Balance Point</title>
+                <description>An object balanced at its center of gravity will remain in equilibrium without rotation because there is no net torque about this point.</description>
+            </concept>
+            <concept id="4.7.kc4">
+                <title>Experimental Determination</title>
+                <description>For irregular objects, center of gravity can be found using the plumb line method by suspending the object from different points.</description>
+            </concept>
+            <concept id="4.7.kc5">
+                <title>External vs Internal Location</title>
+                <description>The center of gravity can exist inside the body (solid objects) or outside the body (hollow objects like cups or rings).</description>
+            </concept>
+            <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Examples showing center of gravity inside and outside objects" -->
+        </key_concepts_content>
+    </section>
+
+    <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+        <worked_examples_content>
+            <example id="4.7.ex1" level="basic">
+                <title>Center of Gravity of Regular Shapes</title>
+                <problem>
+                    <paragraph>Determine the center of gravity for: (a) a rectangular cardboard of dimensions 20 cm × 30 cm, (b) a circular plate of radius 15 cm, (c) a triangular piece with vertices at (0,0), (6,0), and (3,4) cm.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">(a) Rectangular cardboard:</emphasis></paragraph>
+                    <paragraph>Center of gravity = intersection of diagonals</paragraph>
+                    <paragraph>Location: (10 cm, 15 cm) from any corner</paragraph>
+                    <paragraph><emphasis type="bold">(b) Circular plate:</emphasis></paragraph>
+                    <paragraph>Center of gravity = center of the circle</paragraph>
+                    <paragraph>Location: at the geometric center</paragraph>
+                    <paragraph><emphasis type="bold">(c) Triangle:</emphasis></paragraph>
+                    <paragraph>Center of gravity = intersection of medians (centroid)</paragraph>
+                    <paragraph>Location: ((0+6+3)/3, (0+0+4)/3) = (3 cm, 1.33 cm)</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Regular shapes showing center of gravity locations" -->
+            </example>
+
+            <example id="4.7.ex2" level="intermediate">
+                <title>Experimental Method for Irregular Shape</title>
+                <problem>
+                    <paragraph>Describe the complete procedure to find the center of gravity of an irregular cardboard shape using the plumb line method.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Procedure:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Step 1:</emphasis> Make a small hole near the edge of the cardboard and suspend it freely from a nail or pin.</paragraph>
+                    <paragraph><emphasis type="bold">Step 2:</emphasis> Allow the cardboard to come to rest. Attach a plumb line (string with weight) from the same suspension point.</paragraph>
+                    <paragraph><emphasis type="bold">Step 3:</emphasis> Mark the vertical line indicated by the plumb line on the cardboard.</paragraph>
+                    <paragraph><emphasis type="bold">Step 4:</emphasis> Repeat steps 1-3 by suspending the cardboard from a different point.</paragraph>
+                    <paragraph><emphasis type="bold">Step 5:</emphasis> The intersection of the two vertical lines marks the center of gravity.</paragraph>
+                    <paragraph><emphasis type="bold">Verification:</emphasis> Suspend the cardboard from the center of gravity - it should balance in any orientation.</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.7.ex3" level="intermediate">
+                <title>Center of Mass of System</title>
+                <problem>
+                    <paragraph>Two objects of masses 3 kg and 7 kg are placed 2 m apart. Find the center of mass of the system.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <list type="unordered">
+                        <item>Mass 1: m₁ = 3 kg at position x₁ = 0 m</item>
+                        <item>Mass 2: m₂ = 7 kg at position x₂ = 2 m</item>
+                    </list>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Center of mass formula: x_cm = (m₁x₁ + m₂x₂)/(m₁ + m₂)</paragraph>
+                    <paragraph>x_cm = (3 kg × 0 m + 7 kg × 2 m)/(3 kg + 7 kg)</paragraph>
+                    <paragraph>x_cm = (0 + 14)/(10) = 1.4 m</paragraph>
+                    <paragraph>The center of mass is located 1.4 m from the 3 kg mass (or 0.6 m from the 7 kg mass).</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Two masses on line showing center of mass location" -->
+            </example>
+
+            <example id="4.7.ex4" level="advanced">
+                <title>Center of Mass of L-shaped Object</title>
+                <problem>
+                    <paragraph>An L-shaped uniform metal piece is made by joining two rectangular pieces: one horizontal piece (40 cm × 10 cm) and one vertical piece (10 cm × 30 cm). Find the center of gravity if the pieces have uniform density.</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Setting up coordinates:</emphasis></paragraph>
+                    <paragraph>Place origin at bottom-left corner of horizontal piece.</paragraph>
+                    <paragraph><emphasis type="bold">Individual centers of gravity:</emphasis></paragraph>
+                    <paragraph>Horizontal piece: Center at (20 cm, 5 cm)</paragraph>
+                    <paragraph>Area₁ = 40 × 10 = 400 cm²</paragraph>
+                    <paragraph>Vertical piece: Center at (5 cm, 25 cm)</paragraph>
+                    <paragraph>Area₂ = 10 × 30 = 300 cm²</paragraph>
+                    <paragraph><emphasis type="bold">Combined center of gravity:</emphasis></paragraph>
+                    <paragraph>x_cg = (A₁x₁ + A₂x₂)/(A₁ + A₂) = (400×20 + 300×5)/(700) = 13.6 cm</paragraph>
+                    <paragraph>y_cg = (A₁y₁ + A₂y₂)/(A₁ + A₂) = (400×5 + 300×25)/(700) = 13.6 cm</paragraph>
+                    <paragraph>Center of gravity is at (13.6 cm, 13.6 cm) from the origin.</paragraph>
+                </solution>
+            </example>
+
+            <example id="4.7.ex5" level="advanced">
+                <title>Center of Gravity Outside the Object</title>
+                <problem>
+                    <paragraph>A circular ring of inner radius 8 cm and outer radius 12 cm has a uniform density. Where is its center of gravity located?</paragraph>
+                </problem>
+                <solution>
+                    <paragraph><emphasis type="bold">Analysis:</emphasis></paragraph>
+                    <paragraph>For a uniform circular ring (or any symmetric hollow object), the center of gravity lies at the geometric center due to symmetry.</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>The center of gravity is at the center of the ring, which is in the hollow space (outside the material of the ring).</paragraph>
+                    <paragraph>Location: At the geometric center of the circles</paragraph>
+                    <paragraph><emphasis type="bold">Physical meaning:</emphasis> This demonstrates that center of gravity can exist outside the physical material of an object, in regions where there is no mass.</paragraph>
+                    <paragraph><emphasis type="bold">Other examples:</emphasis> Hollow cylinders, cups, bowls, and horseshoes all have centers of gravity outside their material.</paragraph>
+                </solution>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Ring and other hollow objects showing center of gravity outside material" -->
+            </example>
+        </worked_examples_content>
+    </section>
+
+    <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+        <applications_content>
+            <application id="4.7.app1">
+                <title>Vehicle Design and Safety</title>
+                <description>Automotive engineers carefully design vehicles to have a low center of gravity, which improves stability and reduces rollover risk. Sports cars have lower centers of gravity than SUVs, making them more stable during high-speed turns. The distribution of components like engine, battery, and fuel tank affects the vehicle's center of gravity.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Cross-section of car showing center of gravity and stability comparison with SUV" -->
+            </application>
+            <application id="4.7.app2">
+                <title>Ship and Aircraft Design</title>
+                <description>Naval architects design ships with centers of gravity below the waterline to ensure stability. Aircraft designers position heavy components to achieve proper center of gravity for flight balance. Loading cargo and passengers affects the center of gravity, which pilots must consider for safe takeoff and landing.</description>
+            </application>
+            <application id="4.7.app3">
+                <title>Sports and Athletics</title>
+                <description>Athletes manipulate their center of gravity for better performance. High jumpers arch their backs to keep their center of gravity below the bar while their body clears it. Dancers and gymnasts control their center of gravity for balance and graceful movements. Martial artists use opponent's center of gravity for throws and takedowns.</description>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="High jumper clearing bar with center of gravity path shown" -->
+            </application>
+            <application id="4.7.app4">
+                <title>Construction and Architecture</title>
+                <description>Engineers ensure buildings have stable centers of gravity to resist wind loads and seismic forces. Tall structures like skyscrapers require careful weight distribution. Tower cranes are designed with counterweights to maintain stable center of gravity while lifting heavy loads at various distances.</description>
+            </application>
+            <application id="4.7.app5">
+                <title>Robotics and Prosthetics</title>
+                <description>Robot designers program walking robots to maintain their center of gravity within their support base for stable locomotion. Prosthetic limb design considers how added weight affects the user's overall center of gravity and balance. Bipedal robots continuously adjust their center of gravity to avoid falling.</description>
+            </application>
+            <application id="4.7.app6">
+                <title>Furniture and Product Design</title>
+                <description>Furniture designers ensure chairs, tables, and cabinets have stable centers of gravity to prevent tipping. Tall, narrow furniture often has wide bases or low centers of gravity. Office chairs have weighted bases, and reclining chairs have extended footrests to maintain stability when occupied.</description>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Various furniture showing center of gravity and stability design features" -->
+            </application>
+        </applications_content>
+    </section>
+
+    <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+        <numerical_problems_content>
+            <problem id="4.7.np1" level="basic">
+                <statement>Find the center of gravity of a uniform rectangular board measuring 60 cm by 40 cm.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>For a rectangle, center of gravity is at the intersection of diagonals.</paragraph>
+                    <paragraph>Center of gravity: (30 cm, 20 cm) from any corner</paragraph>
+                    <paragraph>Or at the geometric center of the rectangle.</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.7.np2" level="basic">
+                <statement>Two masses of 4 kg and 6 kg are placed 3 m apart on a line. Find the center of mass of the system.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Let 4 kg mass be at x = 0, and 6 kg mass at x = 3 m</paragraph>
+                    <paragraph>Center of mass: x_cm = (m₁x₁ + m₂x₂)/(m₁ + m₂)</paragraph>
+                    <paragraph>x_cm = (4×0 + 6×3)/(4+6) = 18/10 = 1.8 m</paragraph>
+                    <paragraph>Center of mass is 1.8 m from the 4 kg mass.</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.7.np3" level="intermediate">
+                <statement>A uniform T-shaped object is made from two identical rectangular pieces, each 20 cm × 5 cm. One piece is horizontal, the other is vertical and attached at the center of the horizontal piece. Find the center of gravity.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Set origin at left end of horizontal piece.</paragraph>
+                    <paragraph><emphasis type="bold">Piece 1 (horizontal):</emphasis> Center at (10 cm, 2.5 cm), Area = 100 cm²</paragraph>
+                    <paragraph><emphasis type="bold">Piece 2 (vertical):</emphasis> Center at (10 cm, 12.5 cm), Area = 100 cm²</paragraph>
+                    <paragraph>x_cg = (100×10 + 100×10)/(100+100) = 10 cm</paragraph>
+                    <paragraph>y_cg = (100×2.5 + 100×12.5)/(100+100) = 7.5 cm</paragraph>
+                    <paragraph>Center of gravity at (10 cm, 7.5 cm) from origin.</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.7.np4" level="intermediate">
+                <statement>Three objects with masses 2 kg, 5 kg, and 3 kg are located at positions (1,2), (4,1), and (2,5) meters respectively. Find the center of mass coordinates.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                    <paragraph>m₁ = 2 kg at (1,2), m₂ = 5 kg at (4,1), m₃ = 3 kg at (2,5)</paragraph>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph>Total mass = 2 + 5 + 3 = 10 kg</paragraph>
+                    <paragraph>x_cm = (2×1 + 5×4 + 3×2)/10 = (2+20+6)/10 = 2.8 m</paragraph>
+                    <paragraph>y_cm = (2×2 + 5×1 + 3×5)/10 = (4+5+15)/10 = 2.4 m</paragraph>
+                    <paragraph>Center of mass at (2.8 m, 2.4 m).</paragraph>
+                </solution>
+            </problem>
+
+            <problem id="4.7.np5" level="advanced">
+                <statement>A composite object consists of a solid cylinder (radius 10 cm, height 20 cm, density 2 g/cm³) attached to the top of a solid cube (side 20 cm, density 3 g/cm³). Find the center of gravity of the combined object.</statement>
+                <solution>
+                    <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                    <paragraph><emphasis type="bold">Cube properties:</emphasis></paragraph>
+                    <paragraph>Volume = 20³ = 8000 cm³, Mass = 8000 × 3 = 24,000 g</paragraph>
+                    <paragraph>Center at (10, 10, 10) cm from cube's bottom corner</paragraph>
+                    <paragraph><emphasis type="bold">Cylinder properties:</emphasis></paragraph>
+                    <paragraph>Volume = π × 10² × 20 = 2000π cm³, Mass = 2000π × 2 = 4000π g</paragraph>
+                    <paragraph>Center at (10, 10, 30) cm from cube's bottom corner</paragraph>
+                    <paragraph><emphasis type="bold">Combined center of gravity:</emphasis></paragraph>
+                    <paragraph>Total mass = 24,000 + 4000π ≈ 36,566 g</paragraph>
+                    <paragraph>z_cg = (24,000×10 + 4000π×30)/(24,000 + 4000π)</paragraph>
+                    <paragraph>z_cg = (240,000 + 120,000π)/36,566 ≈ 16.9 cm</paragraph>
+                    <paragraph>Center of gravity at (10, 10, 16.9) cm from cube's bottom corner.</paragraph>
+                </solution>
+            </problem>
+        </numerical_problems_content>
+    </section>
+
+</topic>
 

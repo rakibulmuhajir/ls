@@ -33,11 +33,15 @@ export class SceneBuilder {
       id: `${baseId}_O`,
       x,
       y,
+      vx: 0,
+      vy: 0,
       radius: 12 * scale,
       mass: 16,
       color: ColorSystem.getElementColor('O'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'O' },
     });
 
@@ -46,11 +50,15 @@ export class SceneBuilder {
       id: `${baseId}_H1`,
       x: x - 20 * scale,
       y: y + 15 * scale,
+      vx: 0,
+      vy: 0,
       radius: 8 * scale,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'H' },
     });
 
@@ -58,11 +66,15 @@ export class SceneBuilder {
       id: `${baseId}_H2`,
       x: x + 20 * scale,
       y: y + 15 * scale,
+      vx: 0,
+      vy: 0,
       radius: 8 * scale,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'H' },
     });
 
@@ -99,11 +111,15 @@ export class SceneBuilder {
       id: `${baseId}_C`,
       x,
       y,
+      vx: 0,
+      vy: 0,
       radius: 12 * scale,
       mass: 12,
       color: ColorSystem.getElementColor('C'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'C' },
     });
 
@@ -111,11 +127,15 @@ export class SceneBuilder {
       id: `${baseId}_O1`,
       x: x - 25 * scale,
       y,
+      vx: 0,
+      vy: 0,
       radius: 11 * scale,
       mass: 16,
       color: ColorSystem.getElementColor('O'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'O' },
     });
 
@@ -123,11 +143,15 @@ export class SceneBuilder {
       id: `${baseId}_O2`,
       x: x + 25 * scale,
       y,
+      vx: 0,
+      vy: 0,
       radius: 11 * scale,
       mass: 16,
       color: ColorSystem.getElementColor('O'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'O' },
     });
 
@@ -164,11 +188,15 @@ export class SceneBuilder {
       id: `${baseId}_Na`,
       x,
       y,
+      vx: 0,
+      vy: 0,
       radius: 15 * scale,
       mass: 23,
       color: ColorSystem.getElementColor('Na'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'Na' },
     });
 
@@ -176,11 +204,15 @@ export class SceneBuilder {
       id: `${baseId}_Cl`,
       x: x + 35 * scale,
       y,
+      vx: 0,
+      vy: 0,
       radius: 18 * scale,
       mass: 35.5,
       color: ColorSystem.getElementColor('Cl'),
       boundaryWidth: boundaryWidth || 0,
       boundaryHeight: boundaryHeight || 0,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'Cl' },
     });
 
@@ -216,17 +248,21 @@ private buildCustomScene(config: AnimationConfig): void {
     const particleColor = ColorSystem.getElementColor(elementSymbol);
 
     for (let i = 0; i < count; i++) {
-      const particleId = this.physics.addParticle({
-        id: UniqueID.generate(`${state}_particle_`),
-        x: Math.random() * (width - baseRadius * 2) + baseRadius,
-        y: Math.random() * (height - baseRadius * 2) + baseRadius,
-        radius: baseRadius + (Math.random() - 0.5) * 2,
-        mass: baseRadius,
-        color: particleColor,
-        boundaryWidth: width,
-        boundaryHeight: height,
-        data: { elementType: elementSymbol, initialState: state },
-      });
+    const particleId = this.physics.addParticle({
+      id: UniqueID.generate(`${state}_particle_`),
+      x: Math.random() * (width - baseRadius * 2) + baseRadius,
+      y: Math.random() * (height - baseRadius * 2) + baseRadius,
+      vx: state === 'gas' ? (Math.random() - 0.5) * 0.5 : 0,
+      vy: state === 'gas' ? (Math.random() - 0.5) * 0.5 : 0,
+      radius: baseRadius + (Math.random() - 0.5) * 2,
+      mass: baseRadius,
+      color: particleColor,
+      boundaryWidth: width,
+      boundaryHeight: height,
+      maxSpeed: state === 'gas' ? 2 : 0.5,
+      vibrationIntensity: state === 'solid' ? 0.2 : 0.1,
+      data: { elementType: elementSymbol, initialState: state },
+    });
 
       particleIds.push(particleId);
     }
@@ -296,7 +332,7 @@ private buildCustomScene(config: AnimationConfig): void {
       height: height * 0.6,
       restitution: 0.3,
       friction: 0.1,
-    });
+    } as const);
   }
 
   public createLabParticles(
@@ -318,6 +354,7 @@ private buildCustomScene(config: AnimationConfig): void {
 
     for (let i = 0; i < count; i++) {
       const particleId = this.physics.addParticle({
+        id: UniqueID.generate(`liquid_particle_`),
         x: containerX + 15 + Math.random() * (containerWidth - 30),
         y: containerY + containerHeight * 0.4 + Math.random() * (containerHeight * 0.4),
         vx: (Math.random() - 0.5) * 0.5,
@@ -359,11 +396,22 @@ private buildCustomScene(config: AnimationConfig): void {
     this.clearScene();
 
     try {
+      // Validate required config properties
+      if (!config.width || !config.height) {
+        throw new Error('Config must include width and height');
+      }
+
       switch (config.type) {
         case 'molecule':
+          if (!config.moleculeType) {
+            throw new Error('Molecule type must be specified for molecular scenes');
+          }
           this.buildMolecularScene(config);
           break;
         case 'states':
+          if (!config.stateType) {
+            throw new Error('State type must be specified for states of matter scenes');
+          }
           this.buildStatesScene(config);
           break;
         case 'lab':
@@ -376,7 +424,7 @@ private buildCustomScene(config: AnimationConfig): void {
           this.buildCustomScene(config);
           break;
         default:
-          console.warn(`Unknown animation type: ${config.type}`);
+          throw new Error(`Unknown animation type: ${config.type}`);
       }
 
       // Apply global settings
@@ -389,6 +437,7 @@ private buildCustomScene(config: AnimationConfig): void {
       }
     } catch (error) {
       console.error('Failed to build scene from config:', error);
+      throw error; // Re-throw to allow handling by caller
     }
   }
 
@@ -491,6 +540,7 @@ private buildCustomScene(config: AnimationConfig): void {
     for (let i = 0; i < 5; i++) {
       setTimeout(() => {
         this.physics.addParticle({
+          id: UniqueID.generate(`titration_particle_`),
           x: width * 0.5 + (Math.random() - 0.5) * 10,
           y: height * 0.1,
           vx: 0,
@@ -500,6 +550,8 @@ private buildCustomScene(config: AnimationConfig): void {
           color: '#4ECDC4', // Base color
           boundaryWidth: width,
           boundaryHeight: height,
+          maxSpeed: 2,
+          vibrationIntensity: 0.1,
           data: { liquidType: 'base' }
         });
       }, i * 1000);
@@ -524,11 +576,15 @@ private buildCustomScene(config: AnimationConfig): void {
       id: `${baseId}_H1`,
       x: x - 10,
       y,
+      vx: 0,
+      vy: 0,
       radius: 8,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
       boundaryWidth,
       boundaryHeight,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'H' }
     });
 
@@ -536,11 +592,15 @@ private buildCustomScene(config: AnimationConfig): void {
       id: `${baseId}_H2`,
       x: x + 10,
       y,
+      vx: 0,
+      vy: 0,
       radius: 8,
       mass: 1,
       color: ColorSystem.getElementColor('H'),
       boundaryWidth,
       boundaryHeight,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'H' }
     });
 
@@ -566,11 +626,15 @@ private buildCustomScene(config: AnimationConfig): void {
       id: `${baseId}_Cl1`,
       x: x - 15,
       y,
+      vx: 0,
+      vy: 0,
       radius: 12,
       mass: 35.5,
       color: ColorSystem.getElementColor('Cl'),
       boundaryWidth,
       boundaryHeight,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'Cl' }
     });
 
@@ -578,11 +642,15 @@ private buildCustomScene(config: AnimationConfig): void {
       id: `${baseId}_Cl2`,
       x: x + 15,
       y,
+      vx: 0,
+      vy: 0,
       radius: 12,
       mass: 35.5,
       color: ColorSystem.getElementColor('Cl'),
       boundaryWidth,
       boundaryHeight,
+      maxSpeed: 5,
+      vibrationIntensity: 0.1,
       data: { elementType: 'Cl' }
     });
 
@@ -613,11 +681,15 @@ private buildCustomScene(config: AnimationConfig): void {
         id: `${baseId}_${atom.element}_${index}`,
         x: atom.x,
         y: atom.y,
+        vx: 0,
+        vy: 0,
         radius: atom.radius || 10,
         mass: atom.radius || 10,
         color: ColorSystem.getElementColor(atom.element),
         boundaryWidth,
         boundaryHeight,
+        maxSpeed: 5,
+        vibrationIntensity: 0.1,
         data: { elementType: atom.element }
       });
       atomIds.push(atomId);

@@ -34,17 +34,23 @@ export class UnifiedPhysicsEngine {
   addParticle(particleData: Omit<Particle, 'id'> & { id?: string }): string {
     const id = particleData.id || UniqueID.generate('p_');
 
-    const particle: Particle = {
+    // Create base particle with defaults
+    const particleDefaults = {
       vx: 0,
       vy: 0,
       maxSpeed: 1,
       vibrationIntensity: 0.1,
       vibrationFrequency: 200 + Math.random() * 50,
-      color: particleData.color || RenderConfig.Particle.DefaultColor,
-      mass: particleData.mass || particleData.radius || RenderConfig.Particle.DefaultRadius,
+      color: RenderConfig.Particle.DefaultColor,
+      mass: particleData.radius || RenderConfig.Particle.DefaultRadius,
       boundaryWidth: this.width,
       boundaryHeight: this.height,
-      temperature: this.globalTemperature,
+      temperature: this.globalTemperature
+    };
+
+    // Merge with provided data
+    const particle: Particle = {
+      ...particleDefaults,
       ...particleData,
       id,
     };
@@ -110,7 +116,38 @@ export class UnifiedPhysicsEngine {
   // ===== LAB EQUIPMENT MANAGEMENT =====
   addBoundary(boundary: Omit<LabBoundary, 'id'>): string {
     const id = UniqueID.generate('boundary_');
-    this.boundaries.set(id, { ...boundary, id });
+
+    // Handle circle boundary
+    if (boundary.shape === 'circle') {
+      const circleBoundary = boundary as Omit<Extract<LabBoundary, { shape: 'circle' }>, 'id'>;
+      const validatedBoundary: Extract<LabBoundary, { shape: 'circle' }> = {
+        ...circleBoundary,
+        id,
+        radius: circleBoundary.radius || 30,
+        type: circleBoundary.type || 'container',
+        x: circleBoundary.x,
+        y: circleBoundary.y,
+        restitution: circleBoundary.restitution || 0.8,
+        friction: circleBoundary.friction || 0.1
+      };
+      this.boundaries.set(id, validatedBoundary);
+      return id;
+    }
+
+    // Handle rectangle boundary
+    const rectBoundary = boundary as Omit<Extract<LabBoundary, { shape: 'rectangle' }>, 'id'>;
+    const validatedBoundary: Extract<LabBoundary, { shape: 'rectangle' }> = {
+      ...rectBoundary,
+      id,
+      width: rectBoundary.width || 100,
+      height: rectBoundary.height || 100,
+      type: rectBoundary.type || 'container',
+      x: rectBoundary.x,
+      y: rectBoundary.y,
+      restitution: rectBoundary.restitution || 0.8,
+      friction: rectBoundary.friction || 0.1
+    };
+    this.boundaries.set(id, validatedBoundary);
     return id;
   }
 
@@ -365,7 +402,24 @@ private updatePosition(particle: Particle, timeStep: number): void {
     normal?: { x: number; y: number };
     penetration: number;
   } {
-    if (boundary.shape === 'rectangle' && boundary.width && boundary.height) {
+    if (boundary.shape === 'circle') {
+      const dx = particle.x - boundary.x;
+      const dy = particle.y - boundary.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const minDistance = particle.radius + boundary.radius;
+
+      if (distance < minDistance) {
+        const normal = {
+          x: dx / distance,
+          y: dy / distance
+        };
+        return {
+          hasCollision: true,
+          normal,
+          penetration: minDistance - distance
+        };
+      }
+    } else if (boundary.shape === 'rectangle' && boundary.width && boundary.height) {
       const left = boundary.x;
       const right = boundary.x + boundary.width;
       const top = boundary.y;

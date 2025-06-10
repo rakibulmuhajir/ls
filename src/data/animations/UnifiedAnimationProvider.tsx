@@ -25,7 +25,7 @@ import type {
 import { UniqueID } from './utils/UniqueID';
 
 // ===== CONTEXT =====
-const UnifiedAnimationContext = createContext<AnimationContextAPI | undefined>(undefined);
+export const UnifiedAnimationContext = createContext<AnimationContextAPI | undefined>(undefined);
 
 // ===== PROVIDER PROPS =====
 interface UnifiedAnimationProviderProps {
@@ -97,20 +97,19 @@ export const UnifiedAnimationProvider: React.FC<UnifiedAnimationProviderProps> =
       if (deltaTime >= targetInterval * 0.9 || deltaTime > 250) {
         engine.update(Math.min(deltaTime, 250), currentTime);
         lastTimestampRef.current = currentTime;
-        // Force new state object creation and tick update
-        setTick(t => {
-          const newTick = t + 1;
-          // Create new physics state to ensure re-render
-          getPhysicsState();
-          return newTick;
-        });
+
+        // Create fresh state object
+        const state = engine.getState(currentTime);
+
+        // Force re-render with new state
+        setTick(t => t + 1);
       }
 
       animationFrameIdRef.current = requestAnimationFrame(animate);
     } catch (error) {
       console.error('Animation loop error:', error);
-      // Continue animation despite errors
-      animationFrameIdRef.current = requestAnimationFrame(animate);
+      // Pause animation on critical errors
+      setIsRunning(false);
     }
   };
 

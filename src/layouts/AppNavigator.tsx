@@ -12,6 +12,8 @@ import AboutScreen from '@/screens/AboutScreen';
 import LabExperimentScreen from '@/screens/LabExperimentScreen';
 import BreatheScreen from '@/screens/BreatheScreen';
 import SkiaTestScreen from '@/screens/SkiaTestScreen';
+import PhysicsTestScreenWrapper from '@/screens/PhysicsTestScreenWrapper';
+import AnimationTestScreen from '@/screens/AnimationTestScreen';
 
 export type RootStackParamList = {
   Books: undefined;
@@ -23,13 +25,16 @@ export type RootStackParamList = {
   About: undefined;
   LabExperiment: undefined;
   Breathe: undefined;
+  SkiaTest: undefined;
+  PhysicsTest: undefined;
+  AnimationTest: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="Books">
+      <Stack.Navigator initialRouteName="Books">
       <Stack.Screen name="Books" component={BookListScreen} options={{ title: 'LearnSpark 📚' }} />
       <Stack.Screen name="Chapters" component={ChapterListScreen} options={{ title: 'Chapters' }} />
       <Stack.Screen name="Topics" component={TopicListScreen} options={{ title: 'Topics' }} />
@@ -41,8 +46,10 @@ const AppNavigator = () => (
       <Stack.Screen name="LabExperiment" component={LabExperimentScreen} options={{ title: 'Chemistry Lab' }} />
       <Stack.Screen name="Breathe" component={BreatheScreen} options={{ title: 'Breathing Exercise' }} />
       <Stack.Screen name="SkiaTest" component={SkiaTestScreen} options={{ title: 'Skia Test' }} />
+      <Stack.Screen name="PhysicsTest" component={PhysicsTestScreenWrapper} options={{ title: 'Physics Lab' }} />
+      <Stack.Screen name="AnimationTest" component={AnimationTestScreen} options={{ title: 'Animation Test' }} />
       {/* Add more screens as needed */}
-    </Stack.Navigator>
+      </Stack.Navigator>
   </NavigationContainer>
 );
 

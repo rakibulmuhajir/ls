@@ -128,11 +128,19 @@ export default function MainMenuBottomNavigation({ hasUpdates = false }: Props) 
       showBadge: false,
     },
     {
-      id: 'lab',
-      label: 'Lab',
+      id: 'chem-lab',
+      label: 'Chem Lab',
       icon: 'flask',                           // 🧪 Flask icon for chemistry lab
       color: theme.colors.accent,              // Uses your theme accent color
-      onPress: () => navigation.navigate('SkiaTest'),  // Navigates to Skia Test screen
+      onPress: () => navigation.navigate('SkiaTest'),  // Navigates to Chemistry Lab screen
+      showBadge: false,
+    },
+    {
+      id: 'physics-lab',
+      label: 'Physics Lab',
+      icon: 'rocket-launch',                   // 🚀 Rocket icon for physics lab
+      color: theme.colors.accent,              // Uses your theme accent color
+      onPress: () => navigation.navigate('PhysicsTest'),  // Navigates to Physics Test screen
       showBadge: false,
     },
     {

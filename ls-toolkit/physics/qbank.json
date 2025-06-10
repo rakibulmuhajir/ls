@@ -1,0 +1,2308 @@
+{
+  "meta": {
+    "book": "Physics Grade 9",
+    "board": "Punjab Board",
+    "chap_num": 1,
+    "topic_num": "1.1",
+    "by": "content_team_x",
+    "ver": "1.0"
+  },
+  "qs": [
+    {
+      "q_txt": "Which of the following is a defining characteristic of a physical quantity?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "It can only be described qualitatively."},
+        {"txt": "It is based on human perception."},
+        {"txt": "It can be measured using an instrument.", "correct": true},
+        {"txt": "It primarily relates to emotions."}
+      ],
+      "ans_exp": "Physical quantities are characterized by their measurability using tools or instruments.",
+      "tags": ["physical_quantities", "definitions"],
+      "keywords": ["physical quantity", "measurement", "instrument"]
+    },
+    {
+      "q_txt": "Which of these is an example of a non-physical quantity?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "Length of a table"},
+        {"txt": "Mass of a book"},
+        {"txt": "Beauty of a painting", "correct": true},
+        {"txt": "Temperature of water"}
+      ],
+      "ans_exp": "Beauty is a subjective quality that cannot be measured with an instrument, making it a non-physical quantity.",
+      "tags": ["non_physical_quantities", "examples"],
+      "keywords": ["non-physical quantity", "beauty", "subjective"]
+    },
+    {
+      "q_txt": "The foundation of physics rests upon:",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "Philosophical debates"},
+        {"txt": "Human emotions"},
+        {"txt": "Physical quantities", "correct": true},
+        {"txt": "Artistic interpretations"}
+      ],
+      "ans_exp": "Physics uses physical quantities to express its laws and principles.",
+      "tags": ["physics_foundation", "physical_quantities"],
+      "keywords": ["physics", "physical quantity"]
+    },
+    {
+      "q_txt": "How are non-physical quantities typically described or compared?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "MEDIUM",
+      "opts": [
+        {"txt": "Using standard units and numerical values."},
+        {"txt": "Through precise instrumental measurements."},
+        {"txt": "Qualitatively or using pre-determined criteria/surveys.", "correct": true},
+        {"txt": "By deriving them from base physical quantities."}
+      ],
+      "ans_exp": "Non-physical quantities are often described qualitatively or compared using criteria, indices, or survey techniques as they are not directly measurable by instruments.",
+      "tags": ["non_physical_quantities", "description_methods"],
+      "keywords": ["non-physical quantity", "qualitative", "criteria", "survey"]
+    },
+    {
+      "q_txt": "Which of the following statements is true for a physical quantity but NOT for a non-physical quantity?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "ANALYZE",
+      "diff": "MEDIUM",
+      "opts": [
+        {"txt": "It can be used to describe a phenomenon."},
+        {"txt": "It can be associated with a numerical value and a unit.", "correct": true},
+        {"txt": "It can be a subject of human thought."},
+        {"txt": "It can be discussed and compared."}
+      ],
+      "ans_exp": "Physical quantities are expressed with a numerical magnitude and a specific unit, whereas non-physical quantities typically lack this.",
+      "tags": ["comparison", "physical_quantities", "non_physical_quantities"],
+      "keywords": ["physical quantity", "unit", "numerical value"]
+    },
+    {
+      "q_txt": "Volume of milk in a carton is an example of:",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "A non-physical quantity"},
+        {"txt": "A physical quantity", "correct": true},
+        {"txt": "A human emotion"},
+        {"txt": "An abstract concept not related to physics"}
+      ],
+      "ans_exp": "Volume is a measurable property of matter, hence it is a physical quantity.",
+      "tags": ["physical_quantities", "examples"],
+      "keywords": ["volume", "physical quantity"]
+    },
+    {
+      "q_txt": "According to Table 1.1, which feature is characteristic of physical quantities but not non-physical quantities?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "Having examples"},
+        {"txt": "Being a feature of something"},
+        {"txt": "Being measurable with an instrument", "correct": true},
+        {"txt": "Being understandable by humans"}
+      ],
+      "ans_exp": "Table 1.1 highlights that physical quantities are measurable with instruments, while non-physical quantities are not.",
+      "tags": ["physical_quantities", "characteristics", "table_1.1"],
+      "keywords": ["instrument", "measurement", "physical quantity"]
+    },
+    {
+      "q_txt": "The 'fear' experienced during a thunderstorm is classified as:",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "A physical quantity because it has intensity"},
+        {"txt": "A derived physical quantity"},
+        {"txt": "A non-physical quantity", "correct": true},
+        {"txt": "A base physical quantity"}
+      ],
+      "ans_exp": "Fear is an emotion and pertains to perception; it cannot be measured using scientific instruments, thus it's a non-physical quantity.",
+      "tags": ["non_physical_quantities", "examples", "emotions"],
+      "keywords": ["fear", "non-physical quantity", "emotion"]
+    },
+    {
+      "q_txt": "Which of these quantities can be expressed with a numerical value and a unit?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "Wisdom"},
+        {"txt": "Density", "correct": true},
+        {"txt": "Affection"},
+        {"txt": "Love"}
+      ],
+      "ans_exp": "Density is a physical quantity that is measured and expressed with a numerical value and a unit (e.g., kg/m³). Wisdom, affection, and love are non-physical.",
+      "tags": ["physical_quantities", "units", "examples"],
+      "keywords": ["density", "physical quantity", "unit"]
+    },
+    {
+      "q_txt": "The Quick Quiz 'Is a non-physical quantity has dimensions?' implies that:",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "ANALYZE",
+      "diff": "MEDIUM",
+      "opts": [
+        {"txt": "Non-physical quantities have complex dimensions."},
+        {"txt": "Non-physical quantities do not have dimensions.", "correct": true},
+        {"txt": "Dimensions are only for base quantities."},
+        {"txt": "All quantities, physical or non-physical, have dimensions."}
+      ],
+      "ans_exp": "Dimensions are associated with physical quantities and their units. Non-physical quantities, being unmeasurable in the same way, do not possess physical dimensions.",
+      "tags": ["non_physical_quantities", "dimensions", "quick_quiz"],
+      "keywords": ["dimensions", "non-physical quantity"]
+    },
+    {
+      "q_txt": "The height of a person is a physical quantity because:",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "It can be seen."},
+        {"txt": "It can be described in words."},
+        {"txt": "It can be measured using a ruler or tape.", "correct": true},
+        {"txt": "It changes over time."}
+      ],
+      "ans_exp": "Height is a physical quantity as it can be measured using an instrument like a ruler or measuring tape, yielding a numerical value and a unit.",
+      "tags": ["physical_quantities", "examples", "measurement"],
+      "keywords": ["height", "physical quantity", "ruler"]
+    },
+    {
+      "q_txt": "Which tool would be used to measure the physical quantity 'temperature'?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "A barometer"},
+        {"txt": "A ruler"},
+        {"txt": "A thermometer", "correct": true},
+        {"txt": "A survey form"}
+      ],
+      "ans_exp": "A thermometer is the instrument specifically designed to measure temperature, which is a physical quantity.",
+      "tags": ["physical_quantities", "instruments", "temperature"],
+      "keywords": ["temperature", "thermometer", "instrument"]
+    },
+    {
+      "q_txt": "Non-physical quantities mostly help to understand and analyze:",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "MEDIUM",
+      "opts": [
+        {"txt": "The laws of motion."},
+        {"txt": "The composition of matter."},
+        {"txt": "Human behavior, emotions, and social interactions.", "correct": true},
+        {"txt": "The flow of electric current."}
+      ],
+      "ans_exp": "The text states that non-physical quantities mostly help to understand and analyse human behaviour, emotions and social interactions.",
+      "tags": ["non_physical_quantities", "application"],
+      "keywords": ["non-physical quantity", "human behavior", "emotions"]
+    },
+    {
+      "q_txt": "Which pair consists of one physical and one non-physical quantity, respectively?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "ANALYZE",
+      "diff": "MEDIUM",
+      "opts": [
+        {"txt": "Length, Mass"},
+        {"txt": "Wisdom, Fear"},
+        {"txt": "Time, Love", "correct": true},
+        {"txt": "Beauty, Affection"}
+      ],
+      "ans_exp": "Time is a physical quantity (measurable), while love is a non-physical quantity (emotion, not instrumentally measurable).",
+      "tags": ["comparison", "physical_quantities", "non_physical_quantities"],
+      "keywords": ["time", "love", "physical quantity", "non-physical quantity"]
+    },
+    {
+      "q_txt": "The 'degree of hotness' of a body is a concept related to which physical quantity?",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "Density"},
+        {"txt": "Volume"},
+        {"txt": "Temperature", "correct": true},
+        {"txt": "Mass"}
+      ],
+      "ans_exp": "Temperature is defined as the degree of hotness or coldness of a body, and it's a measurable physical quantity.",
+      "tags": ["physical_quantities", "definitions", "temperature"],
+      "keywords": ["temperature", "hotness", "physical quantity"]
+    },
+    {
+      "q_txt": "What is a physical quantity? Give two examples.",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "A physical quantity is a property of a material or system that can be quantified by measurement. It can be measured directly or indirectly using some tools and instruments. Examples: Length, mass, time, temperature, volume, density.",
+        "exp": "Focus on measurability and the use of instruments. Any two valid examples are acceptable."
+      },
+      "tags": ["physical_quantities", "definitions", "examples"],
+      "keywords": ["physical quantity", "definition", "examples"]
+    },
+    {
+      "q_txt": "What is a non-physical quantity? Provide two examples.",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "A non-physical quantity is a characteristic or concept that cannot be measured using tools and instruments. It often pertains to the perception or interpretation of an observer. Examples: Love, affection, fear, wisdom, beauty.",
+        "exp": "Emphasis should be on the inability to measure with instruments and subjectivity. Any two valid examples are acceptable."
+      },
+      "tags": ["non_physical_quantities", "definitions", "examples"],
+      "keywords": ["non-physical quantity", "definition", "examples"]
+    },
+    {
+      "q_txt": "Differentiate between physical and non-physical quantities with at least two distinct points.",
+      "q_type": "SAQ",
+      "marks": 3,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "1. **Measurability:** Physical quantities can be measured using instruments and expressed with a numerical value and unit. Non-physical quantities cannot be measured with instruments.\n2. **Nature:** Physical quantities are objective properties of matter or phenomena. Non-physical quantities are often subjective and pertain to perception, emotions, or qualitative descriptions.\n3. **Expression:** Physical quantities form the basis of laws in physics. Non-physical quantities help understand human behavior and social interactions.",
+        "exp": "Key differences include measurability, objectivity vs. subjectivity, and their typical domains of application."
+      },
+      "tags": ["comparison", "physical_quantities", "non_physical_quantities"],
+      "keywords": ["differentiate", "physical quantity", "non-physical quantity"]
+    },
+    {
+      "q_txt": "Why is 'length of a classroom' considered a physical quantity, while 'happiness of a student' is considered a non-physical quantity?",
+      "q_type": "SAQ",
+      "marks": 3,
+      "cog_lvl": "ANALYZE",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "The 'length of a classroom' is a physical quantity because it can be measured using an instrument like a measuring tape, and it can be expressed with a numerical value and a unit (e.g., 10 meters). 'Happiness of a student' is a non-physical quantity because it is an emotion or state of mind that cannot be measured with a physical instrument; it is subjective and described qualitatively.",
+        "exp": "The answer should connect to the definitions: measurability for length, and subjectivity/non-measurability for happiness."
+      },
+      "tags": ["application", "physical_quantities", "non_physical_quantities"],
+      "keywords": ["length", "happiness", "analysis"]
+    },
+    {
+      "q_txt": "List three examples of physical quantities mentioned in the text.",
+      "q_type": "SAQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "Three examples of physical quantities are length, volume, and temperature. (Others: density, time, mass).",
+        "exp": "Any three from the text's examples are correct."
+      },
+      "tags": ["physical_quantities", "examples"],
+      "keywords": ["physical quantity", "list", "examples"]
+    },
+    {
+      "q_txt": "List three examples of non-physical quantities mentioned in the text.",
+      "q_type": "SAQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "Three examples of non-physical quantities are love, wisdom, and beauty. (Others: affection, fear).",
+        "exp": "Any three from the text's examples are correct."
+      },
+      "tags": ["non_physical_quantities", "examples"],
+      "keywords": ["non-physical quantity", "list", "examples"]
+    },
+    {
+      "q_txt": "How are laws and principles of physics expressed?",
+      "q_type": "SAQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "The laws and principles of physics are expressed through physical quantities.",
+        "exp": "This highlights the importance of physical quantities in physics."
+      },
+      "tags": ["physics_laws", "physical_quantities"],
+      "keywords": ["physics", "laws", "principles", "physical quantity"]
+    },
+    {
+      "q_txt": "Can non-physical quantities be compared? If so, how?",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "Yes, non-physical quantities can be compared, but not through precise measurement. They are often compared qualitatively, using some pre-determined criteria, indices, or through survey techniques.",
+        "exp": "The comparison method is different from that of physical quantities."
+      },
+      "tags": ["non_physical_quantities", "comparison_methods"],
+      "keywords": ["non-physical quantity", "compare", "qualitative"]
+    },
+    {
+      "q_txt": "What role do instruments play in defining physical quantities?",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "Instruments are essential for physical quantities because they provide the means to measure these quantities. The ability to be measured by an instrument is a key characteristic that distinguishes physical quantities from non-physical ones.",
+        "exp": "Instruments enable quantification of physical properties."
+      },
+      "tags": ["physical_quantities", "instruments", "role_of_instruments"],
+      "keywords": ["instrument", "physical quantity", "measurement"]
+    },
+    {
+      "q_txt": "Give an example of a physical quantity that can be measured directly and one that might be measured indirectly.",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "Directly measured: Length of a pencil using a ruler. Indirectly measured: Density of an object, which is calculated from mass and volume (both of which are measured more directly). (The text mentions 'directly and indirectly' but doesn't give specific examples of indirect for this topic, so this is an extension based on general understanding).",
+        "exp": "Direct measurement involves immediate comparison with a standard. Indirect measurement often involves calculation from other directly measured quantities."
+      },
+      "tags": ["physical_quantities", "measurement_types"],
+      "keywords": ["direct measurement", "indirect measurement", "physical quantity"]
+    },
+    {
+      "q_txt": "Quantities like length and time are measurable and are called ______ quantities.",
+      "q_type": "FIB",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "physical"
+      },
+      "tags": ["physical_quantities", "definitions"],
+      "keywords": ["length", "time", "physical quantity"]
+    },
+    {
+      "q_txt": "Love and wisdom are examples of ______ quantities because they cannot be measured by instruments.",
+      "q_type": "FIB",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "non-physical"
+      },
+      "tags": ["non_physical_quantities", "examples"],
+      "keywords": ["love", "wisdom", "non-physical quantity"]
+    },
+    {
+      "q_txt": "A physical quantity is typically expressed by a numerical value and a ______.",
+      "q_type": "FIB",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "unit"
+      },
+      "tags": ["physical_quantities", "characteristics"],
+      "keywords": ["physical quantity", "numerical value", "unit"]
+    },
+    {
+      "q_txt": "The perception or interpretation of an observer is often involved with ______ quantities.",
+      "q_type": "FIB",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "non-physical"
+      },
+      "tags": ["non_physical_quantities", "characteristics"],
+      "keywords": ["perception", "interpretation", "non-physical quantity"]
+    },
+    {
+      "q_txt": "Measurement using tools and instruments is a characteristic feature of ______ quantities.",
+      "q_type": "FIB",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "physical"
+      },
+      "tags": ["physical_quantities", "measurement"],
+      "keywords": ["tools", "instruments", "physical quantity"]
+    },
+    {
+      "q_txt": "All physical quantities can be measured with absolute precision.",
+      "q_type": "T/F",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "MEDIUM",
+      "opts": [
+        {"txt": "True"},
+        {"txt": "False", "correct": true}
+      ],
+      "ans_exp": "While physical quantities are measurable, measurements always have some degree of uncertainty. Absolute precision is not achievable.",
+      "tags": ["physical_quantities", "measurement_precision"],
+      "keywords": ["precision", "measurement", "physical quantity"]
+    },
+    {
+      "q_txt": "Non-physical quantities have no role in understanding the world around us.",
+      "q_type": "T/F",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "True"},
+        {"txt": "False", "correct": true}
+      ],
+      "ans_exp": "Non-physical quantities help to understand and analyse human behaviour, emotions and social interactions, which are part of the world around us.",
+      "tags": ["non_physical_quantities", "importance"],
+      "keywords": ["non-physical quantity", "understanding"]
+    },
+    {
+      "q_txt": "Temperature is a non-physical quantity because it can vary.",
+      "q_type": "T/F",
+      "marks": 1,
+      "cog_lvl": "UNDERSTAND",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "True"},
+        {"txt": "False", "correct": true}
+      ],
+      "ans_exp": "Temperature is a physical quantity because it can be measured with a thermometer, even though it can vary.",
+      "tags": ["physical_quantities", "temperature", "misconceptions"],
+      "keywords": ["temperature", "physical quantity"]
+    },
+    {
+      "q_txt": "Physics relies solely on physical quantities for its descriptions and laws.",
+      "q_type": "T/F",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "True", "correct": true},
+        {"txt": "False"}
+      ],
+      "ans_exp": "The text states that the foundation of physics rests upon physical quantities through which the laws and principles of physics are expressed.",
+      "tags": ["physics_foundation", "physical_quantities"],
+      "keywords": ["physics", "physical quantity"]
+    },
+    {
+      "q_txt": "Survey techniques can be used to gather information about certain non-physical quantities.",
+      "q_type": "T/F",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "MEDIUM",
+      "opts": [
+        {"txt": "True", "correct": true},
+        {"txt": "False"}
+      ],
+      "ans_exp": "The text mentions that non-physical quantities can be described or compared using survey techniques.",
+      "tags": ["non_physical_quantities", "description_methods"],
+      "keywords": ["survey techniques", "non-physical quantity"]
+    },
+    {
+      "q_txt": "Explain in detail the fundamental differences between physical and non-physical quantities, providing at least three distinct examples for each. How does the method of their assessment differ?",
+      "q_type": "CRQ",
+      "marks": 5,
+      "cog_lvl": "ANALYZE",
+      "diff": "HARD",
+      "ans_detail": {
+        "txt": "Physical quantities are attributes of phenomena, bodies, or substances that are quantifiable through measurement. They are objective and form the basis of scientific laws. Key characteristics:\n1. Measurable: Can be measured using scientific instruments.\n2. Quantifiable: Expressed with a numerical magnitude and a unit.\n3. Objective: Their value is independent of the observer (under ideal conditions).\nExamples: Length (e.g., 5 meters), mass (e.g., 2 kilograms), time (e.g., 10 seconds).\n\nNon-physical quantities are concepts, often abstract or subjective, that cannot be measured using standard scientific instruments. They often relate to human perception, emotions, or qualitative judgments.\nKey characteristics:\n1. Non-measurable (by instruments): Cannot be directly quantified with instruments.\n2. Qualitative: Described subjectively or through interpretation.\n3. Subjective: Their assessment can vary between observers.\nExamples: Beauty (e.g., of a sunset), courage (e.g., of a soldier), happiness (e.g., of a child).\n\nMethod of Assessment:\nPhysical quantities are assessed through direct or indirect measurement using calibrated instruments. The result is a numerical value with an associated unit and uncertainty.\nNon-physical quantities are assessed qualitatively. This might involve using pre-determined criteria, rating scales, indices developed through consensus, or survey techniques to gather subjective opinions or descriptions. The assessment is often interpretative rather than a precise measurement.",
+        "exp": "The answer should clearly delineate the differences based on measurability, objectivity, and expression, provide valid examples, and contrast the assessment methods (instrumental vs. qualitative/interpretative)."
+      },
+      "tags": ["physical_quantities", "non_physical_quantities", "comparison", "assessment"],
+      "keywords": ["physical quantity", "non-physical quantity", "measurement", "qualitative assessment", "examples"]
+    },
+    {
+      "q_txt": "The term 'density' refers to a:",
+      "q_type": "MCQ",
+      "marks": 1,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "opts": [
+        {"txt": "Non-physical quantity"},
+        {"txt": "Physical quantity", "correct": true},
+        {"txt": "Subjective feeling"},
+        {"txt": "Philosophical concept"}
+      ],
+      "ans_exp": "Density is a measurable property of a substance, defined as mass per unit volume, making it a physical quantity.",
+      "tags": ["physical_quantities", "examples"],
+      "keywords": ["density", "physical quantity"]
+    },
+    {
+      "q_txt": "Can a quantity be both physical and non-physical simultaneously?",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "ANALYZE",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "No, a quantity is generally classified as either physical or non-physical based on its fundamental characteristic of measurability with instruments. Physical quantities are inherently measurable, while non-physical quantities are not. While some concepts might have aspects that can be subjectively assessed and perhaps other aspects that could be linked to physical measurements (e.g., physiological responses to fear), the core concept itself falls into one category based on direct instrumental measurability.",
+        "exp": "The distinction is based on the primary definition. While there can be correlations, the categories are distinct."
+      },
+      "tags": ["classification", "physical_quantities", "non_physical_quantities"],
+      "keywords": ["physical quantity", "non-physical quantity", "classification"]
+    },
+    {
+      "q_txt": "Why is it important to distinguish between physical and non-physical quantities in science, particularly in physics?",
+      "q_type": "SAQ",
+      "marks": 3,
+      "cog_lvl": "ANALYZE",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "In physics, the goal is to understand and describe the natural world through objective, verifiable laws and principles. This requires quantities that can be measured reproducibly and expressed numerically. Physical quantities fulfill this role. Distinguishing them from non-physical quantities is crucial because:\n1. Focus: It keeps the focus of physics on objectively measurable aspects of reality.\n2. Methodology: It dictates the methods of investigation (experimentation and measurement for physical quantities).\n3. Formulation of Laws: Scientific laws are mathematical relationships between physical quantities. Non-physical quantities generally cannot be incorporated into such precise, universal laws.",
+        "exp": "The distinction is fundamental to the scientific method and the nature of physical laws."
+      },
+      "tags": ["importance", "scientific_method", "physics"],
+      "keywords": ["distinction", "physical quantity", "non-physical quantity", "physics"]
+    },
+    {
+      "q_txt": "Complete Table 1.1's entry for 'Instrument used' for both Physical and Non-Physical Quantities.",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "REMEMBER",
+      "diff": "EASY",
+      "ans_detail": {
+        "txt": "For Physical Quantity, Instrument used: Yes (e.g., ruler, clock, thermometer).\nFor Non-Physical Quantity, Instrument used: No (or not standard scientific instruments for direct measurement).",
+        "exp": "This directly tests recall and understanding of Table 1.1 from the text."
+      },
+      "tags": ["table_1.1", "instruments", "physical_quantities", "non_physical_quantities"],
+      "keywords": ["instrument", "physical quantity", "non-physical quantity"]
+    },
+    {
+      "q_txt": "The statement 'This apple is red' describes a quality. Is 'redness' a physical or non-physical quantity in the context of physics measurement?",
+      "q_type": "SAQ",
+      "marks": 2,
+      "cog_lvl": "ANALYZE",
+      "diff": "MEDIUM",
+      "ans_detail": {
+        "txt": "While 'redness' as a perception is subjective (non-physical), the underlying cause of color (specific wavelengths of light being reflected) can be measured physically using instruments like a spectrometer. So, the perception of 'redness' is non-physical, but the associated light wavelength is a physical quantity.",
+        "exp": "This question requires careful distinction between perception and the underlying physical cause."
+      },
+      "tags": ["color", "perception", "physical_quantities", "non_physical_quantities"],
+      "keywords": ["redness", "color", "wavelength", "physical quantity", "non-physical quantity"]
+    }
+  ],
+  "key_terms_topic": [
+    "Physical Quantity",
+    "Non-Physical Quantity",
+    "Measurement",
+    "Instrument",
+    "Unit",
+    "Numerical Value",
+    "Length",
+    "Volume",
+    "Density",
+    "Time",
+    "Temperature",
+    "Love",
+    "Affection",
+    "Fear",
+    "Wisdom",
+    "Beauty",
+    "Qualitative",
+    "Perception",
+    "Dimensions"
+  ]
+}
+
+Yes, my apologies. I generated questions only for the first topic (1.1) in the previous response.
+
+I will now proceed to generate questions for the next four topics:
+
+1.2 Base and Derived Physical Quantities
+
+1.3 International System of Units (including SI Prefixes)
+
+1.4 Scientific Notation
+
+1.5 Length Measuring Instruments
+
+Here is the JSON output for these topics:
+
+[
+  {
+    "meta": {
+      "book": "Physics Grade 9",
+      "board": "Punjab Board",
+      "chap_num": 1,
+      "topic_num": "1.2",
+      "by": "content_team_x",
+      "ver": "1.0"
+    },
+    "qs": [
+      {
+        "q_txt": "Which of the following is considered a base quantity?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Speed"},
+          {"txt": "Volume"},
+          {"txt": "Mass", "correct": true},
+          {"txt": "Density"}
+        ],
+        "ans_exp": "Mass is one of the arbitrarily selected base quantities. Speed, volume, and density are derived from base quantities.",
+        "tags": ["base_quantities", "definitions"],
+        "keywords": ["base quantity", "mass"]
+      },
+      {
+        "q_txt": "Derived physical quantities are described in terms of:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Non-physical quantities"},
+          {"txt": "One or more base quantities", "correct": true},
+          {"txt": "Arbitrary standards only"},
+          {"txt": "Historical units of measurement"}
+        ],
+        "ans_exp": "Derived quantities are defined and expressed using combinations of base physical quantities.",
+        "tags": ["derived_quantities", "definitions"],
+        "keywords": ["derived quantity", "base quantity"]
+      },
+      {
+        "q_txt": "What are the two essential parts of a measurement?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "An instrument and a scientist"},
+          {"txt": "A number and a unit", "correct": true},
+          {"txt": "A physical quantity and a formula"},
+          {"txt": "An observation and a conclusion"}
+        ],
+        "ans_exp": "A complete measurement must include a numerical magnitude and an appropriate unit.",
+        "tags": ["measurement_components", "definitions"],
+        "keywords": ["measurement", "number", "unit"]
+      },
+      {
+        "q_txt": "Why is a standard unit necessary for measurement?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "To make calculations more complex."},
+          {"txt": "To allow scientists to use their preferred systems."},
+          {"txt": "To avoid confusion and ensure consistency in measurements.", "correct": true},
+          {"txt": "To limit the number of physical quantities."}
+        ],
+        "ans_exp": "Standard units ensure that measurements are universally understood and reproducible, avoiding confusion that arises from using non-standard or personal units (like hand spans in Activity 1.1).",
+        "tags": ["standard_units", "importance_of_standards"],
+        "keywords": ["standard unit", "consistency", "confusion"]
+      },
+      {
+        "q_txt": "Speed is a derived quantity because it depends on:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "Mass and volume"},
+          {"txt": "Distance and time", "correct": true},
+          {"txt": "Force and area"},
+          {"txt": "Temperature and pressure"}
+        ],
+        "ans_exp": "Speed is calculated as distance (a base quantity, length) divided by time (a base quantity).",
+        "tags": ["derived_quantities", "examples", "speed"],
+        "keywords": ["speed", "derived quantity", "distance", "time"]
+      },
+      {
+        "q_txt": "What is a 'unit' in the context of measurement?",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "A unit is a widely accepted standard quantity with which an unknown quantity is compared during the process of measurement. It provides a reference for expressing the magnitude of a physical quantity.",
+          "exp": "The definition should emphasize 'standard' and 'comparison'."
+        },
+        "tags": ["units", "definitions", "measurement"],
+        "keywords": ["unit", "standard", "measurement"]
+      },
+      {
+        "q_txt": "Differentiate between base quantities and derived quantities, giving one example of each.",
+        "q_type": "SAQ",
+        "marks": 3,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Base quantities are fundamental physical quantities that are arbitrarily selected and are not defined in terms of other physical quantities. Example: Length.\nDerived quantities are physical quantities that are expressed in terms of one or more base quantities through mathematical relationships. Example: Area (derived from length x length).",
+          "exp": "Key distinctions: fundamental vs. expressed in terms of others; arbitrary selection vs. definition through relationships."
+        },
+        "tags": ["base_quantities", "derived_quantities", "comparison", "examples"],
+        "keywords": ["base quantity", "derived quantity", "differentiate"]
+      },
+      {
+        "q_txt": "Explain the process of measurement of a physical quantity.",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Measurement is a process of comparison of an unknown quantity with a widely accepted standard quantity, known as a unit. This comparison determines how many times the standard unit is contained within the unknown quantity, resulting in a numerical value and the unit.",
+          "exp": "The answer should highlight 'comparison' and 'standard quantity/unit'."
+        },
+        "tags": ["measurement_process", "definitions"],
+        "keywords": ["measurement", "comparison", "standard unit"]
+      },
+      {
+        "q_txt": "Give two examples of base quantities and two examples of derived quantities, other than those used in the definition.",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Base Quantities: Mass, Time. (Others: Temperature, Electric Current)\nDerived Quantities: Volume (length x length x length), Density (mass/volume). (Others: Force, Pressure)",
+          "exp": "Students need to recall examples beyond the basic definitions provided."
+        },
+        "tags": ["base_quantities", "derived_quantities", "examples"],
+        "keywords": ["base quantity", "derived quantity", "examples"]
+      },
+      {
+        "q_txt": "Why would measurements made using different people's hand spans (as in Activity 1.1) lead to confusion?",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "ANALYZE",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Measurements using different people's hand spans would lead to confusion because hand spans vary in size from person to person. This means there is no single, consistent 'standard' hand span, so the same object would yield different numerical measurements, making comparison and communication of results unreliable.",
+          "exp": "Focus on lack of standardization and variability."
+        },
+        "tags": ["standardization", "measurement_error", "activity_1.1"],
+        "keywords": ["hand span", "standard", "confusion", "variability"]
+      },
+      {
+        "q_txt": "A measurement without a unit is _____.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "meaningless"
+        },
+        "tags": ["measurement_components", "units"],
+        "keywords": ["measurement", "unit", "meaningless"]
+      },
+      {
+        "q_txt": "Density is described in terms of mass and ______.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "volume"
+        },
+        "tags": ["derived_quantities", "density"],
+        "keywords": ["density", "mass", "volume"]
+      },
+      {
+        "q_txt": "The arbitrarily selected physical quantities that form the foundation for other quantities are called ______ quantities.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "base"
+        },
+        "tags": ["base_quantities", "definitions"],
+        "keywords": ["base quantity", "arbitrarily selected"]
+      },
+      {
+        "q_txt": "All physical quantities are base quantities.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. Physical quantities are categorized into base and derived quantities. Derived quantities are expressed in terms of base quantities.",
+        "tags": ["base_quantities", "derived_quantities", "classification"],
+        "keywords": ["base quantity", "derived quantity"]
+      },
+      {
+        "q_txt": "The standard of measurement is known as a unit.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True", "correct": true},
+          {"txt": "False"}
+        ],
+        "ans_exp": "True. A unit is the standard used for comparison in measurement.",
+        "tags": ["units", "definitions"],
+        "keywords": ["unit", "standard"]
+      }
+    ],
+    "key_terms_topic": [
+      "Base Quantity",
+      "Derived Quantity",
+      "Physical Quantity",
+      "Measurement",
+      "Unit",
+      "Standard",
+      "Length",
+      "Mass",
+      "Time",
+      "Speed",
+      "Volume",
+      "Density"
+    ]
+  },
+  {
+    "meta": {
+      "book": "Physics Grade 9",
+      "board": "Punjab Board",
+      "chap_num": 1,
+      "topic_num": "1.3",
+      "by": "content_team_x",
+      "ver": "1.0"
+    },
+    "qs": [
+      {
+        "q_txt": "What is the SI unit for length?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Kilogram (kg)"},
+          {"txt": "Metre (m)", "correct": true},
+          {"txt": "Second (s)"},
+          {"txt": "Ampere (A)"}
+        ],
+        "ans_exp": "The SI base unit for length is the metre, symbolized by 'm'.",
+        "tags": ["si_units", "base_units", "length"],
+        "keywords": ["si unit", "metre", "length"]
+      },
+      {
+        "q_txt": "Which of the following is a derived unit?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Kelvin (K)"},
+          {"txt": "Candela (cd)"},
+          {"txt": "Pascal (Pa)", "correct": true},
+          {"txt": "Mole (mol)"}
+        ],
+        "ans_exp": "Pascal (Pa), the unit of pressure, is a derived unit (N/m²). Kelvin, Candela, and Mole are SI base units.",
+        "tags": ["si_units", "derived_units", "pressure"],
+        "keywords": ["derived unit", "pascal"]
+      },
+      {
+        "q_txt": "The prefix 'kilo' (k) represents a power of ten equal to:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "10⁻³"},
+          {"txt": "10³", "correct": true},
+          {"txt": "10⁶"},
+          {"txt": "10⁻⁶"}
+        ],
+        "ans_exp": "The prefix 'kilo' (k) means 1000, which is 10³.",
+        "tags": ["si_prefixes", "powers_of_ten", "kilo"],
+        "keywords": ["kilo", "prefix", "10^3"]
+      },
+      {
+        "q_txt": "How many base units are there in the International System of Units (SI)?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "5"},
+          {"txt": "7", "correct": true},
+          {"txt": "9"},
+          {"txt": "10"}
+        ],
+        "ans_exp": "There are seven base units in the SI system, as listed in Table 1.2.",
+        "tags": ["si_units", "base_units", "number_of_base_units"],
+        "keywords": ["si units", "base units", "seven"]
+      },
+      {
+        "q_txt": "The unit of area, square metre (m²), is derived from which base unit(s)?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "Metre and Second"},
+          {"txt": "Kilogram only"},
+          {"txt": "Metre only", "correct": true},
+          {"txt": "Metre and Kilogram"}
+        ],
+        "ans_exp": "Area (length × breadth) is derived from the base unit of length (metre) multiplied by itself (metre × metre = m²).",
+        "tags": ["derived_units", "area", "base_units"],
+        "keywords": ["area", "m^2", "derived unit", "metre"]
+      },
+      {
+        "q_txt": "What is the symbol for the SI prefix 'micro'?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "m"},
+          {"txt": "M"},
+          {"txt": "μ", "correct": true},
+          {"txt": "n"}
+        ],
+        "ans_exp": "The symbol for the SI prefix 'micro' is μ (mu).",
+        "tags": ["si_prefixes", "symbols", "micro"],
+        "keywords": ["micro", "prefix", "μ"]
+      },
+      {
+        "q_txt": "Convert 3000 grams (g) to kilograms (kg).",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "0.3 kg"},
+          {"txt": "3 kg", "correct": true},
+          {"txt": "30 kg"},
+          {"txt": "300 kg"}
+        ],
+        "ans_exp": "Since 1 kg = 1000 g, 3000 g = 3000/1000 kg = 3 kg.",
+        "tags": ["si_prefixes", "conversion", "mass"],
+        "keywords": ["grams", "kilograms", "conversion"]
+      },
+      {
+        "q_txt": "List the seven base quantities in the SI system along with their respective units and symbols.",
+        "q_type": "SAQ",
+        "marks": 7,
+        "cog_lvl": "REMEMBER",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "1. Length - metre (m)\n2. Mass - kilogram (kg)\n3. Time - second (s)\n4. Temperature - kelvin (K)\n5. Electric current - ampere (A)\n6. Intensity of light - candela (cd)\n7. Amount of substance - mole (mol)",
+          "exp": "Students must list all seven correctly with quantity, unit name, and symbol as in Table 1.2."
+        },
+        "tags": ["si_units", "base_quantities", "base_units", "symbols"],
+        "keywords": ["si units", "base quantities", "units", "symbols"]
+      },
+      {
+        "q_txt": "What are derived units? Give two examples with their symbols and how they are derived from base units.",
+        "q_type": "SAQ",
+        "marks": 4,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Derived units are the units of derived physical quantities which can be expressed in terms of base units.\n1. Example: Unit of Speed is metre per second (m s⁻¹). Derived from: Length (metre) / Time (second).\n2. Example: Unit of Volume is cubic metre (m³). Derived from: Length (metre) × Length (metre) × Length (metre).",
+          "exp": "Definition and two clear examples showing derivation from base units are required."
+        },
+        "tags": ["derived_units", "definitions", "examples", "derivation"],
+        "keywords": ["derived unit", "definition", "speed", "volume"]
+      },
+      {
+        "q_txt": "Explain the purpose of using SI prefixes. Give an example of a very large quantity and a very small quantity and show how prefixes simplify them.",
+        "q_type": "SAQ",
+        "marks": 3,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "SI prefixes are used to write very large or very small quantities conveniently by using powers of 10. They make numbers easier to read, write, and comprehend.\nExample (Large): 5,000,000 metres can be written as 5 × 10⁶ m or 5 Mm (megametres).\nExample (Small): 0.000004 seconds can be written as 4 × 10⁻⁶ s or 4 μs (microseconds).",
+          "exp": "Purpose and appropriate examples showing simplification are needed."
+        },
+        "tags": ["si_prefixes", "purpose", "examples"],
+        "keywords": ["si prefix", "large quantity", "small quantity", "simplification"]
+      },
+      {
+        "q_txt": "The SI unit for electric charge is coulomb (C). Is this a base unit or a derived unit? If derived, express it in terms of base units (Charge = Current × Time).",
+        "q_type": "SAQ",
+        "marks": 3,
+        "cog_lvl": "ANALYZE",
+        "diff": "HARD",
+        "ans_detail": {
+          "txt": "Coulomb (C) is a derived unit. It is derived from the base units of electric current (ampere, A) and time (second, s). \nSince Charge = Current × Time, 1 Coulomb = 1 Ampere × 1 second (1 C = 1 A s).",
+          "exp": "Students need to identify it as derived and correctly use the relationship to express it in base units. The relationship is hinted at in Quick Quiz (a) on page 9.",
+          "tags": ["derived_units", "electric_charge", "coulomb", "base_units"],
+          "keywords": ["coulomb", "derived unit", "ampere", "second"]
+        },
+        "is_imp": true
+      },
+      {
+        "q_txt": "The prefix for 10⁻⁹ is ______ and its symbol is ______.",
+        "q_type": "FIB",
+        "marks": 2,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "nano, n"
+        },
+        "tags": ["si_prefixes", "nano"],
+        "keywords": ["nano", "n", "10^-9"]
+      },
+      {
+        "q_txt": "The SI base unit for amount of substance is ______, with the symbol ______.",
+        "q_type": "FIB",
+        "marks": 2,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "mole, mol"
+        },
+        "tags": ["si_units", "base_units", "amount_of_substance"],
+        "keywords": ["mole", "mol", "amount of substance"]
+      },
+      {
+        "q_txt": "20000 cm is equal to ______ m.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "200"
+        },
+        "ans_exp": "1 m = 100 cm, so 20000 cm = 20000/100 m = 200 m.",
+        "tags": ["si_prefixes", "conversion", "length"],
+        "keywords": ["centimetre", "metre", "conversion"]
+      },
+      {
+        "q_txt": "The unit 'Newton (N)' for force is a base SI unit.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. Newton (N) is a derived SI unit for force (kg m s⁻²).",
+        "tags": ["derived_units", "force", "newton"],
+        "keywords": ["newton", "derived unit"]
+      },
+      {
+        "q_txt": "The symbol 'M' represents the prefix 'milli'.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. The symbol 'M' represents the prefix 'mega' (10⁶). The symbol for 'milli' (10⁻³) is 'm'.",
+        "tags": ["si_prefixes", "symbols", "mega", "milli"],
+        "keywords": ["mega", "milli", "prefix symbol"]
+      }
+    ],
+    "key_terms_topic": [
+      "International System of Units (SI)",
+      "Base Units",
+      "Derived Units",
+      "Metre (m)",
+      "Kilogram (kg)",
+      "Second (s)",
+      "Ampere (A)",
+      "Kelvin (K)",
+      "Candela (cd)",
+      "Mole (mol)",
+      "SI Prefixes",
+      "Kilo (k)",
+      "Milli (m)",
+      "Centi (c)",
+      "Mega (M)",
+      "Micro (μ)",
+      "Nano (n)",
+      "Powers of Ten",
+      "Conversion"
+    ]
+  },
+  {
+    "meta": {
+      "book": "Physics Grade 9",
+      "board": "Punjab Board",
+      "chap_num": 1,
+      "topic_num": "1.4",
+      "by": "content_team_x",
+      "ver": "1.0"
+    },
+    "qs": [
+      {
+        "q_txt": "What is the primary purpose of using scientific notation?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "To make numbers appear more complex."},
+          {"txt": "To represent very large or very small numbers conveniently.", "correct": true},
+          {"txt": "To eliminate the need for units."},
+          {"txt": "To only represent whole numbers."}
+        ],
+        "ans_exp": "Scientific notation provides a short and convenient way to write and work with numbers that are either very large or very small.",
+        "tags": ["scientific_notation", "purpose"],
+        "keywords": ["scientific notation", "convenience", "large numbers", "small numbers"]
+      },
+      {
+        "q_txt": "How is the number 0.00052 m expressed in scientific notation?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "5.2 × 10⁴ m"},
+          {"txt": "5.2 × 10⁻⁴ m", "correct": true},
+          {"txt": "0.52 × 10⁻³ m"},
+          {"txt": "52 × 10⁻⁵ m"}
+        ],
+        "ans_exp": "To express 0.00052 in scientific notation, the decimal is moved 4 places to the right, so it becomes 5.2 × 10⁻⁴.",
+        "tags": ["scientific_notation", "conversion"],
+        "keywords": ["scientific notation", "decimal", "negative exponent"]
+      },
+      {
+        "q_txt": "In scientific notation, the numerical part of the quantity is written as a number between:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "0 and 1"},
+          {"txt": "1 and 9 (inclusive of 1, exclusive of 10)", "correct": true},
+          {"txt": "0 and 10"},
+          {"txt": "1 and 100"}
+        ],
+        "ans_exp": "The numerical part in scientific notation is a number greater than or equal to 1 and less than 10.",
+        "tags": ["scientific_notation", "format"],
+        "keywords": ["scientific notation", "numerical part", "format"]
+      },
+      {
+        "q_txt": "When adding or subtracting numbers in scientific notation, what must be the same for the operation to be performed directly on the numerical parts?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "The numerical parts"},
+          {"txt": "The units"},
+          {"txt": "The exponents of 10", "correct": true},
+          {"txt": "The number of significant figures"}
+        ],
+        "ans_exp": "For addition or subtraction, the exponents of 10 must be the same. If not, they need to be adjusted before the operation.",
+        "tags": ["scientific_notation", "addition_subtraction_rules"],
+        "keywords": ["scientific notation", "addition", "subtraction", "exponents"]
+      },
+      {
+        "q_txt": "The average distance from the Sun to the Earth is 138,000,000 km. Express this in scientific notation.",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "1.38 × 10⁶ km"},
+          {"txt": "13.8 × 10⁷ km"},
+          {"txt": "1.38 × 10⁸ km", "correct": true},
+          {"txt": "0.138 × 10⁹ km"}
+        ],
+        "ans_exp": "Moving the decimal 8 places to the left gives 1.38, so the scientific notation is 1.38 × 10⁸ km.",
+        "tags": ["scientific_notation", "conversion", "large_numbers"],
+        "keywords": ["scientific notation", "Earth-Sun distance"]
+      },
+      {
+        "q_txt": "Solve: (2 × 10³ kg) × (3 × 10⁴ m)",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "5 × 10⁷ kg m"},
+          {"txt": "6 × 10⁷ kg m", "correct": true},
+          {"txt": "6 × 10¹² kg m"},
+          {"txt": "5 × 10¹² kg m"}
+        ],
+        "ans_exp": "(2 × 3) × 10⁽³⁺⁴⁾ kg m = 6 × 10⁷ kg m.",
+        "tags": ["scientific_notation", "multiplication"],
+        "keywords": ["scientific notation", "multiplication", "exponents"]
+      },
+      {
+        "q_txt": "Define scientific notation and explain why it is useful in science.",
+        "q_type": "SAQ",
+        "marks": 3,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Scientific notation is a way of writing numbers that are too large or too small to be conveniently written in decimal form. It expresses a number as a product of a numerical part (between 1 and 10) and a power of 10. \nIt is useful in science because it simplifies the representation and manipulation of very large or very small quantities, makes them easier to read, compare, and use in calculations, and helps in maintaining appropriate significant figures.",
+          "exp": "Definition should include format. Usefulness should cover convenience, readability, and calculations."
+        },
+        "tags": ["scientific_notation", "definition", "purpose"],
+        "keywords": ["scientific notation", "definition", "usefulness"]
+      },
+      {
+        "q_txt": "Convert the following numbers into scientific notation:\na) 2574.32 kg\nb) 0.00004 s",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "a) 2574.32 kg = 2.57432 × 10³ kg\nb) 0.00004 s = 4 × 10⁻⁵ s",
+          "exp": "Correctly move decimal and determine exponent for both positive and negative powers."
+        },
+        "tags": ["scientific_notation", "conversion"],
+        "keywords": ["scientific notation", "conversion"]
+      },
+      {
+        "q_txt": "Perform the following calculation and express the answer in scientific notation:\n(5.123 × 10⁴ m) + (3.28 × 10⁵ m)",
+        "q_type": "Numerical",
+        "marks": 3,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "To add, make exponents same:\n3.28 × 10⁵ m = 32.8 × 10⁴ m\n(5.123 × 10⁴ m) + (32.8 × 10⁴ m)\n= (5.123 + 32.8) × 10⁴ m\n= 37.923 × 10⁴ m\n= 3.7923 × 10⁵ m",
+          "exp": "Show steps for equalizing exponents and then adding, finally ensuring the answer is in correct scientific notation form."
+        },
+        "tags": ["scientific_notation", "addition", "calculation"],
+        "keywords": ["scientific notation", "addition", "exponents"]
+      },
+      {
+        "q_txt": "Perform the following calculation and express the answer in scientific notation:\n(6 × 10⁶ m³) / (2 × 10⁻² m²)",
+        "q_type": "Numerical",
+        "marks": 3,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "(6 / 2) × 10⁽⁶⁻⁽⁻²⁾⁾ m⁽³⁻²⁾\n= 3 × 10⁽⁶⁺²⁾ m¹\n= 3 × 10⁸ m",
+          "exp": "Show steps for dividing numerical parts and subtracting exponents, and handling units."
+        },
+        "tags": ["scientific_notation", "division", "calculation"],
+        "keywords": ["scientific notation", "division", "exponents"]
+      },
+      {
+        "q_txt": "The diameter of a hydrogen atom is about 0.000,000,000,052 m. Express this in scientific notation.",
+        "q_type": "SAQ",
+        "marks": 1,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "5.2 × 10⁻¹¹ m",
+          "exp": "Correctly identify the number of places the decimal is moved (11 to the right)."
+        },
+        "tags": ["scientific_notation", "conversion", "small_numbers"],
+        "keywords": ["scientific notation", "hydrogen atom"]
+      },
+      {
+        "q_txt": "In the number 7.45 × 10⁶, the number 6 is called the ______.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "exponent (or power of 10)"
+        },
+        "tags": ["scientific_notation", "terminology"],
+        "keywords": ["scientific notation", "exponent", "power of 10"]
+      },
+      {
+        "q_txt": "To write 45000 in scientific notation, the decimal point is moved ____ places to the ____.",
+        "q_type": "FIB",
+        "marks": 2,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "4, left"
+        },
+        "tags": ["scientific_notation", "conversion_process"],
+        "keywords": ["scientific notation", "decimal movement"]
+      },
+      {
+        "q_txt": "Scientific notation makes numbers difficult to read.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. Scientific notation is designed to make very large or very small numbers easier to read and comprehend.",
+        "tags": ["scientific_notation", "purpose"],
+        "keywords": ["scientific notation", "readability"]
+      },
+      {
+        "q_txt": "When multiplying numbers in scientific notation, the exponents are added.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True", "correct": true},
+          {"txt": "False"}
+        ],
+        "ans_exp": "True. For multiplication, the numerical parts are multiplied, and the exponents of 10 are added.",
+        "tags": ["scientific_notation", "multiplication_rules"],
+        "keywords": ["scientific notation", "multiplication", "exponents"]
+      }
+    ],
+    "key_terms_topic": [
+      "Scientific Notation",
+      "Power of Ten",
+      "Exponent",
+      "Numerical Part",
+      "Large Numbers",
+      "Small Numbers",
+      "Addition in Scientific Notation",
+      "Subtraction in Scientific Notation",
+      "Multiplication in Scientific Notation",
+      "Division in Scientific Notation"
+    ]
+  },
+  {
+    "meta": {
+      "book": "Physics Grade 9",
+      "board": "Punjab Board",
+      "chap_num": 1,
+      "topic_num": "1.5",
+      "by": "content_team_x",
+      "ver": "1.0"
+    },
+    "qs": [
+      {
+        "q_txt": "What is the least count of a standard laboratory metre rule?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "0.1 mm"},
+          {"txt": "1 mm", "correct": true},
+          {"txt": "0.5 cm"},
+          {"txt": "1 cm"}
+        ],
+        "ans_exp": "The smallest division on a metre scale is 1 mm, which is its least count.",
+        "tags": ["length_instruments", "metre_rule", "least_count"],
+        "keywords": ["metre rule", "least count", "1 mm"]
+      },
+      {
+        "q_txt": "Which error occurs due to incorrect positioning of the eye while taking a reading from a metre rule?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Zero error"},
+          {"txt": "Systematic error"},
+          {"txt": "Parallax error", "correct": true},
+          {"txt": "Random error"}
+        ],
+        "ans_exp": "Parallax error is caused by reading an instrument from an angle instead of directly above the mark.",
+        "tags": ["length_instruments", "metre_rule", "parallax_error"],
+        "keywords": ["parallax error", "metre rule", "eye position"]
+      },
+      {
+        "q_txt": "A Vernier Callipers is used to measure small lengths down to:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "1/100th of a millimetre"},
+          {"txt": "1/10th of a millimetre", "correct": true},
+          {"txt": "1 millimetre"},
+          {"txt": "1 centimetre"}
+        ],
+        "ans_exp": "Vernier Callipers can measure accurately to 0.1 mm, which is 1/10th of a millimetre.",
+        "tags": ["length_instruments", "vernier_callipers", "precision"],
+        "keywords": ["vernier callipers", "precision", "0.1 mm"]
+      },
+      {
+        "q_txt": "The least count of a Vernier Callipers is typically:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "0.01 mm"},
+          {"txt": "0.1 mm", "correct": true},
+          {"txt": "0.5 mm"},
+          {"txt": "1.0 mm"}
+        ],
+        "ans_exp": "The least count of a common Vernier Callipers is 0.1 mm or 0.01 cm.",
+        "tags": ["length_instruments", "vernier_callipers", "least_count"],
+        "keywords": ["vernier callipers", "least count", "0.1 mm"]
+      },
+      {
+        "q_txt": "Which part of the Vernier Callipers is used to measure the internal diameter of an object?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Outside jaws (A and B)"},
+          {"txt": "Inside jaws (C and D)", "correct": true},
+          {"txt": "Tail or depth gauge"},
+          {"txt": "Main scale"}
+        ],
+        "ans_exp": "The inside jaws (C and D in Fig 1.2) are used for measuring internal dimensions like internal diameter.",
+        "tags": ["length_instruments", "vernier_callipers", "parts"],
+        "keywords": ["vernier callipers", "inside jaws", "internal diameter"]
+      },
+      {
+        "q_txt": "The pitch of a screw gauge is 0.5 mm and it has 50 divisions on its circular scale. What is its least count?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "0.1 mm"},
+          {"txt": "0.05 mm"},
+          {"txt": "0.01 mm", "correct": true},
+          {"txt": "0.001 mm"}
+        ],
+        "ans_exp": "Least count = Pitch / No. of divisions on circular scale = 0.5 mm / 50 = 0.01 mm.",
+        "tags": ["length_instruments", "micrometer_screw_gauge", "least_count"],
+        "keywords": ["micrometer screw gauge", "least count", "pitch"]
+      },
+      {
+        "q_txt": "What is meant by 'zero error' in a measuring instrument like Vernier Callipers or micrometer screw gauge?",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Zero error in a measuring instrument occurs when the zero marking of one scale (e.g., Vernier scale or circular scale) does not exactly coincide with the zero marking of the main scale when the instrument should be reading zero (e.g., jaws closed). This indicates an initial error in the instrument that needs to be accounted for in measurements.",
+          "exp": "Explain non-coincidence of zeros at the zero reading position."
+        },
+        "tags": ["length_instruments", "zero_error", "definitions"],
+        "keywords": ["zero error", "vernier callipers", "micrometer screw gauge"]
+      },
+      {
+        "q_txt": "Describe how to measure the length of a small cylindrical rod using Vernier Callipers, assuming there is no zero error.",
+        "q_type": "SAQ",
+        "marks": 4,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "1. Place the cylindrical rod firmly between the outside jaws (A and B) of the Vernier Callipers.\n2. Read the main scale marking that is just to the left of or coincides with the zero of the Vernier scale. This is the main scale reading (M.S.R).\n3. Find the division on the Vernier scale that exactly coincides with any division on the main scale. This is the Vernier scale reading (V.S.R).\n4. Calculate the measured length: Length = M.S.R + (V.S.R × Least Count). The least count is typically 0.1 mm or 0.01 cm.",
+          "exp": "Steps should include placing the object, reading main scale, reading Vernier scale, and calculating the final length."
+        },
+        "tags": ["length_instruments", "vernier_callipers", "measurement_procedure"],
+        "keywords": ["vernier callipers", "measurement", "procedure"]
+      },
+      {
+        "q_txt": "What is the function of the ratchet in a micrometer screw gauge?",
+        "q_type": "SAQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "The ratchet in a micrometer screw gauge prevents over-tightening of the spindle on the object being measured by making a clicking sound when the appropriate pressure is applied, ensuring consistent measurements.",
+          "exp": "Focus on preventing over-tightening and ensuring consistent pressure."
+        },
+        "tags": ["length_instruments", "micrometer_screw_gauge", "parts"],
+        "keywords": ["micrometer screw gauge", "ratchet", "over-tightening"]
+      },
+      {
+        "q_txt": "A student measures the thickness of a book page using a micrometer screw gauge. The main scale reading is 0.0 mm, and the 15th division of the circular scale (with 50 divisions and 0.5 mm pitch) coincides with the main scale line. What is the thickness of the page?",
+        "q_type": "Numerical",
+        "marks": 3,
+        "cog_lvl": "APPLY",
+        "diff": "HARD",
+        "ans_detail": {
+          "txt": "Main Scale Reading (M.S.R) = 0.0 mm\nPitch = 0.5 mm\nNumber of divisions on circular scale = 50\nLeast Count (L.C.) = Pitch / No. of circular divisions = 0.5 mm / 50 = 0.01 mm\nCoinciding circular scale division = 15\nCircular Scale Reading = 15 × L.C. = 15 × 0.01 mm = 0.15 mm\nThickness = M.S.R + Circular Scale Reading = 0.0 mm + 0.15 mm = 0.15 mm",
+          "exp": "Correct calculation of L.C. and then the thickness."
+        },
+        "tags": ["length_instruments", "micrometer_screw_gauge", "reading_measurement"],
+        "keywords": ["micrometer screw gauge", "thickness", "calculation"]
+      },
+      {
+        "q_txt": "If the zero of the Vernier scale is on the right side of the zero of the main scale when the jaws are closed, the zero error is considered ______ and should be ______ from the observed reading.",
+        "q_type": "FIB",
+        "marks": 2,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "positive, subtracted"
+        },
+        "tags": ["length_instruments", "vernier_callipers", "zero_error"],
+        "keywords": ["vernier callipers", "zero error", "positive", "subtracted"]
+      },
+      {
+        "q_txt": "The ______ of an instrument is the smallest measurement that can be taken accurately with it.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "least count"
+        },
+        "tags": ["least_count", "definitions"],
+        "keywords": ["least count", "smallest measurement"]
+      },
+      {
+        "q_txt": "A measuring tape typically has a least count of 1 cm.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. A measuring tape usually has a least count of 1 mm.",
+        "tags": ["length_instruments", "measuring_tape", "least_count"],
+        "keywords": ["measuring tape", "least count"]
+      },
+      {
+        "q_txt": "A micrometer screw gauge is generally more precise than a Vernier Callipers.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True", "correct": true},
+          {"txt": "False"}
+        ],
+        "ans_exp": "True. A micrometer screw gauge (L.C. ~0.01 mm) has a smaller least count than a Vernier Callipers (L.C. ~0.1 mm), making it more precise for smaller measurements.",
+        "tags": ["length_instruments", "precision_comparison"],
+        "keywords": ["micrometer screw gauge", "vernier callipers", "precision"]
+      },
+      {
+        "q_txt": "Fig 1.3 shows a Vernier Callipers reading. If the main scale shows 4.3 cm just before the Vernier zero, and the 4th Vernier division coincides, what is the length? (Assume L.C. = 0.01 cm)",
+        "q_type": "IMAGE_BASED_SAQ",
+        "marks": 2,
+        "cog_lvl": "APPLY",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Main Scale Reading = 4.3 cm\nVernier Scale Reading = 4\nLeast Count = 0.01 cm\nLength = M.S.R + (V.S.R × L.C.) = 4.3 cm + (4 × 0.01 cm) = 4.3 cm + 0.04 cm = 4.34 cm.",
+          "exp": "Apply the formula correctly based on the provided values (similar to the example in text)."
+        },
+        "tags": ["length_instruments", "vernier_callipers", "reading_measurement"],
+        "keywords": ["vernier callipers", "reading", "figure_1.3"]
+      }
+    ],
+    "key_terms_topic": [
+      "Metre Rule",
+      "Measuring Tape",
+      "Vernier Callipers",
+      "Micrometer Screw Gauge",
+      "Least Count",
+      "Parallax Error",
+      "Main Scale",
+      "Vernier Scale",
+      "Circular Scale (Thimble)",
+      "Sleeve",
+      "Pitch (of screw gauge)",
+      "Zero Error",
+      "Positive Zero Error",
+      "Negative Zero Error",
+      "Jaws (inside/outside)",
+      "Tail (depth gauge)",
+      "Anvil",
+      "Spindle",
+      "Ratchet"
+    ]
+  }
+]
+
+
+Okay, I will generate questions for the next five topics from Chapter 1:
+
+1.6 Mass Measuring Instruments
+
+1.7 Time Measuring Instruments
+
+1.8 Volume Measuring Instruments (including Displacement Can Method)
+
+1.9 Errors in Measurements (Human, Systematic, Random)
+
+1.10 Uncertainty in a Measurement
+
+Here is the JSON output for these topics:
+
+[
+  {
+    "meta": {
+      "book": "Physics Grade 9",
+      "board": "Punjab Board",
+      "chap_num": 1,
+      "topic_num": "1.6",
+      "by": "content_team_x",
+      "ver": "1.0"
+    },
+    "qs": [
+      {
+        "q_txt": "Which instrument is commonly used in laboratories to find the mass of an object by comparing it with known standard masses?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Spring balance"},
+          {"txt": "Measuring cylinder"},
+          {"txt": "Physical balance", "correct": true},
+          {"txt": "Stopwatch"}
+        ],
+        "ans_exp": "A physical balance is used for precise mass measurement in laboratories by comparing unknown mass with standard masses.",
+        "tags": ["mass_instruments", "physical_balance", "lab_equipment"],
+        "keywords": ["physical balance", "mass measurement", "standard masses"]
+      },
+      {
+        "q_txt": "What is the difference between mass and weight?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "They are the same physical quantity."},
+          {"txt": "Mass is a force, weight is the quantity of matter."},
+          {"txt": "Mass is the quantity of matter, weight is the force of gravity on the mass.", "correct": true},
+          {"txt": "Mass is measured in Newtons, weight in kilograms."}
+        ],
+        "ans_exp": "Mass is the amount of matter in a body, while weight is the gravitational force acting on that mass.",
+        "tags": ["mass_vs_weight", "definitions"],
+        "keywords": ["mass", "weight", "gravity", "matter"]
+      },
+      {
+        "q_txt": "A spring balance is used to measure:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Mass of an object"},
+          {"txt": "Volume of an object"},
+          {"txt": "Weight of an object", "correct": true},
+          {"txt": "Density of an object"}
+        ],
+        "ans_exp": "A spring balance measures the force of gravity on an object, which is its weight (Fig. 1.8).",
+        "tags": ["mass_instruments", "spring_balance", "weight"],
+        "keywords": ["spring balance", "weight measurement"]
+      },
+      {
+        "q_txt": "The process of finding the mass of an object by comparing it with known standard masses using a physical balance is called:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Calibrating"},
+          {"txt": "Weighing", "correct": true},
+          {"txt": "Levelling"},
+          {"txt": "Estimating"}
+        ],
+        "ans_exp": "The text defines 'weighing' as the process of finding mass by comparison with standard masses.",
+        "tags": ["mass_instruments", "physical_balance", "terminology"],
+        "keywords": ["weighing", "physical balance", "mass"]
+      },
+      {
+        "q_txt": "Before using a physical balance, what is the first step involving the levelling screws?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "Placing the object on the left pan."},
+          {"txt": "Turning the knob to raise the pans."},
+          {"txt": "Levelling the base until the plumb line is exactly above the pointed mark.", "correct": true},
+          {"txt": "Placing known weights on the right pan."}
+        ],
+        "ans_exp": "Step 1 in using a physical balance is to level its base using the levelling screws and plumb line.",
+        "tags": ["mass_instruments", "physical_balance_procedure"],
+        "keywords": ["physical balance", "levelling screws", "plumb line"]
+      },
+      {
+        "q_txt": "On which principle is a physical balance based?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "Archimedes' principle"},
+          {"txt": "Principle of moments (levers)", "correct": true},
+          {"txt": "Hooke's law"},
+          {"txt": "Pascal's law"}
+        ],
+        "ans_exp": "The text states that a physical balance is based on the principle of levers.",
+        "tags": ["mass_instruments", "physical_balance", "principle"],
+        "keywords": ["physical balance", "principle of levers"]
+      },
+      {
+        "q_txt": "What is mass? State its SI unit.",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "Mass is the measure of the quantity of matter in a body. Its SI unit is the kilogram (kg).",
+          "exp": "Definition of mass and its correct SI unit are required."
+        },
+        "tags": ["mass", "definitions", "si_units"],
+        "keywords": ["mass", "definition", "kilogram"]
+      },
+      {
+        "q_txt": "What is weight? State its SI unit.",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "Weight is the force by which a body is attracted towards the Earth (or another celestial body). Its SI unit is the Newton (N), as it is a force.",
+          "exp": "Definition of weight and its correct SI unit are required."
+        },
+        "tags": ["weight", "definitions", "si_units"],
+        "keywords": ["weight", "definition", "newton"]
+      },
+      {
+        "q_txt": "List three important steps to follow when measuring mass using a physical balance after levelling it.",
+        "q_type": "SAQ",
+        "marks": 3,
+        "cog_lvl": "REMEMBER",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "1. Turn the knob so that the pans are raised and check if the beam is horizontal and the pointer is at the centre. Adjust balancing screws if needed.\n2. Place the object to be weighed on the left pan.\n3. Place known weights from the weight box in the right pan using forceps, adjusting until the pointer remains on zero or oscillates equally.",
+          "exp": "Focus on steps 2, 3, 4, and 5 from the textbook's procedure."
+        },
+        "tags": ["mass_instruments", "physical_balance_procedure"],
+        "keywords": ["physical balance", "procedure", "mass measurement"]
+      },
+      {
+        "q_txt": "Why are forceps used to handle known weights when using a physical balance?",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "Forceps are used to handle known weights to prevent transfer of oils, moisture, or dirt from hands to the weights. Such contaminants can alter the mass of the standard weights, leading to inaccurate measurements.",
+          "exp": "Focus on maintaining the accuracy of standard weights."
+        },
+        "tags": ["mass_instruments", "physical_balance_procedure", "accuracy"],
+        "keywords": ["forceps", "standard weights", "accuracy", "contamination"]
+      },
+      {
+        "q_txt": "The digital electronic balance can measure mass to an accuracy of the order of _____.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "0.1 mg (or 0.0001 g)"
+        },
+        "tags": ["mass_instruments", "digital_balance", "precision"],
+        "keywords": ["digital electronic balance", "accuracy", "0.1mg"]
+      },
+      {
+        "q_txt": "In a physical balance, the object to be weighed is typically placed on the ______ pan.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "left"
+        },
+        "tags": ["mass_instruments", "physical_balance_procedure"],
+        "keywords": ["physical balance", "left pan"]
+      },
+      {
+        "q_txt": "The term 'weight' is often used in daily life instead of 'mass', but in physics, they have different meanings.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True", "correct": true},
+          {"txt": "False"}
+        ],
+        "ans_exp": "True. The text explicitly states this common confusion and clarifies the distinct physical meanings.",
+        "tags": ["mass_vs_weight", "terminology"],
+        "keywords": ["mass", "weight", "daily life", "physics"]
+      },
+      {
+        "q_txt": "A physical balance directly measures the weight of an object.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. A physical balance measures mass by comparing it with known standard masses. A spring balance measures weight.",
+        "tags": ["mass_instruments", "physical_balance", "mass_vs_weight"],
+        "keywords": ["physical balance", "mass", "weight"]
+      },
+      {
+        "q_txt": "When using a physical balance, the pointer should oscillate equally on both sides of the zero of the scale for an accurate measurement.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True", "correct": true},
+          {"txt": "False"}
+        ],
+        "ans_exp": "True, this indicates that the masses on both pans are equal or the balance is correctly zeroed with the object.",
+        "tags": ["mass_instruments", "physical_balance_procedure"],
+        "keywords": ["physical balance", "pointer", "oscillation"]
+      }
+    ],
+    "key_terms_topic": [
+      "Mass",
+      "Weight",
+      "Physical Balance",
+      "Spring Balance",
+      "Standard Masses",
+      "Weighing",
+      "Levelling Screws",
+      "Plumb Line",
+      "Principle of Levers",
+      "Forceps",
+      "Digital Electronic Balance",
+      "Kilogram (kg)",
+      "Newton (N)"
+    ]
+  },
+  {
+    "meta": {
+      "book": "Physics Grade 9",
+      "board": "Punjab Board",
+      "chap_num": 1,
+      "topic_num": "1.7",
+      "by": "content_team_x",
+      "ver": "1.0"
+    },
+    "qs": [
+      {
+        "q_txt": "What is the least count of a typical mechanical stopwatch, where each small division represents one tenth of a second?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "1 second"},
+          {"txt": "0.5 seconds"},
+          {"txt": "0.1 seconds", "correct": true},
+          {"txt": "0.01 seconds"}
+        ],
+        "ans_exp": "If each small division is 1/10th of a second, the least count is 0.1 seconds.",
+        "tags": ["time_instruments", "stopwatch", "least_count"],
+        "keywords": ["mechanical stopwatch", "least count", "0.1s"]
+      },
+      {
+        "q_txt": "Digital stopwatches available nowadays can often measure time to an accuracy of:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "One tenth of a second (0.1 s)"},
+          {"txt": "One hundredth of a second (0.01 s)", "correct": true},
+          {"txt": "One thousandth of a second (0.001 s)"},
+          {"txt": "One second (1 s)"}
+        ],
+        "ans_exp": "The text mentions that electronic/digital watches can measure one hundredth part of a second (0.01 s).",
+        "tags": ["time_instruments", "digital_stopwatch", "precision"],
+        "keywords": ["digital stopwatch", "accuracy", "0.01s"]
+      },
+      {
+        "q_txt": "How is a mechanical stopwatch typically started, stopped, and reset?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "Using three separate buttons"},
+          {"txt": "By shaking the device"},
+          {"txt": "By pressing the same knob on top sequentially", "correct": true},
+          {"txt": "It resets automatically after stopping"}
+        ],
+        "ans_exp": "A mechanical stopwatch usually uses a single knob on top: pressed once to start, again to stop, and a third time to reset.",
+        "tags": ["time_instruments", "mechanical_stopwatch", "operation"],
+        "keywords": ["mechanical stopwatch", "operation", "knob"]
+      },
+      {
+        "q_txt": "Which timing device listed in Table 1.7 is most suitable for measuring very short time intervals of about 10⁻¹⁰ seconds?",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Digital stopwatch"},
+          {"txt": "Analogue stopwatch"},
+          {"txt": "Atomic clock", "correct": true},
+          {"txt": "Ticker-tape timer"}
+        ],
+        "ans_exp": "Table 1.7 indicates that an atomic clock measures very short time intervals, around 10⁻¹⁰ seconds.",
+        "tags": ["time_instruments", "atomic_clock", "precision"],
+        "keywords": ["atomic clock", "short time intervals"]
+      },
+      {
+        "q_txt": "A ticker-tape timer measures short time intervals of:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "0.01 s"},
+          {"txt": "0.02 s", "correct": true},
+          {"txt": "0.1 s"},
+          {"txt": "0.2 s"}
+        ],
+        "ans_exp": "According to Table 1.7, a ticker-tape timer measures short time intervals of 0.02 s.",
+        "tags": ["time_instruments", "ticker_tape_timer"],
+        "keywords": ["ticker-tape timer", "time interval", "0.02s"]
+      },
+      {
+        "q_txt": "What is a stopwatch used for?",
+        "q_type": "SAQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "A stopwatch is used to measure the duration of time of an event.",
+          "exp": "Simple definition of its purpose."
+        },
+        "tags": ["time_instruments", "stopwatch", "purpose"],
+        "keywords": ["stopwatch", "time duration", "event"]
+      },
+      {
+        "q_txt": "Describe the typical dial of a mechanical stopwatch as mentioned in the text.",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "REMEMBER",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "A mechanical stopwatch typically contains two needles, one for seconds and another for minutes. The dial is usually divided into 30 big divisions, each being further divided into 10 small divisions. Each small division represents one tenth (1/10) of a second.",
+          "exp": "Key features: two needles, divisions for seconds and minutes, subdivision of second marks."
+        },
+        "tags": ["time_instruments", "mechanical_stopwatch", "description"],
+        "keywords": ["mechanical stopwatch", "dial", "needles", "divisions"]
+      },
+      {
+        "q_txt": "How does the precision of a digital stopwatch generally compare to that of a mechanical stopwatch?",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "A digital stopwatch is generally more precise than a mechanical stopwatch. A typical mechanical stopwatch can measure to the nearest 0.1 seconds, while a digital stopwatch can often measure to the nearest 0.01 seconds.",
+          "exp": "Comparison of their least counts/accuracy."
+        },
+        "tags": ["time_instruments", "stopwatch_comparison", "precision"],
+        "keywords": ["digital stopwatch", "mechanical stopwatch", "precision", "least count"]
+      },
+      {
+        "q_txt": "Name two types of clocks/watches from Table 1.7 suitable for measuring longer time intervals (hours, minutes, seconds).",
+        "q_type": "SAQ",
+        "marks": 2,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "1. Watch/Clock\n2. Pendulum clock",
+          "exp": "Any two from the table that fit the description."
+        },
+        "tags": ["time_instruments", "clocks", "long_intervals"],
+        "keywords": ["watch", "clock", "pendulum clock", "long time intervals"]
+      },
+      {
+        "q_txt": "What is a radioactive decay clock used for, according to Table 1.7?",
+        "q_type": "SAQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "A radioactive decay clock is used to measure (in years) the age of remains from thousands of years ago.",
+          "exp": "Direct recall from Table 1.7."
+        },
+        "tags": ["time_instruments", "radioactive_decay_clock"],
+        "keywords": ["radioactive decay clock", "age measurement"]
+      },
+      {
+        "q_txt": "The sandclock in Activity 1.5 is a model for measuring ______.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "time"
+        },
+        "tags": ["time_instruments", "sandclock", "activity_1.5"],
+        "keywords": ["sandclock", "time measurement"]
+      },
+      {
+        "q_txt": "A mechanical stopwatch usually has needles for seconds and ______.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "minutes"
+        },
+        "tags": ["time_instruments", "mechanical_stopwatch"],
+        "keywords": ["mechanical stopwatch", "needles", "minutes"]
+      },
+      {
+        "q_txt": "All stopwatches have the same least count.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. Mechanical and digital stopwatches typically have different least counts (e.g., 0.1 s vs 0.01 s).",
+        "tags": ["time_instruments", "stopwatch", "least_count"],
+        "keywords": ["stopwatch", "least count", "variation"]
+      },
+      {
+        "q_txt": "An electronic timer mentioned in 'Do You Know?' can measure time intervals as short as one-ten thousands (1/10,000) of a second.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True", "correct": true},
+          {"txt": "False"}
+        ],
+        "ans_exp": "True, as stated in the 'Do You Know?' box on page 23.",
+        "tags": ["time_instruments", "electronic_timer", "precision"],
+        "keywords": ["electronic timer", "precision", "1/10000 s"]
+      },
+      {
+        "q_txt": "The accuracy of an analogue stopwatch is typically ±0.01 s.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. According to Table 1.7, the accuracy of an analogue stopwatch is typically ±0.1 s. A digital stopwatch is ±0.01 s.",
+        "tags": ["time_instruments", "analogue_stopwatch", "accuracy"],
+        "keywords": ["analogue stopwatch", "accuracy"]
+      }
+    ],
+    "key_terms_topic": [
+      "Stopwatch (Mechanical, Digital/Electronic)",
+      "Time Duration",
+      "Least Count",
+      "Dial",
+      "Needles (seconds, minutes)",
+      "Knob (start, stop, reset)",
+      "Atomic Clock",
+      "Ticker-tape Timer",
+      "Watch/Clock",
+      "Pendulum Clock",
+      "Radioactive Decay Clock",
+      "Sandclock",
+      "Accuracy"
+    ]
+  },
+  {
+    "meta": {
+      "book": "Physics Grade 9",
+      "board": "Punjab Board",
+      "chap_num": 1,
+      "topic_num": "1.8",
+      "by": "content_team_x",
+      "ver": "1.0"
+    },
+    "qs": [
+      {
+        "q_txt": "A measuring cylinder is typically made of:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "Metal only"},
+          {"txt": "Wood or opaque plastic"},
+          {"txt": "Glass or transparent plastic", "correct": true},
+          {"txt": "Ceramic material"}
+        ],
+        "ans_exp": "Measuring cylinders are made of glass or transparent plastic to allow clear observation of the liquid level.",
+        "tags": ["volume_instruments", "measuring_cylinder", "material"],
+        "keywords": ["measuring cylinder", "material", "glass", "transparent plastic"]
+      },
+      {
+        "q_txt": "When reading the volume of water in a measuring cylinder, the eye should be level with:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "The top edge of the curved surface (meniscus)"},
+          {"txt": "The bottom edge of the curved surface (meniscus)", "correct": true},
+          {"txt": "Any point on the curved surface"},
+          {"txt": "Slightly above the liquid surface"}
+        ],
+        "ans_exp": "For water (concave meniscus), the reading is taken corresponding to the bottom edge of the meniscus, with the eye level with it.",
+        "tags": ["volume_instruments", "measuring_cylinder", "reading_meniscus"],
+        "keywords": ["measuring cylinder", "meniscus", "water", "concave"]
+      },
+      {
+        "q_txt": "The curved upper surface of a liquid in a cylinder is called:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "The horizon"},
+          {"txt": "The meniscus", "correct": true},
+          {"txt": "The volume mark"},
+          {"txt": "The displacement level"}
+        ],
+        "ans_exp": "The meniscus is the term for the curved top surface of a liquid in a container.",
+        "tags": ["volume_instruments", "meniscus", "terminology"],
+        "keywords": ["meniscus", "liquid surface"]
+      },
+      {
+        "q_txt": "To find the volume of an irregular solid that does not dissolve in water using a measuring cylinder, you would measure:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "The initial volume of water only."},
+          {"txt": "The final volume of water after adding the solid only."},
+          {"txt": "The difference between the final and initial water levels.", "correct": true},
+          {"txt": "The mass of the solid divided by its density."}
+        ],
+        "ans_exp": "The volume of the solid is found by the displacement method: the difference between the water level after immersing the solid and the initial water level.",
+        "tags": ["volume_instruments", "measuring_cylinder", "solid_volume", "displacement"],
+        "keywords": ["volume of solid", "displacement method", "measuring cylinder"]
+      },
+      {
+        "q_txt": "A displacement can (or overflow can) is used to measure the volume of a solid when:",
+        "q_type": "MCQ",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "opts": [
+          {"txt": "The solid is very small."},
+          {"txt": "The solid dissolves in the liquid."},
+          {"txt": "The solid does not fit into the measuring cylinder.", "correct": true},
+          {"txt": "The solid is less dense than the liquid."}
+        ],
+        "ans_exp": "A displacement can is used for larger solids that cannot be accommodated by a standard measuring cylinder.",
+        "tags": ["volume_instruments", "displacement_can", "purpose"],
+        "keywords": ["displacement can", "overflow can", "volume of solid", "large solid"]
+      },
+      {
+        "q_txt": "What units are commonly marked on a measuring cylinder's scale?",
+        "q_type": "SAQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "A measuring cylinder's scale is commonly marked in cubic centimetres (cm³ or cc) or millilitres (mL).",
+          "exp": "Correct units as per the text."
+        },
+        "tags": ["volume_instruments", "measuring_cylinder", "units"],
+        "keywords": ["measuring cylinder", "units", "cm^3", "mL"]
+      },
+      {
+        "q_txt": "Describe the correct procedure for reading the volume of a liquid in a measuring cylinder, including eye position and how to read a concave meniscus.",
+        "q_type": "SAQ",
+        "marks": 3,
+        "cog_lvl": "REMEMBER",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "1. Place the measuring cylinder on a horizontal surface.\n2. Keep your eye level with the meniscus of the liquid surface.\n3. For a concave meniscus (like water), the reading is taken corresponding to the bottom edge of the curved surface.",
+          "exp": "Ensure all three points are covered: horizontal surface, eye level, and correct part of meniscus for concave shape."
+        },
+        "tags": ["volume_instruments", "measuring_cylinder", "reading_procedure", "meniscus"],
+        "keywords": ["measuring cylinder", "reading volume", "eye position", "concave meniscus"]
+      },
+      {
+        "q_txt": "How is the volume of an irregular solid determined using the displacement can method? (Activity 1.6 general principle applied to displacement can)",
+        "q_type": "SAQ",
+        "marks": 4,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "MEDIUM",
+        "ans_detail": {
+          "txt": "1. Place the displacement can on a horizontal table and fill it with water until water starts overflowing through its spout (opening).\n2. Wait until the water stops dripping from the spout.\n3. Place an empty beaker under the spout.\n4. Gently lower the irregular solid (tied with a thread if necessary) into the displacement can until it is fully submerged.\n5. Collect the water that overflows into the beaker.\n6. Measure the volume of this collected water using a measuring cylinder. This volume is equal to the volume of the solid.",
+          "exp": "Detailed steps for using the displacement can, including initial setup, immersion, collection, and final measurement."
+        },
+        "tags": ["volume_instruments", "displacement_can", "solid_volume_procedure"],
+        "keywords": ["displacement can", "overflow can", "volume of solid", "procedure"]
+      },
+      {
+        "q_txt": "What precaution is mentioned regarding eye position when taking a reading from a measuring cylinder?",
+        "q_type": "SAQ",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "While taking a reading, keep your eye in front and in line with the lower meniscus of the water (or appropriate part of meniscus for other liquids).",
+          "exp": "Correct eye positioning to avoid parallax error."
+        },
+        "tags": ["volume_instruments", "measuring_cylinder", "precaution", "eye_position"],
+        "keywords": ["measuring cylinder", "precaution", "eye level", "meniscus"]
+      },
+      {
+        "q_txt": "If the initial volume of water in a measuring cylinder is 50 cm³ and after immersing a stone, the water level rises to 75 cm³, what is the volume of the stone?",
+        "q_type": "Numerical",
+        "marks": 2,
+        "cog_lvl": "APPLY",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "Initial volume (V₁) = 50 cm³\nFinal volume (V₂) = 75 cm³\nVolume of stone = V₂ - V₁ = 75 cm³ - 50 cm³ = 25 cm³.",
+          "exp": "Simple subtraction to find the displaced volume."
+        },
+        "tags": ["volume_instruments", "measuring_cylinder", "solid_volume_calculation"],
+        "keywords": ["volume of solid", "displacement", "calculation"]
+      },
+      {
+        "q_txt": "The surface of mercury in a cylinder curves upward and is called a ______ surface.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "convex"
+        },
+        "tags": ["volume_instruments", "meniscus", "mercury"],
+        "keywords": ["mercury", "meniscus", "convex"]
+      },
+      {
+        "q_txt": "A measuring cylinder must be placed on a ______ surface for accurate readings.",
+        "q_type": "FIB",
+        "marks": 1,
+        "cog_lvl": "REMEMBER",
+        "diff": "EASY",
+        "ans_detail": {
+          "txt": "horizontal"
+        },
+        "tags": ["volume_instruments", "measuring_cylinder", "accuracy"],
+        "keywords": ["measuring cylinder", "horizontal surface"]
+      },
+      {
+        "q_txt": "A displacement can is only used to measure the volume of liquids.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "opts": [
+          {"txt": "True"},
+          {"txt": "False", "correct": true}
+        ],
+        "ans_exp": "False. A displacement can is primarily used to measure the volume of solids (especially irregular ones that don't fit in a measuring cylinder) by the amount of liquid they displace.",
+        "tags": ["volume_instruments", "displacement_can", "purpose"],
+        "keywords": ["displacement can", "volume of solid"]
+      },
+      {
+        "q_txt": "The 'Do You Know?' fact about ancient Chinese estimating grain volume by sounding vessels relates to a form of volume estimation.",
+        "q_type": "T/F",
+        "marks": 1,
+        "cog_lvl": "UNDERSTAND",
+        "diff": "EASY",
+        "

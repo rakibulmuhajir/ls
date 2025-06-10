@@ -1,9 +1,9 @@
 import { useCallback, useContext } from 'react';
-import { AnimationContext } from '../contexts/AnimationContext';
-import type { Particle, Bond, PhysicsState } from '../core/types';
+import { UnifiedAnimationContext } from '../UnifiedAnimationProvider';
+import type { Particle, Bond, PhysicsState, AnimationContextAPI } from '../core/types';
 
 export const usePhysics = () => {
-  const context = useContext(AnimationContext);
+  const context = useContext(UnifiedAnimationContext) as AnimationContextAPI;
 
   if (!context) {
     throw new Error('usePhysics must be used within an AnimationProvider');

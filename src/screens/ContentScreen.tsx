@@ -3,7 +3,7 @@
 // ============================================
 
 import React, { useState, useMemo } from 'react';
-import { LinearGradient } from 'expo-linear-gradient';
+// import { LinearGradient } from 'expo-linear-gradient';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native'; // Added StyleSheet
 import { useRoute } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -58,11 +58,11 @@ const SectionGroup: React.FC<{
     },
     groupHeader: {
       // This is like the "Card Title" section in HTML
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
+      flexDirection: 'row' as const,
+      alignItems: 'center' as const,
+      justifyContent: 'space-between' as const,
       marginBottom: theme.spacing.lg, // 20px margin like in HTML card-title
-    },
+    } as const,
     // groupHeaderPressed: { // Can remove if activeOpacity is enough
     //   opacity: 0.9,
     // },
@@ -165,18 +165,18 @@ const SectionItem: React.FC<{
       // Add a subtle border if it's not the last item, or always if preferred
       borderBottomWidth: isLast ? 0 : 1,
       borderBottomColor: theme.colors.outlineVariant,
-      overflow: 'hidden', // ensure child borderRadius is clipped
-    },
+      overflow: 'hidden' as const, // ensure child borderRadius is clipped
+    } as const,
     sectionHeader: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
+      flexDirection: 'row' as const,
+      alignItems: 'center' as const,
+      justifyContent: 'space-between' as const,
       paddingVertical: theme.spacing.md, // More padding
       paddingHorizontal: theme.spacing.md,
       backgroundColor: sectionHeaderBackgroundColor, // Subtle background from theme
       // borderRadius: theme.borderRadius.sm, // Removed as sectionContainer handles rounding
       // marginBottom: theme.spacing.sm, // Removed, content flows directly
-    },
+    } as const,
     sectionTitle: {
       fontSize: theme.typography.fontSize.lg, // 18px
       fontWeight: theme.typography.fontWeight.medium, // Slightly less than group title
@@ -275,11 +275,11 @@ const ContentElement: React.FC<{
       borderRadius: theme.borderRadius.sm, // 4px
     },
     listItem: {
-      flexDirection: 'row',
-      alignItems: 'flex-start',
+      flexDirection: 'row' as const,
+      alignItems: 'flex-start' as const,
       marginBottom: theme.spacing.sm,
       paddingLeft: theme.spacing.sm,
-    },
+    } as const,
     listBullet: {
       fontSize: theme.typography.fontSize.base,
       color: theme.colors.primary, // Interactive color for bullet
@@ -340,17 +340,17 @@ const ContentElement: React.FC<{
         backgroundColor: theme.colors.outline,
         borderRadius: theme.borderRadius.md,
         padding: theme.spacing.md,
-        alignItems: 'center',
+        alignItems: 'center' as const,
         marginVertical: theme.spacing.sm,
         borderWidth: 1,
         borderColor: theme.colors.outlineVariant,
-        borderStyle: 'dashed',
-      },
+        borderStyle: 'dashed' as const,
+      } as const,
       placeholderText: {
         fontSize: theme.typography.fontSize.sm,
         color: theme.colors.onSurfaceVariant, // Muted text
-        fontStyle: 'italic',
-      },
+        fontStyle: 'italic' as const,
+      } as const,
   }));
 
   // ... (decodeHtmlEntities, parseWordTags, formatText, renderTextWithAnimations, renderListItems, renderMemoryTechniques remain the same logistically)
@@ -623,23 +623,23 @@ export default function ContentScreen() {
       fontSize: theme.typography.fontSize['2xl'], // 35px (HTML was 2.2rem)
       fontWeight: theme.typography.fontWeight.semibold, // HTML was 600
       color: theme.colors.onBackground, // #1a202c
-      textAlign: 'center',
+      textAlign: 'center' as const,
       marginBottom: theme.spacing.xl, // HTML used 8px for h1, then 30px to card. Let's use more here.
       paddingHorizontal: theme.spacing.md, // Ensure it doesn't touch edges
-    },
+    } as const,
     // Error/Loading state styling if needed
     centeredMessage: {
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
+      justifyContent: 'center' as const,
+      alignItems: 'center' as const,
       padding: theme.spacing.xl,
-    },
+    } as const,
     errorMessage: {
       fontSize: theme.typography.fontSize.lg,
       color: theme.colors.error,
-      textAlign: 'center',
+      textAlign: 'center' as const,
       marginBottom: theme.spacing.md,
-    },
+    } as const,
   }));
 
   const handleWordPress = (wordData: WordData) => {
@@ -655,12 +655,9 @@ export default function ContentScreen() {
   const ScreenWrapper: React.FC<{children: React.ReactNode}> = ({children}) => {
     if (theme.colors.backgroundGradient) {
         return (
-            <LinearGradient
-                colors={[theme.colors.backgroundGradient.start, theme.colors.backgroundGradient.end]}
-                style={styles.gradientContainer}
-            >
+            <View style={[styles.gradientContainer, {backgroundColor: theme.colors.background}]}>
                 {children}
-            </LinearGradient>
+            </View>
         );
     }
     return <View style={[styles.container, { backgroundColor: theme.colors.background }]}>{children}</View>;
@@ -675,7 +672,7 @@ export default function ContentScreen() {
 
         {error && !loading && (
             <View style={styles.centeredMessage}>
-                <Text style={styles.errorMessage}>Error loading content: {error.message}</Text>
+                <Text style={styles.errorMessage}>Error loading content: {String(error?.message || error)}</Text>
                 <TouchableOpacity onPress={refetch}>
                     <Text style={{color: theme.colors.primary, fontSize: theme.typography.fontSize.lg}}>Try Again</Text>
                 </TouchableOpacity>

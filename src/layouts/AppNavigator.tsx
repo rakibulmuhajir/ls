@@ -10,6 +10,8 @@ import ContentScreen from '@/screens/ContentScreen';
 import FeaturesScreen from '@/screens/FeaturesScreen';
 import AboutScreen from '@/screens/AboutScreen';
 import LabExperimentScreen from '@/screens/LabExperimentScreen';
+import BreatheScreen from '@/screens/BreatheScreen';
+import SkiaTestScreen from '@/screens/SkiaTestScreen';
 
 export type RootStackParamList = {
   Books: undefined;
@@ -19,6 +21,8 @@ export type RootStackParamList = {
   Features: undefined;
   Updates: undefined;
   About: undefined;
+  LabExperiment: undefined;
+  Breathe: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -35,6 +39,9 @@ const AppNavigator = () => (
       {/* <Stack.Screen name="Updates" component={UpdatesScreen} options={{ title: 'Updates' }} /> */}
       <Stack.Screen name="About" component={AboutScreen} options={{ title: 'About LearnSpark' }} />
       <Stack.Screen name="LabExperiment" component={LabExperimentScreen} options={{ title: 'Chemistry Lab' }} />
+      <Stack.Screen name="Breathe" component={BreatheScreen} options={{ title: 'Breathing Exercise' }} />
+      <Stack.Screen name="SkiaTest" component={SkiaTestScreen} options={{ title: 'Skia Test' }} />
+      {/* Add more screens as needed */}
     </Stack.Navigator>
   </NavigationContainer>
 );

@@ -1,0 +1,1480 @@
+﻿    Chapter 4  
+  
+                            Turning Effects of Force  
+
+  
+
+  Student             Learning             Outcomes  
+
+  After completing this chapter, students will be able to:  
+
+       •     [SLO: P -09 - B -44] Differentiate between like and unlike parallel forces.  
+
+       •     [SLO: P -09 -  B -45] Analyse problems involving turning effects of forces [Student  
+             should know that moment of a force = force × perpendicular distance from the pivot  
+             and be able to use this in simple problems and give examples and applications of  
+             turning effects in real life]  
+
+       •     [SLO: P -09 - B - 46] State what is meant by centre of mass and centre of gravity.  
+
+       •     [SLO: P -09 - B - 47] Describe how to determine the position of the centre of gravity  
+             of a plane lamina using a plumb line  
+
+  •          [SLO:  P  -09  -  B  - 35]  Describe and identify states of equilibrium.  [This includes the  
+             types, conditions and states of equilibrium and identifying their examples from daily  
+             life.]  
+
+       •     [SLO: P -09 - B - 48] Analyse, qualitatively, the effect of the position of the centre of  
+             gravity on the stability of simple objects  
+
+       •     [SLO:  P-09-B-49]  Propose  how  the  stability  of  an  object  can  be  improved  [by  
+             lowering the centre of mass and increasing the base area of the object]  
+
+       •     [SLO: P-09-B-50] Illustrate the applications of stability physics in real life [Such as this  
+             concept is central to engineering technology such as balancing toys and racing cars  
+
+       •     [SLO:  P-09-B-51]  Predict  qualitatively  the  motion  of  rotating  bodies  [Describe  
+             qualitatively that, analogous to Newton's  1st law for transnational motion (, an object  
+             that is rotating will continue to do so at the same rate unless acted upon by a resultant  
+             moment  (in  which  case  it  would  begin  to  accelerate  or  decelerate  its  rotational  
+             motion)]  
+
+                                                        2  
+       •     [SLO: P-09-B-52] Describe qualitatively motion in a circular path due to a centripetal mv 
+             force. (Use of the formula  F  =             )  
+                                                c     r  
+       •     [SLO: P-09-B-53] Identify the sources of centripetal force in real life examples [e.g.,  
+             tension in a string for a stone being swirled around, gravity for the Moon orbiting the  
+             Earth]  
+
+           As we know, a force is a vector quantity, so it acts in a particular direction.  
+We  observe  various  effects  of  forces.  Some  forces  produce  acceleration  or  
+decelerating in a body, some tend to turn it around a point and some forces  
+balance each other acting in opposite directions.  
+           All those forces which act parallel to one another are known as parallel  
+forces. The points of application of such forces may be different.  
+
+                                                             80  
+  
+﻿  4.1 Like and Unlike Parallel Forces  
+                                                                                                                
+            If the parallel forces are acting in the same                                        
+direction, then they are called like parallel forces and                                          F1                        FF 
+
+                                                                                                                              22  
+if their directions are opposite to one another, they                                            
+                                                                                                 
+are called unlike parallel forces. Three forces  F1,  F2  
+                                                                                                 
+and F are shown in Fig. 4.1 acting on a rigid body at                                            
+          3  
+
+different points. Here, the forces  F  and  F  are like  
+                                                               1           2                                              F 
+                                                                                                                           3  
+parallel forces but F  and F  are unlike parallel forces.                                        
+                                  2          3                                                                Fig. 4.1  
+
+  4.2 Addition of Forces  
+                                                                           
+            In  chapter  2,  we  have  learnt  about  vectors  and  their  representation.  
+Remember that the resultant is the same for any order of addition of vectors. As  
+forces are vectors, so forces can also be added by head-to-tail rule.  
+            To determine the resultant of two or more forces acting in a plane, the  
+following example will explain its method.  
+
+  Example 4.1    
+
+            Let  us add three force vectors  F ,  F  and  F  having  magnitudes of 200  N,  
+                                                                     1    2           3  
+                                                                          O       O       O  
+300 N and 250 N acting at angles of 30 , 45 , 60                                             with x -axis. By selecting a  
+suitable scale 100 N = 1 cm, we can draw  
+the force vectors as shown in Fig. 4.2(a).                                                                                         F₃  
+            To  add  these  vectors,  we  apply                                                                     
+                                                                                      y  
+head-to-tail rule as shown in Fig. 4.2(b).                                                                          
+                                                                                                                                  60O  
+
+  
+                                                                                                                             F₂  
+
+          y  
+
+                            F₂  
+                 F₃                                                                                                 O  
+                                                                                                                 45 
+
+                  O  
+               60 
+                   45O       F₁                                                                 O       F₁   
+
+                                                                                             43 
+                             O                                                                      O  
+                          30                                                                     30           
+
+x                                           x                       x                                                              x  
+       O                                                                            O  
+
+                  Fig. 4.2 (a)                                                                      Fig. 4.2 (b)  
+           y                                                                          y  
+
+Measured length of resultant force is 7.1 cm. According to selected scale, magnitude  
+of the resultant force F is 710 N and direction is at an angle 43O  with x -axis.  
+
+                                                                    81  
+  
+﻿  4.3 Turning Effect of a Force  
+                                                                                    
+           We have learnt so far that a net force affects the liner motion of an object  
+by causing it to accelerate. Since rigid objects can also rotate, so we need to  
+extend our concept to the turning effect of a force. When we open or close a  
+door, we apply force. This force rotates the door about its hinge. This is called  
+turning effect of force. Similarly, we use turning effect of force when we open or  
+close a water tap. Let us define some terms used in the study of turning effect of a  
+force.  
+           If the distance between two points of the body remains the same under  
+the action of a force, it is called a rigid body.                                               Axis of rotation  
+                                                                                                       z  
+           During rotation, all the particles of the rigid body  
+                                                                                                               A    Rigid  
+                                                                                                             B  
+rotate along fixed circles as shown in Fig. 4.3. The straight                                                              
+                                                                                                                    body 
+
+line joining the centres of these circles is called the axis of   
+                                                                                                                        y  
+rotation. In this case, it is OZ. To observe the turning effect                                        o  
+                                                                                                 x    Fig. 4.3  
+of a force, let us perform an activity.  
+
+  
+
+ Activity 4.1  
+
+             Take your class to play ground where                                          Pivot  
+  a see-saw is available. Let a lighter child sits  
+  on the left side and the heavier one on the                            Moment arm              Moment arm  
+  right  side  of  the  see-saw.  The  distances  of  
+  both the children from the pivot should be equal. The force exerted by each child is equal to his  
+  weight acting downward. Does the heavier child move down? Yes, because he is exerting  
+  larger force. Now move the heavier child nearer to the pivot and the lighter child away from  
+  the pivot as shown in the figure. Ask the students what do they observe?  
+                                                                                                                                
+           You will see that the see-saw tilts to the opposite direction and the lighter  
+child moves down. This shows that the turning effect of a force does not depend  
+only on its magnitude but also on the location where it acts. Therefore, we can  
+say that the greater the force, the greater is its turning effect. Moreover, the  
+larger  the  perpendicular  distance  of  the  force  from  the  axis  of  rotation,  the  
+greater is its turning effect.  
+                                  The line along which the force acts is  
+                                  called the line of action of the force.  
+
+           The perpendicular distance of the line of action of a force from the axis  
+          of rotation is known as moment arm of the force or simply moment arm.  
+
+           The  moment  arms  of  both  the  children  are  shown  in  the  figure  of  
+activity 4.1. There are many other examples to observe the turning or rotational  
+effect of a force. It is harder to open a door by pushing it at a point closer to the  
+
+                                                             82  
+  
+﻿hinge as compared to push it at the handle (Fig. 4.4). That is why, door or window  
+handles  are  always  installed  at  larger  distances  from  hinges  to  
+produce larger moment of force by applying less force. This makes  
+the doors be opened or closed more easier. Similarly, it requires  
+greater force to open a nut by a spanner if you hold it closer such as  
+point A than point B (Fig. 4.5).                                  F                                                       
+                                                                                                                  F’      
+                                                                                                            B  
+                                                                      A                                               
+                                                                                                                          
+                                     Nut                                                                                                                          
+                                                             
+                                                                                                                                               Fig. 4.4  
+                                                                              Fig. 4.5  
+
+  
+
+  Moment of Force  
+                                                                                                                                                      F  
+              The turning effect of a force is measured by a     
+quantity known as moment of force or torque.                                                                         O      r  = ℓ                P  
+                                                                                                                      axis  
+        Moment of a force or torque is defined as the                                                           
+            product of the force and the moment arm.                                                                          Fig. 4.6  
+
+              The magnitude of torque is given by                                                              Do You Know?  
+
+                                                                                         M o m e n t o f  f o r c e   i s  
+                            τ = F× ..................(4.1)  
+                                                                                         applicable in the working  
+              Where τ (tau) is the torque and  is                                        of  bottle  opener.  A  small  
+the moment arm.  In Fig. 4.6, the line of                                               force   applied   at   longer  
+                                                                                         moment            arm       produces  
+action of a force  F  is perpendicular to r,  
+                                                                                         m o r e  t o r q u e  w h i l e  
+therefore, moment arm    = r. Remember                                                   opening a bottle.  
+
+that the torque of a force is zero when the line of action of a force passes through  
+the  axis  of  rotation,  because  its  moment  arm  becomes  zero.  The  torque  is  
+positive if the force tends to produce an anticlockwise rotation about the axis,  
+and it is taken as negative if the force tends to produce a clockwise rotation. The  
+SI unit of torque is newton metre (N m).  
+              In many cases, the line joining  the axis of rotation and point P where the  
+force  F acts, is not perpendicular to the force  F. Therefore, OP will not be the  
+moment  arm  for  F.  In  such  cases,  we  have  to  find  a  component  of  force  F  
+perpendiculars to OP  =                              (Fig. 4.7), or we can find r the component of                                                  that is  
+perpendicular to the (line of action) force F (Fig. 4.8).  
+                                                 F sinθ  
+                                                                                                                                                      F  
+                                                                       F  
+  
+                   O                   ℓ                         θ                               O                   ℓ                         θ  
+  
+                                                                                                                                     θ  
+                                                            P                                                                              P  
+  
+  
+                                   Fig. 4.7                                                                   Fig. 4.8  
+                                                                              83  
+
+  
+﻿For this, we need to know the method of finding rectangular components of a  
+force or any vector. This is also called as resolution of  Forces.  
+
+  
+
+  Couple  
+
+           A couple is a special type of torque. We observe at many situations in our  
+daily  life,  when  two  equal  and  opposite  parallel  forces  produce  torque.  For  
+example,  while  opening  or  closing  a  water  tap,  
+                                                                                                                   F 
+turning key in the lock, opening the lid of a jar  and                                                              2  
+
+                                                                                           A     r   O  r 
+turning steering wheel of a motor car, we apply a                                                 1       2        B  
+                                                                                             F 
+pair  of  equal  forces  in  opposite  directions.  The                                        1  
+
+torque produced in this way in known as couple.                                                     Fig. 4.9  
+
+  
+
+                 When two equal and opposite parallel forces act at two  
+                  different points of the same body, they form a couple.  
+
+  
+                         Steering wheel of vehicles                                    
+  While turning a vehicle, a couple is applied on the steering    
+  wheel.  It  is  interesting  to  know  that  now-a-days,  steering  
+  wheels of smaller diameter are installed in vehicles. The reason  
+   is that, most of the fvehicles are provided with power steering  
+   in which a pump pushes hydraulic fluid to reduce the force  
+   needed to turn the wheels, resulting in effortless steering.                        
+
+  Example 4.2    
+
+           A spanner 25 cm long is used to open a nut. If a force of 400 N is applied at  
+the end of a spanner shown in Fig. 4.10, what is the torque acting on the nut?  
+
+  Solution                  
+Length of Spanner                    =  25 cm = 0.25 m                                                        F  
+                        Force   =          F = 400 N                                        
+                      Torque                τ  = ?                                          
+                                                                                           Fig. 4.10  
+From Eq. (4.1),                             τ = F ×  
+Putting the values,                         τ = 400 N × 0.25 m =100 N m  
+
+  
+
+  4.4 Resolution of Vectors  
+                                                                        
+
+           By head-to-tail rule, two or more vectors can be added to give a resultant  
+vector. Its reverse process is also possible, i.e., a given vector can be divided into  
+two or more parts. These parts are called as components of the given vector.  If  
+these components are added up, their resultant is equal to the given vector. To  
+divide a force into its components is known as resolution of a force.  
+
+                                                              84  
+﻿            Usually, a force is resolved into two                                                     Beam of light  
+
+                                                                                    
+
+components   which   are   perpendicular   to  
+each other. These are called its perpendicular                                                                                     
+or rectangular components of the force.                                                          y  
+            Let   us   resolve   a   force  F   into   its                                     B                             C  
+perpendicular components. A force F acting                                          
+                                                                                    
+on a body at an angle θ with x-axis is shown in                                                               F  
+                                                                                               F 
+Fig. 4.11(a). Imagine a beam of light is placed                                                 y  
+
+above   the   vector                  F.   As   the   light   falls                                      ᶿ  
+perpendicularly  to  the  x-axis,  it  will  cast  a                                           O               F            A           x  
+
+                                                                                                                x  
+
+shadow OA of  vector  F  onto x-axis. We call                                                             Fig. 4.11(a)  
+                                                                                                 y  
+this shadow as x-component of vector F. In                                                                                   C  
+                                                                                                B  
+the same way, if light is thrown perpendicular                                      
+to y-axis, the shadow OB of vector F on y-axis                                      
+                                                                                                              F                F 
+is the  y-component of F.                                                                                                       y  
+                                                                                    
+  
+        A component of a vector is its                                                                   ᶿ                              x  
+
+                                                                                               O               F            A  
+    effective value in a given direction.                                                                       x  
+                                                                                                          Fig. 4.11(b)  
+
+            The x and y components can be practically drawn simply by dropping  
+perpendiculars  from  the  tip  of  vector  F  onto x  and y-axes  respectively.  The  
+x-component of force F is denoted as F  and y-component as F .  
+                                                                    x                                       y 
+
+            From Fig. 4.11(b), it is evident that F is the resultant vector of components  
+F and F . Moreover, F and F  are perpendicular to each other. Therefore, F  and F 
+  x         y                       x          y                                                                             x          y  
+
+are called perpendicular components of vector F.  
+            The magnitudes of the perpendicular components can be found from the  
+right angled triangle OAC in Fig. 4.11(b).                                                        Do You Know?  
+
+                                            OA  
+                                                   = cosθ  
+                                            OC  
+                                             F 
+Putting the values,                            x      = cos θ  
+                                              F  
+or          F    = F cosθ                   …… (4.2)  
+              x  
+                 AC  
+Similarly,               = sinθ  
+                  OC  
+                   F                                                              A tight rope walker balances himself  
+                     y      = sinθ  
+                    F                                                             by holding a bamboo stick. This is an  
+                                                                                  application of principle of moments.  
+or                   F   = F sinθ           … …. (4.3)  
+                      y  
+
+                                                                   85  
+﻿                                                     For Your Information!  
+                                                                                                                                C  
+   Trigonometric Ratios  
+                                                                                                                                 
+                                                                                                                              r 
+               Trigonometric  is  a  branch  of  mathematics  that                                                            a 
+                                                                                                                             l 
+                                                                                                                              u 
+                                                                                                                              c 
+   deals with the properties of a right angled triangle. A right                                                             i 
+                                                                                                                             d 
+                                                                                                                              n 
+   angled  triangle  ABC  is  shown  in  the  figure.  Angle  A is                                                            e 
+                                                                                                                              p 
+                                                                                                                              r 
+                                                                                                                              e 
+   denoted  by θ (theta) called the angle of the  right angled                                                               P 
+                                                                                                         θ  
+   triangle. The side AB is called the base, the side BC is called                               A               Base           B  
+   the perpendicular and the side AC is called as hypotenuse.  
+                                                                                               θ      sinθ        cosθ        tanθ  
+   The ratio of any two sides is given the names as below:  
+                                                                                              0°        0          1.0          0  
+        Perpendicular          =    BC  =  sine θ                                                        1          3             1  
+  
+         Hypotenuse                 AC                                                       30°         2          2           3  
+  
+                                                                                                      = 0.5      = 0.866     = 0.577  
+               Base                 AB  
+                               =          =  cosine θ                                                    1           1  
+                                                                                                                              
+         Hypotenuse                 AC                                                       45°        2           2          1.0  
+
+                                                                                                     = 0.707     = 0.707  
+        Perpendicular               BC  
+                               =          =  tangent θ                                                   3           1  
+               Base                 AB                                                                                          3  
+                                                                                             60°         2          2  
+                                                                                                                             = 0.866  
+                For simplicity, sine θ, cosine θ and tangent θ are                                   = 0.866      = 0.5  
+   written as sin  θ, cos  θ and tan  θ respectively. Values of                                                                 ∞  
+                                                                                             90°       1.0          0  
+   these ratios for some frequently used angles are given in                                                                Unlimited  
+   the table.  
+
+  
+
+  4.5 Determination of a Force from its  
+           Prependicular Components  
+                                                                                                                      
+
+            The magnitude and direction of a force can be found if its perpendicular  
+components  are  known.  Applying  Pythagorean  theorem  to  the  right  angled  
+triangle OAC  (Fig. 4.11-b).  
+
+                                            2             2           2  
+                                     (OC)  =  (OA)           + (AC) 
+
+                                           2              2             2  
+                         or             F     =       F        +     F 
+                                                        x             y  
+  
+
+                               F  =      F 2  + F 2    . ...... (4.4)  
+                                           x       y  
+
+            Hence,  using  Eq.  (4.4)  the  magnitude  F  of  the  required  vector  F  can  be  
+determined. The direction of F is given by  
+
+                                                 F 
+                                  tan θ =          y   ............... (4.5)  
+
+                                                 F 
+                                                  x  
+
+                          or                        -1    F 
+                                        θ  = tan  (       y   )  
+                                                        F x  
+            By using table of trigonometric ratios or calculator, the value of θ can be  
+determined.  
+
+                                                                    86  
+﻿  Example 4.3    
+
+                 A force of 160 N is acting on a wooden box at an angle of 60° with the  
+horizontal direction. Determine the values of its x and y components.  
+  Solution                               
+Magnitude of force                                      F = 160 N                                                                                  y  
+
+Angle                                                   θ  = 60°  
+Using calculator,  sin θ  = sin 60° = 0.866                                                                                                                    F                 F sinθ  
+
+                                       cos θ   = cos 60° = 0.5  
+x-component is given by Eq. (4.2)  
+                                                  F  = F cos θ                                                                                              60°  
+                                                     x  
+                                                                                                                                                                                               x  
+Putting the values,                               F = 160 N × 0.5 = 80 N                                                                              O      F cosθ  
+                                                     x  
+
+y-component is given by Eq. (4.3)                                                                                                                              Fig. 4.12  
+
+                                                  F  = F sin θ  
+                                                     y  
+
+Putting the values,                               F  = 160N × 0.866 = 138.6 N  
+                                                     y  
+  
+
+   4.6 Principle of Moments  
+
+                 To understand the principle of moments, let us perform an activity.  
+
+  Activity 4.2  
+                       Balance a  metre  rule on a wedge at  its centre of gravity such that the  rule stays  
+      horizontal. Suspend two weights w  and w  on one side of the metre rule at distance                                                                                          and  
+                                                                             1             2 
+          from the centre and a third weight w  on the other side at distance    until the rule is again     
+        2                                                                         3 
+      balanced.                                                                      
+
+  
+                                                                     1                                                         3  
+  
+                                                                                      2  
+
+  
+                                                                                                   CG  
+
+  
+                                              w 1  
+                                                                                w 
+                                                                                   2                                                                              3  
+
+                                                                                  
+  
+                                                                                     
+                        The weights w                   and w  tend to rotate the rod anticlockwise about CG and the  
+                                                      1              2  
+
+        weight w  tends to rotate it clockwise. The values of the moments of the weights are  
+                          3  
+
+        w1  ×    , w  ×    and w  ×  3. When the metre rule is balanced, then  
+                   1              2 
+        Total anticlockwise moments  = Total clockwise moments     
+                                    
+                                                
+
+                                    w     ×        + w            =  w  ×            … .......................... (4.6)  
+                                        1       1         2    2          3      3  
+
+     This is known as principle of moments, which is stated as:  
+
+                    When a body is in balanced position, the sum of clockwise moments about  
+                          any point equals the sum of anticlockwise moments about that point.  
+
+                                                                                              87  
+
+  
+﻿  Example 4.4    
+
+           A metre stick is pinned at its one end O on a table so that it can rotate  
+freely. One force of  magnitude 18 N is applied perpendicular to the length of the  
+stick at its free end. Another force of magnitude 60N is acting at an angle of  30O  
+
+with the stick as shown in the figure 4.13(a). At what                                                               60 N  
+distance from the end of stick that is pinned should  
+the  second  force  act  such  that  the  stick  does  not                                      d                30O  
+                                                                                    O  
+rotate?                                                                                              1.0 m  
+                                                                                                               
+  Solution                                                                                    Fig 4.13(a)            18 N  
+
+           Weight of the stick does not affect in the horizontal plane. Resolving  
+
+force F of magnitude  = 60 N into rectangular components that act at distance  
+
+d from point O:                                                                                                     60 N  
+Fx    =  60 N × cos  30O  =  60 N × 0.866  = 51.96 N                                                F              F  
+
+                                                                                                      y  
+                              O  
+F    =    60 N × sin 30          =  60 N × 0.5             = 30 N                O           d                   O  
+  y                                                                                                           30 
+           As the component F                                                                    
+                                                                                                                      F 
+                                           x  passes through the axis                          d’=1.0 m                 x  
+                                                                                     
+of  rotation,  its torque  is zero. Torque  τ1   of  30  N  is                                  Fig 4.13(b)       18 N  
+
+positive and τ  of 18 N force is negative. The stick will not rotate when these two  
+                      2  
+
+torques balance each others, i.e                       τ  = τ  or  F  ×  d= F  ‘×  d‘  
+                                                         1     2        y 
+                                 30 N  ×  d = 18 N  × 1 m        
+
+                                                      18 N  ×  1 m  
+                                             d  =                           =  0.6 m  
+                                                          30 N  
+
+  4.7 Centre of Gravity and Centre of Mass  
+                                                                                                     
+           An object is composed of a large number of small particles. Each particle is  
+acted  upon  by  the  gravitational  force  directed  towards  the  centre  of  the  
+Earth (Fig. 4.14-a). As the object is small as compared to the Earth, the value of g  
+can be taken as uniform over all particles. Therefore, each particle experiences  
+the  same  force  mg.  Since  all  these  forces  are  parallel  and  act  in  the  same  
+direction, so their resultant as shown in Fig. 4.14(b) will be equal to the sum of all  
+these forces .i.e,  
+
+  
+                                                                                                C  
+
+  
+
+  
+
+  Fig. 4.14(a)                                                     Fig. 4.14(b)  
+                                                   
+               Gravitational force acting                                      Resultant gravitational force  
+                  on various particles  
+                                                             88  
+  
+﻿          We know that the sum of the gravitational forces acting on all particles is  
+equal  to  the  total  weight  of  the  object  w  =  Mg  Where    M  =  ∑  m  =  mass  of  the  
+object.  
+
+                          Centre of gravity is that point where total  
+                           weight of the body appears to be acting.  
+
+          If  a  body  is  supported  at  its  centre  of  gravity,  it  stays  there  without  
+rotation. The centre of gravity of an object of regular shape lies at its geometrical  
+centre. Centre of gravity of some geometrical shapes is  given in Table 4.1.  
+  
+
+                                                 Table 4.1  
+                     Object                                    Centre of Gravity  
+             Square, Rectangle                    Point of intersection of the diagonals  
+                    Triangle                      Point of intersection of the medians  
+                 Round plate                      Centre of the plate  
+                     Sphere                       Centre of the sphere  
+                    Cylinder                      Centre of the axis  
+
+                  Metre rule                      Centre of the rod  
+
+  
+
+  Centre of Gravity of a Plane Lamina  
+
+          For an irregular shaped plane lamina, the centre of gravity can be found  
+by suspending it freely through different points (Fig. 4.15-a). Each time the object  
+is suspended, its centre of gravity  lies on the                                                      Points of  
+vertical   line  drawn  from  the   point  of                                                        suspension  
+suspension with the help of a plumbline. The                                                  CG  
+exact position of the centre of gravity is at the   
+point where two such lines cross each other as   
+                                                                 
+shown in the Fig 4.15(b). The centre of gravity   
+can exist inside a body or outside the body as   
+is in case of a cup.                                                Fig. 4.15(a)        Fig. 4.15(b)  
+                                                                   Irregular shaped plane lamina  
+  Centre of Mass  
+                                                                                For your information!  
+          Newton’s second law of motion is applicable to  
+single particle or system of particles. Even when the  
+parts   of   a   system   have   different   velocities   and                               CG  
+
+acceleration, there is still one point in the system whose  
+acceleration could be found by applying second law.                             Centre of gravity of a bowl  
+This point is called the centre of mass of the system.                            is outside the material.  
+
+                                                      89  
+  
+﻿                    The centre of mass of a body is that point where the  
+                 whole mass of the body is assumed to be concentrated.  
+                                                                                                          
+           Hence, the centre of mass behaves as if all the mass of the body or system  
+is lying at that point. In the (Fig. 4.16) given below, a rotating wrench slides along  
+a frictionless floor. There is no resultant force on the wrench. Therefore, its centre  
+of mass, shown by a yellow dot, follows a linear path with constant speed.  
+
+  
+
+                       Fig. 4.16: Rotating wrench sliding along a frictionless floor  
+
+          On the surface of the Earth, where g is almost uniform, the centre of mass  
+of an object coincides with its centre of gravity.  
+
+  
+
+  4.8 Equilibrium  
+
+          We have learnt how translatory and rotational motion can be caused due  
+to the application of external forces. Now, we shall see how external forces can be  
+balanced  to   produce   no  translational  or                                        Do You Know?  
+rotational effects.  
+     We know that if a number of forces act on a  
+body such that their  resultant is zero, the  body  
+remains  at  rest  or  continues  to  move  with  
+uniform velocity if already in motion. This state  
+of the body is known as equilibrium, which can                                      This is a fascinating  
+be stated as:                                                                      scene of equilibrium.  
+  
+
+               A body is said to be in equilibrium if it has no acceleration.  
+
+There are two types of equilibrium:  
+(i)  Static equilibrium             (ii)  Dynamic equilibrium  
+     A body at rest is in static equilibrium whereas a body moving with uniform  
+velocity is in dynamic equilibrium.  
+
+          An example of static equilibrium is a book lying on the table as shown in  
+the  Fig. 4.17. Only two forces are acting on  it. One  is its weight w  = mg acting  
+
+                                                          90  
+  
+﻿downward and the other is F  the normal force that the   
+                                                      n  
+table exerts upward on the book. Since the book is at rest   
+so, it has zero acceleration. Therefore, the sum of all the   
+                                                                                                         
+forces acting on the book should be zero, so that the   
+book is said to be in equilibrium. Hence                                                                 
+                                                                                                         
+  
+                                                                                                         
+                                                  F  − w  = 0                                                         Fig. 4.17                
+                                                    n  
+                                                                                                             
+                                         or               Fn   = w                                    Book is in static equilibrium  
+                                                                                                       
+             This means that forces can act on a body without  
+                                                                                                       
+accelerating  it,  provided  these  forces  balance  each                                                                   Rope  
+other.                                                                                                    Wall  
+
+             An electric bulb hanging from the ceiling of a                                                               Beam  
+room,  a  man  holding  a  box,  a  beam  held  horizontal  
+against  a  wall  with  the  help  of  a  rope  and  a  hanging                                                      Fig. 4.18        Weight  
+ weight (Fig. 4.18), are all examples of static equilibrium.                                           A  beam  projected from a wall  
+                                                                                                          is also in static equilibrium  
+             A  good  example  of  dynamic  equilibrium  is  a  
+                                                                                                      
+  paratrooper (Fig. 4.19). In a few second after the free   
+ fall,  the  parachute  opens  and  a  little  later,  the   
+paratrooper starts descending with a uniform velocity.   
+In  this  state,  the  force  of  gravity  acting  vertically   
+                                                                                                      
+downward  on  the  paratrooper  is  balanced  by  the  
+                                                                                                      
+resistance of air on the parachute acting upward.                                                                                          
+                                                                                                                       Fig. 4.19  
+                                                                                                                    
+  4.9 Conditions of Equilibrium                                                           A  paratrooper is in dynamic equilibrium  
+                                                                                                        Fascinating  Freefall  
+             There are two conditions of equilibrium:  
+
+  
+
+  First Condition of Equilibrium  
+                                                                             
+
+             By Newton’s second law of motion,  F = ma  
+If the body is in translational equilibrium, then a = 0,  
+therefore, net force F should be 0  or  ∑F=0 ........ (4.7)  
+             This  is  the  mathematical  form  of  the  first                                                                                  
+condition of equilibrium which states that:                                                      A group of paratroopers making  
+                                                                                                  in a formation-an example of  
+                                                                                                        dynamic equilibrium.  
+  
+                A body is said to be in translational equilibrium only if the vector   
+
+                       sum of all the external forces acting on it is equal to zero.  
+             In case a number of coplanar forces F , F , F , .... having their resultant  
+                                                                                  1    2     3 
+
+equal to  F,  are acting on a  body, these can  be  resolved  into their  rectangular  
+
+                                                                      91  
+  
+﻿components, and first condition of equilibrium can be then written as:  
+Along x-direction,                        F  + F  + F  +…… =  0 1x  2x 
+or                                                                   ∑ F  =  0              …… (4.8)  
+                                                                           x  
+
+Similarly, along y-direction,  
+                                        F  + F  + F  +  ……  = 0  
+                                          1y       2y 
+or                                                                  ∑ F  =  0               ……(4.9)  
+                                                                         y  
+
+             Thus, first condition of equilibrium can also be stated as:  
+
+  
+
+     The sum of all the components of forces along x-axis should be zero and  
+     the sum of all the components of forces along y-axis should also be zero.  
+
+  
+
+  Second Condition of Equilibrium  
+
+             The second condition of equilibrium implies to the rotational equilibrium  
+which means that the body should not rotate under the action of the forces.  
+             Consider the example of a  rigid  body in  Fig.4.20. Two forces  F  and F of  
+                                                                                                                                     1            2  
+
+equal magnitude are acting on it. In case (a), both the forces act along the same  
+line of action.  
+
+  
+
+                                                                                            F 
+                                                                                             2            B  
+
+                             F           A     o     B  
+                              2  
+                                                                                                        o  
+                                                                 F 
+                                                                   1  
+
+                                                                                                          A            F  
+                                                                                                                         1  
+                                                                                                                            
+                                              (a)                  Fig. 4.20                           (b)  
+
+              In  case  (b),  the  lines  of  action  of  the  two  forces  are  different.  Since  
+magnitude of F  and F  are equal, so the resultant force is zero in both the cases.  
+                              1           2  
+
+Thus, first condition of equilibrium is satisfied. But you can observe that in case  
+(b), the forces are forming a couple which can apply torque to rotate the  body  
+about point O. Therefore, for a body to be completely in equilibrium, a second  
+condition is also required. That is, no net torque should be acting. This is the  
+second condition of equilibrium which can be stated as:  
+
+                                  The vector sum of all the torques acting on  
+                                       a body about any point must be zero.  
+
+Mathematically, we can write:                                                  ∑ τ  = 0                                ……(4.10 )  
+Hence, a body will be in complete equilibrium when,  
+                                                                 ∑ F  = 0  
+                                                             {  x  
+                                                                 ∑ F  = 0  
+                                                                      y  
+
+                                      And                          ∑ τ = 0  
+
+                                                                          92  
+  
+﻿  Solving Problems by Applying Conditions of Equilibrium  
+                                                                                                                                 
+      The following steps will help to solve problems by                                            Do You Know?  
+applying conditions of equilibrium.  
+1.          First of all, select the objects to which Eqs. (4.8)  
+            and (4.9) are to be applied. Each object should  
+            be treated separately.  
+2.          Draw  a  diagram  to  show  the  objects  and  
+            forces acting on them. Only the forces acting                                        Most balancing toys  
+            on the objects should be included. The forces                                   have a low centre of mass.  
+            which the objects exert on their environment should not be included.  
+3.          Choose a set of x, y axes such that as many forces as possible lie directly  
+            along x-axis or y-axis, it will minimize the number of forces to be resolved  
+            into components.  
+4.          Resolve all the forces which are not parallel to either of the axes, in their  
+            rectangular components.  
+5.          Apply Eqs. (4.8) and (4.9) by putting  ∑  F  = 0 and ∑  F  = 0 to get two  
+                                                                                  x                      y  
+
+            equations.  
+6.          If needed, apply Eq. (4.10) by putting ∑τ = 0 to get another equation.  
+7.          The equations can be solved simultaneous to find out desired unknown  
+            quantities.  
+
+  Example 4.5    
+
+      A  picture  is  suspended  by  means  of  two                               T1                                              T2  
+vertical  strings  as  shown  in  Fig  4.21.  The    A                                      20 cm         O      20 cm            B  
+
+                                                                                       
+weight of the picture is 5 N, and it is acting at                                                              
+                                                                                       
+its centre of gravity. Find the tension T  & T  in                                                             
+                                                                 1      2  
+                                                                                       
+the two strings.                                                                                               
+                                                                                       
+                                                                                                               
+                                                                                       
+  Solution                                                                                                     
+                                                                                       
+                                                                                                               
+Total    upward    force    =    T                    +    T                           
+                                                 1            2  
+                                                                                                               
+Total downward force  = w  =  5  N                                                                                Fig. 4.21  
+Tensions in the strings, T  = ? , and T  = ?                                                             w  
+                                          1                 2  
+
+Since, there is no horizontal force, so ∑ F = 0  
+                                                                 x  
+
+Already                      ∑ Fx   = 0  
+Putting                      ∑ F  = 0  
+                                  y  
+
+                             T  + T      −w = 0 ................................ (i)  
+                               1      2  
+
+Apply            ∑ τ  = 0, selecting point  B as point of rotation.  Here, torque τ  of  T  is  
+                                                                                                                         1       1  
+
+                                                                 93  
+  
+﻿negative  whereas  torque  τ                            of  w  is  positive  about  point  B.  T                         produces  zero  
+                                                   2                                                                  2  
+
+torque as it passes through the point of rotation. Hence,  
+                                                          τ      −      τ              =  0  
+                                                            2             1  
+
+         or                                  w  ×  BO            −  T × AB             = 0  
+                                                                        1  
+
+ putting the values,                          w × 0.2 m  − T1  × 0.4 m  = 0  
+       or                                    5 N × 0.2 m  − T × 0.4 m = 0  
+                                                                          1  
+
+                                               5 N × 0.2 m  
+       or                              T  =                                = 2.5 N  
+                                         1           0.4 m  
+
+      Putting the value of T  and w in Eq. (i), we have  
+                                               1  
+
+                            2.5 N  + T  −  5 N  = 0  
+                                              2  
+
+       or                                             T  = 2.5 N  
+                                                        2  
+
+  4.10 States of Equilibrium  
+
+      An object is balanced when its centre of mass and  its point of support lie on  
+the same vertical line. Then forces on each side are balanced, and the  object is  
+said to be in equilibrium. There are three states of equilibrium in connection with  
+stability of the balanced bodies.  
+
+  
+
+  Stable Equilibrium  
+
+  
+
+                        A body is said to be in a state of stable equilibrium, if  
+                        after a slight tilt, it comes back to its original position.  
+
+       Stable equilibrium occurs when the torques arising from the rotation (tilt) of  
+the object compel the body back towards its equilibrium position.  
+      The cone shown in Fig 4.22(a) is in the state of stable equilibrium. Its weight w  
+acting downward at the centre of gravity  
+G and the  reaction of the floor  Fn   acting  
+upward,  lie  on  the  same  vertical  line.                                                    F 
+                                                                                                 n                    F            G  
+                                                                                                                        n  
+Since  these  forces   are   equal   and   in                                                       G  
+
+opposite direction, so they balance each                                                        w                               w  
+other   and   both  the   conditions   of                                                    (a)                                (b)  
+                                                                                                         Fig. 4.22  
+equilibrium are satisfied.  
+      As you try to push over the cone slightly, its centre of gravity is raised but it  
+still remains above the base of the cone. The weight w and the normal force F do  
+                                                                                                                                              n  
+
+not remain in the same line but act like two unlike parallel forces. The cone does  
+not remain in equilibrium. Unlike parallel forces produce a clockwise torque  
+which brings the cone back to its original position.  It is worth noting that the  
+body remains in equilibrium as long its centre of mass lies within the base.  
+
+                                                                        94  
+  
+﻿  Unstable Equilibrium  
+                                                
+     Try to balance the cone on its tip. It is balanced for a moment because w and  
+Fn   lie along the same line. Even it is slightly tilted, it will not come back to its  
+original position by itself. Rather it will fall downward, because its centre of mass  
+no   longer   remains  above  the   base.   It  
+topples over, because line of action of w no  
+longer  lies  inside the  base O  (Fig. 4.23).  In                            G                        G  
+
+                                                                              w  
+this  case,  centre  of  gravity  is  lowered  on                                                      w  
+tilting  and  continues  to  fall  further.  It                                O                           O  
+                                                                        (a)    F                   (b)    F  
+cannot  r  ise  up  again  because  the                                         n                          n  
+                                                                                     Fig. 4.23  
+anticlockwise  torque  produced   by  w  
+moves it further downward.  
+       A body is said to be in a state of unstable equilibrium if, after a slight  
+            tilt, it tends to move on further away from its original position.  
+  
+
+  Neutral Equilibrium  
+                                           
+     A  cylinder  resting  on  a  horizontal  surface  (Fig.  4.24)  shows  the  neutral  
+equilibrium.  If the  cylinder  is  rotated  slightly,  there  is  no  force  or  torque that  
+brings it back to its original position or moves it away. As the                                     Fn  
+
+cylinder  rotates,  the  height  of  the  centre  of  mass  remains                               G  
+unchanged.  In  any  position  of  the  cylinder,  its  weight  and                                               
+reaction of the ground lie in the same vertical line.                                                w  Fig. 4.24  
+
+              A body is in neutral equilibrium if it comes to rest  in its new  
+         position after disturbance without any change in its centre of mass.  
+
+     Other examples of neutral equilibrium are a ball rolling  
+on  a  horizontal  surfaces,  or  a  cone  resting  on  its  curved  
+surface (Fig.4.25).                                                                              Fig. 4.25  
+
+  4.11 Improvement of Stability  
+  
+     It is our daily life observation that a low armchair is more stable than a high  
+chair   because  of  its   low  centre  of  gravity.  The                         Interesting Information!  
+position of centre of gravity is very important when  
+we are talking about stability. A bus can be stable or  
+unstable depending on how it is loaded. If the heavy  
+loads are placed on the floor of the bus, its centre of  
+gravity will  be  low.  Now if it is disturbed slightly, a  
+                                                                                 A double decker bus is being  
+torque will bring it back to its original position.  
+                                                                                   tilting to test its stability.  
+
+                                                          95  
+
+  
+﻿      In this case, the bus is in stable equilibrium. If the same bus is loaded with  
+steel sheets on the top, the centre of gravity be raised. It is now near to a state of  
+unstable equilibrium. A couple will turn it over if it is slightly tilted. The same is the  
+case of ships and boats. We can improve the stability of a system either by  
+lowering the centre of gravity or by widening the base.  
+
+  
+
+                           Interesting Information!  
+  
+            An unstable equilibrium is illustrated in this  
+             figure.  A  chair  in  normal  position  is  quite  
+                                                                                                    G                         G  
+             stable (Fig. a) but it has been turned into an  
+  
+             unstable position by tilting it back on its legs                                      w                        w  
+             (Fig.  b).  In  this  tilted  position,  a  couple  is  
+             formed by its weight w and reaction F  of the  
+                                                                     n  
+             ground.   This   clockwise   couple   tends   to  
+                                                                                                                          F  
+             overturn chair backward.                                                        (a)                 (b)        n  
+  
+  4.12 Application of Stability in Real Life  
+
+            The  concept  of  stability  is  widely  applied  to  engineering  technology  
+especially in manufacturing racing cars and balancing toys.  
+            As the racing cars are driven at very high speeds and also there are sharp  
+turns in the track, therefore, the chances of the cars to topple over increase. To  
+enhance the stability of racing cars, their centres of mass are kept as low as  
+possible. There base areas are also increased by keeping the wheel outside of  
+their main bodies. Balancing toys are also very interesting for both children and  
+elders. Look at some balancing toys shown belows.  
+
+  
+
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+                                                                                                      
+
+                                                                                                      
+                                     (a)                                                   (b)                                         (c)  
+                                                   Fig. 4.26: Balancing toys  
+            The physics behind these types of toys is that stability is built in with  
+balancing  toys.  These  toys  are  basically  in  completely  stable  state  and  their  
+centres of gravity always remain below the pivot point. If the toys are disturbed in  
+any  direction,  the  centre  of  gravity  is  raised  and  it  becomes  unstable  for  a  
+moment. It comes back to its initial stable position by lowering its centre of  
+gravity.  
+                                                                    96  
+  
+﻿       The kids learn from these toys about stable systems and how they return to  
+their state of initial rest position after being disturbed. Educational games on the  
+basis   of   balancing   toys   have   also   been   developed   for   the   kids   as  
+shown in Fig 4.27.  
+                                                                               Interesting Information!  
+
+                                                                         To  enhance  the  
+                                                                         stability   of   a  
+                                                                          racing   car,   its  
+                                                                         centre of mass is  
+                                                                          kept  as  low  as  
+                                                                          p o s s i b l e .  I t s                                                 
+
+                                                                          base  area  is  also  increased  by  keeping  its  
+                                                                         wheels outside of its main body.  
+                            Fig. 4.27  
+
+  
+
+  Rotational Motion Versus Translatinal Motion   
+
+             Counterparts                of     velocity,          acceleration,             force        and        momentum                 in  
+translational motion are angular velocity, angular acceleration, moment of force  
+(torque) and angular momentum respectively in rotational motion. It suggests  
+that the torque plays the same role in the rotational motion that is played by the  
+force  in  the  translational  motion.  Therefore,  we  are  justified  to  predict  that  
+analogous to Newton's first law of motion, a rotating object will continue to do  
+so with constant angular velocity unless acted upon by a resultant moment  
+(torque).  However,  if  a  resultant  torque  is  applied  to  rotating  object,  it  will  
+accelerate  depending  on  the  direction  of  the  torque  relative  to  the  axis  of  
+rotation.  
+             This  fundamental  principle  enhances  our  understanding  how  objects  
+move and interact with their environment whether in linear or rotational motion  
+scenarios.  
+
+  
+
+  Motion in a Circle  
+
+             When a body is moving along a circular path, its  
+velocity  at  any  point  is  directed  along  the  tangent  
+                                                                                                                                            v  
+drawn at that point. Figure 4.28 shows that the direction  
+of  tangent  at  each  point  on  a  circle  is  different,                                                                           F  
+therefore, the velocity of an object moving with uniform  
+speed in a circle is changing constantly. Hence, a force  
+perpendicular  to  the  direction  of  motion  is  always                                                               Fig. 4.28  
+
+required to keep the object moving with uniform speed in a circular path.  
+
+                                                                      97  
+  
+﻿            It should be noted that F is essentially perpendicular to v. For an instance,  
+if it is not perpendicular to v, the force F will have a component in the direction of  
+v. This will change the magnitude of velocity. As the body moves with constant  
+speed, so it is possible only if the component of force along v is F cos 90° = 0.  
+
+  
+
+  4.13 Centripetal Force  
+
+           We have studied above that an object can move in a circular path with  
+uniform speed only if a force perpendicular to its velocity is acting constantly on  
+it.  This  force  is  always  directed  towards  the  centre  of  the  circle.  It  is  called  
+centripetal force and can be defined as:  
+
+                      The force that causes an object to move in a circle at  
+                            constant speed is called the centripetal force.  
+                                                                                                                  
+
+            For an object of mass m moving with uniform speed v in circle of radius r,  
+the magnitude of centripetal force F  acting on it can be calculated by using the  
+                                                            c  
+
+relation:  
+                                                 2    
+                                            mv 
+                                      Fc   =   r      . .......... (4.11)  
+  
+
+  Example 4.5  
+
+           A 150 g stone attached to a string is whirled in a horizontal circle at a  
+
+                                        -1 
+constant speed of 8 m s  . The length of string is 1.2 m. Calculate the centripetal  
+force acting on the stone. Neglect effects of gravity.  
+
+  Solution      
+
+                       Mass of stone                        = m  =  150 g  =  0.15 kg  
+                       Speed of stone                       =  v    =   8  m s -1  
+
+                       Radius of circle  = r   =      1.2    m  
+                       Centripetal force = F = ?  
+                                                          c 
+
+                                                         2  
+                                                    mv                                
+Using  Eq.4.11,                               F =  
+                                                c 
+                                                      r  
+                                                                                -1  2    
+                                                     0.15 kg × (8 m s ) 
+Putting the values,                           F =                                      = 8 N  
+                                                c               1.2 m  
+
+                                                                                              
+  
+
+  Sources of Centripetal Force                                                                
+                                                                    
+           We have learnt that centripetal force has to be  
+                                                                                              
+supplied if the body is to be maintained in its circular                                               (a)  
+path. What could be the sources of centripetal force?                                          Fig. 4.29  
+
+                                                                               A stone whirled in  a circle by a string  
+                                                               98  
+  
+﻿            If we tie a stone to one end of a string and whirl it from the other end, we  
+will have to exert a force on the stone through the string (Fig 4.29-a). If we release  
+the string when it is at any point P, the stone will fly                                                            Q  
+                                                                                                                          v  
+off along the tangent (PQ) to the circle. Then, it will                                     
+                                                                                                                               P  
+move along the same straight line with constant                                             
+velocity unless an unbalanced force acts upon it.                                                                    T  
+                                                                                            
+            In  fact,  the  tension  T  in  the  string  was                                                  O  
+                                                                                            
+providing the stone the necessary centripetal force                                         
+to  keep  it  along  the  circular  path  (Fig  4.29-b).                                    
+When we release the string we stop applying force                                           
+on the stone and hence it moves in a straight line.                                                      Fig. 4.29 (b)  
+  
+
+                                                                                        
+
+            Now consider the case of the moon which  
+moves  around  the  Earth  at  constant  speed.  The  
+gravity   of   the   Earth   provides   the   necessary  
+centripetal force to keep it in its orbit. Same is the  
+case of satellites orbiting the Earth in circular paths  
+with uniform speed. The gravitational pull of  the                                                      Fig. 4.30                          
+
+Earth provides centripetal force.                                                          A satellite orbiting the Earth  
+  
+                                                                                        
+            One of the real life examples is a washing  
+machine  dryer.  A  dryer  is  a  metallic  cylinderical  
+drum with many small holes in its walls. Wet clothes  
+are  put  in  it.  When  the  cylinder  rotates  rapidly,  
+friction between clothes and drum walls provides  
+necessary centripetal force. As the water molecules                                                                                    
+are free to move, so they cannot get the required                                                       Fig. 4.31  
+centripetal  force  to  move  in  circular  paths  and                                            Washing machine  
+
+                                                                                        
+
+escape  from  the  drum  through  the  holes.  This  
+results into quick drying of clothes.  
+  
+            Another  interesting  example  is  that  of  a  
+cream  separator.  In  a  cream  separator,  milk  is  
+whirled rapidly.  
+
+                                                                                                                                   
+                                                                                                    Cream seperator  
+
+                                                                                                          Fig. 4.32  
+
+                                                                 99  
+  
+﻿           The lighter particles of cream experience less centripetal force and gather  
+in the central part of the machine. The heavier particles of milk need greater  
+centripetal force to keep their circular motion in circles of small radius r.  In this  
+way, they move away towards the walls.  
+
+  
+
+                                                   KEY POINTS  
+
+      If the parallel forces are acting in the same direction, then they are called like parallel  
+       forces and if they are acting in opposite directions, they are called unlike parallel forces.  
+      A force which is equal to the sum of all the forces is known as resultant force.  
+      The line along which the force acts is called the line of action of the force.  
+      The perpendicular distance of the line of action of a force from the axis of rotation is  
+       known as moment arm of the force.  
+      The torque or moment of a force is defined as the product of the force and the moment  
+       arm.  
+      When two equal and opposite, parallel forces act at two different points of the same body,  
+       they form a couple.  
+      The centre of gravity is a point inside or outside the body at which the whole weight of the  
+       body is acting.  
+      The centre of mass of a body is that point where the whole mass of the body is assumed to  
+       be concentrated.  
+      A body is said to be in equilibrium if it has no acceleration.  
+      A body will be in translational equilibrium only if the vector sum of all the external forces  
+       acting on it is equal to zero. This is called first condition of equilibrium. The vector sum of  
+       all the torques acting on a body about any axis should be zero. This is second condition of  
+       equilibrium.  
+      When a body is in equilibrium, the sum of clockwise moments about any point equals the  
+       sum of anticlockwise moments about that point.  
+      A body is said to be in a state of stable equilibrium, if after a slight tilt, it comes back to its  
+       original position.  
+      A body is said to be in a state of unstable equilibrium if, after a slight tilt, it tends to move  
+       on further away from its original position.  
+      A body is in neutral equilibrium if it comes to rest in its new position after disturbance  
+       without any change in its centre of mass.  
+      Analogous to Newton's first law of motion in a straight line, a rotating object will continue  
+       to do so with constant angular velocity unless acted upon by a resultant moment of force.  
+      The  force  that  causes  an  object  to  move  in  a  circle  at  constant  speed  is  called  the  
+       centripetal force.  
+
+                                                          100  
+  
+﻿                                            EXERCISE  
+
+ A      Multiple Choice Questions  
+                                                                          
+         Tick () the correct answer.  
+4.1.      A particle is simultaneously acted upon by two forces of 4 and 3 newtons.  
+
+         The net force on the particle is:  
+         (a) 1 N            (b) between 1 N and 7 N             (c) 5 N           (d) 7 N  
+4.2.      A force F is making an angle of 60º with x-axis. Its y-component is equal  
+
+         to:  
+         (a) F              (b) F sin60°                (c) F cos60°              (d) F tan60°  
+4.3.     Moment of force is called:  
+         (a)  moment arm (b)  couple                    (c)  couple arm      (d)  torque  
+4.4.      If F and F are the forces acting on a body and τ is the torque produced in 1  2  
+
+         it, the body will be completely in equilibrium, when:  
+         (a)   ∑ F = 0  and  ∑ τ =  0                   (b)  ∑ F = 0  and  ∑ τ ≠  0  
+         (c)  ∑ F ≠ 0  and  ∑ τ =  0                    (d)  ∑ F ≠ 0  and  ∑ τ ≠  0  
+4.5.      A Shopkeeper sells his articles by a balance having unequal arms of the  
+
+         pans.  If  he  puts  the  weights  in  the  pan  having  shorter  arm,  then  the  
+
+         customer:  
+         (a) loses        (b) gains        (c) neither loses nor gains    (d) not certain  
+4.6.      A man walks on a tight rope.  He balances himself by holding a bamboo  
+
+         stick horizontally. It is an application of:  
+         (a) law of conservation of momentum  
+         (b) Newton’s second law of motion  
+         (c) principle of moments  
+         (d) Newton’s third law of motion  
+4.7.     In stable equilibrium the centre of gravity of the body lies:  
+         (a) at the highest position                    (b) at the lowest position  
+         (c) at any position                            (d) outside the body  
+4.8.     The centre of mass of a body:  
+          (a) lies always inside the body  
+         (b) lies always outside the body  
+         (c) lies always on the surface of the body  
+         (d) may lie within , outside or on the surface  
+
+                                                   101  
+  
+﻿4.9.         A cylinder resting on its circular base is in:  
+             (a) stable equilibrium                                                      (b) unstable equilibrium  
+             (c) neutral equilibrium                                                     (d) none of these  
+4.10.   Centripetal force is given by:  
+
+                                                                                            2  
+             (a) rF                   (b) rFcosθ                               (c)    mv              (d)         mv  
+                                                                                         r                         r 
+
+  
+                                                                                                                      
+
+  B        Short Answer Questions  
+                                                                            
+4.1.         Define like and unlike parallel forces.  
+4.2.         What are rectangular components of a vector and their values?  
+4.3.         What is the line of action of a force?  
+4.4.         Define moment of a force. Prove that τ  = rFsinθ, where θ is angle between  
+             r and F.  
+4.5.         With the help of a diagram, show that the resultant force is zero but the  
+             resultant torque is not zero.  
+4.6.         Identify the state of equilibrium in each case in the figure given below.  
+
+  
+
+                             
+                             
+                             
+                             
+                             
+
+                             
+                                        (a)                                (b)                               (c)  
+
+4.7.         Give an example of the body which is moving yet in equilibrium.  
+4.8.         Define centre of mass and centre of gravity of a body.  
+4.9.         What are two basic principles of stability physics which are applied in  
+             designing balancing toys and racing cars?  
+4.10.   How can you prove that the centripetal force always acts perpendicular to  
+             velocity?  
+
+  C        Constructed Response Questions  
+
+4.1.         A car travels at the same speed around two curves with different radii. For  
+             which  radius  the  car  experiences  more  centripetal  force?  Prove  your  
+             answer.  
+4.2.         A ripe mango does not normally fall from the tree. But when the branch of  
+             the tree is shaken, the mango falls down easily. Can you tell the reason?  
+4.3.         Discuss the concepts of stability and centre of gravity in relation to objects  
+             toppling  over.  Provide  an  example  where  an  object’s  centre  of  gravity  
+
+                                                                       102  
+  
+﻿             affects  its  stability,  and  explain  how  altering  its  base  of  support  can  
+             influence stability.  
+4.4.         Why an accelerated body cannot be considered in equilibrium?  
+4.5.         Two boxes of the same weight but different heights are lying on the floor  
+             of a truck. If the truck makes a sudden stop, which box is more likely to  
+             tumble over? Why ?  
+
+  
+
+  D        Comprehensive Questions  
+
+4.1.         Explain the principle of moments with an example.  
+4.2.         Describe how could you determine the centre of gravity of an irregular  
+             shaped lamina experimentally.  
+4.3.         State and explain two conditions of equilibrium.  
+4.4.         How the stability of an object can be improved? Give a few examples to  
+             support your answer.  
+
+  
+
+  E        Numerical Problems  
+
+4.1           A force of 200 N is acting on a cart at an angle of 30  with the horizontal O  
+
+             direction. Find the x and y-components of the force.  
+                                                                                                                    (173.2 N,  100 N)  
+
+4.2          A force of 300 N is applied perpendicularly at the  
+             knob of a door to open it as shown in the given  
+             figure. If the knob is  1.2 m away from the hinge,  
+             what  is  the  torque  applied?  Is  it  positive  or  
+             negative torque?                                                                                           1.2 m                   F  
+
+                                                                  (360 N m, positive)  
+
+4.3          Two weights are hanging from a metre rule at  
+             the positions as shown in the given figure. If the  
+             rule is balanced at its centre of gravity (C. G), find  
+             the unknown weight w.                                                  (3 N)  
+
+  
+                                                                                                           
+                                                40 cm                                  30 cm  
+
+  
+
+                                                                             C.G  
+
+                                      w  
+                                                                                                                 4 N  
+                                                                                                                                     
+
+                                                                      103  
+  
+﻿4.4        A see-saw is balanced with two children sitting near either end. Child A  
+           weighs 30 kg and sits 2 metres away from the pivot, while child B weighs  
+          40 kg and sits  1.5 metres from the pivot. Calculate the total moment on  
+           each side and determine if the sea-saw is in equilibrium.                                           (60 N)  
+
+4.5        A crowbar is used to lift a box as shown in  
+           the given figure. If the downward force of  
+           250 N is applied at the end of the bar,                                                             F  
+           how  much  weight  does  the  other  end  
+           bear?  The  crowbar  itself  has  negligible                                         30 cm  
+                                                                                   5 cm  
+           weight.                                  (1500 N)  
+
+4.6 :  A  30  cm  long  spanner  is  used  to  open  the  nut  of  a  car.  If  the  torque  
+           required for it is 150 N m, how much force F should be applied on the  
+           spanner as shown in the figure given below.  
+                                                                                F  
+  
+                                                                                                             (500 N)  
+
+4.7 :    A 5 N ball hanging from a rope is pulled to the right                                         60°  
+           by a horizontal force F. The rope makes an angle of  
+           60° with the ceiling, as shown in the given figure.                                              T  
+           Determine the magnitude of force F and tension T  
+           in the string.                                                                           F  
+
+                                                                    (2.9 N, 5.8 N)  
+4.8 :      A  signboard  is  suspended  by  means  of two  steel                             T                      T  
+                                                                                              1                       2  
+                                                                                                   2 m       2 m  
+           wires as shown in the given figure. If the weight of  
+           the  board  is  200  N,  what  is  the  tension  in  the  
+                                                                                                     Signboard  
+
+           strings?                                 (100 N,  100 N)  
+
+4.9 :    One girl of 30 kg mass sits  1.6 m from the axis of a                                            200 N  
+           see-saw. Another girl of mass 40 kg wants to sit on  
+           the other side, so that the see-saw may remain in  
+           equilibrium. How far away from the axis, the other  
+           girl may sit?                                                                             60°  
+                                                                            (1.2 m)  
+  
+4.10 :   Find the tension in each string of the as shown in                                
+                                                                                           
+           the given figure, if the block weighs 150 N.                                    
+                                                                                                      150  N  
+                                                             (86.6 N, 173.2 N)  
+
+                                                          104  
+  

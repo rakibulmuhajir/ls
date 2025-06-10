@@ -1,0 +1,1195 @@
+﻿    Chapter  
+            5                Work, Energy And Power  
+
+  
+Student Learning Outcomes  
+
+   After completing this chapter, students will be able to:  
+  [SLO: P-09-B-59] Define work done.  
+  [SLO:  P-09-B-60]  Use  the  equation  work  
+  done  =  force  ×  distance  moved  in  the  
+  direction of the force  W  = F  × d  to solve  
+  problems  
+  [SLO:  P-09-B-61]   Define  energy  as  the  
+  ability to do work  
+  [SLO: P-09-B-62]  Explain that energy may  
+  be stored [Such as in gravitational potential,  
+  chemical,  e  l astic  ( s t  rain),  nuclear,  
+  electrostatic,  and  internal  (  thermal)  
+  energies]  
+  [SLO:   P-09 -B-63]   Prove  that   Kinetic  
+  Energy= 1  mv2   [use of equations of motion  
+                2  
+  not needed; proof through kinematic graphs  
+  will suffice]  
+  [SLO: P-09-B-64] Prove and use the formula for gravitational potential energy  
+  [SLO: P-09-B-65]  Use the formulas for kinetic and gravitational potential energy to solve  
+  problems involving simple energy conversions [make use of the conversion of energy from  
+  one form to the other, including cases involving loss of energy to the surroundings]  
+  [SLO: P-09-B-66] Describe how energy is transferred and stored during events and processes  
+  [e.g. work done during transfer by mechanical work done, electrical work done, and heat]  
+  [SLO: P-09-B-67] State and apply the principle of the conservation of energy  
+  [SLO: P-09-B-68] Justify why perpetual energy machines do not work  
+  [SLO:  P-09-B-69]  Differentiate  between  and  list  renewable  and  non-renewable  energy  
+  sources  
+  [SLO:  P-09-B-70]  Describe  how  useful  energy  may  be  obtained  from  natural  resources  
+  [including the cases of (a) chemical energy stored in fossil fuels, (b) chemical energy stored in  
+  biofuels,  (c)  hydroelectric  resources,  (d)  solar  radiation,  (e)  nuclear  fuel,  (f)  geothermal  
+  resources, (g) wind, {h) tides, (i) waves in the sea while including references to a boiler, turbine  
+  and generator where they are used]  
+  [SLO: P-09-8-71] Describe advantages and disadvantages of methods of energy generation  
+  [limited to whether it is renewable, when and whether it is available, and its impact on the  
+  environment]  
+  [SLO: P-09-8-72] Define and calculate power [As work done per unit time and also as energy  
+  transferred  per  unit  time.  This  also  includes  applying  the  equations:  (a)  power=  work  
+  done/time taken P = W/t (b) power = energy transferred/time taken  
+  [SLO: P-09-B-73]  Define and calculate efficiency [including: (a) (%) efficiency = (useful energy  
+  output)/(total energy input) ( x 100%) (b) (%) efficiency = (useful power output)/(total power  
+  input) ( x  100%)]  
+  [SLO:  P-09-B-74]  Apply  the  concept  of  efficiency  to  simple  problems  involving  energy  
+  transfer  
+  [SLO: P-09-B-75] State that a system cannot have an efficiency of 100% due to unavoidable  
+  energy losses that occur.  
+  
+  
+  
+                                                                    105  
+
+  
+﻿          Work   and  energy  are   important                                           
+concepts in physics as well as in our everyday                                          
+life. Commonly the word ‘work’ covers all sort                                          
+                                                                                        
+of activities whether mental or physical. If a                                          
+girl is studying (Fig. 5.1) or a  man is standing                                       
+(Fig. 5.2) with a load of bricks on his head, we                                        
+say that they are doing work. But according to                                          
+physics, work has a specific definition. Work is                                        
+                                                                                          Fig. 5.1  
+said to be done when a force acts on an object                                          
+and moves it through some distance.  
+The concept of energy is closely associated with that of  
+work,  when  work  is  done  by  one  system  on  another,  
+energy is transferred between the two systems.  
+           In this chapter, we will define work, energy, power  
+and  efficiency  and  show  how  they  are  related  to  one  
+another.  
+
+5.1 Work                                                                                            Fig. 5.2  
+
+Force and distance are two essential elements of work. When a constant force  
+acting on a body moves it through some distance, we say that 'the force has done  
+work'.  
+                     Work is defined as the product of magnitude of force  
+                     and  the  distance  covered  in  the  direction  of  force.  
+                                                                                                      
+  
+
+           Consider a block of wood lying on a                                          
+table (Fig. 5.3). If we exert a force  F  on the                                        
+                                                                                          F                     F  
+block to move it through a distance S  in the                                           
+direction of force, then the work  W done by                                            
+
+the force is:                                                                                   S  
+Work = Magnitude of force × Distance                                                    
+                                                                                           Fig. 5.3  
+or        W = F × S..................... (5.1)  
+
+From Eq. (5.1), it can be concluded that if some force is  
+acting on a body but there is no displacement, then no  
+work is done. For example, a man is pushing hard a wall  
+but the wall remains fixed in its place. In this case, the man  
+is doing no work (Fig. 5.4).  
+Similarly, if a force acting on the body is zero and the body  
+is moving with uniform velocity, work will be zero.  
+
+          As F = 0        so      W = 0 × S = 0                                                     Fig. 5.4  
+
+                                                          106  
+﻿What  will  be  the  work  done  when  a  force  is                               
+                                                                                            F                    F  
+acting  on  a  body  making  an  angle  θ with  the                               
+                                                                                          θ                    θ  
+direction of motion? In this case, work is done  
+                                                                                  
+due to the component of force which is acting                                  F cosθ  
+                                                                                                    S  
+along the direction of motion (Fig. 5.5).                                         
+                                                                                              Fig. 5.5  
+Resolving the force F into its components, we have  
+
+the component F cosθ that acts in the direction of motion. Therefore,  
+                                           W = (Fcosθ) S  
+                                or        W = FS cos θ …… (5.2)  
+If θ is zero, cos 0° = 1, then  
+                                         W = FS (1) = FS  
+  
+
+This is the case when force and distance covered                                           
+are  in  the  same  direction.  Now  if  θ  =  90°,  then   Force                          
+                                                                                  F        
+cos  90°  =  0  which  means  the  force  has  zero  
+                                                                                           
+component in the direction of motion. Thus,                                                  θ    90O  
+                                                                                           
+  
+                                                                                                          Displacement  
+                                W = FS (0) = 0                                             
+                                                                                                                S  
+                                                                                           
+           This is the case when force is perpendicular                                    
+to the displacement. Look at Fig. 5.6, it suggests                                         
+that if a person carries a bag to some distance, this  
+                                                                                           
+work is zero, because the force applied to hold the                                            Fig. 5.6  
+load is upward which is perpendicular to the displacement.  
+
+           The work done to push an object is the same whether the object moves  
+north to south or east to west, provided the magnitude of force and the distance  
+moved are not changed. Work does not convey any directional information, so it  
+is a scalar quantity.  
+
+  
+
+Calculation of Work Done by Graph  
+
+           When a constant force F acts through a distance S,                               P                           Q  
+
+the  event  can  be  plotted  on  a  force-distance  graph  as                                     Shaded area  
+                                                                                          F  
+shown in Fig. 5.7. If the force and distance covered are in                                         work done  
+the same direction, the work done is F × S.                                            Force  
+                                                                                                 
+           Clearly the shaded area in the figure is also F × S.                             O         Dis tance         R  
+Hence the area under a force distance curve can be taken                                                  S 
+to represent the work done by that force.                                                             Fig. 5.7  
+
+                                                           107  
+﻿Units of Work  
+                                                
+
+The SI unit of work is joule (J).  
+
+  
+
+       One joule work is done when a force of one newton acting on a body  
+       moves  it  through  a  distance  of  one   metre  in  its  own  direction.  
+
+  
+
+From Eq. (5.1)   
+                       1 J = 1 N × 1 m  
+            or         1 J = N m  
+
+                                                                    3                                   6  
+Bigger units are also used like                        1 kJ = 10 J           and          1MJ = 10 J  
+
+  Example 5.1  
+
+            A person does 200 J of work in pushing a  carton  through  a  distance  of  
+5 metres. How much force is applied by him?  
+
+  Solution    
+
+Work done                          W = 200 J  
+Distance                           S  =  5 m  
+Force                              F  = ?  
+                                                                     W  
+From Eq. (5.1)                     W  =  F × S         or      F =  
+                                                                     S  
+Putting the values, we get  
+                                          200 J  
+                                   F  =               =  40 N  
+                                           5 m  
+  Example 5.2  
+
+            Find the work done by a 65 N force in pulling the suitcase (Fig. 5.8) for a  
+distance of 20 metres.  
+
+  Solution    
+
+Force applied                            F  =  65 N  
+Distance covered                         S  =  20 m  
+                                                                                                         30O  
+Angle from the figure                    θ  =  30o  
+
+Work                                     W =  ?  
+Using Eq. 5.2,  
+                                                                           o                   Fig. 5.8  
+                                         W    =    FS    cos    30 
+                                         W = 65 N × 20 m × 0.866  
+                                         W =1125.8 N m                 =     1125.8 J  
+
+                                                                108  
+﻿5.2 Energy                                                                                                        For Your Information!  
+                                     
+              Our body cannot move unless we have energy     
+from food. A car would not run without the energy it     
+obtains  from  burning  fuel.  Machines  in  the  factories     
+cannot  run  without  consuming  energy  supplied  by     
+                                                                                                                  
+electricity. Any change in motion requires energy. When  
+                                                                                                                  
+we say that a certain body has energy, we mean that it     
+has the ability of doing work.  
+                                                                                                                  
+                                                                                                                   A stretched bow stores  
+  Energy can be defined as the ability of a body to do work.                                                             energy, which is  
+
+                                                                                                                  transferred to the arrow  
+             When someone does work, energy of the body                                                            as it is shot. Some bows  
+has to be spent. In fact, energy is transferred to the body                                                         store  enough energy  
+on which work is done. In other words, the energy is                                                               to shot  an  arrow  even  
+                                                                                                                             1 km away.  
+transferred  from  one  system  to  another.  For  example,  
+when you do work pushing a swing, chemical energy in your body is transferred  
+to the swing and appears as energy of the motion of the swing.  
+
+Like work, energy is a scalar quantity. Its SI unit is joule (J).  
+
+  
+
+ When one joule work is done on a body, the amount of energy spent is one joule.  
+
+There are many forms of energy. Electrical energy, chemical energy, nuclear  
+energy, heat energy and light energy are some well-known forms which we shall  
+study later on. There are two basic forms of energy:  
+              (i) Kinetic energy  
+              (ii) Potential energy  
+
+  
+
+The  combination  of  these  two  types  of  energies  is  called  mechanical  energy.  
+
+  
+
+Kinetic Energy  
+
+  
+
+                                  The kinetic energy of a body is the energy  
+                                  that a body possesses by virtue of its motion.  
+                                                                                                                             
+To find out how much kinetic energy a moving body possesses, an opposite  
+force can be applied on the body to stop its motion. Then the work done by  
+the  force  will  be  equal  to  the  kinetic  energy  of  the  body.  i.e.,  Kinetic  energy  
+(E  ) = Work done (W)  
+    k  
+
+Suppose a body of mass m is moving with velocity v. An opposing force F acting  
+on the body through a distance S brings it to rest. Then,  
+
+                                                                           109  
+﻿                                                                            
+E  = work done = F × S                                           
+   k  
+As F  = ma and S  = v   × time  =(  v  + 0 )t = v  × t                                                                    v  
+                                                                   2  
+                                        a                                          2  
+                                     vt         1                                                          velocity  
+Hence, E  = ma ×                           =         ma ×  vt                                                       − 1 
+                 k                    2         2                                                            (m s  )  
+Using velocity-time graph (Fig 5.9), the acceleration                                                                 O                         t  
+‘a’ is given by its slope.                                                                                                             time (s)  
+                       v                                                                                                           Fig. 5.9  
+Hence, a =                   , the slope is negative as the velocity and force are in opposite  
+                       t  
+direction.  
+                              1             v  
+Thus                  E  =        m  (            vt  
+                        k      2             t  
+                                                 
+                               1        2  
+or                  E  =           mv                - -------- (5.3)  
+                       k       2  
+                                                                                                                 For Your Information!  
+  Example 5.3    
+                                                                                                                  • The work done by the  
+A truck of mass 3000 kg is moving on a road with uniform                                                          single   beat   of   human  
+                                     −                                                                            heart is 0.5 J.  
+velocity of 54 km h ¹. Determine its kinetic energy.  
+                                                                                                                  • The energy content of  
+  Solution                                                                                                        t h e n u c l e a r   b o m b  
+                                                                                                                  dropped  on  Hiroshima,  
+Mass of the truck m = 3000 kg                                                                                     Japan,       in     the     second  
+
+                                       −                  −                                                                                           13 
+Velocity v = 54 km h ¹=15 m s ¹                                                                                   world war was 8.0 × 10 J.  
+Kinetic energy  E  = ?                                                                                            • The energy output of a  
+                                k  
+                                                                                                                  power   station   in   one  
+Putting the values,                                                                                               year is  1016  J.  
+               1         2       1                                    2      2   −2  
+     E  =          mv       =         × 3000 kg × (15)  m  s 
+       k       2                 2  
+     E  = 337500 J  = 337.5 kJ  
+       k  
+  
+
+Potential Energy  
+
+              In the previous section, we have seen that the work done on a body is used  
+to increase its kinetic energy. Sometimes, the work done on a body does not  
+increase its kinetic energy, rather it is stored in the body as potential energy.  
+  Potential energy is defined as the energy that a body                                                                Do You Know?  
+ possesses  by  virtue  of  its  position  or  deformation.    
+                                                                                                            
+  
+Forms of  Potential Energy:                                                                                 
+There   are   many   forms   of   potential   energy.   As    
+
+mentioned above, the energy possessed by an object    
+by virtue of its position relative to the Earth is known                                                           The train is changing  
+                                                                                                                 potential energy every  
+as gravitational potential energy.                                                                          moment in the roller coaster   
+
+                                                                            110  
+
+  
+﻿          The energy stored in a compressed or stretched spring is called elastic  
+potential energy and the potential energy in the chemicals of a battery is called  
+chemical  potential energy, which is changed to electrical energy by chemical  
+reactions. Thermal or internal energy is released by burning fossil fuels i.e. coal,  
+oil or gas through chemical reactions.  
+          Nuclear energy  is the hidden energy in the nuclei of atoms. When they  
+are broken, energy is released in the form of heat and some other radiations. This  
+is called nuclear fission.  
+          If the block shown in Fig. 5.10 is lifted to a height                                
+h  above  the  ground,  then  the  block  would  have                                    F  
+potential energy in that raised position. Therefore, it                                               h  
+
+has the ability to do work whenever it is allowed to fall.  
+How  should  potential  energy  be  measured?  Because                                         Fig. 5.10  
+                                                                                       w  
+work is done on the block to put it into the position where it has potential energy,  
+therefore, we can say that the work done is stored in it as potential energy. Thus,  
+potential energy Ep   is given by  
+                    E  = Work done to put the block in elevated position  
+                      p  
+
+          The applied force necessary to lift the block with constant velocity is equal  
+to weight w of the block and since w  = mg, therefore, potential energy of the  
+block at height h becomes,  
+          E  = wh  
+            p  
+
+or      E  = mgh ....................... (5.4)  
+            p  
+
+          The   most   obvious   example   of  
+gravitational  potential  energy  is  a  waterfall  
+(Fig.  5.11),  water  at  the  top  of  the  fall  has  
+potential energy. When the water falls to the  
+bottom,  it  can  be  used  to  run  turbines  to                                                                   
+                                                                                Fig. 5.11 Waterfall  
+produce electricity and thus can do work.                       For Your Information!  
+
+                                                                 According   to   Einstein’s  theory   of  
+  Example 5.4                                                    relativity,   matter   and   energy   are  
+A ball of mass 180 g was thrown vertically                       i n t e r c h a n g e a b l e u n d e r  c e r t a i n  
+                                                                 conditions.  The  loss  of  some  mass  in  
+upward  to  a  height  of  12  m.  Find  the                     nuclear  reactions  may  transform  into  
+potential energy gained by the ball.                             energy  production and similarly energy  
+  Solution                                                       may   be  converted   into   material  
+                                                                 particles.   Hence,   now  we   have  
+Mass of  ball  m = 180 g = 0.18 kg                               conservation of mass and energy rather  
+Height                           h  =  12 m                      that conservation of each separately.  
+
+                                                       111  
+  
+﻿P.E. gained             E  = ?  
+                          p  
+
+                        g = 10 m s−2  
+
+From Eq. (5.4) E  = mgh  
+                          p  
+
+Putting the values  
+                        E  = 0.18 kg × 10 m s−2  × 12 m = 21.6 J  
+                          p  
+  
+
+5.3 Conservation of Energy  
+
+            The study of various forms of energy and the transformation of one kind  
+of  energy  into  another  has  led  to  a  very  important  principle  known  as  the  
+principle of conservation of energy. Formally, it is stated as:  
+
+  
+
+               Energy cannot be created or destroyed. It may be transformed from  
+   one form to another, but the total amount of energy never changes.  
+
+            During energy transfer process, some energy seems to be lost and not  
+accounted for in calculations. This loss of energy is due to work done against  
+friction of the moving parts in the process. This energy appears as heat and is  
+dissipated in the environment. This energy does not remain available for doing  
+some useful work and may be called waste energy.  
+            A process of energy conversion and conservation can be described with  
+the given example.  
+            Let a  body of  mass m  be  at  rest  at  a  point A above the  
+                                                                                                                   A      
+height h from the ground (Fig.5.12). Its total energy is P.E is  mgh,  
+                                                                                                                 
+                                                E  = mgh                                                                      
+
+                                                  p  
+and                                             E  = 0                                                           
+
+                                                  k  
+                                                                                                                   B                h  
+Then the body is allowed to drop to point B at a height x from the  
+                                                                                                                              
+ground. The body lose potential energy and gains kinetic energy                                                       x  
+as  it  gets  speed  while  falling  down.  Assuming  air  resistance                                              C  
+negligible.                                                                                                           Fig. 5.12   
+
+                                                E  = mg (h − x)  
+                                                  p  
+
+The loss of potential energy will appear as the gain in kinetic energy, hence, at  
+point B  
+                                                E = mgx  
+                                                  k  
+
+            Total energy at B                   E = mg (h − x) + mgx  =  mgh  
+Just  before  hitting  the  ground  at  point  C,  the  whole  of  potential  energy  is  
+changed into kinetic energy. Thus,  
+                                    E  = 0   and            E = mgh  
+                                      p 
+            Thus, total energy remains the same as mgh. On hitting the ground, this     
+
+energy is dissipated as heat and sound in the environment.  
+
+                                                                  112  
+  
+﻿5.4 Sources of Energy                                                                                  For Your Information  
+  
+                                                                                                       
+Fossil Fuel Energy                                                                                     
+                                                                                                       
+            Fossil fuel energy comes out from burning of oil,                                          
+coal and natural gas. These materials are known as fossil                                              
+fuels. The burning of these fuels gives out heat which is     
+used  to  generate  steam  that  runs  the  turbines  to     
+                                                                                                       
+produce  electricity.  A  block  diagram  of  the  process                                               Before electricity was  
+going on in electricity generation by fossil fuels is given                                             discovered, one of the  
+in Fig. 5.13.                                                                                             primary functions of  
+                                                                                                            fossil fuels was to  
+  
+                                                                                                               provide light.  
+
+  
+                                             Steam  line         Turbine                                         Do You Know?  
+                                                                          Generator    
+                                                                                          Transmission  
+                                                                                                               Thermal   energy  
+                                                                                               lines  
+                                                                                                               from  coal  burning  
+  
+                            
+              Coal                                                                                             w  a  s  a  m  a j   o  r  
+            supply          
+                                                                                                               source used in the  
+                            
+  
+                                                                                                               boilers   of   steam  
+  
+                                                                                                               engines   to   drive  
+                            
+                                                                              Condenser                        locomotives in the  
+  
+        Water supply                                                                       Transformer         past.  
+
+                                                          Fig. 5.13  
+
+Hydroelectric Generation                                      Transmission  
+                                                                   towe                      Transformer  
+                                                                      
+                                                                                                              
+                                                                                            
+            Hydroelectric  generation                                                                         
+                                                             Water reservoire               
+is the electricity generated from                                                                             
+                                                                                            
+                                                             Water intake  
+the power of falling water. Water                                                                             
+                                                                                            
+                                                                                                                          Generator  
+                                                                                            
+in   a   high   lake  or   reservoir   
+                                                                                                                            Turbine  
+                                                                  Bed rock       Tunnel  
+possesses gravitational potential                                                           
+                                                                                                              
+energy stored in it. When water is                                                                                      Water discharge  
+                                                                                                                              (canal)  
+allowed  to  fall  from  height,  the                                                       
+potential energy is changed into                                                              Fig. 5.14  
+
+kinetic energy (Fig. 5.14). Tunnels are made for water to flow from the reservoir to  
+a lower place. Such a construction is known as dam.  
+The kinetic energy of running water rotates the turbine which in turn runs the  
+electric generator.  
+
+                                                                    113  
+  
+﻿Solar Energy  
+                                              
+             Sun is the biggest source of energy. The energy obtained from sunlight is  
+referred to as solar energy. Solar energy can be used in two ways. Either it can be  
+used for heating system or can be converted to electricity. In one way, solar  
+panels absorb heat of the Sun. They consist of large metal plates which are  
+painted black (Fig. 5.15). Heat can be used for warming houses or running water  
+heating system. If solar radiation is concentrated to a small surface area by using  
+large reflectors or lenses, reasonably high temperature can be achieved.  
+
+  
+
+                                                                                                                                                 
+                                                                  
+  
+
+                              Fig. 5.15                                                                      Fig. 5.16  
+           Solar panels installed on the roof                                                         Solar cells panels  
+  
+
+                                                                                                  
+
+             At  this  high  temperature,  water  can  be                                          For Your Information!  
+boiled to  produce steam that can  run the turbine    
+                                                                                                    
+of an electric generator. In this way, electricity can  
+                                                                                                    
+be produced.                                                                                        
+              In the second method, sunlight is directly    
+
+transformed to electricity through the use of solar    
+                                                                                                     Solar  powered car which won  
+cells. Solar cells are also known as photo voltaic  
+                                                                                                     the world solar challenge race  
+cells. The voltage produced by a single voltaic cell                                                 in Darwin, Australia in 1993.  
+                                                                                                                                                         
+is very  low.  In order to get sufficient  high voltage   
+
+for practical use, a large number of such cells are  
+connected in series to  form a solar cell panel as  
+shown in Fig. 5.16.  
+                                                                                                                                                         
+             Solar  calculators  are  also  available  which                                        Earth satellites get solar energy  
+work by using the electrical energy provided by                                                         through their solar panels.  
+
+solar  cells.  Large  solar  panels  are  also  used  to  
+power satellites.  
+
+                                                                         114  
+  
+﻿Nuclear Energy                                                                          For Your Information!  
+                                                                                        Geothermal  energy  is  currently  
+            Nuclear energy is released in the form of   used  in  Japan,  Russia,  Iceland,  
+heat  when  an  atomic  nucleus  breaks.  Nuclear   Italy,   New   Zealand   and   USA.  
+                                                                                         More than 85% of Icelanders use  
+power stations make use of nuclear fuels such as  
+                                                                                        geothermal          energy       to    warm  
+uranium and plutonium.                                                                  their homes. The cost of heating  
+            These  materials  release  huge  amount  of   is only one-third of the cost of  
+                                                                                        burning   oil   to   power   electric  
+energy as the  nuclei of their atoms  break during  
+                                                                                        heaters.  
+nuclear fission. The  process  is  done  in  a  nuclear  
+
+reactor. Heat produced by the fuel is used to make steam that runs the turbines  
+of electric generators.  Pakistan also runs nuclear power stations at  Karachi and  
+Chashma.  
+
+  
+
+Geothermal Energy  
+                                                 
+                                                                               
+
+            In some parts of the world, hot rocks  
+are present in the semi molten form deep                                                   Turbine           Generator  
+
+under  the  surface  of  the  Earth.  They  are  
+                                                                                                                           Transmission  
+heated by energy released due to decay of                                                                                         lines  
+
+radioactive  elements.  The  temperature  of  
+these rocks is about 250°C. This energy is  
+known as geothermal energy which can be                                                                             Hot rocks  
+                                                                                         Steam           Water  
+extracted   to   run   electric   generators.   A                                         out               in  
+                                                                                                                                            
+typical geothermal  power  plant is shown in                                        Fig. 5.17  Geothermal power plant  
+
+Fig. 5.17.  
+
+To make use of the heat of the rocks, two  
+holes are drilled up to the rocks. Cold water  
+is pumped down through one of the holes. It  
+is  heated  up  by  the  hot  rocks  and  starts  
+boiling. Steam is produced that comes out  
+through the other hole. The steam runs the  
+generator which produces electricity. Where  
+                                                                                                                                            
+there  is water already  present over the  hot                                                        Fig. 5.18  
+rocks, it comes out of the surface of the Earth in the form of hot springs and  
+geysers. Such a geyser is shown in Fig. 5.18.  
+
+                                                                   115  
+  
+﻿Wind Energy  
+                                     
+                                                                                  
+
+             For thousands of years, people have  
+been using windmills to draw water from the  
+well or to grind grains into flour. The modern  
+windmill  is  used  to  run  generators  that  
+produce electricity. Wind  generators make  
+electricity in the same way as steam generators  
+in  power  stations.  For  large  scale  power  
+generation, a 'wind farm' with a  hundred or  
+more windmills is  needed. A windmills farm  
+                                                                                                                                                 
+is shown in Fig. 5.19.                                                                        Fig. 5.19 Windmills farm  
+
+  
+
+Energy from Tides  
+                                              
+             The gravitational force for the moon gives rise to tides in the seas. The tide  
+raises the water level near the sea shore twice a day. The rise and fall of water can  
+be utilized to turn on turbine for electricity generation. The water at  high tides  
+can be trapped at a suitable location, a basin,   by building a dam. The water is  
+then released in a controlled way at low tide to drive the turbines for producing  
+electricity. At next high tide, the dam is filled again and the incoming water also  
+drives turbines.  
+
+  
+
+Energy from Waves in Sea  
+
+             The tides and winds blowing over the surface of the sea produce strong  
+water waves.  
+
+             Their energy can be used to generate                                   Duck floats                            Balance float  
+
+electricity.  The  method  to  harness  wave  
+energy is to use large floats which move up  
+and down with the waves. One such device  
+invented by Prof. Salter is known as Salter's  
+duck (Fig.5.20). It consists of two parts.                                          Waves  
+
+  
+
+                                                                                                           Fig. 5.20  
+             (i) Duck float                       (ii) Balanced float  
+The energy of the water waves causes duck float to move relative to the balance  
+float.  The  relative  motion  of  the  duck  float  is  used  to  drive  the  electricity  
+generators.  
+
+                                                                     116  
+  
+﻿                                                                             Do You Know?  
+Biofuel Energy  
+                               
+                                                                The radioactive fallout from the 1986  
+It  is that energy which  is obtained from the                  Chernobyl nuclear accident in Russia  
+biomass.  Biomass  consists  of  organic                        (1986) affected people, livestock and  
+materials      such     as    plants,     waste     foods,      crops. Although only 31 people died  
+animals  dung,  sewage,  etc.  Sewage  is  that                 from  direct  exposure,  about  600,000  
+                                                                people were significantly exposed to  
+dirt  which  is  left  over  after  staining  dirty             the fallout.  
+water. The material can itself be used as fuel  
+                                                               
+or can be converted into other types of fuels.  
+Direct  combustion  is  a  method  in  which  
+biomass, commonly known as solid waste, is  
+burnt to  boil water and  produce steam. The  
+steam can be used to generate electricity. In  
+another process, the rotting of  biomass in a  
+closed  tank  called  a  'digester'  produces  
+methane   rich   biogas   (Fig.   5.21).   In   this  
+process,   micro-organisms   break  down  
+                                                                       Fig. 5.21 Biogas digester  
+biomass material in the absence of oxygen.  
+Biogas produced in the tank is piped out and  
+                                                               Economic, Social and Environmental  
+can  be  used  for  heating  and  cooking  like   Impact of Various Energy Sources  
+natural gas.                                                   Fossil  fuels  is  a  common  source  of  
+Biofuel such as ethanol (alcohol) can also be   energy but it is very expensive. It also  
+obtained from the biomass. It is a replacement   produces   pollution   that   affects   the  
+of petrol. In this case, bacteria converts it into   human  health  badly.  On  the  other  
+ethanol.                                                       hand,    hydroelectric    energy    is  the  
+                                                               cheapest source of energy.  It does not  
+5.5 Renewable and                                              produce  pollution.  It  has  only  one  
+                                                               negative point that it may cause water  
+Non-Renewable Sources  
+                                                               logging   by  raising  the  water  table  
+The resources of energy which are replaced  under the nearby lands.  
+by   new   ones   after   their   use   are   called  The use of solar energy, wind energy,  
+                                                               tidal energy, etc. is pollution free. Only  
+renewable energy source. On the other hand,  the initial cost is high in the use of these  
+non-renewable sources are those, which are  sources.  
+depleted with the continuous use. Once they  Nuclear energy is very desirable source.  
+run out, they are not easily replaced by new  It  is  cheaper   and   can   meet  the  
+ones.  Sources  such as  hydroelectricity,  solar   increasing demands of energy easily.  
+
+energy,  wind  energy,  tidal  energy,  wave  energy  and  geothermal  energy  are  
+renewable. These are replaced by new ones. For example, snow fall and rain fall  
+
+                                                    117  
+  
+﻿are continuous processes. Therefore, water supply to the reservoirs of dams for  
+generation of hydroelectric power will never end up. Likewise, solar energy will  
+remain available forever. Same is the case with wind and tidal energy. These are  
+not going to run out in future.  
+Non-renewable sources include fossil fuels and nuclear energy. The remnants of  
+plants and animals buried under the Earth took millions of years to change into  
+fossil fuels. These fuels are in limited quantity. Once they are used up, it will take  
+further millions of years to form new ones. Similarly, fuels for the nuclear energy  
+are also limited.  
+As the need for energy is increasing day by day, there is need to develop other  
+non- traditional renewable energy sources.  
+
+  
+
+5.6 The Advantages and Disadvantages  
+of methods of Energy production  
+
+  
+
+                                                                        
+
+The   production   of   hydroelectric  
+power  is  more  economical  and  
+pollution free. The solar power, wind,  
+tidal  and  wave  power  need  more  
+initial cost but they do not produce  
+pollution and are also economical as  
+well.   On   the   other   hand,   power  
+generation by fossil fuels and nuclear  
+fuel   adds   to   the   pollution  of                                                                                                                
+environment.  Burning  of  fossil  fuels                                                               Fig. 5.22  
+produces smoke, carbon dioxide gas                                       Do You Know?  
+and  heat  (Fig.  5.22).  They  enhance                                  Burning fossil fuels release five billion tonnes of  
+direct  pollution  to  atmosphere.                                       carbon dioxide into the atmosphere every year.  
+
+Wind-mills are very noisy. Some people think that wind turbines spoil the beauty  
+of landscape.  
+             Nuclear power generators are also run by steam produced by nuclear  
+heat energy. Heat itself is a form of pollution. Moreover, there is always danger of  
+leakage of the radioactive radiation which is harmful to living bodies. People  
+living around  nuclear plants are always at risk. The disposal of nuclear waste is  
+another problem for the nuclear power generation. However, any form of waste  
+energy ends up as thermal energy that goes to the environment. Thus, thermal  
+pollution is increasing day by day causing global warming.  
+
+                                                                        118  
+  
+﻿5.7 Power  
+                              
+           In many cases, the time to do work is as important as the amount of work  
+done. Suppose you walk up to a height ‘h’ through upstairs (Fig. 5.26). You do  
+work, because you are lifting your body up the stairs. If you run up, you can reach  
+the same height in a shorter time interval.  
+
+                                             
+                                             
+                                             
+                                             
+
+                                             
+                                                                          height (h)  
+
+                                                           Fig. 5.26  
+
+The work done is the same in either case, because the net result is that you lifted  
+up the same weight w to the same height h. But you know that if you run up the  
+stairs, you would be more tired than you walked up slowly. In fact, there is a  
+difference in the rate at which work is done. We say that you expend more energy  
+when you go up the stairs rapidly than when you go slowly.  
+The concept of power can also be explained with another example of an electric  
+motor or a water pump. A bigger motor draws more water during the same  
+interval of time as compared to a smaller one. It is said that the power of bigger  
+motor is greater than that of smaller one.  
+
+  
+
+                           Power is defined as the time rate of doing work.  
+
+Mathematically,  
+                        Work  
+        Power  =  
+                         Time  
+If W is the work done in time t, then  
+                 W ................  
+        P  =                        (5.5)  
+                  t  
+Power of any agency can also be defined as energy transferred per unit time.  
+
+                                                              119  
+  
+﻿Units of Power  
+                                   
+           Since both work and time are scalar quantities, so according to Eq.(5.5)  
+power is also a scalar quantity. The SI unit of powers is watt (W).  
+
+  
+
+               One watt is the work done at the rate of one joule per second.  
+
+  
+                                                                                      Do You Know?  
+                               1 J                            -1                                             Av. Power  
+                    1 W  =  1                or         1 J s                            Appliance             (watts)  
+
+Bigger Units of power are:                                                           Energy saver                  23  
+                      1 kW  =  10 ³ W                                                Tube light                   40  
+                                                                                     Electric fan                 80  
+                      1 MW  =  10⁶ W                                                 Bulb                         100  
+                                                                                     T.V.                         200  
+In British engineering system, the unit of power used                                Washing machine              250  
+                                                                                     Refrigerator                 600  
+is horse-power (hp). The horse power is defined as                                   Electric iron               1000  
+                      1 hp  = 746 W                                                  Toaster                     1000  
+                                                                                     Microwave oven              1200  
+  Example 5.5                                                                        Air conditioner             2500  
+           A 1000 kg car moving with an acceleration of 4 m s                            –2  covers a distance of  
+
+50 m in 5 seconds. What is the power generated by its engine?  
+
+  Solution    
+
+Mass of car                     m  =  1000 kg  
+Acceleration                    a  =  4 m s–2  
+
+Distance                        S  =  50 m  
+
+Time taken                      t  = 5 s  
+Power                           P  = ?  
+First, we shall determine the force applied by Newton's second law.  
+                     F  = ma  =  1000 kg × 4 m s–2   = 4000 N  
+
+ From Eq. (5.1),          Work,            W   = FS                                  For Your Information!  
+
+                                                                                      The   watt   is   named   in  
+                                                                                5  
+Or                               W  = 4000 N ×  50 m  = 2.0 ×  10  J                  honour   of  James   Watt  
+                                W                                                     (1736-1819),        a   Scottish  
+ From Eq. (5.5),  P  =  
+                                                                                      engineer   who        perfected  
+                                t  
+                                                                                      the steam engine.  
+Putting the values of W and t, we have  
+
+                                         5  
+                             2.0 ×  10 J                      4  
+                     P  =                        = 4 ×  10  W  = 40 kW  
+                                   5 s  
+
+                                                           120  
+  
+﻿5.8 Efficiency                                                            Do You Know?  
+                                                                                            Average  
+                                                                             Activity  
+         The  efficiency  of  a  working  system  tells  us                              Efficiency (%)  
+                                                                         Diesel engine         35  
+what part of the energy can be converted into the                        Petrol engine        25  
+required  useful  form  of  energy  and  what  part  is                  Electric motor       80  
+wasted out of the energy available.                                      Bicycle               15  
+         The available energy for conversion is usually                   
+called the input energy and the energy converted                        For Your Information!  
+into  the  required  form  is  known  as  the  output                    A machine with it's output  
+energy.                                                                  equal to input is called an  
+The efficiency of a system is defined as:                                i d e a l m a c h i n e  w i t h  
+                                                                         efficiency 100%  
+
+ The ratio of useful output energy and the total input  
+ energy  is  called the efficiency of a working  system.  
+
+  
+                                            Useful output energy  
+or                        Efficiency =  
+                                              Total input energy  
+
+Efficiency is often multiplied by  100 to give percentage efficiency. Thus,  
+                                             Useful output energy  
+            Percentage Efficiency  =                                      ×  100   
+                                              Total input energy  
+It can also be given as:                                                 
+                                                                                   
+                                             Useful power output   
+            Percentage Efficiency  =                                      ×  100   . ......... (5.6)  
+                                               Total power input  
+It is found that the energy output is always less than the energy input. During any  
+conversion of energy, some energy is wasted in the form of heat. No device has  
+yet been invented that may convert all the input energy into required output.  
+That is why a system cannot have an efficiency of 100 %. As the energy losses are  
+inevitable in the working of a machine, hence, an ideal or perpetual machine  
+cannot be constructed.  
+   Perpetual Energy Machines    
+
+         It is a hypothetical machine that  can do work indefinitely, without any  
+external source of energy. A perpetual machine would have to generate more  
+energy than it consumes, effectively producing energy from nothing, which is  
+impossible. In any real mechanical system, some energy is always lost as heat due  
+to  friction  between  moving  parts  and  air  resistance  etc.  Thus,  making  it  
+impossible for a machine to keep moving without an external source of energy.  
+Infact,  it  is  a  consequence  of  the  principle  of  conservation  of  energy  that  a  
+perpetual energy machine is not workable.  
+
+                                                  121  
+  
+﻿  Example 5.6    
+
+A block weighing 120 N is dragged up a slope with a force of 100 N to lift it up a  
+height of 10 m. If the slope is 20 m long, calculate the efficiency of the system.  
+
+  Solution    
+Weight of block                    W =  120 N  
+Force applied                     F  =  100 N  
+Distance                          S  =  20 m  
+                                                                                                                           10 m  
+Height                            h  =  10 m  
+% Efficiency                           =  ?  
+Work done to lift the block up is:  
+                       W = F × S = 100 N × 20 m = 2000 J  
+Now, total input energy = work done on the block = 2000 J  
+Useful output energy  = Gravitational potential energy gained  = wh  
+                                                   =  120 N ×  10 m  =  1200 J  
+                                                        Useful output energy  
+               Percentage Efficiency  =                                                       ×  100  
+                                                           Total input energy  
+                                                       1200 J  
+                                                 =                  ×  100          =  60%  
+                                                       2000 J  
+                                                       KEY POINTS  
+
+         Work is defined as the product of the magnitude of force and the distance covered in  
+          the direction of force.  
+         Work will be one joule  if a force of one newton moves a body through a distance of  
+          one metre in the direction of the force.  
+         Energy is the ability of a body to do work. Its unit is also joule.  
+         Kinetic energy is the energy of a body by virtue of its motion.  
+         Gravitational potential energy is defined as the energy that a body possesses by virtue  
+          of its position in the gravitational field.  
+         The potential energy stored in a compressed or stretched spring is known as elastic  
+          potential energy.  
+         Fossil fuel energy is the energy that is released by burning of oil, coal and natural gas.  
+         Hydroelectric generation is the electricity generated by using the kinetic energy of  
+          the falling water.  
+         Solar energy is the energy of the Sunlight that can be converted into electricity.  
+         The energy released by breaking the nucleus of an atom is known as nuclear energy.  
+         Geothermal energy is the heat energy of the hot rocks present deep under the surface  
+          of the Earth.  
+         Wind energy is the electrical energy produced by using the kinetic energy of the fast-  
+          blowing wind.  
+         Biofuel energy is that energy which is obtained by fermentation of organic materials  
+          in the form of biogas or ethanol.  
+         Power is defined as the time rate of doing work.  
+         Power will be one watt, if one joule of work is done in one second.  
+         The ratio of useful output energy to the total input energy is called the efficiency of a  
+          working system.  
+                                                                122  
+
+  
+﻿                                             EXERCISE  
+
+ A      Multiple Choice Questions  
+                                                                            
+         Tick () the correct answer.  
+5.1.      Work done is maximum when the angle between the force F and the  
+
+         displacement d  is:  
+
+         (a) 0°             (b) 30°                     (c) 60°            (d) 90°  
+5.2.     A joule can also be written as:  
+
+         (a)         –2     (b)         –1              (c)       2 –3     (d)        2 –2  
+             kg m s             kg m s                      kg m s             kg m s 
+
+5.3.     The SI unit of power is:  
+
+         (a) joule          (b) newton                  (c) watt           (d) second  
+
+5.4.      The power of a water pump is 2 kW. The amount of water it can raise in  
+
+         one minute to a height of 5 metres is:  
+
+         (a) 1000 litres                       (b) 1200 litres  
+
+         (c) 2000 litres                       (d) 2400 litres  
+
+                                                                       −1 
+ 5.5.     A bullet of mass 0.05 kg has a speed of 300 m s  . Its kinetic energy will be:  
+
+          (a) 2250 J                  (b) 4500 J                  (c) 1500 J                  (d) 1125 J  
+
+5.6.     If a car doubles its speed, its kinetic energy will be:  
+
+         (a) the same                                   (b) doubled  
+
+         (c) increased to three times                   (d) increased to four times  
+
+5.7.     The energy possessed by a body by virtue of its position is:  
+
+         (a) kinetic energy                             (b) potential energy  
+
+         (c) chemical energy                            (d) solar energy  
+
+5.8.      The magnitude of momentum of an object is doubled, the kinetic energy  
+
+         of the object will:  
+
+         (a) double                                     (b) increase to four times  
+
+         (c) reduce to one-half                         (d) remain the same  
+
+5.9.     Which of the following is not renewable energy source?  
+
+         (a) Hydroelectric energy                       (b) Fossil fuels  
+
+         (c) Wind energy                                (d) Solar energy  
+
+                                                    123  
+  
+﻿ B      Short Answer Questions  
+                                                        
+
+5.1.   What is the work done on an object that remains at rest when a force is  
+       applied on it?  
+5.2.   A  slow-moving  car  may  have  more  kinetic  energy  than  a  fast-moving  
+        motorcycle. How is this possible?  
+5.3.   A force F₁ does 5 J of work in 10 s. Another force F  does 3 J of work in 5 s.  
+                                                                           2  
+
+       Which force delivers greater power?  
+5.4.   A woman runs up a flight of stairs. The gain in her gravitational potential  
+       energy is 4500 J. If she runs up the same stairs with twice the speed, what  
+       will be her gain in potential energy?  
+5.5.   Define work and its SI unit.  
+5.6.   What is the potential energy of a body of mass m when it is raised through a  
+        height h?  
+5.7.   Find an expression for the kinetic energy of a moving body.  
+5.8.   Define efficiency of a working system. Why a system cannot have 100%  
+       efficiency?  
+5.9.   What is power? Define the unit used for it.  
+5.10. Differentiate between renewable and non-renewable energy sources.  
+  
+
+ C      Constructed Response Questions  
+
+5.1.   Can the kinetic energy of a body ever be negative?  
+5.2.   Which  one  has  the  greater  kinetic  energy;  an  object  travelling  with  a  
+       velocity v or an object twice as heavy travelling with a velocity of ½ v?  
+5.3.   A car is moving along a curved road at constant speed. Does its kinetic  
+       energy change?  
+5.4.   Comment on the statement. “An object has one joule of potential energy.”  
+5.5.   While driving on a motorway, tyre of a vehicle sometimes bursts. What may  
+        be its cause?  
+5.6.   While playing cricket on a street, the ball smashes a window pane. Describe  
+       the energy changes in this event.  
+5.7.   A man rowing boat upstream is at rest with respect to the shore. Is he doing  
+       work?  
+5.8.    A cyclist goes downhill from the top of a steep hill without pedalling and  
+       takes it to the top of the next hill.  
+                   (i) Draw a diagram of what happened.  
+
+                                                    124  
+  
+﻿                  (ii) Analyse this event in terms of potential and kinetic energy.  
+                      Label your diagram using these terms.  
+5.9.   Is timber or wood renewable source of heat energy? Comment.  
+
+  
+
+ D      Comprehensive Questions  
+
+5.1.     What  is  meant  by  kinetic  energy?  State  its  unit.  Describe  how  it  is  
+         determined.  
+5.2.     State the law of conservation of energy. Explain it with the help of an  
+         example of a body falling from certain height in terms of its potential  
+         energy and kinetic energy.  
+5.3.     Differentiate  between renewable and  non  renewable sources of energy.  
+         Give three examples for each.  
+5.4.     Explain what is meant by efficiency of a machine. How is it calculated?  
+         Why there is a limit for the efficiency of a machine?  
+5.5.     Describe the process of electricity generation by drawing a block diagram  
+         of the process in the following cases.  
+                  (i) Hydroelectric power generations        (ii) Fossil fuels  
+
+  E     Numerical Problems  
+
+5.1.      A force of 20 N acting at an angle of 60° to the horizontal is used to pull a  
+         box through a distance of 3 m across a floor. How much work is done?  
+                                                                                                 (30 J)  
+5.2.      A body moves a distance of 5 metres in a straight line under the action of a  
+         force of 8 newtons. If the work done is 20 Joules, find the angle which the  
+         force makes with the direction of motion of the body.  
+                                                                                                  (60o)  
+
+5.3.      An engine raises 100 kg of water through a height of 80 m in 25 s. What is  
+         the power of the engine?  
+                                                                                            (3200 W)  
+5.4.      A body of mass 20 kg is at rest.  A 40 N force acts on it for 5 seconds. What  
+         is the kinetic energy of the body at the end of this time?  
+                                                                                              (1000 J)  
+5.5.      A ball of mass 160 g is thrown vertically upward. The ball reaches a height  
+         of 20 m. Find the potential energy gained by the ball at this height.  
+                                                                                                 (32 J)  
+5.6.      A 0.14 kg ball is thrown vertically upward with an initial velocity of 35 m s¹.  
+         Find the maximum height reached by the ball.  
+                                                                                            (61.25 m)  
+                                                  125  
+  
+﻿5.7.        A girl is swinging on a swing. At the lowest point of her swing, she is 1.2 m  
+           from the ground, and at the highest point she is 2.0 m from the ground.  
+           What is her maximum velocity and where?  
+
+                                                                                      -1 
+                                                                             (4 m s  , at the lowest position)  
+
+5.8.        A  person  pushes a  lawn  mower with a force  
+           of  50  N  making  an  angle  of  45°  with  the  
+           horizontal. If the mower is moved through a  
+           distance of 20 m, how much work is done?  
+                                                                       (707 J)  
+
+5.9.       Calculate the work done in                                                 
+                                                                                      
+           (i)    Pushing  a  5  kg  box  up  a  frictionless                         
+                                                                                      
+           inclined  plane  10  m  long  that  makes  an                              
+                                                                                                                         h  
+
+           angle of 30° with the horizontal.                                          
+
+                                                                                                  O  
+                                                                      (250 J)                   30 
+
+           (ii)  Lifting the box vertically up from the ground to the top of the inclined  
+           plane.  
+                                                                                                                   (250 J)  
+5.10.    A box of mass 10 kg is pushed up along a ramp 15 m long with a force of  
+           80 N. If the box rises up a height of 5 m, what is the efficiency of the  
+           system?  
+                                                                                                                  (41.7%)  
+5.11.   A force of 600 N acts on a box to push it 5 m in 15 s. Calculate the power.  
+  
+                                                                                                                 (200 W)  
+5.12.   A 40 kg boy runs up-stair 10 m high in 8 s. What power he developed.  
+  
+                                                                                                                 (500 W)  
+5.13.    A force F acts through a distance L on a body. The force is then increased  
+           to 2F that further acts through 2L. Sketch a force-displacement graph and  
+           calculate the total work done.  
+                                                                                                      (5FL or 5 units)  
+
+                                                             126  
+  

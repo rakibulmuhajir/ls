@@ -1,0 +1,777 @@
+﻿    Chapter  
+         7                  Thermal Properties  
+                                             of Matter  
+
+  
+ Student Learning Outcomes  
+
+  After completing this chapter, students will be able to:  
+  [SLO: P-09-C-01]  Describe, qualitatively, the  
+  particle structure of solids, liquids and gasses  
+  [Including and relating their properties to the  
+  forces and distances between particles and  
+  to   the   motion   of   the   particles   (atoms,  
+  molecules, ions and electrons)].  
+  [SLO:   P-09-C-02]   Describe  plasma  as  a  
+  fourth state of  matter  [In which a significant  
+  portion of the material is made up of ions or  
+  electrons   e.g.   in   stars,   neon   lights   and  
+  lightning streamers].  
+  [SLO:  P-09-C-03]  Describe the relationship between the motion of particles and temperature  
+  [including the idea that there is a lowest possible temperature (approx.-273°C), known as  
+  absolute zero, where the particles have least kinetic energy]  
+  [SLO: P-09-C-04] State that an increase in the temperature of an object increases its internal  
+  energy  
+  [SLO:  P-09-C-05]  Explain,  with  examples,  how  a  physical  property  which  varies  with  
+  temperature may be used for the measurement of temperature  
+  [SLO:  P-09-C-06]  Justify  the  need  for  fixed  points  in  the  calibration  of  thermometers  
+  [including what is meant by the ice point and steam point.]  
+  [SLO:  P-09-C-07]   illustrate  what  is  meant  by  the  sensitivity,  range  and  linearity  of  
+  thermometers.  
+  [SLO: P-09-C-8]  Differentiate between the structure and function of liquid-in-glass and of  
+  thermocouple thermometers  
+  [SLO:  P-09-C-9]  Discuss  how  the  structure  of  a  liquid  in-glass  thermometer  affects  its  
+  sensitivity, range and linearity  
+
+  
+          Heat or thermal energy has always been the necessity of human beings,  
+animals and plants in this world. Without heat, their existence would not have  
+been possible.  In the beginning, the Sun was the only source of light and heat.  
+With the discovery of fire, a new era was started. The uses of heat produced from  
+fire were increased day by day and contributed greatly to the comforts and  
+facilities for the human being. Initially, the hot and cold objects were sensed by  
+touching which was not a good standard to measure the degree of hotness of an  
+
+                                                     148  
+  
+﻿object. So, man evolved different methods to measure it. After the invention of  
+standard measuring devices, the temperature was also included in the list of  
+basic physical quantities like mass, length and time.  
+           This chapter begins with the introduction of kinetic molecular theory of  
+particles of matter. It is due to the fact that temperature and heat or internal  
+energy are associated with the motion of particles in the matter.  
+
+  
+
+7.1 Kinetic Molecular Theory of Matter  
+
+           According to this theory, matter is composed of very small particles called  
+molecules  which  are  always  in  motion.  Their  motion  may  be  vibrational,  
+rotational  or  linear.  There  exists  a  mutual  force  of  attraction  between  the  
+molecules known as intermolecular force. This force depends upon the distance  
+between the molecules. It decreases with increasing distance between them.  
+           The molecules possess kinetic energy due to motion and potential energy  
+due to force of attraction. When a substance is heated, its temperature rises and  
+its molecular motion becomes more vigorous which increases the kinetic energy  
+of the molecules. Thus, the temperature of the substance depends upon the  
+average kinetic energy of its molecules. In general, matter exists in three states  
+solids, liquids and gases as shown in Fig. 7.1.  
+
+                                Solid                       Liquid                     Gas  
+                                                                                                     
+                                                            Fig. 7.1                           
+           Most of the properties of solids, liquids and gases  
+can be explained on the basis of kinetic molecular theory of  
+matter. In case of solids, the intermolecular forces are so  
+strong  that  they  keep  the  molecules  bound.  So,  the  
+molecules are held at fixed positions but still they show  
+vibrational motion about their fixed points (Fig. 7.2). This is  
+why, the solids have a definite shape and a definite volume.  
+           In case of liquids, intermolecular force is so weak that                                                            
+it  cannot  hold  the  molecules  at  fixed  positions  and  the                                        Fig. 7.2  
+molecules  can  slide  over  each  other  in  random  directions. A  liquid, therefore,  
+possesses  a  definite  volume  but  has  no  definite  shape.  Due  to  flow  of  the  
+molecules, it acquires the shape of the containing vessel.  
+           Gas molecules are relatively far away from one and another. Due to which,  
+gas neither posseses a definite volume nor a definite shape.  
+
+                                                            149  
+  
+﻿ Plasma  
+                          
+              The plasma is a gas in which most of the atoms   
+are  ionized  containing  positive  ions  and  electrons   
+(Fig. 7.3-a). They are freely moving in the volume of the   
+gas. Due to presence of positive ions and free electrons,   
+                                                                                                                 
+plasma  is  the  conducting  state  of  matter.  It  allows  
+                                                                                                                 
+electric  current  to  pass  through  it.  Since  the  gas  in   
+plasma state has properties which are quite different  
+                                                                                                                 
+from ordinary gas, therefore, plasma is known as fourth                                                                                                       
+                                                                                                                       Fig. 7.3(a) Plasma  
+                                                                                                                   
+state of matter. The Sun and the most of other stars are in plasma state. Plasma is  
+also found in plasma TV and in gas discharge tubes (Fig. 7.3-b) when electric  
+current passes through them. The plasma state also occurs during the early  
+stages  of  lightning  formation  known  as  lightning  streamers  which  are  the  
+conducting paths through the atmosphere due to ionized air molecules.  
+
+  
+
+                                                      Fig. 7.3(b) Gas discharge tube  
+
+  
+
+7.2  Temperature and Heat  
+
+              When we touch ice, we feel cold. When we dip                                                                                    Ice cubes  
+our fingers in warm water, we feel hot. Thus, by sense of  
+touch we can tell which of the bodies is colder or hotter.  
+A hotter body is said to be at higher temperature as  
+compared to a colder body.  
+                Temperature of a body is defined as degree  
+                           of its hotness or coldness.  
+                                                                                                            
+              It is our common experience that when we heat a  
+body, its temperature rises. Process of heating provides  
+heat or thermal energy to the body which is the cause                                                                                    Warm water  
+of the rise in temperature.                                                                                                    Fig. 7.4  
+              The following activity will help to define temperature.  
+  Activity 7.1  
+
+   The teacher should arrange hot water in some tea cups, thermometers and metal spoons.  
+    Make groups of the students. Each group will put the spoon in the hot water and stir it. Ask  
+   them what do they feel. Does the other end of the spoon also become hot?  
+
+                                                                              150  
+
+  
+﻿   Do they observe that the spoon also gets hotter? It means heat is being transferred from the  
+   hot water to the spoon because the temperature of the water was higher than that of the  
+   spoon.  
+   Thus  
+                    Temperature can be defined as a physical quantity which  
+                         determines the direction of flow of thermal energy.  
+  
+            This means that thermal energy is transferred from one object to another  
+due to temperature difference of the two bodies. Therefore, we can define heat  
+as follows:  
+
+        Heat is the energy which is transferred from one object to another due to  
+       difference of temperature between the two bodies.  
+
+  
+
+Temperature and Internal Energy  
+
+  
+
+          We know that matter is composed  
+of   molecules   which   are   always   in  
+motion.  Molecules  of  a  solid  are  
+vibrating  about  their  fixed  positions.  
+The  molecules  of  a  liquid  are  sliding  
+one over the other and those of gases  
+are  randomly  moving.  The  molecules  
+                                                                                                                                              
+possess  kinetic  energy  on  account  of                                      Fig. 7.5 The internal energy of air  
+their  motion.  Potential  energy  is  also                                    inside a hot-air balloon increases as  
+associated with molecules  because of                                         the temperature increases.  
+
+their attractive forces.  
+                           The sum of kinetic and potential energies of the  
+                         molecules of an object is called its internal energy.  
+                                                                                                                         
+
+            When we heat a substance, its molecular motion becomes more vigorous  
+which means an increase in its internal energy. As a result, temperature of the  
+substance rises. The heat energy transferred to a body increases the internal  
+energy of its molecules due to which its temperature rises.  
+             Remember that, it is not true to say that a substance contains heat. The  
+substance contains internal energy. The word heat is used only when referring to  
+the energy actually in transit from hot to cold body.  
+
+  
+
+7.3 Thermometers  
+
+            Our sense of touch can tell us whether an object is hot or cold. It gives an  
+idea  about  the  object's  temperature  but  we  cannot  measure  the  actual  
+
+                                                                    151  
+  
+﻿temperature of the body just  by touching it. For the exact measurement of the  
+hotness of a substance, we require an instrument called a thermometer.  
+           Thermometers  use  some  property  of  a  substance,  which  changes  
+appreciably with the change of temperature.  
+
+Basic Thermometric Properties  
+
+           Some basic thermometric properties for a material suitable to construct  
+a thermometer are the following:  
+1.         It is a good conductor of heat.  
+2.         It gives quick response to temperature changes.  
+3.         It has uniform thermal expansion.  
+4.         It has high boiling point.  
+5.         It has low freezing point.  
+6.         It has large expansivity (low specific heat capacity).  
+7.         It does not wet glass.  
+8.         It does not vapourize.  
+9.         It is visible.  
+Liquid-in-Glass Thermometer  
+  
+           We know that liquids expand on heating. So, expansion in the volume of a  
+liquid  can  be  used  for  the  measurement  of  temperature.  This  is  known  as  
+liquid-in-glass  thermometer.  One  such  liquid  which  is  commonly  used  in  
+thermometers is mercury. Figure 7.6 shows a mercury thermometer. It is made of  
+glass. It has a bulb at one end filled with mercury.  
+                             Capillary tube  
+               Mercury                                           Linear scale  
+  
+
+                                                                                                                °C  
+
+                                 Measured temperature = 38°C                         Glass stem  
+                                                           Fig. 7.6  
+
+           When the temperature rises, the mercury expands and moves up through  
+the narrow capillary tube in the form of a mercury thread. As shown in the given  
+figure 7.6, the position of the end of thread reads the temperature. Mercury is  
+opaque and can be easily seen due to its silvery colour. Alcohol is also a choice for  
+the thermometric liquid, but it must be coloured to make it visible.  
+
+  
+
+                  Point to Ponder!                                               Brain Teaser!  
+
+            Could  we  make  mercury                                  (a)   Why  the  walls  of  the  
+            thermometer  if  expansion                                     thermometer bulb are thin?  
+            of  glass  would  have  been                              (b)  Why the inner bore must be  
+            greater than mercury?                                           narrow?  
+
+                                                           152  
+  
+﻿Temperature Scales  
+                                                                         For Your Information!  
+           For the measurement of temperature, a   
+                                                                          The  pressure of a given  mass of gas  
+scale is to be constructed which requires two                            increases     with     temperature.       So,  
+reference temperatures called two fixed points.                          p r e s s u r e o f a  g a s   i s   a l s o   a  
+                                                                         
+One  is  the  steam  point  slightly  above  the    thermometric property which is used  
+boiling   of   water   at   standard   atmospheric                       in gas thermometers. The resistance  
+                                                                         of   a   given   length   of   wire   also  
+pressure. This corresponds to upper fixed point                          depends   upon  temperature.   It  
+of  the  scale.  The  second  fixed  point  is  the                      increases  with   the   increase   in  
+                                                                         
+melting point of pure ice or simply ice point. It is    temperature. So, the resistance of a  
+called the lower fixed point.  Different scales of    w i r e i s a l s o a  t h e r m o m e t r i c  
+temperature   have   been  constructed   by                              substance  and  is  used  in  platinum  
+
+                                                                         resistance thermometer.  
+assigning  different  numerical  values  to  these                           °F             °C              K  
+
+fixed points. Three different scales are:  
+
+                                                                                  
+(i)       Celsius or centigrade scale                                          F 
+                                                                               ° 
+                                                                                                 
+                                                                                  
+                                                                               0              C 
+                                                                               2              ° 
+                                                                               2                                
+(ii)       Fahrenheit scale                                                                   0              3 
+                                                                               0   212°F      0   100°C      7     373  K  
+                                                                               1              1              3 
+                                                                               2 
+                                                                                                                        
+(iii)      Kelvin scale                                                                                      3   Steam  
+                                                                                            
+                                                                                              0              6 
+                                                                               0              9              3 
+                                                                               0                                  point  
+           In   Celsius   or   centigrade   scale,   the                       2            
+                                                                               0 
+                                                                               9                                
+                                                                                                 
+                                                                               1              0              3 
+numerical values assigned to  lower and  upper                                 0              8              5 
+                                                                               8                             3 
+                                                                               1                                
+                                                                                  
+                                                                               0                                
+                                                                               7 
+fixed points are 0 and 100. As the difference                                  1              0              3 
+                                                                               0              7              4 
+                                                                                                             3 
+                                                                               6            
+                                                                               1                                
+between  these  values  is  100,  so  the  space                               0                                
+                                                                               5                             3 
+                                                                                              0 
+                                                                               1                             3 
+                                                                                              6 
+                                                                               0                             3 
+between these points is divided into 100 equal                                 4            
+                                                                               1 
+                                                                                  
+                                                                               0                                
+                                                                               3                             3 
+parts. Each part is known as  1°C.                                        s    1        s     0        s     2 
+                                                                                              5 
+                                                                         n     0        n              n     3 
+                                                                               2 
+                                                                          o    1        o              o 
+                                                                        i              i              i 
+           In Fahrenheit scale, the lower fixed point  s                       0        s              s        
+                                                                        i              i              i 
+                                                                               1              0              3 
+                                                                         v     1        v     4        v     1 
+                                                                        i      0       i              i      3 
+is  labelled  as  32  and  upper  as  212.  As  the   d                        0       d              d         
+                                                                               1 
+                                                                        0      0       0              0      3  
+                                                                         8     9       0      0       0      0 
+                                                                                              3 
+difference  between these two  numbers is  180,                                             
+                                                                        1              1              1      3 
+                                                                               0 
+                                                                               8                                
+                                                                                                                
+                                                                                  
+                                                                                                             3 
+so in this scale the space between these points                                0              0              9 
+                                                                               7              2 
+                                                                                                             2 
+                                                                                  
+                                                                               0                                
+                                                                               6 
+                                                                                                                
+is  divided  into  180  equal  parts.  Each  part  is                                                        3 
+                                                                               0              0              8 
+                                                                               5              1 
+                                                                                                             2      Ice  
+known as 1°F. Celsius and Fahrenheit scales are                                0  
+                                                                               4 
+                                                                                            
+                                                                                                                   point  
+                                                                               0                             3 
+generally used in ordinary life.                                               3    32°F      0   0°C        7    273 K  
+                                                                                                             2 
+                                                                                  
+                                                                               0 
+                                                                               2 
+          There  is  a  third  scale  of  temperature                          0              0  
+                                                                               1              1 
+known as Kelvin scale or Absolute temperature                                                  - 
+
+scale. It is used in scientific measurements. In  
+Kelvin scale, the lower and upper fixed points  
+are  labelled as  273 and  373. As the difference  
+between these values is 100, so the width of 1 K  
+                                                                                   Comparison of  
+is the same as that of 1°C. The zero point of this                         three scales of temperature  
+scale is the temperature at which the molecules                                         Fig. 7.7  
+
+                                                          153  
+  
+﻿of a substance cease to move. Their average kinetic energy becomes zero. This is  
+known as absolute zero. Its value is -273.15 °C. For calculations, it is simply taken  
+as -273 °C. Absolute zero is the lowest possible temperature even to be in the  
+whole universe. The matter does not exist below absolute zero temperature.  
+
+  
+
+ Conversion of Temperature from One Scale to Another  
+
+                  If the temperature of a body is T on Celsius scale, T  on Fahrenheit scale  
+                                                                                                     c                                               F  
+
+ and T on Kelvin scale, then these readings are related by the following formulae:  
+              k  
+
+(I)  Conversion of Celsius (centigrade) to  
+          Fahrenheit scale:                                                                       For Your Information!  
+
+                                                                                           
+                        9                                                                                                                                  
+          T       =            × TC   + 32                        ……. (7.1)  
+             F  
+                                                                                           
+                                                                                                                                                           
+                        5                                                                          Inside hot stars                                                                         9  
+                                                                                                                                                                                         10 
+                                                                                                                                                                     
+(ii)  Conversion of Fahrenheit to                                                                                                                                                           8  
+                                                                                                                                                                                         10 
+          Celsius scale:  
+                                                                                                                                                                                  
+                                                                                                   Inside the Sun                                                                           7  
+                        5                                                                                                                                                                10 
+          T       =                                                                      
+                                                                                                                                                           
+            C                 (T – 32)                          ……. (7.2)                                                                                                         
+                                   F                                                                                                                                                        6  
+                        9                                                                                                                                                                10 
+                                                                                                   Nuclear explosion  
+                                                                                                                                                                                  
+                                                                                                                                                                                            5  
+(iii)  Relationship between Kelvin and                                                                                                                                                   10 
+                                                                                                  
+                                                                                                                                                                     
+                                                                                                                                                                                  
+                                                                                                   Stellar nebulae                                                                          4  
+           Celsius scales:                                                                                                                                                               10 
+                                                                                                                                                                     
+                                                                                                   Melting point of iron                                                          
+                                                                                                                                                                                            3  
+          T      =  T          + 273                       ……. (7.3)                                                                                                                     10 
+            k              C  
+                                                                                                                                                                     
+                                                                                                   Melting point of ice (°0 C)                                                    
+                                                                                                   Highest known transition temperature                                                     2  
+                                                                                                                                                                                         10 
+  Example 7.1                                                                                      for a superconductor  
+                                                                                                   Nitrogen  liquefies                                                            
+                                                                                                   Hydrogen  Liquefies                                                                      1  
+                                                                                                                                                                                         10 
+                  How much 30°C temperature                                                        Outer space  
+                                                                                                                                                                     
+                                                                                                   4                                                                              
+                                                                                                    He becomes superfluid                                                                   0  
+would be on Fahrenheit and Kelvin                                                                                                                                                        10    -  1 K  
+                                                                                                  
+                                                                                                                                                                     
+                                                                                                                                                                                  
+                                                                                                                                                                                            –1  
+ scales?                                                                                                                                                                                 10 
+
+                                                                                                                                                                     
+                                                                                                  
+                                                                                                                                                                                  
+                                                                                                                                                                     
+                                                                                                                                                                                            –2  
+                                                                                                                                                                                         10 
+                                                                                                  
+  
+                                                                                                                                                                                  
+                                                                                                   3 He becomes superfluid                                           
+                                                                                                                                                                                            –3   -  1 mK  
+  Solution                                                                                                                                                                               10 
+                                                                                                  
+                                                                                                                                                          3  
+                                                                                                                                                                                  
+                                                                                                   Lowest temperature obtained for  He,                                                     –4  
+                                                                                                                                                                                         10 
+         Temperature  TC   = 30°C                                                                                                                                  
+                                                                                                                                                                                  
+                                                                                                                                                                   
+                                                                                                                                                                                            –5  
+                                                                                                                                                                                         10 
+                                        9                                                          Lowest temperature for                                        
+                                                                                                                                                                 
+                                                                                                                                                                                                 
+                          T       =                                                                                                                                               
+    Using                   F                   × T           + 32°                                electrons in a metal                                                                      –6  
+                                         5              C                                                                                                                                10    -  1 μK  
+                                                                                                                                                                                  
+                                                                                                                                                                                             –7    
+                                       9                                                                                                                                                 10 
+                                                                                                                                                                                                 
+                                 =             × 30°C+ 32°=86°F                                                                                                  
+                                                                                                                                                                                  
+                                                                                                                                                                 
+                                                                                                                                                                                             –8    
+                                                                                                  
+                                         5                                                                                                                                               10 
+                                                                                                   Lowest temperature obtained                                   
+                                                                                                                                                                                                 
+                                                                                                                                                                                  
+    Using                  T  = T            +273                                                  for nuclei in a solid                                                                     –9  
+                              k          C                                                                                                                                               10    -  1 nK  
+                                                                                                   absolute zero  
+                                  = 30°C  + 273  = 303K                                                                                                                    
+
+ Thermocouple Thermometer  
+
+                  This type of thermometer consists of two wires of different materials such  
+
+                                                                                                  154  
+  
+﻿as copper and iron. Their ends are joined together to   For Your Information!  
+form two junctions.  If the two junctions  are at different   Thermo-electric  current  is  
+                                                                                              a  thermometric  property  
+temperatures, a small current flows across them. This                                         in a thermocouple  
+current  is  due  to  the  potential  difference  produced  
+across the two junctions as the two wires                                                 Thermocouple  
+have  different  resistance  to  the  flow  of                              Hot            Metal A                      Voltage  
+current. The greater is the difference of                                junction                                           V  
+
+temperatures, the greater is the potential  
+                                                                                           Metal B  
+difference  or  voltage  produced  across                                                                  Cold junction  
+the junctions. If one end of the junction is                                                    Fig. 7.8  
+ kept at a fixed lower temperature, say by placing it in an ice bath at 0OC for  
+
+ reference, the temperature of other junction at a higher temperature can be  
+ measured using a millivolt meter by a calibrated scale on it (Fig. 7.8).  
+            This type of thermometer is particularly useful for very high temperatures  
+and also rapidly changing temperature as there is only a small mass of metal  
+ (the junction) to heat up.  
+
+7.4 Sensitivity, Range and Linearity of Thermometers  
+
+            A  thermometer  is  evaluated  by  its  three  key  characteristics  that  are  
+sensitivity,  range  and  linearity.  They  help  determine  the  suitability  of  the  
+thermometer for specific use ensuring accurate and reliable measurement of  
+temperature.  
+
+  
+
+Sensitivity  
+
+            Sensitivity of a thermometer refers to its ability to detect small changes in  
+the temperature of an object. For example, the minimum division on the scale of  
+a thermometer is  1°C. The accuracy of its temperature measurement will be  1°C.  
+On another thermometer the marks are 0.1°C apart. Hence, its accuracy will be  
+ up to 0.1°C and said to be more sensitive. Its measurement will be more precise  
+than the measurement by a thermometer with an accuracy of 1°C.  
+
+  
+
+Range  
+
+            This refers to the span of temperature, from low to high, over which the  
+thermometer  can  measure  accurately.  For  example,  a  clinical  thermometer  
+designed for human body temperature has a narrow or short range, say from  
+ 35°C to 45°C. A long-range thermometer is usually used for science experiments  
+ in the  laboratory with  markings from − 10°C to  110°C. The choice of  liquid for  
+
+                                                                155  
+  
+﻿thermometers put a lower and upper limit for the range of a thermometer.  For  
+example, Mercury freezes at -39°C and boils at 357°C. Hence, we can construct  
+mercury in glass thermometers within this range. The marking scale depends on  
+desired range of measurement. For extremely low temperatures, alcohol is used.  
+Alcohol has a much lower freezing point about -112°C which increases its lower  
+limit for the range but it has lower upper limit as it boils at 78 °C.  
+
+  
+
+Linearity  
+
+            This refers to a direct proportional relationship between the temperature  
+and  scale  reading  across  entire  range  of  measurement.  A  good  linear  
+thermometer should measure equal increments on the scale corresponding to  
+equal change in the temperature. It means that marking on the scale should be  
+evenly spaced over the whole range. High linearity means more consistent and  
+proportional  scale  readings  over  the  entire  range  to  ensure  accuracy  of  
+measurement.  
+
+  
+
+7.5 Structure of A Liquid-in-Glass Thermometer  
+
+            A liquid-in-glass thermometer has a narrow and uniform capillary tube  
+having a small bulb filled with mercury or alcohol at its lower end. The thin wall of  
+the glass bulb allows quick conduction through glass to the liquid from a hot  
+object whose temperature is to be measured. Mercury being metal is a good  
+conductor and hence responds quickly to the change in temperature. The small  
+amount of liquid also responds more quickly to a change in temperature. The  
+quick response makes the device sensitive. Use of mercury is quite sensitive for  
+normal  measurements.  For  greater  accuracy,  alcohol  can  be  used  as  its  
+expansivity is six times more than mercury but it has range limitation to higher  
+temperature measurements due to its low boiling point (78°C).  
+            The uniformity of the narrow tube or bore ensures even expansion of the  
+liquid required to make the linear measuring scale. The choice of mercury allows  
+to use it over a  long-range temperature due to its  low freezing  point and  high  
+boiling point. It provides a fairly long range of measurement of temperature.  
+                   Mercury                                             Thick glass stem                               Range from  
+                                                                                                                    -10°C to 110°C  
+
+                                 -10     0      10     20      30     40     50      60     70     80      90     100    110°C  
+
+  
+
+  Bulb with thin                            Scale, usually in 1º divisions                               Fine-bore,  
+     glass wall                            but can read to 0.1°C on very                                  uniform  
+                                                 long, fine-bore tubes                              evacuated tube  
+
+                            Fig. 7.9 Labelled diagram of a laboratory thermometer  
+
+                                                                   156  
+  
+﻿                                                 KEY POINTS  
+
+      According to kinetic molecular theory of matter, the matter is composed of molecules  
+       which are in motion. The molecules possess a mutual force of attraction. The molecules  
+       have  kinetic  energy  due  to  their  motion  and  potential  energy  due  to  the  force  of  
+       attraction.  
+
+      Plasma consists of ionized atoms of a gas containing equal amount of positive and  
+       negative charges.  
+      Temperature  is  the  degree  of  hotness  or  coldness  of  a  body  and  it  determines  the  
+       direction of flow of heat when two bodies are brought in thermal contact.  
+      Heat is the form of energy which is transferred from one body to the other due to the  
+       difference in temperature.  
+      A body does not contain heat. It contains internal energy which is the sum of kinetic and  
+       potential energy of the total molecules of an object.  
+      Temperature is the degree of hotness of an object. According to particle theory of matter,  
+       it is a measure of the average kinetic energy of the molecules of an object.  
+      Thermometer is a device used to measure the temperature of a body.  
+      Conversion of temperature from one scale to the other:  
+
+        a.  Relationship between Kelvin (T ) and Celsius (T ) temperature  T  = T  + 273  
+                                                 K                  C                    K    C  
+
+        b.  Relationship   between   Celsius   (T )   also   known   as   centigrade   to   Fahrenheit  
+                                                       C 
+
+                temperature (TF)  
+                                                    9  
+                                             T  =      × T  + 32  
+                                               F    5     C                            5  
+
+        c.  Relationship between Fahrenheit (T ) to Celsius (T )                 T  =     (T – 32)  
+                                                      F                C           C   9     F  
+      Thermocouple  thermometer  is  based  on  the  flow  of  electric  current  between  two  
+      junctions of two wires of different materials due to difference of temperatures at the  
+      junctions.  
+
+                                                   EXERCISE  
+ A       Multiple Choice Questions  
+         Tick () the correct answer.  
+7.1.      How do the molecules in a solid behave?  
+          (a)  Move randomly  
+          (b)  Vibrate about their mean positions  
+          (c)  Rotate and vibrate randomly at their own positions  
+          (d)  Move in a straight line from hot to cold ends.  
+7.2.      What type of motion is of the molecules in a gas?  
+          (a) Linear motion                                  (b) Random motion  
+          (c) Vibratory motion                               (d) Rotatory motion  
+
+                                                        157  
+  
+﻿7.3.     Temperature of a substance is:  
+         (a) the total amount of heat contained in it  
+         (b) the total number of molecules in it  
+         (c) degree of hotness or coldness  
+         (d) dependent upon the intermolecular distance  
+7.4.     Heat is the:  
+         (a) total kinetic energy of the molecules  
+         (b) the internal energy  
+         (c) work done by the molecules  
+         (d) the energy in transit  
+7.5.     In Kelvin scale, the temperature corresponding to melting point of ice is:  
+         (a) zero         (b) 32                     (c) -273         (d)  +273  
+7.6.     The temperature which has the same value on Celsius and Fahrenheit  
+         scale is:  
+         (a) -40          (b) +40                    (c) +45          (d) -45  
+7.7.     Which one is a better choice for a liquid-in-glass thermometer?  
+         (a) Is colourless                           (b) Is a bad conductor  
+         (c) Expand linearly                         (d) Wets glass  
+7.8.     One disadvantage of using alcohol in a liquid-in-glass thermometer:  
+         (a) it has large expansivity                (b) it has low freezing point (-112°C)  
+         (c) it wets the glass tube                  (d) its expansion is linear  
+7.9.     Water is not used as a thermometric liquid mainly due to:  
+         (a) colourless                              (b) a bad conductor of heat  
+         (c) non-linear expansion                    (d) a low boiling point (100°C)  
+7.10.   A thermometer has a narrow capillary tube so that it:  
+         (a) quickly responds to temperature changes  
+         (b) can read the maximum temperature  
+         (c) gives a large change for a given temperature rise  
+         (d) can measure a large range of temperature  
+7.11.   Which  thermometer  is  most  suitable  for  recording  rapidly  varying  
+         temperature?  
+         (a) Thermocouple thermometer  
+         (b) Mercury-in-glass laboratory thermometer  
+         (c) Alcohol-in-glass thermometer  
+         (d)  Mercury-in-glass clinical thermometer  
+
+                                                158  
+  
+﻿  B      Short Answer Questions  
+                                                              
+7.1.      Why solids have a fixed volume and shape according to particle theory of  
+           matter?  
+7.2.      What are the reasons that gases have neither a fixed volume nor a fixed  
+          shape?  
+7.3.      Compare the spacing of molecules in the solid, liquid and gaseous state.  
+7.4.      What is the effect of raising the temperature of a liquid?  
+7.5.      What is meant by temperature of a body?  
+7.6.       Define heat as ‘energy in transit’.  
+7.7.      What is meant by thermometric property of a substance? Describe some  
+          thermometric properties.  
+7.8.       Describe the main scales used for the measurement of temperature. How  
+          are they related with each other?  
+7.9.      What is meant by sensitivity of a thermometer?  
+7.10.   What do you mean by the linearity of a thermometer?  
+7.11.   What makes the scale reading of a thermometer accurate?  
+7.12.   What does determines the direction of heat flow?  
+7.13.      Distinguish between the heat and internal energy.  
+7.14.   When you touch a cold surface, does cold travel from the surface to your  
+           hand or does energy travel from your hand to cold surface?  
+7.15.   Can you feel your fever by touching your own forehead? Explain.  
+
+  
+
+ C       Constructed Response Questions  
+
+7.1.       Is kinetic molecular theory of matter applicable to the plasma state of  
+           matter? Describe briefly.  
+7.2.      Why is mercury usually preferred to alcohol as a thermometric liquid?  
+7.3.      Why is water not suitable for use in thermometers? Without calculations,  
+          guess what is equivalent temperature of 373 K on Celsius and Fahrenheit  
+          scales?  
+7.4.       Mention two ways in which the design of a liquid-in-glass thermometer  
+           may be altered to increase its sensitivity.  
+7.5.      One litre of water is heated by a stove and its temperature rises by 2°C. If  
+          two litres of water is heated on the same stove for the same time, what will  
+           be then rise in temperature?  
+7.6.      Why are there no negative numbers on the Kelvin scale?  
+7.7.      Comment   on   the   statement,   “A   thermometer   measures   its   own  
+          temperature.”  
+
+                                                          159  
+  
+﻿7.8.         There are various objects made of cotton, wood, plastic, metals etc. in a  
+             winter night. Compare their temperatures with the air temperature by  
+             touching them with your hand.  
+7.9.         Which is greater: an increase in temperature  1°C or one  1°F?  
+7.10.   Why would not you expect all the molecules in a gas to have the same  
+             speed?  
+7.11.        Does it make sense to talk about the temperature of a vacuum?  
+7.12.   Comment on the statement: “A hot body does not contain heat”.  
+7.13.        Discuss whether the Sun is matter.  
+
+  
+
+  D        Comprehensive Questions  
+
+7.1.         Describe the main points of particle theory of matter which differentiate  
+             solids, liquids and gases.  
+7.2.         What  is  temperature?   How  is  it   measured?   Describe   briefly  the  
+             construction of a mercury-in-glass thermometer.  
+7.3.         Compare the three scales used for measuring temperature.  
+7.4.         What is meant by sensitive, range and linearity of thermometers? Explain  
+             with examples.  
+7.5.         Explain, how the parameters mentioned in question 7.4 are improved in  
+             the structure of glass-in-thermometer.  
+
+  
+
+  E        Numerical Problems  
+
+7.1          The temperature of a normal human body on Fahrenheit scale is 98.6°F.  
+             Convert it into Celsius scale and Kelvin scale.  
+                                                                                                                          (37°C, 310 K)  
+7.2          At what temperature Celsius and Fahrenheit thermometer reading would  
+
+                                                                                                                                              O 
+             be the same?                                                                                                             (- 40 )  
+7.3          Convert 5°F to Celsius and Kelvin scale.                                                                    (-15°C, 258 K)  
+7.4          What is equivalent temperature of 25°C on Fahrenheit and Kelvin scales?  
+                                                                                                                          (77°F, 298 K)  
+7.5          The ice and steam points on an ungraduated thermometer are found to  
+             be 192 mm apart. What temperature will be on Celsius scale if the length  
+             of mercury thread is at 67.2 mm above the ice point mark?  
+                                                                                                                                       (35°C)  
+7.6          The  length  between  the  fixed  point  of  liquid-in-glass  thermometer  is  
+             20 cm. If the mercury level is 4.5 cm above the lower mark, what is the  
+             temperature on the Fahrenheit scale?                                                                                 (72.5°F)  
+
+                                                                      160  
+  

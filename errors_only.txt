@@ -1,0 +1,11 @@
+﻿
+06-09 09:58:40.890   697   723 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null 
+06-09 09:58:43.178  9814  9830 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+06-09 09:58:43.653   697  3761 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+06-09 09:58:49.410  9814  9840 E AndroidRuntime: java.lang.NoSuchMethodError: No virtual method 
+input channel or an error occurred.  events=0x9
+06-09 09:58:49.686   697   723 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null 
+06-09 09:58:50.270   697   715 E IPCThreadState: Binder transaction failure. id: 1294893, BR_*: 29189, error: -22 (Invalid argument)
+06-09 09:58:50.270   697   715 W ActivityManager: pid 697 system sent binder code 7 with flags 1 to frozen apps and got error -32
+
+

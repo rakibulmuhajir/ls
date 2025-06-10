@@ -29,16 +29,13 @@
       "favicon": "./assets/icon.png"
     },
     "plugins": [
-      "expo-asset"
+      "expo-asset",
     ],
     "extra": {
       "eas": {
         "projectId": "cd06e254-0ca6-408e-bd65-fac5526b342b"
       }
     },
-    // "runtimeVersion": {
-    //   "policy": "1.0.0"
-    // },
     "updates": {
       "url": "https://u.expo.dev/cd06e254-0ca6-408e-bd65-fac5526b342b"
     }

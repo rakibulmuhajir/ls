@@ -120,14 +120,6 @@ export default function MainMenuBottomNavigation({ hasUpdates = false }: Props) 
       showBadge: hasUpdates,
     },
     {
-      id: 'about',
-      label: 'About',
-      icon: 'information',
-      color: theme.colors.secondary,
-      onPress: () => navigation.navigate('About'),
-      showBadge: false,
-    },
-    {
       id: 'features',
       label: 'Features',
       icon: 'clipboard-list', // 📋 Clipboard list icon for features
@@ -140,7 +132,7 @@ export default function MainMenuBottomNavigation({ hasUpdates = false }: Props) 
       label: 'Lab',
       icon: 'flask',                           // 🧪 Flask icon for chemistry lab
       color: theme.colors.accent,              // Uses your theme accent color
-      onPress: () => navigation.navigate('LabExperiment'),  // Navigates to lab screen
+      onPress: () => navigation.navigate('SkiaTest'),  // Navigates to Skia Test screen
       showBadge: false,
     },
     {
@@ -149,6 +141,14 @@ export default function MainMenuBottomNavigation({ hasUpdates = false }: Props) 
       icon: 'palette',
       color: theme.colors.primary,
       onPress: () => setShowThemePicker(true),
+      showBadge: false,
+    },
+     {
+      id: 'about',
+      label: 'About',
+      icon: 'information',
+      color: theme.colors.secondary,
+      onPress: () => navigation.navigate('About'),
       showBadge: false,
     },
   ];

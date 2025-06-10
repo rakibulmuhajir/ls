@@ -1,0 +1,190 @@
+﻿
+06-09 09:58:40.648  1255  1310 V WindowManagerShell: Transition requested (#52): android.os.BinderProxy@242358d TransitionRequestInfo { 
+type = OPEN, triggerTask = TaskInfo{userId=0 taskId=20 effectiveUid=10215 displayId=0 isRunning=true baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.learnspark.app 
+cmp=com.learnspark.app/.MainActivity } baseActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} 
+topActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} origActivity=null 
+realActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} numActivities=1 lastActiveTime=10191137 
+supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 
+token=WCT{android.window.IWindowContainerToken$Stub$Proxy@a8ff342} topActivityType=1 pictureInPictureParams=null 
+shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) 
+topActivityInfo=ActivityInfo{274df53 com.learnspark.app.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 
+isFocused=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 
+isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(284, 660 - 796, 1740) capturedLink=null 
+capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { 
+topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false 
+eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false 
+topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false 
+isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null 
+cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, 
+remoteTransition = null, displayChange = null, flags = 0, debugId = 52 }
+06-09 09:58:40.648   697  2398 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] 
+flg=0x10000000 xflg=0x4 pkg=com.learnspark.app cmp=com.learnspark.app/.MainActivity} with LAUNCH_SINGLE_TASK from uid 1000 (sr=68250766) 
+(BAL_ALLOW_VISIBLE_WINDOW) result code=0
+06-09 09:58:40.681   697  2126 I AppsFilter: interaction: PackageSetting{2cad043 com.android.microdroid.empty_payload/10190} -> 
+PackageSetting{85e799f com.learnspark.app/10215} BLOCKED
+06-09 09:58:40.712   697   735 I ActivityManager: Start proc 9814:com.learnspark.app/u0a215 for next-top-activity 
+{com.learnspark.app/com.learnspark.app.MainActivity}
+06-09 09:58:40.722   697  2126 D CoreBackPreview: Window{cdf5016 u0 Splash Screen com.learnspark.app}: Setting back callback 
+OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@e7857a2, mPriority=0, mIsAnimationCallback=false, 
+mOverrideBehavior=0}
+06-09 09:58:40.890   697   723 V WindowManager: Sent Transition (#52) createdAt=06-09 09:58:40.586 via request=TransitionRequestInfo { 
+type = OPEN, triggerTask = TaskInfo{userId=0 taskId=20 effectiveUid=10215 displayId=0 isRunning=true baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.learnspark.app 
+cmp=com.learnspark.app/.MainActivity } baseActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} 
+topActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} origActivity=null 
+realActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} numActivities=1 lastActiveTime=10191137 
+supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{bdf088f 
+Task{edc5c43 #20 type=standard A=10215:com.learnspark.app}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false 
+launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{2c671c 
+com.learnspark.app.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false 
+isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false 
+isActivityStackTransparent=false lastNonFullscreenBounds=Rect(284, 660 - 796, 1740) capturedLink=null capturedLinkTimestamp=0 
+requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { 
+topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false 
+eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false 
+topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false 
+isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null 
+cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, 
+remoteTransition = null, displayChange = null, flags = 0, debugId = 52 }
+06-09 09:58:40.890   697   723 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null 
+taskFragmentOrganizer=null }
+06-09 09:58:40.890   697   723 V WindowManager:         {WCT{RemoteToken{bdf088f Task{edc5c43 #20 type=standard 
+A=10215:com.learnspark.app}}} m=OPEN f=NONE leash=Surface(name=Task=20)/@0x737bf0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) 
+epz=Point(1080, 2400) d=0 taskParent=-1},
+06-09 09:58:41.734  9814  9814 D nativeloader: Configuring clns-9 for other apk 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk. target_sdk_version=35, uses_libraries=, library_
+path=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/lib/x86_64:/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.l
+earnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.learnspark.app
+06-09 09:58:41.832  9814  9814 V GraphicsEnvironment: com.learnspark.app is not listed in per-application setting
+06-09 09:58:41.833  9814  9814 V GraphicsEnvironment: com.learnspark.app is not listed in ANGLE allowlist or settings, returning default
+06-09 09:58:42.511  9814  9814 W SoLoader: Recording new base apk path: 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk
+06-09 09:58:42.519  9814  9814 I SoLoader: Preparing SO source: DirectApkSoSource[root = 
+[/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64]]
+06-09 09:58:42.598  9814  9814 I SoLoader: Preparing SO source: ApplicationSoSource[DirectorySoSource[root = 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/lib/x86_64 flags = 0]]
+06-09 09:58:42.665  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libc++_shared.so using class loader 
+ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:42.718  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libjsi.so using class loader ns 
+clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:42.732  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libfbjni.so using class loader ns 
+clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:42.866  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libreactnative.so using class loader 
+ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:42.920  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libreact_codegen_rnscreens.so using 
+class loader ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:42.933  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libreact_codegen_RNCSlider.so using 
+class loader ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:42.953  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libreact_codegen_rnsvg.so using 
+class loader ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:42.966  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libreact_codegen_safeareacontext.so 
+using class loader ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:43.012  9814  9814 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libappmodules.so using class loader 
+ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:43.178  9814  9830 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+06-09 09:58:43.653   697  3761 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+06-09 09:58:44.251   697  1609 D CoreBackPreview: Window{5764426 u0 com.learnspark.app/com.learnspark.app.MainActivity}: Setting back 
+callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@268e614, mPriority=0, 
+mIsAnimationCallback=false, mOverrideBehavior=0}
+06-09 09:58:44.429   697   723 I ActivityTaskManager: Displayed com.learnspark.app/.MainActivity for user 0: +3s881ms
+06-09 09:58:44.482   697   898 I ImeTracker: com.learnspark.app:c64a7c5d: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW 
+fromUser false
+06-09 09:58:44.507  9814  9814 I ImeTracker: com.learnspark.app:c64a7c5d: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+06-09 09:58:44.955   697  1341 D CoreBackPreview: Window{cdf5016 u0 Splash Screen com.learnspark.app EXITING}: Setting back callback null
+06-09 09:58:45.153  7244  7244 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1293 
+onStartInput(EditorInfo{EditorInfo{packageName=com.learnspark.app, inputType=0, inputTypeString=NULL, enableLearning=false, 
+autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, 
+initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, 
+hintLocales=[]}}, false)
+06-09 09:58:45.192   697  2398 W PackageConfigPersister: App-specific configuration not found for packageName: com.learnspark.app and 
+userId: 0
+06-09 09:58:48.463  9814  9840 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libhermes.so using class loader ns 
+clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:48.469  9814  9840 D nativeloader: Load 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!/lib/x86_64/libhermestooling.so using class 
+loader ns clns-9 (caller=/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk): ok
+06-09 09:58:48.543  9814  9855 D ProfileInstaller: Installing profile for com.learnspark.app
+06-09 09:58:49.410  9814  9840 E AndroidRuntime: Process: com.learnspark.app, PID: 9814
+06-09 09:58:49.410  9814  9840 E AndroidRuntime: java.lang.NoSuchMethodError: No virtual method 
+getConverters()Lexpo/modules/kotlin/types/TypeConverterProvider; in class Lexpo/modules/kotlin/modules/InternalModuleDefinitionBuilder; or 
+its super classes (declaration of 'expo.modules.kotlin.modules.InternalModuleDefinitionBuilder' appears in 
+/data/app/~~VQiSAf0vtoI0A-wTvj-yEQ==/com.learnspark.app-tUA3QroWoUCsPnVXVC-zzQ==/base.apk!classes9.dex)
+06-09 09:58:49.425   697  1372 W ActivityTaskManager:   Force finishing activity com.learnspark.app/.MainActivity
+06-09 09:58:49.427  1255  1310 V WindowManagerShell: Transition requested (#53): android.os.BinderProxy@9150e25 TransitionRequestInfo { 
+type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=20 effectiveUid=10215 displayId=0 isRunning=true baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.learnspark.app 
+cmp=com.learnspark.app/.MainActivity } baseActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} 
+topActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} origActivity=null 
+realActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} numActivities=1 lastActiveTime=10193521 
+supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 
+token=WCT{android.window.IWindowContainerToken$Stub$Proxy@de47bfa} topActivityType=1 pictureInPictureParams=null 
+shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) 
+topActivityInfo=ActivityInfo{56b25ab com.learnspark.app.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 
+isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 
+isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(284, 660 - 796, 1740) capturedLink=null 
+capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { 
+topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false 
+eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false 
+topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false 
+isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null 
+cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, 
+remoteTransition = null, displayChange = null, flags = 16, debugId = 53 }
+06-09 09:58:49.461   697   889 W InputDispatcher: channel '5764426 com.learnspark.app/com.learnspark.app.MainActivity' ~ Consumer closed 
+input channel or an error occurred.  events=0x9
+06-09 09:58:49.461   697   889 E InputDispatcher: channel '5764426 com.learnspark.app/com.learnspark.app.MainActivity' ~ Channel is 
+unrecoverably broken and will be disposed!
+06-09 09:58:49.462   697   889 I WindowManager: WINDOW DIED Window{5764426 u0 com.learnspark.app/com.learnspark.app.MainActivity}
+06-09 09:58:49.473   697  2398 I ActivityManager: Process com.learnspark.app (pid 9814) has died: fg  TOP
+06-09 09:58:49.473   697   716 I WindowManager: WIN DEATH: Window{5764426 u0 com.learnspark.app/com.learnspark.app.MainActivity EXITING}
+06-09 09:58:49.474   697  1341 I ImeTracker: com.learnspark.app:80d878a3: onRequestHide at ORIGIN_SERVER reason HIDE_REMOVE_CLIENT 
+fromUser false
+06-09 09:58:49.474   697  1341 I ImeTracker: com.learnspark.app:80d878a3: onCancelled at PHASE_SERVER_SHOULD_HIDE
+06-09 09:58:49.526  1499  9675 D AppForceStopRepository: Sending broadcast to query restart status for com.learnspark.app
+06-09 09:58:49.558  1499  9676 I AppLocaleUtil: Can display preference - [com.learnspark.app] : isDisallowedPackage : false / 
+isSignedWithPlatformKey : false / hasLauncherEntry : true / canDisplay : false / 1.1
+06-09 09:58:49.685   697   723 V WindowManager: Sent Transition (#53) createdAt=06-09 09:58:49.426 via request=TransitionRequestInfo { 
+type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=20 effectiveUid=10215 displayId=0 isRunning=true baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.learnspark.app 
+cmp=com.learnspark.app/.MainActivity } baseActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} 
+topActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} origActivity=null 
+realActivity=ComponentInfo{com.learnspark.app/com.learnspark.app.MainActivity} numActivities=1 lastActiveTime=10193521 
+supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{bdf088f 
+Task{edc5c43 #20 type=standard A=10215:com.learnspark.app}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false 
+launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{2c671c 
+com.learnspark.app.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true 
+isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false 
+isActivityStackTransparent=false lastNonFullscreenBounds=Rect(284, 660 - 796, 1740) capturedLink=null capturedLinkTimestamp=0 
+requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { 
+topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false 
+eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false 
+topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 
+topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false 
+isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null 
+cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, 
+remoteTransition = null, displayChange = null, flags = 16, debugId = 53 }
+06-09 09:58:49.686   697   723 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null 
+taskFragmentOrganizer=null }
+06-09 09:58:49.686   697   723 V WindowManager:         {WCT{RemoteToken{bdf088f Task{edc5c43 #20 type=standard 
+A=10215:com.learnspark.app}}} m=CLOSE f=NONE leash=Surface(name=Task=20)/@0x737bf0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) 
+epz=Point(1080, 2400) d=0 taskParent=-1}
+06-09 09:58:49.792  1499  1499 D AppForceStopRepository: Got broadcast response: Restart status for com.learnspark.app false
+06-09 09:58:50.270   697   715 E IPCThreadState: Binder transaction failure. id: 1294893, BR_*: 29189, error: -22 (Invalid argument)
+06-09 09:58:50.270   697   715 W ActivityManager: pid 697 system sent binder code 7 with flags 1 to frozen apps and got error -32
+06-09 09:58:50.277   697   715 W WindowManager: Exception thrown during dispatchAppVisibility Window{5764426 u0 
+com.learnspark.app/com.learnspark.app.MainActivity EXITING}
+
+

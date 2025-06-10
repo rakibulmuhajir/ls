@@ -1,0 +1,1099 @@
+﻿   Chapter  
+         8                 Magnetism  
+
+  
+ Student Learning Outcomes  
+
+ After completing this chapter, students will be able to:  
+
+  [SLO: P-09-E-01]  Describe the  
+  forces  between  magnetic  poles  
+  and   between   magnets   and  
+  magnetic   materials   [Including  
+
+  the use of the terms  north  pole  
+  (N  pole),  south  pole  (S  pole),  
+  attraction   and   repulsion,  
+
+  magnetized  and  unmagnetized]  
+  [SLO:   P-09 -E-02]   Describe  
+  induced magnetism  
+
+  [SLO:  P-09-E-03]  Differentiate  
+  b e t w e e n t e m p o r a r y a n d  
+  permanent magnets  
+  [SLO: P-09-E-04] Describe magnetic fields [as a region in which a magnetic pole experiences  
+
+  a force]  
+  [SLO: P-09-E-05] State that the direction of the magnetic field at a point is the direction of  
+  the force on the N pole of a magnet at that point  
+
+  [SLO: P-09-E-06] State that the relative strength of a magnetic field is represented by the  
+  spacing of the magnetic field lines  
+  [SLO: P-09-E-7] Describe uses of permanent magnets and electromagnets  
+
+  [SLO:  P-09-E-8]  Explain qualitatively in terms of the domain theory of magnetism how  
+
+  materials  can  be  magnetized  and  demagnetize  [stroking  method,  heating,  orienting  in  
+  north-south direction and striking, use of a solenoid]  
+  [SLO:  P-09-E-9]  Differentiate  between  ferromagnetic,  paramagnetic  and  diamagnetic  
+  materials  [by  making  reference  to  the  domain  theory  of  magnetism  and  the  effects  of  
+
+  external magnetic fields on these materials]  
+  [SLO: P-09-E-10] Analyse applications of magnets in recording technology [and illustrate  
+  how electronic devices need to be kept safe from strong magnetic fields]  
+
+  [SLO:  P-09-E-11]  State that soft magnetic materials (such as  soft iron) can be used to  
+  provide shielding from magnetic fields  
+
+         Almost all  of us are familiar with a magnet because of its interesting  
+properties. In lower, classes we have studied some of the properties. You might  
+have also enjoyed a magnet attracting small pieces of iron.  
+
+                                                     161  
+  
+﻿8.1 Magnetic Materials  
+                                                                 
+
+            Magnetism is a force that acts at a distance upon magnetic materials.  
+These materials are attracted to magnets. These materials are called magnetic  
+materials. Let us perform an activity to test such materials.  
+
+  Activity 1  
+
+             The teacher should divide the students into  
+  groups  and  provide  them  permanent  magnets  to  
+  perform this activity.  
+
+              Each group should collect some items made  
+  of different materials such as copper wire, nickel ring,  
+  glass  bottle,  paper  clips,  iron  nail,  eraser,  wooden  
+  ruler, plastic comb, etc. Place them on a table as shown  
+  in figure. Bring the permanent magnet close to each  
+  item   one   by   one   and   observe  which   items   are  
+
+  attracted by the magnet and which are not. Make a list of magnetic and non magnetic  
+  materials.  
+              Materials such as iron, nickel and cobalt will be attracted by the magnet. They are  
+  magnetic materials. The materials such as brass, copper, wood, glass and plastic are not  
+  attracted by the magnet. They are called non-magnetic materials.  
+
+            We will discuss different types of materials in detail later in this chapter.  
+
+  
+
+ For Your Information!  
+
+   Over  1000  years  ago,  the  Greeks  discovered  a  rock  called  lodestone  or  
+   magnetite that could attract materials that contained iron. Also, if suspended  
+   from a string to rotate freely, it would always settle in north-south direction.  
+   This unique property led to form the basis of compass which was later on  
+   used for navigation on land and at sea.  
+
+  
+
+  Activity 2                                                                                          
+             The teacher should facilitate each group to perform                                      
+ this activity as per instructions.                                                                   
+
+  1.    Place some iron filings scattered on the                                                      
+        top of a card paper or a sheet of glass.                                                                    (b) Iron filings  
+  2.    Move a magnet beneath the card paper,                                                                       attracted  
+        glass or a plastic sheet as shown in the                                                                    by magnet  
+                                                                    (a) Scattered Iron  
+        figure.  
+                                                                    filings on a glass s heet  
+  3.    What do you observe? Describe briefly.  
+
+        You must have seen the iron filings following the movement of the You  must  have  seen the  iron  filings  following the  magnet.  Magnetic  
+        force  account  for  these  movements.  This  activity  also  shows  that magnet. Magnetic force accounts for these movements. This activity  
+        also shows that magnets can attract objects containing iron, etc. even if magnets can attract objects containing iron etc. even if they are not in  
+        they are not in direct contact with them. direct contact with them.  
+
+                                                                   162  
+  
+﻿8.2 Properties of Magnets  
+                                                                          
+
+            The property of attracting magnetic materials by the magnets has been  
+discussed above. The magnets also exhibit the following properties.  
+  
+
+ 1. Magnetic Poles                                                                                                              North  
+                                                                                                  
+                                             
+             I  f  a  bar  magnet  is  suspended                                                               West                   East  
+
+ horizontally through a string and allowed to                                                                        South  
+come  to  rest,  it  will  point  in  north-south  
+direction. The end of the magnet that points  
+ north is called the north magnetic pole (N)  
+                                                                                                                      Fig. 8.1  
+and rhe end that points south is the south  
+magnetic pole (S) as shown in Fig. 8.1.                                                                 
+                                                                                                        
+2. Attraction and Repulsion of Magnetic Poles   
+                                                                                                        
+            When two freely suspended bar magnets are                                                   
+ placed close to each other, the two north poles will                                                   
+                                                                                                        
+ repel  each  other  (Fig.  8.2).  So  will  the  two  south                                                Fig. 8.2  
+ poles (Fig. 8.3).                                                                                      
+             However, if the north pole of one is placed                                                
+ near  the  south  pole  of  the  other,  the  poles  will                                              
+attract  (Fig.  8.4  &  Fig.  8.5).  We  can  say  that  Like                                              Fig. 8.3  
+poles repel and unlike poles attract.                                                                   
+                                                                                                        
+
+3.  Identification of a Magnet                                                                          
+                                                                                                            Fig. 8.4  
+            To identify whether an object is a magnet or                                                
+                                                                                                        
+simply a magnetic material, we can bring its one end  
+close to any pole of a suspended bar magnet. If it is                                                   
+attracted, then we can conclude that the end of the                                                         Fig. 8.5  
+
+object  is  either  of  opposite  pole  to  that  of  the  
+suspended magnet or it is simply a magnetic material. Then we should bring the  
+same end of the object close to the other end of the suspended magnet.  If the  
+object is again attracted, it is not a magnet but it is a magnetic material.  
+ If it is repelled by the other end of the suspended magnet, then the object is a  
+ magnet.  
+
+  
+
+                                   The repulsion between the like poles is  
+                                          a real test to identify a magnet.  
+
+                                                                    163  
+  
+﻿4. Is Isolated Magnetic Pole Possible?  
+                                                                                   
+            If  we  break  a  bar  magnet  into  two  equal                                 
+
+pieces, can we get N-pole and S-pole separately?   N                                                                           S   
+No, it is not possible. Each piece will have its two                                        
+
+                                                                                        N       S  N       S  N       S  N       S  
+poles, i.e., N-pole and S-pole. Even if a magnet is                                         
+divided into thousands pieces, each piece will be a                                                     Fig. 8.6  
+complete magnet with its N, and S-poles (Fig.8.6).  
+
+  
+
+8.3 Induced Magnetism  
+                                                                
+            Magnetic material such as iron or steel can be made a magnet. This is  
+known as magnetization. In other words, we can say that magnetism has induced  
+in it. You can perform an activity to observe this fact.  
+
+  Activity 3  
+
+        The teacher should facilitate each group to perform this activity as per instructions.  
+   1.   Take a magnetic compass. Put it on a table and see which end of its needle points north.  
+        The N-pole of the needle is usually coloured red.  
+   2.    Place a bar magnet on the table. Bring the compass near to its N-pole. In which direction  
+        does the N-pole of the needle stay?  
+  
+  
+  
+
+  
+   3.    Put the compass near to the S-pole of the bar magnet. In which direction does the N-pole  
+         of the needle stay this time?  
+   4.    Now place an iron nail having its head in contact with any pole of the bar magnet.  
+  
+
+  
+                                                                                 N             S  
+  
+   5.   Put the compass near to the pointed end of an iron nail. Observe the direction in which  
+        N-pole  of  the  needle  settles.  Has  the  nail  become  a  magnet?  Has  magnetism  been  
+        induced in it?  
+  6.    Take the bar magnet away from the nail. Again check the behaviour of the nail by bringing  
+        compass near to its ends. Does the magnetism vanish?  
+        From the above activity, we conclude that the S-pole of the true magnet induces N-pole  
+        in the near end of the piece of iron (nail) while the far end of the iron piece becomes S-  
+        pole as shown in the figure.  
+        It  should  be  noted  that  the  induced  magnetism  vanishes  as  the  true  magnet  is  
+         removed.  
+
+                                                                164  
+  
+﻿8.4 Temporary and Permanent Magnets  
+                                                                                           
+
+          Temporary  magnets  are  the  magnets  that  work  in  the  presence  of  a  
+magnetic field of permanent magnets. Once the magnetic field vanishes, they  
+lose their magnetic properties. You have learnt something about a magnetic field  
+in lower classes.  In the next chapter, we will study it in detail.  
+          Usually, soft iron is used to make temporary magnets. Paper clips, office  
+pins and iron nails can easily be made temporary magnets. Electromagnets are  
+also good examples of temporary magnets. You have already learnt different  
+uses of electromagnets.  
+          Permanent magnets retain their magnetic properties forever. These are  
+either found in nature or artificially made by placing objects made of steel and  
+some special alloys in a strong  magnetic field for a sufficient time. There are  
+many types of permanent magnetic materials. For example cobalt, alnico and  
+ferrite.  
+
+  
+ Activity 4  
+
+            The  teacher  should  facilitate  the  groups  to  
+  provide each a bar magnet, a stand with clamp, some  
+  small nails made of iron and also some nails of steel. He  
+  should further supervise them to perform the activity as  
+  per instructions.  
+  1.   Clamp the bar magnet horizontally on the stand.  
+  2.   Touch the head of an iron nail to anyone end of the  
+       magnet. It will be attracted and stick to the magnet.  
+       Touch another iron nail to the lower end of the first  
+       one, does it stick to it?  
+       Yes,  it  will,  because  the  upper  nail  has  become  a  
+       magnet itself. Go on hanging iron nail one by one to  
+       make a chain until no more nails stay attached to the  
+       chain.  
+  3.   Try to hang steel nails at the other end of the bar  
+       magnet to form a similar chain.  
+  4.   Remove the chain of iron nails by pulling the topmost nail. Does the chain collapse?  
+  5.   Remove the chain of steel nails in the same way. Does this collapse?  
+       You will observe that the chain of iron nails immediately collapses but the steel nails  
+       remain attached to each other for some time. This shows that the magnetism induced in  
+       the iron nails is temporary while that in the steel nails is permanent.  
+
+                                                       165  
+  
+﻿ 8.5 Magnetic Fields  
+                                                                   
+  
+
+                                                                                                                        
+
+              When   a   magnet   attracts   a   certain   magnetic  
+material, it exerts some force to do so. Similarly, when it  
+attracts or repels a magnetic pole of another magnet, it  
+exerts a force on it. This force can be observed up to a  
+certain distance from the magnet that can be explained  
+by the concept of magnetic field around the magnet.  
+
+  
+
+     A magnetic field is the region around a magnet where  
+     an  other  magnetic  object  experiences  a  force  on  it.  
+
+  
+              The  pattern  of  a  magnetic  field  around  a  bar  
+magnet can be seen very easily by a simple experiment.                                                                                  Fig. 8.7                     
+
+               If iron filings are sprinkled on a thin glass plate placed over a bar magnet,  
+the filings become tiny magnets through magnetic induction. Now if the glass  
+surface is gently tapped, the filings form a pattern. This pattern is known as the  
+magnetic field pattern (Fig.8.5). This pattern can be better shown by lines that  
+correspond to the path of the filings. These lines are called magnetic lines of  
+force.  
+
+Magnetic lines of Force  
+
+  
+
+              The  magnetic  lines of force around                                                        
+a  bar  magnet  can  be  drawn  by  using  a                                                              
+
+small compass. The needle of the compass                                                                  
+will move along the magnetic lines of force.                                                              
+Figure.  8.8  shows  the  magnetic  lines  of                                                             
+force around a bar magnet drawn by this                                                                   
+                                                                                                                          Fig. 8.8  
+m e t h o d . T h e c o m p a s s n e e d l e  i s  
+                                                                                                          
+symbolized by an arrow being the north                                                                    
+pole (Fig. 8.9).  
+                                                                                                          
+
+              The magnetic field at a point has both  
+a magnitude and a direction.                                                                                                     Fig. 8.9  
+
+                          The direction of the magnetic field at any point in space  
+                          is the direction indicated by the N-pole of a magnetic  
+                          compass needle placed at that point.  
+                                                                                                                                                
+
+                                                                               166  
+  
+﻿          Figure. 8.8 also shows that the field lines appear to originate from the  
+north pole and end on the south pole.  Actually, the magnetic field extends in  
+space all around the magnet but the figure shows the field in one plane only.  
+
+  
+
+Strength of the Magnetic Field  
+
+          The  strength  of  the  magnetic  field  is  proportional  to  the  number  of  
+magnetic lines of force passing through unit area placed perpendicular to the  
+lines. Thus, the magnetic field is stronger in regions where the field lines are  
+relatively close together and weaker where these are far apart. For example in  
+Fig. 8.10, the lines are closest together near north and south poles indicating that  
+the strength of the magnetic field is stronger in these regions. Away from the  
+poles, the magnetic field becomes weaker.  
+
+  
+
+                                                             x  
+
+               Fig. 8.10                                 Fig. 8.11                         Fig. 8.12  
+
+          In case the two magnets are placed close to each other, their combined  
+magnetic field can also be drawn by using the compass needle. Figure. 8.10 and  
+Fig. 8.11 show the patterns of the combined magnetic field of two magnets  
+lying with different orientations. In Fig. 8.11, point 'x' is called a neutral point  
+because the field due to one magnet cancels out that due to the other magnet.  
+Figure. 8.12 represents the field pattern of a horse-shoe magnet. The field is  
+almost uniform between the poles except near the edges.  
+
+  
+
+8.6 Uses of Permanent Magnets  
+
+          There are many uses of permanent magnets such as:  
+1.        They are the essential parts of D.C motors, A.C and D.C electric generators.  
+2.        Permanent magnets are used in the moving coil loud-speakers.  
+3.        These are very commonly used in door catchers.  
+4.        Magnetic strips are fitted to the doors of refrigerators and freezers to  
+          keep the door closed tightly.  
+5.        They are commonly used to separate iron objects from different mixtures.  
+          Flourmills use permanent magnets to remove iron nails, etc. from the  
+          grains before grinding.  
+
+                                                      167  
+  
+﻿6.          In the medical field, they are used to remove iron splinters from the eyes.  
+7.          A  piece  of  permanent  magnet  is  used  to  reset  the  iron  pointer  in  a  
+            maximum and minimum thermometer.  
+
+  
+
+Applications of Permanent Magnets  
+
+             Let us see, how some of the following devices use permanent magnets.  
+
+  
+
+A.C Generator                                                              Slip rings  
+                                        
+            When a coil is rotated between the   
+                                                                                                                   I  
+poles  of  a   permanent   magnet,  the  
+magnetic  field  through  the  coil  changes  Carbon                                        I  
+and an emf is induced between the ends of  brush                                                                           Carbon  
+                                                                                                                           brush  
+the  coil  (Fig.8.13).  On  connecting  these  
+ends to an external circuit, an alternating                                                         I  
+
+current  (A.C)  flows  through  the  circuit.                                                           B  
+                                                                                       N                                     S  
+Electric  motor  is the reverse process of                                                                 I  
+electric generator. When an A.C is made to   
+                                                                                                                 
+                                                                                                
+                                                                           
+pass through the coil between the poles of                                                                      Coil rotated by  
+a permanent magnet, it starts rotating.                                       Permanent                         mechanical means  
+
+                                                                                 magnet            Fig. 8.13  
+Moving Coil Loudspeaker  
+  
+                                                                                                  
+            A voice coil attached to the cone of   
+                                                                                                                   
+the speaker is slipped over one pole (N) of                                     Permanent                               Cone  
+the radial permanent magnet as shown in                                            magnet              Voice  
+                                                                                                        coil  
+Fig. 8.14. From a microphone or some other                                               S        
+sound signals in the form of varying (A.C)                                                        
+                                                                                         N  
+current passes through the voice coil that is                                                     
+inserted in the gap of permanent magnet.                                                 S        
+This A.C interacts with the magnetic field to                                                gap   
+generate  a  varying  force  that  pushes  and                                                        Current  
+
+pulls  on  the  voice  coil  and  the  attached                                                   Fig. 8.14  
+cone. The cone vibrates back and forth to  
+produce sound in the air.  
+
+  
+
+8.7 Electromagnets  
+                                                        
+
+            Electromagnets  are  also  a  kind  of  temporary  magnets.  The  following  
+activity will show how electromagnets can be made and tested.  
+
+                                                                  168  
+  
+﻿  Activity 5  
+
+             The teacher should divide the students into groups and facilitate them  
+  to perform this activity.  
+                                                                                                                        Iron  
+             Take a  battery of two cells, a                                         Thread                             Nail  
+                                                                                                 
+                                                               
+  switch,   an   iron            nail,   cotton   (or                                                     Coil  
+                                                               
+   plastic) covered copper wire, thread                                                          
+                                                                          
+                                                                                                 
+  and a few paper clips.                                       
+                                                                          
+                                                                                                 
+             Wind the wire over the iron   
+                                                                          
+   nail to form a coil. Suspend the coil   
+                                                                                                 
+                                                               
+                                                                          
+   by means of thread tied to its centre.                                      Switch                 Battery  
+  Connect  ends  of  the  wire  to  the   
+                                                                 Clips  
+   battery through the switch as shown  
+  in the figure.  
+
+              Keeping the switch OFF, bring some paper clips near to one end of the  
+   nail. Do they stick to the nail? Now turn the switch ON and again bring the  
+   paper clips near to the end of the nail. Do they stick this time? Does the nail  
+   behave like a magnet? Yes, the nail has become a magnet. Turn the switch OFF  
+   and see what happens to the clips. Do they fall down? What do you conclude  
+   from this activity?  
+
+  
+
+           An iron nail or a rod becomes a magnet when an electric current  
+           passes through a coil of wire around it. It is called an electromagnet.  
+
+           When an electric current passes through the coil of wire, magnetic field is  
+produced inside the coil that magnetizes the iron nail. As we have observed that  
+the  magnetic  properties  of  an  electromagnet  are  temporary,  therefore,  iron  
+object remains a magnet as long as the electric current passes through the coil.  
+When the current is stopped, it no longer remains a magnet.  
+           If we increase the number of cells in the battery or increase the number of  
+turns of the coil, we will observe that the strength of the magnetic field in each  
+case increases. This will be indicated by the more number of clips held by the nail  
+in these cases.  
+
+  
+
+Uses of Electromagnets  
+
+           Electromagnets  are  used  in  electric  bell,  telephone  receiver,  simple  
+magnetic  relay,  circuit  breaker,  reed  switches,  cranes,  tape  recorder,  maglev  
+trains and many other devices. Functions of some of them are described below:  
+
+                                                              169  
+  
+﻿Magnetic Relay  
+                                     
+
+            This is a type of switch which works with an electromagnet. It is an input  
+circuit which works with a low current for safety purpose. When it is turned ON it  
+activates another circuit which works with a high current.  
+            The input circuit supplies a small current to electromagnet. It attracts the  
+iron armature which is pivoted. The other end of the armature moves up and  
+pushes the metal contacts to join together which turn the high current-circuit  
+ON (Fig.8.15).  
+                                                                                                    Springy metal  
+                                             
+               To high                          Insulator                                           contracts  
+               current circuit  
+                                                                                                     Pivot  
+  
+
+                                                                                                  Iron armature  
+                      Electromagnet  
+  
+
+                                              
+                           Low current                                  
+                           input circuit                Fig. 8.15         Soft iron core             
+                                      
+  
+
+Circuit Breaker  
+                                     
+
+            A circuit breaker is designed to pass a certain maximum current through it  
+safely. If the current becomes excessive, it switches OFF the circuit. Thus, electric  
+appliances are protected from burning. As shown in Fig.8.16, inside a circuit  
+breaker, the current flows along a copper strip, through the iron armature and  
+coil of the electromagnet. The electromagnet attracts the armature. If the current  
+is large enough, the armature is detached from the copper strip and the circuit  
+breaks.                                                          Armature                Pivot      Spring  
+                         Copper Strip  
+  
+                         Current          Switch  
+                                        contacts  
+  
+  
+  
+                                      Coil  
+  
+                                   around  
+  
+                                  iron core  
+                                                                                         Plastic  
+                                                                                         frame  
+                          Current  
+  
+  
+  
+                                                           Fig. 8.16  
+
+                                                                 170  
+  
+﻿Telephone Receiver                                                      Electromagnet   
+                                                                                                            Diaphragm  
+            There  is  an  iron  diaphragm  in  the                                           
+receiver  under  which  an  electromagnet  is                                                 
+placed  (Fig.8.17).  The  microphone  of  the                                                 
+                                                                                              
+telephone  handset  on  the  other  side  sends  
+                                                                                              
+varying electric current in accordance with the  
+sound  signals.   When   the   varying  current                                               
+                                                                                                                          Varying  
+passes  through  the  coil  of  receiver  on  this                                                                        current  
+side,  it  causes  variation  in  the  force  of                                                         Fig. 8.17  
+
+electromagnet.  As  a  result,  the  diaphragm  over  it  moves  back  and  forth  to  
+produce sound.  
+  For Your Information!  
+  
+             A    w o  n d e  r f  u  l    u s e    o f  
+  
+ electromagnets   can   be   seen   in   the  
+  
+ Maglev trains. The maglev stands for a  
+  
+ magnetically  levitated  train.  A  maglev  
+  
+ uses  forces  that  arise  from  induced  
+  
+ magnetism  to  levitate  or  float  a  few  
+  
+ centimetres above the guideway. That is  
+  
+ why, it does  not  need wheels and faces   Guideway                     Rail  
+  
+ no  friction.  In  Japan,  it  is  known  as  a                                    Arm  
+  
+ bullet train that can run up to a speed of  
+  
+ 400 km per hour.                                                       Levitation        
+  
+             As  described  above,  magnetic                           electromagnet  
+  
+ levitative only lifts the train and does not                                          Guideway  
+                                                                 (a)                                              (b)  
+ move   it  forward.  To   push  the  train  
+  
+  forward, propulsion electromagnets are installed along the guideway and train. By push and  
+ pull of these magnets the train moves forward.  
+  
+
+Electromagnetic Cranes  
+            Huge  electromagnets  are  used  in  
+  cranes at scrapyards, steel works and on  
+  
+  ships. These are so powerful that they can  
+  lift iron and steel objects such as cars as  
+  shown in Fig.8.18. After moving the heavy  
+  objects   to   the   required   position,   the  
+  
+objects are released by just  switching OFF  
+  the current of the electromagnet.  
+                                                                                                   Fig. 8.18  
+                                                                 171  
+  
+﻿8. 8 Domain Theory of Magnetism   
+                                                                               
+           It  is  observed  that  the  magnetic                               
+field  of  a  bar  magnet  is  like  the  field                                
+produced by a solenoid (long coil of wire)  
+                                                                               
+carrying   current   (Fig.   8.19-a   &   b).   It  
+suggests that all magnetic effects are due                                     
+to  moving  charges.  In  case  of  solenoid,                                            Fig. 8.19(a)  
+                                                                         
+charges   are   moving   in   the   wire.   The                                
+                                                                               
+motion responsible for the magnetism in a                                
+                                                                               
+magnet  is  due  to  electrons  within  the                                    
+                                                                         
+atoms of the material.  
+                                                                                                     Current  
+           We  know  that  an  electron  is  a                                           Fig. 8.19(b)  
+
+charged  particle. Also, each electron in an atom is  revolving about the  nucleus  
+and at the same time, it is spinning about an axis through it. The rotation and spin  
+both give rise to a magnetic field. Since there are many electrons in an atom, their  
+rotations  and  spins  may  be  so  oriented  to  strengthen  the  magnetic  effects  
+mutually or to cancel the effects of one another.  If an atom has some resultant  
+magnetic field, it behaves like a tiny magnet. It is called a magnetic dipole.  
+
+  
+
+Paramagnetic Materials  
+
+           If the orbital and spin axes of the electrons in an atom are so oriented that  
+their fields support one another and the atom behaves like a tiny magnet, the  
+materials with such atoms are called paramagnetic materials such as aluminium  
+and lithium.  
+
+  
+
+Diamagnetic Materials  
+
+           Magnetic  fields  produced  by  both  orbital  and  spin  motions  of  the  
+electrons in an atom may add up to Zero. In this case, the atom has no resultant  
+field. The  materials with such atoms are called diamagnetic  materials. Some of  
+their examples are copper, bismuth, water, etc.  
+
+  
+
+Ferromagnetic Materials  
+
+           There are some solid substances such as iron, steel, nickel, cobalt, etc. in  
+which cancellation of any type does not occur for large groups of neighbouring  
+atoms of the order of 10¹⁶  because they have electron spins that are naturally  
+aligned parallel to each other. These are known as ferromagnetic materials.  
+
+                                                            172  
+  
+﻿            The group of atoms in this type of material form a region of about 0.1 mm  
+size that is highly magnetized. This region is called a magnetic domain. Each  
+domain behaves as a small magnet with its own north and south poles.  
+
+  
+
+Alignment of Domains  
+
+  
+
+            The  domains  in  a  ferromagnetic  material  are   
+
+randomly oriented as shown in Fig.8.20 (a). The magnetic  
+                                                                                                      
+fields of the domains cancel each other so the material                                                          Fig. 8.20(a)                 
+                                                                                                        
+does   not  display  any   magnetism.  However,  an   
+unmagnetized  piece  of  iron  can  be  magnetized  by   
+placing  it  in  an  external  magnetic  field  provided  by  a   
+
+permanent magnet or an electromagnet.  
+                                                                                                      
+            The   external   magnetic   field   penetrates   the                                                Fig. 8.20(b)                   
+                                                                                                        
+unmagnetized iron and induces magnetism in it by causing two effects on the  
+domains. Those domains whose magnetism is parallel or nearly parallel to the  
+external magnetic field grow in size at the expense of other domains that are not  
+oriented. In addition, the magnetic alignment of the other domains rotates and  
+become oriented in the direction of the external field (Fig.8.20-b). As a result, the  
+iron is  magnetized and  behaves  like a  magnet  having its own  north and south  
+
+poles.  
+                                                                                                  For Your Information!  
+             In soft iron, the domains are easily oriented on  
+                                                                                                  The magnetism induced in a  
+applying  an  external  field  and  return  to  random  
+                                                                                                  ferromagnetic  material  can  
+position when the field is removed. This is desirable in   be surprisingly large in the  
+an  electromagnet  and  also  in  transformers.  On  the   presence  of  weak  external  
+other hand, steel is not so easily oriented to change  field. In some cases, induced  
+order. It requires very strong external field, but once  field  is  a  thousand  times  
+                                                                                                  stronger  than  the  external  
+oriented, retains the alignment. That is why, steel is  field. That is why, high field  
+used to make permanent magnets.                                                                   electromagnets   are   made  
+             In   non-ferromagnetic   materials,   such   as   by using cores of soft iron of  
+aluminium  and  copper,  the  formation  of  magnetic   some  other  ferromagnetic  
+                                                                                                  material.  
+domains  does  not  occur,  so  magnetism  cannot  be  
+induced into these substances.  
+
+  
+
+8.9 Magnetization and Demagnetization  
+
+            There are two methods used for magnetizing a steel bar:  
+ 1.         Stroking  
+             In this method, magnetism is induced in a steel bar by using the magnetic  
+field of a permanent magnet. The steel bar can be stroked in two ways:  
+
+                                                                    173  
+  
+﻿                                                                                         
+(a)         Single Touch Method                                                             
+                                                                                            
+A steel bar is placed on a horizontal surface. It is                                     
+stroked from one end to the other several times                                            Permanent  
+                                                                                           magnet  
+in the same direction using the same pole (say                                              
+N)  of  the  permanent  magnet.  Every  time  the                                           
+magnet is lifted up sufficiently high on reaching                                           
+the other end of the bar (Fig. 8.21).                                                                    Fig. 8.21  
+(b)         Double Touch Method                                                                Permanent           Permanent  
+                                                                                            
+            In this method, stroking is done from the                                          magnet              magnet  
+                                                                                            
+centre of the steel bar onwards with the unlike  
+                                                                                            
+poles of two permanent magnets at the same                                                  
+time (Fig. 8.22). This method is more efficient                                             
+                                                                                                          Steel bar  
+than the first one.  
+                                                                                                         Fig. 8.22  
+In both the cases, the poles produced at the ends  
+                                                                                            
+of magnetized steel bar after stroking are of the                                           
+opposite polarity to that of the stroking pole.                                             
+2.          Making a Magnet using Solenoid                                                  
+
+            In  this   method,  a  steel   bar  to  be  
+magnetised is placed inside a solenoid (long coil  
+of  wire)  as  shown  in  Fig.  8.23.  The  solenoid                                            -                                +  
+                                                                                             Current                        Current  
+should  have several  hundred turns of insulated                                                                                         
+                                                                                                         Fig. 8.23  
+copper  wire.  When  direct  current  is  passed  
+ through  the  solenoid,  the steel bar  becomes  a  magnet.  The  polarity  of  the  
+magnetised  steel  bar  is  found  by  applying  Right  hand  Grip  rule  which  is  
+stated as:  
+
+  
+
+                     Grip the solenoid with the right hand such that fingers  
+                     are curled along the direction of current (positive to the  
+                     negative terminal of the battery) in the solenoid, then  
+                     the thumb points to the N-pole of the bar end.  
+
+  
+
+Demagnetisation of Magnets  
+                                                                                                             
+1.          Heating                                                                                          
+            Thermal  vibrations  tend  to  disturb  the  order  of  the   
+domain. Therefore, if we heat a magnet strongly, the magnet   
+loses its magnetism very quickly (Fig. 8.24).                                                                    Fig. 8.24  
+
+                                                                  174  
+  
+﻿2.          Hammering  
+            If  we  beat  a  magnet,  the  domains  lose  their  
+alignment and the magnet is demagnetised. It is also  
+called hammering (Fig. 8.25).                                                                                                          
+                                                                                                            Fig. 8.25  
+
+  
+3.          Alternating Current                                                                   
+            When  an  alternating  current  (A.C)  is  flowing   
+                                                                                                 
+
+through a long solenoid, a magnet moved out slowly   
+from inside of the solenoid is demagnetised (Fig. 8.26).                                                   AC  
+                                                                                                           Fig. 8.26  
+
+  
+
+8.10 Applications of Magnets in Recording Technology  
+                                                                                                                                         
+
+            Electromagnets  have  widely  used  in  recording  technology  of  sound,  
+video  and  data  in  the  form  of  electrical  signals  through  magnetization  of  a  
+magnetic  material.  Most common  magnetic  recording  mediums are magnetic  
+tapes and disk recorders which are used not only to reproduce audio and video  
+signals but also to store computer data. These materials are usually coated with  
+iron oxide. Some other recordings mediums are magnetic drums, ferrite cores  
+and  magnetic  bubble  memory.  We  will  discuss  the  process  of  magnetic  
+recording on tapes and disks in some detail.  
+
+  
+
+Magnetic Tape Recording  
+
+  
+
+            Induced  magnetism  is  used  in  the    
+process  of   magnetic  tape   recording.    
+                                                                                 A.C  
+Recording and playing head is a coil of wire    
+wrapped around an iron core. The iron core    
+                                                                                                                      Recording  
+                                                                                
+has a horse-shoe shape with a narrow gap in                                                                           head  
+                                                                                
+between its two ends. Audio and video tapes  Magnetic                                                                       Tape  
+                                                                              coating                                       travel  
+are  synthetic  tapes  coated  with  a  layer  of    
+ferromagnetic material.                                                         Plastic backing              Fringe field penetrates  
+
+                                                                                                             magnetic coating  
+            Sound  or  picture  is  converted  into    
+electrical  forms  as  varying  currents.  These    
+currents are sent to the head that becomes an    
+                                                                                                   N    S  
+electromagnet with a N-pole at one end and    
+a S-pole at the other end. The magnetic field                                                Induced  
+                                                                                             magnetism  
+lines pass through the iron core and cross the  
+                                                                                                Fig. 8.27  
+
+                                                                 175  
+  
+﻿gap. Some of the field lines in the gap curved outward as shown in Fig. 8.27. The  
+curved part of the magnetic field called as fringe  field  penetrates magnetic  
+coating on the moving tape and induces magnetism in the coating. This induced  
+magnetism is retained when the tape leaves the vicinity of the recording head.  
+The  reverse  process  changes  the  varying  induced  magnetism  into  varying  
+current that onward is converted into sound or picture.  
+
+  
+
+Hard Disk Recording  
+
+  
+
+            Hard  disks  are  circular  flat  plates                               Rotating                      
+made of aluminium, glass or plastic and                                            magnetic                         Read/write  
+                                                                                                                       head  
+                                                                                      disk      
+coated on both sides with iron oxide. Hard  
+                                                                           
+                                                                                                
+disks can store terabyte of information.                                                        
+                                                                              Voice coil  
+            A   magnetic   head   is  a  small                                                  
+                                                                              positioner  
+electromagnet which writes a  binary digit                                                      
+(1 or 0) by magnetizing tiny spots on the                                                       
+spinning  disk  in  different  directions  and                                                  
+                                                                                                
+reads digit by detecting the magnetization                                                      
+direction of spots (Fig. 8.28). The term hard  
+                                                                                                
+disk is also used to refer to the whole of a                                                     Fig. 8.28  
+computer's internal data storage.  
+            Magnetic disk devices have an advantage over tapes recorders. A disk unit  
+has the ability to read or write a recording instantly while locating a desired  
+information on tape may take many minutes.  
+            Electronic  devices  can  be  protected  from  strong  magnetic  effects  by  
+enclosing them in the boxes made of soft iron. We will describe it in detail in the  
+next section.  
+
+  
+                                                                                                     Soft iron casing  
+8.11 Soft Iron as Magnetic Shield  
+
+            S o f t i r o n h a s h i g h  m a g n e t i c  
+permeability. The permeability is the ability  
+of a material to allow the magnetic flux or                                                           Sensitive  
+                                                                                                     instrument  
+lines of force through it when the material is  
+placed inside a magnetic field. When a piece  
+of  soft  iron  is  put  into  a  magnetic  field,  it  
+generates  a   magnetic  fi eld  due  to  
+                                                                                                                                          
+magnetization.                                                                                External magnetic field  
+
+                                                                                                    Fig. 8.29  
+
+                                                                  176  
+  
+﻿            If a sensitive magnetic device is enclosed in a casing of soft iron, the  
+magnetic flux gets established in the soft iron rather than the device. Thus, the  
+device is shielded from external magnetic field.  
+            Figure 8.29 can explain this phenomenon well. A soft iron casing (shell) is  
+placed inside a magnetic field produced by opposite poles of two bar magnets.  
+Since the magnetic permeability of the iron shell is higher than that of air, so the  
+magnetic flux is established in the soft iron. As a result, the device is protected  
+from the magnetic field. Usually, the casing is  made with rounded corners to  
+facilitate the magnetic field line up easily.  
+            Soft   iron   is  generally   used   in  the  cores   of  transformers   and  
+electromagnets because of its high permeability. In case of an electromagnet,  
+the core of soft iron can be easily magnetized when current is passed around it  
+and quickly lost when current is stopped. That is why, electromagnets are widely  
+used in electric bells, loud speakers, picking and releasing  iron scraps by the  
+cranes  and  in  many  more  appliances.  The  sensitivity  of  a  moving  coil  
+galvanometer is also increased by placing a soft iron core inside the coil.  
+
+                                                        KEY POINTS  
+
+       Magnets can attract magnetic materials even if they are not in direct contact with them.  
+      A magnet has two poles; north pole and south pole. Like poles repel and unlike poles  
+       attract each other.  
+      To get an isolated magnetic pole is not possible.  
+      Temporary magnets work only in the presence of a magnetic field, whereas permanent  
+        magnets retain their magnetic properties forever.  
+      A magnetic field is the region around a magnet where a magnetic object experiences a  
+       force on it.  
+      A magnetic field at a point has both a magnitude and a direction.  
+      The strength of the magnetic field is proportional to the number of magnetic lines of  
+       force passing through unit area placed perpendicular to the lines.  
+       Permanent  magnets  are  used  in  electric  motors,  electric  generators,  moving  coil  
+        loudspeakers, separating iron objects from different mixtures etc.  
+       Electromagnets are temporary magnets. They are used in electric bells, magnetic relays,  
+       circuit breakers, telephone receivers, electromagnetic cranes, etc.  
+      The materials in which fields due to orbital and spins motion of the electrons in the atoms  
+       support each other are called paramagnetic materials.  
+      The materials in which fields due to orbital and spin motions of the electrons in the atoms  
+       add up to zero are called diamagnetic materials.  
+      The materials in which large groups of atoms of the order of  1016  have their electrons spin  
+
+       naturally aligned parallel to each other are called ferromagnetic materials. These groups  
+       are called magnetic domains.  
+      The  external  magnetic  field  penetrates  the  ferromagnetic  material  and  aligns  all  the  
+       domains to make it a magnet.  
+
+                                                                177  
+
+  
+﻿        Steel bars are magnetised by stroking, single and double touch sliding with permanent  
+         magnets or keeping them in a very strong magnetic field inside a solenoid through which  
+         large current is passed.  
+        Magnets can be demagnetised by heating, hitting or drawing through a solenoid in which  
+         A.C current is passed.  
+        Electromagnets are widely used in recording technology. Such recording mediums are  
+         audio/video magnetic tapes, hard disks of computers and other data storing devices.  
+        Soft iron is also used to protect sensitive magnetic device from external magnetic fields.  
+
+                                                                    EXERCISE  
+
+  A         Multiple Choice Questions  
+                                                                                                                                                                    
+             Tick () the correct answer.  
+8.1           Which one of the following is not a magnetic material?  
+              (a) Cobalt                                                               (b) Iron  
+              (c) Aluminium                                                            (d) Nickel  
+8.2           Magnetic lines of force:  
+              a) are always directed in a straight line  
+              (b) cross one another  
+              (c) enter into the north pole  
+              (d) enter into the south pole  
+8.3           Permanent magnets cannot be made by:  
+              (a) soft iron                (b) steel                                   (c) neodymium                           (d) alnico  
+8.4           Permanent magnets are used in:  
+              (a) circuit breaker                                                      (b) loudspeaker  
+              (c) electric crane                                                       (d) magnetic recording  
+8.5           A common method used to magnetise a material is:  
+              (a) stroking  
+              (b) hitting  
+              (c) heating  
+              (d) placing inside a solenoid having A.C current  
+8.6            A magnetic compass is placed around a bar magnet at four points as  
+              shown  in  figure  below.  Which  diagram  would  indicate  the  correct  
+              directions of the field?  
+
+  
+
+                                                                                                                                                     
+  
+
+         N                S                        N                S                        N                S                        N                S  
+                                                                                                                                                                   
+  
+
+                                                                                                                                                              
+                                                                                                                                                     
+                 (a)                                      (b)                                       (c)                                       (d)   
+
+                                                                              178  
+  
+﻿8.7           A steel rod is magnetised by double touch stroking method. Which one  
+             would be the correct polarity of the AB magnet?  
+  
+
+                                                                                                               Permanent  
+                                                                                                                                   Permanent  
+                                                                                                               magnet              magnet  
+  
+  N              S       S              N         N       S S       N         S       N  N     S         
+                                                                                                         
+                     
+                                                                              
+        (a)                    (b)                       (c)                        (d)                  
+                                                                                                            A                                   B  
+                                                                                                                         Steel bar  
+
+8.8          The best material to protect a device from external magnetic field is:  
+             (a) wood                  (b) plastic                               (c) steel               (d) soft iron  
+
+  
+
+  B        Short Answer Questions  
+
+8.1          What are temporary and permanent magnets?  
+8.2          Define magnetic field of a magnet.  
+8.3          What are magnetic lines of force?  
+8.4          Name some uses of permanent magnets and electromagnets.  
+8.5          What are magnetic domains?  
+8.6          Which type of magnetic field is formed by a current-carrying long coil?  
+8.7          Differentiate between paramagnetic and diamagnetic materials.  
+  
+
+  C        Constructed Response Questions  
+                                                                                                                                   P  
+8.1          Two bar magnets are stored in a wooden box. Label   
+
+                                                                                                                                                
+             the  poles  of  the  magnets  and  identify  P  and  Q                                                            
+
+             objects.  
+8.2          A steel bar has to be magnetised by placing it inside   
+
+             a solenoid such that end A of a bar becomes N-pole  
+                                                                                                                                  Q  
+             and end B becomes S-pole. Draw circuit diagram of   
+                                                                                                                 A                                  B  
+             solenoid showing steel bar inside it.                                                                            Steel bar  
+
+  
+8.3          Two bar magnets are lying as shown in the figure. A compass is placed at  
+             the middle of the gap. Its needle settles in the north-south direction. Label  
+             N and S poles of the magnets. Justify your answer by drawing fields lines.  
+
+  
+
+                                                                         179  
+  
+﻿8.4       Electric  current  or  motion  of  electrons  produce  magnetic  field.  Is  the  
+          reverse  process  true,  that  is  the  magnetic  field  gives  rise  to  electric  
+          current? If yes, give an example and describe it briefly.  
+
+8.5       Four similar solenoids are placed in a circle  
+          as shown in the figure. The magnitude of  
+                                                                                         D  
+          current in all of them should be the same.  
+          Show by diagram, the direction of current in  
+                                                                                                        C  
+          each  solenoid  such  that  when  current  in  
+          anyone solenoid is switched OFF, the net                             A             O  
+
+          magnetic field at the centre O is  directed  
+          towards that solenoid. Explain your answer.  
+                                                                                                 B  
+  
+  
+
+ D      Comprehensive Questions  
+
+8.1       How  can  you  identify  whether  an  object  is  a  magnet  or  a  magnetic  
+          material?  
+8.2       Describe the strength of a magnetic field in terms of magnetic lines of  
+          force. Explain it by drawing a few diagrams for the fields as examples.  
+8.3       What is a circuit breaker? Describe its working with the help of a diagram.  
+8.4       A magnet attracts only a magnet. Explain the statement.  
+8.5       Differentiate  between  paramagnetic,  diamagnetic  and  ferromagnetic  
+          materials with reference to the domain theory.  
+8.6       Why ferromagnetic materials are suitable for making magnets?  
+
+                                                      180  
+  

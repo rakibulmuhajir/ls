@@ -1,0 +1,1154 @@
+﻿  Chapter  
+                           Mechanical  
+        6  
+  
+                           Properties of Matter  
+
+  
+
+Student Learning Outcomes  
+                                                
+
+After completing this chapter, students will be able to:  
+
+ [SLO:  P-09-B-54]  Illustrate that forces may  
+ produce a change in size and shape of an  
+ object.  
+ [SLO: P-09-B-55]  Define and calculate the  
+ spring constant  [apply the equation, spring  
+ constant  = force/extension k  = F/x to solve  
+ problems involving simple springs]  
+ [SLO: P-09-B-56] Sketch, plot and interpret load– 
+ extension    graphs    for    an    elastic    solid  and  
+ describe the associated experimental procedures.  
+ [SLO: P-09-B-57]  Define and use the term 'limit of proportionality' for a load-extension  
+ graph [Including identifying this point on the graph (an understanding of the elastic limit is  
+ not required)]  
+ [SLO:  P-09-B-58]  Illustrate  the  applications  of  Hooke's  law  [Such  as  that  it  is  the  
+ fundamental  principle  behind  engineering  many  measurement  instruments  such  as  the  
+ spring scale, the galvanometer, and the balance wheel of the mechanical clock.]  
+ [SLO: P-09-B-76] Define and calculate density.  
+ [SLO: P-09-B-77] Define and calculate pressure [As force per unit area. Use the equation  
+ pressure = force/area P=  F/ A  to solve simple problems]  
+ [SLO:  P-09-B-78]  Describe  how  pressure  varies  with  force  and  area  in  the  context  of  
+ everyday examples  
+ [SLO: P-09-B-79] Describe how pressure at a surface produces a force in a direction at right  
+ angles to the surface [can make reference to experiments to verify this principle]  
+  [SLO: P-09-B-80] Justify that the atmosphere exerts a pressure.  
+  [SLO: P-09-B-81] Describe that atmospheric pressure decreases with the increase in height  
+ above the Earth's surface.  
+ [SLO: P-09-B-82] Explain that changes in atmospheric pressure in a region may indicate a  
+ change in the weather.  
+ [SLO: P-09-B-83] Analyse the workings and applications of a liquid barometer  
+ [SLO: P-09-B-84] Justify and analyse quantitatively how pressure varies with depth in a  
+ liquid  
+ [SLO: P-09-B-85] Describe the working and applications of a manometer  
+ [SLO:  P-09-B-86]  Define and apply Pascal's law [Apply Pascal's law to systems such as the  
+ transmission of pressure in hydraulic systems with particular reference to the hydraulic press  
+ and hydraulic brakes on vehicles.]  
+
+                                                       127  
+  
+﻿             You have learnt in lower classes that every thing around us is made up of  
+matter. The matter normally exists in solid, liquid and  gaseous states. These  
+states are due to attractive force that exist between the atoms and molecules. We  
+have already studied some basic properties of matter. In this chapter, we will  
+discuss mechanical properties of matter that are of vital importance for use of a  
+material for various useful purposes in technology and engineering. The main  
+contents included in this chapter are: deformation of solids due to some applied  
+force, density and pressure.  
+
+  
+
+  6.1 Deformation of solids                                                                       
+                                                                                                  
+            We have observed that an external force applied   
+on an object can change its size or shape. Such a force is   
+known as deforming force. For example, an appropriate   
+force applied to a spring can increase its  length called   
+extension  or  cause  compression  thus  reducing  its   
+length. If this force is removed, the spring will restore its   
+original size and shape. Similarly, stretched rubber strip   
+                                                                                                  
+or  band  comes  to  its  original  shape  and  size  on   
+removing the applied force.  
+                                                                                                  
+When a tennis ball is hit by a racket, the shapes of tennis                                                   Fig. 6.1  
+ball and also racket strings are distorted or deformed  
+(Fig.  6.1).  They  regain  their  original  shape  after  
+                                                                                                For Your Information!  
+bouncing of the ball by the racket. An object is said to  
+                                                                                                 Some  materials  such  as  
+be elastic, if after removal of the deforming force, it  
+                                                                                                 clay  dough  or  plasticine  
+restores to its original size and shape. This property of                                        do  not  return  to  their  
+the material is known as elasticity. Due to this property,                                       original  shape  after  the  
+we can determine the strength of a material and the                                              r  e  m  o  v  a  l  o  f  t  h  e  
+deformation produced under the action of a force.                                                deforming         force.     They  
+            Most of the materials are elastic up to a certain                                    are   known   as   inelastic  
+                                                                                                 materials.  
+limit known as elastic limit. Beyond the elastic limit, the  
+change becomes permanent. The object or material does not regain its original  
+shape or size even after the removal of the deforming force.  
+
+  
+
+  6.2  Hooke’s law  
+
+            If force F is applied on a spring to stretch or compress it, the extension or  
+compression x has been found directly proportional to the applied force within  
+the elastic limit. Thus,                     F ∝ x                                          F .............  
+                       or                    F = kx                       or        k  =                    (6.1)  
+                                                                                           x  
+                                                                  128  
+  
+﻿where k is the constant of proportionality and is known as spring constant. In fact,  
+it is a measure of stiffness of the spring. The greater the value of spring constant,  
+the  greater  will  be  the  stiffness  or  strength  of  the  
+                                  -1                                                                                   A  
+spring. Its unit is N m .                                                                                               Elastic limit  
+            A graph of force against extension is a straight  
+line passing through the origin.  If the applied force or                                         F  
+load  exceeds  the  elastic  limit  of  the  spring,  it  is                                     (N)  
+permanently  deformed  and  its  graph  will  no  longer                                             O            x  
+remain linear. The gradient or slope of force-extension                                                          (m)  
+graph is a measure of spring constant k.  
+                                                                                                              Fig. 6.2  
+            Hooke’s law also holds when a force is applied to a straight thin wire or a  
+rubber band within its elastic limit.  
+
+  
+
+  Activity 6.1  
+
+             The teacher will arrange a helical spring with an  
+ attached  pointer,  slotted  weights,  half  metre  rule  or  
+  scale, iron stand and will facilitate to perform this activity  
+  as per instructions. Note that a spring of helical or spiral  
+  shape is called helical spring. Its length should be greater  
+ than its diameter.  
+  (i)        Suspend a helical spring with the stand.  
+  (ii)       Adjust the pointer so that it does not touch the  
+             scale but can move up and down freely along  
+             the scale.  
+  (iii)      Place a slotted weight say 50 g in the hanger and  
+             note the position of pointer on the scale.  
+  (iv)       Repeat   this   step   for   five   times,   each   time  
+             increasing the load in equal amount.  
+  (v)        Draw a graph between force F along y-axis and  
+             extension along x-axis.  
+  (vi)       What is the shape of the graph?  
+  (vii)      What does it show?  
+  (viii)     Find the slope of the straight line. What does it  
+             represent?  
+
+ Quick Quiz  
+
+  1.    If the above experiment is repeated with a stiffer spring (high value of k), what will be the  
+       effect on the graph?  
+  2.   How can you find the value of unknown weight using this experiment?  
+
+                                                                 129  
+  
+﻿Applications of Hooke's Law  
+                                                             
+          Hooke's law serves as the basic principle in wide range of applications. In  
+the field of technology and engineering, springs in many devices rely on Hooke's  
+law for their functions such as spring scales, balance wheel of the mechanical  
+clocks,  galvanometer,  suspensions  system  in  vehicles  and  motorbikes,  door  
+hinges, mattresses, material testing machines, etc.  
+          However,  Hooke's  law  applies  within  a  
+specific range of forces. Exceeding the range or  
+limit  results  in  permanent  deformation  and  no  
+longer follows Hooke's law. Some of the uses are  
+elaborated below:  
+1.  Spring scales  
+     S p r i n g s c a l e s u s e t h e e x t e n s i o n  o r             Fig. 6.3   Spring scales  
+compression of a spring to determine the weight  
+of  objects.  In  a  common  spring  balance  the                                               Balancing  
+                                                                                                  spring  
+extension or elongation produced is a measure of  
+                                                                        
+the weight.  In compression  balance, the spring is  
+compressed   by  the   load  (force)  and  the    
+                                                                                               Fig. 6.4  
+compression produced is measured by means of a  
+pointer moving over a scale. Weighing machine usually use this type of balance.  
+2.   Balance wheel of mechanical clocks  
+     The balance wheel in mechanical clocks use spring to control the back and  
+forth motion that regulates the speed of the hands of a clock (Fig. 6.4).  
+3. Galvanometer  
+                                                                       
+          Galvanometer          is  a    current     detecting         
+device. It makes use of a tiny spring called hair                      
+                                                                       
+spring      (Fig.   6.5)    which      provides       electrical       
+connections to the galvanometer coil and also                          
+restores the pointer back to zero position. The                         
+
+deflection of the pointer is proportional to the                       
+current flowing through it within the range.                           
+6.3 Density                                                             Inside of a  
+
+                                                                      Galvanometer  
+
+          If  you  take  equal  volumes  of  different                             Fig. 6.5  
+substances and weigh them by a balance, you will  
+
+                                                     130  
+  
+﻿find that each of them has a different mass. That is, one centimetre cube of wood  
+may weigh only 0.7 g but made of iron will weigh 8.0 g. Why is it so? You know  
+that  all  substances  are  composed  of  molecules.  The  molecules  of  different  
+substances are different in size and mass. The inter-molecular spacing is also  
+different.  
+         The mass of equal volume of various substances actually is the mass of the  
+total  number  of  molecules  present  in  that  volume.  Naturally,  the  substance  
+whose molecules are densely packed and also which are heavy will weigh more  
+than others.  
+            Density of a substance is defined as its mass per unit volume.    
+                                   Mass    
+                  Density =  Volume           . .......... (6.2)         For Your Information!  
+
+                                               -3                        Packing  foam  or  polythene  
+         The SI unit of density is kg m . Other unit also  
+                  -3                                                     has a very low density.  
+in use is g cm  . Table 7.1 shows the density of some  
+substances.                                                                         Table 7.1  
+         The  architects  and  engineers  take  special                                                 -3 
+                                                                         Substance        Density (kg m )  
+care of the density of the building material to be                       Air                   1.3  
+used in designing and constructing  roads,  bridges                      Patrol                800  
+and buildings. The density of building material is                       Water                1000  
+essential  for  estimating  the  strength  required  in                  Concrete             2400  
+foundations and supporting pillars.                                      Aluminum             2700  
+Example 6.1  The length, breath and thickness of                         Steel                7800  
+                                                                         Lead                11400  
+an  iron  block  are  3  cm,  2  cm,  2  cm  respectively.  
+                                                                         Gold                19300  
+Calculate the density of iron if the mass of block is  
+                                                                         Osmium              22600  
+94 g.  
+Solution                                                                 For Your Information!  
+
+         Given  Length         =  3  cm,  Breath  =  2  cm,              Immiscible  liquids  of  
+Thickness = 2 cm,  Mass = 94 g,  Density = ?                             different    densities  
+                                                    Mass                 form   layers  when  
+                                    Density  =                           they are mixed.  
+Using Eq. 6.2                                     Volume  
+
+                                                                         Quick Quiz  
+where volume =  Length ×  Breadth × Thickness                            How  will  you  measure  the  
+                           = 3 cm × 2 cm × 2 cm  =  12 cm3               volume if the object is lighter  
+                                                                         than the liquid?  
+                          94 g  
+Hence, Density =                   = 7.8 g cm–3  
+                         12 cm3                                          For Your Information!  
+
+                                                    –3                   Density is a test to know the  
+Thus, density of iron               = 7800 kg m 
+                                                                         purity of a substance.  
+
+                                                    131  
+  
+﻿Density Measurement                                                                            Quick Quiz  
+                                                                                                By which property can you  
+            Density of a substance can be determined by  
+                                                                                                identify a silver spoon and a  
+measuring its mass and volume. The mass can be                                                  stainless steel spoon?  
+easily measured by a physical balance.  
+            If the substance is solid and has a regular shape, its volume can be found  
+by measuring its dimensions. For example, if the substance is in the form of a  
+sphere,  its  diameter  can  be  measured  by  a  Vernier  Callipers  and  volume  is  
+thereby calculated. Knowing mass and volume, the density can be found out. If  
+the solid has not a geometrical shape, its volume is determined by the following  
+activity:  
+  Activity: 6.2  
+  
+              Teacher should facilitate to help the groups to pour some  
+  
+ water in a measuring cylinder. If the substance is soluble in water,  
+  
+ then use a liquid in which the substance is insoluble. Note the level  
+  
+  of the liquid in the cylinder. Now gently drop the substance into  
+  
+ the cylinder. The rise in the level gives the volume of the substance.  
+  
+
+  
+
+6.4 Pressure  
+            If a wooden rod has a flat end, it will be very  For Your Information!  
+difficult to push it into ground. On the other hand, if   
+it has a pointed end, it can be easily pushed into the   
+                                                                                              
+ground. In the first case, the applied force is spread   
+over a large area, whereas in the second case, the   
+force  is  concentrated  on  a  small  area.  The  force  
+applied on the rod will exert greater pressure in the   
+                                                                                             The force in both the pictures is  
+second case than in the first one.  
+                                                                                              same,  equal  to  weight  of  the  
+             Pressure is defined as the force exerted                                         bag. In right hand picture, the  
+                                                                                              area  of  contact  is  the  greater  
+                 normally on unit area of an object.                                          than  in  the  left  hand  picture.  
+            If F is the force acting normally on a surface                                   We say that the pressure is less  
+                                                                                              in the right hand picture.  
+of area A, then pressure P on the surface is given by  
+                                                      F    ..............  
+                                              P =                          (6.3)  
+ For Your Information!                                A  
+
+   Sports  boots for football  and  hockey  have  studs  on their  soles.  
+  They  reduce  the  area  in  contact  between  your  feet  and  the  
+   ground. This increases the pressure and your feet grip the surface  
+   more firmly.  
+
+                                                                    132  
+
+  
+﻿            The area A  on which the force acts is usually referred as contact area.  
+Equation (6.3) shows that for a certain force, the pressure can be very large if the  
+contact area A  is small.  
+            In the system international, the unit of pressure is N m-2  and is called  
+
+pascal (Pa).  
+
+  
+
+Daily Life Examples                                                                
+                                                                                   
+1.   The edge of the blade of a chopper is made    
+      very  sharp.  When  we  apply  force  on  the    
+      handle of the chopper to cut an object, the    
+      pressure   on   the   object,   at   the   contact  
+      surface, due to its small area  becomes very    
+                                                                                               Fig. 6.6 Chopper  
+      high and the object is easily cut (Fig. 6.6).  
+2.   The top of a thumb pin is flat but the end of    
+      the pin is very sharp. So, the contact area is    
+      very small. When we apply a force at the top,    
+      the pressure at the end of pin is so high that    
+      it pierces into the wooden board (Fig. 6.7).                                 
+3.   When we walk on ground, we exert a force    
+      on it due to which we experience a reaction                                                       Fig. 6.7 Thumb pin  
+
+      force. When the ground is flat, this reaction                                               Brain Teaser!  
+      force is spread over the whole area of the                                   Why a bulldozer has large pillar  
+      foot and the pressure due to reaction force                                  tracks instead of wheels?  
+      is not painful. But when we walk on pebbles,  
+      the   contact   area   is   reduced.   Then   the  
+      pressure due to reaction force becomes so  
+      high that it becomes painful.  
+4.    Heavy animals like elephant have thick legs  
+      and  large  flat  feet  so  that  due  to  large  
+      contact  area,   pressure   becomes   less  
+      otherwise, their bones would not tolerate the pressure.  
+
+  
+
+6.5 Pressure in Liquids  
+
+            We  have  learnt  in  the  lower  classes  that  liquids  exert  pressure  in  all  
+directions. Moreover, liquid pressure increases with depth.  
+            Let us determine the pressure at a certain depth of a liquid. Figure. 6.8  
+shows a container of liquid. Consider an area A in the liquid at depth h. The force  
+acting on this area is equal to the weight of the liquid column over surface A . The  
+volume of this liquid is    V  = Ah . If ρ is the density of liquid, then mass m of the  
+liquid column will be:  
+                                   m = ρ V = ρAh  
+
+                                                                 133  
+  
+﻿Therefore, force acting on area A will be  
+F    =    mg    =    ρ    Ahg  
+The pressure P at area A will be,  
+                                    F         ρAhg  
+                             P  =       =  
+                                  A  
+                                                A  
+ Or                       P  = ρgh ........................... (6.4)  
+                                                                                                  P P 
+           Equation  6.4  shows  that  pressure  in  a                            h   h 
+                                                                                             mg mg 
+liquid increases with depth. The value of pressure                                             A         
+depends on the depth and density of the liquid.  
+           Pressure produces force at right angle to  
+the  surface.  A  force  or  its  component  that  is  
+parallel  to  the  surface,  does  not  contribute  to  
+pressure.  The  pressure,  by  definition,  is  only                           Fig. 6.8 Pressure in a liquid  
+
+contributed by the normal component of the force. That is, the forces in a liquid  
+that push directly against the surface and add up to a net force is perpendicular  
+to the surface.  If there is a hole in the surface of the liquid container, the liquid  
+spurts at right angle to the surface before curving downward due to gravity.  
+
+  Example 6.2  
+
+          Calculate  the  pressure  of  column  of  mercury  76  cm  high.  Density  of  
+
+                              3        -3 
+mercury is  13.6 ×  10  kg m  .  
+
+  Solution    
+                                                                             For Your Information!  
+                                  3        -3  
+Density       ρ = 13.6 ×  10  kg m                                           Some   liquids   under   pressure  
+
+                                        -2 
+Height         h = 76cm =76 ×10  m                                           can  dissolve  more  gas  than  a  
+                              -2                                             liquid at a lower pressure. When  
+              g  = 10 m s 
+                                                                             we open a bottle of soda water,  
+               Pressure = ρgh                                                the  pressure  in  the  bottle  is  
+
+                                3        -3           -              -2  
+               P =13.6 × 10 kg m           × 10 m s ² × 76 × 10        m   decreased.  The  liquid  can  no  
+                                   5        -         -                      longer  hold  as  much  gas.  The  
+               P  = 1.034 × 10 kg m ³ × m s ² × m  
+                                   5       -2                                dissolved gas comes out of the  
+               P  = 1.034 × 10 N m  
+                                                                             solution and rises to the surface  
+                                   5  
+               P  = 1.034 ×10 Pa                                             of  the  liquid  in  the  form  of  
+                                                                             bubbles.  
+
+  Example 6.3  
+
+          A cylindrical water tank 2 m deep has been built on the top of a building  
+20 m high. What will be the pressure of water at the ground floor when the tank is  
+
+                                                  -3                       -2 
+full? Density of water is 1000 kg m  . Take g = 10 m s  .  
+
+                                                         134  
+  
+﻿  Solution                                                                         
+                           
+        Height               h  =  2  +  20  =  22 m                               
+
+                                                        -3  
+        Density              ρ = 1000  kg m                                        
+                             g =10 m s-2                                           
+                             P = ρgh = 22 m × 1000 kg m-3                          × 10 m s-2  
+
+                                                                     5  
+                              = 220000 Pa = 2.2 ×10 Pa  
+
+  
+
+  Activity 6.3  
+
+              Teacher should help the students to perform this  
+  activity and initiate discussion as per instructions:  
+  i.    Make three small holes at different heights in the side of a  
+        container as shown in the given figure.  
+  ii.   Fill the container with water.  
+  iii.  Observe the water streams flowing out of the holes. It is  
+        initially normal to the surface.  
+  iv.  Which  one  of  the  streams  hits  the  ground  at  larger  
+        distance?  
+  v.   At which position the liquid has more pressure?  
+  You will observe that the stream from each hole, initially flows out normal to the surface before  
+  curving down due to gravity and the lowest hole has more pressure. It shows that liquid pressure  
+  increases with depth.  
+                                                                                                                                                    
+  
+
+  Activity 6.4  
+
+              Teacher should demonstrate or help the students to  
+  perform by following the instructions given below:  
+  (i)         Fill a polythene shopping bag with water.  
+  (ii)        Poke several holes by using a pin on the bag.  
+  (iii)       Squeeze the bag gently.  
+  (iv)        What do you observe?  
+              Squeezing the top of bag causes the water to squirt on  
+  in all directions. It means the pressure is transmitted equally  
+ throughout the liquid.  
+
+6.6 Atmospheric Pressure  
+
+             The Earth is surrounded by a layer of air which we call atmosphere. We  
+know that air is a  mixture of gases. Their  molecules are always in  motion. They  
+collide with one another and with all other objects coming in their way. Thus, they  
+exert force on the objects. This force per unit area is the atmospheric pressure.  
+Since the molecules of air have random motion, therefore, atmospheric pressure  
+acts equally in all directions.  
+
+       The  atmosphere  exerts  pressure  on  the  surface  of  the  Earth  and  on  
+       everything  on  the  Earth.  This  pressure  is  called  atmospheric  pressure.  
+
+                                                                      135  
+  
+﻿           Atmospheric   pressure   extends   up   to   a                           Do You Know?  
+height of about 100 kilometres. The density of air is                               The pressure of 1 atmosphere  
+                                                                                     is  equivalent  to  placing  a  
+not  the  same  in  the  atmosphere.  It  decreases                                  1.0 kg mass (10 N weight) on  
+continuously with altitude.                                                          an area of  1 cm².  
+
+           We live at the bottom of the Earth's atmosphere which is a fluid that exerts  
+
+pressure on our bodies. At sea level, the value of atmospheric pressure is about  
+                 5  Pa. This value is referred to as standard atmospheric pressure. It is an  
+1.013 × 10 
+
+enormous  pressure  which  can  crush  anything.  We  do  not  feel  it  because  
+
+practically all the bodies have air inside them. As atmospheric pressure acts in all  
+
+directions, so it balances the pressure inside.  
+
+  
+
+Evidence of Atmospheric Pressure  
+
+           We can observe the force of the atmospheric pressure if we remove the  
+
+inside air from a vessel as shown in the following activity.  
+
+  
+
+  Activity 6.5  
+
+            The teacher should perform this activity in the  
+ class following the instructions given.  
+             Boil some water in a tin can. When it is full of  
+ steam, remove it from the burner and close its mouth by  
+ an air tight cork. Then pour cold water over it. The can  
+ crumples as shown in the given figure. Why does the tin  
+ crumples?  
+
+  
+
+Variation of Atmospheric Pressure with Height  
+
+           We have studied that pressure in a liquid increases with depth. At depth h,  
+the pressure of liquid is given by  
+
+                      P = ρgh  
+
+           This formula is applicable to all the fluids. As the gases of the atmosphere  
+are also fluid, therefore, the atmospheric pressure should be maximum on the  
+ground at sea level. As we go up in the air, atmospheric pressure decreases. At a  
+height of about 5 km, it falls to 55 kPa and at a height of 30 km it falls to 1 kPa. By  
+measuring the atmospheric pressure at a point in air, altitude of that point can be  
+determined. The lower the atmospheric pressure, the greater is the altitude.  
+
+                                                              136  
+  
+﻿6.7 Measurement of Atmospheric Pressure  
+                                                                                                               
+
+            Atmospheric pressure is usually measured by  
+                                                                                               Glass                      
+the  height of  mercury column which it can support.                                           tube                      Vacuum  
+
+Instruments  which   measure  the   atmospheric  
+pressure  are  called  barometers.  A  simple  mercury                                                                  Scale  
+barometer consists of a glass tube about one metre  
+                                                                                                                          
+long that is closed at one end.  It is completely filled                                                                    Air  
+                                                                                                                         Pressure  
+
+with mercury, then it is inverted vertically in a dish of  
+mercury.   A   metre   scale   is   placed   by   the   side                                               A         B  
+of the tube to measure the height of mercury column  
+(Fig. 6.9). The space in glass tube over the top of the  
+mercury is completely empty. The pressure is almost  
+zero.                                                                                             Fig 6.9 Barometer  
+
+            The  pressure  P,  at  point  A  in  the  
+mercury column is the same as at point B at                                       For Your Information!  
+the  surface  of  mercury  in  the  dish  because                                  
+both the points are at the same level. This is                                     
+                                                                                   
+equal to the atmospheric pressure  P  = ρgh                                        
+acting at the surface of mercury in the dish.                                      
+                                                                                   
+  
+ For Your Information!                                                             
+                                                                                   
+  
+                                                                                   
+  
+                                                                                   
+  
+                                                                                   
+  
+                                                                                   
+  
+                                                                                   
+  
+                                                                                   
+  
+                                                                                   
+ Air pressure guage which is used to measure the                                 A    Fortin's     Barometer         is  used      in  
+ pressure in motor car tyres.                                                     l  aboratories  to  measure  the  
+
+                                                                                  atmospheric pressure.  
+  
+            If  we  put  P  =  1.013  ×  105   Pa  at  sea  level,                           Quick Quiz  
+
+                                      -                                                       Would  you  exert  more,  
+ρ  =  13.6  ×  10³  kg  m ³  for  mercury,  the  height  of  
+                                                                                               same or less pressure on  
+mercury column comes out to be 760 mm. By using                                                the  ground  if  you  stand  
+this instrument atmospheric pressure at any altitude                                           on  one  foot  instead  of  
+in  the  air  can  be  measured  in  terms  of  height  of                                     two feet?  
+mercury column.  
+
+                                                                 137  
+  
+﻿Changes in Atmospheric Pressure as Weather Indicator  
+                                                                                                                                   
+            The  atmospheric  pressure  does  not  always                                          Quick Quiz  
+remain  uniform  but  flactuates.  By  observing  the                                              Can we use water in place  
+variation,          the       meteorologists                 can      forecast           the       of  mercury  to  construct  a  
+weather conditions.                                                                                barometer? Explain why.  
+            Atmospheric  pressure  depends  upon  the  
+density of air. At high altitudes, where the air is less dense, the atmospheric  
+pressure falls down. Similarly, increase in the quantity of water vapours also  
+decreases  the  density.  Thus,  atmospheric  pressure  becomes  low  in  cloudy  
+regions. Weather casters use this knowledge to predict rains. A fall in pressure  
+often means that rain clouds are on the way and the rain is to follow.  
+
+6.8 Measurement of Pressure by Manometer  
+
+            A   simple   manometer   consists   of   a  
+U-shaped glass tube which contains mercury. In    
+the beginning, the atmospheric pressure at the    
+two  open  ends  of  the  tube  is  the  same  and    
+                                                                                          
+hence,  mercury  level  in  the  two  arms  remains  
+                                                                                          
+same (Fig. 6.10).  If on connecting a gas cylinder    
+with short arm keeping the longer arm of the    
+tube  open,  the  mercury  level  in  short  arm  is    
+lower than that in the  long arm (Fig. 6.11), then    
+                                                                                          
+the   unknown  pressure  is  more  than  the  
+                                                                                          
+atmospheric pressure. If the mercury level in the  
+                                                                                          
+short arm is more than the long arm (Fig.6.12),                                                   Fig. 6.10 manometer  
+then  the  unknown  pressure  is  less  than  the  
+atmospheric pressure.  
+
+  
+
+                                                                              
+                                              Air pressure                                                       Gas cylinder  
+  
+                                                                              
+  
+                                                                              
+  
+                                                                              
+  
+                                                h                             
+                                                                                                   h  
+
+                           Fig. 6.11                                                                   Fig. 6.12  
+                                                                     138  
+  
+﻿6.9 Pascal’s Law  
+                                        
+
+          When we inflate a balloon, we blow air  
+                                                                                Some Typical Pressures  
+in it with a certain pressure but the balloon                                 Location              Pressure (Pa)  
+blows uniformly from all sides. It means that                               Sun's centre                       16  
+                                                                                                        2 ×  10 
+the pressure applied at its mouth has been                                 Earth's centre                      11  
+                                                                                                        2 ×  10 
+transmitted          uniformly        in    all    directions.        Deepest ocean trench             1.1 ×1018  
+Similarly, when a motorbike tyre is inflated,                               A motor tyre                       5  
+                                                                                                        2 ×  10 
+                                                                      Standard atmospheric                        5  
+air pressure is applied at one point but the                                                          1.013 ×  10 
+                                                                          Blood pressure                        4  
+tyre is uniformly inflated from all sides. This                                                         1.6 ×  10 
+
+                                                                                                               4  
+indicates that pressure is transmitted to each                           On mount Everst                4 ×  10 
+
+                                                                                                               2  
+part of the tyre.                                                             On mars                   7 ×  10 
+           Let us perform a very interesting activity with a liquid. Take water in a flask   
+
+with piston and having a few side tubes fixed at different positions. If such flask is  
+not available you can join  a syringe at the mouth of a pet bottle. For side tubes,  
+bendable transparent drinking straws can be glued on the holes punched on  
+sides of the bottle.  
+          You will observe that the level of water in all the side tubes is the same. This  
+is because a liquid seeks its own level and rises to  
+the same height at all points. Now push the piston                                 Piston                     Side  
+through some distance.                                                                                        tubes  
+
+          The level of water in all the side tubes rises  
+to the same height. Why does this happen? This is  
+because the pressure applied at one point of the  
+liquid is transmitted equally to every point of the  
+liquid. Since gases (air) and liquids are termed as  
+fluids so the above activities prove that:  
+
+  
+
+           When pressure is applied at one point in  
+            an   enclosed   fluid,   it   is   transmitted                    Flask                        Water  
+            equally to all parts of fluid without loss.                                    Fig. 6.13  
+
+This is the statement of Pascal's law.  
+          The technology of hydraulic systems is based on Pascal's law. Its main  
+advantages are:  
+(I)        Liquids do not absorb any of the supplied energy.  
+(ii)      They are capable of moving much heavy loads and providing great forces  
+           due to incompressibility.  
+Some useful hydraulic systems are:  
+                                          1.   Hydraulic press  
+                                          2.   Car lift at service stations  
+                                          3.   Hydraulic brakes of vehicles  
+
+                                                          139  
+  
+﻿Hydraulic Press  
+                                       
+
+            Consider  a  specially  designed  container  as  shown  in  Fig.  6.14.  In  this  
+container there are two cylinders joined  by means of a pipe. The cross-sectional  
+area of the smaller cylinder is A 1                             F 
+                                                                 1  
+
+and that of the larger one is A  .  
+                                                     2                                                                F 
+                                                                                                                       2  
+
+The cylinders are filled with some  
+incompressible liquid.  
+Suppose that the small  piston  is                                  Piston  
+                                                             A      area  
+pressed   down   by   applying   a                              1  
+force F . The  pressure  P  = F / A                                                                                   A2  
+            1                                  1      1  
+                                                                                                               Piston area  
+produced   by   small   piston   is  
+transmitted equally to the large  
+piston.                                                                     Pipe                                  Liquid  
+
+Due to this pressure P, a force F ,  
+                                                     2 
+
+will act on A , which is given by  
+                    2  F  =PA                                                           Fig. 6.14  
+
+                         2       2  
+
+  Putting the value of P,                           
+                                             F       
+                                      F  =  1     A                            (6.5)  
+                                     2               2 ...................................................  
+                                             A 1  
+            Since A₂  > A , therefore, F₂  > F₁. The result indicates that a small force  
+                                  1 
+
+applied on the smaller piston, results into a large force on the larger piston. Such  
+a system is known as force multiplier.  
+            A hydraulic press works on this principle. Cotton bale or any other object  
+to be compressed is placed over the larger piston. A force F₁  is applied on the  
+smaller piston. The pressure P produced by smaller piston is transmitted equally  
+to the larger piston. A much greater  
+                                                               
+force F  acts on it. This force lifts the  
+           2  
+                                                               
+larger  piston  and  compresses  the   
+cotton bale.                                                   
+            This principle is also used at    
+service   stations   to   lift   cars   for    
+                                                               
+washing (Fig. 6.15).  
+                                                               
+
+  Example 6.4                                                  
+                                                                                           Fig. 6.15  
+
+            The diameters of the pistons of a hydraulic press are 5 cm and 25 cm  
+respectively. A normal force of 160 N is applied on the smaller piston, what will be  
+
+                                                                140  
+  
+﻿the pressure exerted by this force on the bigger piston? How much weight can be  
+lifted by the other piston?  
+
+  Solution    
+            Let the areas of cross-sections of the pistons be A  and A  and their radii be  
+                                                                                                 1 
+                                                                                                   
+r  and r  respectively.                                                                             
+  1 
+                                                      
+                                        
+    
+                                                                                -2                 25                               -2  
+ Putting the values of                 r  =   5   cm  = 2.5 ×  10                  m  r  =                cm  =  12.5 ×  10            m  
+                                         1        2                                        2        2  
+                                       A  = π r 2                      and               A  = π r 2  
+                                          1                                                 2 
+                                                                                              
+ Force on the smaller piston   F₁  =  160 N. Its pressure on the piston is                     
+                                       P  =    F1       = F1        
+
+                                                                  2  
+                                                    1       π r  
+                                                 A  
+                                                                 1  
+ If the weight lifted by the bigger piston is                                 , then according to the Pascal's law.  
+                                                                           w  
+                                                  w  
+                                      F 1                                
+                                             =  
+                                                              
+                                      A 1         A                      
+                                                     2  
+                                                                                      2  
+                                                 F           F πr 2         F  × r  
+                                                  1    2       1              1 
+                                      w      =           =  
+ or                                                                     =  
+                                                                    2             2  
+                                                  A               
+                                                     
+                                                     1         πr                r  
+                                                                   1             1  
+
+ Putting the values,  
+
+                                                        -2                           -2  
+                 w  =160 N × (12.5 ×  10                   m)²  / (2.5 ×  10            m)²  = 4000 N  = 4 kN  
+
+ So, we can lift 4000 N weight by applying a force of  160 N on smaller piston.  
+
+Hydraulic Brakes  
+
+            The brakes of some vehicles  
+work on  Pascal's law.  In such type                                                                      Larger  
+                                                                                                         brake  
+of brakes, cylinders with pistons are                                                        Brake      cylinder  
+                                                                                              pads  
+attached to the wheels. The brake  
+                                                                                                        brake  
+pedal  is  attached  to  a  master                                                                       fluid  
+cylinder  having  smaller  area  of  
+cross-section.  Master  cylinder  is                                                                 Smaller  
+                                                                                           Brake      piston  
+connected   to   all   the   larger                                                         line  
+                                                                                                   Master  
+cylinders  attached  to  the  wheel                                                                cylinder      Brake  
+through   pipes  as   shown   in                                                                                 pedal  
+
+Fig. 6.16. Oil is filled in this system.  
+When pedal is pushed down, the  
+piston  applies  pressure  on  the  
+liquid in the master cylinder. The                                                         Tyre  
+liquid   pressure   is   transmitted                                       Fig. 6.16 Hydraulic brake system  
+
+                                                                   141  
+  
+﻿equally to all the larger pistons of other cylinders. This pressure causes these  
+pistons to move outward pressing the brake pads towards brake discs or brake  
+drums.  Force of friction between the pads and discs or drums slows down the  
+vehicle. When pressure is released from the pedal, the springs pull back the brake  
+pads and wheels again turn freely.  
+
+  
+
+  Activity 6.6                                                                Plunger  
+                                                                           moving out  
+       The  teacher  should  facilitate  the  groups  to                  
+ follow the instructions given below.                                     
+ i.     Fill a syringe with water and insert its nozzle                   
+        into a thin plastic tube.                                         
+ ii.    Press the syringe to fill the tube with water.                    
+  iii.  Half  fill  the  second  syringe  with  water  and                                                       Plunger  
+        insert its nozzle to the other end of the tube.                                                         pressed  in  
+  iv.   Press one plunger in through some distance.                       
+ v.     Is the second plunger pushed out through the                      
+        same distance?                                                    
+ vi.    Is  the  pressure  transmitted  to  the  second                   
+                                                                                       Water  
+        plunger by the liquid?  
+ vii.   What is your inference?  
+                                                                                      Plastic tube  
+
+  
+
+                                                     KEY POINTS  
+
+            Elasticity is the property of solids by which they come back to their original  
+             shape when deforming force ceases to act.  
+
+            Within the elastic limit of a helical spring, the extension or compression in it is  
+             directly proportional to the applied force. This is known as Hooke's law.  
+
+            Density is defined as mass per unit volume.  
+            Pressure is the force that acts normally on unit area of a surface. Its SI unit is  
+
+                                 -2  
+             pascal = 1 N m 
+
+            Atmospheric pressure is the force exerted by the atmosphere acting on unit area  
+             of the Earth’s surface.  
+
+            Atmospheric  pressure  is  measured  by  the  column  of  mercury  which  the  
+             atmospheric pressure can support.  
+
+            If pressure is exerted on a liquid, the liquid transmits it equally in all directions.  
+             This is known as Pascal's law.  
+
+                                                             142  
+  
+﻿                                            EXERCISE  
+
+ A      Multiple Choice Questions  
+                                                                          
+        Tick () the correct answer.  
+6.1.     A wire is stretched by a weight w. If the diameter of the wire is reduced to  
+         half of its previous value, the extension will become:  
+         (a)  one half                                          (b)  double  
+         (c)  one fourth                                        (d)  four times  
+6.2.     Four wires of the same material are stretched by the same load. Their  
+         dimensions are given below. Which of them will elongate most?  
+         (a)  Length 1 m, diameter 1 mm                (b)  Length 2 m, diameter 2 mm  
+         (c)  Length 3 m, diameter 3 mm                (d)  Length 4 m, diameter 0.5 mm  
+6.3.     Two metal plates of area 2 and 3 square metres are placed in a liquid at the  
+         same depth. The ratio of pressures on the two plates is:  
+         (a)  1:1                                      (b)   2    :   3  
+         (c)  2:3                                      (d)  4:9  
+6.4.     The pressure at any point in a liquid is proportional to:  
+         (a)  density of the liquid  
+         (b)  depth of the point below the surface of the liquid  
+         (c)  acceleration due to gravity  
+         (d)  all of the above  
+6.5.     Pressure applied to an enclosed fluid is:  
+         (a)  increased and applied to every part of the fluid  
+         (b)  diminished and transmitted to the walls of container  
+         (c)  increased in proportional to the mass of fluid and then transmitted to  
+              each part of the fluid  
+         (d)  transmitted  unchanged  to  every  portion  of  the  fluid  and  walls  of  
+              containing vessel  
+6.6.     The principle of a hydraulic press is based on:  
+         (a)  Hooke's law  
+         (b)  Pascal's law  
+         (c)  Principle of conservation of energy  
+         (d)  Principle of conservation of momentum  
+6.7.     When a spring in compressed, what form of energy does it possess?  
+         (a)  Kinetic                (b)  Potential             (c)  Internal              (d)  Heat  
+6.8.     What  is  the  force  exerted  by  the  atmosphere  on  a  rectangular  block  
+         surface of length 50 cm and breadth 40 cm? The atmospheric pressure is  
+         100 kPa.  
+         (a)  20 kN                  (b)  100 kN    (c)  200 kN    (d)  500 kN  
+
+                                                   143  
+  
+﻿  B       Short Answer Questions  
+                                                                    
+
+6.1.       Why heavy animals like an elephant have a large area of the foot?  
+6.2.       Why animals like deer who run fast have a small area of the foot?  
+6.3.       Why is it painful to walk bare footed on pebbles?  
+6.4.       State Pascal's law. Give an application of Pascal's law.  
+6.5.       State what do you mean by elasticity of a solid.  
+6.6.       What is Hooke's law? Does an object remain elastic beyond elastic limit?  
+           Give reason.  
+6.7.        Distinguish between force and pressure.  
+6.8.       What is the relationship between liquid pressure and the depth of the  
+            liquid?  
+6.9.       What is basic principle to measure the atmospheric pressure by a simple  
+            mercury barometer?  
+6.10.   State  the  basic  principle  used  in  the  hydraulic  brake  system  of  the  
+           automobiles.  
+
+  C       Constructed Response Questions  
+
+6.1.       A spring having spring constant k hangs vertically from a fixed point. A  
+            load of weight L, when hung from the spring, causes an extension x, the  
+           elastic limit of the spring is not exceeded.  
+           Some  identical  springs,  each  with  spring  constant  k,  are  arranged  as  
+           shown below:  
+            For each arrangement, complete the table by determining:  
+           (i)  the total extension in terms of  x.  
+           (ii) the spring constant in terms of  k.  
+
+  
+
+                                                                                      Spring constant (k) of  
+         Arrangement                         Total Extension x  
+                                                                                         the arrangement  
+                                                                                
+
+                          
+
+    
+                                                                                
+
+                                  
+
+                                                               144  
+  
+﻿6.2.     Springs are made of steel instead of iron. Why?  
+6.3.     Which of the following material is more elastic?  
+         (a)  Iron or rubber      (b) Air or water  
+6.4.     How does water pressure one metre below the surface of a swimming  
+         pool compare to water pressure one metre below the surface of a very  
+         large and deep lake?  
+6.5.     What will happen to the pressure in all parts of a confined liquid if pressure  
+         is increased in one part? Give an example from your daily life where such  
+         principle is applied.  
+6.6.     If some air remains trapped within the top of the mercury column of the  
+         barometer  which  is  supposed  to  be  vacuum,  how  would  it  affect  the  
+         height of the mercury column?  
+
+6.7.     How does the  long  neck  
+         is  not  a  problem  to  a  
+         giraffe  while  raising  its  
+         neck suddenly?  
+  
+  
+  
+
+  
+                                                                                                          
+6.8.     The end of glass tube used in a simple barometer is not properly sealed,   
+         some leak is present. What will be its effect?  
+6.9.     Comment on the statement, “Density is a property of a material not the  
+         property of an object made of that material.”  
+6.10.    How the load of a large structure is estimated by an engineer?  
+
+ D      Comprehensive Questions  
+
+6.1.     What is Hook’s law? Give three applications of this law.  
+6.2.     Describe the working and applications of a simple mercury barometer  
+         and a manometer.  
+6.3.     Describe Pascal’s Law. State its applications with examples.  
+6.4.     On what factors the pressure of a liquid in a container depend? How is it  
+         determined?  
+6.5.     Explain that atmosphere exerts pressure. What are its applications. Give at  
+         least three examples.  
+
+                                                   145  
+  
+﻿  E      Numerical Problems  
+                                                        
+
+6.1        A spring is stretched 20 mm by a load of 40 N. Calculate the value of spring  
+           constant.  If  an  object  cause  an  extension  of  16  mm,  what  will  be  its  
+           weight?  
+
+                                                                                                                 -1 
+                                                                                                     (2 kN m , 32 N)  
+
+6.2        The mass of 5 litres of milk is 4.5 kg. Find its density in SI units.  
+
+                                                                                                                 3         -3 
+                                                                                                   (0.9 ×  10  kg m )  
+
+6.3        When a solid of mass 60 g is lowered into a measuring cylinder, the level  
+
+           of water rises from 40 cm³ to 44 cm³. Calculate the density of the solid.  
+
+                                                                                                                 3         -3 
+                                                                                                    (15 ×  10  kg m )  
+
+                                                3        -3                              3 
+6.4        A block of density 8 x 10 kg m  has a volume 60 cm . Find its mass.  
+
+                                                                                                                (0.48 kg)  
+
+6.5        A  brick  measures  5 cm ×  10 cm × 20 cm.  If its  mass is  5  kg, calculate the  
+
+           maximum  and  minimum  pressure  which  the  brick  can  exert  on  a  
+
+           horizontal surface.  
+
+                                                                                                   4                   2  
+                                                                                         (1 ×  10  Pa, 25 ×  10  Pa)  
+
+6.6        What will be the height of the column in barometer at sea level if mercury  
+           is replaced by water of density  1000 kg m-3, where density of mercury is  
+
+                         3        -3  
+           13.6 × 10  kg m 
+
+                                                                                                                 (10.3 m)  
+
+6.7        Suppose in the hydraulic brake system of a car, the force exerted normally  
+           on its piston of cross-sectional area of 5 cm² is 500 N. What will be the  
+           pressure transferred to the brake oil? What will be the force on the second  
+
+                                                                      2 
+           piston of area of cross-section 20 cm ?  
+
+                                                                                                6       -2 
+                                                                                  [1.0 ×  10  N m ,              2000 N]  
+
+6.8        Find the water pressure on a deep-sea diver at a depth of 10 m, where the  
+
+                                                                -3 
+           density of sea water is 1030 kg m  .  
+
+                                                                                                                  5        -2 
+                                                                                                   (1.03 ×  10  N m )  
+
+6.9          The area of cross-section of the small and large pistons of a hydraulic  
+
+                                                    2  
+           press is respectively 10 cm and 100 cm². What force should be exerted on  
+
+           the small piston in order to lift a car of weight 4000 N?  
+
+                                                                                                                  (400 N)  
+
+                                                             146  
+  
+﻿6.10       In  a  hot  air  balloon,  the  following  data  was  recorded.  Draw  a  graph  
+           between the altitude and pressure and find out:  
+           (a) What would the air pressure have been at sea level?  
+           (b) At what height the air pressure would have been 90 kPa?  
+                                               Altitude              Pressure  
+                                                  (m)                  (kPa)  
+  
+                                                  150                   99.5  
+  
+                                                  500                   95.7  
+  
+                                                  800                   92.4  
+                                                 1140                   88.9  
+
+                                                                                                                         5  
+                                                 1300                   87.2                        (a).  1.01 ×  10  Pa  
+                                                 1500                   85.3                        (b).  1.02 km  
+
+6.11        If the pressure in a hydraulic press is increased by an additional 10 N cm  ,                                   -2 
+
+           how much extra load will the output platform support if its cross-sectional  
+           area is 50 cm2  ?  
+
+                                                                                                                   (500 N)  
+
+  
+6.12       The force exerted normally on the hydraulic brake system of a car, with its  
+
+                                                                 2  
+           piston of cross sectional area 5 cm  is 500 N. What will be the:  
+           (a)         pressure transferred to the brake oil?  
+
+                                                                                                           2 
+           (b)        force on the brake piston of area of cross section 20 cm ?  
+
+                                                                                               6        -2 
+                                                                            [(a)  1.0 ×  10  N m , (b) 2000 N)]  
+
+                                                             147  
+  

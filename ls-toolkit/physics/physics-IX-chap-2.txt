@@ -1,0 +1,1525 @@
+﻿    Chapter  
+          2                      Kinematics  
+
+  
+Student Learning Outcomes  
+
+After completing this chapter, students will be able to:  
+
+[SLO: P -09 - B -01] Differentiate between scalar and vector quantities:  
+[A scalar has magnitude (size) only and that a vector quantity has magnitude and direction.  
+Students should be able to represent vectors graphically]  
+[SLO: P -09 - B - 0 2] Justify that distance, speed, time, mass, energy, and temperature are scalar  
+quantities.  
+[SLO: P -09 - A - 0 3] Justify that displacement, force, weight, velocity, acceleration are vector  
+quantities.  
+[SLO: P -09 - A - 0 4] Determine graphically, the resultant of two or more vectors.  
+[SLO: P -09 - B - 0 5] Differentiate between different types of motion [i.e; translatory, {linear,  
+random, and circular); rotatory and vibratory motions and distinguish among them.]  
+[SLO: P -09 - B - 0 6] Differentiate between distance and displacement, speed and velocity.  
+[SLO: P -09 - B - 0 7] Define and calculate average speed [average speed = (total distance  
+travelled)/ (total time taken)]  
+[SLO: P -09 - B - 0 8] Differentiate between average and instantaneous speed (speed shown by  
+speedometer of a vehicle is the speed at any instant.)  
+[SLO: P -09 - B -09] Differentiate between uniform velocity and non -uniform velocity  
+[SLO: P -09 - B -10] Define and calculate acceleration [Includes deriving the units of acceleration  
+       -2  
+as ms    from the formula a = Δv /Δt  and using the formula to solve problems. This also includes  
+knowing that that deceleration is negative acceleration and using fact in calculations.]  
+[SLO: P -09 - B -11] Differentiate between uniform acceleration and non -uniform acceleration  
+[SLO:  P  -09  -  B  -12] Sketch,  plot and  interpret distance, time and speed-time graphs  
+[This includes determining from the shape of a distance -time graph when an object is:  
+[(a) at rest, (b) moving with constant speed, (c) accelerating, (d) decelerating. Students are also  
+required to know how to calculate speed from the gradient of a distance - time graph. It also  
+includes determining from the shape of a speed -time graph when an object is:  
+(a) at rest, (b) moving with constant speed, (c) moving with constant acceleration.]  
+[SLO: P -09 - B - 13] Use the approximate value of  
+g as 10m/s² for free fall acceleration near Earth to  
+solve problems  
+[SLO:  P  -09   -   B  -14]  Analyse  the  distance  
+travelled in speed vs time graphs [By determining  
+the area under the graph for cases of motion with  
+constant speed or constant acceleration]  
+[SLO:  P  -09 -  B  -15] Calculate acceleration from  
+the gradient of a speed-time graph  
+[SLO: P -09 - B -16] State that there is a universal  
+speed limit for any object in the universe that is  
+                           8      – 1  
+approximately 3 × 10  m s 
+[Students should just be aware that this phenomenon is true; they do not need to study relativity  
+in any depth. The purpose is that students appreciate that there is a universal speed limit].  
+
+                                                            28  
+  
+﻿          Mechanics is the branch of physics that deals with the motion of objects  
+and the forces that change it.  
+Generally, mechanics is divided into two branches:  
+          1. Kinematics                                      2. Dynamics  
+          Kinematics is the study of  motion of objects without  referring to forces.  
+On the other hand, dynamics deals with forces and their effect on the motion of  
+objects.  
+          In our everyday life, we observe many objects in motion. For example,  
+cars,  buses,  bicycles,  motorcycles  moving  on  the  roads,  aeroplanes  flying  
+through air, water flowing in canals or some object falling from the table to the  
+ground.  
+The motion of these objects can be studied with or without considering the force  
+which causes motion in them or changes it.  
+  
+
+2.1 Scalars and Vectors  
+
+          Before we study kinematics in detail, we should know about the nature of  
+various physical quantities. Some quantities are called scalars and the others  
+vectors.  
+
+  
+
+                          A scalar is that physical quantity which can be  
+                          described completely by its magnitude only.  
+
+          Magnitude includes a number and an appropriate unit. When we ask a  
+shopkeeper to give us 5 kilograms of sugar, he can fully understand how much  
+quantity we want. It is the magnitude of mass of sugar. Mass is a scalar quantity.  
+Some  other  examples  of  scalar  quantities  are  distance,  length,  time,  speed,  
+energy and temperature. Scalar quantities can be added up like numbers.  
+          For example,      5 metres + 3 metres = 8 metres.  
+On the other hand,  
+
+  
+
+                  A  vector  is  that  physical  quantity  which  needs  
+                  magnitude as well as direction to describe it completely.  
+
+          The   examples   of  vector   quantities   are  displacement,  velocity,  
+acceleration, weight, force, etc. The velocity of a car moving at 90 kilometre per  
+
+                  −1 
+hour (25 m s  ) towards north can be represented by a vector. Velocity is a vector  
+quantity  because  it  has  magnitude  25  m  s−1                     and  direction  (towards  north).  
+
+Vectors  cannot  be  added  like  scalars.  There  are  specific  methods  to  add  up  
+vectors. These methods take their directions also into consideration.  
+
+                                                         29  
+  
+﻿Representation of vectors  
+                                                             
+            In the text book, symbol used for a vector is a bold face letter such as A, v,  
+F and          etc. Since we cannot write in bold face script on paper, so a vector is  
+                                                                                  →    → → → 
+written as the letter with a small arrow over it, i.e. A, v,  F, d. The magnitude of a   
+vector is given  by italic  letter without arrow head. A vector can  be  represented   
+
+graphically by drawing a straight line with an arrow head at one end. The length  
+of line represents the magnitude of the vector quantity according to a suitable  
+scale while the direction of arrow indicates the direction of the vector.  
+                                                                                                                      v  
+To  represent  the  direction,  two  mutually                                                                 N  
+perpendicular lines are required. We can draw one  
+line to represent east-west direction and the other  
+                                                                                                                      θ  
+line to represent north-south direction as shown in  W                                                                              E  
+Fig.2.1(a).  The  direction  of  a  vector  can  be  given                                                  O  
+
+with respect to these lines. Mostly, we use any two  
+lines  which  are  perpendicular  to  each  other.                                                            S  
+Horizontal line (x x )  is called x-axis and vertical line                                A vector v making an angle θ  
+( y y ) is called y-axis (Fig. 2.1-b). The point where                                        towards north from east  
+these  axes  meet  is  known  as  origin.  The  origin  is                                                Fig 2.1 (a)  
+usually  denoted  by  O.  These  axes  are  also  called                                                      y                F  
+
+            A vector is drawn starting from the origin of                                      
+
+                                                                                                                       O  
+                                                                                                                    30 
+the  reference  axes  towards  the  given  direction. The  x                                                                    x  
+                                                                                                            O  
+direction is usually given by an angle θ  (theta) with                                         
+x-axis. The angle with x-axis is always measured from                                          
+the right side of x-axis in the anti-clockwise direction.                                                     y  
+                                                                                         A Vector F making angle 30O  
+
+  Example 2.1                                                                                         with x-axis  
+                                                                               -1                     Fig. 2.1 (b)  
+Draw the velocity vector v; a velocity of 300 m s 
+at an angle of 60° to the east of north.                                               For Your Information!  
+
+                                                                                For   geographical   direction,   the  
+  Solution    
+                                                                                reference   line  is  north  –   south  
+i.     Draw  two  mutually  perpendicular  lines                               whereas        for    Cartesian      coordinate  
+       indicating N, S, E & W.                                                  system +ve x -axis is the reference.  
+ii.    Select a suitable scale. If  100 m s-1                     =  1 cm,                             N                   P  
+                                                                                                                       v  
+       then 300 m s-1 are represented by 3 cm line.  
+
+                                                                                                            O  
+                                                                                                         60 
+iii.   Draw  3  cm  line  OP  at  an  Angle  of  60o  
+       starting from N towards E.                                                W                   O                     E  
+
+iv.    Make an arrow head at the end of line OP.  
+       The OP is the vector v.  
+                                                                 30                                    S  Fig. 2.2  
+
+  
+﻿ Example 2.2  
+
+Draw a force vector F having magnitude of 350 N and acting at an angle of 60°  
+with x-axis.  
+
+  Solution                                                                                               Q  
+
+(i.)      Draw  horizontal  and  vertical  lines to represent                                          F  
+          x-axis and y-axis as shown in Fig. 2.3.  
+                                                                                                  y  
+(ii.)    Scale:      If 100 N = 1 cm, then  
+
+                                                                                                       60°  
+                      350 N = 3.5 cm                                             x                                x  
+                                                                                               O  
+
+(iii.)    Draw 3.5 cm line OQ at an angle of 60° with x-axis.   
+(iv.)     Make an arrow head at the end of the line OQ. The                                       y  
+          OQ is the vector F.  
+                                                                                              Fig. 2.3  
+
+Resultant Vector  
+  
+          We can add two or more vectors to get a single vector. This is called as  
+resultant vector. It has the same effect as the combined effect of all the vectors to  
+be added. We have to determine both magnitude and direction of the resultant  
+vector, therefore, it is quite different from that of scalar addition. One method of  
+addition of vectors is the graphical method.  
+
+  
+
+Addition of Vectors by Graphical Method  
+                                                                                              y  
+          Let  us  add  two  vectors v1  and  v2   having  
+magnitudes of 300 N and 400 N acting at angles  
+
+        o           o  
+of 30  and 60  with x-axis.  By selecting a suitable  
+                                                                                                   60O  
+scale  100  N  =  1cm, we  can  draw the vectors  as  
+                                                                                                             O  
+                                                                                                          30  
+shown in Fig. 2.4 (a).                                                    x                                        x  
+                                                                                            O  
+          To  add  these  vectors,  we  apply  a  rule  
+called head-to-tail rule, which states that:  
+  
+  
+                                                                                                    Fig. 2.4 (a)  
+                                                                                              y  
+  
+
+             To add a number of vectors, redraw their representative lines  
+             such that the head of one line coincides with the tail of the other.  
+             The resultant vector is given by a single vector which is directed  
+             from the tail of the first vector to the head of the last vector.  
+
+                                                         31  
+﻿  
+                                                                                                    y  
+Measured length of resultant vector is 6.8 cm                                                                                  v  
+                                                                                                                                       v₂  
+(Fig.2.4-b).  According   to   selected   scale,  
+magnitude of the resultant vector v is 680 N and  
+
+                                    O  
+direction is angle 49                  with x-axis.                                                                               60O  
+We can find the resultant vector of more than  
+two vectors by adding them with the same way                                                                49O         v₁  
+applying head-to-tail rule.                                                             x            O         30O               x  
+
+  
+
+2.2 Rest and Motion                                                                                             Fig. 2.4 (b)  
+                                                                                                    y  
+
+            When we look around us, we see many things like buildings, trees, electric  
+poles, etc. which do not change their positions. We say that they are in a state of  
+rest.  
+  
+  
+  
+  
+
+  
+                                                                                                    
+                                                                  Fig. 2.5 (a)  
+
+                            If  a  body  does  not  change  its  position  with  
+                            respect to its surroundings, it is said to be at rest.  
+
+            Suppose a motorcyclist is standing on the road (Fig. 2.5-a). An observer  
+sees that he is not changing his position with respect to his surroundings i.e., a  
+nearby building, tree or a pole. He will say that the motorcyclist is at rest.  
+             Now let us see what does motion mean? When the motorcyclist is driving  
+(Fig. 2.5-b), the observer will notice that he is continuously changing his position  
+with respect to the surroundings. Then the observer will say that the motorcyclist  
+is in motion.  
+
+  If a body continuously changes its position with  
+  respect to its surroundings, it is said to be in  
+  motion.  
+
+  
+
+The  state  of  rest  or  motion  of  a  body  is  always   
+                                                                                           
+relative.  For  example,  a  person  standing  in  the                                                                                        
+compartment  of  a  moving  train  is  at  rest  with                                                       Fig. 2.5 (b)  
+
+respect to the  other  passengers  in the  compartment  but  he  is  in  motion with  
+respect to an observer standing on the platform of a railway station.  
+
+                                                                     32  
+﻿2.3 Types of Motion  
+                                                             
+
+             We observe different types of motion in our daily life. A train moves almost  
+along a straight line, the blades of a fan rotate about an axis, a swing vibrates  
+about its mean position. Generally, there are three types of motion of bodies.  
+1. Translatory motion      2. Rotatory motion                                                        3. Vibratory motion  
+
+  
+
+1. Translatory Motion  
+
+If the motion of a body is such that every  
+particle of the body moves uniformly in  
+the same direction, it is called tanslatory  
+motion.  For  example,  the  motion  of  a  
+train or a car is tanslatory motion (Fig.2.6).  
+Translatory motion can be of three types:                                                                                                          
+                                                                     Fig. 2.6 The motion of a train is translatory motion   
+(i.)  Linear Motion  
+        If the body moves along a straight line, it is  
+        called linear motion. A freely falling body is  
+        the example of linear motion.  
+(ii.) Random Motion                                                                      (a)  Irregular path       (b) The motion of bee   
+                                                                                                                     
+        If the body moves along an irregular path                                              Fig. 2.7              is random motion  
+        (Fig. 2.7), the motion is called random motion.  
+(iii.)Circular Motion  
+        The motion of a body along a circle is called circular   
+        motion. If a ball tied to one end of a string is whirled, it  
+        moves along a circle. A Ferris wheel is also an example of   
+                                                                                                                                                  
+                                                                                                                    Circular Motion  
+        circular motion (Fig.2.8).                                                                                  
+                                                                                                                            Fig. 2.8  
+
+2. Rotatory Motion  
+  
+If each point of a body moves around a fixed point (axis),                                                       
+the  motion  of  this  body  is  called  rotatory  motion.  For                                                  
+
+example, the motion of an electric fan and the drum of a                                                         
+                                                                                                                 Rotatory motion of a fan  
+washing  machine  dryer  is  rotatory  motion  (Fig.2.9).  The  
+                                                                                                                            Fig. 2.9  
+motion of a top is also rotatory motion.  
+                                                                                                                 
+  
+                                                                                                                 
+3. Vibratory Motion                                                                                              
+When a body repeats its to and fro motion about a fixed                                                          
+position, the motion is called vibratory motion. The motion                                                      
+                                                                                                                 
+of a swing in a children park is vibratory motion (Fig. 2.10).  
+                                                                                                                 
+                                                                                                    Fig. 2.10     Vibratory  motion  
+                                                                       33  
+
+  
+﻿2.4 Distance and Displacement  
+                                                                                         
+             We know that motion is the action of an object going from one place to  
+another  or  change  of  position.  The  length  between  the  original  and  final  
+positions may be measured in two ways as either distance or displacement.  
+
+                      The distance is the length of actual path of the motion.                                                               
+
+             Let a person be travelling from Lahore to Multan in a car. On reaching  
+Multan, he reads the speedometer and notices that he has travelled a distance of  
+320 km. It is the distance travelled by that person. Obviously, it is not the shortest  
+distance from Lahore to Multan, as the car took many turns in the way. He did not  
+travel along a straight line.  
+  
+       The displacement of an object is a vector quantity whose magnitude is  
+       the shortest distance between the initial and final positions of the motion  
+       and  its  direction  is  from  the  initial  position  to  the  final  position.  
+  
+                                                                                                                                             B  
+  We  can  also  call  this  as  the  change  in  position.  
+  Note  that  displacement  is  a  vector  quantity                                                                 d  
+  whereas distance is a scalar quantity. Following  
+example  will  explain  the  difference  between  
+  distance and displacement.                                                               A  
+                                                                                                              Fig. 2.11  
+
+Suppose a car travels from a position A to B. The curved line is the actual path  
+followed by the car (Fig. 2.11). The total distance covered by the car will be equal  
+to the length of the curved line AB. The displacement d  is the straight line AB  
+directed  from  A  to  B  as  indicated  by  the  arrow  head.  The  SI  unit  for  the  
+displacement is the same as that of distance.  
+
+  
+
+2.5 Speed and Velocity                                                                                             Do You Know?  
+                                                  We  are  often  interested  to                               
+       Brain Teaser!                                                                                           
+                                     know how fast a body is moving. For                                       
+  
+                                     this  purpose,  we  have  to  find  the                                   
+  
+                                     distance covered in unit time which                                       
+  
+                                                                                                               
+                                     is known as speed. If a body covers a  
+                                                                                                               
+                                     distance S in time t, its speed v will be  
+ The car while moving                written as:                                                               T h e f a s t e s t  l a n d  
+
+ on     a   circular      road  
+                                                                                                              mammal   (cheetah)  
+  may   have   constant                                    Distance                         S                 and  the  fastest  fish  
+ speed, but its velocity                 Speed =              Time               v  =         t               (sailfish)   have  the  
+ is  changing  at  every                 or      S       vt .......................... (2.1)                  s a m e   h i g h e s t  
+                                                    =                                                         recorded          speed       of  
+ instant. Why?                                                                                                              – 
+                                                                                                               110 km h ¹.  
+                                                                       34  
+
+  
+﻿                                                                                                -              - 
+The speed is a scalar quantity. The SI unit of speed is m s ¹ or km h ¹.  
+ It is obvious that speed of a vehicle does not  remain constant throughout the  
+journey.  If the reading of the speedometer of the vehicle is observed, it is always  
+ changing. The speed of a vehicle that is shown by its speedometer at any instant  
+ is called instantaneous speed. Practically we make use of the average speed. It  
+ is defined as:  
+                                               Total distance covered                                                     S  
+              Average speed =                                                                  or            v     =  
+                                                     Total time taken                                          av          t  
+
+  Example  2.3    
+
+             An eagle dives to the ground along a 300 m path with an average speed of  
+
+            – 
+ 60 m s ¹. How long does it take to cover this distance?  
+                                                                                                For Your Information!  
+  Solution                                                                                     
+                                                                                               
+Total distance covered = S = 300 m  
+                                                                                               
+Average speed = v   = 60 m s– 1                                                                
+
+                                 a 
+Total time taken = t = ?   
+                                                  S                                            
+ Using the equation  v                     =                                                     Mount st. Helens erupted  
+                                      av    
+                                                  t  
+                       S                                                                         in 1980, causing rocks to  
+ or          t =  
+                       v                                                                         travel at velocities up to  
+                         av  
+                                                                                                           400 km h-1  
+ putting the values                  t  = 300 m / 60 m s– 1  = 5 s  
+
+  
+
+ Velocity  
+
+             The speed of an object does not tell anything about the direction of  
+ motion. To take into account the direction, the vector concept is needed. For this,  
+we have to find the displacement d between the initial and final positions.  
+
+  
+
+                The net displacement of a body in unit time is called velocity.  
+
+ If a body moves from point A to B along a curved path as shown in Fig.2.11, the  
+ displacement d is the straight line AB, then  
+  Average velocity  =  Displacement                                                 or       v     =    d ............ (2.2)  
+
+                                                                                               av  
+
+                                              Time                                                       t  
+
+Velocity  is  a  vector  quantity.  The  Equation  (2.2)  shows  that  the  direction  of  
+velocity v is the same as that of displacement d. The SI unit of velocity is also m s–1  
+
+               – 1 
+ or km h  . Consider the example of a car moving towards north at the rate of  
+
+              –1 
+ 70 km h  .To differentiate between speed and velocity, we shall say that the speed  
+
+                                                                     35  
+
+  
+﻿                                          – 1                                                                                   For Your Interest!  
+of  car  is  70  km  h                         which  is  a  scalar  quantity.  The  
+velocity  of  the  car  is  a  vector  quantity  whose                                                                          
+                                                – 1                                                                             
+magnitude is 70 km h                                and is directed towards north.  
+                                                                                                                                
+  
+
+ Uniform and Non-uniform Velocity                                                                                               
+
+  
+                                                                                                                                
+  The velocity  is  said to  be  uniform  if the  speed  and                                                                           Time-lapse photo of  
+  direction of a  moving  body does  not change.  If the                                                                              motorway traffic, the  
+  speed  or  direction  or  both  of  them  change,  it  is                                                                        velocity of cars showing  
+  known as variable velocity or non-uniform velocity.                                                                             straight lines. White lines  
+                                                                                                                                 are the headlights and the  
+Practically, a vehicle does not move in a straight line                                                                            red lines are taillights of  
+throughout  its  journey.  It  changes  its  speed  or  its                                                                             vehicles moving in  
+direction frequently. The example of a body moving                                                                                     opposite directions.  
+with  uniform  velocity  is  the  downward  motion  of  a  
+paratrooper. When a paratrooper jumps  from an aeroplane, he falls freely for a  
+few moments. Then the parachute opens. At this stage the force of gravity acting  
+downwards  on  the  paratrooper  is  balanced  by  the  resistance  of  air  on  the  
+parachute that acts upward. Consequently, the paratrooper moves down with  
+uniform velocity.  
+
+2.6 Acceleration  
+
+  
+
+Whenever the velocity of an object is increasing, we   
+                                                                                                                             
+say that the object is accelerating. For example, when   
+a car overtakes another one, it accelerates to a greater   
+                                                                                                                             
+velocity  (Fig.2.12).  In  contrary  to  that  the  velocity   
+decreases when brakes are applied to slow down a                                                                                                                                        
+                                                                                                                                         While overtaking, a car  
+bicycle or a car. In both the cases, a change in velocity                                                                          accelerates to a greater velocity.  
+occurs.                                                                                                                                           Fig. 2.12  
+
+  
+
+                    Acceleration is defined as the time rate of change of velocity.  
+                                                                                                                                                                         
+The change in velocity can occur in magnitude or direction or both of them. The  
+acceleration is positive if the velocity is increasing and it is negative if the velocity  
+is decreasing. Negative acceleration is also called deceleration or retardation.  
+Acceleration is a vector quantity like velocity, but the direction of acceleration is  
+that of change of velocity. If a body is moving with an initial velocity v and after  
+                                                                                                                                                                i  
+
+some time t its velocity changes to v , the change in velocity is ∆v  =  v  - v that  
+                                                                                     f                                                                             f       i  
+
+occurs in time t. In this case, rate of change of velocity i.e., acceleration will be  
+average acceleration.  
+
+                                                                                         36  
+
+  
+﻿ Average acceleration =                   Change in velocity                      Fascinating Snap:  
+                                                Time taken                       This is a photograph  
+                                              v  - v                               of a falling apple  
+                                   a     =      f    i ............................ (2.3)  
+                                    av                                            dropped from som  
+                                                 t  
+                                                                ∆v               height. The images of  
+  Equation (2.3) can be written as                     aav        t               apple are captured  
+
+                                                       − 
+ The SI unit of acceleration is  = m s ².                                        by the camera at 60  
+  If acceleration a is constant, then Eq 2.3 can be                               flashes per second.  
+                                                                                 The widening spaces  
+ written as                  v   = v   + at  
+                               f     i                                           between the images  
+
+Uniform and Non-uniform Acceleration                                                   indicate the  
+                                                                                  acceleration of the  
+   If time rate of change of velocity is constant,                                        apple.  
+  the acceleration is said to be uniform.  
+
+If anyone of the magnitude or direction or both of them changes it is called  
+variable or non-uniform acceleration. In this class, we will solve problems only for  
+the  motion  of  the  bodies  having  uniform  acceleration  and  not  the  variable  
+acceleration.  
+
+  Example 2.4  
+
+           A plane starts running from rest on a run-way as shown in the figure  
+below. It accelerates down the run-way and after 20 seconds attains a velocity of  
+              −¹. Determine the average acceleration of the plane.  
+252 km h 
+                           vi                                                                v 
+                              = 0     t  = 0                                                  f           t  = 20 s  
+  
+  
+
+  
+  Solution:    
+
+Initial  velocity   =  v =0  
+                               i 
+                                          − 1  
+Final velocity = v = 252 km hf  
+
+                   252 ×  10³ m                     −1  
+              =                        =  70 m s 
+                     60 × 60 s  
+Time taken           = t = 20 s  
+Average acceleration  = aav  = ?  
+                       v – v   
+Using       aav   =     f     i  
+
+                          t  
+Putting the values  
+                       70 m s− 1  − 0  
+             a 
+               av  =        20 s  
+
+                               −2  
+             a    = 3.5 m s 
+               av                                          37  
+
+  
+﻿2.7 Graphical Analysis of Motion  
+                                                                    
+
+         A graph is a pictorial diagram in the  
+form of a straight line or a curve which shows                                      y  
+
+the   relationship   between  two   physical  
+
+quantities.  Usually,  we  draw  a  graph  on  a  
+
+paper on which equally spaced horizontal and                      x                                   x  
+                                                            th                     o  
+vertical lines are drawn. Generally, every 10 
+
+line is a thick line on the graph paper. In order  
+
+to draw a graph, two mutually  perpendicular  
+thick lines xoxʹ  and yoý are selected as x and y                                    y  
+                                                                              Fig. 2.13  
+axes as shown in Fig 2.13. The point where the  
+two axes intersect each other is known as origin o. Positive values along x-axis are  
+
+taken to the right side of the origin and negative values are taken to the left side.  
+
+Similarly,  positive  values  along  y-axis  are  taken  above  the  origin  whereas  
+
+negative values are taken below the origin. Normally, the independent quantity  
+
+is taken along x-axis and dependent variable quantity along y-axis. For example,  
+
+in distance-time graph, t is independent and S is dependent variable. Therefore,  
+
+t should be along x-axis and S along y-axis.  
+
+         To represent a physical quantity along any axis, a suitable scale is chosen  
+
+by considering the minimum and maximum values of the quantity.  
+
+  
+
+Distance-Time Graph  
+
+Distance-time graph shows the relation between distance S and time t taken by a  
+moving body.  
+Let a car be moving in a straight line on a motorway. Suppose that we measure its  
+distance from starting point after every one minute, and record it in the table  
+given below:  
+       Time  
+                        0              1             2              3             4              5  
+      t (min)  
+
+    Distance  
+                        0             1.2           2.4           3.6            4.8            6.0  
+      S (km)  
+
+                                                    38  
+
+  
+﻿Follow the steps given below to draw a graph on a centimetre graph paper:  
+i.      Take time t along x-axis and distance S along y-axis.  
+ii.     Select suitable scales (1 minute = 1 cm) along x-axis and (1.2 km =1 cm)  
+        along y-axis. The graph paper shown here is not to the scale.  
+iii.    Mark the values of each  big division along x                                    y                    
+                                                                                                              
+        and y axes according to the scale.                                           
+                                                                                        6.0                   
+iv.     Plot all pairs of values of time and distance by                                                      
+                                                                                    ) 
+        marking points on the graph paper.                                           m 4.8                     
+                                                                                    k 
+                                                                                    ( 
+                                                                                        
+                                                                                        3.6  
+v.      Join all the plotted points to obtain a best  S                                                       
+                                                                                                              
+        straight line as shown in Fig. 2.14. From the                                   2.4                   
+        table, we can observe that car has covered                                      1.2                   
+                                                                                                              
+        equal distance in equal intervals of time. This                                                       
+        shows  that  the  car   moves  with  uniform                                      O      1     2      3     4     5      X  
+                                                                                                          t  (min)  
+        speed.   Therefore,   a   straight   line   graph                                               Fig. 2.14  
+        between time and distance represents motion with uniform speed.  
+
+ Now consider another journey of the car as recorded in the table given below:  
+
+  
+
+        Time  
+                              0                 1                 2                 3                 4                 5  
+       t (min)  
+      Distance  
+                              0             0.240             0.960             2.160             3.840             6.000  
+       S (km)  
+
+Table shows that speed goes on increasing in equal intervals of time. This is very  
+obvious from the graph as shown in Fig. 2.15. The graph line is curved upward.  
+This is the case when the body (car) is moving with certain acceleration.  
+                                                 y  
+                                            6.000  
+  
+                                             5.000  
+  
+
+                                            4.000  
+  
+                                 S (km)  
+                                            3.000  
+
+                                            2.000  
+
+                                             1.000  
+                                                  0  
+                                                 O 0       1       2       3      4       5      X  
+
+                                                                        t (min)  
+  
+                                                                  Fig. 2.15  
+
+                                                                 39  
+
+  
+﻿In another case, consider the following table:  
+
+  
+
+           Time  
+                                        0                        1                       2                        3                       4                        5  
+          t (min)  
+        Distance  
+                                        0                      2.0                      3.1                     4.0                     4.6                      5.0  
+          S (km)  
+
+The graph line is curved downwards. This shows that distance travelled in the  
+same interval of time goes on decreasing, so speed is decreasing. This is the case  
+of motion with deceleration or negative acceleration as shown in Fig.2.16.  
+  
+  
+                                                                        5.0  
+  
+                                                                         
+                                                                       4.0  
+  
+                                                                       
+                                                                   ) 
+                                                                   m     
+                                                                   k   3.0  
+                                                                   ( 
+                                                                       
+                                                                   S 
+  
+                                                                         
+                                                                       2.0  
+  
+                                                                         
+                                                                       1.0  
+  
+                                                                         
+                                                                           0  
+                                                                             1        2         3         4         5  
+                                                                                                    t  (min)  
+
+Now consider another case.                                                             Fig. 2.16  
+
+  
+
+           Time  
+                                        0                        1                       2                        3                       4                        5  
+          t (min)  
+       Distance  
+                                       1.2                     1.2                      1.2                     1.2                      1.2                     1.2  
+          S (km)  
+
+Graph line is horizontal in this case (Fig 2.17). It shows that the distance covered  
+by the car does not change with change in time. It means that the car is not  
+moving; it is at rest.  
+                                                                      y  
+
+                                                                   
+                                                                 2.0  
+                                                                
+                                                            ) 
+                                                             m   1.6  
+                                                            k 
+                                                            ( 
+                                                                
+                                                            S 
+                                                                 1.2  
+
+                                                                   0.8  
+
+                                                                   0.4  
+                                                                   
+                                                                      O        1      2      3      4       5          x  
+                                                                                               t (min)  
+
+                                                                                Fig. 2.17  
+
+                                                                                        40  
+
+  
+﻿2.8 Gradient of a Distance-Time Graph  
+                                                                                                                   
+The gradient is the measure of slope                                       y  
+
+of a line.  
+Consider the distance-time graph of                                                                                   Q  
+uniform speed again. Select any two                                         S₂  
+                                                                              
+                                                                         ) 
+values  of  time  t                and  t .  Draw  two                    m       
+                                1            2 
+                                                                         (                                                      
+                                                                         S                                                 )  
+vertical  dotted  lines  at  t                     and  t       on                                                           ₁ 
+                                                                                                                           S 
+                                                1            2                    
+                                                                                                                                
+                                                                                                                             - 
+                                                                                                                                 
+x-axis. These lines meet the graph at                                                                                        2 
+                                                                                                                           S 
+                                                                                                                           ( 
+points P and Q. From these points                                                 
+                                                                                                   θ  
+draw horizontal lines to meet y-axis                                                      P  
+                                                                            S                                               R  
+                                                                              1                       (t  - t )  
+at S  and S  respectively as shown  in                                                                  2     1  
+        1           2  
+
+Fig.2.18.  
+                                                                             O                                            t  
+                                                                                          t                   t (s)                                x  
+Distance  covered  in  this  time                                                          1                               2  
+
+  interval is                               S₂ – S₁  = S                                            Fig. 2.18  
+       Time taken                            t₂ – t₁  = t  
+  
+
+The slope or gradient of the graph is the measure of tangent θ of the triangle RPQ:  
+
+                             RQ  
+      Slope   =  
+                             PR  
+                               S₂ – S₁           =      S  
+      Slope   =                  t₂ – t₁                 t  
+
+      From Eq. (2.1),                   S         = v   , the average speed during the time interval t.  
+                                          t             a 
+                                                           
+
+                                                         S    
+      Figure  2.17 shows that                             t       = tan θ  = slope of graph line, therefore,  
+
+  
+
+                Gradient  of  the  distance-Time  graph  is  equal  to  the  average  
+                speed of the body.  
+                                                                                                                                                 
+  
+
+2.9 Speed-Time Graph  
+
+             Suppose we can note the speed of the same car after every one second  
+and record it in the table given below, we can draw the graph between speed v  
+versus time t. This is called speed-time graph.  
+
+                                                                       Table  
+                             Time t (s)                        0            1           2            3           4            5  
+                              Speed v  
+                                        −                      0           8           16           24          32           40  
+                                (m s ¹)  
+
+                                                                          41  
+
+  
+﻿Take t along x-axis and v along y-axis. Scale can be selected as 1 s = 1 cm (x-axis)  
+and speed 10 m s − 1  = 1 cm along y-axis.  
+
+Shape of the graph is shown in Fig. 2.19· It is a straight line rising upward. This  
+shows that speed increases by the same amount after every one second. This is a  
+motion with uniform acceleration. It is also evident from the table.  
+  
+                                               Y  
+  
+                                              40  
+  
+                                                
+                                       ) 
+                                          
+                                      1 
+                                       −       32  
+                                            
+                                        s 
+                                            
+                                                
+                                        m 
+                                       ( 
+                                        v      24  
+  
+                                                
+                                               16  
+  
+                                                
+                                                 8  
+  
+  
+                                                O               1            2           3            4            5      X  
+                                                                                          t (s)  
+                                                                        Fig. 2.19  
+  
+Now consider another case. The observations are recorded in the table given  
+below:  
+  
+                                                                              Table  
+  
+                                Time t (s)                           0              1            2             3             4             5  
+                                 Speed v  
+                                            −                       20            20            20            20            20            20  
+                                   (m s ¹)  
+
+In this case, graph line is horizontal (Fig. 2.20) parallel to time x- axis. It shows that  
+speed does not change with change in time. This is a motion with constant  
+speed.  
+
+                                                      y  
+                                                     
+                                                ) 30  
+                                                   
+                                                1 
+                                                − 
+                                                 s 
+                                                       
+                                                 m  20  
+                                                ( 
+                                                     
+                                                 v 
+                                                       
+                                                     10  
+
+                                                       
+                                                       O          1        2        3        4         5           X  
+
+                                                                                           t (s)  
+                                                                               Fig. 2.20  
+
+                                                                                  42  
+
+  
+﻿2.10 Gradient of a Speed-Time Graph  
+                                                                                                                                         
+
+Now consider the speed-time graph (Fig. 2.21). The speeds at times t₁ and t₂ are  
+v₁ and v₂  respectively. The change in speed in a time interval (t₂ - t₁) is (v₂ -v₁).  
+Therefore,                                                                                                     Y  
+                                       Change in speed  
+
+                                   
+          Slope   =                     Total time taken                                                                                                              Q  
+
+                                                                                                                v₂  
+                                       (v₂ – v₁)                                                                       
+  or  Slope   =  
+                                                                                                                                                                                 
+                                         (t₂ – t₁)                                                                                                                          ) 
+                                                                                                                                                                              ₁ 
+                                                                                                                                                                             v 
+                                                                                                                                                                                 
+                                                                                                                                                                              - 
+                                                                                                                                                                                 
+                                                                                                                                                                              ₁ 
+                                       ∆v                                                                                                                                    v 
+                                                                                                                                                                            ( 
+           Slope   =                     t                                                                      v  
+                                                                                                                       
+           But  ∆v              = a, the average acceleration.                                                   v₁               P                                          R  
+                                                                                                                       
+                        t                                                                                                                        (t₂ - t₁)  
+                              
+                                                                                                                                                                       
+                                                                                                                       
+                                                                                                                  O               t₁                        t (s)        t₂  
+                                                                                                                                                                                   X  
+
+                                                                                                                                              Fig. 2.21  
+Hence                                      Gradient of the speed-Time graph is equal  
+
+                                           to  the  average  acceleration  of  the  body.  
+
+This shows that when a car moves with constant acceleration, the velocity-time  
+graph is a straight line which rises through same height for equal intervals of time.  
+
+                 Graph of Fig. 2.19 is redrawn in Fig. 2.22 to find its slope. The speed v₁ at  
+time t₁ is the same as speed v₂ at time t₂, hence, the change in speed is also zero.  
+                                                                       (v₂ – v₁)                                 Y    
+                                                                                                                
+ v₂ – v₁  = 0. Thus, the slope =                                                           = 0             )          
+                                                                                                              
+                                                                                                          1     3 
+                                                                                                           − 
+                                                                                                                      
+                                                                        (  ₂ –  ₁) t                       s        
+                                                                                                           m          
+                                                                                                           ( 20   
+                 When  the  speed  of  the  object  is                                                          
+                                                                                                            v 
+                                                                                                                      
+constant,  the  speed-time  graph  is  a                                                                        10  
+                                                                                                                      
+horizontal  straight  line  parallel  to  time                                                                                     v₁                            v₂  
+axis.                                                                                                             O            1         2          3          4         5             X  
+                                                                                                                              t₁           t (s)               t₂  
+                 This  shows  that  the  acceleration                                                                                                                Fig. 2.22  
+
+of this motion is zero. It is the motion without the change in speed.  
+
+  
+
+2.11 Area Under Speed-Time Graph  
+
+                 The distance moved by an object can also be determined by using its  
+speed-time graph. For example, figure 2.23 shows that the object is moving  
+with constant speed v.  For a time-interval t, the distance covered by the object  
+as given by  Eq. 2.1 is  v × t.  
+                                                                                             43  
+
+  
+﻿This   distance   can   also   be   found   by                                         Y                        
+                                                                                                                
+calculating the area under the speed-time                                               v  
+                                                                                                                
+                                                                                             
+graph. The area under the graph for time   
+                                                                                                                
+                                                                                                                                              v  
+interval t is the area of rectangle of sides t   v  
+                                                                                                                     t  
+                                                                                                                
+and v. This area is shown shaded in Fig.2.23   
+and  is  equal  to  v  ×  t.  Thus,  area  under                                       O       Fig. 2.23          t                             t    X  
+
+speed-time graph up to the time axis is                                                Y                        
+numerically equal to the distance covered                                                   v                                                    A  
+
+by the object in time t.  
+Now  consider another  example  shown  in  
+Fig.  2.24.  Here,  the  speed  of  the  object                                       v 
+increases  uniformly from  0 to  v  in time  t.                                         
+                                                                                                                                                 t  
+                                                                                       O  
+The average speed is given by                                                                  Fig. 2.24          t                            B     X  
+
+                                   0  + v             1  
+                       vav     =       2         =  2  v  
+
+                                                                                                                 Mini Exercise  
+Distance covered  = average speed × time  =  1/2 v × t.  
+If we calculate the area under speed-time graph, it   
+
+is  equal  to  the  area  of  the  right-angled  triangle  
+                                                                                                             
+shown shaded in Fig. 2.24. The base of the triangle    e 
+                                                                                                         c 
+                                                                                                         n                              cyclist B  
+                                                                                                         a 
+is equal to t and the perpendicular is equal to v.                                                       t 
+                                                                                                         s 
+                                                                                                        i 
+Area of a triangle = 1/2 (perpendicular × base)                                                         d 
+                                                                                                       
+                                  = 1/2 (v × t)  
+                                                                                                       
+                                                                                                       
+We see that this area is numerically equal to the                                                                          time  
+distance  covered  by  the  object  during  the  time  The distance-time graph shows  
+interval t. Therefore, we can say that:                                                                the motion of three cyclists.  
+    The area under the speed-time graph up to the                                                      (a)   What does each line on the  
+    time  axis  is  numerically  equal  to  the  distance                                                     graph represent?  
+    covered by the object.                                                                             (b)   Which  cyclist  travelled  the  
+                                                                                                              most distance?  
+2.12  Solving Problems for                                                                             (c)   Which  cyclist  travelled  at  
+              Motion Under Gravity                                                                            the   greatest   speed?   the  
+                                                                                                              lowest  speed?  at  constant  
+Three  equations  of  motion  are  used  to  solve                                                            speed?  
+problems  for  motion  of  bodies.  If  v  is  the  initial  
+                                                                          i  
+
+velocity of the body, v  is the final velocity, t is the time taken, S is the distance  
+                                            f  
+
+covered and a is the acceleration, then:  
+   v  = v + at                      - --------------- (1)  
+     f 
+                            
+                        1        2  
+   S  =  vt  +               at     - --------------- (2)  
+              i         2  
+   2aS  = v ² – v ²                 - --------------- (3)                   44  
+                  f 
+                    
+                    
+
+  
+﻿While applying these equations, the following assumptions are made:  
+(i.)        Motion is always considered along a straight line  
+(ii.)      Only the magnitudes of vector quantities are used.  
+(iii.)     Acceleration is assumed to be uniform.  
+(iv.)    The direction of initial velocity is taken as positive. Other quantities which  
+            are in the direction of initial velocity are taken as positive. The quantities in  
+           the direction opposite to the initial velocity are taken as negative.  
+
+2.13 Free Fall Acceleration  
+
+When  a  body  is  falling  freely  under  the  action  of  gravity  of  the  Earth,  the  
+acceleration acting on it is the gravitational acceleration and is denoted by g. The  
+
+                                                                                                                               − 
+direction of gravitational acceleration is always downwards. Its value is 9.8 m s ²,  
+but for convenience we shall use the value of g as 10 m s− ².  
+
+          For Your Information!                        Since the freely falling  bodies  move vertically  
+                                                       downwards  in  a  straight  line  with  uniform  
+                                                       acceleration  g,  so  the  three  equations  of  
+                                                        motion can be applied to the motion of such  
+                                                        bodies. While applying equations of motion,  
+                                                       the  acceleration  a  is  replaced  by  g.  Thus,  
+                                                       equations of motion for freely falling bodies  
+                                                       can be written as:  
+  
+                                                           v  = v + gt                 - --------------- (1)  
+                                                             f 
+                                                                                 
+  
+                                                                             1      2  
+   Light and heavier objects when fall                     S  =  vt  +           gt    - --------------- (2)  
+                                                                     i       2  
+  through vacuum, move side by side.  
+                                                           2gS  = v ² – v²             - --------------- (3)  
+                                                                        f 
+                                                                          
+It  should  be  remembered  that  while  using  these                                        For Your Information!  
+
+equations, the following points should be kept in mind:  
+(i.)      If  a  body  is  released  from  some  height  to  fall  
+            freely, its initial velocity v will be taken as zero.  
+                                                    i  
+
+(ii.)      The gravitational acceleration g will be taken as  
+            positive  in  the  downward  direction.  All  other  
+            quantities will also be taken as positive in the  
+            downward   direction.   The   quantities   in   the  
+            direction opposite to the acceleration will be  
+            taken as negative.  
+                                                                                           Acceleration of free fall g is  
+(iii.)     If  a  body  is thrown vertically  upward, the value                                       − 
+                                                                                            10 m s  ² for all objects.  
+            of g will be negative and the final velocity will be  
+            zero at the highest point.  
+
+                                                                45  
+  
+﻿  Example 2.5    
+
+An iron bob is dropped from the top of a tower. It reaches the ground in 4  
+seconds. Find: (a) the height of the tower (b) the velocity of the ball as it strikes  
+the ground.  
+
+    Solution      
+       For freely falling body:  
+       Initial velocity                        =      v                 =  0  
+                                                        i  
+
+                                                                                         − 
+      Acceleration                             =      g                 =  10 m s ²  
+      Time                                     =      t                 =  4 s  
+       Height (distance)                       =      S     =     h  =  ?  
+       Final velocity                          =      v f     =    ?  
+
+(a) According to second equation of motion,  
+                                              1  
+                             S = vt  +            gt²  
+                                     i  
+                                              2                     1                    − 
+  Putting the values,  h  = 0 x 4 s  +                                   ×  10 m s ² × (4)² s²  
+                                                                    2  
+                                         h  = 80 m  
+  (b) From the first equation of motion, we have  
+                                 v  = v  + gt  
+                                   f 
+                                     
+                                                                       −                                  − 
+   Putting the values, v  =  0  +  10 m s ²  ×  4s  =  40 m s ¹   
+                                         f  
+
+  Example 2.6      
+
+An arrow is thrown vertically upward with the help of a bow. The velocity of the  
+
+                                                                           − 
+arrow when it leaves the bow is 30 m s ¹. Determine time to reach the highest  
+point? Also, find the maximum height attained by the arrow.  
+
+    Solution    
+Here, acceleration will be taken as negative, for the arrow is thrown vertically  
+upward.  
+
+                                                                       − 
+        Initial velocity                       = v  = 30 m s ¹  
+                                                     i  
+
+        Final velocity                         = v  = 0  
+                                                     f  
+                                                                        − 
+        Acceleration                           = g  = -10 m s ²  
+        Time                                   = t  = ?  
+        Height                           S  =  h  =  ?  
+
+From first equation of m otion:   v                              +   gt  
+                                                    =  
+                                            vf              i  
+                                                       v     –  v  
+                                                         f          i 
+        or                                    t  =          - 
+
+                                                                          − 
+                                                      0 – 30 m s ¹  
+        Putting the values                    t    =                     −   =  3 s  
+                                                          – 10 m s ²  
+
+                                                                         46  
+  
+﻿Now from the third equation of motion:  
+
+                           2gS  = v ²   –   v²  
+                                      f           ⁱ 
+
+                                              v ²   –   v²  
+      or                              S  =   f             ⁱ 
+                                               2 (-g)  
+                                                                     − 
+                                               0 – (30)² m² s ²  
+      Putting the values              h  =                        −    = 45 m  
+                                                 2 ×  10 m s ²  
+
+  
+
+Relativity  
+                             
+
+           In  1905,  famous  scientist  Albert  Einstein  proposed  his  revolutionary  
+theory of special relativity which modified many of the basic concepts of physics.  
+According  to  this  theory,  speed  of  light  is  a  universal  constant.  Its  value  is  
+
+                                 8      − 1 
+approximately 3 ×10  m s                   . Speed of light remains the same for all motions. Any  
+object with mass cannot achieve speeds equal to or greater than that of light.  
+This is known as universal speed limit.  
+
+                                                      KEY POINTS  
+
+         A scalar is that physical quantity which can be described completely by its magnitude  
+          only.  
+         A vector is that physical quantity which needs magnitude as well as direction to  
+          describe it completely.  
+         To add a number of vectors, redraw their representative lines such that the head of  
+          one line coincides with the tail of the other. The resultant vector is given by a single  
+          vector which is directed from the tail of the first vector to the head of the last vector.  
+         Translatory motion, rotatory motion and vibratory motions are different types of  
+          motion.  
+         Position of any object is its distance and direction from a fixed point.  
+         The shortest distance between the initial and final positions of a body is called its  
+          displacement.  
+         Distance covered by a body in a unit time is called its speed.  
+         Time rate of displacement of a body is called its velocity.  
+         The velocity is said to be uniform if the speed and direction of a moving body does not  
+          change, otherwise it is non-uniform velocity.  
+         Rate of change of velocity of a body is called its acceleration.  
+         If change of velocity with time is constant, the acceleration is said to be uniform,  
+          otherwise it is non-uniform.  
+         A graph that shows the relation between distance and time taken by a moving body is  
+          called a distance-time graph.  
+         A graph that shows the relation between the speed and time taken by a moving body  
+          is called a speed-time graph.  
+         Gradient or slope of the distance-time graph is equal to the average speed of the  
+          body. Slope of the speed-time graph is equal to the acceleration of the body.  
+
+                                                              47  
+  
+﻿         The area under speed-time graph is numerically equal to the distance covered by the  
+  
+          object.  
+         Following are three equations of motion:  
+                              v  = v + at  
+                               f     i  
+                                                2  
+                              S = vt + ½ at  
+                                    i  
+                                        2    2  
+                              2aS = v  - v  
+                                        f   i  
+         Gravitational acceleration g acts downward on bodies falling freely. The magnitude of  
+
+                         −2  
+          g is 10 m s      .  
+  
+                                                          EXERCISE  
+
+ A         Multiple Choice Questions  
+           Tick () the correct answer.                                                                                                     
+
+2.1         The numerical ratio of displacement to distance is:  
+            (a)   always less than one                                  (b)  always equal to one  
+            (c)  always greater than one                                (d)  equal to or less than one  
+2.2          If a  body does  not change its  position with  respect to some fixed point,  
+            then it will be in a state of:  
+            (a)  rest                                                   (b)  motion  
+            (c)  uniform motion                                         (d)  variable motion  
+2.3          A ball is dropped from the top of a tower, the distance covered by it in the  
+            first second is:  
+            (a)  5 m        (b)  10 m                                   (c)  50 m      (d)  100 m  
+2.4          A body accelerates from rest to a velocity of 144 km h-1   in 20 seconds.  
+
+            Then the distance covered by it is:  
+            (a)  100 m      (b)  400 m                                  (c)  1400 m    (d)  1440 m  
+2.5          A body is moving with constant acceleration starting from rest. It covers a  
+            distance S in 4 seconds. How much time does it take to cover one-fourth  
+            of this distance?  
+            (a) 1 s                 (b)      2 s                        (c) 4 s                  (d) 16 s  
+2.6         The displacement time graphs of two objects A and  B are shown  in the  
+            figure. Point out the true statement from the following:                                                                    A  
+
+            (a)   The velocity of A is greater than B.                                                              S  
+            (b)   The velocity of A is less than B.                                                                                       B  
+            (c)   The velocity of A is equal to that of B.  
+            (d)   The graph gives no information in this regard.  
+2.7                                                                                                                                t  
+            The area under the speed-time graph is numerically equal to:  
+            (a)   velocity                                              (b)  uniform velocity  
+            (c)   acceleration                                          (d)   distance covered  
+
+                                                                    48  
+  
+﻿2.8        Gradient of the speed-time graph is equal to:  
+
+           (a)   speed          (b)   velocity  (c)    acceleration                 (d)   distance covered  
+
+2.9        Gradient of the distance-time graph is equal to the:  
+
+           (a) speed            (b) velocity         (c) distance covered                      (d) acceleration  
+2.10       A  car  accelerates  uniformly  from  80.5  km h ¹ at  t  = 0 to  113 km h ¹ −                          − 
+
+          at t = 9 s. Which graph best describes the motion of the car?  
+
+  
+
+    (a)                            (b)                           (c)                           (d)  
+
+                                                                                                   v  
+        v                              v                             v  
+  
+  
+                  t                              t                               t                           t  
+  
+  B      Short Answer Questions  
+  
+2.1  Define scalar and vector quantities.  
+2.2  Give 5 examples each for scalar and vector quantities.  
+2.3  State head-to-tail rule for addition of vectors.  
+2.4  What are distance- time graph and speed-time graph?  
+2.5   Falling objects near the Earth have the same constant acceleration. Does this  
+       imply that a heavier object will fall faster than a lighter object?  
+2.6   The vector quantities are sometimes written in scalar notation (not bold  
+      face). How is the direction indicated?  
+2.7   A body is moving with uniform speed. Will its velocity be uniform? Give  
+       reason.  
+2.8  Is it possible for a body to have acceleration? When moving with:  
+                     (i) constant velocity  
+                     (ii) constant speed  
+
+  C      Constructed Response Questions  
+                                                                              
+2.1   Distance and displacement may or may not be equal in magnitude. Explain  
+      this statement.  
+2.2   When a bullet is fired, its velocity with which it leaves the barrel is called the  
+      muzzle velocity of the gun. The muzzle velocity of one gun with a longer  
+      barrel is lesser than that of another gun with a shorter barrel. In which gun is  
+      the acceleration of the bullet larger? Explain your answer.  
+2.3   For a complete trip, average velocity was calculated. Its value came out to be  
+      positive. Is it possible that its instantaneous velocity at any time during the  
+      trip had the negative value? Give justification  of your answer.  
+
+                                                           49  
+  
+﻿2.4   A ball is thrown vertically upward with velocity v. It returns to the ground in  
+       time  T.  Which  of  the  following  graphs  correctly  represents  the  motion?  
+       Explain your reasoning.  
+
+              (a)                          ( b)                        (c)                         ( d)  
+                 v                            v                           v                            v  
+  
+                          T  
+                            2                           T                           T  
+                                                                                                                           T  
+                                                          2       T                   2       T  
+                 0              t   T         0                   t       0         t                 0         T           t  
+                                                                                                                  2  
+
+  
+2.5   The figure given below shows the distance - time graph for the travel of a  
+       cyclist. Find the velocities for the segments a, b and c.  
+                                                                       b  
+                                          2.0  
+                                         
+                                     )    1.8  
+                                     m 
+                                     k    1.6  
+                                     ( 
+                                         
+                                     S    1.4  
+                                                       a                                  c  
+                                          1.2  
+                                          1.0  
+                                         
+                                     e    0.8  
+                                     c 
+                                     n 
+                                     a    0.6  
+                                     t 
+                                     s 
+                                     i    0.4  
+                                     D 
+                                          0.2  
+                                            0                                                              
+                                                0    2    4     6     8     10    12    14    16    18    20  
+                                                                Time            t (min)  
+
+2.6   Is it possible that the velocity of an object is zero at an instant of time, but its  
+       acceleration is not zero? If yes, give an example of such a case.  
+
+  
+
+D        Comprehensive Questions  
+
+2.1  How a vector can be represented graphically? Explain.  
+2.2  Differentiate between:  
+                       (i) rest and motion  
+                       (ii) speed and velocity  
+2.3  Describe different types of motion. Also give examples.  
+2.4  Explain the difference between distance and displacement.  
+2.5   What do gradients of distance-time graph and speed-time graph represent?  
+       Explain it by drawing diagrams.  
+2.6   Prove that the area under speed-time graph is equal to the distance covered  
+       by an object.  
+2.7   How equations of motion can be applied to the bodies moving under the  
+       action of gravity?  
+
+                                                                   50  
+  
+﻿  E      Numerical Problems  
+                                                      
+
+2.1     Draw the representative lines of the following vectors:  
+
+                                                        −                                  O  
+                     (a) A velocity of 400 m s ¹ making an angle of 60  with x-axis.  
+
+                                                                                   O  
+                     (b) A force of 50 N making an angle of 120 with x-axis.  
+
+                                                                                   − 
+2.2   A car is moving with an average speed of 72 km h ¹. How much time will it  
+        take to cover a distance of 360 km?                                                                       (5 h)  
+
+                                                                                         − 
+2.3   A truck starts from rest. It reaches a velocity of 90 km h ¹ in 50 seconds. Find  
+
+                                                                                                                     − 
+        its average acceleration.                                                                        (0.5 m s ²)  
+
+                                                                                                                  − 
+2.4   A car passes a green traffic signal while moving with a velocity of 5 m s ¹. It  
+
+                                               − 
+        then accelerates to 1.5 m s ². What is the velocity of car after 5 seconds?  
+
+                                                                                                                     − 
+                                                                                                        (12.5 m s ¹)  
+
+                                                                        − 
+2.5   A motorcycle initially travelling at 18 km h ¹ accelerates at constant rate of  
+
+                − 
+        2 m s ². How far will the motorcycle go in 10 seconds?                                               (150 m)  
+
+                                                                                                    − 
+2.6   A wagon is moving on the road with a velocity of 54 km h ¹. Brakes are  
+        applied suddenly. The wagon covers a distance of 25 m before stopping.  
+
+                                                                                                                     − 
+        Determine the acceleration of the wagon.                                                         (-4.5 m s ²)  
+
+2.7   A stone is dropped from a height of 45 m. How long will it take to reach the  
+        ground? What will be its velocity just  before hitting the ground?  
+
+                                                                                                                     − 
+                                                                                                    (3 s, 30 m s ¹)  
+
+                                                                                       − 
+2.8   A car travels 10 km with an average velocity of 20 m s ¹. Then it travels in the  
+
+                                                                                                            − 
+        same direction through a diversion at an average velocity of 4 m s ¹ for the  
+        next 0.8 km. Determine the average velocity of the car for the total journey.   
+
+                                                                                                                     − 
+                                                                                                        (15.4 m s ¹)  
+
+2.9   A ball is dropped from the top of a tower. The ball reaches the ground in  
+        5 seconds. Find the height of the tower and the velocity of the ball with  
+
+                                                                                                                      -1 
+        which it strikes the ground.                                                             (125 m, 50 m s )  
+
+2.10 A cricket ball is hit so that it travels straight up in the air. An observer notes  
+        that  it  took  3  seconds  to  reach  the  highest  point.  What  was  the  initial  
+        velocity of the ball? If the ball was hit 1 m above the ground, how high did it  
+        rise from the ground?                                                                               − 
+                                                                                                 (30 m s ¹, 46 m)  
+
+                                                           51  
+  

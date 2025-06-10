@@ -9,7 +9,6 @@ dist/
 web-build/
 expo-env.d.ts
 android/
-ls-toolkit
 
 # Native
 .kotlin/
@@ -37,3 +36,4 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+*.pdf

@@ -1,0 +1,1491 @@
+﻿   Chapter  
+         3                     Dynamics  
+
+  
+Student Learning Outcomes  
+                                                
+
+ After completing this chapter, students will be able to:  
+ [SLO: P -09 - B -17]  Illustrate that mass is a measure of the quantity of matter in an object  
+ [SLO: P -09 - B -18] Explain that the mass of an object resists change from its state of rest or  
+ motion (inertia)  
+ [SLO:  P  -09  -  B  -19]  Describe  universal  gravitation  and  gravity.  State  Newton's  Law  of  
+ gravitation. (Include problems related to gravitation.)  
+ [SLO: P -09 -  B -20]  Define and calculate weight [Weight is the force exerted on an object  
+ having mass by a planet's gravity, and use w = mg]  
+ [SLO: P -09 - B -21]  Define and calculate gravitational field strength [This includes being able  
+ to state that a gravitational field is a region in which a mass experiences a force due to  
+ gravitational attraction. Students should  be able to define gravitational field strength (g) as  
+ force per unit mass use the equation gravitational field strength = weight/mass g = w /m (and  
+ know that this is equivalent to the acceleration of free fall)]  
+ [SLO: P -09  -  B -22] Justify and illustrate the use of mechanical and electronic balances to  
+ measure mass [understanding the internal workings of the electronic balance is not required;  
+just  how to practically use the instrument in appropriate situations]  
+ [SLO: P -09 - B -23] Justify and illustrate the use of a force meter (spring balance) to measure  
+ weight.  
+ [SLO: P -09 - B -24] Differentiate between contact and noncontact forces  
+ [SLO:  P  -09  -  B  -25]  Differentiate  between  different  types  of  forces  [including  weight  
+ (gravitational force), friction, drag, air resistance, tension (elastic force), electrostatic force,  
+ magnetic force, thrust (driving force), and contact force]  
+ [SLO: P -09 - B -26] State that there are four fundamental forces and describe them in terms  
+ of their relative strengths [These are the gravitational, electromagnetic, strong and weak  
+ nuclear forces. Students should know that Pakistani Scientist won the Nobel Prize for helping  
+ prove that the weak force and the electromagnetic force are actually unified]  
+ [SLO: P -09 - B -27] Represent the forces acting on a body using free body diagrams  
+ [SLO: P -09 - B -28] State and apply Newton's first law  
+ [SLO: P -09 - B -29] Identify the effect of force on velocity [It may change the velocity of an  
+ object by changing its direction of motion or its speed]  
+ [SLO: P -09 - B -30] Determine the resultant of two or more forces acting in the same plane.  
+ [SLO: P -09 - B -31] State and apply Newton's second law in terms of acceleration  
+ [SLO: P -09 - B -32] State and apply Newton's third law  
+ [SLO: P -09 - B -33] Explain with examples how Newton's third law describes pairs of forces of  
+ the same type acting on different objects  
+ [SLO: P -09 - B -34] State the limitations of Newton's laws of motion  
+ [SLO: P -09 - B -36] Analyse the dissipative effect of friction  
+ [SLO: P -09 - B -37] Analyse the dynamics of an object reaching terminal velocity  
+ [SLO: P -09 - B -38] Differentiate qualitatively between rolling and sliding friction  
+ [SLO: P -09 - B -39] Justify methods to reduce friction.  
+ [SLO: P -09 - B -40] Define and calculate momentum  
+ [SLO: P -09 - B -41] Define and calculate impulse [Use the equation Impulse= F Δ t = m Δ V ]  
+ [SLO: P -09 - B -42] Apply the principle of the conservation of momentum to solve simple  
+ problems in one dimension  
+ [SLO: P -09 - B -43] Define resultant force in terms of momentum.  
+
+                                                        52  
+  
+﻿                 In kinematics, we studied the motion of objects. If the position, velocity  
+and acceleration were known at any time, then the position and velocity of the  
+moving body at another time could be completely described. But one of the  
+things left out of this discussion was the cause of acceleration produced in the  
+body.  If  a  stone  is  dropped  from  a  height,  it  is  accelerated  downward.  It  is  
+because the Earth exerts a force of gravity on the stone that pulls it down. When  
+we  drive  a  car  or  motorcycle,  the  engine  exerts  a  force  which  produces  
+acceleration. We will observe that whenever there is acceleration, there is always  
+a force present to cause that acceleration. Dynamics is concerned with the forces  
+that produce change in the motions of bodies.  
+
+  
+
+3.1 Concept of Force  
+
+  
+
+                                                                                                                                 
+
+                 A common concept of a force  is a  push or a  
+pull that starts, stops or changes the magnitude and  
+direction of velocity of a body. We come across many  
+forces in our daily life. Some of them we apply on  
+other  bodies  and  some  are  acting  on  us.  For  
+example, when we open a door, we push or pull it by  
+applying force. When we are sitting in a car, we push  
+against the seat as the car turns round a corner.  
+                 Force transfers energy to an object. Take the                                                                                                                                    
+example of a man who moves a wheelbarrow with its                                                                                                        Fig. 3.1  
+
+load. The man first applies force to lift it and then applies force to push it (Fig.3.1).  
+He  applies  a  different  amount  of  force  on  each  handle  when  turning  the  
+wheelbarrow  around  the  corner  in  order  to  keep  it  from  tipping  over.  The  
+examples of forces acting on us are the force of gravity acting downward, the  
+force of friction which helps us to walk on the ground and many others.  
+
+  
+
+  Types of Forces  
+
+There are two major types of forces:  
+                 1. Contact Forces                                                                  2. Non-contact Forces  
+
+    1. Contact Forces  
+
+                 A contact force is a force that is exerted by one object on the other at the  
+point of contact. Applied forces (push a pull and twist) are contact forces. Some  
+other examples of contact forces are the following:  
+(i)  Friction  
+                 It is the force that resists motion when the surface of one object comes in  
+contact with the surface of another.  
+
+                                                                                              53  
+  
+﻿(ii)  Drag  
+         The drag force is the resistant force caused by the motion of a body  
+through a fluid. It acts opposite to the relative motion of any object moving with  
+respect to surrounding fluid.  
+(iii) Thrust  
+          It is an upward force exerted by a liquid on an object immersed in it. When  
+we try to immerse an object in water, we feel an upward force exerted on the  
+object. This force increases as we push the object deeper into the water. A ship  
+can float in the sea due to this force which balances the weight of the ship.  
+(iv)  Normal Force  
+           It is the force of reaction exerted by the surface on an object lying on it.  
+This force acts outward and perpendicular to the surface. It is also called the  
+support force upon the object.  
+(v)  Air Resistance  
+       It is the resistance (opposition) offered by air when an object falls through it.  
+(vi)   Tension Force  
+          It is the force experienced by a rope when a person or load pulls it.  
+(vii)  Elastic Force  
+          It is a force that brings certain materials back to their original shape after  
+being deformed. Examples are rubber bands, springs, trampoline, etc.  
+   2. Non-contact Forces  
+         A non-contact force is defined as the force between two objects which are  
+not in physical contact. The non-contact forces can work from a distance. That is  
+why, these are sometimes called as action-at-a-distance. There is always a field  
+linked with a non-contact force. Due to this property, non-contact forces are also  
+called field forces. A few examples of non-contact forces are described below:  
+
+(i)   Gravitational Force  
+         An  apple  falling  down  from  a  tree  is  one  of  the  best  examples  of  
+gravitational  force  (Fig.  3.2).  When  we  throw  an  object  upward,  it  is  the  
+gravitational force of the Earth that brings it back to the  
+Earth. In fact, the gravitational force is an attractive force  
+that  exists  among  all  bodies  which  have  mass.  It  is  a  
+long-range force given by Newton's law of gravitation:  
+                  F = G  m m1    2    where m        and  m      are two  
+
+                              2                   1            2  
+                             r  
+masses distant r apart and G is constant of gravitation. Its value   
+
+                – 11    2    –2 
+is 6.67  × 10      N m  kg  . The Sun's gravitational force keeps the  
+                                                                                       
+Earth and all other  planets of our solar system in fixed orbits.                         Fig. 3.2  
+Similarly, the gravitational force of the Earth keeps the moon in its orbit. It also  
+keeps the atmosphere and oceans fixed to the surface of the Earth. Even an  
+object resting on a surface exerts a downward force called its weight due to  
+attractive force of the Earth also known as gravity.  
+
+                                                     54  
+  
+﻿(ii)  Electrostatic Force                                                      
+          An electrostatic force acts between two charged   
+                                                                               
+objects. The opposite charges attract each other and  
+                                                                               
+similar charges repel each other as shown in Fig. 3.3.   Force                                          Force  
+Like  gravitational  force,  electrostatic  force  is  also  a   
+long-range force.                                                              
+                                                                               
+(iii)  Magnetic Force  
+          It  is  a  force  which  a  magnet  exerts  on  other   
+                                                                                         Fig. 3.3  
+magnets  and  magnetic  materials  like  iron,  nickel  and  
+cobalt.  You  might  have  observed                   that   iron  pins  
+attracted  in  the  presence  of  a  magnet  without  any  
+physical contact (Fig. 3.4). Magnetic force between the  
+poles  of  two  magnets  can  be  either  attractive  or  
+repulsive. This can be observed very easily by bringing  
+different poles of two magnets close to each other. Like  
+poles repel and unlike poles attract each other.                                         Fig. 3.4  
+
+(iv)  Strong and Weak Nuclear Forces  
+          These  are  also  non-contact  forces  acting  between  the  subatomic  
+particles. We will study these forces in the next section.  
+
+3.2 Fundamental Forces  
+There are four fundamental forces in nature. These are:  
+    1.    Gravitational force                   2.        Electromagnetic force  
+    3.    Strong nuclear force                  4.        Weak nuclear force  
+Every force comes under any of these forces.  
+
+ Gravitational Force  
+
+          The gravitational force has been discussed in the previous section. We  
+often talk about this force.   It is the weakest one among all four forces. Being a  
+long range force, it extends to infinite distance although it becomes weaker and  
+weaker.  
+  Electromagnetic  Force  
+          It  is  the  force  that  causes  the  interaction   
+between  electrically  charged  particles.  Electrostatic   
+                                                                            
+and magnetic forces come under this category. These  
+                                                                            
+are long-range forces. The areas in which these forces  
+                                                                            
+act are called electromagnetic fields. Electromagnetic                                   Fig. 3.5  
+forces  are  stronger  than  gravitational  and  weak                            A moving magnet  
+                                                                             produces electric current  
+                                                      55  
+  
+﻿nuclear forces. This force causes all chemical reactions. It binds together atoms,  
+molecules and crystals etc. At macroscopic level, it is a possible cause of friction  
+between different surfaces in relative motion.  
+
+  
+
+ Strong Nuclear Forces  
+
+  
+
+It holds the atomic nuclei together by binding the   
+protons  and  neutrons  in the  nucleus  over  coming   
+                                                                                     
+repulsive electromagnetic force between positively  
+                                                                                     
+charged protons.  It is also a short-range force with   
+
+                             − 
+the   order   of   10 ¹⁴m.   If   the   distance   between   
+nucleons  increases  beyond  this  range,  this  force   
+ceases to act.                                                                                         Fig. 3.6  
+                                                                                            The binding force of  
+                                                                                             protons and neutrons  
+ Weak Nuclear Force                                                                              in the nucleus  
+           Weak nuclear force is responsible for the                                 
+                                                                                             Electron  
+disintegration  of  a  nucleus.  For  example,  the  
+                                                                                 Proton                  Neutron  
+weak nuclear force executes the  β-decay (beta                                               
+decay)   of   a   neutron,   in   which   a   neutron                                                              Neutrino  
+transforms into a proton (Fig.3.7). In the process,                                          
+                                                                                             
+a β-particle (electron) and an uncharged particle                                            
+called antineutrino are emitted. In other words,                                             
+we  can  say  that  due  to  weak  nuclear  force                                            
+radioactive  decay  of  atoms  occurs.  However,                                           Fig. 3.7  
+
+weak nuclear force is stronger than the gravitational force but weaker than the  
+
+                                                                                                   -17  
+electromagnetic force. It is a short-range force of the order 10                                       m.  
+
+  
+
+  Unification of Weak Nuclear and Electromagnetic Forces  
+
+           A Pakistani scientist Dr. Abdus Salam along with Sheldon Glashow and  
+Steven  Weinberg  were  awarded  in  1979  Nobel  Prize  in  Physics  for  their  
+contributions to the unification of the weak  nuclear force and electromagnetic  
+force as electroweak force. Although these two forces appear to be different in  
+everyday phenomena, but the theory models them as two different aspects of  
+the same force. Its effects are observed for the interactions taking place at very  
+high energy.  
+
+                                                              56  
+  
+﻿  3.3 Forces in a Free- Body Diagram  
+                                                                                                
+            External forces acting on an object may                                   
+include  friction,  gravity,  normal  force,  drag,   Applied force   
+tension  in  a  string  or  a  human  force  due  to                                  
+                                                                                      
+pushing or pulling.                                                                   
+            Suppose  a  book  is  pushed  over  the                                   
+surface of a table top as shown in Fig.3.8(a).                                        
+Then how can we represent the forces acting                                           
+on the body using free-body diagram?                                                  
+
+                                                                                      
+            Free-body diagrams are used to show                                                       Fig. 3.8 (a)  
+the relative magnitudes and directions of all  
+the  forces  acting  on  an  object  in  a  given                                     
+
+situation. In other words, a free-body diagram                                                   Normal force  
+is a special example of the vector diagrams.  
+            Usually, the object is represented by a                                     Friction                 Applied force  
+box and the force arrows are drawn outward  
+from the centre of the box in the directions of  
+forces as shown in Fig.3.8(b). The length of a  
+force arrow (line) reflects the magnitude of the                                                     Weight  
+
+force   and   the   arrow   head   indicates   the  
+                                                                                                   Fig. 3.8 (b)  
+direction in which the force acts. Each force is  
+labelled to indicate the exact type of force.  
+
+  
+
+  3.4 Newton’s Laws of Motion  
+                                                                                
+  
+
+                                                                                                    Do You Know?  
+  Newton’s First Law of Motion  
+                                                                                             Sir Isaac Newton was born  
+            It is our common observation that a force  
+                                                                                             in Lincolnshire on January  
+is required to move or to stop a body. A book                                                 4, 1643. The name of his  
+placed on a table remains there unless a force is                                            famous book is “Principia  
+applied to move it (Fig.3.9). A ball rolling on floor                                                Mathematica”.  
+
+should continue to  move with the same velocity  
+in the absence of an applied force. But practically,  
+we  see  that  it  is  not  true.  The  ball  stops  after  
+covering  some  distance.  In  fact,  an  opposing  
+force (friction) causes the ball to stop. Newton  
+expressed  such  observations  in  his  first  law  of  
+motion which states that:  
+
+                                                                 57                                      Fig. 3.9  
+
+  
+﻿                     A body continues its state of rest or of uniform motion in a  
+                     straight  line  unless  acted  upon  by  some  external  force.  
+                                                                                                                                         
+
+When a fast-moving bus stops suddenly, the passengers tend to bend forward. It  
+is because they want to continue their motion. On the other hand, when the bus  
+starts moving quickly from rest, the passengers are pushed back against the seat.  
+This time, the tendency of passengers is to retain their state of rest.  
+             According  to  first  law  of  motion,  a  bus  moving  on  the  road  should  
+continue its motion without any force exerted by the engine. But practically, we  
+see that if the engine stops working, the bus comes to rest after covering some  
+distance. It is because of the friction between the tyres of the bus and the road. All  
+the bodies moving on the Earth are stopped by the force of friction. If you were in  
+outer space and throw an object away where no force is acted upon it, the object  
+would continue to move forever with constant velocity.  
+             The first law of motion also provides us another definition of force which is  
+stated as follows:  
+
+  
+
+                         Force is an agency which changes or tends to change  
+                              the state of rest or of uniform motion of a body.  
+
+              In simple words, we can say that force causes acceleration.  
+
+  
+
+Inertia                                                                                                       A Demonstration of  
+                                                                                                               Property of Inertia  
+  A net force is required to change the velocity of    
+objects.  For  instance,  a  net  force  may  cause  a    
+bicycle to pick up speed quickly. But when the same    
+                                                                                                       
+force is applied to a truck, any change in the motion  
+                                                                                                       
+may not be observed. We say that the truck has    
+more inertia than a bicycle. The mass of an object is    
+a measure of its inertia. The greater the mass of an    
+object, the greater is its inertia.                                                                    
+                                                                                                       
+  
+ The property of a body to maintain its state of rest or                                               
+                                                                                                       
+  of uniform motion in a straight line is called inertia.     
+
+             As a result of the  role of inertia in  Newton's  
+                                                                                                       
+first  law,  this  law  is  sometimes  called  as  law  of                                             When the table cloth is pulled  
+inertia.                                                                                               abruptly, the objects remain in  
+                                                                                                        their original position on the  
+                                                                                                                           table.  
+                                                                            58  
+
+  
+﻿  Newton’s Second Law of Motion  
+                                                                          
+
+           Newton's first law indicates that if no net force acts on an object, then the  
+velocity  of  the  object  remains  unchanged.  The  second  law  deals  with  the  
+acceleration produced in a body when a net force acts upon it. Newton's second  
+law can be stated as:  
+
+  
+
+    If  a  net  external  force  acts  upon  a  body,  it  accelerates  the  body  in  the  
+    direction of force. The magnitude of acceleration is directly proportional to  
+   the magnitude of force and is inversely proportional to the mass of the body.  
+
+           If a net force of magnitude F acts on a body of mass m and produces an  
+acceleration of magnitude a, then the second law can be written mathematically  
+as:  
+                                        and              a  ∝   F  
+                                                                   1  
+                                                         a  ∝  
+                                                                  m  
+                                        So                         F  
+                                                         a  ∝  
+                                                                  m  
+                                                                                       F  
+                                         or              a     =   (constant)  
+                                                                                      m  
+  
+
+                                                                         -2 
+According to SI units, if  m  =  1 kg,  a  =  1 m s  ,   F  =  1 N,  then the value of the  
+constant will be 1. Therefore, the above equation can be written as:  
+
+                                                          F  
+                                         a  =   1 ×  
+                                                         m  
+                                or       F  = m a .............................. (3.1)  
+
+           First law of motion provides the definition of force, i.e., a force produces  
+an acceleration in a body. By the second law of motion (F = ma), we can calculate  
+mathematically, the amount of force required to produce a certain amount of  
+acceleration in a body of  known mass. The SI unit of force is newton (N).  
+
+  
+
+                            One newton is the force which produces an  
+                            acceleration of 1 m s– ² in a body of mass 1 kg.  
+
+From Eq 3.1                       1 N  =  1 kg m s-2  
+
+                                                              59  
+  
+﻿  Effect of Force on Velocity  
+                                                        
+
+          Newton’s second law also tells that a force can change the velocity of a  
+body  by  producing  acceleration  or  deceleration  in  it.  As  velocity  is  a  vector  
+quantity, so the change may be in its magnitude, direction or in both of them.  
+
+  
+
+Newton’s Third Law of Motion  
+
+          Whenever there is an interaction between two  
+
+bodies A and B, such that the body A exerts a force on  
+                                                                                 A  
+body B, the force is known as action of A on B. In  
+
+response to this action, the body B exerts a force on  
+
+the body A. This force is known as reaction of B on A.  
+
+For example, when we press a spring, the force exerted                            B  
+
+by our hand on the spring is action. Our hand also  
+
+experiences a force exerted by the spring. This is the  
+
+force of reaction (Fig.3.10). Newton expressed these  
+
+action and reaction forces in his third law of motion. It  
+
+is stated as:  
+                                                                                            Fig. 3.10  
+           For every action, there is always                                      Do You Know?  
+           an equal and opposite reaction.                            
+                                                                                                         R  
+          Since, action and reaction do not act                                   F  
+                                                                      
+on  the  same  body  but  they  act  on  two     
+different  bodies,  so  they  can  never  balance     
+each other. Thus, Newton's third law can also     
+                                                                      
+be expressed as follows:  
+                                                                      
+ I f one body exerts a force on a second body,                        In   space,   an   astronaut   throws   a  
+    the second body also exerts an equal and                          wrench,  as  a  reaction  he  moves  in  
+          opposite force on the first body.                           opposite direction.  
+
+ Forces Act in Pairs  
+  
+          We have study that forces act in pairs when two objects interact, i.e.,  
+action  and  reaction  forces.  We  often  notice  a  force  that  seems  to  make  
+something happen but usually we do not notice the other force involved.  Here  
+are some examples of pairs of forces involved in accordance with Newton's third  
+law of motion.  
+
+                                                        60  
+  
+﻿(I)  Consider a block lying on a table as shown in Fig. 3.11.  
+              The force acting downward on the block is the weight. The block exerts a  
+downward force  on  the  table  equal  to  its  weight  w.  The  table also  exerts  a  
+reaction force F  on the block. The two forces on the block balance each other  
+                               n  
+
+and the block remains at rest.  
+
+                                       F 
+                                         n  
+          
+          
+
+                 w  
+                                                                                                                           R                F  
+          
+          
+                                       w  
+                     F                                                                                       Fig. 3.12  
+
+                       n  
+
+                                  Fig. 3.11  
+
+(ii)  When a bullet is fired from a gun, the bullet moves in the forward direction  
+with a force F. This is the force of action. The gun recoils in the backward direction  
+with a reaction force R (Fig. 3.12).  
+
+  
+
+3.5 Limitations of Newton’s Laws of Motion  
+
+              We have already explained that Newton's laws of motion can be applied  
+with very high degree of accuracy to the motion of objects and velocities which  
+we come across in everyday life.  
+              The problems arise when we deal with the motion of elementary particles  
+having velocities close to that of light. For that purpose, relativistic mechanics  
+developed by Albert Einstein is applicable.  
+              After all this discussion, we can say that Newton's laws of motion are not  
+exact for all types of motion, but provide a good approximation, unless an object  
+is small enough or moving close to the speed of light.  
+
+  
+
+                                                                  Mini Exercise  
+
+     Look at the  photographs  below.  Identify the  pairs of forces acting in each  
+     photograph.  
+
+                    Fig. 3.13                                         Fig. 3.14                                         Fig. 3.15  
+
+                                                                            61  
+  
+﻿3.6 Mass and Weight  
+                                                              
+
+            Commonly,  we  consider  mass  and  weight  as  the  same  quantities  but  
+
+scientifically, mass and weight are two different quantities. When we say that the  
+
+weight of this object is 5 kg, it is not true. In fact, 5 kg is the mass of the object. The  
+
+simplest definition of  mass is that it is a  measure of the quantity of  matter in a  
+
+body. Scientifically, mass of a body can be defined as:  
+
+  
+
+    The characteristic of a body which determines the magnitude of acceleration  
+
+    produced when a certain force acts upon it is  known as  mass of the  body.  
+
+            Mass is a scalar quantity. It remains the same everywhere. Practically, mass  
+
+is measured by an ordinary balance. The SI unit of mass is kilogram (kg).  
+
+            Weight is a gravitational force acting on the object. It is a vector quantity  
+
+directed downward, towards the centre of the Earth.  
+
+  
+
+                         The weight of an object is equal to the force with  
+
+                         which the Earth attracts the body towards its centre.  
+
+  
+
+   Gravitational Field  
+
+            The gravitational field is a space around a mass in which another mass  
+
+experiences  a  force  due  to  gravitational  attraction.  The  gravitational  field  
+
+strength is defined as the gravitational force acting on unit mass. Thus, mass m  
+
+on the surface of the Earth exerts a force known as its weight w given by w  = m g,  
+
+                                                                                                          -1 
+where g is the gravitational field strength. Its value is 10 N kg  .  
+
+            As  the  value  of  g  varies  from  place  to  place  and  also  with  altitude,  
+
+therefore, the value of weight does not remain the same everywhere.  
+
+            It  varies  from  place  to  place  according  to  variation  in  g.  Though  an  
+
+object's  weight  may  vary  from  one  place  to  another,  but  at  any  particular  
+
+location,  its  weight  is  proportional  to  its  mass.  Thus,  we  can  conveniently  
+
+compare  the  masses  of  two  objects  at  a  given  location  by  comparing  their  
+
+weights.  The  weight  cannot  be  measured  by  an  ordinary  balance.  A  spring  
+
+balance can be used to measure the weight. The SI unit of weight is newton (N).  
+
+                                                                    62  
+  
+﻿  Example 3.1    
+
+              A  10  kg  block  moves  on  a  frictionless  horizontal  surface  with  an  
+acceleration of 2 m s− ². What is the force acting on the block?  
+
+  Solution  
+
+  
+
+Mass of a block                          =       m  =        10 kg  
+Acceleration                             =       a     =   2 m s−2  
+
+Force                                    =       F     =   ?  
+
+By Newton's second law of motion,                                           F  =  ma  
+Putting the values,                      F  = 10 kg × 2 m s−2                  =  20 kg m s−2                     =  20 N  
+
+  Example 3.2  
+
+              A force of 7500 N is applied to move a truck of mass 3000 kg. Find the  
+acceleration produced in the truck. How long will it take to accelerate the truck  
+
+                          –                        – 
+from 36 km h ¹ to 72 km h ¹ speed?  
+
+  Solution  
+
+Mass of truck                            =  m          =  3000 kg  
+
+Force applied                            =  F          =  7500 N  
+
+Acceleration                             =  a          = ?  
+
+                                                                          −1  
+Initial speed                            =  vi         =  36 km h 
+
+  
+
+                                             36 ×  1000 m                                 −1  
+                                         =                               =  10 m s 
+                                                60  ×  60 s  
+                                                                         −1         72 ×  1000 m                               −1  
+Final speed                              =  v          = 72 km h                 =                             = 20 m s 
+                                                  f  
+                                                                                       60  ×  60 s  
+Time                                     =  t          =  ?  
+
+By Newton’s second law,                                                    F  = ma  
+                                                       F  
+                        or                  a  =  
+                                                       m  
+                                                       7500 N  
+      Putting the values, a  =                                           =  2.5 m s−2  
+                                                      3000 kg  
+      Now, using first equation of motion,  
+                                             v  =  v  +  at  
+                                               f      v  –  v  
+                                                 
+                                                                  i  
+                                                        f  
+                        or                  t  =  
+                                                           a  
+      Putting the values, t  =                         20 m s− 1  −  10 m s−1  =  4 s  
+                                                                 2.5 m s−2  
+
+                                                                            63  
+  
+﻿3.7 Mechanical and Electronic Balances  
+                                                                                                             
+            Balance scales are commonly used to compare masses of objects or to  
+weigh objects by balancing them with standard weights.  
+
+  
+
+  Mechanical Balances  
+                                                        
+            A  mechanical  balance  consists  of  a   
+rigid  horizontal  beam  that  oscillates  on  a   
+central knife edge as a fulcrum. It has two   
+end knife edges equidistant from the centre.   
+Two pans are hung from bearings on the end   
+knife  edges  (Fig.3.16).  The  material  to  be   
+weighed is put in one pan. Standard weights                                                                                                   
+                                                                                                     Fig. 3.16  
+are put on the other pan. The deflection of   
+the balance may be indicated by a pointer   
+                                                                                
+attaches to the beam. The weights on the  
+                                                                                
+pan  are  adjusted  to  bring  the  beam  in   
+equilibrium.                                                                    
+            There is another type of mechanical   
+balances  which  are  used  to  weigh  heavy   
+items  like  flour  bags,  cement  bags,  steel   
+bars,   etc.   These   are   called   mechanical   
+platform   balances   (Fig.3.17).   Standard   
+weights are not required to use this balance.   
+Its reason is that the fulcrum of the beam of   
+such a balance is kept very near to its one   
+end. Therefore, much smaller weights have   
+                                                                                
+to be put at the other end of beam to bring it  
+                                                                                
+to equilibrium. These smaller weights have  
+                                                                                
+already  been  calibrated  to  the  standard  
+                                                                                
+weights.                                                                                                         Fig. 3.17  
+
+  Electronic Balances  
+                                                 
+            No standard weights are required to                                    
+use in an electronic balance (Fig.3.18). Only                                      
+it has to be connected to a power supply.                                          
+There are some models which can operate                                            
+                                                                                   
+by  using  dry  cell  batteries.  An  electronic  
+                                                                                   
+balance  is  more  precise  than  mechanical                                       
+balance. When an object is  placed on it, its                                      
+mass is displayed on its screen. Now-a-days,                                       
+                                                                                                 Fig. 3.18  
+                                                                    64  
+
+  
+﻿electronic balances also display the total price of the material if the rate per kg is  
+fed to the balance.  
+
+  
+
+  Force Meter  
+
+  
+
+             A force  meter is a scientific instrument that  measures   
+force. It is also called as a newton meter or a spring balance   
+                                                                                                                   
+(Fig.3.19).  Now a days digital force meters are also available.   
+You  have  already  learnt  about  mechanical  and  electronic   
+balances. They measure mass of the objects in kilograms or its   
+                                                                                                                   
+multiples.  On  the  other  hand,  force  meter  measures  force  
+                                                                                                                   
+directly in newtons (N).                                                                                           
+             An ordinary force meter has a spring inside it. Upper   
+                                                                                                                   
+end of the spring is attached to a handle. A hook is attached to  
+                                                                                                                   
+the lower end the spring that holds the object. A pointer is also   
+attached to the spring at its upper end. A scale in newtons is   
+                                                                                                                   
+provided along the spring such that the pointer coincides with  
+                                                                                                                   
+zero of the scale when nothing is hung with the hook.                                                              
+
+                                                                                                                                                  
+             The object to be weighed is hung                                                                      
+with the hook. The mass of the object                                                                                       Fig. 3.19  
+
+causes  the  spring  to  compress.  The  
+pointer   indicates   the   weight   of   the  
+object. However, some force meters are  
+also  based  on  the  stretching  of  the  
+spring when a load is hung. In this case,  
+                                                                                                                    Do You Know?  
+the pointer is attached at the lower end  
+of the spring.                                                                                                  
+                                                                                                                
+             In   some   spring   balances,   the                                                               
+scale measures the mass which can be  
+                                                                                                                
+readily          converted             into       newtons             by                                                      The weight  
+multiplying the mass in kg with the value                                                                                       of 100 g  
+                                                                                                                             mass is 1 N.  
+                          -2 
+of  g  = 10 m s  .  
+             A  digital  force  meter  measures  
+directly  the  weight  of  the  object  in                                                                  
+                                                                                     Fig. 3.20  
+newtons (Fig. 3.20).  
+
+                                                                        65  
+  
+﻿ 3.8 Friction  
+                                   
+           When  a  cricket  ball  is  hit  by  the  bat,  it  moves  on  the  ground  with  a  
+reasonably large velocity. According to Newton's first law of motion, it should  
+continue  to  move  with  constant  velocity.  But,  practically,  we  observe  that  it  
+eventually stops after covering some distance. Does any force act on the ball in  
+opposite direction that stops the ball? Yes, it is the force of friction between the  
+ball and the ground that opposes the motion of the ball.  
+  
+
+ Dissipative Effect of Friction  
+
+           Friction is a dissipative force due to which the energy is wasted in doing  
+work to overcome against friction. The lost energy appears in the form of heat.  
+          A very common example of energy dissipation is  
+the rubbing of hands (Fig.3.21). When we rub our hands,  
+heat is produced due to friction and our hands become  
+warm. Similarly, the temperature of machines rises due  
+to friction between its moving parts that can cause many  
+problems.  The  tyres  of  vehicles  also  wear  out  after  
+becoming  too  hot  due  to  friction  between  tyres  and  
+                                                                                        Fig. 3.21 Rubbing hands  
+road.  
+
+           Shooting of stars seen in the sky at night also happen due to friction of air.  
+These  are  actually  asteroids  that  enter  the  Earth's  atmosphere.  As  they  are  
+moving, air resistance causes generation of heat. Their temperature becomes so  
+high that they start burning and ultimately disintegrate.  
+
+                                                   Do You Know?  
+
+                     On a wet road, the water does not form  
+          wet layer between the tyre surface and the road  
+          surface due to the spaces in the tread pattern on  
+          the tyre. This reduces the chances of skidding of  
+          vechicles on wet roads.  
+
+  
+
+ Sliding Friction  
+
+           The friction between two solid surfaces is called sliding friction which can  
+be divided into two categories.  
+           1. Static friction                        2. Kinetic friction  
+
+                                                           66  
+  
+﻿                                                                                          F 
+Static Friction                                                                             n  
+
+           Let us consider the motion of a block  
+                                                                                 F              F  = T  
+                                                                                  s  
+on a horizontal surface. The arrangement is  
+shown in Fig. 3.22. When a weight is put in  
+the pan, a force F = T equal to the sum of this  
+                                                                                            mg  
+weight and weight of the pan acts on the  
+block. This force tends to pull the block. At                                             Fig. 3.22  
+the  same  time  an  opposing  force  appears                             For Your Information!  
+that  does   not   let  the   block   move.  This                        Some frogs can cling  
+opposing force is the static friction F .                                to a vertical surface,  
+                                                           S 
+                                                                         such   as  this   leaf,  
+Kinetic Friction  
+                                                                         because of the static  
+           If we go on adding more weights in  f r i ction  between  
+the pan one by one in small steps, a stage will  their   feet   and   the  
+come  when  the  block  starts  sliding  on  the                         surface.  
+
+horizontal surface. This is the limit of static friction that is equal to the total  
+weights including pan. When the block is sliding, friction still exists. It is known as  
+kinetic friction.  
+
+                                                      Do You Know?  
+
+             When a shuttle re-enters the Earth’s atmosphere, the friction caused by the  
+               atmosphere raises the surface temperature of the shuttle to over 950°C.  
+
+  
+
+ Terminal Velocity  
+                                              
+                                                                                                                      −2 
+           When an object falls freely, it is accelerated by an amount g = 10 m s  . But  
+practically the acceleration may be different. Air resistance plays an important  
+role in determining how fast an object accelerates when it falls.  
+           If we drop a cricket ball and a piece of Styrofoam of the same weight from  
+a certain height, they will hit the ground at the same time only if there were no air  
+resistance.  Both  would  fall with the same acceleration  
+g = 10 m s−2. Practically, the ball in air, would drop faster.  
+
+The Styrofoam having larger surface would face greater  
+opposing force of the air and thus moves slowly.  
+           Experiments have been made in this respect and  
+it was found that the faster an object falls the more air  
+resistance will be exerted on it. A speed is finally attained  
+at which the upward force of air resistance balances the  
+downward  force  of  gravity.  When  this  happens,  the                                     Fig. 3.23  
+object  stops accelerating.  It  keeps falling at a constant    A paratrooper falling with  
+
+                                                                                                   terminal velocity  
+                                                              67  
+  
+﻿velocity.  This  constant  velocity  achieved  by  an  object  is  called  its  terminal  
+velocity. Even a heavy object like a meteorite does not gain an infinite velocity as  
+it falls to the Earth.  
+            This principle applies to paratroopers. Air resistance acting against the  
+large surface area of a parachute allows for descent at a safer velocity (Fig.3.23).  
+
+  
+
+                                                       Do You Know?  
+
+          Friction in human joints  is very low because  
+          our   bodies   contain   a   natural   lubricating  
+          system.  Consequently,  though  our  bones   Bones                                             Lubricating  
+                                                                                                             Fluid  
+          rub against each other at the points as we  
+          move, yet bones do not normally wear out,  
+          even after many years of use.                                              Knee joint  
+
+  
+
+  Rolling Friction  
+
+            The static and kinetic friction which we have studied so far is the sliding  
+friction. There is another type of friction which is called rolling friction. When an  
+object rolls over a surface, the friction produced is called rolling friction. The idea  
+o f r o l l i n g f r i c t i o n  i s   For Your Information!  
+a s s o c i a t e d w i t h  t h e               Practically,  the  contact  point  is  
+concept  of  wheel.  In  our                     not perfectly circular; it becomes  
+everyday  life,  we  observe                     flat under pressure as shown in  
+that  a  body  with  wheels                      figure.  This  flat  portion  of  the  
+faces  l  ess  f  r  i ct  ion  as               wheel has the tendency to slide  
+compared to a body of the                        against  the  surface  and  does  
+same  size  without  wheels.                     produce a frictional force.  
+
+Ball bearings also play the same role as is played by the wheels. Many machines  
+in industry are designed with ball bearings so that the moving parts roll on the  
+ball bearing and friction is greatly reduced. The rolling friction is about one  
+hundred times smaller than the sliding friction.  
+            The reason for the                For Your Information!  
+rolling friction to be less                    A hovercraft is a kind of ship  
+than the sliding friction is                   that   can   move   over   the  
+that  there  is  no  relative                  surface of water and ground  
+motion   between  the                          b o t h .  A i r   i s   e j e c t e d  
+wheel   and   the   surface                    underneath          by     powerful  
+over  which  it  rolls.  The                   fans  forming  a  cushion  of  
+w h e e l t o u c h e s  t h e                 air.  The  hovercraft  moves  
+surface only at a point.  It                   over the cushion of air which  
+does not slide.                                offers very small resistance.  
+
+                                                                68  
+  
+﻿  Methods to Reduce Friction  
+                                                                                     
+
+The following methods are used to reduce friction:  
+(i)        The parts which slide against each other are highly polished.  
+(ii)       Since, the friction of liquids is less than that of solid  
+           surfaces, therefore, oil or grease is applied between  
+           the moving parts of the machinery.  
+(iii)      As  rolling  friction  is  much  less  than  the  sliding  
+                                                                                                                                                 
+           friction,  so  sliding  friction  is  converted  into  rolling                                               Fig. 3.24  
+           friction by the use of ball bearings (Fig. 3.24)  in the machines and wheels  
+           under the heavy objects.  
+(iv)       Frictional  force  does  not  act  only  among  solids,  high  speed  vehicles,  
+           aeroplanes and ships also face friction  
+          while moving through air or water. If the  
+           front  of  a  vehicle  is  flat,  it  faces  more  
+           resistance by air or water. Therefore, the  
+           bodies moving through air or water are  
+           streamlined  to  minimize  air  or  water  
+                                                                                                                                                       
+           friction.   In  this  case,  the  air   passes                                  Fig. 3.25  Streamline air flow over  
+           smoothly  over  the  slanting  surface  of                                                              a speedy car  
+
+          vehicle. This type of flow of air is known as streamline flow. A streamline  
+           flow over the car is shown in Fig. 3.25. The vehicles designed pointed from  
+           the front are said to be streamlined.  
+
+  
+
+ 3.9 Momentum and Impulse  
+
+             Suppose that a bicycle rider and a heavy truck are moving with the same  
+speed, which one can be stopped easily, depends on the quantity of motion of  
+the moving body. It is our common observation that quantity of motion in a  
+moving body depends on its mass and velocity. Greater is the mass, the greater  
+will be the quantity of motion. Similarly, greater is the velocity, the greater will be  
+quantity of motion. This quantity of motion is called momentum and denoted by  
+p. It is defined as:  
+
+  
+
+     The momentum of a moving body is the product of its mass and velocity.  
+
+                                    Therefore,                   p = m × v ............................. (3.2)  
+ Like  velocity  momentum  is  also  a  vector  quantity.  The  SI  unit  momentum  is  
+
+              – 1 
+(kg m s  ). It can also be written as (N s).  
+
+                                                                         69  
+  
+﻿           When a ball is hit by a bat, the force is exerted on the ball for a very short  
+interval of time. In such cases, it is very difficult to calculate the exact magnitude  
+of  the  force.  However,  initial  velocity  vi   of  the  ball  and  final  velocity  v  after f  
+collision can be found easily.  
+           During a time interval ∆ t, the average acceleration a is given by  
+
+                                       ∆v        v  − vf  i                             
+                                a  =          =                                        (3.3)  
+                                       ∆t           ∆ 
+                                                       
+           According to Newton's second law of motion, the value of average force  
+acting during the interval ∆ t will be:  
+                                               ∆v  
+                       F  =  ma  =  m(               )  
+                                                ∆ t  
+      or               F  ×  ∆ t  =  m(∆v)  =  m (v  − v )                                         (3.4)  
+                                                               f      i 
+
+           Equation  (3.4)  shows  that  F  and ∆  t  cannot  be  exactly  known  but  their  
+product  which  is  equal  to  the  change  of  momentum  (mv                                      –  mv )  can  be  
+                                                                                                 f          i 
+
+calculated. For such cases, the product F × ∆ t is called as Impulse of the force.  
+
+  
+
+   When a large force F acts on an object for a short interval of time, the impulse  
+   of  the  force  is  defined  as  the  total  change  in  momentum  of  the  object.  
+
+ Dividing both sides of Eq.3.4 by ∆t, we have  
+                                           m(∆v)  
+                                    F  = ...................................... (3.5)  
+                                              ∆ t  
+
+where m(∆v) is the change in momentum ∆p.  Equation (3.5) gives the value of  
+force in terms of momentum i.e., force acting on an object is equal to the change  
+in momentum of the object per unit time.  
+                                            ∆p  
+                                    F  =                        . ............ (3.6)  
+                                            ∆t  
+Equation (3.6) suggests to define Newton’s second law of motion in terms of  
+momentum i.e.,  
+
+                                The rate of change of momentum of a  
+                                body is equal to the force acting on it.  
+
+The direction of change in momentum is that of the force.  
+
+                                                            70  
+  
+﻿   Do you know?                                 For Your Information!  
+
+    A cricketer draws his                       The arrow penetrates into the apple,  
+    h a n d s  b a c k  t o                     and in response, the momentum of  
+    reduce   the   impact                       the apple changes. Conversely, the  
+    o  f  t  h  e  b  a  l  l  b y              apple   applies   an   opposing  
+    increasing the time.                        force  to  the  arrow,  and  in  
+                                                response, the momentum of the arrow changes.  
+                                                                                                               
+                                            
+                                    Packing of Fragile Objects  
+    Fragile objects such as glassware may break easily due to  
+   jerks or by the direct impact with hard objects during  
+    their transportation.  
+    To  protect  them  soft,  packing  materials  are  used  for  
+    these objects. These materials reduce the effect of quick  
+    change in momentum. Consequently, the force acting on the fragile objects  
+    is greatly reduced. Special materials like Styrofoam, corrugated cardboard  
+    sheets, bubble wrap are used for the packing of such objects.  
+
+                                            Crumple Zones  
+
+                                                                       Air bag       Seatbelts  
+  A  c r u m p l e  z o n e  o f  a n        Crumple zone  
+  automobile         is   a   structural  
+  feature designed to compress  
+  during an accident to absorb  
+  deformation energy from the  
+  impact.       Typically,      crumple  
+  zones are located in front and  
+  behind  of  the  main  body  of  
+  the vehicle.  
+  Crumple zones work by managing crash energy absorbing within the outer  
+  parts of the vehicle, rather than being directly transmitted to the occupants.  
+  This is achieved by controlled weakling of outer parts (plastic bumpers, etc.)  
+  of the vehicle, while strengthening of the passenger cabin.  
+
+  Example 3.3  
+
+                                                                                                         – 
+  A bullet of mass 15 g is fired by a gun. If the velocity of the bullet is 150 m s ¹,  
+what is its momentum?  
+
+  Solution  
+
+Mass of bullet               =    m  =  15 g              = 0.015 kg  
+
+                                                     71  
+  
+﻿Velocity of bullet               =  v        =  150 m s− 1  
+
+Momentum                         =    p   =  ?  
+Using the formula,              p      =      mv  
+
+                                                                   − 
+Putting the value,              p  =  0.015 kg × 150 m s ¹  
+or                              p  =  2.25 kg m s−¹  
+
+  Example 3.4  
+           A cricket ball of mass  160 g is hit by a bat. The ball leaves the bat with a  
+
+                           –                                                                               – 
+velocity of 52 m s ¹. If the ball strikes the bat with a velocity of -28 m s ¹ (opposite  
+
+direction) before hitting, find the average force exerted on the ball by the bat.  
+
+                                                                             – 
+The ball remains in contact with the bat for 4 × 10 ³ s.  
+
+  Solution  
+
+Mass of ball                     m  = 160 g            = 0.16 kg  
+
+                                                   − 
+Initial velocity                 v   = −28 m s ¹  
+                                  i  
+                                                  − 
+Final velocity                   vf  =  52 m s ¹  
+Time of contact                  t = 4 ×10 ³ s − 
+
+Average force                    F = ?  
+From Eq. (3.6), we have  
+                                     m(v − v)  
+                               F           f     i 
+                                   =  
+                                           t  
+Putting the values,                                      −                    − 
+                                 0.16 kg  [52 m s ¹  −  (−28 m s ¹)]  
+                             F  =  
+                                                             − 
+                                                   4 ×  10 ³ s  
+                 or          F  =  3200 N  
+ 3.10 Principle of Conservation of Momentum   
+                                                                                    
+                                                                                   v₁         v₂  
+The collection of objects is known as a ‘system’. If no  
+external force acts on any object of the system, it is                                          
+                                                                                    m₁         m₂  
+known as isolated system. Consider a system of two                                                   
+                                                                                           
+balls of masses m₁  and m₂. Suppose that the balls                                               F     -F  
+                                                                                    
+are  moving with velocities v and v  along a straight                                           
+                                             1        2  
+line in the same direction. If v1                  > v2  , the balls will                       m₁  m₂  
+                                                                                                         v₁         v₂  
+collide  as  shown  in  Fig.  3.26.  If  their  velocities  
+become v₁ , and v ₂  respectively after collision, then                                                                     
+Total momentum of the system before collision  =  m₁v₁ +  m₂v₂                                            Fig. 3.26   
+
+Total momentum of the system after collision                                =  m₁v₁  +  m₂v₂  
+
+The principle of conservation of momentum states that:  
+
+                                                             72  
+  
+﻿       If no external force acts on an isolated system, the final total momentum  
+       of  the  system  is  equal  to  the  initial  total  momentum  of  the  system.  
+                                                                                                                 
+This means, that:  
+                                                                   
+                      Total momentum of the                             Total momentum of the  
+                       system before collision                 =           system after collision  
+
+                       or     m₁v₁  +  m₂v₂                    =              m₁v ₁  +  m₂v ₂  
+          To explain this principle, let us consider the collision of two identical balls  
+in which the second ball is at rest.  
+                                                                                 v₁             v₂  = 0  
+          When there is collision of two balls, there is  
+                                                                                                 
+                                                                           
+a transfer of momentum from one ball to another.                                      F      −F  
+
+The  ball  at  rest  gains  momentum  and  starts  
+                                                                                                  
+moving whereas the striking ball slows down. If                                            v₁  =  ₀  
+                                                                                                          v₂  =  v₁  
+the balls are identical, we will observe that there is   
+                                                                                            
+a  total  transfer  of  momentum.  The  striking  ball                                     Fig. 3.27  
+
+comes to rest and the other ball starts moving with the same speed (Fig.3. 27). It  
+
+means that second ball gains momentum equal to that lost by the first one. If the  
+
+first ball stops after collision, the second ball moves with the momentum of the  
+
+first ball. This suggests that the total momentum of the two balls after collision  
+
+remains the same as total momentum before collision.  
+
+The principle of conservation                                            Seatbelts  
+
+of  momentum  is  applicable                  When a moving car stops suddenly,  
+not  only  to  macro-objects                  the    passengers   move   forward  
+but  also  for  micro-objects                 toward  the  windshield.  Seatbelts  
+                                               prevent  the   passengers  from  
+like atoms and molecules.  
+                                               moving. Thus, chances of hitting the  
+                                               passengers against the windshield  
+  
+                                              or steering wheel are reduced.  
+  Example 3.5  
+
+          A bullet of mass m  is fired by a gun of mass m₂. Find the velocity of the  
+                                      1  
+
+gun in terms of velocity of bullet v₁ just  after firing.  
+
+  Solution  
+
+          Before  firing,  the  velocity  of  bullet  as  well  as  that  of  gun  was  zero.  
+
+Therefore, total momentum of bullet and gun was also zero. After firing, the  
+
+bullet moves forward with velocity v₁ whereas the gun moves with velocity v₂.  
+
+                                                         73  
+  
+﻿According      to      law      of      conservation      of      momentum,  
+        Total momentum before firing                                    =       Total momentum after firing  
+Putting the values,                                         0           =       m₁v₁  +  m₂v₂  
+                                                            m₂v₂        =       − m₁v₁  
+            or  
+                                                                              −m₁v₁  
+                                                                   v₂  =  
+                                                                                 m₂  
+
+            The  negative  sign  in  this  equation,  indicates  that  the  gun  moves  
+backward, i.e. opposite to the bullet. It is because of the backward motion of the  
+
+gun that the shooter gets a jerk  on his shoulder.  
+
+  
+
+  Example 3.6                                                                                                    
+
+                                                                                                           −1  
+            A  ball  of  mass  3  kg  moving  with  a  velocity  of  5  ms                                      collides  with  a  
+
+stationary ball of mass 2 kg and then both of them move together. If the friction is  
+
+negligible, find out the velocity with which both the balls will move after collision.  
+
+  Solution  
+
+Mass of first ball                                                      = m  = 3 kg  
+                                                                               1  
+Velocity of first ball before collision                                 = v = 5 m s−l  
+                                                                              1  
+
+Mass of second ball                                                     = m  = 2 kg  
+                                                                               2  
+
+Velocity of second ball before collision                                = v  = 0  
+                                                                             2  
+
+Velocity of both the balls after collision                              = v  = ?  
+Total mass of balls after collision                                     = m  + m  
+                                                                               1 
+                                                                                 
+By        law        of        conversion        of        momentum,   
+
+Total momentum before collision  =  Total momentum after collision  
+or                                  m₁ v₁ + m  v   =  (m₁ + m ) v  
+                                                    2    2 
+                                                      
+             Putting the values,                       
+                                   3 kg × 5 m s−l  + 0  =  (3 kg + 2 kg) v  
+                                   15 kg m s−l        =  5 kg × v  
+                                               v  =  3 m s−l  
+
+                                                                   74  
+  
+﻿                                             KEY POINTS  
+
+   A force is a push or a pull that starts, stops and changes the magnitude and direction  
+    of velocity of a body.  
+   A contact force is a force that acts at the point of contact between two objects.  
+   Non-contact force is a force between two objects which are not in physical contact.  
+   Gravitational force, electromagnetic force, strong nuclear force and weak nuclear  
+    force are the four fundamental forces in nature.  
+   Every object  in the  universe attracts  every other  object with a force that  is  directly  
+    proportional to the product of their masses and inversely proportional to the square  
+    of the distance between them. This is known as Newton’s law of gravitation.  
+   Newton's first law of motion states that a body continues its state of rest or of uniform  
+    motion with the same constant velocity, unless acted upon by some net external  
+    force.  
+   The  property  of  a  body to  maintain  its  state  of  rest  or  of  uniform  motion  is  called  
+    inertia.  
+   The second law of motion states that when a net force acts upon a body, it produces  
+    an acceleration in the direction of force and the magnitude of acceleration is directly  
+    proportional to the force and is inversely proportional to the mass.  
+   The third  law  of  motion  states that to  every  action there  is  an  equal  but  opposite  
+    reaction.  
+   Action and reaction do not act on the same body but act on two different bodies.  
+    Mass  of  a  body  is  the  quantity  of  matter  in  it.  It  determines  the  magnitude  of  
+    acceleration produced when a force acts on it. Mass of a body does not vary.  It is a  
+    scalar quantity and its unit is kilogram (kg).  
+   The weight  of  an  object  is  equal to the force with which the  Earth  attracts  a  body  
+    towards its centre.  
+   Force meter is a scientific instrument that measures force in newtons (N).  
+   Friction is the force that tends to prevent the bodies from sliding over each other.  
+    The resisting force between the two surfaces before the motion starts is called the  
+    static friction. The maximum value of the static friction is called a limiting friction.  
+   The friction during motion is called kinetic friction.  
+    When a body moves with the help of wheels, the friction in this case is known as  
+    rolling friction. Rolling friction is much less as compared to the sliding friction.  
+   Energy is wasted in doing work against friction that appears in the form of heat.  
+    When upward air resistance balances the downward force of gravity on a falling  
+    object, it falls down with constant (safe) velocity, it is called terminal velocity.  
+   The product of mass and velocity of a moving body is called momentum.  
+    The principle of conservation of momentum states that if no external force acts on an  
+    isolated system, the final total momentum of the system is equal to the initial total  
+    momentum of the system.  
+   Impulse is defined as the product of F × Δ t = m × ΔV = total change in momentum.  
+
+                                                      75  
+  
+﻿                                               EXERCISE  
+                                                                                 
+
+ A       Multiple Choice Questions  
+         Tick () the correct answer.  
+3.1.      When we kick a stone, we get hurt. This is due to:  
+          (a) inertia         (b) velocity        (c) momentum                 (d) reaction  
+3.2.      An object will continue its motion with constant acceleration until:  
+          (a) the resultant force on it begins to decrease.  
+          (b) the resultant force on it is zero.  
+          (c) the resultant force on it begins to increase.  
+          (d) the resultant force is at right angle to its tangential velocity.  
+3.3.      Which of the following is a non-contact force?  
+          (a) Friction                                      (b) Air resistance  
+          (c) Electrostatic force                           (d) Tension in the string  
+3.4.       A ball with initial momentum p hits a solid wall and bounces back with the  
+                                                      /  
+          same velocity. Its momentum  p  after collision will be:  
+
+                /                   /                            / 
+          (a) p  = p          (b) p  = – p                  (c) p  = 2 p                 (d) p  = –2 p  
+3.5.       A particle of mass m moving with a velocity v collides with another particle  
+          of the same mass at rest. The velocity of the first particle after collision is:  
+          (a) v               (b) –v              (c) 0              (d) – 1/2  
+3.6.      Conservation of linear momentum is equivalent to:  
+          (a) Newton's first law of motion      (b) Newton's second law of motion  
+          (c) Newton's third law of motion    (d) None of these  
+3.7.       An object with a mass of 5 kg moves at constant velocity of 10 m s ¹. A − 
+
+          constant force then acts for 5 seconds on the object and gives it a velocity  
+
+                     – 
+          of 2 m s ¹ in the opposite direction. The force acting on the object is:  
+          (a) 5 N             (b) – 10 N                    (c) – 12 N        (d) – 15 N  
+3.8.       A large force acts on an object for a very short interval of time. In this case,  
+          it is easy to determine:  
+          (a) magnitude of force                            (b) time interval  
+          (c) product of force and time                     (d) none of these  
+3.9.       A  lubricant  is  usually  introduced  between  two  surfaces  to  decrease  
+          friction. The lubricant:  
+          (a) decreases temperature                                       (b) acts as ball bearings  
+          (c) prevents direct contact of the surfaces    (d) provides rolling friction  
+
+                                                        76  
+  
+﻿ B      Short Answer Questions  
+                                                           
+
+3.1.   What kind of changes in motion may be produced by a force?  
+3.2.   Give 5 examples of contact forces.  
+3.3.   An object moves with constant velocity in free space. How long will the  
+        object continue to move with this velocity?  
+3.4.   Define impulse of force.  
+3.5.   Why has not Newton's first law been proved on the Earth?  
+3.6.   When sitting in a car which suddenly accelerates from rest, you are pushed  
+        back into the seat, why?  
+3.7.   The force expressed in Newton's second law is a net force. Why is it so?  
+3.8.   How can you show that rolling friction is lesser than the sliding friction?  
+3.9.   Define terminal velocity of an object.  
+3.10. An astronaut walking in space wants to return to his spaceship by firing a  
+        hand rocket. In what direction does he fire the rocket?  
+
+  
+
+ C      Constructed Response Questions  
+
+3.1     Two ice skaters weighing 60kg and 80 kg push off against each other on a  
+
+                                                                                              − 
+        frictionless ice track. The 60 kg skater gains a velocity of 4 m s ¹. Considering  
+        all  the  relevant  calculations  involved,  explain  how  Newton's  third  law  
+        applies to this situation.  
+3.2     Inflatable air bags are installed in the vehicles as safety equipment. In terms  
+        of momentum, what is the advantage of air bags over seatbelts?  
+3.3     A horse refuses to pull a cart. The horse argues, “according to Newton’s  
+        third law, whatever force I exert on the cart, the cart will exert an equal and  
+        opposite force on me. Since the net force will be zero, therefore, I have no  
+        chance  of  accelerating  (pulling)  the  cart.”  What  is  wrong  with  this  
+        reasoning?  
+3.4.   When a cricket ball hits high, a fielder tries to catch it. While holding the ball  
+        he/she draws hands backward. Why?  
+3.5.   When someone jumps  from a small boat onto the river bank, why does the  
+       jumper  often fall into the water? Explain.  
+3.6.   Imagine that if friction vanishes suddenly from everything, then what could  
+        be the scenario of daily life activities?  
+
+                                                       77  
+  
+﻿ D       Comprehensive Questions  
+                                                                  
+3.1.   Explain the concept of force by practical examples.  
+3.2.   Describe Newton's laws of motion.  
+3.3.   Define momentum and express Newton's 2nd law of motion in terms of  
+        change in momentum.  
+3.4.   State and explain the principle of conservation of momentum.  
+3.5.   Describe the motion of a block on a table taking into account the friction  
+        between the two surfaces. What is the static friction and kinetic friction?  
+3.6.   Explain the effect of friction on the motion of vehicles in context of tyre  
+        surface and braking force.  
+
+  
+
+  E      Numerical Problems  
+
+3.1.   A 10 kg block is placed on a smooth horizontal surface. A horizontal force of  
+        5 N is applied to the block. Find:  
+                     (a) the acceleration produced in the block.  
+
+                                                                                              −             − 
+                     (b) the velocity of block after 5 seconds.                    (0.5 m s ², 2.5 m s ¹)  
+3.2.   The mass of a person is 80 kg. What will be his weight on the Earth? What  
+        will be his weight on the Moon? The value of acceleration due to gravity of  
+
+                                −2 
+        Moon is 1.6 m s  .                                                         (800 N,  128 N)  
+
+                                                                                                                  − 
+3.3.   What force is required to increase the velocity of 800 kg car from 10 m s ¹ to  
+
+                  − 
+        30 m s ¹ in 10 seconds?                                                    (1600 N)  
+
+                                                                                                                  − 
+3.4.   A 5 g bullet is fired by a gun. The bullet moves with a velocity of 300 m s ¹. If  
+
+                                                                                                                    − 
+        the mass of the gun is 10 kg, find the recoil speed of the gun.    (−0.15 m s ¹)  
+3.5.   An astronaut weighs 70 kg. He throws a wrench of mass 300 g at a speed of  
+        3.5 m s−1. Determine:  
+
+        (a) the speed of astronaut as he recoils away from the wrench.  
+        (b) the distance covered by the astronaut in 30 minutes.  
+
+                                                                                                  −      −1 
+                                                                                   (– 1.5 × 10 ² m s  , 27 m)  
+
+                       3                                                                                             − 1 
+3.6.   A 6.5 ×  10  kg bogie of a goods train is moving with a velocity of 0.8 m s  .  
+
+                                                      3  
+        Another bogie of mass 9.2×10  kg coming from behind with a velocity of  
+
+                    − 1  
+        1.2 m s        collides with the first one and couples to it. Find the common  
+
+                                                                                                                   − 1 
+        velocity of the two bogies after they become coupled.                                         (1.03 m s  )  
+3.7.   A cyclist weighing 55 kg rides a bicycle of mass 5 kg. He starts from rest and  
+        applies a force of 90 N for 8 seconds. Then he continues at a constant speed  
+        for another 8 seconds. Calculate the total distance travelled by the cyclist.  
+                                                                                                         (144 m)  
+
+                                                          78  
+  
+﻿3.8.   A ball of mass 0.4 kg is dropped on the floor from a height of 1.8 m. The ball  
+        rebounds straight upward to a height of 0.8 m. What is the magnitude and  
+        direction of the impulse applied to the ball by the floor?  
+                                                                                             (4 N s, upward)  
+3.9. Two balls of masses 0.2 kg and 0.4 kg are moving towards each other with  
+        velocities 20 m s− 1  and 5 m s− 1   respectively. After collision, the velocity  of  
+        0.2 kg ball becomes 6 m s−1. What will be the velocity of 0.4 kg ball?  
+
+                                                                                                                −1 
+                                                                                                        (2 m s  )  
+
+                                                        79  
+  

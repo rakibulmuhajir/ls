@@ -90,7 +90,7 @@ export default function AboutScreen() {
     { label: "Books", value: "1+", icon: "book-open-page-variant", color: theme.colors.primary },
     { label: "Chapters", value: "13+", icon: "view-list", color: theme.colors.secondary },
     { label: "Topics", value: "80+", icon: "format-list-bulleted", color: theme.colors.accent },
-    { label: "Students", value: "Growing", icon: "account-group", color: brandColors.warning.main }
+    { label: "Students", value: "Growing", icon: "account-group", color: theme.colors.warning }
   ];
 
   const styles = useThemedStyles((theme) => ({

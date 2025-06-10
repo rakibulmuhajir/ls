@@ -1,0 +1,725 @@
+﻿8.4       Electric  current  or  motion  of  electrons  produce  magnetic  field.  Is  the  
+          reverse  process  true,  that  is  the  magnetic  field  gives  rise  to  electric  
+          current? If yes, give an example and describe it briefly.  
+
+8.5       Four similar solenoids are placed in a circle  
+          as shown in the figure. The magnitude of  
+                                                                                         D  
+          current in all of them should be the same.  
+          Show by diagram, the direction of current in  
+                                                                                                        C  
+          each  solenoid  such  that  when  current  in  
+          anyone solenoid is switched OFF, the net                             A             O  
+
+          magnetic field at the centre O is  directed  
+          towards that solenoid. Explain your answer.  
+                                                                                                 B  
+  
+  
+
+ D      Comprehensive Questions  
+
+8.1       How  can  you  identify  whether  an  object  is  a  magnet  or  a  magnetic  
+          material?  
+8.2       Describe the strength of a magnetic field in terms of magnetic lines of  
+          force. Explain it by drawing a few diagrams for the fields as examples.  
+8.3       What is a circuit breaker? Describe its working with the help of a diagram.  
+8.4       A magnet attracts only a magnet. Explain the statement.  
+8.5       Differentiate  between  paramagnetic,  diamagnetic  and  ferromagnetic  
+          materials with reference to the domain theory.  
+8.6       Why ferromagnetic materials are suitable for making magnets?  
+
+                                                      180  
+  
+﻿    Chapter  
+          9                 Nature of Science  
+
+  
+  Student Learning Outcomes  
+
+After completing this chapter, students will be able to:  
+
+   [SLO: P-09-G-01]  Describe physics as the study of matter, energy, space, time and their  
+
+   mutual connections and interactions  
+
+   [SLO: P-09-G-02]  Explain with examples that physics has many sub-fields, and in today's  
+
+   world involves interdisciplinary fields. (Students should be able to distinguish in terms of the  
+
+   broad subject matter that is studied between the fields:  
+
+           Biophysics  
+
+          Astronomy  
+
+          Astrophysics  
+
+           Cosmology  
+
+          Thermal Physics  
+
+           Optics  
+
+           Classical Mechanics  
+
+           Quantum Mechanics  
+
+           Relativistic Mechanics  
+
+           Nuclear Physics  
+
+           Particle Physics  
+
+           Electromagnetism  
+
+          Acoustics  
+
+           Computational Physics  
+
+           Geophysics  
+
+           Climate Physics)  
+
+   [SLO: P-09-G-03] Explain with examples how Physics is a subset of the Physical Sciences and  
+
+   of the natural sciences  
+
+   [SLO:  P-09-G-04]  Brief  with  examples  that  science  is  a  collaborative  field  that  requires  
+
+   interdisciplinary researchers working together to share knowledge and critique ideas  
+
+   [SLO: P-09-G-05] Understand the terms 'hypothesis', 'theory' and 'law' in the context of  
+
+   research in the physics  
+
+   [SLO: P-09-G-06] Explain, with examples in Physics, falsifiability as the idea that a theory is  
+
+   scientific only if it makes assertions that can be disproven  
+
+   [SLO:  P-09-G-07]  Differentiate  the  terms  'science',  'technology'  and  'engineering'  with  
+
+   suitable examples  
+
+                                                        181  
+  
+﻿Science is a collective knowledge about the natural phenomena, processes and  
+events occurring around us. The process starts with asking a question, how and  
+why the things in the world behave as such. We try to look orderliness and  
+regularities among various phenomena apparently of diverse nature. Such study  
+of nature gave birth to a single discipline, known as Natural Philosophy now  
+known as science. There was a tremendous increase in the volume of scientific  
+knowledge at the beginning of nineteenth century. That made it necessary to  
+classify the study of nature basically into two main disciplines.  
+(i.)      The biological sciences which deal with the living things.  
+(ii.)    The physical sciences which are about the study of non-living things.  
+           Physics  is  important  and  basic  part  of  physical  sciences  beside  other  
+disciplines such as chemistry and geology.  
+
+  
+
+9.1 Scope of Physics  
+                                                                                         Do You Know?  
+           Physics  is  the  fundamental  science  that  deals   
+with  the  constituents  of  the  universe,  that  is,  matter,   
+energy, space, time and their  mutual  relationships and   
+                                                                                          
+interactions. It strives to understand how the universe  
+                                                                                          
+works,  from  the  smallest  subatomic  particles  to  the   
+largest star and galaxies. We have studied some of the  
+                                                                                          
+basic  properties  of  matter,  energy  and  their  mutual   This  toy  which  worked  
+inter-relationship in the earlier chapters of this book.   by  steam  invented  by  
+We will discuss in detail the concept of space and time in   Hero, from Alexandria in  
+                                                                                          t h e   3 r d   c e n t u r y .  
+the  higher  classes.  Briefly,  the  space  is  the  three-  
+                                                                                          However, the people did  
+dimensional  extent  in  which  all  objects  and  events                                 not think of using such  
+occur.  It  provides  framework  to  define  positions  and   things   for   luxury   and  
+motions of various objects under some force.                                              comfort in those days.  
+
+           The time measures the sequence and durations of events. It is considered  
+fourth dimension. For example, oscillating motion such as that of a swinging  
+pendulum relies on the time interval that determine frequency of oscillations.  
+Another  example  is  the  time  dilation  which  is  a  phenomenon  discussed  by  
+special theory of relativity where time passes slowly for an observer moving at  
+ultra-high speed compared to one relatively at rest. Physics explores how these  
+fundamental concepts are inter connected. For example, the theory of relativity  
+explains how space and time are not absolute quantities but are related to each  
+other. It describes the relationship between space and time and how they are  
+influenced  by  gravity  and  speed,  for  example,  the  bending  of  light  around  
+
+                                                            182  
+  
+﻿massive objects like stars. Another branch of physics, the quantum mechanic,  
+explains the behavior of particles at the atomic and subatomic levels. It is how the  
+physics has applied its principles to wide variety of phenomena, from everyday  
+occurrences such as related to  motion and heat to the extreme conditions found  
+in the universe.  
+
+  
+
+9.2 Branches of Physics  
+
+            Due to expanding scope of research in Physics, it is usually divided into  
+following branches?  
+
+1.          Mechanics:  It is a study of motion and the  
+physical  effects  which  influence  motion.  It  is  
+based  on   Newton's  laws  of   motion  and  
+gravitation and is often called classical mechanics.  
+
+  
+                                                                                                                                        
+                                                                                        Gears in a mechanical system  
+  
+                                              2.          Heat and thermodynamics:  It deal with the  
+                                              thermal energy possessed by the materials and it is  
+                                              used when it flows from one body to another.  
+  
+  
+  
+
+  
+         Heat engine  
+
+3.          Acoustics:  It  deals  with  the  nature  and  
+physical aspects of audible sound energy.  
+  
+
+  
+                                                                                                  Pressure horn  
+
+                                                
+
+                                                4.          Optics: It deal with the physical aspects of  
+                                                visible light.  
+
+                                               
+         Dispertion of light  
+
+                                                                 183  
+  
+﻿5.          Electromagnetism:  It  is  the  study  of  
+electromagnetic   phenomenon   and   mutual  
+relationship   between   electric   current   and  
+magnetic field.  
+                                                                                                                                           
+                                                                                        Electric current is produced in a  
+                                                                                        coil rotated in a magnetic field  
+
+  
+                                                                                       
+6.          Quantum  Mechanics:  It explains the                                       
+behavior   of   particles   at   the   atomic   and                                    
+subatomic level.                                                                       
+                                                                                       
+  
+  
+                                                                                       
+                                                                                             Excited states of atom  
+  
+                                                       7.          Relativistic  Mechanics:  It explains how  
+                                                       space and time are not absolute quantities but  
+  
+                                                        related to observer. It describes the relationship  
+  
+                                                        between them and  how they are influenced  by  
+  
+                                                       gravity and speed.  
+       Einstein view of gravity  
+       as space time curvature  
+
+  
+8.          Nuclear  Physics:  It  is  the  study  of  the  
+properties of nuclei of the atoms.  
+  
+
+  
+                                                                                                    Nuclear atom  
+  
+                                                   9.          Particle   Physics:   It  is  the   study  of  
+                                                   subatomic   particles   and   elementary   particles  
+                                                   which are basic building blocks of matter.  
+  
+  
+        Quark Structure  
+          of a Neutron  
+  
+
+10.         Astronomy:   It  is  study  of   
+distribution   of   celestial   bodies   like   
+                                                                      
+planets, stars and galaxies.  
+                                                                      
+                                                                                                                                           
+                                                                                         Extended Universe  
+                                                                         
+                                                                  184  
+  
+﻿                                                                11.       Cosmology:   It  explores  the  
+                                                                large structure and evolution of the  
+                                                                universe.  
+  
+  
+  
+
+  
+                                                             
+           Study of exploring universe                                 
+                                                                       
+12.        Solid State Physics:  It is the study of   
+some  specific  properties  of  matter  in  solid  
+form.                                                                  
+                                                                            Electrical bonding of solids  
+  
+
+9.43 Interdisciplinary Nature of Physics  
+                                                                                             
+
+           It refers to integration and interaction of Physics with various other fields  
+of  study.  Physics,  being  fundamental  science,  provides  essential  principles,  
+techniques and methods that are applicable across a wide range of disciplines.  
+Some of these are:  
+
+1.         Biophysics:   Some  biological  systems  and  
+processes         are     described         using      the     principles        and  
+technique of physics under this field of Study. Examples  
+include  the  mechanics  of  biological  structures,  physical  
+properties of cells, tissues and organs.                                                                     DNA  
+                                                                                                          Structure  
+2.         Medical   Physics:   It   applies   physical   
+p r i n c i p l e s t o d e v e l o p t e c h n i q u e s a n d   
+technologies for  health diagnosis and treatment.   
+                                                                             
+The examples include imaging techniques, such as   
+X-rays;  ultra  sound,  MRI  and  CT  scan  and  also   
+radiation therapy for cancer treatment.                                      
+                                                                               Magnetic Resonance Imaging  
+                                                                                               (MRI)  
+                                                   3.         Astrophysics:              It  deals  with   the  
+  
+                                                    physical properties and processes of celestial  
+                                                    bodies  and  phenomena.  For  example,  the  
+                                                   interaction between the matter and energy in  
+
+                                                   space to understand the universe as a whole.  
+        Study of celestial bodies  
+
+                                                          185  
+  
+﻿  
+                                                       4.         Geophysics:  It applies physical principle  
+                                                       to the study of internal structure of the Earth, its  
+                                                       magnetic           and      gravitational            fields,      seismic  
+                                                       activity (earthquake), volcanoes, etc.  
+
+  
+                                                 
+ Internal structure of the Earth                                                   
+  
+
+5.          Climate  Physics:  It includes the study of  
+physical process in the environment, including  
+atmospheric   dynamics,   climate   change   and  
+weather conditions.  
+
+                                                                                                                                      
+                                                                                                   A tornado  
+  
+
+  
+                                                                 6.         Computation Physics: It is about  
+                                                                 the use of computational techniques and  
+  
+                                                                 methods           to     solve       complex          physical  
+  
+              Computer graphics                                  problems.  
+
+  
+
+9.4 Interdisciplinary Research  
+                                                                            
+
+            Collaboration  and  interdisciplinary  nature  of  science  is  essential  for  
+addressing the complex issues and challenges of today. By working together and  
+sharing  knowledge,  scientist  can  achieve  more  significant  breakthrough  and  
+contribute to a deeper understanding of the natural and physical world around  
+us.   It   allows   us   to   contribute   to   advance   in   technology,   healthcare,  
+environmental  issues  and  many  other  areas.  We  need  collaborated  efforts  
+because:  
+(I).      Solution of complex issues requires multifacet expertise  
+            Many challenging issues, such as climate change, disease prevention and  
+treatment, sustainable energy solution are of diverse nature. It is difficult for one  
+discipline to address them adequately. Such as understanding and mitigating  
+climate  change  require  knowledge  for  meteorology,  oceanography,  physics,  
+chemistry,  biological  and  environmental  sciences.  Similarly,  the  health  care  
+issues  such  as  recent  Covid  epidemic  involved  combined  efforts  of  expertise  
+
+                                                                186  
+  
+﻿from  biology,  chemistry,  physics,  medical  technologies  and  data  science  to  
+combat this challenge.  
+(ii).    Interdisciplinary approaches foster innovation  
+         Combined different perspectives and methodologies evolve innovation  
+or  out  of  box  solutions.  This  approach  can  lead  to  novel  insight  and  
+breakthroughs that might not emerge working in isolation. For example, nano-  
+technology is a blend of physics, chemistry, material science and engineering to  
+create  materials  and  devices  at  the  nano-scale  with  unique  applications  in  
+medical, energy and electronics.  In an other field of  “artificial  intelligence” the  
+development involves computer science, mathematical logic, neuroscience etc.  
+The collaboration across these fields enhanced the development of intelligence  
+systems and their applications.  
+(iii).   Rapid sharing of knowledge and information across the globe  
+         Sharing and collaboration of knowledge across the globe brings rapid  
+advances in science. The online internet information exchanges, conferences  
+and workshops provide platforms bringing together researchers from different  
+fields   to   share   their   fresh   findings,   discussion   and   brainstorming   new  
+approaches.  Collaborated  research  projects  and  research  journals  are  also  
+means of collaborate research.  
+          Interdisciplinary  research  and  collaboration  leads  to  a  more  holistic  
+understanding of challenging issues by interacting with different perspectives  
+such as that of environment and space exploration.  
+
+  
+
+9.5 Scientific Method  
+
+         Scientific method is a systematic approach used to search for truth of an  
+issue and problem solving regarding natural and physical world. It is based on  
+the following steps.  
+1.        Identify or recognize an issue or a problem.  
+2.       Gather information through observations of its various aspects.  
+3.        Propose an explanation or a guess work known as hypothesis.  
+4.        Perform experiment or collect evidences to test the hypothesis.  
+5.        Record, organize and analyze gathered data, plotting and interpreting  
+         graphs to reach at a conclusion which is called a theory.  
+6.        Repeated tests of the theory to wide range of similar issues then lead  
+         towards the formulation of a law.  
+Some key steps are elaborated here.  
+
+                                                    187  
+  
+﻿1. Observation  
+                                           
+              The first step in scientific method is  
+to make observations of natural processes  
+and  to  collect  the  data  about  them.  This  
+m a y b e d o n e  e i t h e r  b y  o r d i n a r y  
+observations  or  by  obtaining  the  results  
+from different experiments.  For example, it  
+is our common observation that shadow of  
+an  opaque  object  is  formed  when  it  is  
+placed in the path of light coming from the                                                                                                                     
+Sun or a lamp (Fig.9.1).                                                                                                Fig. 9.1  
+
+  
+
+2. Hypothesis  
+
+              On  the   basis  of  the   data  collected  through   observations   or  
+experimentation, we can develop a hypothesis. This is done in order to test its  
+logical results, i.e., it is assumed that nature will act in a particular way under  
+certain  specific  circumstances.  From  the  above  example,  we  assume  that  
+shadows of opaque  objects are formed when they come in the path of light  
+because light travels in a straight line.  
+
+  
+
+3. Experiment  
+
+              Experiment is an organized repeatable process which is used to test the  
+truth of a hypothesis.  
+              To verify the assumption made in the above example, four card boards,  
+
+                                                                                                                                        st  
+each with a hole, are placed in a straight line, such that the hole in  1  card  is in  
+front of a torch. When we see through the hole in cards, we can see the light of  
+the torch (Fig. 9.2-a). If any of these cards is displaced, we cannot see light  
+passing through  (Fig. 9.2-b). Thus, this experiment proves that light travels in a  
+straight line.  
+  
+
+  
+                 Fig. 9.2 (a)  
+  
+                 
+                 
+                 
+
+                 
+               Fig. 9.2 (b)  
+
+                                                                             188  
+
+  
+﻿4.Theory  
+                                                                                              Observation  
+                                                                                                                
+             A f t e r  t h e  s u c c e s s f u l   
+                                                                                                                
+verification   of  an  assumption  and   
+                                                                                                                
+w  i t  h  t  h  e  h  e  l  p  o f  c  a  r  e f  u  l                                        Hypothesis  
+                                                                                                                
+                                                                       
+experimentation, it becomes a theory  
+                                                                                                                
+                                                                       
+a n d i s a p p l i c a b l e  t o  s i m i l a r                                                               
+                                                                                              Experiment  
+phenomena.  With  the  help  of  the                                        Lack of                             
+above  experiment,  the  assumption                                      agreement                              
+                                                                                                                
+has been proved that light travels in a   
+                                                                                                   Theory   
+straight  line.  So  it  then  becomes  a  
+                                                                                                                
+                                                                       
+theory.                                                                                                         
+             It is a logical explanation of the                                                 Prediction   
+causes and effects of an issue or an                                                                                          Negative  
+                                                                               Positive  
+event that  occurs in nature.                                                                                                    result  
+                                                                                 result  
+
+  
+
+                                                                                                       Law  
+                                                                                                                             
+5. Prediction  
+                                  
+
+             After  the  careful  analysis  of  a  theory  we  can  make  predictions  about  
+certain unknown aspects of nature. To verify the prediction, experiments are  
+designed to test the theory over and over again. If test result do not agree,  
+hypothesis is changed or rejected.  
+  
+  
+
+  
+6. Falsifiability                                                                                       For Your Information!  
+                                                                                                         
+             It is a concept introduced that suggests a theory   
+to be considered scientific if it also make predictions   
+that  can  be  tested  and  potentially  proven  false.  The   
+requirement of falsifiability ensures that theories are not                                                            th  
+                                                                                                         In the  20      century, Albert  
+based on vague, non-specific or untestable claims. It   Einstein                                                         declared         that  
+distinguishes scientific theories from false or  pretended   mass and energy, the two  
+beliefs that cannot be experimentally tested.                                                            concerns  of  Physics,  are  
+                                                                                                         forms of  each other. His  
+                                                                                                         theory of relativity altered  
+                                                                                                         m a n ’ s v i e w s  o f  t h e  
+                                                                                                         universe.  
+
+                                                                      189  
+﻿7. Law  
+               
+
+         When a theory has been tested many times and generally accepted as  
+true, it is called a law. The law is such a statement regarding the behaviour of  
+nature which explains the observations and experiments of the past and can  
+predict about other aspects of nature. From the fact that light travels in a straight  
+line, we can predict that shadow of an opaque object, similar in shape, is formed  
+whenever it is placed in the path of light. For example, the shadow of a ball will be  
+round whereas the shadow of a rectangular block will be a rectangle After testing  
+the theory under different situations, this becomes a law of science that light  
+travels in a straight line.  
+         The theories or laws of physics are man made ideas about the way the  
+things work. They are liable to be disproved or modified with the future advances  
+in  science  which  brings  fresh  facts  and  new  insights  about  the  natural  and  
+physical world.  
+
+  
+
+9.6 Scientific Base of Technologies and Engineering  
+
+         Science or to be more specific, physics plays a vital role being the core of  
+each invention based on physical laws and principles. Technology  refers to the  
+methods and techniques developed by using scientific  knowledge.  It  may be a  
+machine technology or a software programme of information technology. For  
+example,  
+     (i)  Automobile   technology   is   based  on  the   principles  of  the  
+         thermodynamics.  
+     (ii)  Radar technology is based on the detection and reflection principles of  
+         electromagnetic waves.  
+     (iii) Laser technology is based on the principles of atomic physics. It is widely  
+         used     in   medical     diagnosis      and     treatment,      metallurgy,      industry,  
+         telecommunication and  space exploration.  
+         Engineering is the process of applying various technologies and scientific  
+principles to design various instruments, tools and build things that help to meet  
+specific  needs  in  every  walk  of  life.  Engineers  also  consider  factors  like  cost  
+effectiveness and safety  measures when designing various  products.  Examples  
+include:  
+     (I)  A  civil  engineer  designs  a  bridge  that  can  withstand  strong  winds,  
+         earthquakes, intense weather conditions and heavy traffic.  
+
+                                                 190  
+                                                  8  
+﻿     (ii)  A software engineer designs a user friendly application of a smartphone.  
+     (iii) An  aviation  engineer  looks  for  lighter  material  which  can  withstand  
+          sudden and severe disturbances and extreme weather conditions during  
+         the flight of an  aeroplane.  
+         Though the science, technology and engineering fields seem distinct but  
+they often work together. Scientific discoveries lead to new technologies and  
+engineers rely on scientific knowledge for our benefits and comforts. They are  
+the  potent  for  change  in  the  outlook  of  mankind  in  shaping  life  style  and  
+influencing our way of thinking.  
+
+  
+                                              KEY POINTS  
+
+     Science is a collective knowledge about the natural phenomena and events.  
+
+     Physics is the fundamental branch of science which deals with matter, energy, space, time  
+
+      and their mutual relationships.  
+
+     There are many sub fields of physics called its branches such as mechanics, heat, optics,  
+
+      electromagnetism, etc.  
+
+     Interdisciplinary nature of physics refers to integration and interaction of physics with  
+
+      other  disciplines  of  science.  Some  of  them  are  biophysics  astrophysics,  geophysics,  
+
+      climate physics and computational physics.  
+
+     Scientific method is a specific and systematic approach for the search of the truth about a  
+
+      natural phenomenon or event. Its steps include observation, hypothesis, experiment,  
+
+      theory, prediction and law.  
+
+     The  advancement  in  the  science  knowledge  and  its  applications  through  various  
+
+      technologies and engineering has changed the outlook of mankind and have made our  
+
+      lives easier and comfortable.  
+
+  
+
+  
+
+                                                EXERCISE  
+
+ A      Multiple Choice Questions  
+
+         Tick () the correct answer.  
+
+9.1       Physics is a branch of:  
+
+          (a) Social science                              (b) Life science  
+
+          (c) Physical science                            (d) Biological science  
+
+9.2      Which branch of science plays vital role in technology and engineering?  
+
+          (a) Biology        (b) Chemistry                (c) Geology                (d) Physics  
+
+                                                     191  
+                                                      8  
+﻿9.3      Automobile technology is based on:  
+
+         (a) acoustics                                         (b) electromagnetism  
+
+         (c) optics                                            (d) thermodynamics  
+
+9.4      A user friendly software application of smart phone use:  
+
+         (a) laser technology                                  (b) information technology  
+
+         (c) medical technology                                (d) electronic technology  
+
+9.5      The working of refrigeration and air conditioning involves:  
+
+         (a) electromagnetism                                  (b) mechanics  
+
+         (c) climate science                                   (d) thermodynamics  
+
+9.6      What is the ultimate truth of a scientific method?  
+
+         (a) Hypothesis                                        (b) Experimentation  
+
+         (c) Theory                                            (d) Law  
+
+9.7       The statement “If I do not study for this test, then I will not get good  
+
+         grade” is an example of:  
+
+         (a) theory                                            (b) observation  
+
+         (c) prediction                                        (d) law  
+
+9.8      Which of the following are methods of investigation?  
+
+         (a) Observation                                       (b) Experimentation  
+
+         (c) Research                                          (d) All of these  
+
+9.9      A hypothesis:  
+
+         (a) may or may not be testable                        (b) is supported by evidence  
+
+         (c) is a possible answer to a question                (d) all of these  
+
+9.10.   A graph of an organized data is an example of:  
+
+         (a) collecting data                                   (b) forming a hypothesis  
+
+         (c) asking question                                   (d) analyzing data  
+
+9.11.   The colour of a door is brown. It is an example of:  
+
+         (a) observation                                       (b) hypothesis  
+
+         (c) prediction                                        (d) law  
+
+                                                  192  
+  
+﻿  B     Short Answer Questions  
+                                                           
+9.1       State in your own words, what is science? Write its two main groups.  
+9.2       What is physics all about? Name some of its branches.  
+9.3       What is meant by interdisciplinary fields? Give a few examples.  
+9.4       List the main steps of scientific method.  
+9.5       What is a hypothesis? Give an example.  
+9.6       Distinguish between a theory and a law of physics.  
+9.7       What is the basis of laser technology?  
+9.8       What is falsifiabilty concept? How is it important?  
+
+  
+
+ C      Constructed Response Questions  
+
+9.1       Is the theory of science an ultimate truth? Describe briefly.  
+9.2       Do you think that the existing laws of nature may need a change in future?  
+          Describe briefly.  
+9.3       Describe three jobs that need the use of scientific knowledge.  
+9.4       Describe when a theory is rejected or need its modification.  
+9.5       Comment on the statement. “ A theory is capable of being proved right  
+          but not being proved wrong is not a scientific theory”.  
+9.6       What  has  been  the  general  reaction  to  new  ideas  about  established  
+          truths?  
+9.7       If a hypothesis is not testable, is the hypothesis wrong? Explain.  
+9.8       Explain how a small amount of data cannot prove that a prediction is  
+          always correct but can prove it is not always correct.  
+9.9       What is the relationship between an experiment and a hypothesis?  
+9.10      Describe why the solution of complex problems need interdisciplinary  
+          research and collaboration.  
+  
+
+ D      Comprehensive Questions  
+
+9.1       Describe the scope of physics. What are the main branches of physics?  
+          State briefly.  
+9.2       What is meant by interdisciplinary fields of physics? Give three examples.  
+9.3       What is scientific method? Describe its main steps with examples.  
+9.4       Differentiate  the  terms,  science,  technology  and  engineering  with  
+          examples.  
+9.5       What is the scope of physics in everyday life? Give some examples.  
+
+                                                       193  
+  

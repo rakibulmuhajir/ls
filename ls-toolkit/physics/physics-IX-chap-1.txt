@@ -1,0 +1,1331 @@
+﻿  Chapter  
+         1                Physical Quantities and  
+
+  
+                                         Measurements  
+
+  
+
+Student Learning Outcomes  
+                                           
+
+After completing this chapter, students will be able to:  
+    •      [SLO:  P-09-A-01]   Differentiate  between  
+           physical and non-physical quantities  
+    •      [SLO:  P-09-A-02]  Explain  with  examples  
+          that physics is based on physical quantities  
+           [Including that these consist of a magnitude  
+          and a unit]  
+    •      [SLO:  P-09-A-03]   Differentiate  between  
+          base  and  derived  physical  quantities  and  
+          units.  
+    •      [SLO:  P-09-A-04]  Use the seven units of  
+          System  International  (SI)  along  with  their  
+          symbols and physical quantities (standard  
+          definitions of SI units are not required)  
+
+    •      [SLO: P-09-A-05] Analyse and express numerical data using scientific notation [in  
+           measurements and calculations.]  
+    •      [SLO:   P-09-A -06]   Analyse   and   express   numerical   data   using   prefixes  
+           [interconverting the prefixes and their symbols to indicate multiple and submultiple  
+          for both base and derived units.]  
+    •      [SLO:  P-09-A-07]  Justify  and  illustrate  the  use  of  common  lab  instruments  to  
+          measure length  [Including least count of instruments and how to measure a variety  
+          of lengths with appropriate precision using Tapes, Rulers and Vernier Callipers and  
+           Micrometres (including  reading the scale on analogue and digital callipers and  
+          micrometres)]  
+    •      [SLO:  P-09-A-08] Justify and illustrate the use of measuring cylinders to measure  
+          volume [Including both measurement of volumes of liquids and determining the  
+          volume of a solid by displacement]  
+    •      [SLO: P-09-A-09]  Justify and illustrate how to measure time intervals using lab  
+          instruments [Including clocks and digital timers.  
+    •      [SLO:  P-09-A-10]  Identify and explain the reason for common sources of human  
+          and systematic errors in experiments.  
+    •      [SLO: P-09-A-11]  Determine an average value for an empirical reading [Including  
+          small distance and for a short interval of time by measuring multiples (including the  
+           period of oscillation of a pendulum)] The uncertainty in measurements and describe  
+          the  need  using  significant  figures  for  recording  and  stating  results  of  various  
+           measurements.  
+
+                                                        5  
+﻿      •    [SLO: P-09-A-12] Differentiate between precision and accuracy.  
+     •     [SLO:  P-09-A-13]  Round  off  and  justify   measured  estimates  to  make  them  
+           reasonable. [Based on empirical data to an appropriate number of significant figures]  
+     •     [SLO:  P-09-A-14]  Determine  the  least  count  of  a  data  collection  instrument  
+           (analogue) from its scale.  
+                                                                                                           
+
+         We  are  living  in  a  physical  world  where  we  observe  many  natural  
+phenomena and objects around us such as Sun, stars, moon, oceans, plants,  
+winds, rains, etc. People have always been curious to know the reality of such  
+happenings. This has led certain people to investigate the facts and laws working  
+in this world. This field of observation and experimentation to understand about  
+the world around us is known as science. Everything in our lives is closely linked  
+to science and the discoveries made by the scientists. In order to obtain reliable  
+results from experiments, the primary thing is to make accurate measurements.  
+         Physical quantities and their measurements have always been the matter  
+of  interest  for  the  scientists.  They  have  been  investigating  to  improve  the  
+methods and instruments for accurate measurements of the physical quantities.  
+In  this  chapter,  we  will  discuss  physical  quantities,  their  measurements  and  
+related contents.  
+
+  
+
+1.1 Physical and Non-Physical Quantities  
+
+         We describe various natural phenomenon, events and human behaviour  
+using some of their features and terms such as love, affection, fear, wisdom,  
+beauty,  length, volume,  density, time, temperature, etc.  Some of these can  be  
+
+measured  directly  and  indirectly  using  some  tools  and                          Quick Quiz  
+instruments such as length of an object using a ruler, time                       Is a non-physical  
+                                                                                    quantity has  
+duration of an event using a clock, the temperature (the                            dimensions?  
+degree  of  hotness)  of  somebody  using  a  thermometer.  
+
+They are called physical quantities. The foundation of physics rests upon physical  
+quantities through which the laws and principles of physics are expressed.  
+         Other quantities quoted above such as love, affection, fear, wisdom, and  
+beauty cannot be measured using tools and instruments. They often pertain to  
+the  perception  or  interpretation  of  the  observer.  They  can  be  described  or  
+
+                                                    6  
+﻿qualitatively  or  compared  using  some  pre-determined  criteria,  indices  or  
+through survey techniques. Non-physical quantities mostly help to understand  
+and to analyse human behaviour, emotions and social interactions.  
+
+  
+
+                                                                  Table 1.1  
+
+                                            Quick Quiz: Complete the following  
+  
+  
+
+                           Feature                             Physical Quantity                  Non-Physical Quantity  
+
+              1. Measurement                                               Yes                                     No  
+
+              2. Instrument used                                                                  
+
+              3. Numerical value and unit                                                         
+
+              4. Examples                                    1.                                    1.  
+                                                             2 .                                   2 .  
+
+  
+
+1.2 Base and Derived Physical Quantities  
+
+             Physics  is  a  science  of  physical  world  where  we  interact  with  many  
+different types of material objects. These objects are exposed in terms of their  
+measurable  features  known  as  physical  quantities  such  as  length,  breadth,  
+thickness,  mass,  volume,  density,  time,  temperature,  etc.  Out  of  these,  the  
+scientists have selected arbitrarily some quantities to play a key role. They are  
+called base quantities. All the quantities which can be described in terms of one  
+or  more  base  quantities  are  called  derived  physical  quantities.  For  example,  
+speed is a derived quantity which depends on distance and time which are base  
+quantities  whereas  density  of  a  material  is  described  in  terms  of  mass  and  
+volume.  
+
+ Measurement of a Physical Quantity  
+                                                                                             
+             A measurement is a process of comparison of an unknown quantity with a  
+widely accepted standard quantity.  
+
+  
+
+       Activity 1.1  
+
+     The teacher should facilitate this activity and initiate discussion as per direction.  
+     One student should measure the length of a writing board with his hand. The same should  
+     be repeated by four or five students. Are all the measurements same?  If they differ, then  
+     why? What is the solution to avoid confusion?  
+
+                                                                         7  
+﻿             In the early days people used to measure length using hand or arm, foot  
+or  steps.  This  measurement  may  result  in  confusion  as  the  measurement  of  
+different  people  may  differ  from  
+each  other  because  of  different                                   
+                                                                      
+sizes of their hands, arms or steps.                                  
+To avoid such confusion, there  is a     
+need  of   a  standard   so  that                                     
+measurement  by  any  person  may     
+result the same. This standard of                                     
+                                                                      
+measurement is known as a unit.  
+                                                                      
+  
+
+  A  measurement  consists  of  two                                   
+                                                                      
+   parts,  a  number  and  a  unit.  A  
+                                                                      
+   measurement  without  unit  is  
+                                                                      
+   meaningless.                                                       
+                                                                      
+Not  very  far  in  the  past,  every                                 
+country in the world had its own                                      
+units  of  measurements.  However,                                    
+                                                                            The International Prototype kilogram  
+problems were faced when people  
+of  different  countries  exchanged  scientific  information  or  traded  with  other  
+countries using different units. Eventually, people got the idea of standardizing  
+the units of measurements which could be used by all countries for efficient  
+working and growth of mutual trade, business and share scientific information.  
+
+  
+
+1.3 International System of Units  
+
+             The   international   committee   on                                                           TableTable  1.21.2   
+w e i g h t s  a n d  m e a s u r e s  i n   1 9 6 1                                  Sr         Physical  
+                                                                                     Sr.         Physical                              Symbol  
+recommended the use of a system consisted                                             .          quantity                Unit Unit     Symbol  
+                                                                                     No.        quantity  
+of seven base units known as international                                                       Length                                    m  
+                                                                                      1. 1        Length                metre metre        m  
+system  of  units,  abbreviated  as  SI.  This                                                     Mass                                    kg  
+                                                                                      22.          Mass             kilogramme kilogram   kg  
+system is in use all over the world.                                                     
+                                                                                      3. 3         Time Time           second second        s s  
+             Use  of  SI  measurements  helps  all  
+                                                                                             Temperature                                   K  
+scientists           to     share        and        compare             their         4. 4     Temperature              kelvin kelvin      K  
+                                                                                            Electric current  
+observations  and  results  easily.  The  seven                                       5. 5   Electric current         ampere ampere        A A  
+                                                                                            Intensity of light  
+base units are given in Table  1.2. Their values                                      6. 6  Intensity of light        candela candela      cd cd  
+are  fixed  with  reference  to  international                                                 Amount of  
+                                                                                               Amount of  
+                                                                                      7. 7                              mole mole        mol mol  
+standards.                                                                                      substance substance  
+                                                                                         
+                                                                        8           
+
+  
+﻿ Derived Units  
+                               
+
+          Base units cannot be derived from one                                      Table 1.3  
+another and neither can they be resolved into  Sr.                           Physical  
+                                                                                               Unit      Symbol  
+anything more basic. While the units of derived  No.                        quantity  
+quantities such as speed, area, volume, force,                       1.        Area       square  metre    m²  
+
+pressure  and  electric  charge  can  be  derived   2.                       Volume        cubic metre     m³  
+using  the  base  units.  These  units  are  called                           Speed         metre  per        – 
+                                                                     3.                                    ms ¹  
+                                                                                             second  
+derived units.  
+                                                                     4.       Force          newton         N  
+          The  units  which  can  be  expressed  in  
+                                                                     5.      Pressure         pascal        Pa  
+terms of base units are called derived units.  
+                                                                     6.  Electric charge    coulomb         C  
+For example,    Area  = length × breadth  
+                                                                     7.    Plane angle        radian       rad  
+                              = metre × metre  
+                              = square metre                        
+
+                              = metre² or m²                                       Quick Quiz  
+Speed = Distance/Time  = metre/second = m s– 1                         (a)  Write  the  unit  of  charge  in  
+                                                                             terms  of  base  unit  ampere  
+A  few  derived  units  with  specific  names  and                           and second.  
+symbols are given in Table  1.3.                                       (b)  Express  the  unit  of  pressure  
+                                                                             "pascal" in some other units.  
+
+ SI Prefixes  
+
+          The SI is a decimal system. Prefixes are used to write units by powers of 10.  
+The big quantities like 50000000 m and small quantities like 0.00004 m are not  
+convenient to write down. The use of prefixes makes them simple. The quantity  
+
+                                                    7  
+50000000 m can be written as 5 × 10 m. Similarly, the quantity 0.00004 m can be  
+
+                        −5  
+written as 4 ×  10         m.  
+          Prefixes  are  the  words  or  symbols  added  before  SI  unit  such  as  milli,  
+centi,  kilo,  mega,  giga  (Table1.4).  The  prefixes  given  in  Table  1.4  should  be  
+known for use of SI units effectively. For example, one thousandth (1/1000) of  
+a   metre   is   millimetre.   The   thickness   of   a   thin   wire   can   be   expressed  
+conveniently in millimetres whereas a long distance is expressed in kilometres  
+which is  1000 metres.  
+          Multiples and sub-multiples of mass measurement are given in Table 1.5  
+whereas  multiples  and  sub-multiples  of  length  are  given  in  Table  1.6.  The  
+following examples will explain the meaning of prefixes.  
+
+                                                       9  
+  
+﻿                         5000  
+  (I)   5000 mm  =                 m  = 5 m                        Table 1.4: Prefixes used with SI units  
+                         1000  
+                                                                                                     Powers  
+                          50000                                       Prefix         Symbol  
+                                                                                                     of Ten  
+  (ii)   50000 cm =                  m      = 500 m  
+                            100                                        atto              a                – 18  
+                                                                                                       10 
+                         3000                                         femto              f                – 15  
+                                                                                                       10 
+  (iii)  3000g        =             kg   = 3 kg  
+                          1000                                         pico              p                – 12  
+                                                                                                       10 
+                                                                       nano              n                –9  
+                                        –                                                               10 
+  (iv)   2000 μs  =  2000 ×  10 ⁶                       –     
+                                           s= 2 ×  10 ³ s 
+                                                                      micro              μ                –6  
+                                                                                                        10 
+                                             = 2 ms                                                       –3  
+                                                                       milli             m              10 
+  
+
+                                                                       centi             c                –2  
+ 1.4 Scientific Notation                                                                                10 
+                                                                       deci              d                –1  
+                                                                                                        10 
+          It  is  short  way  of  representing  very                                                      3  
+                                                                        kilo             k              10 
+large  or  very   small   numbers.   Writing                                                              6  
+                                                                       mega              M              10 
+otherwise, the values of these quantities, take                                                           9  
+                                                                       giga              G              10 
+up much space They are difficult to read, their                        tera              T             10¹²  
+relative sizes are difficult to visualize and they  
+are  awkward  to  use  in  calculations.  Their                        peta              P             10¹⁵  
+decimal  places  are   more  conveniently                               exa              E             10¹⁸  
+expressed as powers of 10. The numerical part                                        Table 1.5  
+of the quantity is written as a number from 1 to  
+9 multiplied by whole number powers of 10. To                            100 kg  
+                                                                                               1 quintal  
+write numbers using scientific notation, move                            10 quintal or  
+                                                                                               1 tonne  
+the  decimal  point  until  only  one  non-zero                          1000 kg  
+digit  remains  on  the  left.  Then  count  the                                     Table 1.6  
+number of  places through which the decimal  
+point is moved  and use this number as the                               1 m                  100 cm  
+power   or   exponents   of   10.   The   average                        1 cm                 10 mm  
+distance   from   the   Sun   to   the   Earth   is                      1 km                 1000 m  
+                                                                         1 mm                    – 
+138,000,000  km.  In  scientific  notation,  this                                             10 ³ m  
+
+                                                                                                 – 
+distance would be written as 1.38  ×  10⁸  km.                           1 cm                 10 ² m  
+The number of places, decimal moved to the                               1 km                 10³ m  
+left is expressed as a positive exponent of 10.                                   Quick Quiz  
+          Diameter  of  hydrogen  atom  is  about  100 m is equal to:  
+0.000,000,000,052  m. To write this  number  in  (a)  1000 μm                             (b)  1000  cm  
+scientific notation, the decimal point is moved  (c)  100,000  mm    (d)  1 km  
+11 places to the right. As a result, the diameter  
+                                –¹¹  m.  The  number  of                       Do You Know?  
+is  written  as  5.2  ×  10 
+places moved by the decimal to the right is                            The kilogram is the only base  
+expressed as a negative exponent of  10.                                    unit that has a prefix.  
+
+                                                       10  
+  
+﻿  Example 1.1                                                                         For Your Information!                  
+Solve the following:                                                             The  negative  exponents  have   
+
+                                                                                 values   less   than  one.   For  
+(a)        5.123 × 10⁴ m  + 3.28 × 10⁵ m                                                             – 
+                                                                                 example, 1 ×10 ²  = 0.01  
+                         -                          -3  
+(b)        2.57 × 10 ² mm  –  3.43 × 10                mm  
+                                                                                              Quick Quiz  
+  Solution                                                                      Express  the  following  into  
+
+                                                                                scientific notation.  
+(a)        5.123 × 10⁴ m +  3.28 × 10⁵ m  
+                                                       4                        a)  0.00534  m    b) 2574.32  kg  
+           =  5.123 × 10⁴ m  +  32.8 × 10 m                                     c)  0.45  m          d) 0.004  kg  
+
+                                        4  
+           =  (5.123 + 32.8) 10 m                                               e)  186000  s  
+
+                                 4  
+           =  37.923 × 10 m                                                           For Your Information!  
+
+                                5  
+           = 3.7923 × 10 m                                                    Addition   and   subtraction   of  
+                                                                              numbers  is  only  possible  if  they  
+                         -2                        -3                         have the same exponents. If they do  
+(b)         2.57 × 10       mm – 3.43 × 10           mm  
+                             -2                        -2                     not have the same exponents, make  
+           =  2.57 × 10        mm – 0.343 ×10             mm  
+                                                                              them equal  by the displacement of  
+                                        -2  
+           =  (2.57 - 0.343) 10           mm                                  the position of the decimal point.  
+
+                               -2  
+           =  2.227 × 10          mm                                                 For Your Information!  
+
+                             -2       -3  
+           = 2.227 ×10  × 10            m                                          Use  of  SI  units  require  special  
+                               -5                                             care, particularly in writing prefixes.  
+           =  2.227 × 10         m  
+                                                                                  Each  unit  is  represented  by  a  
+  Example 1.2                                                                      symbol not by an abbreviation.  
+                                                                                   For example, for SI not S.I., for  
+Find  the  value  of  each  of  the  following                                     second s not sec, for ampere A  
+                                                                                   not amp, for gram g not gm.  
+quantities:                                                                       Symbols do not take plural form.  
+(a)        (4 × 10³ kg) (6 × 10⁶ m)                                                For example, 10 mN,  100 N, 5 kg,  
+                                                                                   60 s.  
+(b)        6 × 10⁶ m³                                                             Full name of unit does not begin  
+                    -                                                              with capital letter. For example,  
+           2 × 10 ² m²                                                             metre,  second,  newton  except  
+                                                                                   Celsius.  
+  Solution  
+                                                                                  Symbols appear in lower case, m  
+                                                             +                     f o r m e t r e , s  f o r   s e c o n d ,  
+(a)        (4×10³ kg) (6×10⁶ m)=(4×6)×10³   ⁶ kg m                                 exception is only L for litre.  
+                                                = 24 × 10⁹ kg m                   Symbols  named  after  scientist's  
+                                                = 2.4 × 10¹⁰ kg m                  name  have  initial  letters capital.  
+                                                                                   For example, N for newton, K for  
+                                                                                   kelvin and Pa for pascal.  
+ (b)        6 × 10⁶ m³           6           6–(–2)   3–2                         Prefix is written before and close  
+                             =        ×  10        m 
+                     -           2                                                 to  SI  unit.  Examples:  ms,  mm,  
+            2 × 10 ² m²  
+                                           8                                       mN, not m s, m m, m N.  
+                             =  3 ×  10  m  
+                                                                                  Units   are   written   one   space  
+1.5 Length Measuring Instruments                                                   apart. For example, N m, N s.  
+                                                                                  Compound         prefixes      are   not  
+           Metre   Rule:   Length  is  generally                                   allowed. For example,  
+measured using a metre rule in the laboratory.  (i) 7 μμs should be written as 7 ps.  
+
+                                                                                           4  
+                                                                              (ii)  5  ×  10  cm should  be written  as  
+The smallest division on a  metre scale  is  1  mm.                                5 ×  10² m.  
+
+                                                             11  
+                                                                              
+  
+﻿The smallest measurement that can be taken with a     
+metre rule is 1 mm. One millimetre is known as least     
+                                                                                  
+count of the metre rule.  
+                                                                                  
+           Least count is the smallest measurement that                            Measuring  Tape:  It  can  
+can be taken accurately with an instrument.                                        measure 1 mm to several  
+                                                                                   metres.  Its  least  count  is  
+          To measure the length of an object, the metre                             1 mm. It is used to measure  
+ruler is placed in such a way that its zero coincides                              longer distances.  
+
+one edge of the object and then the reading in front                                  1.5 cm     1.8 cm    2.0 cm  
+                                                                                     incorrect   correct  incorrect  
+
+of the other edge is the length of the object. One                                     A          B          C  
+
+common source of error comes from the angle at                                           0     1    2     3  
+
+which  an  instrument  is  read.  Metre  ruler  should  
+either  be  tipped  on  its  edge  or  read  when  the                                               Fig. 1.1  
+
+person's eye is directly above the ruler as shown in Fig. 1.1 at point B. If the metre  
+
+ruler is read from an angle, such as from point A or C, the object will appear to be  
+
+of different length. This is known as parallax error.  
+
+  
+
+Vernier Callipers                                                                    For Your Information!  
+
+                                                                                    Parallax   error   is   due   to  
+           It  is  an  instrument  used  to  measure  small                         incorrect  position  of  eye  
+lengths down to 1/10th of a millimetre. It can be used                              w   h   e   n   t   a   k   i   n   g  
+                                                                                    measurements.  It  can  be  
+to measure the thickness, diameter, width or depth                                  avoided   by   keeping   eye  
+                                                                                    perpendicular  to  the  scale  
+of an object. The two scales on it are:                                             reading.  
+
+(a)       A main scale which has marking of 1mm each.                              Do You Know?  
+(b)       A Vernier (sliding) scale of length 9 mm and it                           Some specific lengths in (m)    
+                                                                                    Football ground  9.1 ×  10¹    
+           is divided into 10 equal parts.  
+                                                                                           Man           1.8 ×  10⁰    
+           Least  count  of  a  Vernier  Callipers  is  the                           Thickness of                −    
+                                                                                                         1.0 ×  10 ⁴  
+difference between one main scale division (M.S) and                                   book page  
+                                                                                      Diameter of  
+                                                                                                                       
+                                                                                                                  − 
+                                                                                                         7.0 ×  10 ³  
+one Vernier scale (V.S) division.                                                         pencil  
+Hence, Least count = 1 M.S div – 1V.S div                                           
+                                                                                     Do You Know?  
+                           = 1mm – 0.9 mm = 0.1 mm  
+                                                                                     Vernier   callipers  was  
+           Usually, the least count is found by dividing                             invented   by   a   French  
+                                                                                     Scientist  Pierre Vernier in  
+the length of one small division on main scale by the                                1631.  
+
+                                                          12  
+  
+﻿ total number of divisions on the Vernier scale which is again 1 mm/10 = 0.1 mm.  
+ The parts of the Vernier Callipers are shown in Fig. 1.2 .  
+
+  
+
+            Inside  jaws  
+          C                 D  
+
+                                                                                                                                         Tail  
+
+                                                                                                              Main scale  
+
+                                             Vernier scale  
+
+       A                      B  
+          Outside jaws                                             Fig. 1.2  
+
+              There are two Jaws A and B to measure external dimension of an object  
+whereas jaws C and D are used to measure internal dimension of an object. A  
+ narrow strip that projects from behind the main scale known as tail or depth  
+ gauge is used to measure the depths of a hollow object.  
+
+  Measurement Using Vernier Callipers  
+                                                                                                  
+                                                                                                                          
+                                                                                                        
+              Suppose, an object is placed between the two                                                                
+                                                                                                                          
+                                                                                                        
+jaws, the position of the Vernier scale on the main                                                                        
+                                                                                                                        4              5  
+                                                                                                        
+ scale is shown in Fig. 1.3.                                                                                              
+
+                                                                                                                          
+                                                                                                        
+                                                                                                                             0      5     10  
+ 1.           Read  the  main  scale  marking  just  infront  of                                          Main scale   Vernier scale  
+zero of the Vernier scale. It shows 4.3 cm.                                                                                   Fig. 1.3  
+ 2.           Find  the  Vernier  scale  marking  or  division  
+which is in line with any of the main scale marking.  
+ This shows:  
+              Length of object = Main scale reading + (Least                                              0               1              2  
+ count × Vernier scale reading).  
+              = 4.3 + 0.01 × 4 = 4.34 cm                                                                   0     5      10            Main scale  
+
+                                                                                                           (a)  Vernier scale  
+ 3.           Checking for zero error. Following are some  
+                                                                                                        
+ important  points  to  keep  in  mind  before  checking  
+                                                                                                          0               1              2  
+zero error:  
+ (a)          If on joining  the jaws  A and B, the zeros of the                                          0      1     10             Main scale  
+ main scale and Vernier scale do  not exactly coincide                                                     (b)  Vernier scale  
+                                                                                                                             Fig. 1.4  
+with   each   other   then   there   is   an   error   in   the  
+ instrument called zero error.  
+                                                                           13  
+  
+﻿(b)       If the zero of the Vernier scale is on the right side of the zero of the main  
+scale (Fig. 1.4-a) then this instrument will show slightly more than the actual  
+length. Hence, these zero errors are subtracted from the observed measurement.  
+         To  find  the  zero  error,  note  the                     Laboratory Safety Rules  
+number  of  the  division  of  the  Vernier                  Handle   all  apparatus   and   chemicals  
+                                                             carefully and correctly. Always check the  
+scale  which  is  exactly  in  front  of  any                 label on the container  before using the  
+division of the main scale. Multiply this                    substance it contains.  
+number  with  the   least  count.  The                       Do   not   taste   any   chemical    unless  
+resultant number is the zero error of this                   otherwise instructed by the teacher.  
+                                                             Do   not  eat,   drink   or   play   in   the  
+instrument.   The   observed   reading   is                   laboratory.  
+corrected by  subtracting  the  zero  error                  Do not tamper with the electrical mains  
+from it.                                                     and  other  fittings  in  the  laboratory.  
+                                                              Never work with electricity near water.  
+(c)       If the zero of the Vernier scale is on  
+                                                             Don't place flammable substance near  
+the left side of the zero of the main scale                   naked flames.  
+(Fig.  1.4b),  then  instrument  will  show                 Wash  your  hands  after  all  laboratory  
+slightly less than the actual length.                        work.  
+
+Hence,  the  zero  error  is  added  in  the             Activity 1.2  
+observed measurement. For example, if 3  The teacher should facilitate to perform this  
+is the number of divisions coinciding with   activity  by  making  groups.  Each  group  
+any  main  scale  division  then  3  is                  should place ten coins one above the other.  
+                                                         Record their total height using a metre rule.  
+subtracted from 10 and the result is then   Divide by 10.  
+multiplied  with  the   least  count.                    What is the thickness of one coin?  
+Therefore, the zero error in this case will   Now  find  the  thickness  of  one  coin  using  
+                                                         Vernier Callipers.  
+be 0.7 mm. For correction, it is added in   What is the result?  
+the observed reading.                                    Each  group  should  comment  on  the  
+                                                         measurement using the two instruments.  
+Micrometer Screw Gauge  
+
+          It is used to measure very small lengths such as diameter of a wire or  
+thickness of a metal sheet. It has two scales:  
+(a)      The main scale on the sleeve which has markings of 0.5 mm each.  
+(b)      The   circular   scale   on   the   thimble   which   has   50   divisions.   Some  
+          instruments may have main scale marking of 1 mm and 100 divisions on  
+         the thimble.  
+         When the thimble makes one complete turn, the spindle moves 0.5 mm  
+(1 scale division) on the main scale which is called pitch of the screw gauge. Thus,  
+its least count is:  
+     Least count =               Pitch of the screw gauge                    0.5 mm  
+                                                                            =           = 0.01 mm  
+                         No. of divisions on the circular scale                  50  
+         The parts of the screw gauge are shown in Fig. 1.5.  
+
+                                                    14  
+  
+﻿            The object that is to be measured is placed                                                Limitations of  measuring  
+            between the anvil and the spindle.                                                                  Instruments  
+  
+                                                                                                                                           Least  
+               anvil         spindle       sleeve  The thimble is turned                        Instrument              Range  
+                                                                                                                                          count  
+                                                       to move the spindle.  
+                                                                                                                          1 cm  
+                                                                                                 Measuring  
+                                                                                                                            to            1 mm  
+                                                                                                     Tape           several metres  
+                                                                              ratchet  
+                                                                                                                         1 mm  
+                                                                                                 Metre rule                 to            1 mm  
+                                                                                                                           1 m  
+                                                                                                   Vernier              0.1 mm  
+                                                                                                                           to            0.1 mm  
+                                                                                                  Callipers              15 cm  
+       The   ratchet   prevents  over  tightening   by                                          Micrometer             0.01 mm  
+       making a click sound when the micrometer is                                                                          to          0.01 mm  
+       ready to be read.                                                                       Screw gauge               2.5 cm  
+                                    Fig. 1.5                                                                                                            
+  
+                                                                                               
+Checking for Zero Error                                                                                                             15  
+                                                                                             
+                                                                                                                                    10  
+              If the zero of the circular scale coincides with horizontal                                                   0       5  
+                                                                                                                                    0  
+                                                                                                                            
+ line, there is no zero error (Fig.  1.6-a).                                                                                       95  
+                                                                                                                                   90  
+                                                                                                                            
+              If it is not exactly in front of the horizontal line of the                                                 (a)      85  
+ main scale on joining  the anvil and spindle then there is a zero                                                                 20  
+                                                                                                                                    15  
+                                                                                                                                    10  
+error in the screw gauge (Fig. 1.6-b). If zero of the circular scale                                                        0       5  
+is below the horizontal line then it will measure slightly more                                                                     0  
+                                                                                                                                   95  
+                                                                                                                                   90  
+than  the  actual  thickness  and  hence,  zero  error  will  be                                                          (b)       10  
+subtracted from the observed measurement.                                                                                           5  
+                                                                                                                                    0  
+                                                                                                                            0  
+              If the zero of the circular scale is above the  horizontal                                                           95  
+                                                                                                                                   90  
+ line  (Fig.  1.6-c), then  it will  show slightly  less than the actual                                                           85  
+                                                                                                                                   80  
+
+thickness  and  hence,  the  zero  error  will  be  added  to  the                                                        (c)  
+                                                                                                                                  Fig. 1.6  
+observed measurement.  
+
+  
+
+Measurement Using Screw Gauge  
+
+              Suppose when a steel sheet is placed  
+in   between   the   anvil   and   spindle,   the  
+                                                                                                     0        5          30  
+ position of circular scale is shown in Fig.1.7.  
+                                                                                                                         25  
+(a)           Read the marking on the sleeve just                                                                        20  
+              before the thimble. It shows 6.5 mm.  
+(b)           Read      the      circular      scale      marking   Fig. 1.7  
+
+             which is in line with the main scale. This shows 25. Hence,  
+Thickness = main scale reading + (circular scale reading × L.C.)  
+                   = 6.5 mm + 25 × 0.01 mm  
+                   = 6.5 mm + 0.25 mm = 6.75 mm  
+
+                                                                          15  
+  
+﻿ Activity 1.3                                                                                        For Your Information!  
+   The teacher should facilitate the activity by making groups and                                   The most precise balance is  
+   ask them to find the thickness of 100 sheets of a textbook using                                  the   digital   electronic  
+   a  micrometre  screw  gauge.  Dividing  this  thickness  by  100,                                 balance.   It   can   measure  
+   estimate the thickness of one sheet.  
+                                                                                                     mass of the order of 0.1mg  
+                                                                                                                                                 
+ Activity 1.4  
+   The teacher should help each group to make a paper scale having least count 0.2 cm and 0.5 cm.  
+
+  
+
+1.6 Mass Measuring Instruments  
+
+  
+
+  Physical Balance  
+             There are many kinds of balances used    
+                                                                                        
+for  measuring  mass of an object.  In our daily    
+life, we use the term weight instead of mass. In    
+                                                                                        
+Physics, they have different meanings. Mass is    
+the measure of quantity of matter in a body    
+                                                                                        
+whereas the weight is the force by which the    
+body  is  attracted  towards  the  Earth.  Weight    
+                                                                                                          Fig.  1.8  
+can  be   measured  using  spring  balance  
+(Fig. 1.8). The mass of an object is found by    
+comparing  it  with  known  standard  masses.    
+                                                                                        
+This process is called weighing. In laboratories,    
+we  use  physical  balance  shown  in  Fig.  1.9    
+                                                                                        
+which is based on the principle of levers. The    
+process of measurement is given below:                                                  
+                                                                                        
+1.     Level  base  of  the  balance  using  levelling    
+      screws until the plumb line is exactly above    
+                                                                                                           Fig.  1.9  
+      the pointed mark.  
+
+2.   Turn the knob so that the pans of the balance are raised up. Is the beam  
+       horizontal and pointer at the centre of the scale? If not, turn the balancing  
+      screws on the beam so that it becomes horizontal.  
+3.   Place the object to be weighed on the left pan.  
+4.   Place the known weight from the weight box in the right pan using forceps.  
+5.   Adjust the weight so that pointer remains on zero or oscillates equally on  
+       both sides of the zero of the scale.  
+6.   The total of standard masses (weights) is a measure of the mass of the object  
+      in the left pan.  
+
+                                                                      16  
+  
+﻿1.7 Time Measuring Instruments                                                           
+                                                                                         
+                                                                                  
+ Stopwatch                                                                                
+
+                                                                                         
+           The duration of time of an event is measured  
+                                                                                         
+by a stopwatch as shown in Fig. 1.10. It contains two                                     Fig.  1.10  Mechanical Stopwatch  
+needles, one for seconds and other for minutes. The     
+dial is divided usually into 30 big divisions each being    
+                                                                                         
+further  divided  into  10  small  divisions.  Each  small     
+division represents one tenth (1/10) of a second. Thus,  
+                                                                                         
+one  tenth  of  a  second  is  the  least  count  of  this                                 Fig.  1.11  Digital Stopwatch  
+
+stopwatch. While using, a knob present on the top of the device is pressed. This  
+results in the starting of the watch. The same knob is again pushed to stop it. After  
+noting the reading, the same knob is again pressed to bring back the needles to  
+the  zero  position.  Now-a-days, electronic/digital  watches  (Fig.  1.11)  are  also  
+available which can measure one hundredth part of a second.  
+                                                                                                                
+  
+  Activity 1.5 Model of a sandclock                                                                             
+  
+                                                                                                                
+  The teacher should arrange the required articles and help students to make a  
+                                                                                                                
+  model of a sandclock as shown in the figure. Using two glass funnels, adhesive  
+  
+                                                                                                                
+  tape, two lids, and dry sand. Observe how much time it takes for the sand to flow     
+  
+  
+  down once completely. Make a paper scale from this and paste on the glass    
+  
+  funnels along straight side.                                                                                  
+  
+                                                                                                                Sandclock  
+  1.8 Volume Measuring Instruments  
+  Measuring Cylinder                                                                           
+           It is a cylinder made of glass or transparent plastic    
+with a scale divided in cubic centimetres (cm3  or cc) or    
+                                                                                                                      wrong  
+millilitres (mL) marked on it. It is used to find the volume  
+of liquids and non-dissolvable solids.                                                                                correct  
+
+           The level of liquids in the cylinder is marked to find  
+                                                                                                                      wrong  
+the volume. In order to read the volume correctly, the  
+                                                                                               
+cylinder must be placed on a horizontal surface and the    
+eye shall be kept in level with meniscus of water surface    
+as shown in Fig. 1.12. The meniscus is the top level of the  
+                                                                                               
+liquid  surface.  Water  in  the  cylinder  curves downward                                               Fig.  1.12  
+and  its  surface  is called concave surface. The  reading  is                                      Measuring cylinder  
+
+taken corresponding to the bottom edge of the surface. The mercury in the  
+cylinder  curves  upward.  Its  surface  is  convex  and  the  reading  is  taken  
+corresponding to the top edge. The cylinder can be used to find the volume of  
+solids.  
+                                                               17  
+  
+﻿  Activity 1.6                                                                                     Caution:  While  taking  a  
+   The teacher should facilitate the groups to perform this activity                               reading, keep your eye in  
+   following the given instructions.                                                               front and in line with the  
+   1.   Take a liquid in which the given solid                                                     lower   meniscus   of   the  
+         does not dissolve.                                                                        water.  
+   2.    Note  the  initial  position  of  liquid                            B                    
+         surface.                                              A                                   Do You Know?  
+
+   3.    Put  the  solid  in  the  cylinder                                                        Ancient  Chinese  used to  
+         containing liquid.                                                                        estimate  the  volume  of  
+  4.     Note  again  the  position  of  liquid  
+                                                                                                   grains by sounding their  
+         surface in the cylinder which rises due to solid.                                         containing vessels.  
+   5.   The difference of the two readings is the volume of the solid.  
+
+ Displacement Can Method  
+
+            If the body does not fit into the measuring cylinder, then an overflow can  
+or displacement can of wide opening is used as shown in Fig. 1.13. Place the  
+displacement  can  on  the  horizontal  table.  Pour  water  in  it  until  it  starts  
+overflowing through its opening. Now tie a piece of thread to the solid body and  
+  
+                                                          Side  
+  
+                                                       opening  
+  
+  
+                               (a)                       Beaker                  (b)        Body  
+
+                                    Fig. 1.13 Displacement can or Overflow can  
+
+                                                                                          Do You Know?  
+lower  it  gently  into  the  displacement  can.  The  
+                                                                                           Despite  the  use  of  SI  in  most  
+body displaces water which overflows through the  
+                                                                                           countries,  the  old  measure  is  
+side opening. The water or liquid is collected in a                                        still in use, such as printers type  
+beaker   and   its   volume   is   measured   by   the                                     is measured in point. One point  
+measuring cylinder. This is equal to the volume of                                         is  1/72 of an inch equivalent to  
+solid body.                                                                                0.35 mm.  
+
+  Activity 1.7  
+
+  The  teacher  should  facilitate  the  groups  to  take  a  
+   metallic ball or a pendulum bob. Measure its diameter  
+  and then volume by placing it in between two wooden  
+   blocks alongside a ruler. Then use measuring cylinder  
+  and comment on the result of this two onset activities.  
+  
+
+1.9 Errors in Measurements                                                                            For Your Information!  
+                                                                                                          The symbol of the  
+            Measurements  using  tools  and  instruments  are  
+                                                                                                             base units are  
+never perfect. They inherit some errors and differ from  
+                                                                                                       universal independent  
+their true values. The best we shall do is to ensure that the  
+                                                                                                        of the language used  
+errors  are  as  small  as  reasonably  possible.  A  scientific                                          in the written text.  
+
+                                                                    18  
+
+  
+﻿measurement  should  indicate  the  estimated  error  in  the  measured  values.  
+Usually,  there   are  three   types   of  experimental   errors   affecting  the  
+measurements.  
+           (i) Human Errors    (ii) Systematic Errors     (iii) Random Errors  
+
+  
+
+ (i) Human Errors  
+
+           They occur due to personal performance. The limitation of the human  
+perception such as the inability to perfectly estimate the position of the pointer  
+on a scale. Personal errors can also arise due to faulty procedure to read the scale.  
+The correct measurement needs to line up your eye right in front of the level. In  
+timing experiments, the reaction time of an individual to start or stop clock also  
+affects the measured value. Human error can be reduced by ensuring proper  
+training,  techniques  and  procedure  to  handle  the  instruments  and  avoiding  
+environmental distraction or disturbance for proper focusing. The best way is to  
+use automated or digital instruments to reduce the impact of human errors.  
+
+  
+
+(ii) Systematic Errors  
+
+           They  refer  to  an  effect  that  influences  all  measurements  of  particular  
+measurements equally. It produces a consistence difference in reading. It occurs  
+due to some definite rule. It may occur due to zero error of instrument, poor  
+calibration of instrument or incorrect marking. The effect of this kind of error can  
+be reduced by comparing the instrument with another which is known to be  
+more accurate. Thus, a correction factor can be applied.  
+
+  
+
+(iii) Random Errors  
+
+           I t i s s a i d t o  o c c u r  w h e n  r e p e a t e d                              Quick Quiz  
+measurements  of  a  quantity  give  different  values  
+                                                                                      Identify  Personal, Systematic  
+under  the  same  conditions.  It  is  due  to  some  
+                                                                                     and Random errors:  
+unknown causes which are unpredictable.                                               1.   Your eye level may move  
+           The experimenter have a little or no control                                    a  bit  while  reading  the  
+over   it.   Random   error   arise  due  to   sudden                                      meniscus.  
+fluctuation          or    variation        in    the      environmental              2.   Air   current   may   cause  
+conditions.  For  example,  changes  in  temperature,                                      the balance to fluctuate.  
+pressure,   humidity,   voltage,   etc.   The   effect   of                           3.   The balance may not be  
+random  errors  can  be  reduced  using  several  or                                       properly calibrated.  
+multiple readings and then taking their average or                                   4.    Some  of the liquid  may  
+mean value. Similarly, for the measuring time period                                       have evaporated while it  
+of   oscillating           pendulum,   the   time   of   several                           is being measured.  
+oscillations,  say  30  oscillations  is  noted  and  then  
+mean   or   average   value   of   one   oscillation   is  
+determined.  
+
+                                                              19  
+  
+﻿1.10 Uncertainity in a Measurement  
+                                                                                       
+           There is no such thing as a perfect measurement. Whenever a physical  
+quantity is measured except counting, there is inevitably some uncertainty about  
+its determined value due to some instrument.  
+                                                                                    Uncertainty in Digital  
+This uncertainty may be due to use of a number                                             Instruments  
+of reasons. One reason is the type of instrument                                  Some modern measuring  
+being  used.  We  know  that  every  measuring                                instruments have a digital scale.  
+instrument  is  calibrated  to  a  certain  smallest  
+                                                                               We usually estimate one digit  
+division and this fact puts a limit to the degree                               beyond what is certain. With  
+of   accuracy   which   can   be   achieved   while                            digital scale, this is reflected in  
+measuring  with  it.  Suppose  that  we  want  to                                fluctuation of the last digit.  
+measure  the  length  of  a  straight  line with  the  
+help of a metre rule calibrated in millimetres. Let the end point of the line lies  
+between  10.3 cm and  10.4 cm marks. By convention, if the end of the line does  
+not touch or cross the midpoint of the smallest division, the reading is confined  
+to the previous division. In case the end of the line seems to be touching or have  
+crossed the midpoint, the reading is extended to the next division. Thus, in this  
+example, the maximum uncertainty is   ± 0.05 cm. It is, infact, equivalent to an  
+uncertainty of 0.1 cm equal to the least count of the instrument divided into two  
+parts, half above and half below the recorded reading.  
+           The uncertainty in small length such as diameter of a wire and short  
+interval of time can be reduced further by taking multiple readings and then  
+finding average value. For example, the average time of one oscillation of a  
+simple pendulum is usually found by measuring the time for thirty oscillations.  
+           The uncertainty or accuracy in the value of a measured quantity can be  
+indicated conveniently by using significant figures.  
+
+  
+
+1.11 Significant Figures  
+           We can count the number of candies in a jar and know it exactly by  
+counting but we cannot measure the height of the jar exactly. All measurements  
+include uncertainties depending upon the refinement of the instrument which is  
+used for measurement.  
+           It is important to reflect the degree of uncertainty in a measurement by  
+recording the observation in significant figures.  
+
+    The significant figures or digits are the digits of a                               
+           measurement which are reliably known.                                        
+           Figure  1.14  shows  a  rod  whose  length  is                               
+measured with a ruler. The measurement shows the                                        
+length in between 4.6 cm and 4.7 cm. Since the length                                             Fig. 1.14  
+
+of the rod is slightly more than 4.6 cm but less than 4.7 cm, so the first student  
+estimates it to be 4.6 cm whereas the second student takes it as 4.7 cm. The first  
+student  thinks  that  the  edge  is  nearer  to  6  mm  mark  whereas  the  
+
+                                                            20  
+  
+﻿ second student considers the edge of the rod nearer to 7 mm mark. It is difficult  
+ to decide what is the true length.                                          Quick Quiz  
+           Both students agree on digit 4                    Name   some   repetitive   processes  
+ but the next digit is doubtful which has                    occuring  in  nature which could serve as  
+                                                             reasonable time standard.  
+ been  determined  by  estimation  only  
+ and has a probability of error. Therefore, it is known as a doubtful digit. In any  
+ measurement,  the  accurately  known  digits  and  the  first  doubtful  digit  are  
+ known-as significant figures.  
+          The following points are to be kept in mind while determining the number  
+ of significant figures in any data.  All digits from  1 to 9 are significant. However,  
+ zeros may or may not be significant. In case of zeros, the following rules apply:  
+ (a) A zero between two digits is considered significant. For example in 5.06m, the  
+      number of significant figures is 3.  
+ (b) Zeros on the left side of the measured value are not significant. For example,  
+      in 0.0034 m, the number of significant figures is 2.  
+ (c) Zeros on the right side of a decimal are considered significant. For example, in  
+      2.40 mm the significant digits are 3.  
+ (d)  If numbers are recorded in scientific notation, then all the digits before the  
+                                                                            4 
+      exponent are significant. For example, in 3.50 ×  10 m, the significant figures  
+      are 3.  
+                                                 Quick Quiz  
+              How many significant figures are there in each of the following?  
+
+                                 2  
+                    (a) 1.25 × 10  m        (b) 12.5  cm       (c) 0.125  m        (d) 0.000125 km  
+
+ 1.12 Precision and Accuracy  
+
+          A physical measurements should be precise as well as accurate. These are  
+ two  separate  concepts  and  need  clear  distinction.  Generally,  precision  of  a  
+ measurement refers to how close together a group of measurements actually are  
+ to each other. Accuracy of a measurement refers how close the measured value is  
+ to some accepted or true value.  
+
+    (a)                                      (b)                                      (c)  
+
+                                                                                                                 
+    Precise not accurate                    Accurate not precise                     Accurate and precise  
+                                                   Fig. 1.15  
+
+          A classic illustration is helpful to distinguish the two concepts.  Consider a  
+target or bullseye hit by  arrows  in Fig. 1.15. To be precise, arrows must hit near  
+each other (Fig.1.15-a)  and to  be  accurate, arrows must hit  near  the  bullseye  
+
+                                                       21  
+  
+﻿(Fig.  1.15-b).  Consistently  hitting  near  the  centre  of  bullseye  indicates  both  
+precision  and  accuracy  (Fig.  1.15-c).  When  these  concepts  are  applied  to  
+measurements, the precision is determined by the instrument being used for  
+measurement. The smaller the least count, the more precise is the measurement.  
+A measurement is accurate if it correctly reflects the size of the object being  
+measured.  Accuracy  depends  on  fractional  uncertainty  in  the  measurement.  
+Infact, it is relative measurement which is important. The smaller the size of  
+physical  quantity,  the  more  precise  instrument  is  needed  to  be  used.  The  
+accuracy of measurement is reflected by the number of significant figures, the  
+larger is the number of significant figures, the higher is the accuracy.  
+
+  
+
+                                         Table 1.7 Some Timing Devices  
+   Type of clock/watch                        Use and accuracy  
+
+                                                                                                                       -10  
+   Atomic clock                               Measures very short time intervals of about 10                              seconds.  
+    Digital stopwatch                         Measures short time intervals (in minutes and seconds)  
+                                              to an accuracy to  ±0.01 s.  
+   Analogue stopwatch                         Measures short time intervals (in minutes and seconds)  
+                                              to an accuracy to  ±0.1 s.  
+   Ticker-tape timer                          Measures short time intervals of 0.02 s.  
+   Watch/Clock                                Measures longer time intervals in hours, minutes and  
+                                              seconds.  
+    Pendulum clock                            Measures longer time intervals in hours, minutes and  
+                                              seconds.  
+    Radioactive decay  clock                  Measures (in years) the age of remains from thousands  
+                                              of years ago.  
+
+  
+
+1.13 Rounding off the digits  
+
+            When rounding off numbers to a certain number of significant figures, do  
+so to the nearest value. If the last digit is more than 5, the retained digit is  
+increased by one and if it is less than 5, it is retained as such.  
+For example:  
+            (i)  Round to 2 significant figures: 2.512 × 10³ m.  
+                                                                                                Answer: 2.5 × 10³ m  
+            (ii) Round to 3 significant figures: 3.4567 × 10⁴ kg.   
+                                                                                                Answer: 3.46 × 10⁴ kg  
+            For the integer 5, there is an arbitrary rule:  
+If the number before the 5 is odd, one is added to the last digit retained.  
+If the number before the 5 is even, it remains the same:  
+
+                                                                    22  
+  
+﻿For example:                                                                             Do You Know?  
+                                                                             2            
+            (i) Round to 2 significant figures: 4.45 × 10 m.  
+
+                                                                              2  
+            (ii) Round to 2 significant figures: 4.55 × 10 m.  
+
+                                                                              2  
+                                                   Answer: 4.4 ×  10  m  
+
+                                                                              2  
+                                                   Answer: 4.6 × 10  m  
+            Sometimes, logic is applied to decide the fate  
+ of   a   digit.  If   we   round  to   2  significant  figures                                                                
+                                                                                              An Electronic timer  
+                2                                                    2  
+4.452 × 10  m, the answer should be 4.5 × 10  m since                                          can measure time  
+                  2                                                 2                        intervals as short as  
+4.452  ×  10        m  is  more  closer  to  4.5  ×  10                m  than  
+                                                                                              one-ten thousands  
+            2  
+4.4 × 10 m.                                                                                 (1/10,000) of a second.  
+
+                                                   KEY POINTS  
+
+      A physical quantity can be measured directly or indirectly using some instruments.  
+
+      Non-physical quantity is not measurable using an instrument. It qualitatively depends  
+       on the perception of the observer and estimated only.  
+
+      Base quantities are length, mass, time, temperature, electric current, etc.  
+
+      Derived quantities are all those quantities which can be defined with reference to  
+       base quantities. For example, speed, area, volume, etc.  
+
+      Standard  unit  does  not  vary  from  person  to  person  and  understood  by  all  the  
+       scientists.  
+
+      Base units of system international are: metre, kilogram, second, ampere, candela,  
+       kelvin and mole.  
+
+      The units which can be expressed in terms of base units are called derived units.  
+
+      Scientific notation is an internationally accepted way of writing numbers in which  
+       numbers  are  recorded  using  the  powers  of  ten  or  prefixes  and  there  is  only  one  
+       non-zero digit before the decimal.  
+
+      Least count is the least measurement recorded by an instrument.  
+
+      Vernier Callipers is an instrument which can measure length correct up to 0.1 mm.  
+
+      Screw guage is an instrument which can measure length correct up to 0.01 mm.  
+
+      Measurements using instruments are not perfect. There are inevitable errors in the  
+       measured values, may be due to human errors, systematic errors and random errors.  
+
+      Measurements using instruments errors are uncertain to some extent depending  
+       upon the limitations or refinement of the instrument.  
+
+      Significant figures are the accurately known digits and first doubtful digit in any  
+       measurement.  
+
+      The precision is detemined by the instrument being used for  measurement whereas  
+       the accuracy depends on relative measurement reflected by the number of significant  
+       figures.  
+
+                                                            23  
+  
+﻿                                             EXERCISE  
+ A      Multiple Choice Questions  
+         Tick () the correct answer.                                        
+
+1.1.     The instrument that is most suitable for measuring the thickness of a few  
+         sheets of cardboard is a:  
+         (a) metre rule                                  (b) measuring tape  
+         (c) Vernier Callipers                           (d) micrometer  screw gauge  
+1.2.     One femtometre is equal to:  
+                 –                                              – 
+         (a) 10 ⁹ m                                      (b) 10 ¹⁵ m  
+                 9  
+         (c) 10 m                                        (d) 10¹⁵ m  
+1.3.     A light year is a unit of:  
+         (a)  light                                      (b)  time  
+         (c)  distance                                   (d)  speed  
+1.4.     Which one is a non-physical quantity?  
+         (a) distance                                    (b) density  
+         (c) colour                                      (d) temperature  
+1.5.     When using a measuring cylinder, one precaution to take is to:  
+         (a) check for the zero error  
+         (b) look at the meniscus from below the level of the water surface  
+         (c) take several readings by looking from more than one direction  
+         (d) position the eye in line with the bottom of the meniscus  
+1.6.     Volume of water consumed by you per day is estimated in:  
+         (a) millilitre                                  (b) litre  
+         (c) kilogram                                    (d) cubic metre  
+1.7.     A displacement can is used to measure:  
+         (a) mass of a liquid                            (b) mass of a solid  
+         (c) volume of a liquid                          (d) volume of a solid  
+1.8.     Two rods with lengths 12.321 cm and 10.3 cm are placed side by side, the  
+         difference in their lengths is:  
+         (a) 2.02 cm        (b) 2.0 cm                   (c) 2 cm           (d) 2.021 cm  
+1.9.     Four students measure the diameter of a cylinder with Vernier Callipers.  
+         Which of the following readings is correct?  
+         (a) 3.4 cm         (b) 3.475 cm                  (c) 3.47 cm       (d) 3.5 cm  
+1.10.   Which of the following measures are likely to represent the thickness of a  
+         sheet of this book?  
+                      –                                              – 
+         (a) 6 × 10 ²⁵  m                                (b) 1 × 10 ⁴  m  
+                        –                                            – 
+         (c) 1.2 × 10 ¹⁵  m                              (d) 4 × 10 ²  m  
+1.11.    In a Vernier Callipers ten smallest divisions of the Vernier scale are equal to  
+         nine smallest divisions of the main scale. If the smallest division of the  
+         main scale is half millimetre, the Vernier constant is equal to:  
+         (a) 0.5  mm                                     (b) 0.1  mm  
+          (c) 0.05  mm                                   (d) 0.001  mm  
+
+                                                     24  
+  
+﻿  B       Short Answer Questions  
+                                                                          
+1.1.       Can a non-physical quantity be measured? If yes, then how?  
+1.2.       What is measurement? Name its two parts.  
+1.3.       Why do we need a standard unit for measurements?  
+1.4.       Write the name of 3 base quantities and 3 derived quantities.  
+1.5.       Which SI unit will you use to express the height of your desk?  
+1.6.       Write the name and symbols of all SI base units.  
+1.7.       Why  prefix  is  used?  Name  three  sub-multiples  and  three  multiple  
+            prefixes with their symbols.  
+1.8.       What is meant by:  
+            (a)   5 pm  
+            (b)  15 ns  
+            (c)   6  μm  
+            (d)   5  fs  
+                                                                                                    Main scale  
+1.9.        (a) For what purpose, a Vernier Callipers is                                 0         1          2         3          4  
+
+            used?  
+            (b) Name its two main parts.                                                                              0    5  10  
+            (c) How is least count found?                                                                           Vernier scale  
+
+            (d) What is meant by zero error?  
+                                                                                                                   6.0 cm  
+                                                                                                           5.9 cm          6.1 cm  
+1.10.   State   least   count   and   Vernier   scale  
+                                                                                                                       B       C  
+                                                                                                               A  
+            reading as shown in the figure and hence,  
+           find the length.  
+                                                                                            0    1    2    3   4    5    6  
+1.11.   Which reading out of A, B and C shows the  
+           correct length and why?  
+
+  
+
+  C       Constructed Response Questions  
+
+1.1.        In what unit will you express each of the following?  
+            (a) Thickness of a five-rupee coin:  
+            (b) Length of a book:  
+            (c) Length of football field:  
+            (d) The distance between two cities:  
+            (e) Mass of five-rupee coin:  
+            (f) Mass of your school bag:  
+            (g) Duration of your class period:  
+            (h) Volume of petrol filled in the tank of a car:  
+            (i) Time to boil one litre milk:  
+
+                                                                 25  
+  
+﻿1.2.      Why might a standard system of measurement be helpful to a tailor?  
+
+1.3.      The  minimum  main  scale  reading  of  a  micrometer                                        80  
+
+                                                                                             0  
+
+          screw gauge is 1 mm and there are 100 divisions on the                                       70  
+          circular scale. When thimble is rotated once, 1 mm is its                                    60  
+
+          measurement  on  the  main  scale.  What  is  the  least  
+          count of the instrument? The reading for thickness of a steel rod as shown  
+          in the figure. What is the thickness of the rod?  
+
+1.4.      You are provided a metre scale and a bundle of pencils; how can the  
+          diameter of a pencil be measured using the metre scale with the same  
+          precision as that of Vernier Callipers? Describe briefly.  
+
+1.5.      The end of a metre scale is worn out. Where will you place a pencil to find  
+          the length?  
+
+1.6.      Why is it better to place the object close to the metre scale?  
+
+1.7.      Why a standard unit is needed to measure a quantity correctly?  
+
+1.8.      Suggest  some  natural  phenomena  that  could  serve  as  a  reasonably  
+          accurate time standard.  
+
+1.9.      It is difficult to locate the meniscus in a wider vessel. Why?  
+
+1.10.   Which instrument can be used to measure:  
+
+          (i) Internal diameter of a test tube.  (ii) Depth of a beaker.  
+
+  
+
+  D     Comprehensive Questions  
+
+1.1.      What  is  meant  by  base  and  derived  quantities?  Give  the  names  and  
+          symbols of SI base units.  
+1.2.      Give three examples of derived unit in SI. How are they derived from base  
+          units? Describe briefly.  
+1.3.      State  the  similarities  and  differences  between  Vernier  Callipers  and  
+          micrometer screw gauge.  
+1.4.      Identity and explain the reasons for human errors, random errors and  
+          systematic errors  in experiments.  
+1.5.      Differentiate  between  precision  and  accuracy  of  a  measurement  with  
+          examples.  
+
+                                                        26  
+  
+﻿   E       Numerical Problems  
+                                                                
+1.1          Calculate the number of second in a (a) day (b) week (c) month and state  
+            your answers using SI prefixes.                                                    (86.4 ks, 604.8 ks, 2.592 Ms)  
+
+1.2          State the answers of problem 1.1 in scientific notation.  
+
+                                                                       [8.64 ×  10⁴ s, 6.048 ×  10⁵ s, 2.592 ×  10⁶ s]  
+
+1.3          Solve  the  following  addition  or  subtraction.  State  your  answers  in  
+             scientific notation.  
+
+                                –                       –                                          –                        – 
+             (a)     4 × 10 ⁴  kg + 3 × 10 ⁵  kg                            (b)       5.4 × 10 ⁶  m – 3.2 × 10 ⁵  m  
+
+                                                                                              –                                           – 
+                                                                      [(a)      4.3 ×  10 ⁴  kg   (b)                – 2.66 ×  10 ⁵ m]  
+1.4          Solve  the  following  multiplication  or  division.  State  your  answers  in  
+             scientific notation.  
+                                                     –                                           6 ×  10⁸  kg  
+
+                                                                                                 
+             (a) (5 × 10⁴  m) × (3 × 10 ²  m)                                            (b)                         
+                                                                                                 3 ×  10⁴  m³  
+
+                                                                                                                                                – 
+                                                                            (a)  1.5 ×  10³ m²                 (b) 2.0 ×  10⁴ kg m ³  
+
+1.5          Calculate the following and state your answer in scientific notation.  
+                  (3 ×  10² kg) × (4.0 km)  
+
+                              5 ×  10² s²  
+
+                                                                                                                                               – 
+                                                                                                                (2.4 ×  10³ kg m s ²)  
+
+ 1.6         State the number of significant digits in each measurement.  
+
+                                                                                                                  4  
+             (a) 0.0045 m   (b) 2.047 m                          (c) 3.40 m               (d) 3.420 × 10 m  
+
+                                                                                                   [(a) 2   (b) 4           (c) 3        (d) 4]  
+
+1.7         Write in scientific notation:  
+
+             (a) 0.0035 m                          (b) 206.4 × 10² m  
+
+                                                                                                    – 
+                                                                              [(a) 3.5 ×  10 ³  m, (b) 2.064 ×  10⁴  m)]  
+
+1.8         Write using correct prefixes:  
+
+                                                                                              – 
+             (a) 5.0 × 10⁴ cm    (b) 580 × 10²  g    (c) 45 × 10 ⁴ s  [(0.5  km, 58 kg, 4.5 ms)]  
+
+1.9          Light  year  is  a  unit  of  distance  used  in  Astronomy.  It  is  the  distance  
+
+                                                                                                                                               - 
+             covered by light in one year. Taking the speed of light as 3.0 ×  10⁸ m s ¹,  
+             calculate the distance.  
+
+                                                                                                                       (9.46 ×  10¹⁵ m)  
+
+                                                                                                     -3              -3 
+1.10         Express the density of mercury given as 13.6 g cm                                          in kg m  .  
+
+                                                                                                                                   4           - 
+                                                                                                                 (1.36 ×  10  kg m ³)  
+
+                                                                       27  
+  

@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import AppNavigator from '@/layouts/AppNavigator';
 import { AppThemeProvider, useTheme } from '@/lib/ThemeContext';
 // ============================================
@@ -45,8 +46,10 @@ const AppContent: React.FC = () => {
 // Root App component
 export default function App() {
   return (
-    <AppThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AppThemeProvider>
         <AppContent />
-    </AppThemeProvider>
+      </AppThemeProvider>
+    </GestureHandlerRootView>
   );
 }

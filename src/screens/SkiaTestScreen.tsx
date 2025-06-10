@@ -1,117 +1,112 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import {
-  Canvas,
-  Circle,
-  Group,
-  vec
-} from '@shopify/react-native-skia';
+import { Canvas, Circle, Group, vec } from '@shopify/react-native-skia';
 import {
   useSharedValue,
   useDerivedValue,
-  runOnJS,
+  withSpring,
+  withRepeat,
+  withTiming,
+  runOnJS
 } from 'react-native-reanimated';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 
-const canvasSize = 400;
-
-type TestComponentProps = {
-  width: number;
-  height: number;
-};
-
-const BouncingBall = ({ width, height }: TestComponentProps) => {
-  const x = useSharedValue(width / 2);
-  const y = useSharedValue(height / 2);
-  const dx = useSharedValue(3);
-  const dy = useSharedValue(2);
-  const radius = 20;
-
-  useEffect(() => {
-    let animationFrameId: number;
-
-    const update = () => {
-      'worklet';
-      x.value += dx.value;
-      y.value += dy.value;
-
-      if (x.value < radius || x.value > width - radius) {
-        dx.value *= -1;
-      }
-      if (y.value < radius || y.value > height - radius) {
-        dy.value *= -1;
-      }
-
-      animationFrameId = requestAnimationFrame(() => runOnJS(update)());
-    };
-
-    animationFrameId = requestAnimationFrame(() => runOnJS(update)());
-    return () => cancelAnimationFrame(animationFrameId);
-  }, []);
-
-  const cx = useDerivedValue(() => x.value);
-  const cy = useDerivedValue(() => y.value);
-
-  return <Circle cx={cx} cy={cy} r={radius} color="blue" />;
-};
-
-const RotatingCircles = ({ width, height }: TestComponentProps) => {
-  const rotation = useSharedValue(0);
-  const scale = useSharedValue(1);
-
-  useEffect(() => {
-    let animationFrameId: number;
-
-    const update = () => {
-      'worklet';
-      rotation.value = (rotation.value + 1) % 360;
-      scale.value = 1 + 0.5 * Math.sin(Date.now() / 500);
-      animationFrameId = requestAnimationFrame(() => runOnJS(update)());
-    };
-
-    animationFrameId = requestAnimationFrame(() => runOnJS(update)());
-    return () => cancelAnimationFrame(animationFrameId);
-  }, []);
-
-  const transform = useDerivedValue(() => [
-    { rotate: rotation.value * (Math.PI / 180) },
-    { scale: scale.value }
-  ]);
-
-  return (
-    <Group origin={vec(width / 2, height / 2)} transform={transform}>
-      <Circle cx={width / 2 - 50} cy={height / 2} r={30} color="green" />
-      <Circle cx={width / 2 + 50} cy={height / 2} r={30} color="purple" />
-    </Group>
-  );
-};
-
-const InteractiveBall = ({ pos }: { pos: any }) => {
-  const animatedX = useDerivedValue(() => pos.value.x);
-  const animatedY = useDerivedValue(() => pos.value.y);
-
-  return <Circle cx={animatedX} cy={animatedY} r={40} color="orange" />;
-};
-
 const SkiaTestScreen = () => {
-  const [activeTest, setActiveTest] = useState<'bouncing' | 'rotating' | 'interactive'>('bouncing');
-  const pos = useSharedValue(vec(canvasSize / 2, canvasSize / 2));
+  const canvasSize = 400;
+  const [activeTest, setActiveTest] = useState<'bouncing'|'rotating'|'interactive'>('bouncing');
+  const interactivePos = useSharedValue(vec(canvasSize/2, canvasSize/2));
 
-  const gesture = Gesture.Pan().onChange((e) => {
-    pos.value = vec(e.x, e.y);
-  });
+  // Bouncing Ball Component
+  const BouncingBall = ({ width, height }: {width: number, height: number}) => {
+    const radius = 20;
+    const x = useSharedValue(width/2);
+    const y = useSharedValue(height/2);
+    const dx = useSharedValue(3);
+    const dy = useSharedValue(4);
 
-  const renderTest = () => {
-    switch (activeTest) {
-      case 'bouncing':
-        return <BouncingBall width={canvasSize} height={canvasSize} />;
-      case 'rotating':
-        return <RotatingCircles width={canvasSize} height={canvasSize} />;
-      case 'interactive':
-        return <InteractiveBall pos={pos} />;
-      default:
-        return null;
-    }
+    useEffect(() => {
+      const update = () => {
+        // Update position
+        x.value += dx.value;
+        y.value += dy.value;
+
+        // Handle wall collisions with position correction
+        if (x.value <= radius) {
+          dx.value = Math.abs(dx.value);
+          x.value = radius + 1;
+        } else if (x.value >= width - radius) {
+          dx.value = -Math.abs(dx.value);
+          x.value = width - radius - 1;
+        }
+
+        if (y.value <= radius) {
+          dy.value = Math.abs(dy.value);
+          y.value = radius + 1;
+        } else if (y.value >= height - radius) {
+          dy.value = -Math.abs(dy.value);
+          y.value = height - radius - 1;
+        }
+
+        requestAnimationFrame(update);
+      };
+      const frame = requestAnimationFrame(update);
+      return () => cancelAnimationFrame(frame);
+    }, [width, height]);
+
+    return <Circle cx={useDerivedValue(() => x.value)}
+                  cy={useDerivedValue(() => y.value)}
+                  r={radius} color="blue" />;
+  };
+
+  // Rotating Circles Component
+  const RotatingCircles = ({ width, height }: {width: number, height: number}) => {
+    const rotation = useSharedValue(0);
+    const scale = useSharedValue(1);
+
+    useEffect(() => {
+      rotation.value = withRepeat(
+        withTiming(360, { duration: 2000 }),
+        -1,
+        false
+      );
+      scale.value = withRepeat(
+        withTiming(1.5, { duration: 1000 }),
+        -1,
+        true
+      );
+    }, []);
+
+    return (
+      <Group
+        origin={vec(width/2, height/2)}
+        transform={useDerivedValue(() => [
+          { rotate: rotation.value * (Math.PI/180) },
+          { scale: scale.value }
+        ])}
+      >
+        <Circle cx={width/2 - 50} cy={height/2} r={30} color="green" />
+        <Circle cx={width/2 + 50} cy={height/2} r={30} color="purple" />
+      </Group>
+    );
+  };
+
+  // Interactive Ball Component
+  const InteractiveBall = () => {
+    const gesture = Gesture.Pan()
+      .onChange((e) => {
+        interactivePos.value = vec(e.x, e.y);
+      });
+
+    return (
+      <GestureDetector gesture={gesture}>
+        <Circle
+          cx={useDerivedValue(() => interactivePos.value.x)}
+          cy={useDerivedValue(() => interactivePos.value.y)}
+          r={40}
+          color="orange"
+        />
+      </GestureDetector>
+    );
   };
 
   return (
@@ -137,11 +132,11 @@ const SkiaTestScreen = () => {
         </TouchableOpacity>
       </View>
 
-      <GestureDetector gesture={gesture}>
-        <Canvas style={styles.canvas}>
-          {renderTest()}
-        </Canvas>
-      </GestureDetector>
+      <Canvas style={styles.canvas}>
+        {activeTest === 'bouncing' && <BouncingBall width={canvasSize} height={canvasSize} />}
+        {activeTest === 'rotating' && <RotatingCircles width={canvasSize} height={canvasSize} />}
+        {activeTest === 'interactive' && <InteractiveBall />}
+      </Canvas>
     </View>
   );
 };
@@ -160,8 +155,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   canvas: {
-    width: canvasSize,
-    height: canvasSize,
+    width: 400,
+    height: 400,
     borderWidth: 1,
     borderColor: '#ccc',
     alignSelf: 'center'

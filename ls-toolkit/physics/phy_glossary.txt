@@ -1,3 +1,22 @@
+i'm developing a student helper app which presents textbook topics in modular and simpler ay divided into several sections to make it easier for the students to understand, comprehend the content.
+a sample chemistry source and converted topic is given.
+schema is given where this data is ingested.
+chemistry book is complete. now i want to create the same for physics. there are two main tasks.
+
+1. modularize the content
+2. extract and list Glossary related to the topic. strictly stick to Physics related words. do not add general english vocabulary words. format like below
+
+[Topic 3.1 - Concept of Force]
+physical interaction, vector quantity, magnitude, direction, Newtons
+
+3. add a new module called real world applications
+4. Make use of tables where needed
+5. add a hidden tag anywhere in the topic where an animation or image/illustration OR GRAPH should be added. with a necessity score like if the image/animation must be added or good to have
+6. add physics numerical of each topic if needed
+7. when you have completed the artifacts, Do not generate artifact analysis after that. you are allowed to say all done. you may express an issue with the topic content if you come across any
+
+
+
 [Topic 1.1 Physical and Non-Physical Quantities]
 physical quantities,non-physical quantities,measurable,instruments,numerical magnitude,unit,standard units,direct measurement,indirect measurement,objective measurement,subjective assessment,rulers,clocks,thermometers,balances,mass,length,time,temperature,volume,density,perception,interpretation,qualitative description,predetermined criteria,indices,survey techniques,beauty,wisdom,fear,affection,love,natural phenomena,matter,laws of physics,principles of physics,measurement,quantification,reproducible,scientific study,human experience,emotions
 
@@ -78,3 +97,12 @@ gravitational attraction, acceleration, composition, fundamental constant, unive
 
 [Topic 3.1 - Concept of Force]
 physical interaction, vector quantity, magnitude, direction, Newtons, acceleration, deformation, characteristics, fundamental concepts, cosmic structures, theoretical, intensely practical, invisible, observable, transferred, continuously, vector nature, energy transfer, action-reaction pairs, additive property, resultant force, contact forces, non-contact forces, physical touch, friction, tension, normal forces, gravitational, magnetic, electrical, mathematical relationships, compression, rotation, equilibrium, proportional, dynamics, engineering applications, mechanical advantage, propulsion forces, resistance forces, braking forces, optimization, traction, distribution networks, locomotive, freight trains, wheel slippage, crane systems, shipping containers, rolling friction, tension forces, spinning, weaving, compressive forces, rolling mills, grinding forces, crushing, durability, compliance, gripping forces, resistance forces, thermal updrafts, atmospheric forces, cumulative force, plankton, devastating, delicate, elastic force, tendons, energy-efficient, tidal forces, gradual
+
+[Topic 3.9 - Momentum and Impulse]
+momentum, impulse, vector quantity, collision, conservation, recoil, inelastic collision, elastic collision, newton-second, velocity, acceleration, magnitude, direction
+
+[Topic 3.10 - Principle of Conservation of Momentum]
+conservation, momentum, isolated system, collision, elastic collision, inelastic collision, recoil, velocity, acceleration, system, external force, internal force, transfer
+
+[Topic 4.1 - Like and Unlike Parallel Forces]
+parallel forces, like parallel forces, unlike parallel forces, resultant force, rigid body, vector quantity, direction, magnitude, equilibrium, application point

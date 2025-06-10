@@ -3427,8 +3427,6 @@
             </numerical_problem>
         </section>
     </topic>
-    <root>
-<chapter>
     <topic id="2.8" title="Gradient of a Distance-Time Graph 📈">
         <section type="CORE_DEFINITION" title="CORE DEFINITION">
             <definition_content>
@@ -5272,7 +5270,7 @@
             </numerical_problem>
         </section>
     </topic>
-<chapter>
+<chapter id="3">
     <topic id="3.1" title="Concept of Force 💪⚡">
         <section type="CORE_DEFINITION" title="CORE DEFINITION">
             <definition_content>
@@ -7713,4 +7711,670 @@
             </numerical_problem>
         </section>
     </topic>
+    <topic id="3.9" title="Momentum and Impulse ⚡">
+
+        <section type="CORE_DEFINITION" title="CORE DEFINITION">
+            <definition_content>
+                <paragraph><emphasis type="bold">Momentum</emphasis> of a moving body is the product of its mass and velocity. It is represented by the symbol <emphasis type="italic">p</emphasis> and given by the formula: <formula type="physics">p = m × v</formula></paragraph>
+                <paragraph><emphasis type="bold">Impulse</emphasis> is defined as the product of force and the time interval during which the force acts, equal to the total change in momentum of an object: <formula type="physics">Impulse = F × Δt = m × ΔV</formula></paragraph>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing momentum concept with moving objects of different masses and velocities" -->
+            </definition_content>
+        </section>
+
+        <section type="EXPLANATION" title="EXPLANATION">
+            <explanation_content>
+                <paragraph>Imagine a bicycle rider and a heavy truck moving at the same speed. Which one would be easier to stop? The answer depends on the <emphasis type="italic">quantity of motion</emphasis> possessed by each object. This quantity of motion is what we call momentum.</paragraph>
+
+                <paragraph>The momentum of a body depends on two factors: its mass and its velocity. The greater the mass, the greater the momentum. Similarly, the greater the velocity, the greater the momentum. Momentum is a vector quantity, meaning it has both magnitude and direction, just like velocity.</paragraph>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Comparison diagram showing bicycle vs truck momentum" -->
+
+                <paragraph>The SI unit of momentum is <formula type="physics">kg m s⁻¹</formula>, which can also be written as <formula type="physics">N s</formula> (newton-second).</paragraph>
+
+                <paragraph>When dealing with collisions or impacts, it's often difficult to measure the exact force applied during the very short time interval. However, we can easily measure the initial and final velocities of objects. This is where the concept of impulse becomes crucial.</paragraph>
+
+                <paragraph>According to Newton's second law, when a force <emphasis type="italic">F</emphasis> acts on an object for a time interval <emphasis type="italic">Δt</emphasis>, it produces a change in momentum. The product <emphasis type="italic">F × Δt</emphasis> is called the impulse of the force.</paragraph>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing ball being hit by bat with force-time graph" -->
+
+                <paragraph>From Newton's second law, we can derive that: <formula type="physics">F × Δt = m(vf - vi)</formula>, where <emphasis type="italic">vf</emphasis> is the final velocity and <emphasis type="italic">vi</emphasis> is the initial velocity.</paragraph>
+
+                <paragraph>This leads us to an alternative statement of Newton's second law in terms of momentum: <emphasis type="bold">The rate of change of momentum of a body is equal to the force acting on it.</emphasis> Mathematically: <formula type="physics">F = Δp/Δt</formula></paragraph>
+            </explanation_content>
+        </section>
+
+        <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+            <key_concepts_content>
+                <concept id="3.9.kc1">
+                    <title>Vector Nature of Momentum</title>
+                    <description>Momentum is a vector quantity that follows the same direction as velocity. In collisions, we must consider both magnitude and direction.</description>
+                </concept>
+                <concept id="3.9.kc2">
+                    <title>Impulse-Momentum Theorem</title>
+                    <description>The impulse delivered to an object equals the change in its momentum: <formula type="physics">J = Δp = m(vf - vi)</formula></description>
+                </concept>
+                <concept id="3.9.kc3">
+                    <title>Force and Time Relationship</title>
+                    <description>A large force acting for a short time can produce the same impulse as a small force acting for a long time.</description>
+                </concept>
+                <!-- HIDDEN_TAG: graph_required, necessity_score=7, description="Force vs time graph showing impulse as area under curve" -->
+            </key_concepts_content>
+        </section>
+
+        <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+            <worked_examples_content>
+                <example id="3.9.ex1" level="basic">
+                    <title>Calculating Momentum of a Bullet</title>
+                    <problem>
+                        <paragraph>A bullet of mass 15 g is fired by a gun. If the velocity of the bullet is 150 m s⁻¹, what is its momentum?</paragraph>
+                    </problem>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <list type="unordered">
+                            <item>Mass of bullet: m = 15 g = 0.015 kg</item>
+                            <item>Velocity of bullet: v = 150 m s⁻¹</item>
+                        </list>
+                        <paragraph><emphasis type="bold">To find:</emphasis> Momentum (p)</paragraph>
+                        <paragraph><emphasis type="bold">Formula:</emphasis> <formula type="physics">p = m × v</formula></paragraph>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>p = 0.015 kg × 150 m s⁻¹ = 2.25 kg m s⁻¹</paragraph>
+                    </solution>
+                </example>
+
+                <example id="3.9.ex2" level="intermediate">
+                    <title>Cricket Ball and Bat Collision</title>
+                    <problem>
+                        <paragraph>A cricket ball of mass 160 g is hit by a bat. The ball leaves the bat with a velocity of 52 m s⁻¹. If the ball strikes the bat with a velocity of -28 m s⁻¹ (opposite direction), find the average force exerted on the ball by the bat. The ball remains in contact with the bat for 4 × 10⁻³ s.</paragraph>
+                    </problem>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <list type="unordered">
+                            <item>Mass of ball: m = 160 g = 0.16 kg</item>
+                            <item>Initial velocity: vi = -28 m s⁻¹</item>
+                            <item>Final velocity: vf = 52 m s⁻¹</item>
+                            <item>Time of contact: t = 4 × 10⁻³ s</item>
+                        </list>
+                        <paragraph><emphasis type="bold">Formula:</emphasis> <formula type="physics">F = m(vf - vi)/t</formula></paragraph>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>F = 0.16 kg × [52 - (-28)] m s⁻¹ / (4 × 10⁻³ s)</paragraph>
+                        <paragraph>F = 0.16 × 80 / (4 × 10⁻³) = 3200 N</paragraph>
+                    </solution>
+                    <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Diagram showing ball-bat collision with velocity vectors" -->
+                </example>
+            </worked_examples_content>
+        </section>
+
+        <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+            <applications_content>
+                <application id="3.9.app1">
+                    <title>Vehicle Safety Systems</title>
+                    <description>Car airbags and crumple zones work on the principle of impulse. They increase the time duration of collision, thereby reducing the force experienced by passengers. Instead of stopping suddenly (large force, short time), the collision is extended over a longer time period (smaller force, longer time) while maintaining the same impulse.</description>
+                    <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Car crash showing airbag deployment and crumple zones" -->
+                </application>
+                <application id="3.9.app2">
+                    <title>Sports and Athletics</title>
+                    <description>Cricket fielders draw their hands backward while catching a ball to increase the time of contact, reducing the force on their hands. Similarly, gymnasts bend their knees when landing to increase the time of impact and reduce injury risk.</description>
+                </application>
+                <application id="3.9.app3">
+                    <title>Rocket Propulsion</title>
+                    <description>Rockets work on the principle of conservation of momentum. By ejecting fuel at high speed in one direction, the rocket gains momentum in the opposite direction. The impulse from the expelled gases provides the thrust needed for propulsion.</description>
+                    <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Rocket propulsion showing exhaust gases and momentum transfer" -->
+                </application>
+                <application id="3.9.app4">
+                    <title>Billiards and Pool</title>
+                    <description>When a cue ball strikes another ball, momentum is transferred from one ball to another. The direction and speed of both balls after collision depend on their masses and the angle of collision, following conservation of momentum principles.</description>
+                </application>
+            </applications_content>
+        </section>
+
+        <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+            <numerical_problems_content>
+                <problem id="3.9.np1" level="basic">
+                    <statement>A 10 kg object moving at 5 m s⁻¹ collides with a stationary 15 kg object. After collision, both objects move together. Find their common velocity.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Using conservation of momentum:</emphasis></paragraph>
+                        <paragraph>Initial momentum = Final momentum</paragraph>
+                        <paragraph>(10 × 5) + (15 × 0) = (10 + 15) × v</paragraph>
+                        <paragraph>50 = 25v</paragraph>
+                        <paragraph>v = 2 m s⁻¹</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="3.9.np2" level="intermediate">
+                    <statement>A force of 20 N acts on a 4 kg object for 3 seconds. If the object was initially at rest, find: (a) the impulse delivered, (b) the final velocity, (c) the final momentum.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>(a) Impulse = F × t = 20 N × 3 s = 60 N s</paragraph>
+                        <paragraph>(b) Since impulse = change in momentum = m × Δv</paragraph>
+                        <paragraph>60 = 4 × (v - 0)</paragraph>
+                        <paragraph>Final velocity = 15 m s⁻¹</paragraph>
+                        <paragraph>(c) Final momentum = m × v = 4 × 15 = 60 kg m s⁻¹</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="3.9.np3" level="advanced">
+                    <statement>A bullet of mass 20 g moving at 400 m s⁻¹ strikes a wooden block of mass 4 kg hanging vertically and embeds in it. Find the velocity of the block immediately after impact.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Using conservation of momentum:</emphasis></paragraph>
+                        <paragraph>m₁v₁ + m₂v₂ = (m₁ + m₂)v</paragraph>
+                        <paragraph>(0.02 × 400) + (4 × 0) = (0.02 + 4) × v</paragraph>
+                        <paragraph>8 = 4.02 × v</paragraph>
+                        <paragraph>v = 1.99 m s⁻¹ ≈ 2 m s⁻¹</paragraph>
+                    </solution>
+                </problem>
+            </numerical_problems_content>
+        </section>
+
+        <section type="EXPLANATION" title="EXPLANATION">
+            <explanation_content>
+                <paragraph>Imagine a bicycle rider and a heavy truck moving at the same speed. Which one would be easier to stop? The answer depends on the <emphasis type="italic">quantity of motion</emphasis> possessed by each object. This quantity of motion is what we call momentum.</paragraph>
+
+                <paragraph>The momentum of a body depends on two factors: its mass and its velocity. The greater the mass, the greater the momentum. Similarly, the greater the velocity, the greater the momentum. Momentum is a vector quantity, meaning it has both magnitude and direction, just like velocity.</paragraph>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Comparison diagram showing bicycle vs truck momentum" -->
+
+                <paragraph>The SI unit of momentum is <formula type="physics">kg m s⁻¹</formula>, which can also be written as <formula type="physics">N s</formula> (newton-second).</paragraph>
+
+                <table id="3.9.table1">
+                    <title>Comparison between Momentum and Impulse</title>
+                    <table_data>
+                        <row header="true">
+                            <cell>Property</cell>
+                            <cell>Momentum</cell>
+                            <cell>Impulse</cell>
+                        </row>
+                        <row>
+                            <cell>Definition</cell>
+                            <cell>Product of mass and velocity</cell>
+                            <cell>Product of force and time</cell>
+                        </row>
+                        <row>
+                            <cell>Formula</cell>
+                            <cell>p = m × v</cell>
+                            <cell>J = F × Δt</cell>
+                        </row>
+                        <row>
+                            <cell>SI Unit</cell>
+                            <cell>kg m s⁻¹ or N s</cell>
+                            <cell>N s</cell>
+                        </row>
+                        <row>
+                            <cell>Vector/Scalar</cell>
+                            <cell>Vector quantity</cell>
+                            <cell>Vector quantity</cell>
+                        </row>
+                        <row>
+                            <cell>Physical meaning</cell>
+                            <cell>Quantity of motion</cell>
+                            <cell>Change in momentum</cell>
+                        </row>
+                        <row>
+                            <cell>Relationship</cell>
+                            <cell>State of motion</cell>
+                            <cell>Impulse = Change in momentum</cell>
+                        </row>
+                    </table_data>
+                </table>
+
+                <paragraph>When dealing with collisions or impacts, it's often difficult to measure the exact force applied during the very short time interval. However, we can easily measure the initial and final velocities of objects. This is where the concept of impulse becomes crucial.</paragraph>
+
+                <paragraph>According to Newton's second law, when a force <emphasis type="italic">F</emphasis> acts on an object for a time interval <emphasis type="italic">Δt</emphasis>, it produces a change in momentum. The product <emphasis type="italic">F × Δt</emphasis> is called the impulse of the force.</paragraph>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing ball being hit by bat with force-time graph" -->
+
+                <paragraph>From Newton's second law, we can derive that: <formula type="physics">F × Δt = m(vf - vi)</formula>, where <emphasis type="italic">vf</emphasis> is the final velocity and <emphasis type="italic">vi</emphasis> is the initial velocity.</paragraph>
+
+                <paragraph>This leads us to an alternative statement of Newton's second law in terms of momentum: <emphasis type="bold">The rate of change of momentum of a body is equal to the force acting on it.</emphasis> Mathematically: <formula type="physics">F = Δp/Δt</formula></paragraph>
+            </explanation_content>
+        </section>
+    </topic>
+    <topic id="3.10" title="Principle of Conservation of Momentum ⚖️">
+
+        <section type="CORE_DEFINITION" title="CORE DEFINITION">
+            <definition_content>
+                <paragraph>The <emphasis type="bold">Principle of Conservation of Momentum</emphasis> states that if no external force acts on an isolated system, the final total momentum of the system is equal to the initial total momentum of the system.</paragraph>
+                <paragraph>Mathematically: <formula type="physics">Total momentum before collision = Total momentum after collision</formula></paragraph>
+                <paragraph>For a two-object system: <formula type="physics">m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'</formula></paragraph>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing conservation of momentum in ball collision" -->
+            </definition_content>
+        </section>
+
+        <section type="EXPLANATION" title="EXPLANATION">
+            <explanation_content>
+                <paragraph>A <emphasis type="italic">system</emphasis> is a collection of objects under consideration. When no external force acts on any object of the system, it is known as an <emphasis type="italic">isolated system</emphasis>. The principle of conservation of momentum is one of the most fundamental laws of physics and applies to all types of collisions and interactions.</paragraph>
+
+                <paragraph>Consider a system of two balls with masses m₁ and m₂, moving with velocities v₁ and v₂ along a straight line in the same direction. If v₁ > v₂, the balls will eventually collide. After collision, their velocities become v₁' and v₂' respectively.</paragraph>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Diagram showing two balls before and after collision with velocity vectors" -->
+
+                <paragraph>To understand this principle better, let's examine the collision of two identical balls where the second ball is initially at rest. When collision occurs, there is a transfer of momentum from one ball to another. The ball at rest gains momentum and starts moving, while the striking ball slows down.</paragraph>
+
+                <paragraph>If the balls are identical, we observe a complete transfer of momentum. The striking ball comes to rest and the other ball starts moving with the same speed as the original striking ball. This means the second ball gains momentum equal to that lost by the first one.</paragraph>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=9, description="Animation showing complete momentum transfer between identical balls" -->
+
+                <table id="3.10.table1">
+                    <title>Types of Collisions and Momentum Conservation</title>
+                    <table_data>
+                        <row header="true">
+                            <cell>Collision Type</cell>
+                            <cell>Description</cell>
+                            <cell>Momentum Conservation</cell>
+                            <cell>Energy Conservation</cell>
+                        </row>
+                        <row>
+                            <cell>Elastic Collision</cell>
+                            <cell>Objects bounce apart after collision</cell>
+                            <cell>Always conserved</cell>
+                            <cell>Kinetic energy conserved</cell>
+                        </row>
+                        <row>
+                            <cell>Inelastic Collision</cell>
+                            <cell>Objects stick together after collision</cell>
+                            <cell>Always conserved</cell>
+                            <cell>Kinetic energy not conserved</cell>
+                        </row>
+                        <row>
+                            <cell>Perfectly Inelastic</cell>
+                            <cell>Objects move together with same velocity</cell>
+                            <cell>Always conserved</cell>
+                            <cell>Maximum kinetic energy loss</cell>
+                        </row>
+                    </table_data>
+                </table>
+
+                <paragraph>The principle of conservation of momentum is applicable not only to macro-objects but also to micro-objects like atoms and molecules. This makes it a universal law that governs interactions at all scales in the universe.</paragraph>
+
+                <paragraph>During collisions, internal forces between objects are very large compared to any external forces. Therefore, we can treat the colliding objects as an isolated system and apply conservation of momentum even if some small external forces are present.</paragraph>
+            </explanation_content>
+        </section>
+
+        <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+            <key_concepts_content>
+                <concept id="3.10.kc1">
+                    <title>Isolated System</title>
+                    <description>A system where no external forces act on the objects within it. Only internal forces between objects are present.</description>
+                </concept>
+                <concept id="3.10.kc2">
+                    <title>Universal Application</title>
+                    <description>Conservation of momentum applies to all scales - from subatomic particles to planetary collisions.</description>
+                </concept>
+                <concept id="3.10.kc3">
+                    <title>Vector Nature</title>
+                    <description>Momentum conservation applies to each component (x, y, z) separately since momentum is a vector quantity.</description>
+                </concept>
+                <concept id="3.10.kc4">
+                    <title>Internal vs External Forces</title>
+                    <description>Internal forces between objects in a system do not change the total momentum. Only external forces can change the system's momentum.</description>
+                </concept>
+                <!-- HIDDEN_TAG: graph_required, necessity_score=7, description="Vector diagram showing momentum conservation in 2D collision" -->
+            </key_concepts_content>
+        </section>
+
+        <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+            <worked_examples_content>
+                <example id="3.10.ex1" level="intermediate">
+                    <title>Gun Recoil Problem</title>
+                    <problem>
+                        <paragraph>A bullet of mass m₁ is fired by a gun of mass m₂. Find the velocity of the gun in terms of velocity of bullet v₁ just after firing.</paragraph>
+                    </problem>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <list type="unordered">
+                            <item>Mass of bullet: m₁</item>
+                            <item>Mass of gun: m₂</item>
+                            <item>Velocity of bullet after firing: v₁</item>
+                            <item>Initial velocity of both bullet and gun: 0</item>
+                        </list>
+                        <paragraph><emphasis type="bold">To find:</emphasis> Velocity of gun (v₂)</paragraph>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>Before firing, both bullet and gun were at rest, so total momentum = 0</paragraph>
+                        <paragraph>By conservation of momentum:</paragraph>
+                        <paragraph>Total momentum before firing = Total momentum after firing</paragraph>
+                        <paragraph>0 = m₁v₁ + m₂v₂</paragraph>
+                        <paragraph>Therefore: v₂ = -m₁v₁/m₂</paragraph>
+                        <paragraph>The negative sign indicates that the gun moves backward (opposite to the bullet direction).</paragraph>
+                    </solution>
+                    <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Diagram showing gun recoil with momentum vectors" -->
+                </example>
+
+                <example id="3.10.ex2" level="intermediate">
+                    <title>Inelastic Collision</title>
+                    <problem>
+                        <paragraph>A ball of mass 3 kg moving with a velocity of 5 m s⁻¹ collides with a stationary ball of mass 2 kg and then both of them move together. If friction is negligible, find the velocity with which both balls will move after collision.</paragraph>
+                    </problem>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <list type="unordered">
+                            <item>Mass of first ball: m₁ = 3 kg</item>
+                            <item>Initial velocity of first ball: v₁ = 5 m s⁻¹</item>
+                            <item>Mass of second ball: m₂ = 2 kg</item>
+                            <item>Initial velocity of second ball: v₂ = 0</item>
+                        </list>
+                        <paragraph><emphasis type="bold">To find:</emphasis> Common velocity after collision (v)</paragraph>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>By conservation of momentum:</paragraph>
+                        <paragraph>m₁v₁ + m₂v₂ = (m₁ + m₂)v</paragraph>
+                        <paragraph>3 × 5 + 2 × 0 = (3 + 2) × v</paragraph>
+                        <paragraph>15 = 5v</paragraph>
+                        <paragraph>v = 3 m s⁻¹</paragraph>
+                    </solution>
+                </example>
+            </worked_examples_content>
+        </section>
+
+        <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+            <applications_content>
+                <application id="3.10.app1">
+                    <title>Rocket Propulsion</title>
+                    <description>Rockets work by expelling fuel at high speed in one direction, causing the rocket to accelerate in the opposite direction. The total momentum of the system (rocket + expelled fuel) remains constant, demonstrating conservation of momentum in space travel.</description>
+                    <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Rocket propulsion showing conservation of momentum" -->
+                </application>
+                <application id="3.10.app2">
+                    <title>Firearm Recoil</title>
+                    <description>When a bullet is fired from a gun, the gun experiences recoil. The momentum gained by the bullet forward equals the momentum gained by the gun backward. This is why shooters feel a "kick" when firing.</description>
+                </application>
+                <application id="3.10.app3">
+                    <title>Ice Skating Push-off</title>
+                    <description>When two ice skaters push off from each other, they move in opposite directions. If they have different masses, the lighter skater will move faster than the heavier one, but their momentum changes are equal and opposite.</description>
+                </application>
+                <application id="3.10.app4">
+                    <title>Car Crashes and Safety</title>
+                    <description>Car safety features like airbags and crumple zones are designed based on momentum conservation principles. While momentum is conserved in a crash, these features help manage the forces experienced by passengers.</description>
+                    <!-- HIDDEN_TAG: illustration_required, necessity_score=7, description="Car crash diagram showing momentum conservation and safety features" -->
+                </application>
+                <application id="3.10.app5">
+                    <title>Pool/Billiards</title>
+                    <description>In pool, when the cue ball strikes other balls, momentum is transferred according to conservation laws. The angles and speeds of the balls after collision can be predicted using momentum conservation principles.</description>
+                </application>
+            </applications_content>
+        </section>
+
+        <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+            <numerical_problems_content>
+                <problem id="3.10.np1" level="basic">
+                    <statement>A 5 g bullet is fired by a gun. The bullet moves with a velocity of 300 m s⁻¹. If the mass of the gun is 10 kg, find the recoil speed of the gun.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis> m₁ = 5 g = 0.005 kg, v₁ = 300 m s⁻¹, m₂ = 10 kg</paragraph>
+                        <paragraph><emphasis type="bold">Using conservation of momentum:</emphasis></paragraph>
+                        <paragraph>0 = m₁v₁ + m₂v₂</paragraph>
+                        <paragraph>v₂ = -m₁v₁/m₂ = -(0.005 × 300)/10 = -0.15 m s⁻¹</paragraph>
+                        <paragraph>The gun recoils at 0.15 m s⁻¹ backward.</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="3.10.np2" level="intermediate">
+                    <statement>An astronaut weighs 70 kg. He throws a wrench of mass 300 g at a speed of 3.5 m s⁻¹. Determine: (a) the speed of astronaut as he recoils away from the wrench, (b) the distance covered by the astronaut in 30 minutes.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis> m₁ = 70 kg, m₂ = 0.3 kg, v₂ = 3.5 m s⁻¹</paragraph>
+                        <paragraph><emphasis type="bold">(a) Recoil velocity:</emphasis></paragraph>
+                        <paragraph>0 = m₁v₁ + m₂v₂</paragraph>
+                        <paragraph>v₁ = -m₂v₂/m₁ = -(0.3 × 3.5)/70 = -0.015 m s⁻¹</paragraph>
+                        <paragraph><emphasis type="bold">(b) Distance in 30 minutes:</emphasis></paragraph>
+                        <paragraph>Distance = speed × time = 0.015 × (30 × 60) = 27 m</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="3.10.np3" level="advanced">
+                    <statement>A 6.5 × 10³ kg bogie of a goods train is moving with a velocity of 0.8 m s⁻¹. Another bogie of mass 9.2 × 10³ kg coming from behind with a velocity of 1.2 m s⁻¹ collides with the first one and couples to it. Find the common velocity of the two bogies after they become coupled.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <paragraph>m₁ = 6.5 × 10³ kg, v₁ = 0.8 m s⁻¹</paragraph>
+                        <paragraph>m₂ = 9.2 × 10³ kg, v₂ = 1.2 m s⁻¹</paragraph>
+                        <paragraph><emphasis type="bold">Using conservation of momentum:</emphasis></paragraph>
+                        <paragraph>m₁v₁ + m₂v₂ = (m₁ + m₂)v</paragraph>
+                        <paragraph>(6.5 × 10³ × 0.8) + (9.2 × 10³ × 1.2) = (6.5 + 9.2) × 10³ × v</paragraph>
+                        <paragraph>5200 + 11040 = 15700 × v</paragraph>
+                        <paragraph>v = 16240/15700 = 1.03 m s⁻¹</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="3.10.np4" level="advanced">
+                    <statement>Two balls of masses 0.2 kg and 0.4 kg are moving towards each other with velocities 20 m s⁻¹ and 5 m s⁻¹ respectively. After collision, the velocity of 0.2 kg ball becomes 6 m s⁻¹. What will be the velocity of 0.4 kg ball?</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <paragraph>m₁ = 0.2 kg, v₁ = 20 m s⁻¹, v₁' = 6 m s⁻¹</paragraph>
+                        <paragraph>m₂ = 0.4 kg, v₂ = -5 m s⁻¹ (opposite direction)</paragraph>
+                        <paragraph><emphasis type="bold">Using conservation of momentum:</emphasis></paragraph>
+                        <paragraph>m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'</paragraph>
+                        <paragraph>(0.2 × 20) + (0.4 × (-5)) = (0.2 × 6) + (0.4 × v₂')</paragraph>
+                        <paragraph>4 - 2 = 1.2 + 0.4v₂'</paragraph>
+                        <paragraph>2 = 1.2 + 0.4v₂'</paragraph>
+                        <paragraph>v₂' = 2 m s⁻¹</paragraph>
+                    </solution>
+                </problem>
+            </numerical_problems_content>
+        </section>
+
+    </topic>
+</chapter>
+<chapter id="4">
+    <topic id="4.1" title="Like and Unlike Parallel Forces ⟷">
+
+        <section type="CORE_DEFINITION" title="CORE DEFINITION">
+            <definition_content>
+                <paragraph><emphasis type="bold">Parallel Forces</emphasis> are all those forces which act parallel to one another. The points of application of such forces may be different.</paragraph>
+                <paragraph><emphasis type="bold">Like Parallel Forces</emphasis> are parallel forces acting in the same direction.</paragraph>
+                <paragraph><emphasis type="bold">Unlike Parallel Forces</emphasis> are parallel forces whose directions are opposite to one another.</paragraph>
+                <!-- HIDDEN_TAG: illustration_required, necessity_score=9, description="Diagram showing like and unlike parallel forces on a rigid body" -->
+            </definition_content>
+        </section>
+
+        <section type="EXPLANATION" title="EXPLANATION">
+            <explanation_content>
+                <paragraph>Forces are vector quantities that act in particular directions. We observe various effects of forces in our daily life: some forces produce acceleration or deceleration in a body, some tend to turn it around a point, and some forces balance each other when acting in opposite directions.</paragraph>
+
+                <paragraph>When multiple forces act on a rigid body, their relative directions determine how they interact. Parallel forces are particularly important because they can either reinforce each other (like parallel forces) or oppose each other (unlike parallel forces).</paragraph>
+
+                <paragraph>Consider three forces F₁, F₂, and F₃ acting on a rigid body at different points. If F₁ and F₂ are acting in the same direction, they are like parallel forces. However, if F₂ and F₃ are acting in opposite directions, they are unlike parallel forces.</paragraph>
+                <!-- HIDDEN_TAG: animation_required, necessity_score=8, description="Animation showing forces F1, F2, F3 acting on a rigid body with different directions" -->
+
+                <table id="4.1.table1">
+                    <title>Comparison between Like and Unlike Parallel Forces</title>
+                    <table_data>
+                        <row header="true">
+                            <cell>Property</cell>
+                            <cell>Like Parallel Forces</cell>
+                            <cell>Unlike Parallel Forces</cell>
+                        </row>
+                        <row>
+                            <cell>Direction</cell>
+                            <cell>Same direction</cell>
+                            <cell>Opposite directions</cell>
+                        </row>
+                        <row>
+                            <cell>Resultant Magnitude</cell>
+                            <cell>Sum of individual forces</cell>
+                            <cell>Difference of individual forces</cell>
+                        </row>
+                        <row>
+                            <cell>Effect on Motion</cell>
+                            <cell>Reinforce each other</cell>
+                            <cell>Oppose each other</cell>
+                        </row>
+                        <row>
+                            <cell>Equilibrium Possibility</cell>
+                            <cell>Cannot balance each other</cell>
+                            <cell>Can balance if equal magnitude</cell>
+                        </row>
+                        <row>
+                            <cell>Net Force</cell>
+                            <cell>Always non-zero</cell>
+                            <cell>Can be zero</cell>
+                        </row>
+                    </table_data>
+                </table>
+
+                <paragraph>The concept of parallel forces is fundamental to understanding how forces combine and interact. When dealing with like parallel forces, we simply add their magnitudes to find the resultant force. For unlike parallel forces, we subtract the smaller force from the larger one to find the net force.</paragraph>
+
+                <paragraph>It's important to note that even though forces may be parallel, their points of application can be different. This difference in application points becomes crucial when we study the rotational effects of forces, as it determines whether the forces will cause the object to rotate or remain in equilibrium.</paragraph>
+            </explanation_content>
+        </section>
+
+        <section type="KEY_CONCEPTS" title="KEY CONCEPTS">
+            <key_concepts_content>
+                <concept id="4.1.kc1">
+                    <title>Force Direction</title>
+                    <description>The direction of parallel forces determines whether they are like (same direction) or unlike (opposite directions).</description>
+                </concept>
+                <concept id="4.1.kc2">
+                    <title>Point of Application</title>
+                    <description>Parallel forces can have different points of application on the same rigid body, which affects their turning effects.</description>
+                </concept>
+                <concept id="4.1.kc3">
+                    <title>Resultant Force</title>
+                    <description>Like parallel forces add up, while unlike parallel forces subtract to give the net resultant force.</description>
+                </concept>
+                <concept id="4.1.kc4">
+                    <title>Equilibrium Conditions</title>
+                    <description>Unlike parallel forces of equal magnitude can balance each other, while like parallel forces cannot achieve equilibrium.</description>
+                </concept>
+                <!-- HIDDEN_TAG: graph_required, necessity_score=7, description="Vector addition diagram showing resultant of parallel forces" -->
+            </key_concepts_content>
+        </section>
+
+        <section type="WORKED_EXAMPLES" title="WORKED EXAMPLES">
+            <worked_examples_content>
+                <example id="4.1.ex1" level="basic">
+                    <title>Like Parallel Forces</title>
+                    <problem>
+                        <paragraph>Two like parallel forces of 15 N and 25 N act on a rigid body. Find the resultant force and its direction.</paragraph>
+                    </problem>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <list type="unordered">
+                            <item>Force 1: F₁ = 15 N</item>
+                            <item>Force 2: F₂ = 25 N</item>
+                            <item>Both forces are like parallel forces (same direction)</item>
+                        </list>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>For like parallel forces, the resultant is the sum of individual forces:</paragraph>
+                        <paragraph>Resultant force = F₁ + F₂ = 15 N + 25 N = 40 N</paragraph>
+                        <paragraph>Direction: Same as the direction of both forces</paragraph>
+                    </solution>
+                </example>
+
+                <example id="4.1.ex2" level="basic">
+                    <title>Unlike Parallel Forces</title>
+                    <problem>
+                        <paragraph>Two unlike parallel forces of 30 N and 18 N act on a rigid body. Find the resultant force and its direction.</paragraph>
+                    </problem>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <list type="unordered">
+                            <item>Force 1: F₁ = 30 N (let's say upward)</item>
+                            <item>Force 2: F₂ = 18 N (downward)</item>
+                            <item>Both forces are unlike parallel forces (opposite directions)</item>
+                        </list>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>For unlike parallel forces, the resultant is the difference of individual forces:</paragraph>
+                        <paragraph>Resultant force = |F₁ - F₂| = |30 N - 18 N| = 12 N</paragraph>
+                        <paragraph>Direction: Same as the direction of the larger force (upward)</paragraph>
+                    </solution>
+                </example>
+
+                <example id="4.1.ex3" level="intermediate">
+                    <title>Multiple Parallel Forces</title>
+                    <problem>
+                        <paragraph>Three parallel forces act on a rigid body: 20 N upward, 15 N upward, and 10 N downward. Find the net resultant force.</paragraph>
+                    </problem>
+                    <solution>
+                        <paragraph><emphasis type="bold">Given:</emphasis></paragraph>
+                        <list type="unordered">
+                            <item>F₁ = 20 N (upward)</item>
+                            <item>F₂ = 15 N (upward)</item>
+                            <item>F₃ = 10 N (downward)</item>
+                        </list>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>First, add all upward forces: 20 N + 15 N = 35 N (upward)</paragraph>
+                        <paragraph>Total downward force: 10 N (downward)</paragraph>
+                        <paragraph>Net resultant = 35 N - 10 N = 25 N (upward)</paragraph>
+                    </solution>
+                    <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Diagram showing multiple parallel forces on a rigid body" -->
+                </example>
+            </worked_examples_content>
+        </section>
+
+        <section type="REAL_WORLD_APPLICATIONS" title="REAL WORLD APPLICATIONS">
+            <applications_content>
+                <application id="4.1.app1">
+                    <title>Building Construction</title>
+                    <description>In construction, multiple parallel forces act on beams and pillars. Engineers must calculate the resultant of like parallel forces (such as multiple loads acting downward) to ensure structural integrity. The weight of floors, furniture, and occupants all act as like parallel forces on support beams.</description>
+                    <!-- HIDDEN_TAG: illustration_required, necessity_score=8, description="Building beam with multiple downward parallel forces" -->
+                </application>
+                <application id="4.1.app2">
+                    <title>Elevator Systems</title>
+                    <description>In an elevator, the weight of the cabin and passengers acts downward (like parallel forces), while the tension in the cable acts upward. These are unlike parallel forces that must be balanced for smooth operation. When the elevator accelerates, the cable tension exceeds the weight.</description>
+                </application>
+                <application id="4.1.app3">
+                    <title>Bridge Loading</title>
+                    <description>Vehicles crossing a bridge create multiple parallel downward forces at different points. These like parallel forces combine to create the total load on the bridge structure. Bridge engineers design supports to handle the maximum possible combination of such forces.</description>
+                </application>
+                <application id="4.1.app4">
+                    <title>Ship Stability</title>
+                    <description>On a ship, the weight of cargo, fuel, and the ship itself acts downward (like parallel forces), while the buoyant force from displaced water acts upward. These unlike parallel forces must balance for the ship to float properly.</description>
+                </application>
+                <application id="4.1.app5">
+                    <title>Multi-Engine Aircraft</title>
+                    <description>Aircraft with multiple engines have like parallel thrust forces acting in the same direction during normal flight. If one engine fails, the remaining engines create unlike parallel forces that can cause the aircraft to yaw, requiring pilot correction.</description>
+                    <!-- HIDDEN_TAG: animation_required, necessity_score=7, description="Aircraft showing multiple engine thrust forces" -->
+                </application>
+            </applications_content>
+        </section>
+
+        <section type="NUMERICAL_PROBLEMS" title="NUMERICAL PROBLEMS">
+            <numerical_problems_content>
+                <problem id="4.1.np1" level="basic">
+                    <statement>Two like parallel forces of 25 N and 40 N act on a rigid rod. Calculate the magnitude and direction of the resultant force.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>Since these are like parallel forces (same direction):</paragraph>
+                        <paragraph>Resultant = F₁ + F₂ = 25 N + 40 N = 65 N</paragraph>
+                        <paragraph>Direction: Same as both individual forces</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="4.1.np2" level="basic">
+                    <statement>Two unlike parallel forces of 50 N and 32 N act on a body. Find the resultant force and its direction.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>Since these are unlike parallel forces (opposite directions):</paragraph>
+                        <paragraph>Resultant = |F₁ - F₂| = |50 N - 32 N| = 18 N</paragraph>
+                        <paragraph>Direction: Same as the larger force (50 N)</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="4.1.np3" level="intermediate">
+                    <statement>Four parallel forces act on a rigid body: 30 N upward, 25 N upward, 20 N downward, and 15 N downward. Calculate the net resultant force.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>Upward forces (like parallel): 30 N + 25 N = 55 N</paragraph>
+                        <paragraph>Downward forces (like parallel): 20 N + 15 N = 35 N</paragraph>
+                        <paragraph>Net resultant = 55 N - 35 N = 20 N (upward)</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="4.1.np4" level="intermediate">
+                    <statement>A beam supports three parallel loads: 150 N, 200 N, and 100 N, all acting downward. If an upward support force of 400 N is applied, determine if the beam is in equilibrium.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph>Total downward force = 150 N + 200 N + 100 N = 450 N</paragraph>
+                        <paragraph>Upward support force = 400 N</paragraph>
+                        <paragraph>Net force = 450 N - 400 N = 50 N (downward)</paragraph>
+                        <paragraph>Since net force ≠ 0, the beam is NOT in equilibrium.</paragraph>
+                        <paragraph>The beam will accelerate downward with this net force.</paragraph>
+                    </solution>
+                </problem>
+
+                <problem id="4.1.np5" level="advanced">
+                    <statement>A rigid rod has five parallel forces acting on it: three upward forces of 80 N, 60 N, and 40 N, and two downward forces of 70 N and 50 N. Find: (a) the resultant force, (b) what additional force is needed to achieve equilibrium.</statement>
+                    <solution>
+                        <paragraph><emphasis type="bold">Solution:</emphasis></paragraph>
+                        <paragraph><emphasis type="bold">(a) Resultant force:</emphasis></paragraph>
+                        <paragraph>Total upward forces = 80 N + 60 N + 40 N = 180 N</paragraph>
+                        <paragraph>Total downward forces = 70 N + 50 N = 120 N</paragraph>
+                        <paragraph>Resultant = 180 N - 120 N = 60 N (upward)</paragraph>
+                        <paragraph><emphasis type="bold">(b) Force needed for equilibrium:</emphasis></paragraph>
+                        <paragraph>To achieve equilibrium, we need 60 N downward force</paragraph>
+                        <paragraph>This will make the net force = 60 N - 60 N = 0</paragraph>
+                    </solution>
+                </problem>
+            </numerical_problems_content>
+        </section>
+    </topic>
+
 

@@ -1,12 +1,9 @@
-// ============================================
-// UPDATED APP.TSX WITH THEME PROVIDER
-// ============================================
-
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import AppNavigator from '@/layouts/AppNavigator';
 import { AppThemeProvider, useTheme } from '@/lib/ThemeContext';
+import { UnifiedAnimationProvider } from '@/data/animations/UnifiedAnimationProvider';
 // ============================================
 
 // Component that handles StatusBar based on theme
@@ -47,9 +44,11 @@ const AppContent: React.FC = () => {
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <AppThemeProvider>
-        <AppContent />
-      </AppThemeProvider>
+      <UnifiedAnimationProvider>
+        <AppThemeProvider>
+          <AppContent />
+        </AppThemeProvider>
+      </UnifiedAnimationProvider>
     </GestureHandlerRootView>
   );
 }

@@ -18,13 +18,22 @@ export interface Particle {
   boundaryHeight: number;
   isFixed?: boolean;
   temperature?: number;
-  elementType?: string;
   state?: 'solid' | 'liquid' | 'gas';
   viscosity?: number;
   surfaceTension?: number;
   diffusionRate?: number;
   phaseTransitionTemp?: number;
-  data?: Record<string, any>;
+  elementType: string; // e.g., 'H', 'O', 'Na'. Already in your SimParticle, let's make it standard.
+  charge: number;      // For simulating ions and electrostatic forces.
+
+  // Bonding & Reactions
+  bonds?: { partnerId: string; type: 'covalent' | 'ionic' | 'hydrogen'; }[]; // An array of bonds
+
+  // Data for more complex simulations
+  data?: {
+    [key: string]: any;
+    moleculeId?: string; // To group atoms that are part of the same molecule
+  }
 }
 
 // ===== BOND TYPES =====

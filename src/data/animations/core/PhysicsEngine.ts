@@ -1,8 +1,10 @@
-import type { Particle } from './types'; // Assuming you have a types.ts file
+import type { Particle, Bond, LabBoundary, HeatSource } from './types';
+import { UniqueID } from '../utils/UniqueID'; // Assuming a utility for unique IDs
 
-// Define the particle type for our simulation
-export type SimParticle = Omit<Particle, 'id'> & {
-  id: string;
+// Define the particle type for our simulation, including chemical properties
+export type SimParticle = Particle & {
+  elementType: string;
+  charge: number;
   state: 'solid' | 'liquid' | 'gas';
   isDragged?: boolean;
 };
@@ -17,11 +19,14 @@ export interface PhysicsParams {
 
 export class PhysicsEngine {
   public particles: SimParticle[] = [];
+  public bonds: Bond[] = [];
+  public boundaries: LabBoundary[] = [];
+  public heatSources: HeatSource[] = [];
+
   public params: PhysicsParams;
 
   private width: number;
   private height: number;
-  private draggedParticleId: string | null = null;
 
   constructor(width: number, height: number, params: PhysicsParams) {
     this.width = width;
@@ -29,85 +34,93 @@ export class PhysicsEngine {
     this.params = params;
   }
 
-  // ===== PUBLIC API METHODS (to be called from React) =====
+  // ===== PUBLIC API METHODS =====
 
-  addParticles(count: number) {
-    const newParticles: SimParticle[] = Array(count).fill(0).map((_, i) => ({
-      id: `p-${Date.now()}-${i}`,
-      x: Math.random() * this.width,
-      y: Math.random() * this.height,
-      vx: (Math.random() - 0.5) * 2, vy: (Math.random() - 0.5) * 2,
-      radius: 12 + Math.random() * 6, color: `hsl(${200 + Math.random() * 40}, 90%, 60%)`,
-      mass: 1, state: 'liquid' as const, isDragged: false,
-      maxSpeed: 10, vibrationIntensity: 0.1, boundaryWidth: this.width, boundaryHeight: this.height,
-    }));
-    this.particles.push(...newParticles);
+  addParticle(particleData: Omit<SimParticle, 'id' | 'state'>): string {
+    const id = UniqueID.generate('p_');
+    const particle: SimParticle = {
+      ...particleData,
+      id,
+      state: 'liquid', // Default state
+    };
+    this.particles.push(particle);
+    return id;
+  }
+
+  addBond(p1Id: string, p2Id: string, type: Bond['type'], restLength: number, stiffness: number): string | null {
+    const p1 = this.particles.find(p => p.id === p1Id);
+    const p2 = this.particles.find(p => p.id === p2Id);
+
+    if (!p1 || !p2) return null;
+
+    const id = UniqueID.generate('b_');
+    const newBond: Bond = { id, particle1: p1, particle2: p2, type, restLength, stiffness, stability: 1.0, color: '#FFF' };
+    this.bonds.push(newBond);
+    return id;
+  }
+
+  addBoundary(boundaryData: Omit<LabBoundary, 'id'>): string {
+    const id = UniqueID.generate('boundary_');
+    this.boundaries.push({ ...boundaryData, id });
+    return id;
+  }
+
+  addHeatSource(sourceData: Omit<HeatSource, 'id'>): string {
+    const id = UniqueID.generate('heat_');
+    this.heatSources.push({ ...sourceData, id, isActive: true });
+    return id;
   }
 
   startDrag(id: string) {
-      this.draggedParticleId = id;
-      this.particles.forEach(p => {
-          if (p.id === id) p.isDragged = true;
-      });
+    this.particles.find(p => p.id === id)!.isDragged = true;
   }
 
   updateDrag(id: string, x: number, y: number) {
-      this.particles.forEach(p => {
-          if (p.id === id) {
-              p.x = Math.max(p.radius, Math.min(this.width - p.radius, x));
-              p.y = Math.max(p.radius, Math.min(this.height - p.radius, y));
-              p.vx = 0;
-              p.vy = 0;
-          }
-      });
+    const p = this.particles.find(p => p.id === id);
+    if (p) {
+      p.x = Math.max(p.radius, Math.min(this.width - p.radius, x));
+      p.y = Math.max(p.radius, Math.min(this.height - p.radius, y));
+      p.vx = 0;
+      p.vy = 0;
+    }
   }
 
   endDrag(id: string, vx: number, vy: number) {
-      this.particles.forEach(p => {
-          if (p.id === id) {
-              p.isDragged = false;
-              p.vx = vx;
-              p.vy = vy;
-          }
-      });
-      this.draggedParticleId = null;
+    const p = this.particles.find(p => p.id === id);
+    if (p) {
+      p.isDragged = false;
+      p.vx = vx;
+      p.vy = vy;
+    }
   }
 
 
   // ===== CORE SIMULATION LOOP =====
 
   update() {
-    // 1. Update positions based on physics
+    // Step 1: Update positions based on velocity and forces
     this.particles = this.particles.map(p => {
-      if (p.isDragged) return p;
+        if (p.isDragged) return { ...p, isDragged: false }; // Reset for next frame
 
-      const newState = this.params.temperature > 0.8 ? 'gas' : this.params.temperature > 0.4 ? 'liquid' : 'solid';
-      let { vx, vy } = p;
-      let finalGravity = this.params.gravity * 0.2;
+        const newState = this.params.temperature > 80 ? 'gas' : this.params.temperature > 30 ? 'liquid' : 'solid';
+        let { vx, vy } = p;
+        let finalGravity = this.params.gravity * 0.2;
 
-      if (newState === 'liquid') {
-        const viscosityEffect = this.params.density * 0.1;
-        vx *= (1 - viscosityEffect);
-        vy *= (1 - viscosityEffect);
-        finalGravity *= (1 + this.params.density);
-      } else if (newState === 'gas') {
-        vx += (Math.random() - 0.5) * this.params.temperature * 0.4;
-        vy += (Math.random() - 0.5) * this.params.temperature * 0.4;
-      }
-      vy += finalGravity;
+        if (newState === 'liquid') {
+            const viscosityEffect = this.params.density * 0.1;
+            vx *= (1 - viscosityEffect);
+            vy *= (1 - viscosityEffect);
+            finalGravity *= (1 + this.params.density);
+        }
+        vy += finalGravity;
 
-      const x = p.x + vx;
-      const y = p.y + vy;
+        const x = p.x + vx;
+        const y = p.y + vy;
 
-      const waterColor = 200 + this.params.density * 40;
-      const lavaColor = 15 + this.params.density * 30;
-      const baseHue = Math.max(0, lavaColor - waterColor);
-      const newColor = `hsl(${baseHue}, ${90 - this.params.density * 20}%, ${60 - this.params.density * 15}%)`;
-
-      return { ...p, x, y, vx, vy, state: newState, color: newColor };
+        return { ...p, x, y, vx, vy, state: newState };
     });
 
-    // 2. Resolve all collisions
+    // Step 2: Resolve all collisions and constraints
     for (let i = 0; i < this.particles.length; i++) {
         const p1 = this.particles[i];
 
@@ -125,14 +138,15 @@ export class PhysicsEngine {
             const distance = Math.sqrt(dx * dx + dy * dy);
             const minDistance = p1.radius + p2.radius;
 
-            if (distance < minDistance) {
-                // Resolution logic... (as before)
+            if (distance > 0 && distance < minDistance) {
+                // Resolve overlap
                 const overlap = (minDistance - distance) / distance;
                 const offsetX = dx * overlap * 0.5;
                 const offsetY = dy * overlap * 0.5;
                 p1.x -= offsetX; p1.y -= offsetY;
                 p2.x += offsetX; p2.y += offsetY;
 
+                // Elastic collision
                 const angle = Math.atan2(dy, dx);
                 const sin = Math.sin(angle);
                 const cos = Math.cos(angle);
@@ -145,6 +159,26 @@ export class PhysicsEngine {
                 p2.vy = (v2.y * cos + v2.x * sin) * 0.98;
             }
         }
+    }
+
+    // Step 3: Apply bond forces
+    for (const bond of this.bonds) {
+        const p1 = this.particles.find(p => p.id === bond.particle1.id);
+        const p2 = this.particles.find(p => p.id === bond.particle2.id);
+
+        if (!p1 || !p2) continue;
+
+        const dx = p2.x - p1.x;
+        const dy = p2.y - p1.y;
+        const distance = Math.max(1, Math.sqrt(dx * dx + dy * dy));
+        const diff = (distance - bond.restLength) / distance;
+        const force = diff * (bond.stiffness || 0.5);
+
+        const forceX = force * dx;
+        const forceY = force * dy;
+
+        if (!p1.isDragged) { p1.vx += forceX * 0.5; p1.vy += forceY * 0.5; }
+        if (!p2.isDragged) { p2.vx -= forceX * 0.5; p2.vy -= forceY * 0.5; }
     }
   }
 }

@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { View, Platform } from 'react-native';
+import { View, Platform, ActivityIndicator } from 'react-native';
 import { Canvas, Path, Skia } from '@shopify/react-native-skia';
-import type { PhysicsState, Particle, Bond, PerformanceSettings, HeatSource } from "./types";
+import type { PhysicsState, Particle, Bond, PerformanceSettings, HeatSource, LabBoundary } from "./types";
 import { RenderConfig } from "./RenderConfig";
 import { ColorSystem } from "./Colors";
 import { FallbackRenderer } from './FallbackRenderer';
+
+declare global {
+  interface Window {
+    CanvasKit: any;
+  }
+}
 
 interface SkiaRendererProps {
   physicsState: PhysicsState;
   performanceSettings: PerformanceSettings;
   heatSources?: HeatSource[];
+  boundaries?: LabBoundary[];
   showTrails?: boolean;
   showHeatFields?: boolean;
   width: number;
@@ -17,62 +24,74 @@ interface SkiaRendererProps {
 }
 
 export const SkiaRenderer: React.FC<SkiaRendererProps> = ({
-  physicsState,
-  performanceSettings,
+  physicsState = {
+    particles: [],
+    bonds: [],
+    timestamp: Date.now()
+  },
+  performanceSettings = {
+    level: 'medium',
+    frameRate: 60,
+    maxParticles: 1000,
+    physicsQuality: 'standard',
+    enableParticleTrails: false,
+    enableComplexCollisions: true
+  },
   heatSources = [],
+  boundaries = [],
   showTrails = false,
   showHeatFields = false,
-  width,
-  height
+  width = 300,
+  height = 300
 }) => {
-  const { particles, bonds } = physicsState;
+  const { particles = [], bonds = [] } = physicsState || {};
   const activeHeatSources = heatSources.filter(source => source.isActive);
 
   const [skiaError, setSkiaError] = useState<string | null>(null);
+  const [isSkiaReady, setIsSkiaReady] = useState(false);
 
   // Initialize Skia and check if it's available
   useEffect(() => {
+    const checkSkia = async () => {
       try {
-    if (Platform.OS === 'web') {
-      // For web, we need to wait for CanvasKit to load
-      if (typeof window !== 'undefined' && !window.CanvasKit) {
-        console.warn('CanvasKit not loaded yet, using fallback');
-        setSkiaError('CanvasKit not loaded');
-        return;
+        // Wait for Skia to load (especially important for web)
+        let attempts = 0;
+        while (!Skia?.Path?.Make && attempts < 10) {
+          await new Promise(resolve => setTimeout(resolve, 100));
+          attempts++;
+        }
+
+        if (Platform.OS === 'web') {
+          if (typeof window === 'undefined' || !window.CanvasKit) {
+            throw new Error('CanvasKit not loaded');
+          }
+        }
+
+        if (!Skia?.Path?.Make || typeof Skia.Path.Make !== "function") {
+          throw new Error('Skia Path module not available');
+        }
+
+        setIsSkiaReady(true);
+      } catch (error) {
+        const errMsg = `Skia initialization failed: ${error instanceof Error ? error.message : String(error)}`;
+        console.error(errMsg);
+        setSkiaError(errMsg);
       }
-    }
+    };
 
-    // Check if Skia and required methods exist
-    const canUseSkia =
-  Skia?.Path?.Make &&
-  typeof Skia.Path.Make === "function" &&
-  (Platform.OS !== "web" || typeof window.CanvasKit !== "undefined");
-
-if (!canUseSkia) {
-  throw new Error("Skia or CanvasKit not available");
-}
-
-
-    // Test path creation
-    const testPath = Skia.Path.Make();
-    if (!testPath) {
-      throw new Error('Failed to create Skia path');
-    }
-  } catch (error) {
-      let errorMessage = 'Unknown Skia initialization error';
-      if (error instanceof Error) {
-        errorMessage = error.message;
-      } else if (typeof error === 'string') {
-        errorMessage = error;
-      }
-
-      const errMsg = `Skia initialization failed: ${errorMessage}`;
-      console.error(errMsg);
-      setSkiaError(errMsg);
-    }
+    checkSkia();
   }, []);
 
-  // If Skia fails to initialize, use fallback canvas renderer
+  // Show loading state while initializing
+  if (!isSkiaReady && !skiaError) {
+    return (
+      <View style={{ width, height, justifyContent: 'center', alignItems: 'center' }}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
+
+  // Use fallback canvas renderer if Skia fails
   if (skiaError) {
     console.warn('Falling back to canvas renderer due to Skia initialization error');
     return (
@@ -88,10 +107,13 @@ if (!canUseSkia) {
     );
   }
 
-  // Create paths for all renderable elements
+  // Create paths for all renderable elements with safety checks
   const particlePaths = particles.map(particle => {
     const path = Skia.Path.Make();
-    path.addCircle(particle.x, particle.y, particle.radius);
+    const x = particle.x || 0;
+    const y = particle.y || 0;
+    const radius = Math.max(0.1, particle.radius || RenderConfig.Particle.DefaultRadius);
+    path.addCircle(x, y, radius);
     return path;
   });
 
@@ -99,15 +121,22 @@ if (!canUseSkia) {
     .filter(bond => bond.stability >= RenderConfig.Bond.MinVisibleStability)
     .map(bond => {
       const path = Skia.Path.Make();
-      path.moveTo(bond.particle1.x, bond.particle1.y);
-      path.lineTo(bond.particle2.x, bond.particle2.y);
+      const p1x = bond.particle1?.x || 0;
+      const p1y = bond.particle1?.y || 0;
+      const p2x = bond.particle2?.x || 0;
+      const p2y = bond.particle2?.y || 0;
+      path.moveTo(p1x, p1y);
+      path.lineTo(p2x, p2y);
       return path;
     });
 
   const heatFieldPaths = showHeatFields
     ? activeHeatSources.map(source => {
         const path = Skia.Path.Make();
-        path.addCircle(source.x, source.y, source.radius);
+        const x = source.x || 0;
+        const y = source.y || 0;
+        const radius = Math.max(1, source.radius || 10);
+        path.addCircle(x, y, radius);
         return path;
       })
     : [];
@@ -136,6 +165,29 @@ if (!canUseSkia) {
           path={Skia.Path.Make().addRect(Skia.XYWHRect(0, 0, width, height))}
           color="#f8f9fa"
         />
+
+        {/* Equipment Boundaries */}
+        {boundaries?.map((boundary, i) => {
+          const path = Skia.Path.Make();
+          if (boundary.shape === 'circle') {
+            path.addCircle(boundary.x, boundary.y, boundary.radius);
+          } else {
+            path.addRect(Skia.XYWHRect(
+              boundary.x,
+              boundary.y,
+              boundary.width,
+              boundary.height
+            ));
+          }
+          return (
+            <Path
+              key={`boundary-${i}`}
+              path={path}
+              color={boundary.type === 'heater' ? 'rgba(255,100,0,0.3)' : 'rgba(0,123,255,0.1)'}
+              style="fill"
+            />
+          );
+        })}
 
         {/* Heat Fields */}
         {showHeatFields && heatFieldPaths.map((path, i) => (

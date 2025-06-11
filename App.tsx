@@ -1,10 +1,12 @@
+// App.tsx
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import AppNavigator from '@/layouts/AppNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import AppStack from '@/layouts/AppNavigator';
 import { AppThemeProvider, useTheme } from '@/lib/ThemeContext';
 import { SimpleAnimationProvider } from '@/data/animations/SimpleAnimationProvider';
-// ============================================
+import { UnifiedAnimationProvider } from '@/data/animations/UnifiedAnimationProvider';
 
 // Component that handles StatusBar based on theme
 const ThemedStatusBar: React.FC = () => {
@@ -30,25 +32,22 @@ const ThemedStatusBar: React.FC = () => {
     />
   );
 };
-// Main App component with theme integration
-const AppContent: React.FC = () => {
-  return (
-    <>
-      <ThemedStatusBar />
-      <AppNavigator />
-    </>
-  );
-};
 
 // Root App component
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <SimpleAnimationProvider>
-        <AppThemeProvider>
-          <AppContent />
-        </AppThemeProvider>
-      </SimpleAnimationProvider>
+      {/* Providers should wrap the NavigationContainer */}
+      <AppThemeProvider>
+        <SimpleAnimationProvider>
+          <UnifiedAnimationProvider>
+          <NavigationContainer>
+            <ThemedStatusBar />
+            <AppStack />
+          </NavigationContainer>
+          </UnifiedAnimationProvider>
+        </SimpleAnimationProvider>
+      </AppThemeProvider>
     </GestureHandlerRootView>
   );
 }

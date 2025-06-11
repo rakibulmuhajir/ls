@@ -126,3 +126,148 @@ principle of moments, clockwise moments, anticlockwise moments, rotational equil
 
 [Topic 4.7 - Centre of Gravity and Centre of Mass]
 centre of gravity, centre of mass, gravitational force, plumb line, plane lamina, uniform field, balance point, geometric center, mass distribution, experimental determination
+
+[Topic 4.8 - Centre of Mass and Centre of Gravity]
+gravitational force, center of gravity, center of mass, weight distribution, balance point, plumb line, equilibrium, uniform density, geometric center, resultant force, suspension point, gravitational acceleration, particles, lamina, metacenter, stability
+
+[Topic 4.9 - Conditions of Equilibrium]
+equilibrium conditions, translational equilibrium, rotational equilibrium, vector sum, net force, torque, moment, static equilibrium, dynamic equilibrium, first condition, second condition, force components, reference point, free body diagram, resultant force, couple, Newton's second law
+
+[Topic 4.10 - States of Equilibrium]
+stable equilibrium, unstable equilibrium, neutral equilibrium, centre of gravity, centre of mass, potential energy, restoring torque, base of support, critical angle, tipping point, stability coefficient, metacentric height, equilibrium states, displacement, disturbance, oscillatory motion
+
+[Topic 4.11 - Improvement of Stability]
+stability improvement, centre of gravity, base of support, critical tipping angle, lowering center of gravity, widening base, stable equilibrium, restoring torque, ballast, outriggers, wheelbase, track width, stability factor, metacentric height, balancing toys, racing car design
+
+[Topic 4.12 - Application of Stability in Real Life]
+stability applications, racing car engineering, balancing toys, centre of gravity design, wheelbase optimization, aerodynamic downforce, restoring torque, educational toys, vehicle stability, engineering trade-offs, stability testing, consumer safety, roly-poly physics, Formula 1 design, stability augmentation systems
+
+
+[Topic 4.13 - Centripetal Force]
+centripetal force, circular motion, uniform speed, radius, vector quantity, magnitude, direction, tangent, perpendicular, gravitational force, orbit, satellite, tension, friction, acceleration
+
+
+[Topic 5.2 - Energy]
+energy, kinetic energy, potential energy, mechanical energy, scalar quantity, joule, ability, motion, position, deformation, gravitational potential energy, elastic potential energy, chemical energy, nuclear energy, velocity-time graph, acceleration
+
+
+
+
+[Topic 5.3 - Conservation of Energy]
+conservation of energy, transformation, principle, total energy, waste energy, heat, dissipation, friction, perpetual motion machine, efficiency, mass-energy equivalence, Einstein, nuclear reactions
+
+
+
+
+[Topic 5.4 - Sources of Energy]
+fossil fuels, renewable energy, non-renewable energy, hydroelectric generation, solar energy, nuclear energy, geothermal energy, wind energy, tidal energy, wave energy, biofuel energy, photovoltaic cells, biomass, biogas, turbine, generator, boiler, steam
+
+
+
+
+[Topic 5.6 - The Advantages and Disadvantages of Methods of Energy Production]
+advantages, disadvantages, economical, pollution, initial cost, carbon dioxide, radioactive radiation, nuclear waste, thermal pollution, global warming, water logging, landscape beauty, economic impact, environmental impact, social impact
+
+
+
+
+
+[Topic 5.7 - Power]
+power, time rate, work, energy transfer, watt, joule per second, scalar quantity, horsepower, efficiency, input energy, output energy, useful energy, percentage efficiency, James Watt
+
+
+
+
+
+[Topic 5.8 - Efficiency]
+efficiency, working system, input energy, output energy, useful energy, total energy, percentage efficiency, ideal machine, perpetual machine, energy losses, heat waste, friction, air resistance
+
+
+[Topic 6.1 - Deformation of Materials]
+
+        deformation, deforming force, extension, compression, elastic, elasticity, elastic limit, inelastic materials, spring constant, stiffness, Hooke's law, proportionality limit, load-extension graph, helical spring
+
+
+[Topic 6.2 - Hooke's Law]
+
+        Hooke's law, spring constant, stiffness, proportionality, force-extension graph, linear relationship, gradient, slope, elastic limit, limit of proportionality, helical spring, load-extension
+
+
+[Topic 6.3 - Density]
+
+        density, mass per unit volume, molecules, inter-molecular spacing, displacement method, measuring cylinder, regular shape, irregular shape, architects, engineers, building material, purity test
+
+[Topic 6.4 - Pressure]
+
+        pressure, force per unit area, pascal, contact area, atmospheric pressure, liquid pressure, depth, pascal law, hydraulic systems, barometer, manometer, weather forecasting
+
+[Topic 6.5 - Pressure in Liquids]
+
+        liquid pressure, depth, pressure formula, liquid column, weight of liquid, normal force, pressure increases with depth, mercury barometer, atmospheric pressure, pressure directions
+
+    [Topic 6.6 - Atmospheric Pressure]
+
+        atmospheric pressure, atmosphere, air molecules, collision, random motion, standard atmospheric pressure, altitude, barometer, mercury column, weather forecasting, air density, vacuum
+
+[Topic 6.7 - Measurement of Atmospheric Pressure]
+
+        barometer, mercury barometer, mercury column, vacuum, atmospheric pressure measurement, glass tube, Fortin barometer, standard mercury height, 760 mm, pressure equilibrium, altitude measurement
+
+[Topic 6.8 - Measurement of Pressure by Manometers]
+
+        manometer, U-shaped glass tube, mercury level, short arm, long arm, gas cylinder, unknown pressure, atmospheric pressure, pressure difference, pressure measurement, gauge pressure
+
+    [Topic 6.9 - Pascal's Law]
+
+        Pascal's law, pressure transmission, enclosed fluid, uniformly transmitted, hydraulic systems, force multiplier, hydraulic press, hydraulic brakes, incompressible liquid, piston, cross-sectional area
+
+[Topic 7.1 - Kinetic Molecular Theory of Matter]
+Glossary: molecules, kinetic energy, potential energy, intermolecular force, vibrational motion, rotational motion, linear motion, internal energy, average kinetic energy, absolute zero
+
+[Topic 7.2 - Temperature and Heat]
+Glossary: temperature, heat, thermal energy, internal energy, energy in transit, average kinetic energy, thermal equilibrium, plasma, ionized atoms, positive ions, electrons, fourth state of matter, conducting state
+
+[Topic 7.3 - Thermometers]
+Glossary: thermometer, thermometric property, fixed points, ice point, steam point, sensitivity, range, linearity, capillary tube, thermal expansion, absolute zero, Celsius scale, Fahrenheit scale, Kelvin scale, liquid-in-glass thermometer, thermocouple thermometer, expansivity
+
+[Topic 7.4 - Sensitivity, Range and Linearity of Thermometers]
+Glossary: sensitivity, range, linearity, scale divisions, capillary tube, thermal expansion, expansivity, uniform bore, calibration, thermometric liquid, response time, temperature span
+
+[Topic 7.5 - Structure of A Liquid-in-Glass Thermometer]
+Glossary: liquid-in-glass thermometer, glass bulb, capillary tube, thermometric liquid, glass stem, thermal expansion, bore diameter, expansivity, thermal conductivity, borosilicate glass, thermal equilibrium, constriction, thermal mass
+
+[Topic 7.6 - Temperature Scales and Conversion]
+Glossary: temperature scales, Celsius scale, Fahrenheit scale, Kelvin scale, absolute temperature scale, fixed points, ice point, steam point, absolute zero, temperature conversion, centigrade scale, molecular motion, conversion formulas
+
+[Topic 8.1 - Magnetic Materials]
+magnetism, magnetic materials, non-magnetic materials, magnetic force, ferromagnetic, paramagnetic, diamagnetic, magnetic domains, electron spin, orbital motion, magnetic dipole, lodestone, magnetite, temporary magnetism, permanent magnetism, magnetic field, attraction, repulsion
+
+[Topic 8.2 - Properties of Magnets]
+magnetic poles, north pole, south pole, attraction, repulsion, like poles, unlike poles, magnetic compass, directional orientation, suspended magnet, repulsion test, magnetic monopole, isolated poles, pole inseparability, magnetic identification, Earth's magnetic field
+
+[Topic 8.3 - Induced Magnetism]
+induced magnetism, magnetization, magnetic induction, magnetic domains, domain alignment, external magnetic field, polarity induction, temporary magnetism, soft iron, permanent magnet, compass needle, magnetic field penetration, domain growth, domain rotation, ferromagnetic materials
+
+[Topic 8.4 - Temporary and Permanent Magnets]
+temporary magnets, permanent magnets, soft iron, steel, electromagnets, magnetic domains, domain alignment, magnetization, demagnetization, soft magnetic materials, hard magnetic materials, cobalt, alnico, ferrite, neodymium, circuit breaker, magnetic relay, electromagnetic crane, coil turns, electric current
+
+[Topic 8.5 - Magnetic Fields]
+magnetic field, magnetic field lines, lines of force, field strength, field direction, compass needle, iron filings, neutral point, field density, field magnitude, magnetic force, action at distance, field mapping, field patterns, horseshoe magnet, combined fields, field visualization
+
+[Topic 8.6 - Uses of Permanent Magnets]
+permanent magnets, DC motors, AC generators, DC generators, moving coil loudspeakers, voice coil, door catchers, magnetic strips, refrigerator seals, magnetic separation, flour mills, iron contamination, medical applications, iron splinters, maximum minimum thermometer, energy conversion, electromagnetic induction, radial magnetic field, mechanical energy, electrical energy
+
+[Topic 8.7 - Electromagnets]
+electromagnets, electric current, coil of wire, soft iron core, temporary magnets, magnetic field, induced magnetism, current flow, coil turns, magnetic strength, electric bell, telephone receiver, magnetic relay, circuit breaker, electromagnetic cranes, Maglev trains, controllable magnetism, iron armature, switching circuits, electromagnetic induction
+
+[Topic 8.8 - Domain Theory of Magnetism]
+domain theory, magnetic domains, moving charges, electron motion, orbital motion, spin motion, magnetic dipole, paramagnetic materials, diamagnetic materials, ferromagnetic materials, electron spins, domain alignment, domain growth, domain rotation, external magnetic field, soft iron, steel, magnetization, demagnetization, atomic magnetism
+
+[Topic 8.9 - Magnetization and Demagnetization]
+magnetization, demagnetization, stroking method, single touch method, double touch method, solenoid method, right-hand grip rule, magnetic domains, domain alignment, heating demagnetization, hammering demagnetization, alternating current demagnetization, thermal vibrations, mechanical shock, ferromagnetic materials, permanent magnets, magnetic recording, iron oxide coating, fringe field, magnetic permeability, soft iron shielding
+
+[Topic 8.10 - Applications of Magnets in Recording Technology]
+magnetic recording technology, electromagnets, recording head, magnetic tape recording, hard disk recording, iron oxide coating, fringe field, binary digits, magnetization patterns, read/write head, voice coil positioner, random access, sequential access, magnetic permeability, soft iron shielding, magnetic flux, ferromagnetic materials, horseshoe electromagnet, data storage, playback process
+
+[Topic 8.11 - Soft Iron as Magnetic Shield]
+soft iron, magnetic shielding, magnetic permeability, magnetic flux, field lines, sensitive instruments, external magnetic field, domain alignment, high permeability, magnetic protection, electromagnet cores, transformer cores, galvanometer cores, shielding effectiveness, rounded corners, magnetic redirection, flux channeling, electromagnetic interference, EMI protection

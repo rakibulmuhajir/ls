@@ -31,8 +31,8 @@ export const ConnectedAnimationCanvas: React.FC<ConnectedAnimationCanvasProps> =
   const physicsState = getPhysicsState();
   const performanceSettings = performanceManager.getPerformanceSettings();
 
-  // Get heat sources from physics engine for heat field visualization
-  const heatSources = physicsEngine.getHeatSources();
+  // Get heat sources from physics state
+  const heatSources = physicsState.heatSources || [];
 
   return (
     <View style={[{ width, height, position: 'relative' }, style]}>
@@ -41,7 +41,7 @@ export const ConnectedAnimationCanvas: React.FC<ConnectedAnimationCanvasProps> =
         <SkiaRenderer
           physicsState={physicsState}
           performanceSettings={performanceSettings}
-          heatSources={heatSources}
+          heatSources={[...heatSources]} // Create mutable copy
           showTrails={showTrails}
           showHeatFields={showHeatFields}
           width={width}

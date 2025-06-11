@@ -40,10 +40,13 @@ const animationAPI = useSimpleAnimation();
       width: 300,
       height: 500,
       physicsConfig: {
+        width: 300,
+        height: 500,
         gravity: { x: 0, y: 0.5 },
         globalDamping: 0.99,
         collisionRestitution: 0.8
-      }
+      },
+      performanceMode: 'medium'
     });
     animationAPI.resumeAnimation();
   }, []);
@@ -342,11 +345,21 @@ const animationAPI = useSimpleAnimation();
       <GestureDetector gesture={panGesture}>
         <View collapsable={false}>
           <SkiaRenderer
-            physicsState={animationAPI.getPhysicsState()}
-            performanceSettings={animationAPI.performanceManager.getPerformanceSettings()}
+            physicsState={{
+              ...animationAPI.getPhysicsState(),
+              timestamp: Date.now()
+            }}
+            performanceSettings={{
+              ...animationAPI.performanceManager.getPerformanceSettings(),
+              enableParticleTrails: false,
+              enableComplexCollisions: true
+            }}
             boundaries={Array.from(animationAPI.getPhysicsState().boundaries || [])}
+            heatSources={Array.from(animationAPI.getPhysicsState().heatSources || [])}
             width={300}
             height={500}
+            showTrails={false}
+            showHeatFields={true}
           />
           {/* Equipment is now rendered within SkiaRenderer */}
         </View>

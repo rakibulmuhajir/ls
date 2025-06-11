@@ -19,6 +19,11 @@ export interface Particle {
   isFixed?: boolean;
   temperature?: number;
   elementType?: string;
+  state?: 'solid' | 'liquid' | 'gas';
+  viscosity?: number;
+  surfaceTension?: number;
+  diffusionRate?: number;
+  phaseTransitionTemp?: number;
   data?: Record<string, any>;
 }
 
@@ -88,9 +93,16 @@ export interface PerformanceSettings {
 
 // ===== ANIMATION CONFIG =====
 export interface PhysicsConfig {
+  width: number;
+  height: number;
   gravity: { x: number; y: number };
   globalDamping: number;
   collisionRestitution: number;
+  fluidDensity?: number;
+  fluidViscosity?: number;
+  temperature?: number;
+  enableFluidDynamics?: boolean;
+  enablePhaseTransitions?: boolean;
   forceFields?: Array<{
     type: 'magnetic' | 'electric' | 'gravitational';
     x: number;

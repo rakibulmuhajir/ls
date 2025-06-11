@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { View, StyleSheet, ScrollView, Button } from 'react-native';
-import { useAnimation } from '@/data/animations/UnifiedAnimationProvider';
+import { useSimpleAnimation } from '@/data/animations/SimpleAnimationProvider';
 import type { LabBoundary } from '@/data/animations/core/types';
 // Define a local type since the LabEquipment import isn't working
 type LabEquipmentType = 'container' | 'heater' | 'solid';
@@ -30,8 +30,23 @@ import { SkiaRenderer } from '@/data/animations/core/SkiaRenderer';
 import { useMemo } from 'react';
 
 const PhysicsTestScreen = () => {
-const animationAPI = useAnimation();
+const animationAPI = useSimpleAnimation();
   const [selectedTab, setSelectedTab] = useState<'equipment' | 'physics' | 'particles' | 'bonds' | 'performance'>('equipment');
+
+  // Initialize physics on first render
+  useEffect(() => {
+    animationAPI.resetSimulation({
+      type: 'lab',
+      width: 300,
+      height: 500,
+      physicsConfig: {
+        gravity: { x: 0, y: 0.5 },
+        globalDamping: 0.99,
+        collisionRestitution: 0.8
+      }
+    });
+    animationAPI.resumeAnimation();
+  }, []);
   const [activeEquipment, setActiveEquipment] = useState<LabEquipment | null>(null);
   const activeEquipmentRef = useRef<LabEquipment | null>(null);
 
@@ -117,17 +132,29 @@ const animationAPI = useAnimation();
   };
 
   const applyPhysicsEffect = (type: string) => {
-    // Reset simulation with physics config
-    animationAPI.resetSimulation({
-      type: 'lab',
-      width: 300,
-      height: 500,
-      physicsConfig: {
-        gravity: { x: 0, y: type === 'gravity' ? 0.5 : 0 },
-        globalDamping: 0.99,
-        collisionRestitution: 0.8
-      }
+    // Save current particles
+    const currentParticles = animationAPI.getPhysicsState().particles;
+
+    // Update physics config without full reset
+    animationAPI.performanceManager.setPerformanceLevel('medium');
+
+    // Apply new physics settings
+    const physicsConfig = {
+      gravity: { x: 0, y: type === 'gravity' ? 0.5 : 0 },
+      globalDamping: 0.99,
+      collisionRestitution: 0.8
+    };
+
+    // Recreate particles with new physics
+    currentParticles.forEach(p => {
+      animationAPI.addParticle({
+        ...p,
+        vx: type === 'gravity' ? 0 : p.vx,
+        vy: type === 'gravity' ? 0 : p.vy
+      });
     });
+
+    console.log(`Applied ${type} physics effect`);
   };
 
   return (
@@ -317,9 +344,11 @@ const animationAPI = useAnimation();
           <SkiaRenderer
             physicsState={animationAPI.getPhysicsState()}
             performanceSettings={animationAPI.performanceManager.getPerformanceSettings()}
+            boundaries={Array.from(animationAPI.getPhysicsState().boundaries || [])}
             width={300}
             height={500}
           />
+          {/* Equipment is now rendered within SkiaRenderer */}
         </View>
       </GestureDetector>
     </View>

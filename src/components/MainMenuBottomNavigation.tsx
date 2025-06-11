@@ -132,7 +132,7 @@ export default function MainMenuBottomNavigation({ hasUpdates = false }: Props) 
       label: 'Chem Lab',
       icon: 'flask',                           // 🧪 Flask icon for chemistry lab
       color: theme.colors.accent,              // Uses your theme accent color
-      onPress: () => navigation.navigate('SkiaTest'),  // Navigates to Chemistry Lab screen
+      onPress: () => navigation.navigate('AnimationTest'),  // Navigates to Chemistry Lab screen
       showBadge: false,
     },
     {

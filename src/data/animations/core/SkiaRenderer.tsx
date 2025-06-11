@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { View, Platform } from 'react-native';
 import { Canvas, Path, Skia } from '@shopify/react-native-skia';
-import type { PhysicsState, Particle, Bond, PerformanceSettings, HeatSource } from "./types";
+import type { PhysicsState, Particle, Bond, PerformanceSettings, HeatSource, LabBoundary } from "./types";
 import { RenderConfig } from "./RenderConfig";
 import { ColorSystem } from "./Colors";
 import { FallbackRenderer } from './FallbackRenderer';
+
+declare global {
+  interface Window {
+    CanvasKit: any;
+  }
+}
 
 interface SkiaRendererProps {
   physicsState: PhysicsState;
   performanceSettings: PerformanceSettings;
   heatSources?: HeatSource[];
+  boundaries?: LabBoundary[];
   showTrails?: boolean;
   showHeatFields?: boolean;
   width: number;
@@ -20,6 +27,7 @@ export const SkiaRenderer: React.FC<SkiaRendererProps> = ({
   physicsState,
   performanceSettings,
   heatSources = [],
+  boundaries = [],
   showTrails = false,
   showHeatFields = false,
   width,
@@ -136,6 +144,29 @@ if (!canUseSkia) {
           path={Skia.Path.Make().addRect(Skia.XYWHRect(0, 0, width, height))}
           color="#f8f9fa"
         />
+
+        {/* Equipment Boundaries */}
+        {boundaries?.map((boundary, i) => {
+          const path = Skia.Path.Make();
+          if (boundary.shape === 'circle') {
+            path.addCircle(boundary.x, boundary.y, boundary.radius);
+          } else {
+            path.addRect(Skia.XYWHRect(
+              boundary.x,
+              boundary.y,
+              boundary.width,
+              boundary.height
+            ));
+          }
+          return (
+            <Path
+              key={`boundary-${i}`}
+              path={path}
+              color={boundary.type === 'heater' ? 'rgba(255,100,0,0.3)' : 'rgba(0,123,255,0.1)'}
+              style="fill"
+            />
+          );
+        })}
 
         {/* Heat Fields */}
         {showHeatFields && heatFieldPaths.map((path, i) => (

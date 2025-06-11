@@ -92,20 +92,13 @@ const SkiaTestScreen = () => {
 
   // Interactive Ball Component
   const InteractiveBall = () => {
-    const gesture = Gesture.Pan()
-      .onChange((e) => {
-        interactivePos.value = vec(e.x, e.y);
-      });
-
     return (
-      <GestureDetector gesture={gesture}>
-        <Circle
-          cx={useDerivedValue(() => interactivePos.value.x)}
-          cy={useDerivedValue(() => interactivePos.value.y)}
-          r={40}
-          color="orange"
-        />
-      </GestureDetector>
+      <Circle
+        cx={useDerivedValue(() => interactivePos.value.x)}
+        cy={useDerivedValue(() => interactivePos.value.y)}
+        r={40}
+        color="orange"
+      />
     );
   };
 
@@ -132,11 +125,17 @@ const SkiaTestScreen = () => {
         </TouchableOpacity>
       </View>
 
-      <Canvas style={styles.canvas}>
-        {activeTest === 'bouncing' && <BouncingBall width={canvasSize} height={canvasSize} />}
-        {activeTest === 'rotating' && <RotatingCircles width={canvasSize} height={canvasSize} />}
-        {activeTest === 'interactive' && <InteractiveBall />}
-      </Canvas>
+      <GestureDetector gesture={Gesture.Pan()
+        .onChange((e) => {
+          interactivePos.value = vec(e.x, e.y);
+        })}
+      >
+        <Canvas style={styles.canvas}>
+          {activeTest === 'bouncing' && <BouncingBall width={canvasSize} height={canvasSize} />}
+          {activeTest === 'rotating' && <RotatingCircles width={canvasSize} height={canvasSize} />}
+          {activeTest === 'interactive' && <InteractiveBall />}
+        </Canvas>
+      </GestureDetector>
     </View>
   );
 };

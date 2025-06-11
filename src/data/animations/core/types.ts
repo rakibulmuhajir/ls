@@ -70,6 +70,8 @@ export interface HeatSource {
 export interface PhysicsState {
   particles: ReadonlyArray<Particle>;
   bonds: ReadonlyArray<Bond>;
+  boundaries?: ReadonlyArray<LabBoundary>;
+  heatSources?: ReadonlyArray<HeatSource>;
   timestamp: number;
 }
 

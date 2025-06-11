@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import AppNavigator from '@/layouts/AppNavigator';
 import { AppThemeProvider, useTheme } from '@/lib/ThemeContext';
-import { UnifiedAnimationProvider } from '@/data/animations/UnifiedAnimationProvider';
+import { SimpleAnimationProvider } from '@/data/animations/SimpleAnimationProvider';
 // ============================================
 
 // Component that handles StatusBar based on theme
@@ -44,11 +44,11 @@ const AppContent: React.FC = () => {
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <UnifiedAnimationProvider>
+      <SimpleAnimationProvider>
         <AppThemeProvider>
           <AppContent />
         </AppThemeProvider>
-      </UnifiedAnimationProvider>
+      </SimpleAnimationProvider>
     </GestureHandlerRootView>
   );
 }

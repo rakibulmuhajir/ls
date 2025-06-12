@@ -48,6 +48,73 @@ export interface MaterialProperties {
   safetyPrecautions: string[];
 }
 
+// A standardized list of observable behavior types
+export type BehaviorType =
+  | 'melts' | 'boils' | 'freezes' | 'sublimes' // Phase Changes
+  | 'flammable' | 'combustible' | 'oxidizer' | 'corrosive' // Reactivity
+  | 'dissolves' | 'precipitates' | 'effervesces' | 'color_change'; // Physical Effects
+
+// A structured way to define a single behavior
+export interface Behavior {
+  type: BehaviorType;
+  // Defines what causes the behavior to activate
+  trigger: {
+    // The condition to check, e.g., temperature, proximity to another element
+    condition: 'temperature_above' | 'temperature_below' | 'contact_with' | 'proximity_to';
+    // The value to check against, e.g., a temperature in Kelvin or a material ID like 'ignition_source'
+    value: number | string;
+  };
+  // Optional parameters to describe the visual effect of the behavior
+  params?: {
+    rate?: 'slow' | 'moderate' | 'fast' | 'vigorous' | 'explosive';
+    flameColor?: string;
+    gasEvolved?: string; // The chemical formula of the gas produced, e.g., 'H₂'
+    colorChangeTo?: string; // The color the material changes to
+    [key: string]: any; // Allows for other custom parameters
+  };
+}
+
+export interface MaterialProperties {
+  // --- All existing properties ---
+  id: string;
+  name: string;
+  chemicalFormula: string;
+  type: 'element' | 'ionicCompound' | 'covalentCompound' | 'mixture';
+  category: string;
+  appearance: {
+    description: string;
+    texture?: string;
+    colorHex: string;
+  };
+  stateAtSTP: 'solid' | 'liquid' | 'gas';
+  molarMass: number;
+  density?: number;
+  meltingPoint?: number;
+  boilingPoint?: number;
+  solubilityInWater: 'soluble' | 'slightly_soluble' | 'insoluble';
+  electricalConductivity?: {
+    solid?: boolean;
+    liquid?: boolean;
+    aqueous?: boolean;
+  };
+  reactivity: {
+    water: 'none' | 'slow' | 'vigorous';
+    acid: 'none' | 'slow' | 'vigorous';
+    oxygen: 'none' | 'slow' | 'vigorous';
+  };
+  reactionWithWater?: 'none' | 'slow' | 'vigorous';
+  acidBaseProperties?: {
+    strength?: 'strong' | 'weak';
+    pH?: number;
+  };
+  hazardSymbols: string[];
+  safetyPrecautions: string[];
+
+  // --- NEW ---
+  // An array to list all observable behaviors for the material
+  behaviors?: Behavior[];
+}
+
 export interface ReactionDefinition {
   id: string;
   equation: string;
@@ -82,7 +149,14 @@ export const materialLibrary: Record<string, MaterialProperties> = {
       oxygen: "vigorous"
     },
     hazardSymbols: ["flammable"],
-    safetyPrecautions: ["Keep away from open flames", "Use in well-ventilated area"]
+    safetyPrecautions: ["Keep away from open flames", "Use in well-ventilated area"],
+    behaviors: [
+      {
+        type: 'flammable',
+        trigger: { condition: 'contact_with', value: 'ignition_source' },
+        params: { rate: 'explosive', flameColor: '#ff7f50' }
+      }
+    ]
   },
 
   O: {
@@ -191,7 +265,19 @@ export const materialLibrary: Record<string, MaterialProperties> = {
       oxygen: "none"
     },
     hazardSymbols: [],
-    safetyPrecautions: ["Standard laboratory handling"]
+    safetyPrecautions: ["Standard laboratory handling"],
+    behaviors: [
+      {
+        type: 'boils',
+        trigger: { condition: 'temperature_above', value: 373.15 },
+        params: { gasEvolved: 'H2O', rate: 'fast' }
+      },
+      {
+        type: 'freezes',
+        trigger: { condition: 'temperature_below', value: 273.15 },
+        params: { rate: 'slow' }
+      }
+    ]
   }
   // ... Additional materials would continue here
 };

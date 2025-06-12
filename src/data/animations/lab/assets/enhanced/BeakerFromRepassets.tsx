@@ -19,6 +19,7 @@ import Animated, {
   withSequence,
   interpolateColor,
   Easing,
+  cancelAnimation,
 } from 'react-native-reanimated';
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
@@ -30,12 +31,14 @@ interface BeakerFromRepassetsProps {
   liquidColor?: string;
   hasBubbles?: boolean;
   temperature?: number; // 0-100
+  isBoiling?: boolean;  // Component now just receives a boolean
 }
 
 export const BeakerFromRepassets: React.FC<BeakerFromRepassetsProps> = ({
   size = 120,
   liquidLevel = 30,
-  liquidColor,
+  liquidColor = 'rgba(173, 216, 230, 0.7)', // Default color
+  isBoiling = false,
   hasBubbles = false,
   temperature = 20
 }) => {
@@ -53,6 +56,24 @@ export const BeakerFromRepassets: React.FC<BeakerFromRepassetsProps> = ({
   const bubble5Opacity = useSharedValue(0);
 
   const level = size * 0.9 - (liquidLevel / 100) * size * 0.6;
+
+  useEffect(() => {
+    cancelAnimation(bubbleY);
+    cancelAnimation(bubbleOpacity);
+
+    if (isBoiling) {
+      const duration = 2500; // A fixed duration is fine, or could be a prop
+      bubbleY.value = withRepeat(withTiming(-size * 0.6, { duration, easing: Easing.in(Easing.ease) }), -1, false);
+      bubbleOpacity.value = withRepeat(withSequence(
+          withTiming(0.7, { duration: duration * 0.1 }),
+          withTiming(0.7, { duration: duration * 0.8 }),
+          withTiming(0, { duration: duration * 0.1 })
+      ), -1, false);
+    } else {
+      bubbleY.value = 0;
+      bubbleOpacity.value = 0;
+    }
+  }, [isBoiling, size, bubbleY, bubbleOpacity]);
 
   // Get liquid color based on temperature
   const getLiquidColor = () => {
@@ -204,7 +225,7 @@ export const BeakerFromRepassets: React.FC<BeakerFromRepassetsProps> = ({
   }));
 
   const bubble3Props = useAnimatedProps(() => ({
-    cy: size * (0.8 - (liquidLevel / 100) * 0.6) + bubble3Props.value,
+    cy: size * (0.8 - (liquidLevel / 100) * 0.6) + bubble3Y.value,
     opacity: bubble3Opacity.value
   }));
 

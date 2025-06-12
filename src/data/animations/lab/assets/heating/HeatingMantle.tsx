@@ -1,7 +1,7 @@
 // src/data/animations/lab/assets/heating/HeatingMantle.tsx
 import React, { useState } from 'react';
 import { Pressable, View } from 'react-native';
-import Svg, { Path, Defs, RadialGradient, Stop, G, Circle, Text } from 'react-native-svg';
+import Svg, { Path, Defs, RadialGradient, Stop, G, Circle, Text, Rect } from 'react-native-svg';
 import Animated, { useSharedValue, useAnimatedProps, withTiming, withRepeat, withSequence } from 'react-native-reanimated';
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);

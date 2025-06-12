@@ -7,12 +7,13 @@ import Slider from '@react-native-community/slider';
 
 import { useAnimation } from '@/data/animations/providers/AnimationProvider';
 import { SkiaRenderer } from '@/data/animations/core/SkiaRenderer';
-import * as LabAssets from '@/data/animations/lab/assets';
+// Import a specific component to test
+import { BeakerFromRepassets } from '@/data/animations/lab/assets';
 
-// Tab 1: The interactive physics simulation we've built
+// Physics tab remains unchanged
 const PhysicsScene = () => {
   const { width, height } = useWindowDimensions();
-  const canvasHeight = height - 350; // Adjust height for tabs and controls
+  const canvasHeight = height - 350;
 
   const animation = useAnimation();
   const particlesShared = useSharedValue<any[]>([]);
@@ -74,32 +75,63 @@ const PhysicsScene = () => {
   );
 };
 
-// Tab 2: A gallery to display all your lab equipment assets
+
+// Tab 2: Now renders a single component for focused testing
+// Inside the `ComponentsScene` component
 const ComponentsScene = () => {
-    // We import everything from the assets index file
-    const assetEntries = Object.entries(LabAssets);
+  const animation = useAnimation();
+  const [temperature, setTemperature] = useState(20);
 
-    return (
-        <ScrollView contentContainerStyle={styles.galleryContainer}>
-            <Text style={styles.galleryTitle}>Lab Asset Gallery</Text>
-            {assetEntries.map(([name, Component]) => {
-                // Filter out non-component exports if any
-                if (typeof Component !== 'function') return null;
+  // Set the engine's temperature when the slider changes
+  useEffect(() => {
+    animation.setParams({ temperature });
+  }, [temperature, animation]);
 
-                return (
-                    <View key={name} style={styles.assetWrapper}>
-                        <Text style={styles.assetName}>{name}</Text>
-                        <View style={styles.assetView}>
-                            <Component width={100} height={100} />
-                        </View>
-                    </View>
-                );
-            })}
-        </ScrollView>
-    );
+  // Determine the liquid color based on the new data-driven logic
+  const liquidColor = temperature >= (animation.substance?.boilingPoint ?? 100)
+    ? (animation.substance?.heatedColor || animation.substance?.color)
+    : animation.substance?.color;
+
+  return (
+    <ScrollView contentContainerStyle={styles.galleryContainer}>
+        <Text style={styles.galleryTitle}>
+            Component Test: {animation.substance?.name}
+        </Text>
+
+        <View style={styles.assetWrapper}>
+            <View style={styles.assetView}>
+                <BeakerFromRepassets
+                    size={250}
+                    isBoiling={animation.isBoiling}
+                    liquidColor={liquidColor}
+                    liquidLevel={50}
+                />
+            </View>
+        </View>
+
+        <View style={styles.componentControls}>
+            <Text style={styles.label}>Environment Temperature: {temperature.toFixed(0)}°C</Text>
+            <Slider
+                style={styles.slider}
+                minimumValue={0}
+                maximumValue={200} // Increase range to boil different things
+                value={temperature}
+                onValueChange={setTemperature}
+            />
+             <Text style={styles.label}>Boiling Point: {animation.substance?.boilingPoint}°C</Text>
+
+            <View style={styles.buttonContainer}>
+                <Button title="Use Water" onPress={() => animation.setSubstance('H2O')} />
+                <Button title="Use Ethanol" onPress={() => animation.setSubstance('C2H5OH')} />
+                <Button title="Use CuSO₄" onPress={() => animation.setSubstance('CuSO4')} />
+            </View>
+        </View>
+    </ScrollView>
+  );
 };
 
-// Main component that manages the TabView
+
+// Main component that manages the TabView (no changes)
 const PhysicsTestScreen = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
@@ -125,16 +157,15 @@ const PhysicsTestScreen = () => {
 const styles = StyleSheet.create({
   sceneContainer: { flex: 1, backgroundColor: '#f0f4f8' },
   tabBar: { backgroundColor: '#4a90e2' },
-  title: { textAlign: 'center', marginVertical: 8, fontSize: 18, fontWeight: 'bold', color: '#333' },
   canvasContainer: { borderWidth: 1, borderColor: '#ccc', backgroundColor: '#001' },
   controls: { paddingHorizontal: 15, paddingTop: 10, flex: 1, justifyContent: 'flex-start' },
   label: { fontSize: 14, color: '#555', marginTop: 4 },
   slider: { width: '100%', height: 30 },
-  galleryContainer: { padding: 10, alignItems: 'center' },
+  galleryContainer: { padding: 20, alignItems: 'center' },
   galleryTitle: { fontSize: 20, fontWeight: 'bold', marginBottom: 20, color: '#333' },
   assetWrapper: { marginBottom: 20, alignItems: 'center', backgroundColor: '#fff', padding: 10, borderRadius: 8, elevation: 2, width: '90%' },
   assetName: { fontWeight: '600', marginBottom: 10, color: '#555' },
-  assetView: { height: 120, width: 120, alignItems: 'center', justifyContent: 'center' },
+  assetView: { height: 220, width: 220, alignItems: 'center', justifyContent: 'center' },
 });
 
 export default PhysicsTestScreen;

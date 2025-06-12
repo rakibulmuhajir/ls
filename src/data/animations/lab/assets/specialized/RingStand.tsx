@@ -1,7 +1,7 @@
 // src/data/animations/lab/assets/specialized/RingStand.tsx
 import React, { useState } from 'react';
 import { PanResponder, View } from 'react-native';
-import Svg, { Rect, Circle, Text } from 'react-native-svg';
+import Svg, { Rect, Circle, Text, G } from 'react-native-svg';
 import Animated, { useSharedValue, useAnimatedProps, withTiming } from 'react-native-reanimated';
 
 const AnimatedG = Animated.createAnimatedComponent(G);

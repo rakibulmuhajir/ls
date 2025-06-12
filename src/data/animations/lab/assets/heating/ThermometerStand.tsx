@@ -1,5 +1,6 @@
 // src/data/animations/lab/assets/heating/ThermometerStand.tsx
 import React, { useState } from 'react';
+import { G } from 'react-native-svg';
 import { View } from 'react-native';
 import Svg, { Rect, Path, Circle, Defs, LinearGradient, Stop, Text } from 'react-native-svg';
 import Animated, { useSharedValue, useAnimatedProps, withTiming, withSequence, withRepeat } from 'react-native-reanimated';

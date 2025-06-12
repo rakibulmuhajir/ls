@@ -39,14 +39,10 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       {/* Providers should wrap the NavigationContainer */}
       <AppThemeProvider>
-        <SimpleAnimationProvider>
-          <UnifiedAnimationProvider>
           <NavigationContainer>
             <ThemedStatusBar />
             <AppStack />
           </NavigationContainer>
-          </UnifiedAnimationProvider>
-        </SimpleAnimationProvider>
       </AppThemeProvider>
     </GestureHandlerRootView>
   );

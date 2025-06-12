@@ -1,4 +1,5 @@
 import type { Particle, Bond, LabBoundary, HeatSource } from './types';
+import { chemicalData, ChemicalProperties } from './ChemicalData';
 import { UniqueID } from '../utils/UniqueID';
 
 // Define the particle type for our simulation, including chemical properties
@@ -22,6 +23,10 @@ export class PhysicsEngine {
   public bonds: Bond[] = [];
   public boundaries: LabBoundary[] = [];
   public heatSources: HeatSource[] = [];
+  public substanceKey: string = 'H2O'; // Default to Water
+  public substance: ChemicalProperties;
+  public isBoiling: boolean = false;
+
 
   public params: PhysicsParams;
 
@@ -32,11 +37,22 @@ export class PhysicsEngine {
     this.width = width;
     this.height = height;
     this.params = params;
+    this.substance = chemicalData[this.substanceKey];
   }
 
   // ===== PUBLIC API METHODS =====
 
-  // FIX: Added the missing `addParticles` (plural) method that the AnimationProvider uses.
+   setSubstance(key: string) {
+      if (chemicalData[key]) {
+          this.substanceKey = key;
+          this.substance = chemicalData[key];
+          // Update physics params based on substance
+          this.params.density = this.substance.density;
+          // Reset particles for the new substance
+          this.particles = [];
+          this.addParticles(15);
+      }
+  }
   addParticles(count: number) {
     const newParticles: SimParticle[] = Array(count).fill(0).map((_, i) => ({
       id: UniqueID.generate('p_'),
@@ -109,6 +125,7 @@ export class PhysicsEngine {
   // ===== CORE SIMULATION LOOP =====
   update() {
     // This logic remains the same as the last correct version
+    this.isBoiling = this.params.temperature >= this.substance.boilingPoint;
     this.particles = this.particles.map(p => {
         if (p.isDragged) return { ...p, isDragged: false };
         const newState = this.params.temperature > 80 ? 'gas' : this.params.temperature > 30 ? 'liquid' : 'solid';

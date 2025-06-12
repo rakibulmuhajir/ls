@@ -1,4 +1,4 @@
-<?xml-stylesheet type="text/css" href="styles.css"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
   <chapter id="1" title="States of Matter and Phase Changes">
     <topic id="1.1" title="What is Chemistry?">
@@ -9891,3 +9891,4 @@ Less dissolves when it's not so sweet! 🎵</content>
     </topic>
   </chapter>
 </root>
+</xml>

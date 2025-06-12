@@ -1,0 +1,322 @@
+/* General Body and Root Styles */
+root {
+    display: block; /* Make root element behave like a block for styling */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+chapter {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+chapter > title {
+    display: block;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+topic {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+topic > title {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #16a085;
+    margin-bottom: 15px;
+}
+
+topic:last-child {
+    border-bottom: none;
+}
+
+/* Section Styles */
+section {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 3px solid #e0e0e0;
+}
+
+section > title {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+/* Content Block Styles */
+content {
+    display: block;
+    margin-bottom: 10px;
+}
+
+content[type="paragraph"],
+content[type="paragraph_styled"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+content[type="paragraph_styled"][style="bold"] > paragraph,
+content[type="paragraph_styled"][style="bold"] {
+    font-weight: bold;
+}
+content[type="paragraph_styled"][style="underline"] > paragraph,
+content[type="paragraph_styled"][style="underline"] {
+    text-decoration: underline;
+}
+
+
+/* Analogy, Example, Connection, Application, Fun Fact Styles */
+content[type="analogy"] > title,
+content[type="example_item"] > title,
+content[type="connection_item"] > title,
+content[type="application_item"] > title,
+content[type="project_item"] > title,
+content[type="exercise"] > title { /* For exercises with titles from source */
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+content[type="analogy"],
+content[type="example_item"],
+content[type="connection_item"],
+content[type="application_item"],
+content[type="project_item"],
+content[type="fun_fact_item"] {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* List Styles */
+list {
+    display: block;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+list[type="unordered"] {
+    list-style-type: disc;
+}
+list[type="alpha_ordered"] {
+    list-style-type: lower-alpha;
+}
+list[type="bulleted"] { /* From new source text for Chapter 10.4 */
+    list-style-type: disc;
+}
+item {
+    display: list-item;
+    margin-bottom: 5px;
+}
+
+content[type="key_points_list"] > point,
+content[type="list_unordered"] > item,
+content[type="list_alpha_ordered"] > item,
+content[type="list_bulleted"] > item {
+    display: list-item;
+    margin-bottom: 5px;
+}
+content[type="key_points_list"] {
+    display: block;
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: "🔹 "; /* Custom bullet for key points */
+}
+
+
+/* Formula Styles */
+formula {
+    font-family: "Courier New", Courier, monospace;
+    color: #c0392b; /* A reddish color for formulas */
+    background-color: #ecf0f1;
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-size: 0.95em;
+}
+formula[type="chemical"]::before {
+    /* content: "🧪 "; */ /* Optional: add an icon */
+}
+formula[type="math"]::before {
+    /* content: "∑ "; */
+}
+formula[type="unit"]::before {
+    /* content: "📐 "; */
+}
+subscript {
+    font-size: 0.75em;
+    vertical-align: sub;
+}
+superscript {
+    font-size: 0.75em;
+    vertical-align: super;
+}
+
+/* Exercise Styles */
+content[type="exercise_block"] {
+    margin-top: 15px;
+}
+exercise {
+    display: block;
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fdfdfd;
+    border-radius: 4px;
+}
+exercise > question, question > paragraph {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+exercise > question > paragraph:first-child {
+     font-weight: bold; /* Make first para of question bold, if it's the main q */
+}
+exercise > answer, answer > paragraph {
+    display: block;
+    color: #27ae60; /* Green for answers */
+    margin-top: 5px;
+    font-style: normal; /* Override default italic in answer */
+}
+exercise > answer > paragraph > emphasis[type="italic"] {
+    font-style: italic;
+    color: #27ae60; /* Ensure italic part also green */
+}
+exercise[level="basic"]::before {
+    content: "Basic Exercise: ";
+    font-weight: bold;
+    color: #2ecc71;
+}
+exercise[level="intermediate"]::before {
+    content: "Intermediate Exercise: ";
+    font-weight: bold;
+    color: #f39c12;
+}
+exercise[level="advanced"]::before {
+    content: "Advanced Exercise: ";
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Interactive Prompt Styles */
+content[type="interactive_prompt"],
+content[type="interactive_prompt_list"] > interactive_prompt {
+    display: block;
+    background-color: #e8f6f3;
+    border-left: 4px solid #1abc9c;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Table Styles */
+content[type="table"] > title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+table_data, table { /* 'table' for original table tag compatibility */
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+header_row, row {
+    display: table-row;
+}
+header_row > cell {
+    display: table-cell;
+    font-weight: bold;
+    background-color: #ecf0f1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+row > cell {
+    display: table-cell;
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Emphasis Styles */
+emphasis[type="bold"] {
+    font-weight: bold;
+}
+emphasis[type="italic"] {
+    font-style: italic;
+}
+emphasis[type="underline"] {
+    text-decoration: underline;
+}
+
+/* Preformatted Text (for structural formulas) */
+pre {
+    display: block;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: "Consolas", "Monaco", monospace;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+/* Chapter Summary Styles (New) */
+chapter_summary {
+    display: block;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #eaf2f8;
+    border: 1px solid #aed6f1;
+    border-radius: 5px;
+}
+chapter_summary > section > title {
+    color: #1f618d;
+    font-size: 1.6em;
+    border-bottom: 1px solid #aed6f1;
+    padding-bottom: 5px;
+}
+
+/* Hidden Illustration/Animation Needed Comments - will not be visible by default */
+/* You can add specific styles to make them visible for debugging if needed, e.g. */
+/*
+root > chapter > topic > section > comment,
+root > chapter > topic > section > content > comment {
+    display: block;
+    background-color: yellow;
+    color: black;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px dashed red;
+}
+*/

@@ -31,7 +31,9 @@ interface BeakerFromRepassetsProps {
   liquidColor?: string;
   hasBubbles?: boolean;
   temperature?: number; // 0-100
-  isBoiling?: boolean;  // Component now just receives a boolean
+  isBoiling?: boolean;
+  boilingPoint?: number;
+  evaporationRate?: number; // 0-1
 }
 
 export const BeakerFromRepassets: React.FC<BeakerFromRepassetsProps> = ({
@@ -40,7 +42,9 @@ export const BeakerFromRepassets: React.FC<BeakerFromRepassetsProps> = ({
   liquidColor = 'rgba(173, 216, 230, 0.7)', // Default color
   isBoiling = false,
   hasBubbles = false,
-  temperature = 20
+  temperature = 20,
+  boilingPoint = 100,
+  evaporationRate = 0
 }) => {
   // Animation values for bubbles
   const bubble1Y = useSharedValue(0);
@@ -55,25 +59,66 @@ export const BeakerFromRepassets: React.FC<BeakerFromRepassetsProps> = ({
   const bubble4Opacity = useSharedValue(0);
   const bubble5Opacity = useSharedValue(0);
 
-  const level = size * 0.9 - (liquidLevel / 100) * size * 0.6;
+  // Calculate adjusted liquid level based on evaporation
+  const adjustedLiquidLevel = Math.max(0, (liquidLevel || 0) - (evaporationRate || 0));
+  const level = size * 0.9 - (adjustedLiquidLevel / 100) * size * 0.6;
 
+  // Calculate beaker heat effect (0-1)
+  const heatEffect = temperature && boilingPoint
+    ? Math.min(1, Math.max(0, (temperature - boilingPoint) / 50))
+    : 0;
+
+  // Boiling effect
   useEffect(() => {
-    cancelAnimation(bubbleY);
-    cancelAnimation(bubbleOpacity);
-
     if (isBoiling) {
-      const duration = 2500; // A fixed duration is fine, or could be a prop
-      bubbleY.value = withRepeat(withTiming(-size * 0.6, { duration, easing: Easing.in(Easing.ease) }), -1, false);
-      bubbleOpacity.value = withRepeat(withSequence(
-          withTiming(0.7, { duration: duration * 0.1 }),
-          withTiming(0.7, { duration: duration * 0.8 }),
-          withTiming(0, { duration: duration * 0.1 })
+      const duration = 1000;
+      // Animate all bubbles for boiling effect
+      bubble1Y.value = withRepeat(withTiming(-size * 0.6, { duration, easing: Easing.in(Easing.ease) }), -1, false);
+      bubble2Y.value = withRepeat(withTiming(-size * 0.6, { duration, easing: Easing.in(Easing.ease) }), -1, false);
+      bubble3Y.value = withRepeat(withTiming(-size * 0.6, { duration, easing: Easing.in(Easing.ease) }), -1, false);
+      bubble4Y.value = withRepeat(withTiming(-size * 0.6, { duration, easing: Easing.in(Easing.ease) }), -1, false);
+      bubble5Y.value = withRepeat(withTiming(-size * 0.6, { duration, easing: Easing.in(Easing.ease) }), -1, false);
+
+      bubble1Opacity.value = withRepeat(withSequence(
+        withTiming(0.7, { duration: duration * 0.1 }),
+        withTiming(0.7, { duration: duration * 0.8 }),
+        withTiming(0, { duration: duration * 0.1 })
+      ), -1, false);
+      bubble2Opacity.value = withRepeat(withSequence(
+        withTiming(0.7, { duration: duration * 0.1 }),
+        withTiming(0.7, { duration: duration * 0.8 }),
+        withTiming(0, { duration: duration * 0.1 })
+      ), -1, false);
+      bubble3Opacity.value = withRepeat(withSequence(
+        withTiming(0.7, { duration: duration * 0.1 }),
+        withTiming(0.7, { duration: duration * 0.8 }),
+        withTiming(0, { duration: duration * 0.1 })
+      ), -1, false);
+      bubble4Opacity.value = withRepeat(withSequence(
+        withTiming(0.7, { duration: duration * 0.1 }),
+        withTiming(0.7, { duration: duration * 0.8 }),
+        withTiming(0, { duration: duration * 0.1 })
+      ), -1, false);
+      bubble5Opacity.value = withRepeat(withSequence(
+        withTiming(0.7, { duration: duration * 0.1 }),
+        withTiming(0.7, { duration: duration * 0.8 }),
+        withTiming(0, { duration: duration * 0.1 })
       ), -1, false);
     } else {
-      bubbleY.value = 0;
-      bubbleOpacity.value = 0;
+      // Reset all bubbles when not boiling
+      bubble1Y.value = withTiming(0, { duration: 300 });
+      bubble2Y.value = withTiming(0, { duration: 300 });
+      bubble3Y.value = withTiming(0, { duration: 300 });
+      bubble4Y.value = withTiming(0, { duration: 300 });
+      bubble5Y.value = withTiming(0, { duration: 300 });
+
+      bubble1Opacity.value = withTiming(0, { duration: 300 });
+      bubble2Opacity.value = withTiming(0, { duration: 300 });
+      bubble3Opacity.value = withTiming(0, { duration: 300 });
+      bubble4Opacity.value = withTiming(0, { duration: 300 });
+      bubble5Opacity.value = withTiming(0, { duration: 300 });
     }
-  }, [isBoiling, size, bubbleY, bubbleOpacity]);
+  }, [isBoiling, size]);
 
   // Get liquid color based on temperature
   const getLiquidColor = () => {
@@ -244,8 +289,8 @@ export const BeakerFromRepassets: React.FC<BeakerFromRepassetsProps> = ({
       <Svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
         <Defs>
           <LinearGradient id="glassGradient" x1="0" y1="0" x2="0" y2="1">
-            <Stop offset="0" stopColor="#E0E0E0" stopOpacity="0.8" />
-            <Stop offset="1" stopColor="#BDBDBD" stopOpacity="0.8" />
+            <Stop offset="0" stopColor={heatEffect > 0.5 ? '#FFA000' : '#E0E0E0'} stopOpacity={0.8 + heatEffect * 0.2} />
+            <Stop offset="1" stopColor={heatEffect > 0.5 ? '#FF6D00' : '#BDBDBD'} stopOpacity={0.8 + heatEffect * 0.2} />
           </LinearGradient>
 
           <LinearGradient id="liquidGradient" x1="0" y1="0" x2="0" y2="1">

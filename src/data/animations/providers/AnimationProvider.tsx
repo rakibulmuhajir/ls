@@ -1,10 +1,17 @@
 import React, { createContext, useContext, useState, useEffect, useRef, useMemo, ReactNode, useCallback } from 'react';
 import { PhysicsEngine, PhysicsParams } from '../core/PhysicsEngine';
 
+import { ChemicalProperties } from '../core/ChemicalData';
+
 interface AnimationContextType {
   particles: any[];
   addParticles: (count: number) => void;
   setParams: (newParams: Partial<PhysicsParams>) => void;
+  // Substance properties
+  substance: ChemicalProperties | undefined;
+  substanceKey: string;
+  isBoiling: boolean;
+  setSubstance: (key: string) => void;
   // Interaction handlers
   handleDragStart: (id: string) => void;
   handleDragUpdate: (id: string, x: number, y: number) => void;
@@ -28,7 +35,14 @@ interface AnimationProviderProps {
 
 export const AnimationProvider: React.FC<AnimationProviderProps> = ({ children, width, height, initialParams }) => {
   const [particles, setParticles] = useState<any[]>([]);
+  const [substanceKey, setSubstanceKey] = useState('H2O');
+  const [isBoiling, setIsBoiling] = useState(false);
   const engineRef = useRef<PhysicsEngine | null>(null);
+
+  const substance = useMemo(() => {
+    if (!engineRef.current) return undefined;
+    return engineRef.current.substance;
+  }, [substanceKey]);
 
   // Initialize the engine
   useEffect(() => {
@@ -55,6 +69,15 @@ export const AnimationProvider: React.FC<AnimationProviderProps> = ({ children, 
   const setParams = useCallback((newParams: Partial<PhysicsParams>) => {
     if (engineRef.current) {
       engineRef.current.params = { ...engineRef.current.params, ...newParams };
+      setIsBoiling(engineRef.current.params.temperature >= (engineRef.current.substance?.boilingPoint ?? 100));
+    }
+  }, []);
+
+  const setSubstance = useCallback((key: string) => {
+    if (engineRef.current) {
+      engineRef.current.setSubstance(key);
+      setSubstanceKey(key);
+      setIsBoiling(engineRef.current.params.temperature >= (engineRef.current.substance?.boilingPoint ?? 100));
     }
   }, []);
 
@@ -68,8 +91,12 @@ export const AnimationProvider: React.FC<AnimationProviderProps> = ({ children, 
 
   const value = useMemo(() => ({
     particles,
+    substance,
+    substanceKey,
+    isBoiling,
     addParticles: addParticlesHandler,
     setParams,
+    setSubstance,
     handleDragStart,
     handleDragUpdate,
     handleDragEnd,

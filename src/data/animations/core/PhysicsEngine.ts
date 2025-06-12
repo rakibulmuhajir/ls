@@ -88,8 +88,27 @@ export class PhysicsEngine {
 
   addBoundary(boundaryData: Omit<LabBoundary, 'id'>): string {
     const id = UniqueID.generate('boundary_');
-    this.boundaries.push({ ...boundaryData, id });
-    return id;
+
+    if (boundaryData.shape === 'circle') {
+      const circleBoundary = boundaryData as Omit<Extract<LabBoundary, { shape: 'circle' }>, 'id'>;
+      const boundary: LabBoundary = {
+        ...circleBoundary,
+        id,
+        radius: circleBoundary.radius || 10
+      };
+      this.boundaries.push(boundary);
+      return id;
+    } else {
+      const rectBoundary = boundaryData as Omit<Extract<LabBoundary, { shape: 'rectangle' }>, 'id'>;
+      const boundary: LabBoundary = {
+        ...rectBoundary,
+        id,
+        width: rectBoundary.width || 50,
+        height: rectBoundary.height || 50
+      };
+      this.boundaries.push(boundary);
+      return id;
+    }
   }
 
   addHeatSource(sourceData: Omit<HeatSource, 'id'>): string {

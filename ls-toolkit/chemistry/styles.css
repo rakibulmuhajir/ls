@@ -1,4 +1,23 @@
 /* General Body and Root Styles */
+/* General Body and Root Styles */
+
+/* General Body and Root Styles */
+root, chapter, topic, section, content,
+analogy, example_item, connection_item, application_item, project_item, fun_fact_item,
+key_points_list, point, interactive_prompt, interactive_prompt_list,
+exercise_block, exercise, question, answer,
+table_data, header_row, row, cell,
+list, item,
+chapter_summary, comprehensive_summary, final_review_questions,
+pre, formula, subscript, superscript, emphasis, paragraph, paragraph_styled {
+    display: block; /* Explicitly set all custom tags to block */
+}
+
+/*
+   Keep the rest of your styles.css content below this block.
+   The key is to ensure all your custom tags are recognized as block elements
+   by the browser's rendering engine when processing XML with CSS.
+*/
 root {
     display: block; /* Make root element behave like a block for styling */
     font-family: Arial, sans-serif;
@@ -6,6 +25,7 @@ root {
     margin: 20px;
     background-color: #f4f4f4;
     color: #333;
+    /* background-color: red !important; */
 }
 
 chapter {

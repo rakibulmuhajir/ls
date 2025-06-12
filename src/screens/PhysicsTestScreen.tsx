@@ -1,171 +1,157 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet, useWindowDimensions, ScrollView } from 'react-native';
-import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import { runOnJS, useSharedValue } from 'react-native-reanimated';
-import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, Text, Button, StyleSheet, ScrollView } from 'react-native';
 import Slider from '@react-native-community/slider';
 
 import { useAnimation } from '@/data/animations/providers/AnimationProvider';
-import { SkiaRenderer } from '@/data/animations/core/SkiaRenderer';
-// Import a specific component to test
-import { BeakerFromRepassets } from '@/data/animations/lab/assets';
+import {
+  BeakerFromRepassets,
+  HydrogenMoleculeSVG,
+  OxygenMoleculeSVG,
+  SodiumCrystalSVG,
+  BunsenBurnerFromRepassets
+} from '@/data/animations/lab/assets';
 
-// Physics tab remains unchanged
-const PhysicsScene = () => {
-  const { width, height } = useWindowDimensions();
-  const canvasHeight = height - 350;
-
-  const animation = useAnimation();
-  const particlesShared = useSharedValue<any[]>([]);
-  const draggedParticleIdShared = useSharedValue<string | null>(null);
-
-  React.useEffect(() => {
-    particlesShared.value = animation.particles;
-  }, [animation.particles, particlesShared]);
-
-  const panGesture = Gesture.Pan()
-    .onBegin((e) => {
-      'worklet';
-      const p = [...particlesShared.value].reverse().find(part => {
-        const dx = e.x - part.x;
-        const dy = e.y - part.y;
-        return dx * dx + dy * dy < (part.radius || 10) * (part.radius || 10) * 2.5;
-      });
-      if (p) {
-        draggedParticleIdShared.value = p.id;
-        runOnJS(animation.handleDragStart)(p.id);
-      }
-    })
-    .onUpdate((e) => {
-      'worklet';
-      const draggedId = draggedParticleIdShared.value;
-      if (draggedId) {
-        runOnJS(animation.handleDragUpdate)(draggedId, e.x, e.y);
-      }
-    })
-    .onEnd((e) => {
-      'worklet';
-      const draggedId = draggedParticleIdShared.value;
-      if (draggedId) {
-        runOnJS(animation.handleDragEnd)(draggedId, e.velocityX / 60, e.velocityY / 60);
-        draggedParticleIdShared.value = null;
-      }
-    });
-
-  return (
-    <View style={styles.sceneContainer}>
-      <GestureDetector gesture={panGesture}>
-        <View style={[styles.canvasContainer, { height: canvasHeight }]}>
-          <SkiaRenderer
-            physicsState={{ particles: animation.particles, bonds: [], timestamp: Date.now() }}
-            width={width}
-            height={canvasHeight}
-            performanceSettings={{ level: 'high' } as any}
-          />
-        </View>
-      </GestureDetector>
-      <View style={styles.controls}>
-        <Text style={styles.label}>Temperature</Text>
-        <Slider style={styles.slider} minimumValue={0} maximumValue={100} defaultValue={50} onSlidingComplete={(v) => animation.setParams({ temperature: v })} />
-        <Text style={styles.label}>Fluid Density</Text>
-        <Slider style={styles.slider} minimumValue={0.1} maximumValue={1} defaultValue={0.4} onSlidingComplete={(v) => animation.setParams({ density: v })} />
-        <Button title="Add 5 Particles" onPress={() => animation.addParticles(5)} />
-      </View>
-    </View>
-  );
-};
-
-
-// Tab 2: Now renders a single component for focused testing
-// Inside the `ComponentsScene` component
-const ComponentsScene = () => {
+const PhysicsTestScreen = () => {
   const animation = useAnimation();
   const [temperature, setTemperature] = useState(20);
 
-  // Set the engine's temperature when the slider changes
+  const [forceUpdate, setForceUpdate] = useState(0);
+  const [evaporationRate, setEvaporationRate] = useState(0);
+  const prevTemperature = useRef(temperature);
+
   useEffect(() => {
-    animation.setParams({ temperature });
+    if (prevTemperature.current !== temperature) {
+      animation.setParams({ temperature });
+      prevTemperature.current = temperature;
+      setForceUpdate(prev => prev + 1); // Force re-render
+
+      // Calculate evaporation rate based on temperature
+      const boilingPoint = animation.substance?.boilingPoint ?? 100;
+      if (temperature >= boilingPoint) {
+        const overBoiling = temperature - boilingPoint;
+        setEvaporationRate(Math.min(1, overBoiling / 10)); // 0-1 range
+      } else {
+        setEvaporationRate(0);
+      }
+    }
   }, [temperature, animation]);
 
-  // Determine the liquid color based on the new data-driven logic
+  // Force re-render when substance changes
+  useEffect(() => {
+    setForceUpdate(prev => prev + 1);
+  }, [animation.substanceKey]);
+
   const liquidColor = temperature >= (animation.substance?.boilingPoint ?? 100)
     ? (animation.substance?.heatedColor || animation.substance?.color)
     : animation.substance?.color;
 
   return (
     <ScrollView contentContainerStyle={styles.galleryContainer}>
-        <Text style={styles.galleryTitle}>
-            Component Test: {animation.substance?.name}
-        </Text>
+      <Text style={styles.galleryTitle}>
+        Component Test: {animation.substance?.name}
+      </Text>
 
-        <View style={styles.assetWrapper}>
-            <View style={styles.assetView}>
-                <BeakerFromRepassets
-                    size={250}
-                    isBoiling={animation.isBoiling}
-                    liquidColor={liquidColor}
-                    liquidLevel={50}
-                />
-            </View>
-        </View>
-
-        <View style={styles.componentControls}>
-            <Text style={styles.label}>Environment Temperature: {temperature.toFixed(0)}°C</Text>
-            <Slider
-                style={styles.slider}
-                minimumValue={0}
-                maximumValue={200} // Increase range to boil different things
-                value={temperature}
-                onValueChange={setTemperature}
+      <View style={styles.assetWrapper}>
+        <View style={styles.assetView}>
+          {animation.substanceKey === 'H2O' && (
+            <BeakerFromRepassets
+              size={250}
+              isBoiling={temperature >= (animation.substance?.boilingPoint ?? 100)}
+              hasBubbles={temperature >= (animation.substance?.boilingPoint ?? 100)}
+              liquidColor={liquidColor}
+              liquidLevel={50}
+              boilingPoint={animation.substance?.boilingPoint}
+              evaporationRate={evaporationRate}
+              temperature={temperature}
             />
-             <Text style={styles.label}>Boiling Point: {animation.substance?.boilingPoint}°C</Text>
-
-            <View style={styles.buttonContainer}>
-                <Button title="Use Water" onPress={() => animation.setSubstance('H2O')} />
-                <Button title="Use Ethanol" onPress={() => animation.setSubstance('C2H5OH')} />
-                <Button title="Use CuSO₄" onPress={() => animation.setSubstance('CuSO4')} />
-            </View>
+          )}
+          {animation.substanceKey === 'H' && (
+            <HydrogenMoleculeSVG
+              size={250}
+              state={temperature < -259 ? 'solid' : temperature < -252 ? 'liquid' : 'gas'}
+              temperature={temperature}
+            />
+          )}
+          {animation.substanceKey === 'O' && (
+            <OxygenMoleculeSVG
+              size={250}
+              state={temperature < -218 ? 'solid' : temperature < -182 ? 'liquid' : 'gas'}
+              temperature={temperature}
+            />
+          )}
+          {animation.substanceKey === 'Na' && (
+            <SodiumCrystalSVG
+              size={250}
+              state={temperature < 97.8 ? 'solid' : temperature < 883 ? 'liquid' : 'gas'}
+              temperature={temperature}
+            />
+          )}
+          <BunsenBurnerFromRepassets
+            size={150}
+            intensity={temperature / 200}
+            isActive={temperature > 30}
+          />
         </View>
+      </View>
+
+      <View style={styles.componentControls}>
+        <Text style={styles.label}>Environment Temperature: {temperature.toFixed(0)}°C</Text>
+        <Slider
+          style={styles.slider}
+          minimumValue={0}
+          maximumValue={200}
+          value={temperature}
+          onValueChange={setTemperature}
+        />
+        <Text style={styles.label}>Boiling Point: {animation.substance?.boilingPoint}°C</Text>
+
+        <View style={styles.buttonContainer}>
+          <Button title="Water" onPress={() => animation.setSubstance('H2O')} />
+          <Button title="Hydrogen" onPress={() => animation.setSubstance('H')} />
+          <Button title="Oxygen" onPress={() => animation.setSubstance('O')} />
+          <Button title="Sodium" onPress={() => animation.setSubstance('Na')} />
+          <Button title="CuSO₄" onPress={() => animation.setSubstance('CuSO4')} />
+        </View>
+      </View>
     </ScrollView>
   );
 };
 
-
-// Main component that manages the TabView (no changes)
-const PhysicsTestScreen = () => {
-  const [index, setIndex] = React.useState(0);
-  const [routes] = React.useState([
-    { key: 'physics', title: 'Physics' },
-    { key: 'components', title: 'Components' },
-  ]);
-
-  const renderScene = SceneMap({
-    physics: PhysicsScene,
-    components: ComponentsScene,
-  });
-
-  return (
-    <TabView
-      navigationState={{ index, routes }}
-      renderScene={renderScene}
-      onIndexChange={setIndex}
-      renderTabBar={props => <TabBar {...props} style={styles.tabBar} />}
-    />
-  );
-};
-
 const styles = StyleSheet.create({
-  sceneContainer: { flex: 1, backgroundColor: '#f0f4f8' },
-  tabBar: { backgroundColor: '#4a90e2' },
-  canvasContainer: { borderWidth: 1, borderColor: '#ccc', backgroundColor: '#001' },
-  controls: { paddingHorizontal: 15, paddingTop: 10, flex: 1, justifyContent: 'flex-start' },
-  label: { fontSize: 14, color: '#555', marginTop: 4 },
-  slider: { width: '100%', height: 30 },
   galleryContainer: { padding: 20, alignItems: 'center' },
   galleryTitle: { fontSize: 20, fontWeight: 'bold', marginBottom: 20, color: '#333' },
-  assetWrapper: { marginBottom: 20, alignItems: 'center', backgroundColor: '#fff', padding: 10, borderRadius: 8, elevation: 2, width: '90%' },
-  assetName: { fontWeight: '600', marginBottom: 10, color: '#555' },
-  assetView: { height: 220, width: 220, alignItems: 'center', justifyContent: 'center' },
+  assetWrapper: {
+    marginBottom: 20,
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 8,
+    elevation: 2,
+    width: '90%'
+  },
+  assetView: {
+    height: 220,
+    width: 220,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  componentControls: {
+    width: '90%',
+    padding: 15,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    elevation: 2,
+    marginBottom: 20
+  },
+  label: { fontSize: 14, color: '#555', marginTop: 4 },
+  slider: { width: '100%', height: 30 },
+  buttonContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 8,
+    marginTop: 10
+  },
 });
 
 export default PhysicsTestScreen;

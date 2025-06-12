@@ -40,5 +40,11 @@ export { BeakerFromRepassets } from './enhanced/BeakerFromRepassets';
 export { FlaskEnhanced } from './enhanced/FlaskEnhanced';
 export { TestTubeRackEnhanced } from './enhanced/TestTubeRackEnhanced';
 
+// Element components
+export { HydrogenMoleculeSVG } from './elements/Hydrogen';
+export { OxygenMoleculeSVG } from './elements/Oxygen';
+export { SodiumCrystalSVG } from './elements/Sodium';
+//export { BunsenBurnerSVG } from './heating/BunsenBurner';
+
 // Lab colors and utilities
 export { LabColors } from './colors';

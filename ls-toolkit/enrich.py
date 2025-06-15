@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Chemistry Term Enrichment Script (JSON Format)
-Processes extracted chemistry terms, enriches them with DeepSeek API,
+Educational Terms Enrichment Script (JSON Format)
+Processes extracted educational terms, enriches them with DeepSeek API,
 and saves to a CSV with a single JSON column containing all enrichment data.
 """
 

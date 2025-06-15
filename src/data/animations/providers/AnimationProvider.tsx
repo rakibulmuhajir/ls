@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useRef, useMemo, ReactNode, useCallback } from 'react';
 import { PhysicsEngine, PhysicsParams } from '../core/PhysicsEngine';
+import { ParticleFactory } from '../core/ParticleFactory';
 
 import { ChemicalProperties } from '../core/ChemicalData';
 
@@ -44,12 +45,27 @@ export const AnimationProvider: React.FC<AnimationProviderProps> = ({ children, 
     return engineRef.current.substance;
   }, [substanceKey]);
 
-  // Initialize the engine
-  useEffect(() => {
-    engineRef.current = new PhysicsEngine(width, height, initialParams);
-    engineRef.current.addParticles(15);
-    setParticles([...engineRef.current.particles]);
-  }, [width, height, initialParams]);
+// Initialize the engine
+useEffect(() => {
+  engineRef.current = new PhysicsEngine(width, height, initialParams);
+
+  // Use ParticleFactory instead of simple addParticles
+  const initialState = ParticleFactory.determineState(substanceKey, initialParams.temperature);
+  const factoryParticles = ParticleFactory.createParticles(
+    substanceKey,
+    15,
+    {
+      containerWidth: width,
+      containerHeight: height,
+      temperature: initialParams.temperature,
+      state: initialState
+    }
+  );
+
+  // Set particles directly on engine
+  engineRef.current.particles = factoryParticles;
+  setParticles([...engineRef.current.particles]);
+}, [width, height, initialParams, substanceKey]);
 
   // The animation loop
   useEffect(() => {

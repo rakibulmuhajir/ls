@@ -1,6 +1,7 @@
 import type { Particle, Bond, LabBoundary, HeatSource } from './types';
 import { chemicalData, ChemicalProperties } from './ChemicalData';
 import { UniqueID } from '../utils/UniqueID';
+import { ParticleFactory } from './ParticleFactory';
 
 // Define the particle type for our simulation, including chemical properties
 export type SimParticle = Particle & {
@@ -42,17 +43,26 @@ export class PhysicsEngine {
 
   // ===== PUBLIC API METHODS =====
 
-   setSubstance(key: string) {
-      if (chemicalData[key]) {
-          this.substanceKey = key;
-          this.substance = chemicalData[key];
-          // Update physics params based on substance
-          this.params.density = this.substance.density;
-          // Reset particles for the new substance
-          this.particles = [];
-          this.addParticles(15);
+setSubstance(key: string) {
+  if (chemicalData[key]) {
+    this.substanceKey = key;
+    this.substance = chemicalData[key];
+    this.params.density = this.substance.density;
+
+    // Use ParticleFactory for realistic particle creation
+    const currentState = ParticleFactory.determineState(key, this.params.temperature);
+    this.particles = ParticleFactory.createParticles(
+      key,
+      15,
+      {
+        containerWidth: this.width,
+        containerHeight: this.height,
+        temperature: this.params.temperature,
+        state: currentState
       }
+    );
   }
+}
   addParticles(count: number) {
     const newParticles: SimParticle[] = Array(count).fill(0).map((_, i) => ({
       id: UniqueID.generate('p_'),

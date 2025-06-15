@@ -260,9 +260,9 @@ def main():
     """Main function to run the XML word tagging script."""
 
     # File paths - modify these as needed
-    csv_file = "enriched_CHEM_IX_chapter1.csv"  # term, topic_id, enrichment_data
-    input_xml_file = "chem-ix-1st-chap.xml"     # Original XML content
-    output_xml_file = "content_tagged.xml"  # Output with tagged words
+    csv_file = "../chemistry/enriched_chemistry_terms.csv"  # term, topic_id, enrichment_data
+    input_xml_file = "../chemistry/chem_IX-clean.xml"     # Original XML content
+    output_xml_file = "../chemistry/chem_tagged.xml"  # Output with tagged words
 
     logger.info("=== Starting XML Dictionary Word Tagger ===")
 

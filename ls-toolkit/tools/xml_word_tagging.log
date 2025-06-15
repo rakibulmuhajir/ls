@@ -1,0 +1,209 @@
+2025-06-15 14:40:09,662 - INFO - === Starting XML Dictionary Word Tagger ===
+2025-06-15 14:40:09,662 - ERROR - Input XML file not found: '../chemistry/chem_IX_clean.xml'
+2025-06-15 14:40:50,103 - INFO - === Starting XML Dictionary Word Tagger ===
+2025-06-15 14:40:50,104 - INFO - Loading dictionary data from CSV...
+2025-06-15 14:40:50,171 - WARNING - Row 784: Invalid JSON in enrichment_data for term 'heaviest element': Extra data: line 1 column 831 (char 830)
+2025-06-15 14:40:50,173 - WARNING - Row 820: Invalid JSON in enrichment_data for term 'protein molecules': Extra data: line 1 column 995 (char 994)
+2025-06-15 14:40:50,173 - WARNING - Row 832: Invalid JSON in enrichment_data for term 'table salt': Expecting ',' delimiter: line 1 column 655 (char 654)
+2025-06-15 14:40:50,175 - WARNING - Row 848: Invalid JSON in enrichment_data for term 'catalyst': Extra data: line 1 column 985 (char 984)
+2025-06-15 14:40:50,175 - WARNING - Row 854: Invalid JSON in enrichment_data for term 'combustion reactions': Extra data: line 1 column 1064 (char 1063)
+2025-06-15 14:40:50,177 - WARNING - Row 875: Invalid JSON in enrichment_data for term 'propane': Expecting ',' delimiter: line 1 column 564 (char 563)
+2025-06-15 14:40:50,178 - WARNING - Row 892: Invalid JSON in enrichment_data for term 'term': Expecting value: line 1 column 1 (char 0)
+2025-06-15 14:40:50,178 - WARNING - Row 898: Invalid JSON in enrichment_data for term 'assembly line': Expecting ',' delimiter: line 1 column 921 (char 920)
+2025-06-15 14:40:50,180 - WARNING - Row 901: Invalid JSON in enrichment_data for term 'calcium chloride': Expecting ',' delimiter: line 1 column 715 (char 714)
+2025-06-15 14:40:50,180 - WARNING - Row 943: Invalid JSON in enrichment_data for term 'methane': Expecting ',' delimiter: line 1 column 621 (char 620)
+2025-06-15 14:40:50,180 - WARNING - Row 956: Invalid JSON in enrichment_data for term 'photosynthesis': Expecting ',' delimiter: line 1 column 806 (char 805)
+2025-06-15 14:40:50,184 - WARNING - Row 977: Invalid JSON in enrichment_data for term 'water': Expecting ',' delimiter: line 1 column 776 (char 775)
+2025-06-15 14:40:50,184 - WARNING - Row 978: Invalid JSON in enrichment_data for term 'zinc': Expecting ',' delimiter: line 1 column 670 (char 669)
+2025-06-15 14:40:50,184 - WARNING - Row 1018: Invalid JSON in enrichment_data for term 'energy account': Invalid \escape: line 1 column 21 (char 20)
+2025-06-15 14:40:50,184 - WARNING - Row 1038: Invalid JSON in enrichment_data for term 'mountain analogy': Invalid \escape: line 1 column 880 (char 879)
+2025-06-15 14:40:50,192 - WARNING - Row 1168: Invalid JSON in enrichment_data for term 'adenosine triphosphate': Expecting ',' delimiter: line 1 column 242 (char 241)
+2025-06-15 14:40:50,192 - WARNING - Row 1195: Invalid JSON in enrichment_data for term 'mitochondria': Expecting ',' delimiter: line 1 column 137 (char 136)
+2025-06-15 14:40:50,205 - WARNING - Row 1564: Invalid JSON in enrichment_data for term 'sulfuric acid': Expecting ',' delimiter: line 1 column 110 (char 109)
+2025-06-15 14:40:50,383 - WARNING - Row 2024: Invalid JSON in enrichment_data for term 'period 6': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,388 - WARNING - Row 2185: Invalid JSON in enrichment_data for term 'elements': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,390 - WARNING - Row 2199: Invalid JSON in enrichment_data for term 'metal': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,390 - WARNING - Row 2229: Invalid JSON in enrichment_data for term 'x-ray tubes': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,397 - WARNING - Row 2363: Invalid JSON in enrichment_data for term 'sublime': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,400 - WARNING - Row 2512: Invalid JSON in enrichment_data for term 'electronics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,400 - WARNING - Row 2514: Invalid JSON in enrichment_data for term 'germanium': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,404 - WARNING - Row 2538: Invalid JSON in enrichment_data for term 'periodic table': Expecting ',' delimiter: line 1 column 561 (char 560)
+2025-06-15 14:40:50,404 - WARNING - Row 2542: Invalid JSON in enrichment_data for term 'semiconductor physics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 14:40:50,411 - ERROR - Error loading CSV file '../chemistry/enriched_chemistry_terms.csv': 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 14:40:50,411 - ERROR - === XML Dictionary Word Tagger Failed: 'NoneType' object has no attribute 'strip' ===
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 281, in main
+    dictionary_by_topic = load_dictionary_from_csv(csv_file)
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 18:12:51,118 - INFO - === Starting XML Dictionary Word Tagger ===
+2025-06-15 18:12:51,118 - INFO - Loading dictionary data from CSV...
+2025-06-15 18:12:51,168 - WARNING - Row 848: Invalid JSON in enrichment_data for term 'catalyst': Extra data: line 1 column 985 (char 984)
+2025-06-15 18:12:51,171 - WARNING - Row 854: Invalid JSON in enrichment_data for term 'combustion reactions': Extra data: line 1 column 1064 (char 1063)
+2025-06-15 18:12:51,171 - WARNING - Row 875: Invalid JSON in enrichment_data for term 'propane': Expecting ',' delimiter: line 1 column 564 (char 563)
+2025-06-15 18:12:51,171 - WARNING - Row 892: Invalid JSON in enrichment_data for term 'term': Expecting value: line 1 column 1 (char 0)
+2025-06-15 18:12:51,171 - WARNING - Row 898: Invalid JSON in enrichment_data for term 'assembly line': Expecting ',' delimiter: line 1 column 921 (char 920)
+2025-06-15 18:12:51,171 - WARNING - Row 901: Invalid JSON in enrichment_data for term 'calcium chloride': Expecting ',' delimiter: line 1 column 715 (char 714)
+2025-06-15 18:12:51,171 - WARNING - Row 943: Invalid JSON in enrichment_data for term 'methane': Expecting ',' delimiter: line 1 column 621 (char 620)
+2025-06-15 18:12:51,171 - WARNING - Row 956: Invalid JSON in enrichment_data for term 'photosynthesis': Expecting ',' delimiter: line 1 column 806 (char 805)
+2025-06-15 18:12:51,171 - WARNING - Row 977: Invalid JSON in enrichment_data for term 'water': Expecting ',' delimiter: line 1 column 776 (char 775)
+2025-06-15 18:12:51,171 - WARNING - Row 978: Invalid JSON in enrichment_data for term 'zinc': Expecting ',' delimiter: line 1 column 670 (char 669)
+2025-06-15 18:12:51,178 - WARNING - Row 1018: Invalid JSON in enrichment_data for term 'energy account': Invalid \escape: line 1 column 21 (char 20)
+2025-06-15 18:12:51,178 - WARNING - Row 1038: Invalid JSON in enrichment_data for term 'mountain analogy': Invalid \escape: line 1 column 880 (char 879)
+2025-06-15 18:12:51,178 - WARNING - Row 1168: Invalid JSON in enrichment_data for term 'adenosine triphosphate': Expecting ',' delimiter: line 1 column 242 (char 241)
+2025-06-15 18:12:51,178 - WARNING - Row 1195: Invalid JSON in enrichment_data for term 'mitochondria': Expecting ',' delimiter: line 1 column 137 (char 136)
+2025-06-15 18:12:51,199 - WARNING - Row 1564: Invalid JSON in enrichment_data for term 'sulfuric acid': Expecting ',' delimiter: line 1 column 110 (char 109)
+2025-06-15 18:12:51,220 - WARNING - Row 2024: Invalid JSON in enrichment_data for term 'period 6': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,228 - WARNING - Row 2185: Invalid JSON in enrichment_data for term 'elements': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,230 - WARNING - Row 2199: Invalid JSON in enrichment_data for term 'metal': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,232 - WARNING - Row 2229: Invalid JSON in enrichment_data for term 'x-ray tubes': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,237 - WARNING - Row 2363: Invalid JSON in enrichment_data for term 'sublime': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,243 - WARNING - Row 2512: Invalid JSON in enrichment_data for term 'electronics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,243 - WARNING - Row 2514: Invalid JSON in enrichment_data for term 'germanium': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,245 - WARNING - Row 2538: Invalid JSON in enrichment_data for term 'periodic table': Expecting ',' delimiter: line 1 column 561 (char 560)
+2025-06-15 18:12:51,245 - WARNING - Row 2542: Invalid JSON in enrichment_data for term 'semiconductor physics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:12:51,249 - ERROR - Error loading CSV file '../chemistry/enriched_chemistry_terms.csv': 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 18:12:51,249 - ERROR - === XML Dictionary Word Tagger Failed: 'NoneType' object has no attribute 'strip' ===
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 281, in main
+    dictionary_by_topic = load_dictionary_from_csv(csv_file)
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 18:13:57,502 - INFO - === Starting XML Dictionary Word Tagger ===
+2025-06-15 18:13:57,502 - INFO - Loading dictionary data from CSV...
+2025-06-15 18:13:57,524 - WARNING - Row 848: Invalid JSON in enrichment_data for term 'catalyst': Extra data: line 1 column 985 (char 984)
+2025-06-15 18:13:57,525 - WARNING - Row 854: Invalid JSON in enrichment_data for term 'combustion reactions': Extra data: line 1 column 1064 (char 1063)
+2025-06-15 18:13:57,525 - WARNING - Row 875: Invalid JSON in enrichment_data for term 'propane': Expecting ',' delimiter: line 1 column 564 (char 563)
+2025-06-15 18:13:57,526 - WARNING - Row 892: Invalid JSON in enrichment_data for term 'term': Expecting value: line 1 column 1 (char 0)
+2025-06-15 18:13:57,526 - WARNING - Row 898: Invalid JSON in enrichment_data for term 'assembly line': Expecting ',' delimiter: line 1 column 921 (char 920)
+2025-06-15 18:13:57,526 - WARNING - Row 901: Invalid JSON in enrichment_data for term 'calcium chloride': Expecting ',' delimiter: line 1 column 715 (char 714)
+2025-06-15 18:13:57,526 - WARNING - Row 943: Invalid JSON in enrichment_data for term 'methane': Expecting ',' delimiter: line 1 column 621 (char 620)
+2025-06-15 18:13:57,526 - WARNING - Row 956: Invalid JSON in enrichment_data for term 'photosynthesis': Expecting ',' delimiter: line 1 column 806 (char 805)
+2025-06-15 18:13:57,530 - WARNING - Row 977: Invalid JSON in enrichment_data for term 'water': Expecting ',' delimiter: line 1 column 776 (char 775)
+2025-06-15 18:13:57,530 - WARNING - Row 978: Invalid JSON in enrichment_data for term 'zinc': Expecting ',' delimiter: line 1 column 670 (char 669)
+2025-06-15 18:13:57,530 - WARNING - Row 1018: Invalid JSON in enrichment_data for term 'energy account': Invalid \escape: line 1 column 21 (char 20)
+2025-06-15 18:13:57,530 - WARNING - Row 1038: Invalid JSON in enrichment_data for term 'mountain analogy': Invalid \escape: line 1 column 880 (char 879)
+2025-06-15 18:13:57,534 - WARNING - Row 1168: Invalid JSON in enrichment_data for term 'adenosine triphosphate': Expecting ',' delimiter: line 1 column 242 (char 241)
+2025-06-15 18:13:57,534 - WARNING - Row 1195: Invalid JSON in enrichment_data for term 'mitochondria': Expecting ',' delimiter: line 1 column 137 (char 136)
+2025-06-15 18:13:57,551 - WARNING - Row 1564: Invalid JSON in enrichment_data for term 'sulfuric acid': Expecting ',' delimiter: line 1 column 110 (char 109)
+2025-06-15 18:13:57,572 - WARNING - Row 2024: Invalid JSON in enrichment_data for term 'period 6': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,577 - WARNING - Row 2185: Invalid JSON in enrichment_data for term 'elements': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,579 - WARNING - Row 2199: Invalid JSON in enrichment_data for term 'metal': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,580 - WARNING - Row 2229: Invalid JSON in enrichment_data for term 'x-ray tubes': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,584 - WARNING - Row 2363: Invalid JSON in enrichment_data for term 'sublime': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,591 - WARNING - Row 2512: Invalid JSON in enrichment_data for term 'electronics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,591 - WARNING - Row 2514: Invalid JSON in enrichment_data for term 'germanium': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,593 - WARNING - Row 2538: Invalid JSON in enrichment_data for term 'periodic table': Expecting ',' delimiter: line 1 column 561 (char 560)
+2025-06-15 18:13:57,595 - WARNING - Row 2542: Invalid JSON in enrichment_data for term 'semiconductor physics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:13:57,595 - ERROR - Error loading CSV file '../chemistry/enriched_chemistry_terms.csv': 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 18:13:57,595 - ERROR - === XML Dictionary Word Tagger Failed: 'NoneType' object has no attribute 'strip' ===
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 281, in main
+    dictionary_by_topic = load_dictionary_from_csv(csv_file)
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 18:38:00,179 - INFO - === Starting XML Dictionary Word Tagger ===
+2025-06-15 18:38:00,179 - INFO - Loading dictionary data from CSV...
+2025-06-15 18:38:00,202 - WARNING - Row 853: Invalid JSON in enrichment_data for term 'combustion reaction': Expecting ',' delimiter: line 1 column 944 (char 943)
+2025-06-15 18:38:00,202 - WARNING - Row 854: Invalid JSON in enrichment_data for term 'combustion reactions': Extra data: line 1 column 1064 (char 1063)
+2025-06-15 18:38:00,202 - WARNING - Row 875: Invalid JSON in enrichment_data for term 'propane': Expecting ',' delimiter: line 1 column 564 (char 563)
+2025-06-15 18:38:00,202 - WARNING - Row 897: Invalid JSON in enrichment_data for term 'assembly line': Expecting ',' delimiter: line 1 column 921 (char 920)
+2025-06-15 18:38:00,202 - WARNING - Row 900: Invalid JSON in enrichment_data for term 'calcium chloride': Expecting ',' delimiter: line 1 column 715 (char 714)
+2025-06-15 18:38:00,211 - WARNING - Row 1017: Invalid JSON in enrichment_data for term 'energy account': Expecting ',' delimiter: line 1 column 22 (char 21)
+2025-06-15 18:38:00,213 - WARNING - Row 1037: Invalid JSON in enrichment_data for term 'mountain analogy': Expecting ',' delimiter: line 1 column 881 (char 880)
+2025-06-15 18:38:00,215 - WARNING - Row 1167: Invalid JSON in enrichment_data for term 'adenosine triphosphate': Expecting ',' delimiter: line 1 column 242 (char 241)
+2025-06-15 18:38:00,222 - WARNING - Row 1563: Invalid JSON in enrichment_data for term 'sulfuric acid': Expecting ',' delimiter: line 1 column 110 (char 109)
+2025-06-15 18:38:00,234 - WARNING - Row 2023: Invalid JSON in enrichment_data for term 'period 6': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,236 - WARNING - Row 2184: Invalid JSON in enrichment_data for term 'elements': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,237 - WARNING - Row 2198: Invalid JSON in enrichment_data for term 'metal': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,237 - WARNING - Row 2228: Invalid JSON in enrichment_data for term 'x-ray tubes': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,239 - WARNING - Row 2362: Invalid JSON in enrichment_data for term 'sublime': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,241 - WARNING - Row 2511: Invalid JSON in enrichment_data for term 'electronics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,241 - WARNING - Row 2513: Invalid JSON in enrichment_data for term 'germanium': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,241 - WARNING - Row 2537: Invalid JSON in enrichment_data for term 'periodic table': Expecting ',' delimiter: line 1 column 561 (char 560)
+2025-06-15 18:38:00,243 - WARNING - Row 2541: Invalid JSON in enrichment_data for term 'semiconductor physics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 18:38:00,246 - ERROR - Error loading CSV file '../chemistry/enriched_chemistry_terms.csv': 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 18:38:00,247 - ERROR - === XML Dictionary Word Tagger Failed: 'NoneType' object has no attribute 'strip' ===
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 281, in main
+    dictionary_by_topic = load_dictionary_from_csv(csv_file)
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 19:17:16,144 - INFO - === Starting XML Dictionary Word Tagger ===
+2025-06-15 19:17:16,144 - INFO - Loading dictionary data from CSV...
+2025-06-15 19:17:16,170 - WARNING - Row 853: Invalid JSON in enrichment_data for term 'combustion reaction': Expecting ',' delimiter: line 1 column 944 (char 943)
+2025-06-15 19:17:16,170 - WARNING - Row 854: Invalid JSON in enrichment_data for term 'combustion reactions': Expecting ',' delimiter: line 1 column 1062 (char 1061)
+2025-06-15 19:17:16,174 - WARNING - Row 1017: Invalid JSON in enrichment_data for term 'energy account': Expecting ',' delimiter: line 1 column 22 (char 21)
+2025-06-15 19:17:16,174 - WARNING - Row 1037: Invalid JSON in enrichment_data for term 'mountain analogy': Expecting ',' delimiter: line 1 column 881 (char 880)
+2025-06-15 19:17:16,179 - WARNING - Row 1167: Invalid JSON in enrichment_data for term 'adenosine triphosphate': Expecting ',' delimiter: line 1 column 242 (char 241)
+2025-06-15 19:17:16,187 - WARNING - Row 1563: Invalid JSON in enrichment_data for term 'sulfuric acid': Expecting ',' delimiter: line 1 column 110 (char 109)
+2025-06-15 19:17:16,198 - WARNING - Row 2023: Invalid JSON in enrichment_data for term 'period 6': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,202 - WARNING - Row 2184: Invalid JSON in enrichment_data for term 'elements': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,203 - WARNING - Row 2198: Invalid JSON in enrichment_data for term 'metal': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,204 - WARNING - Row 2228: Invalid JSON in enrichment_data for term 'x-ray tubes': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,206 - WARNING - Row 2362: Invalid JSON in enrichment_data for term 'sublime': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,210 - WARNING - Row 2511: Invalid JSON in enrichment_data for term 'electronics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,210 - WARNING - Row 2513: Invalid JSON in enrichment_data for term 'germanium': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,211 - WARNING - Row 2537: Invalid JSON in enrichment_data for term 'periodic table': Expecting ',' delimiter: line 1 column 561 (char 560)
+2025-06-15 19:17:16,211 - WARNING - Row 2541: Invalid JSON in enrichment_data for term 'semiconductor physics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:17:16,214 - ERROR - Error loading CSV file '../chemistry/enriched_chemistry_terms.csv': 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 19:17:16,215 - ERROR - === XML Dictionary Word Tagger Failed: 'NoneType' object has no attribute 'strip' ===
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 281, in main
+    dictionary_by_topic = load_dictionary_from_csv(csv_file)
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 37, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 19:24:33,496 - INFO - === Starting XML Dictionary Word Tagger ===
+2025-06-15 19:24:33,496 - INFO - Loading dictionary data from CSV...
+2025-06-15 19:24:33,517 - WARNING - Row 854: Invalid JSON in enrichment_data for term 'combustion reaction': Expecting ',' delimiter: line 1 column 944 (char 943)
+2025-06-15 19:24:33,517 - WARNING - Row 855: Invalid JSON in enrichment_data for term 'combustion reactions': Expecting ',' delimiter: line 1 column 1062 (char 1061)
+2025-06-15 19:24:33,522 - WARNING - Row 1018: Invalid JSON in enrichment_data for term 'energy account': Expecting ',' delimiter: line 1 column 22 (char 21)
+2025-06-15 19:24:33,523 - WARNING - Row 1038: Invalid JSON in enrichment_data for term 'mountain analogy': Expecting ',' delimiter: line 1 column 881 (char 880)
+2025-06-15 19:24:33,528 - WARNING - Row 1168: Invalid JSON in enrichment_data for term 'adenosine triphosphate': Expecting ',' delimiter: line 1 column 242 (char 241)
+2025-06-15 19:24:33,539 - WARNING - Row 1564: Invalid JSON in enrichment_data for term 'sulfuric acid': Expecting ',' delimiter: line 1 column 110 (char 109)
+2025-06-15 19:24:33,558 - WARNING - Row 2024: Invalid JSON in enrichment_data for term 'period 6': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,563 - WARNING - Row 2185: Invalid JSON in enrichment_data for term 'elements': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,563 - WARNING - Row 2199: Invalid JSON in enrichment_data for term 'metal': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,563 - WARNING - Row 2229: Invalid JSON in enrichment_data for term 'x-ray tubes': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,569 - WARNING - Row 2363: Invalid JSON in enrichment_data for term 'sublime': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,574 - WARNING - Row 2512: Invalid JSON in enrichment_data for term 'electronics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,574 - WARNING - Row 2514: Invalid JSON in enrichment_data for term 'germanium': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,576 - WARNING - Row 2538: Invalid JSON in enrichment_data for term 'periodic table': Expecting ',' delimiter: line 1 column 561 (char 560)
+2025-06-15 19:24:33,578 - WARNING - Row 2542: Invalid JSON in enrichment_data for term 'semiconductor physics': Unterminated string starting at: line 1 column 17 (char 16)
+2025-06-15 19:24:33,581 - ERROR - Error loading CSV file '../chemistry/enriched_chemistry_terms.csv': 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 39, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2025-06-15 19:24:33,581 - ERROR - === XML Dictionary Word Tagger Failed: 'NoneType' object has no attribute 'strip' ===
+Traceback (most recent call last):
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 253, in main
+    dictionary_by_topic = load_dictionary_from_csv(csv_file)
+  File "D:\Ferasa\ls\ls-toolkit\tools\xml-words-tagging.py", line 39, in load_dictionary_from_csv
+    topic_id = row.get('topic_id', '').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'

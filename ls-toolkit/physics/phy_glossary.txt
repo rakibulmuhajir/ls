@@ -1,22 +1,3 @@
-i'm developing a student helper app which presents textbook topics in modular and simpler ay divided into several sections to make it easier for the students to understand, comprehend the content.
-a sample chemistry source and converted topic is given.
-schema is given where this data is ingested.
-chemistry book is complete. now i want to create the same for physics. there are two main tasks.
-
-1. modularize the content
-2. extract and list Glossary related to the topic. strictly stick to Physics related words. do not add general english vocabulary words. format like below
-
-[Topic 3.1 - Concept of Force]
-physical interaction, vector quantity, magnitude, direction, Newtons
-
-3. add a new module called real world applications
-4. Make use of tables where needed
-5. add a hidden tag anywhere in the topic where an animation or image/illustration OR GRAPH should be added. with a necessity score like if the image/animation must be added or good to have
-6. add physics numerical of each topic if needed
-7. when you have completed the artifacts, Do not generate artifact analysis after that. you are allowed to say all done. you may express an issue with the topic content if you come across any
-
-
-
 [Topic 1.1 Physical and Non-Physical Quantities]
 physical quantities,non-physical quantities,measurable,instruments,numerical magnitude,unit,standard units,direct measurement,indirect measurement,objective measurement,subjective assessment,rulers,clocks,thermometers,balances,mass,length,time,temperature,volume,density,perception,interpretation,qualitative description,predetermined criteria,indices,survey techniques,beauty,wisdom,fear,affection,love,natural phenomena,matter,laws of physics,principles of physics,measurement,quantification,reproducible,scientific study,human experience,emotions
 
@@ -271,3 +252,23 @@ magnetic recording technology, electromagnets, recording head, magnetic tape rec
 
 [Topic 8.11 - Soft Iron as Magnetic Shield]
 soft iron, magnetic shielding, magnetic permeability, magnetic flux, field lines, sensitive instruments, external magnetic field, domain alignment, high permeability, magnetic protection, electromagnet cores, transformer cores, galvanometer cores, shielding effectiveness, rounded corners, magnetic redirection, flux channeling, electromagnetic interference, EMI protection
+
+[Topic 9.1 - Scope of Physics]
+matter, energy, space, time, universe, subatomic particles, galaxies, three-dimensional extent, framework, positions, motions, sequence, durations, fourth dimension, oscillating motion, pendulum, frequency, time dilation, special theory of relativity, ultra-high speed, fundamental concepts, interconnected, absolute quantities, gravity, bending of light, massive objects, quantum mechanics, atomic level, subatomic level, classical mechanics
+
+
+[Topic 9.2 - Branches of Physics]
+mechanics, motion, classical mechanics, Newton's laws, gravitation, thermodynamics, thermal energy, heat engine, acoustics, audible sound, optics, visible light, electromagnetic radiation, electromagnetism, electromagnetic phenomenon, electric current, magnetic field, quantum mechanics, atomic level, subatomic level, relativistic mechanics, space-time, observer, nuclear physics, nuclei, particle physics, elementary particles, quarks, astronomy, celestial bodies, planets, galaxies, cosmology, universe evolution, solid state physics
+
+[Topic 9.3 - Interdisciplinary Nature of Physics]
+interdisciplinary, integration, interaction, fundamental science, biophysics, biological systems, mechanical structures, cells, tissues, organs, medical physics, diagnosis, treatment, imaging techniques, X-rays, ultrasound, MRI, CT scan, radiation therapy, astrophysics, celestial bodies, matter-energy interaction, geophysics, internal structure, gravitational fields, seismic activity, earthquakes, volcanoes, climate physics, atmospheric dynamics, climate change, weather conditions, computational physics, computational techniques, complex problems, collaboration, multifaceted expertise, innovation, nanotechnology, artificial intelligence
+
+[Topic 9.4 - Interdisciplinary Research]
+collaboration, interdisciplinary nature, complex issues, challenges, breakthrough, natural world, physical world, technology, healthcare, environmental issues, multifaceted expertise, climate change, disease prevention, sustainable energy, meteorology, oceanography, environmental sciences, Covid epidemic, medical technologies, data science, innovation, perspectives, methodologies, novel insights, nanotechnology, material science, artificial intelligence, computer science, mathematical logic, neuroscience, intelligence systems, knowledge sharing, information exchanges, conferences, workshops, research projects, research journals, holistic understanding, space exploration
+
+[Topic 9.5 - Scientific Method]
+scientific method, systematic approach, search for truth, problem solving, natural world, physical world, observation, natural processes, data collection, experiments, hypothesis, explanation, assumption, specific circumstances, experiment, organized process, repeatable process, verification, theory, logical explanation, causes and effects, prediction, unknown aspects, falsifiability, testable predictions, scientific theories, law, statement, behavior of nature, observations, experiments
+
+
+[Topic 9.6 - Scientific Base of Technologies and Engineering]
+science, physics, invention, physical laws, principles, technology, methods, techniques, scientific knowledge, machine technology, software programme, information technology, automobile technology, thermodynamics, radar technology, detection, reflection, electromagnetic waves, laser technology, atomic physics, medical diagnosis, treatment, metallurgy, telecommunication, space exploration, engineering, instruments, tools, cost effectiveness, safety measures, civil engineer, bridge, earthquakes, weather conditions, traffic, software engineer, smartphone applications, aviation engineer, materials, disturbances, flight, scientific discoveries, benefits, comforts, lifestyle

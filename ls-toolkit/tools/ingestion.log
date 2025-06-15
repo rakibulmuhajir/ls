@@ -1,0 +1,134 @@
+2025-06-15 12:07:36,933 - INFO - Connected to Supabase URL: https://ntvfjkvlgkpcoroyoyss.supabase.co
+2025-06-15 12:08:11,192 - INFO - Connected to Supabase URL: https://ntvfjkvlgkpcoroyoyss.supabase.co
+2025-06-15 12:08:11,192 - INFO - --- Starting Full Book Ingestion ---
+2025-06-15 12:08:11,192 - INFO - Starting AGNOSTIC XML processing for: ../phy-IX-clean-chap-1.xml
+2025-06-15 12:08:11,194 - ERROR - Critical error in agnostic processing: [Errno 2] No such file or directory: '../phy-IX-clean-chap-1.xml'
+2025-06-15 12:08:11,195 - CRITICAL - --- A critical error occurred during the ingestion process: [Errno 2] No such file or directory: '../phy-IX-clean-chap-1.xml' ---
+2025-06-15 12:08:56,675 - INFO - Connected to Supabase URL: https://ntvfjkvlgkpcoroyoyss.supabase.co
+2025-06-15 12:08:56,677 - INFO - --- Starting Full Book Ingestion ---
+2025-06-15 12:08:56,677 - INFO - Starting AGNOSTIC XML processing for: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 12:08:56,703 - ERROR - Critical error in agnostic processing: not well-formed (invalid token): line 1906, column 192
+2025-06-15 12:08:56,703 - CRITICAL - --- A critical error occurred during the ingestion process: not well-formed (invalid token): line 1906, column 192 ---
+2025-06-15 12:22:49,803 - INFO - Connected to Supabase URL: https://ntvfjkvlgkpcoroyoyss.supabase.co
+2025-06-15 12:22:49,803 - INFO - --- Starting Full Book Ingestion ---
+2025-06-15 12:22:49,803 - INFO - Starting AGNOSTIC XML processing for: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 12:22:49,826 - ERROR - Critical error in agnostic processing: not well-formed (invalid token): line 1948, column 60
+2025-06-15 12:22:49,826 - CRITICAL - --- A critical error occurred during the ingestion process: not well-formed (invalid token): line 1948, column 60 ---
+2025-06-15 12:23:56,876 - INFO - Connected to Supabase URL: https://ntvfjkvlgkpcoroyoyss.supabase.co
+2025-06-15 12:23:56,876 - INFO - --- Starting Full Book Ingestion ---
+2025-06-15 12:23:56,876 - INFO - Starting AGNOSTIC XML processing for: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 12:23:56,891 - INFO - Successfully parsed XML file: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 12:24:05,590 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/books?select=book_pk&isbn=eq.978-PTB-PHY-G9-01 "HTTP/2 200 OK"
+2025-06-15 12:24:06,562 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/books?select=book_pk&title=eq.Physics&subject=eq.Physics "HTTP/2 200 OK"
+2025-06-15 12:24:06,574 - INFO - Book not found, creating new book
+2025-06-15 12:24:06,574 - ERROR - Error in get_or_create_book_pk: 'board_name'
+2025-06-15 12:24:06,574 - ERROR - Critical error in agnostic processing: 'board_name'
+2025-06-15 12:24:06,578 - CRITICAL - --- A critical error occurred during the ingestion process: 'board_name' ---
+2025-06-15 12:26:04,049 - INFO - Connected to Supabase URL: https://ntvfjkvlgkpcoroyoyss.supabase.co
+2025-06-15 12:26:04,049 - INFO - --- Starting Full Book Ingestion ---
+2025-06-15 12:26:04,049 - INFO - Starting AGNOSTIC XML processing for: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 12:26:04,058 - INFO - Successfully parsed XML file: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 12:26:05,941 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/books?select=book_pk&isbn=eq.978-PTB-PHY-G9-01 "HTTP/2 200 OK"
+2025-06-15 12:26:06,849 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/books?select=book_pk&title=eq.Physics&subject=eq.Physics "HTTP/2 200 OK"
+2025-06-15 12:26:06,849 - INFO - Book not found, creating new book
+2025-06-15 12:26:07,216 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/boards?select=board_pk&board_name=eq.Punjab+Textbook+Board "HTTP/2 200 OK"
+2025-06-15 12:26:08,149 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/grades?select=grade_pk&grade_name=eq.Grade+9 "HTTP/2 200 OK"
+2025-06-15 12:26:08,532 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/books "HTTP/2 201 Created"
+2025-06-15 12:26:08,535 - INFO - Created new book: 2
+2025-06-15 12:26:08,535 - INFO - Book PK (get/create): 2
+2025-06-15 12:26:08,535 - WARNING - Unknown root tag <root>, treating as single chapter
+2025-06-15 12:26:08,884 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.2&chapter_number_display=eq.ch_1 "HTTP/2 200 OK"
+2025-06-15 12:26:09,248 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters "HTTP/2 201 Created"
+2025-06-15 12:26:09,249 - INFO - Created new chapter: 2
+2025-06-15 12:26:09,250 - INFO - No topic elements found, treating chapter as single topic
+2025-06-15 12:26:09,601 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.2&topic_xml_id=eq.main "HTTP/2 200 OK"
+2025-06-15 12:26:09,933 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics "HTTP/2 201 Created"
+2025-06-15 12:26:09,949 - INFO - Created new topic: 9
+2025-06-15 12:26:10,284 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.9&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 12:26:10,667 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 12:26:10,683 - INFO - Created Section - PK: 161, Type: 'CONTENT'
+2025-06-15 12:26:12,527 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 12:26:13,232 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/list_items?columns=%22item_text%22%2C%22order_in_list%22%2C%22parent_content_element_fk%22 "HTTP/2 409 Conflict"
+2025-06-15 12:26:13,232 - ERROR - Error processing generic element chapter: {'code': '23503', 'details': 'Key (parent_content_element_fk)=(1) is not present in table "content_elements".', 'hint': None, 'message': 'insert or update on table "list_items" violates foreign key constraint "list_items_parent_content_element_fk_fkey"'}
+2025-06-15 12:26:13,232 - INFO - Processed chapter as single topic: 1 sections
+2025-06-15 12:26:13,232 - INFO - Chapter 2 completed: 1 topics processed
+2025-06-15 12:26:13,232 - INFO - AGNOSTIC XML processing completed: 1 chapters, 1 total topics
+2025-06-15 12:26:13,232 - INFO - --- Successfully processed '../physics/phy-IX-clean-chap-1.xml' for book_pk: 2 ---
+2025-06-15 13:14:06,354 - INFO - Connected to Supabase URL: https://ntvfjkvlgkpcoroyoyss.supabase.co
+2025-06-15 13:14:06,354 - INFO - --- Starting Full Book Ingestion ---
+2025-06-15 13:14:06,355 - INFO - Starting AGNOSTIC XML processing for: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 13:14:06,373 - INFO - Successfully parsed XML file: ../physics/phy-IX-clean-chap-1.xml
+2025-06-15 13:14:08,214 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/books?select=book_pk&isbn=eq.978-PTB-PHY-G9-01 "HTTP/2 200 OK"
+2025-06-15 13:14:08,220 - INFO - Found existing book by ISBN: 2
+2025-06-15 13:14:08,222 - INFO - Book PK (get/create): 2
+2025-06-15 13:14:08,623 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters?select=chapter_pk&book_fk=eq.2&chapter_number_display=eq.1 "HTTP/2 200 OK"
+2025-06-15 13:14:08,942 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/chapters "HTTP/2 201 Created"
+2025-06-15 13:14:08,944 - INFO - Created new chapter: 3
+2025-06-15 13:14:09,272 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics?select=topic_pk&chapter_fk=eq.3&topic_xml_id=eq.1.1 "HTTP/2 200 OK"
+2025-06-15 13:14:10,021 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/topics "HTTP/2 201 Created"
+2025-06-15 13:14:10,023 - INFO - Created new topic: 10
+2025-06-15 13:14:10,595 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:10,926 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:10,928 - INFO - Created Section - PK: 162, Type: 'definition'
+2025-06-15 13:14:11,325 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:11,790 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:12,116 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:12,116 - INFO - Created Section - PK: 163, Type: 'explanation'
+2025-06-15 13:14:13,343 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:13,878 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:15,140 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:15,486 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:15,892 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:16,442 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:17,127 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:17,128 - INFO - Created Section - PK: 164, Type: 'analogies'
+2025-06-15 13:14:17,578 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:18,019 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:18,356 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:18,711 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:18,713 - INFO - Created Section - PK: 165, Type: 'examples'
+2025-06-15 13:14:19,057 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:19,498 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/list_items?columns=%22order_in_list%22%2C%22item_text%22%2C%22parent_content_element_fk%22 "HTTP/2 409 Conflict"
+2025-06-15 13:14:19,500 - ERROR - Error processing generic element content: {'code': '23503', 'details': 'Key (parent_content_element_fk)=(1) is not present in table "content_elements".', 'hint': None, 'message': 'insert or update on table "list_items" violates foreign key constraint "list_items_parent_content_element_fk_fkey"'}
+2025-06-15 13:14:20,009 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:20,387 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/list_items?columns=%22order_in_list%22%2C%22item_text%22%2C%22parent_content_element_fk%22 "HTTP/2 409 Conflict"
+2025-06-15 13:14:20,388 - ERROR - Error processing generic element content: {'code': '23503', 'details': 'Key (parent_content_element_fk)=(1) is not present in table "content_elements".', 'hint': None, 'message': 'insert or update on table "list_items" violates foreign key constraint "list_items_parent_content_element_fk_fkey"'}
+2025-06-15 13:14:20,751 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:21,085 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:21,086 - INFO - Created Section - PK: 166, Type: 'interactive_elements'
+2025-06-15 13:14:21,447 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:22,192 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:22,856 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:23,329 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:23,970 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:23,989 - INFO - Created Section - PK: 167, Type: 'key_points'
+2025-06-15 13:14:24,694 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:25,114 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:25,446 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:25,447 - INFO - Created Section - PK: 168, Type: 'exercises'
+2025-06-15 13:14:25,977 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:26,447 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/list_items?columns=%22order_in_list%22%2C%22item_text%22%2C%22parent_content_element_fk%22 "HTTP/2 409 Conflict"
+2025-06-15 13:14:26,448 - ERROR - Error processing generic element content: {'code': '23503', 'details': 'Key (parent_content_element_fk)=(1) is not present in table "content_elements".', 'hint': None, 'message': 'insert or update on table "list_items" violates foreign key constraint "list_items_parent_content_element_fk_fkey"'}
+2025-06-15 13:14:26,778 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:27,172 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:27,172 - INFO - Created Section - PK: 169, Type: 'real_world_applications'
+2025-06-15 13:14:28,092 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:28,435 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:28,755 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:29,294 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:29,721 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:30,058 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:30,070 - INFO - Created Section - PK: 170, Type: 'connections'
+2025-06-15 13:14:30,690 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:31,037 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:31,356 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:31,811 - INFO - HTTP Request: GET https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections?select=section_pk%2Csection_type_xml%2Ctitle%2Corder_in_topic&topic_fk=eq.10&order=order_in_topic.asc "HTTP/2 200 OK"
+2025-06-15 13:14:32,113 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/sections "HTTP/2 201 Created"
+2025-06-15 13:14:32,114 - INFO - Created Section - PK: 171, Type: 'fun_facts'
+2025-06-15 13:14:32,433 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:32,753 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:33,079 - INFO - HTTP Request: POST https://ntvfjkvlgkpcoroyoyss.supabase.co/rest/v1/content_elements "HTTP/2 201 Created"
+2025-06-15 13:14:33,082 - INFO - Topic 10 completed: 10 sections processed
+2025-06-15 13:14:33,082 - INFO - Chapter 3 completed: 1 topics processed
+2025-06-15 13:14:33,083 - INFO - AGNOSTIC XML processing completed: 1 chapters, 1 total topics
+2025-06-15 13:14:33,084 - INFO - --- Successfully processed '../physics/phy-IX-clean-chap-1.xml' for book_pk: 2 ---

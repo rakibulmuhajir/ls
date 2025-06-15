@@ -633,15 +633,26 @@ def process_generic_element(element_xml, section_fk: int, start_order: int) -> i
         level_attr = element_xml.get('level')
         type_attr = element_xml.get('type')
 
-        # Get text content
-        text_content = get_formatted_text(element_xml)
+        # Get text content, excluding child lists
+        text_parts = []
+        if element_xml.text and element_xml.text.strip():
+            text_parts.append(element_xml.text.strip())
+        for child in element_xml:
+            if child.tag.lower() != 'list':
+                # This part is simplified, assuming direct text or simple emphasis
+                if child.tail:
+                    text_parts.append(child.tail.strip())
+
+        text_content = " ".join(filter(None, text_parts)).strip()
+
 
         # Create a normalized element type name
         element_type = tag_name.upper().replace('-', '_')
 
-        # Insert the element
+        # Insert the main element
+        main_element_pk = None
         if text_content or title_attr or xml_id_attr:
-            insert_content(
+            main_element_pk = insert_content(
                 section_fk, element_type, order_counter, "element_pk",
                 text_content=text_content, xml_id_attribute=xml_id_attr,
                 title_attribute=title_attr, attribute_level=level_attr,
@@ -650,11 +661,16 @@ def process_generic_element(element_xml, section_fk: int, start_order: int) -> i
             elements_processed += 1
             order_counter += 1
 
-        # Process any child lists
-        for list_xml in element_xml.findall('.//list'):
-            list_items = process_list_items(list_xml, elements_processed)
-            if list_items:
-                supabase.table("list_items").insert(list_items).execute()
+        # Process any child lists separately
+        for list_xml in element_xml.findall('list'):
+            # Create a dedicated container for the list
+            list_container_pk = process_list_container(list_xml, section_fk, order_counter, "List")
+            elements_processed += 1
+            order_counter += 1
+
+            # Now the list_items are correctly linked to their own container
+            # The original process_list_container handles the items inside.
+
 
         logger.debug(f"Processed generic element: {tag_name} -> {element_type}")
 
@@ -987,10 +1003,10 @@ def update_existing_section(section_pk: int, section_xml_file: str) -> bool:
 def get_or_create_book_pk(book_details: Dict[str, Any]) -> int:
     """Get existing book or create new one based on unique identifiers"""
     try:
-        # Try to find existing book by title and subject (most unique combo)
+        # Try to find existing book by title and board_id (most unique combo)
         search_criteria = [
             ("title", book_details["title"]),
-            ("subject", book_details["subject"])
+            ("board_pk", book_details["board_id"])
         ]
 
         # Add ISBN if provided (most reliable identifier)
@@ -1250,7 +1266,7 @@ def process_full_chapter_agnostic(xml_file_path: str, book_details: Dict[str, An
                 'element': root,
                 'order': book_details.get("current_chapter_order", 1)
             })
-        elif root.tag.lower() in ['book', 'textbook']:
+        elif root.tag.lower() in ['book', 'textbook', 'root']:
             # Multi-chapter book file
             for idx, chapter_elem in enumerate(root.findall(".//chapter"), start=1):
                 chapters_to_process.append({
